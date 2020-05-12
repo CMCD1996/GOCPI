@@ -13,9 +13,8 @@ y = [2, 4, 5, 7, 6, 8, 9, 11, 12, 12]
 plt.scatter(x, y, label="stars", color="green",
             marker="1", s=30)
 
-
-plt.xlabel('x - axis')
-plt.ylabel('y - axis')
+plt.xlabel('x axis')
+plt.ylabel('y axis')
 
 plt.title('Plot')
 plt.legend()
