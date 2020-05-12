@@ -20,6 +20,7 @@ plt.xlabel('x axis')
 plt.ylabel('y axis')
 
 # Check we can submit file properly to the github
+# Make some more changes to the master branch
 plt.title('Plot')
 plt.legend()
 
