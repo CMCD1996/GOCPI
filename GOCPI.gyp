@@ -8,6 +8,23 @@ import pandas as pd
 import matplotlib.pyplot as plt
 import scipy as sc 
 import sklearn as skl 
+import csv as csv
 
 # Create python list for geogrpahies, starting with countries
-file = open("countries.txt",'r')
+# Create an empty list
+countries = []
+country_code = []
+
+# Reads the file
+file = open("Countries.txt","rt")
+# Puts each word into an array
+for word in file:
+    word.split('|')
+    #country_code.append(a)
+    #countries.append(b)
+#print(count(word))
+for i in countries:
+    print(i)
+    print("\n")
+
+
