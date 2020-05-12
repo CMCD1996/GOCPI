@@ -1,2 +1,3 @@
 # GOCPI
-Global Optimisation Carbon Pricing Initiatives Model
+Global Optimization Carbon Pricing Initiatives Model
+Add to the Readme
