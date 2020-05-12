@@ -17,7 +17,7 @@ plt.scatter(x, y, label="stars", color="green",
 plt.xlabel('x axis')
 plt.ylabel('y axis')
 
-plt.title('Scatter plot')
+plt.title('Plot')
 plt.legend()
 
 plt.show()
