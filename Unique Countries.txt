@@ -1,187 +1,223 @@
-Japan 
-Mexico 
-India 
-Brazil 
-China 
-Bangladesh 
-Argentina 
-Pakistan 
-Egypt 
-Philippines 
-Russia 
-Turkey 
-France 
-Korea, South 
-Nigeria 
-Indonesia 
-United Kingdom 
-Peru 
-Iran 
-Congo (Kinshasa) 
-Colombia 
-Taiwan 
-Thailand 
-Chile 
-Spain 
-Vietnam 
-United States 
-Canada 
-Angola 
-Iraq 
-Sudan 
-Australia 
-Saudi Arabia 
-Burma 
-Côte D’Ivoire 
-South Africa 
-Germany 
-Algeria 
-Italy 
-Korea, North 
 Afghanistan 
-Greece 
-Morocco 
-Israel 
-Ethiopia 
-Kenya 
-Venezuela 
-Tanzania 
-Portugal 
-Poland 
-Syria 
-Ukraine 
-Senegal 
-Ecuador 
-Malaysia 
-Tunisia 
+Albania 
+Algeria 
+American Samoa 
+Andorra 
+Angola 
+Antigua And Barbuda 
+Argentina 
+Armenia 
+Aruba 
+Australia 
 Austria 
-Libya 
-Uzbekistan 
-Cuba 
-Dominican Republic 
 Azerbaijan 
-Ghana 
-Kuwait 
-Yemen 
-Haiti 
-Romania 
-Cameroon 
-Paraguay 
-Lebanon 
+Bahamas 
+Bahrain 
+Bangladesh 
+Barbados 
 Belarus 
 Belgium 
-Madagascar 
-Hungary 
-Bolivia 
-Zimbabwe 
-Uruguay 
-Mali 
-Guinea 
-Cambodia 
-Togo 
-Qatar 
-Mozambique 
-El Salvador 
-Uganda 
-Netherlands 
-United Arab Emirates 
-New Zealand 
-Congo (Brazzaville) 
-Zambia 
-Costa Rica 
-Panama 
-Sweden 
-Switzerland 
-Kazakhstan 
-Bulgaria 
-Czechia 
-Burkina Faso 
-Finland 
-Armenia 
-Somalia 
-Georgia 
-Serbia 
-Tajikistan 
-Denmark 
-Jordan 
-Ireland 
-Liberia 
-Guatemala 
-Chad 
-Honduras 
-Jamaica 
-Djibouti 
-Nicaragua 
-Niger 
-Albania 
-Nepal 
-Mongolia 
-Rwanda 
-Kyrgyzstan 
-Norway 
-Central African Republic 
-Sierra Leone 
+Belize 
 Benin 
+Bermuda 
+Bhutan 
+Bolivia 
+Bosnia And Herzegovina 
+Botswana 
+Brazil 
+Brunei 
+Bulgaria 
+Burkina 
+Burma (Myanmar) 
+Burundi 
+Côte D’Ivoire 
+Cape Verde 
+Cambodia 
+Cameroon 
+Canada 
+Cayman Islands 
+Central African Republic 
+Chad 
+Chile 
+China 
+Colombia 
+Comoros 
+Democratic Republic of Congo 
+Congo 
+Cook Islands 
+Costa Rica 
+Croatia 
+Cuba 
+Curaçao 
+Cyprus 
+CZ 
+Denmark 
+Djibouti 
+Dominica 
+Dominican Republic 
+Ecuador 
+Egypt 
+El Salvador 
+Equatorial Guinea 
+Eritrea 
+Estonia 
+Ethiopia 
+Falkland Islands (Islas Malvinas) 
+Faroe Islands 
+Fiji 
+Finland 
+France 
+French Guiana 
+French Polynesia 
+Gabon 
+Gambia 
+Georgia 
+Germany 
+Ghana 
+Gibraltar 
+Greece 
+Greenland 
+Grenada 
+Guadeloupe 
+Guam 
+Guatemala 
+Guinea 
+Guinea-Bissau 
+Guyana 
+Haiti 
+Honduras 
+Hong Kong 
+Hungary 
+Iceland 
+India 
+Indonesia 
+Iran 
+Iraq 
+Ireland 
+Isle Of Man 
+Israel 
+Italy 
+Jamaica 
+Japan 
+Jordan 
+Kazakhstan 
+Kenya 
+Kiribati 
+North Korea 
+South Korea 
+Kosovo 
+Kuwait 
+Kyrgyzstan 
 Laos 
 Latvia 
-Oman 
-Croatia 
-Bosnia And Herzegovina 
-Moldova 
-Malawi 
-Eritrea 
-Mauritius 
-Gabon 
-Bahrain 
-Lithuania 
-Macedonia 
-Slovakia 
-Guinea-Bissau 
-Estonia 
-Malta 
+Lebanon 
 Lesotho 
-Burundi 
-Slovenia 
-Brunei 
-Trinidad And Tobago 
-Papua New Guinea 
-Guyana 
-Suriname 
-Timor-Leste 
-Cyprus 
-Sri Lanka 
-Botswana 
-Barbados 
-Fiji 
-Iceland 
-Equatorial Guinea 
-Montenegro 
-Comoros 
-Cabo Verde 
-Maldives 
-South Sudan 
-Luxembourg 
-Bhutan 
-Swaziland 
-Sao Tome And Principe 
-Solomon Islands 
-Samoa 
-Andorra 
-Saint Vincent And The Grenadines 
-Vanuatu 
-Gambia, The 
-Tonga 
-Saint Lucia 
+Liberia 
+Libya 
 Liechtenstein 
-Antigua And Barbuda 
-Grenada 
-San Marino 
+Lithuania 
+Luxembourg 
+Macau 
+Macedonia 
+Madagascar 
+Malawi 
+Malaysia 
+Maldives 
+Mali 
+Malta 
 Marshall Islands 
-Dominica 
-Saint Kitts And Nevis 
-Belize 
-Tuvalu 
-Micronesia, Federated States Of 
-Turkmenistan 
+Martinique 
 Mauritania 
-Greenland 
+Mauritius 
+Mayotte 
+Mexico 
+Micronesia 
+Moldova 
+Monaco 
+Mongolia 
+Montenegro 
+Morocco 
+Mozambique 
+Namibia 
+Nepal 
+Netherlands 
+New Caledonia 
+New Zealand 
+Nicaragua 
+Niger 
+Nigeria 
+Northern Mariana Islands 
+Norway 
+Oman 
+Pakistan 
+Palau 
+Panama 
+Papua New Guinea 
+Paraguay 
+Peru 
+Philippines 
+Poland 
+Portugal 
+Puerto Rico 
+Qatar 
+Reunion 
+Romania 
+Russia 
+Rwanda 
+Saint Helena, Ascension, And Tristan Da Cunha 
+Saint Kitts And Nevis 
+Saint Lucia 
+Saint Vincent and the Grenadines 
+Samoa 
+San Marino 
+Sao Tome And Principe 
+Saudi Arabia 
+Senegal 
+Serbia 
+Seychelles 
+Sierra Leone 
+Singapore 
+Sint Maarten 
+Slovakia 
+Slovenia 
+Solomon Islands 
+Somalia 
+South Africa 
+South Georgia And South Sandwich Islands 
+South Sudan 
+Spain 
+Sri Lanka 
+Sudan 
+Suriname 
+Swaziland 
+Sweden 
+Switzerland 
+Syria 
+Taiwan 
+Tajikistan 
+Tanzania 
+Thailand 
+Timor-Leste 
+Togo 
+Tonga 
+Trinidad And Tobago 
+Tunisia 
+Turkey 
+Turkmenistan 
+Turks And Caicos Islands 
+Tuvalu 
+Uganda 
+Ukraine 
+United Arab Emirates 
+United Kingdom 
+United States 
+Uruguay 
+Uzbekistan 
+Vanuatu 
+Venezuela 
+Vietnam 
+Wallis And Futuna 
+West Bank 
+Yemen 
+Zambia 
+Zimbabwe 

@@ -13,61 +13,52 @@ import csv as csv
 # Create python list for geogrpahies, starting with countries
 # Create an empty list
 countries = []
-country_code = []
 
-# Creates array from Countrie Data
-file = open("Countries.txt","rt")
-countries = file.read()
-countries = countries.split('\n')
-file.close()
+# Creates a geography set
+geography_set = [['AFRICA'],
+                ['ASIA'],
+                ['EUROPE'],
+                ['NORTH AMERICA'],
+                ['OCEANIA'],
+                ['SOUTH AMERICA']]
 
-# Creates array from Continent Data
-file = open("Continents.txt","rt")
-continents = file.read()
-continents = continents.split(',')
-print(continents)
+continents = ['AFRICA','ASIA','EUROPE','NORTH AMERICA','OCEANIA','SOUTH AMERICA']
+
+# Sets up a for loop to append countries to the continents in the geography set
+file = open('Country and Continent.txt','r')
+for line in file:
+    string = line.split('\n')
+    string = string[0].split(',')
+    countries.append(string[1].upper())
+    for i in range(0,6,1):
+        if string[0].upper() == geography_set[i][0]:
+            geography_set[i].append(string[1].upper())
+
+# This code block is to inform count 
+with open('countries.csv', 'w') as file:
+    writer = csv.writer(file, delimiter = ',')
+    writer.writerow(countries)
 file.close()
 
 # Creates array of world cities
 data = pd.read_csv("Cities.csv")
-data.dropna(inplace = True)
-cities_df = pd.concat([data['city'],data['country']],axis = 1)
 
-# Create continents lists
-#print(continents)
+cities_df = pd.concat([data['city'],data['country'],data['population']],axis = 1)
+cities_df['continent'] = ""
+cities_df.dropna(inplace = True)
 
-# Creates arrays for of cities for relevant countries
-cities_countries = list(data['country'])
-cities_df['cities_countries'] =  cities_countries
-unique_countries = list(dict.fromkeys(cities_countries))
+# Capitalises country and city names
+cities_df['country'] = cities_df['country'].str.upper()
+cities_df['city'] = cities_df['city'].str.upper()
 
-# Create a dictionary to output file
-with open('Unique Countries.txt',"w") as file:
-    for country in unique_countries:
-        file.write("%s \n" % country)
+# Place the continent required in the row
+for index, row in cities_df.iterrows():
+    for i in range(0,6,1):
+        for j in range(0,len(geography_set[i]),1):
+            if geography_set[i][j] == row['country']:
+                cities_df.at[index,'continent'] = geography_set[i][0]
 
-cities = list(data['city'])
+# Save dataframe as new CSV
+cities_df.to_csv('geography_set.csv',index=False)
 
-
-
-# Creates arrays for of cities for relevant countries
-cities_countries = list(data['country'])
-cities_df['cities_countries'] =  cities_countries
-unique_countries = list(dict.fromkeys(cities_countries))
-
-
-
-# Create new columns with the cities and Countries
-# data.drop(['city_ascii', 'lat','lng','iso2','iso3','admin_name','capital','population'],axis =1)
-
-# Puts each word into an array
-# for word in file:
-#     word.split('|')
-#     #country_code.append(a)
-#     #countries.append(b)
-# #print(count(word))
-# for i in countries:
-#     print(i)
-#     print("\n")
-
-
+# Expand the geography_set to include new files

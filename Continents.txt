@@ -1,1 +1,6 @@
-Antarctica,North America,South America,Australia,Europe,Asia
+Antarctica
+North America
+South America
+Australia
+Europe
+Asia
