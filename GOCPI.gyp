@@ -17,35 +17,46 @@ country_code = []
 
 # Creates array from Countrie Data
 file = open("Countries.txt","rt")
-countries = file.readlines()
+countries = file.read()
+countries = countries.split('\n')
 file.close()
 
 # Creates array from Continent Data
 file = open("Continents.txt","rt")
-continents = file.readlines()
+continents = file.read()
+continents = continents.split(',')
+print(continents)
 file.close()
 
 # Creates array of world cities
 data = pd.read_csv("Cities.csv")
 data.dropna(inplace = True)
-cities = list(data['city'])
-#print(cities)
+cities_df = pd.concat([data['city'],data['country']],axis = 1)
+
+# Create continents lists
+#print(continents)
 
 # Creates arrays for of cities for relevant countries
 cities_countries = list(data['country'])
+cities_df['cities_countries'] =  cities_countries
 unique_countries = list(dict.fromkeys(cities_countries))
 
-print(unique_countries)
+# Create a dictionary to output file
+with open('Unique Countries.txt',"w") as file:
+    for country in unique_countries:
+        file.write("%s \n" % country)
 
-for i in unique_countries:
-    i = list()
-    for j in cities_countries:
-        if i == j:
-            i.append(cities[countries.index(j)])
-            print(cities[countries.index(j)])
+cities = list(data['city'])
 
 
-            
+
+# Creates arrays for of cities for relevant countries
+cities_countries = list(data['country'])
+cities_df['cities_countries'] =  cities_countries
+unique_countries = list(dict.fromkeys(cities_countries))
+
+
+
 # Create new columns with the cities and Countries
 # data.drop(['city_ascii', 'lat','lng','iso2','iso3','admin_name','capital','population'],axis =1)
 
