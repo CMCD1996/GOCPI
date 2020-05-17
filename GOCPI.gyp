@@ -24,7 +24,7 @@ geography_set = [['AFRICA'],
 
 continents = ['AFRICA','ASIA','EUROPE','NORTH AMERICA','OCEANIA','SOUTH AMERICA']
 
-# Sets up a for loop to append countries to the continents in the geography set
+    # Sets up a for loop to append countries to the continents in the geography se
 file = open('Country and Continent.txt','r')
 for line in file:
     string = line.split('\n')
