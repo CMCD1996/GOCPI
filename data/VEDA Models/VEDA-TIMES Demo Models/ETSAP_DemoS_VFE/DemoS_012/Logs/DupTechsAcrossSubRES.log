@@ -1,0 +1,25 @@
+The following processes has Re-Define across SubRES:
+------------------------------------------------
+Scenario-Region-Process
+
+NewTechs ; REG1 ; ELCTNCOA00
+NewTechs-Vintage ; REG1 ; ELCTNCOA00
+NewTechs ; REG1 ; ELCTNGAS00
+NewTechs-Vintage ; REG1 ; ELCTNGAS00
+NewTechs ; REG1 ; ELCTNOIL00
+NewTechs-Vintage ; REG1 ; ELCTNOIL00
+NewTechs ; REG1 ; ROTNGAS
+NewTechs-Vintage ; REG1 ; ROTNGAS
+NewTechs ; REG1 ; TOTNOIL
+NewTechs-Vintage ; REG1 ; TOTNOIL
+NewTechs ; REG2 ; ELCTNCOA00
+NewTechs-Vintage ; REG2 ; ELCTNCOA00
+NewTechs ; REG2 ; ELCTNGAS00
+NewTechs-Vintage ; REG2 ; ELCTNGAS00
+NewTechs ; REG2 ; ELCTNOIL00
+NewTechs-Vintage ; REG2 ; ELCTNOIL00
+NewTechs ; REG2 ; ROTNGAS
+NewTechs-Vintage ; REG2 ; ROTNGAS
+NewTechs ; REG2 ; TOTNOIL
+NewTechs-Vintage ; REG2 ; TOTNOIL
+

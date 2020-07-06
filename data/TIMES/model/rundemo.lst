@@ -1,0 +1,61 @@
+GAMS 30.3.0  rc5da09e Released Mar  6, 2020 DEX-DEG x86 64bit/Mac OS X - 04/10/20 18:58:44 Page 1
+G e n e r a l   A l g e b r a i c   M o d e l i n g   S y s t e m
+C o m p i l a t i o n
+
+
+****  CALL=127 " *** arguments are hidden"
+****  Above call failed, RC=127
+****  ERRORLEVEL set to 1
+  12  $ hiddencall  gams /Users/connor/Google Drive/Documents/University/Courses/2020/ENGSCI 700A&B/Models/TIMES_Demo-master/model/demo12.run idir=/Users/connor/Google Drive/Documents/University/Courses/2020/ENGSCI 700A&B/Models/TIMES_Demo-master/model/;/
+      Users/connor/Google Drive/Documents/University/Courses/2020/ENGSCI 700A&B/Models/TIMES_Demo-master/model/../source ps=0 gdx=/Users/connor/Google Drive/Documents/University/Courses/2020/ENGSCI 700A&B/Models/TIMES_Demo-master/model/demo12 O=/Users/con
+      nor/Google Drive/Documents/University/Courses/2020/ENGSCI 700A&B/Models/TIMES_Demo-master/model/demo12.lst filecase=2 r=../source\_times.g00
+****                                                                                                                                             $330
+**** 330  CALL failed
+****  CALL=127 " *** arguments are hidden"
+****  Above call failed, RC=127
+****  ERRORLEVEL set to 1
+  14  $ hiddencall  gdx2veda /Users/connor/Google Drive/Documents/University/Courses/2020/ENGSCI 700A&B/Models/TIMES_Demo-master/model/demo12 /Users/connor/Google Drive/Documents/University/Courses/2020/ENGSCI 700A&B/Models/TIMES_Demo-master/model/../sour
+      ce/times2veda.vdd /Users/connor/Google Drive/Documents/University/Courses/2020/ENGSCI 700A&B/Models/TIMES_Demo-master/model/demo12
+****                                                                                                                                   $330
+**** 330  CALL failed
+      ******************************************************************************************** 
+       The GAMS run for the TIMES model demo12 has been executed to completion. 
+       Please see the folder /Users/connor/Google Drive/Documents/University/Courses/2020/ENGSCI 700A&B/Models/TIMES_Demo-master/model/ for the output files from the demo12 run: 
+        -- see demo12.lst for the listing file from the demo12 model run 
+        -- see demo12.gdx for the composite GDX file from the demo12 run 
+        -- see demo12.vd* for the results files generated from the solution. 
+       See also /Users/connor/Google Drive/Documents/University/Courses/2020/ENGSCI 700A&B/Models/TIMES_Demo-master/model/QA_CHECK.LOG for the TIMES QA check log for the model run. 
+      ******************************************************************************************** 
+****  CALL=127 " *** arguments are hidden"
+****  Above call failed, RC=127
+****  ERRORLEVEL set to 1
+  33  $ hiddencall ask T=Listbox  D="demo12.lst -- GAMS Listing file|demo12.gdx -- Composite GDX file|demo12~Data_yymmdd_hhmmss.gdx -- Data-only GDX|demo12.vd* -- Results files|QA_Check.log -- TIMES QA Log|" M="See the output files in Folder: /Users/conno
+      r/Google Drive/Documents/University/Courses/2020/ENGSCI 700A&B/Models/TIMES_Demo-master/model/" C="GAMS Run for demo12 has been completed" o=nul
+****                                                                                                                                                 $330
+**** 330  CALL failed
+
+**** 3 ERROR(S)   0 WARNING(S)
+GAMS 30.3.0  rc5da09e Released Mar  6, 2020 DEX-DEG x86 64bit/Mac OS X - 04/10/20 18:58:44 Page 2
+G e n e r a l   A l g e b r a i c   M o d e l i n g   S y s t e m
+Include File Summary
+
+
+   SEQ   GLOBAL TYPE      PARENT   LOCAL  FILENAME
+
+     1        1 INPUT          0       0  /Users/connor/Google Drive/Documents/University/Courses/2020/ENGSCI 700A&B/Models/TIMES_Demo-master/model/rundemo.gms
+     2       34 TERMINATE      1      34  /Users/connor/Google Drive/Documents/University/Courses/2020/ENGSCI 700A&B/Models/TIMES_Demo-master/model/rundemo.gms
+
+
+COMPILATION TIME     =        0.021 SECONDS      2 MB  30.3.0 rc5da09e DEX-DEG
+
+
+USER: GAMS Demo license for Connor McDowall          G200408|0002CO-GEN
+      The University of Auckland, New Zealand                  DL006479
+
+
+**** FILE SUMMARY
+
+Input      /Users/connor/Google Drive/Documents/University/Courses/2020/ENGSCI 700A&B/Models/TIMES_Demo-master/model/rundemo.gms
+Output     /Users/connor/Google Drive/Documents/University/Courses/2020/ENGSCI 700A&B/Models/TIMES_Demo-master/model/rundemo.lst
+
+**** USER ERROR(S) ENCOUNTERED

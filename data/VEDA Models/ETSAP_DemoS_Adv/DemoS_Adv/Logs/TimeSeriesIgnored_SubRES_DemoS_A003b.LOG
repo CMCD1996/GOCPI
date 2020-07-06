@@ -1,0 +1,8 @@
+Scenario,Region,Attribute,Process,Commgrp,Commodity,UC_N,Year,Timeslice,Limtype,Valfield
+Cost_UC-Subs_Reg.REG1.UC_NCAP.ELCSTGELC01.-.-.UCE_FloSubLim.2005.-.-.0.05
+Cost_UC-Subs_Reg.REG1.UC_NCAP.ELCSTSELC01.-.-.UCE_FloSubLim.2005.-.-.0.05
+Cost_UC-Subs_Reg.REG2.UC_NCAP.ELCSTGELC01.-.-.UCE_FloSubLim.2005.-.-.0.05
+Cost_UC-Subs_Reg.REG2.UC_NCAP.ELCSTSELC01.-.-.UCE_FloSubLim.2005.-.-.0.05
+SysSettings.REG1.FLO_SHAR.ELCBNGAB01.ELCBNGAB01_NRGI.ELCBIO.-.0.ANNUAL.UP.5
+SysSettings.REG2.FLO_SHAR.ELCBNGAB01.ELCBNGAB01_NRGI.ELCBIO.-.0.ANNUAL.UP.5
+

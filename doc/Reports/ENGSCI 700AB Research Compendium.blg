@@ -1,0 +1,9 @@
+[0] Config.pm:304> INFO - This is Biber 2.12
+[0] Config.pm:307> INFO - Logfile is 'ENGSCI 700AB Research Compendium.blg'
+[41] biber-darwin:315> INFO - === Mon Jul  6, 2020, 18:30:22
+[65] Biber.pm:371> INFO - Reading 'ENGSCI 700AB Research Compendium.bcf'
+[151] Biber.pm:889> INFO - Found 0 citekeys in bib section 0
+[157] Utils.pm:193> WARN - The file 'ENGSCI 700AB Research Compendium.bcf' does not contain any citations!
+[163] bbl.pm:636> INFO - Writing 'ENGSCI 700AB Research Compendium.bbl' with encoding 'UTF-8'
+[164] bbl.pm:739> INFO - Output to ENGSCI 700AB Research Compendium.bbl
+[164] Biber.pm:110> INFO - WARNINGS: 1

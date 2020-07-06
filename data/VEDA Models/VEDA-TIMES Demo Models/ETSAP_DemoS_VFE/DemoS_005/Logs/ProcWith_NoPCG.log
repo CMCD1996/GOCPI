@@ -1,0 +1,7 @@
+Process with no PCG:
+Scenario ; Region ; Process ; PrimaryCG ; Activity Unit 
+
+BASE ; REG2 ; EXPCOA1 ;  ; PJ
+BASE ; REG1 ; IMPCOA1 ;  ; PJ
+BASE ; REG2 ; EXPGAS1 ;  ; PJ
+
