@@ -1,0 +1,59 @@
+--- Job rundemo.gms Start 04/09/20 11:30:09 30.3.0 rc5da09e DEX-DEG x86 64bit/Mac OS X
+--- GAMS Parameters defined
+    Input /Users/connor/Google Drive/Documents/University/Courses/2020/ENGSCI 700A&B/Models/TIMES_Demo-master/model/rundemo.gms
+    PageSize 0
+    ScrDir /Users/connor/Google Drive/Documents/University/Courses/2020/ENGSCI 700A&B/Models/TIMES_Demo-master/model/225a/
+    SysDir /Applications/GAMS30.3/GAMS Terminal.app/Contents/MacOS/
+    LogOption 3
+    ErrMsg 1
+    ErrorLog 99
+    IDE 1
+    LstTitleLeftAligned 1
+GAMS 30.3.0   Copyright (C) 1987-2020 GAMS Development. All rights reserved
+Licensee: GAMS Demo license for Connor McDowall          G200408|0002CO-GEN
+          The University of Auckland, New Zealand                  DL006479
+          cmcd398@aucklanduni.ac.nz, Connor McDowall                       
+          Demo license for demonstration and instructional purposes only
+--- Starting compilation
+--- rundemo.gms(12) 2 Mb
+sh: B/Models/TIMES_Demo-master/model/demo12.run: No such file or directory
+sh: B/Models/TIMES_Demo-master/model/: No such file or directory
+sh: /Users/connor/Google: No such file or directory
+sh: B/Models/TIMES_Demo-master/model/../source: No such file or directory
+sh: B/Models/TIMES_Demo-master/model/demo12: No such file or directory
+sh: B/Models/TIMES_Demo-master/model/demo12.lst: No such file or directory
+--- rundemo.gms(12) 2 Mb 1 Error
+*** above call failed, RC=127
+*** ERRORLEVEL set to 1
+*** Error 330 in /Users/connor/Google Drive/Documents/University/Courses/2020/ENGSCI 700A&B/Models/TIMES_Demo-master/model/rundemo.gms
+    CALL failed
+--- rundemo.gms(14) 2 Mb
+sh: B/Models/TIMES_Demo-master/model/demo12: No such file or directory
+sh: B/Models/TIMES_Demo-master/model/../source/times2veda.vdd: No such file or directory
+sh: B/Models/TIMES_Demo-master/model/demo12: No such file or directory
+--- rundemo.gms(14) 2 Mb 2 Errors
+*** above call failed, RC=127
+*** ERRORLEVEL set to 1
+*** Error 330 in /Users/connor/Google Drive/Documents/University/Courses/2020/ENGSCI 700A&B/Models/TIMES_Demo-master/model/rundemo.gms
+    CALL failed
+-------------------------------------------------------------------------------
+--- The GAMS run for the TIMES model demo12 has been completed.
+--- See folder /Users/connor/Google Drive/Documents/University/Courses/2020/ENGSCI 700A&B/Models/TIMES_Demo-master/model/ for output files from the run:
+	 - demo12.lst for the GAMS listing file
+	 - demo12.gdx for the composite GDX file
+	 - demo12.vd* for the results files
+--- See also /Users/connor/Google Drive/Documents/University/Courses/2020/ENGSCI 700A&B/Models/TIMES_Demo-master/model/QA_CHECK.LOG for the TIMES QA log.
+-------------------------------------------------------------------------------
+gams: **** Error: Parameter error(s)
+    :             Reading parameter(s) from "command line args"
+    :             *** Error line 3: Unknown option "Drive/Documents/University/Courses/2020/ENGSCI"
+    :             *** Error line 4: Option keyword expected, saw "7"
+    :             Finished reading from "command line args"
+sh: ask: command not found
+*** above call failed, RC=127
+*** ERRORLEVEL set to 1
+*** Error 330 in /Users/connor/Google Drive/Documents/University/Courses/2020/ENGSCI 700A&B/Models/TIMES_Demo-master/model/rundemo.gms
+    CALL failed
+--- rundemo.gms(34) 2 Mb 3 Errors
+*** Status: Compilation error(s)
+--- Job rundemo.gms Stop 04/09/20 11:30:09 elapsed 0:00:00.019

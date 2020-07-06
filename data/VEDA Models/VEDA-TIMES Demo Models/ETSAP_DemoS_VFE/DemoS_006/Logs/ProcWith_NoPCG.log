@@ -1,0 +1,6 @@
+Process with no PCG:
+Scenario ; Region ; Process ; PrimaryCG ; Activity Unit 
+
+NewTechs ; REG1 ; ELCTNOIL00 ;  ; PJ
+NewTechs ; REG2 ; ELCTNOIL00 ;  ; PJ
+

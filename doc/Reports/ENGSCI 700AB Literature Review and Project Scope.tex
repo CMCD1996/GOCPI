@@ -1,0 +1,425 @@
+% !TEX TS-program = pdflatex
+% !TEX encoding = UTF-8 Unicode
+% !BIB TS-program = biber
+% !BIB program = biber
+
+\documentclass[12pt]{article}
+
+%%% PAGE DIMENSIONS
+\usepackage[margin=2.54cm]{geometry}
+\geometry{a4paper} 
+
+\usepackage{graphicx} % For better graphics
+\usepackage{pdfpages} % To insert pdfs into the library
+\usepackage{tikz}
+\usepackage{wrapfig}
+\usepackage{siunitx}
+
+%%% PACKAGES
+\usepackage{booktabs} % for much better looking tables
+\usepackage{amsmath} % for better maths
+\usepackage{paralist} % very flexible & customisable lists (eg. enumerate/itemize, etc.)
+\usepackage{verbatim} % adds environment for commenting out blocks of text & for better verbatim
+\usepackage{subfig} % make it possible to include more than one captioned figure/table in a single float
+\usepackage[framed,numbered]{matlab-prettifier} % enable inserting matlab code.
+\usepackage[parfill]{parskip}
+%\addtolength{\jot}{1em}
+\usepackage{amssymb}
+\usepackage{cancel}
+\usepackage{color}
+\usepackage{listings}
+\usepackage{multicol}
+\usepackage{float}
+
+% References
+\usepackage[backend=biber,style = numeric]{biblatex}
+\bibliography{sources}
+
+%%% HEADERS & FOOTERS
+\usepackage{fancyhdr} % This should be set AFTER setting up the page geometry
+\setlength{\headheight}{15pt}
+\pagestyle{fancy} % options: empty , plain , fancy
+\renewcommand{\headrulewidth}{0pt} % customise the layout...
+\lhead{ENGSCI 700AB}\chead{Global Carbon Pricing}\rhead{cmcd398}
+\lfoot{}\cfoot{\thepage}\rfoot{}
+
+%%% SECTION TITLE APPEARANCE
+\usepackage{sectsty}
+
+%%% ToC (table of contents) APPEARANCE
+\usepackage[nottoc,notlof,notlot]{tocbibind} % Put the bibliography in the ToC
+\usepackage[titles,subfigure]{tocloft} % Alter the style of the Table of Contents
+\renewcommand{\cftsecfont}{\rmfamily\mdseries\upshape}
+\renewcommand{\cftsecpagefont}{\rmfamily\mdseries\upshape} % No bold!
+
+%%% Hyperlinking 
+\usepackage{hyperref}
+\begin{document}
+\begin{titlepage}
+	\newcommand{\HRule}{\rule{\linewidth}{0.5mm}} % Defines a new command for horizontal lines, change thickness here
+	
+	\center
+	
+	%------------------------------------------------
+	%	Headings
+	%------------------------------------------------
+	
+	\textsc{\LARGE }\\[1.5cm] % Main heading such as the name of your university/college
+	
+	\textsc{\Large ENGSCI 700A/B}\\[0.5cm] % Major heading such as course name
+	
+	%------------------------------------------------
+	%	Title
+	%------------------------------------------------
+	
+	\HRule\\[0.5cm]
+	
+	{\huge\bfseries Literature Review, Research Objectives, and Project Scope}\\[0.4cm] % Title of your document
+	
+	\HRule\\[0.5cm]
+	
+	%------------------------------------------------
+	%	Author(s)
+	%------------------------------------------------
+	
+	{\large\textit{Connor McDowall \\cmcd398 \\530913386}}\\
+	
+	%------------------------------------------------
+	%	Date
+	%------------------------------------------------
+	
+	\vfill\vfill\vfill % Position the date 3/4 down the remaining page
+	
+	{\large\today} % Date, change the \today to a set date if you want to be precise
+	 
+	%----------------------------------------------------------------------------------------
+	
+	\vfill % Push the date up 1/4 of the remaining page
+	
+\end{titlepage}
+\tableofcontents
+
+\newpage
+
+\section{Literature Review}
+\subsection{An Introduction to Energy}
+Energy powers the world we live in.
+Industrial sectors use energy to power machining and production processes. Trade uses oil-based products to fuel shipping and logistics networks. 
+The technology sector uses energy to supply power to data centres to facilitate internet services. The manufacturing sector use the chemical properties of oil and natural gas to produce glass, synthetic, and explosive products. 
+In summary, energy has a role in every industry. Energy comes in many forms. 
+The International Energy Agency (IEA) aggregates energy products into six key fuels: Coal, Gas, Oil, Renewables, Electricity, and Nuclear \cite{W:2}. 
+Coal, Gas, and Oil are non-renewable fossil fuels with high energy intensities and carbon emissions. 
+Nuclear energy is a non-renewable resource as the uranium used in production is finite. 
+Renewables utilise technologies to produce energy from infinitely available wind, solar, geothermal and hydro resources. 
+These technologies emit low to no carbon emissions. 
+Regardless, energy will power our way of life.
+
+\subsection{Energy, Emissions, and the Economy}
+Academics spent decades hypothesizing causal relationships between economic growth, energy consumption, and carbon dioxide ($CO_2$) emissions.
+One study explored this hypothesis by applying panel unit root tests, panel co-integration methods, panel causality tests, Fully Modified Ordinary Least Squares (FMOLS), and Dynamic Ordinary Least Squares (DOLS) estimation methods \cite{J:3}.
+Another study explored both linear and non-linear causality using Granger Causality and Vector Autoregressive models \cite{J:9}.
+Although these modeling techniques are not explored further in this literature review or project, there results show a relationship between economic growth, energy consumption, and carbon dioxide ($CO_2$) emissions.
+Subsequently, we must improve our understanding of the three variables and how their relationship informs energy strategy.
+
+\subsubsection{Energy}
+Global energy consumption increased annually over the last decade. 
+As outlined in BP's Statistical Review of World Energy, world consumption grew from 11705.1 Million Tonnes Oil Equivalent (Mtoe) in 2008 to 13864.9 Mtoe in 2018.
+World consumption grew 2.9\% per annum in 2018 and 1.5\% per annum for the period 2007-2017. 
+In 2018, 85\% of global energy consumption came from Oil, Natural Gas, and Coal.
+Global oil consumption increased by 1.2\%, global coal by 1.4\%, global gas by 5.3\%, global nuclear by 2.4\%, global hydro-electricity by 3.1\%, and global renewables by 14.5\% \cite{TR:3}.
+The 14.5\% growth in renewables from 2017 to 2018 highlights how renewables are increasingly competitive as emphasised in the 2020 Deloitte US Renewable Energy Outlook. Flat electricity load growth, declining costs, and the maturation of energy storage
+all contribute to decreasing costs and increasing competitiveness. 
+Decentralised energy networks with remote renewable micro-grids bolster resilence from increasingly frequent adverse weather events. 
+Collaborative efforts lead to newly created efficiencies and the nurturing of new ideas, investment, and leadership. 
+The combination of stakeholders' demand for increased resilency in power networks, and collorative efforts to foster innovation in renewables, will continue to drive renewable uptake \cite{TR:4}. \\\\
+The fallout from the 2008 financial crisis led to a decrease in global consumption. 
+The COVID-19 pandemic is ravaging global oil markets with an approximate 1550 Mtoe (33\% \cite{W:3}) decrease in consumption. 
+The fall in demand from COVID-19, and the inability to store more oil, will catalyse significant change. 
+Governments are distributing stimulus packages in response to the pandemic. 
+Consumption is likely to bounce back after the fallout from COVID-19. 
+Stimulus and the disruption to the energy industry may change the way energy is produced and consumed moving forward.
+
+\subsubsection{Emissions}
+Greenhouse gas emissions (GHG) are adverse by-products from the production or consumption of fossil fuels. 
+Carbon dioxide ($CO_2$) and Nitrous Oxide ($N_2O$) originate from combusting fossil fuels. 
+Methane ($CH_4$) is emitted from fossil fuel production processes. 
+GHGs act as insulators, slowing the rate energy leaves the earth's atmosphere by absorbing energy. 
+Global Warming Potential (GWP) measures how much energy one tonne of gas will absorb relative to one tonne of $CO_2$. 
+The GWP for $CO_2$ is 1 and remains in the atmosphere for thousands of years. 
+The GWP for $N_2O$ is 265-298 over 100 years. 
+Lastly, the GWP for $CH_4$ is 28-36 over 100 years \cite{W:4}. 
+Carbon dioxide emissions from the consumption of oil, gas, and coal for combustion increased annually over the last decade. 
+This subset of global emissions rose from 30336.7 Mtoe in 2008 to 33890.8 Mtoe in 2018, growing 11.72\% over this period \cite{TR:3}. 
+
+It is hard to argue anthropomorphic contributions to global emissions are not playing a role in climate change. 
+The Intergovernment Panel on Climate Change (IPCC) are an intergovernment body of the United Nations (UN). 
+The IPCC inform relevant parties on the scientific basis of risk-induced climate change.
+The IPCC also convey it's natural, economic, and political implications. 
+The IPCC prepared a special report on Global Warming of 1.5 \si{\degree}C, based on an assessment of around 6,000 peer-reviewed publications. 
+This report confirms climate change is affecting livelihoods and ecosystems worldwide.
+Approximately between 0.8 \si{\degree}C and 1.2 \si{\degree}C of global warming above pre-industrial levels is attributable to human activities. 
+It is likely to reach 1.5\si{\degree}C between 2030 and 2052 if the current rate of increase continues. 
+The warming from the pre-industrial era to the present will persist for centuries to millennia.
+Climate models are predicting increased mean temperatures in land and sea regions, hot extremes, heavy precipitation, drought, and precipitation deficits. 
+Biodiversity and ecosystem impacts, such as species loss and extinction, will increase. 
+Ocean temperatures, acidity, and oxygen scarcity will increase. 
+Global warming will impose risks to health, livelihoods, food security, water supply, human security, and economic growth.
+All expected to increase unless severe action is taken \cite{TR:5}. 
+Subsequently, emissions will continue to play an important role in our future.
+
+\subsubsection{Economy}
+The global economy grew substantially over the last century. 
+Worldwide Gross Domestic Product (GDP) per capita (constant 2010 USD) grew from \$3746 in 1960 to \$10891 in 2018 \cite{W:5}. 
+Gross Domestic Product increased from \$66.1 trillion (Current USD) in 2010 to \$85.9 trillion in 2018 (Current USD). 
+The World Bank segments GDP into four key segments: Agriculture, Industry, Manufacturing, and Services. 
+Agriculture corresponds to International Standard Industrial Classification (ISIC) divisions 1-5 which cover forestry, fishing, cultivating crops, and livestock production. 
+Industry corresponds to ISIC divisions 15-37 covering mining, manufacturing, construction, electricity, water, and gas.
+Manufacturing corresponds to ISIC divisions 10-45 covering businesses which physically or chemically transform materials of components into new products. 
+Services corresponds to ISIC divisions 50-99 covering wholesale trade, retail trade, transport, and government, financial, professional, and personal services. 
+In 2018, Agriculture, Industry, Manufacturing, and Services made up 3\%, 25\%, 16\%, and 65\% of GDP respectively \cite{W:6}. 
+On inspection, energy related products are key inputs to producing segment outputs. 
+Traditionally, production is a function of capital and labour. 
+Energy should be included in this set with theoretical and time series analysis supporting this claim. 
+Empirical and theoretical evidence suggests energy availability, coupled with energy use and output, plays a key role in enabling growth \cite{J:4}.
+Unfortunately, the COVID-19 pandemic drew to a close this period of unprecedented growth as the economy is forecast to plunge into a deep recession. \\\\
+It is clear action must be taken to reduce anthropomorphic emissions while meeting the needs the economy after reviewing energy, emissions, and the economy.
+
+\subsection{Current Political Action}
+\subsubsection{Paris Agreement}
+
+Over the last few decades, there has been debate on anthropomorphic emissions causing climate change. 
+During this period, the UN began the United Nation's Climate Change Regime to ratify global agreements to combat climate change. 
+There have been three major phases to this regime. 
+The first phase was negotiating, adopting, and ratifying the United Nations Framework Convention on Climate Change from 1990 to 1995.
+The second phase was the adoption of the Kyoto Protocol on the 11th of December 1997. 
+Unfortunately, the protocol took until the 16th of February 2005 to be ratified due to a complex ratification process. 
+The Kyoto Protocol operationalized the United Nation's Framework Convention on Climate Change. 
+Industrialised countries were committed to reduce and limit GHG emissions in accordance with targets agreed on an individual basis. 
+The protocol only bound developed countries as they were deemed mostly responsible for the state of emissions. 
+The protocol was split into two commitment periods. 
+The first set binding emission targets for 36 industrialised countries, and the European Union, to reduce 5\% of emissions compared to 1990 levels.
+The second commitment was set by the adoption of the Doha Amendment on the 8th of December 2012. 
+This commitment was set to start 2013, end in 2020, and reduce emissions by 18\% from 1990 levels. 
+Unfortunately, the second commitment period was not ratified. 
+The protocol established three flexible market mechanisms; International Emissions Trading, Clean Development Mechanisms, and Joint Implementation. 
+The protocol held parties accountable by establishing rigorous monitoring, review, verification, and compliance systems \cite{W:7}.
+
+This protocol was a step in the right direction but there were some inherent issues. 
+A complex ratification process limited uptake. 
+Participating countries had disproportionate obligations to reduce emissions. 
+The commitment periods did not have a long term outlook, contained different subsets of participants, and were not global in nature.
+
+There was another long term co-operative action promoted under the UNFCCC, launched in the Bali Action Plan. 
+Both the second commitment and the co-operative action were to conclude at the 2009 Copenhagen Conference. 
+However, this conference ended in disappointment as there wasn't enough time before the conference to resolve the issues in the regime.
+
+At the conference, the Copenhagen Accord, political in nature, was agreed upon on the final night by a group of states including most major economies. 
+This accord established a bottom up architecture where both targets and actions were set individually then reported internationally. 
+In 2010, the Cancun Agreements incorporated the Copenhagen Accord into the UNFCCC regime. However, all progress to date did not look pass 2020. 
+
+This issue was resolved at the 2011 Durban Conference when the Durban Platform for Enhanced Action launched the negotiations which lead to the Paris Agreement. 
+Negotiations continued for years, addressing how to develop an instrument suitable for all parties, and requested the submission of nationally determined contributions (NDCs)\cite{J:5}.
+
+The 2015 United Nations' Climate Change Conference was held in Paris. 
+After some exceptional negotiating from French Foreign Minister Laurant Fabius, the Paris Agreement was adopted on the 12th of December 2015, and ratified on the 4th of November 2016.
+
+The Paris Agreement's main objective is to strengthen the global response to climate change by keeping the temperature rise this century below 2\si{\degree} above pre-industrial levels. 
+The agreement also pursues efforts to limit the increase to 1.5\si{\degree}. 
+The agreement addresses the following across 29 articles: long term temperature goals, global peaking targets, mitigation efforts through nationally determined contributions (NDCs), sink and reservoir use, market/non-market approaches, adaptations, loss/damage mitigations from the 
+adverse effects of climate change, financial support, technology support, capacity-building support, education, reporting systems, and global stocktake procedures \cite{W:8}, \cite{TR:6}. 
+Article six of the Paris Agreement outlines mitigations and NDCs which include the following carbon pricing initiatives: Emissions Trading Schemes and Carbon Taxes.
+
+\subsubsection{Carbon Pricing Initiatives}
+Emissions Trading Systems (ETS) facilitate emission reductions where cheapest.
+Polluters who find it easier to reduce emissions can sell emission allowances to polluters who struggle to lower emissions. 
+There are two types of ETS. Firstly, Cap and Trade. Secondly, Baseline and Credit Systems. 
+Cap and Trade sets an upper limit on emissions with emission credits either grandfathered or auctioned. 
+Most emission credits under this system are grandfathered with proceeds captured by existing polluters. 
+Most cap and trade systems are localised regionally or nationally. 
+However, the European Union (EU) implemented the EU ETS to trade across the EU.
+Baseline and credit systems don't have a fixed level of emissions. 
+Polluters can reduce emissions to earn credits to sell to other polluters who need to meet regulations \cite{J:6}.
+
+Carbon Taxes are either implicit or explicit. An implicit tax is incorporated into the price of a GHG intensive product e.g. retail fuels. 
+An explicit tax is a price per quantity of emissions produced e.g. \$10 per tonne of $CO_2$ equivalent.
+
+Carbon pricing initiatives are increasingly recognized as instrumental to cost-effectively deliver the transition to low-carbon societies. 
+The Organisation for Economic Co-operation and Development (OECD), International Monetary Fund (IMF) and the IPCC all recognise the need to strengthen these initiatives.
+
+57 carbon pricing initiatives are either currently implemented, or scheduled for implementation, as at April 1st 2019. 
+28 ETFs are spread across national and subnational jurisdictions with 29 carbon taxes primarily implemented at a national level. 
+These pricing initiatives only cover approximately 20\% of Greenhouse Gas Emissions (11 Gt$CO_2$e). 
+There is variation in carbon prices from less than US\$1/t$CO_2$e to US\$127/t$CO_2$e. 
+Unfortunately most carbon tax price increases are linked to inflation only. 
+Governments raised more than US\$44 billion in carbon pricing revenue during 2018.
+There are determined price trajectories that can deliver on the Paris Agreement which increase each decade on a non-discounted basis.
+IPCC trajectories show the marginal cost of reducing GHG emissions.
+Other sources provide carbon price ranges which consider ambitious climate policy.
+When setting carbon prices, local, ethical and distribution factors must be considered.
+
+Internal carbon pricing is increasing in popularity within the private sector. 
+1300 companies, including 100 Fortune 500 companies, disclosed the current use or intent to use internal carbon pricing. 
+Traditionally, internal carbon pricing drove investment planning for mandatory carbon policies. 
+Internal carbon pricing is transitioning towards informing long-term climate investment and risk strategies.
+Financial policy frameworks are reassessed to use carbon pricing to support sustainable growth. 
+Internal carbon pricing is informing the construction of market indexes e.g. S\&P Carbon Price Adjusted Index to inform market climate risk.
+Internal carbon pricing will continue to catalyse both the investment in sustainable technology and the divestment in fossil fuels.
+Although new carbon pricing initiatives are emerging with an increased emphasis on global collaboration, it is clear the global community is far from reaching the objectives set by the Paris Agreement. 
+Only 5\% of carbon pricing initiatives are currently priced to meet the Paris Agreement's temperature goals \cite{TR:7}.
+
+\subsection{Opportunities and Challenges}
+\subsubsection{Market-Based Approaches}
+Both carbon pricing initiatives are market-based and can be less obtrusive for industry than regulatory controls. 
+The prevalence of emissions across global industries sees a market-based approach more equitable, evenly distributed across industries, and quicker to implement.
+
+Arguably, a carbon tax is the most straightforward approach. 
+A carbon tax could be imposed on all emitting inputs and outputs of production.
+The marginal cost of carbon would be covered by a tax rate. 
+Tax credits from sequestration or other initiatives could be used to invest directly into alternative technologies. 
+Tax rates could be adjusted to illicit the desired market response. 
+A carbon tax would align with existing systems used to facilitate inland revenue functions in the desired jurisdiction.
+
+The effectiveness of cap and trade systems is undermined by grandfathering credits, using offsets in lieu of meaningful emission reduction targets, and the challenges of setting baselines.
+If credits are grandfathered, there are no tax revenues to invest in alternative energy or technology.
+In a cap and trade system, there is uncertainty around the price of those reductions, and the subsequent effect these credits have on lowering emissions.
+Cap and trade initiatives provide benefit certainty as you can ascertain the environmental benefits from an imposed ceiling on emissions. 
+However, there is no cost certainty which is provided through a carbon tax.
+
+\subsubsection{Benefits and Costs to a Carbon Tax}
+A carbon tax is simpler as is set at a cost per t$CO_2$e produced. 
+In contracts, a cap and trade is more complex due to negotiating baselines, grandfathering/auctioning processes, monitoring systems, international trading guidelines, and cost uncertainty prevention.
+A carbon tax more easily generates revenue to invest in reducing greenhouse gas emissions and supporting businesses adopting more sustainable processes. 
+A cap and trade system generates revenues using credit auctioning but is less effective than a carbon tax if grandfathering credits exists.
+A carbon tax ensures cost certainty as the exact cost of emissions is quantified. 
+In addition, there is a clear message to polluters with a carbon tax. 
+Under a cap and trade system, there is more uncertainty around the impact polluters have as they can merely purchase more credits to increase emissions.
+In light of these positives, there are also negatives to a carbon tax. 
+There is significant political opposition in proposing a new form of tax. 
+The benefits of a carbon tax will need to be clearly communicated to all stakeholders. 
+The benefits of a carbon tax are uncertain in how they enact reductions in emissions. 
+Tax exemptions may reduce the effectiveness of the carbon tax if granted inequitably. 
+For example, if a super major was given a significant tax exemption on the basis of an existing political relationship.
+A carbon tax is also difficult to co-ordinate with other participants \cite{J:6}. 
+In addition to these disadvantages, there are misconceptions leading to the opposition of carbon taxes. 
+These misconceptions include, but are not limited to, the following: Taxes reducing welfare, and increasing unemployment, from lower levels of consumption and production. 
+Taxes perceived to put incumbents' business models at risk. Subsequently, these incumbents lobby heavily prevent change.
+Taxes increasing the prices of goods and services consumers consume, creating opposing public opinions \cite{A:3}.
+
+Addressing the disadvantages and misconceptions of a carbon tax would help implement carbon taxes across geographies to reduce greenhouse gas emissions.
+
+\subsubsection{Decarbonization, Investment, and Technology}
+
+The revenue generated from carbon taxes would need to be reinvested to benefit regional, national, and global communities. 
+One opportunity is investing in sustainable technologies. 
+Fortunately, this type of investment is increasing. 
+Between 2010 and 2019, renewable technology drew \$2.6 trillion in investment. 
+In 2019, \$282 billion of renewable capacity was financed worldwide. 
+Wind technologies (onshore and offshore) and solar were financed \$138 billion and \$131 billion respectively. 
+This financing success was attributable to falling costs and maturing technologies. 
+Renewable technologies are now profitable. 
+Costs associated with solar and wind technologies have fallen 85\% and 49\% respectively in the last 10 years \cite{W:10}.
+In Australia, New Zealand, Canada, Europe, Japan, and the United States, sustainable investments reached assets of \$30.7 trillion in early 2018, one-third of total investment.
+By 2025, renewables will be competitive with natural gas. New technology is emerging in the Oil and Gas Industry to decarbonise the industry. 
+These technologies include but are not limited to: renewable power sources, electrification, vapor recovery units, carbon capture, carbon storage, and green hydrogen \cite{A:2}. 
+Carbon tax revenues could be used in the following ways: investment into sustainable technologies, replacing existing infrastructure to support sustainable technology growth, reinvestment into participating businesses, or addressing the adverse affects of climate change.
+It is important to communicate the benefit of sustainable investment to all relevant stakeholders.
+
+\subsection{Energy Modeling}
+It is important to understand how energy demand and supply is modeled before discussing emission levels, carbon taxes, and reinvestment opportunities.
+Unsurprisingly, energy modeling is complex.
+
+\subsubsection{Global and Domestic Energy Scenarios}
+Different scenarios define modeling processes. 
+The World Energy Council devised three energy transition scenarios describing plausible pathways for the global energy transition to follow. 
+The scenarios look forward to 2060. There is an inflection point in 2040 to assess the success of the strategies underpinning the scenarios.
+The council leveraged expert member communities and annual surveys to devise these strategies.
+The three global scenarios tell different narratives relating to the progression of global primary energy demand, electrification,mobility improvements, energy efficiency, infrastructure innovation, investment, new technologies, political action, and Paris Agreement alignment.
+There are three global scenarios: Modern Jazz, Unfinished Symphony, and Hard Rock. 
+Modern Jazz is a market driven scenario. 
+Unfinished Symphony is a highly collaborative, policy driven scenario. 
+Hard Rock is a minimally collaborative, internal policy driven scenario \cite{TR:8}.
+
+Countries use the global scenarios to inform their regional and national scenarios. 
+New Zealand has followed this methodology through devising the Tui and Kea scenarios. 
+Tui follows the narrative of a global community effort. 
+New Zealand does not generally have a common view on what is important.
+Subsequently, the country adopts a wait and see approach with some protection provided to local businesses.
+New Zealand will focus firstly on economic prosperity and individually wellbeing by leveraging off comparative advantages.
+This is purely a commercial response. 
+Kea forecasts the New Zealand economy cannot remain internationally competitive under current emission intensity trends.
+The country will take leadership in lowering emissions, choosing to undergo an early and aggressive economic transformation.
+New Zealand will act before the global economy at the expense of its own.
+
+Both scenarios are underpinned by 19 critical uncertainties. 
+These vary from external sources such as global stability, international fuel markets, urban sustainability, energy affordability, and the allocation of natural resources. 
+Both scenarios consider different service demands e.g. Number of km travelled, population, GDP (\$), forecast carbon prices (\$/t$CO_2$e), carbon emissions (Mt/p.a), required investment (\$), and commodity prices \cite{TR:1}, \cite{TR:2}.
+These scenarios were feed into The Integrated MARKEL-EFORM System (TIMES) model to forecast their impact.
+
+\subsubsection{The Integrated MARKEL-EFORM System (TIMES) Model}
+The Integrated MARKEL-EFORM System (TIMES) model generator was developed as a component of the International Energy Authority's (IEA) Energy Technology Systems Analysis Program (ETSAP). 
+The IEA-ETSAP uses long term energy scenarios to conduct comprehensive environment and energy analyses \cite{J:7}.
+Energy is modeled through combining complementary technical engineering and economic approaches. 
+TIMES uses a technology rich bottom up architecture, using linear programming to produce least cost energy systems for medium to long term time horizons \cite{J:8}.
+The TIMES model encompasses each step in the value chain to produce and supply energy to meet the demand for energy services by consumers.
+These include: primary resources, transformation processes, transportation methods and conversion processes. 
+The supply side considers production methods and net exports. 
+Energy is carried through to residential, commercial, agricultural, transport, and industrial sectors. 
+The relationships between producers and consumers underpin the TIMES model. 
+The nature of these relationships are mathematical, economic, and technological. 
+TIMES considers technologies, commodities, flows, and scenarios constrained by policy decisions.
+Services demanded by consumers are the main inputs for the model.
+The model will make investment, supply, trade, and operating decisions when considering the inputs, constraints, and scenarios in the model. 
+Consumer and producer surpluses are maximized from a mathematical perspective.
+The main outputs are energy system configurations at the lowest cost that meet end users' service demands. 
+These include energy prices, flows, emission quantities, capacities, and costs \cite{J:8}, \cite{W:12}.
+
+The TIMES model is useful for using energy scenarios to devise strategies for implementing carbon taxes.
+
+\subsubsection{General Algebraic Modeling System (GAMS)}
+GAMS is a high-level modeling system for optimization and mathematical programming.
+The system is suitable for large scale, complex modeling applications. 
+The system gives you access to a diverse portfolio of solvers to solve linear, non-linear, and mixed integer optimization problems.
+GAMS is the ideal tool for modeling energy and carbon tax scenarios using TIMES Models \cite{W:11}.
+
+\newpage
+
+\section{Project Scope and Research Objectives}
+The literature led to some interesting outcomes. 
+Carbon taxes are an effective way to help meet the goals set by the Paris Agreement, reduce global emissions, and reinvest in both sustainable and decarbonizing technologies.
+However, there are significant obstacles stopping the implementation of carbon taxes. 
+These obstacles include political opposition, effectiveness in reducing emissions, co-ordination with other local, regional, national and international carbon tax efforts, and the distribution of tax exemptions.
+Currently, the distribution and implementation of carbon pricing initiatives is inequitable as major polluters aren't enforcing these initiatives e.g the majority of the US and India.
+Producers who operate globally may pivot to produce and sell GHG intensive products elsewhere in the world if taxes are not correctly set and spread amongst geographies.
+In this context, geographies are defined as geographical areas where energy consumption and emission production occurs. 
+Earth is the entire set of geographies.
+This set can be partitioned into continental, national, provincial, or regional geographies (subsets).
+
+
+Any carbon pricing initiative must consider the specific combination of energy factors for the associated geography.
+The aggregate outcome from all geographies should meet the objectives set by the Paris Agreement.
+The revenues generated should be distributed back to participants with commercial benefits communicated through key financial metrics relevant to that geography or business.
+
+The overall research objective is: 
+\begin{center}
+\textbf{Develop a Global Carbon Pricing Optimisation Model}.
+\end{center}
+The model will be developed by the following process:
+
+\begin{enumerate}
+	\item Understand the existing approach to forecasting services demand and develop a standardised forecasting process which aligns with emission targets
+	\item Partition the global set of geographies into subsets with varying levels of granularity e.g. a continental subset with seven geographies (continents), a national subset with 195 geographies (sovereign states according to the United Nations) etc
+	\item Forecast services demand for each geography in each subset
+	\item Adapt an existing TIMES model to input standardised services demand profiles 
+	\item Run simulations using the TIMES model to form distributions on model outputs. These distributions are to inform the negotiation of carbon pricing initiatives
+	\item Develop and model investment strategies from subsequent key outputs including carbon prices
+	\item Develop a model interface (UI and UX) to communicate optimal global carbon prices, performance metrics, and the carbon tax benefits to support co-ordinated efforts to negotiate and implement carbon pricing initiatives 
+\end{enumerate}
+
+In conclusion, this project will attempt to address issue surrounding climate change. 
+The overall purpose of the model is to catalyse further discussion in implementing carbon pricing initiatives. 
+The model aims to communicate the key financial benefits of these initiatives which ultimately drive change and investment in industry. 
+
+\newpage
+\section{Bibliography}
+\printbibliography
+\end{document}

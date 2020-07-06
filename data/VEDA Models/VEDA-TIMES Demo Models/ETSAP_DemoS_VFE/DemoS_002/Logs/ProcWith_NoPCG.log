@@ -1,0 +1,13 @@
+Process with no PCG:
+Scenario ; Region ; Process ; PrimaryCG ; Activity Unit 
+
+BASE ; REG1 ; ELCECOA ;  ; PJ
+BASE ; REG1 ; ELCEGAS ;  ; PJ
+BASE ; REG1 ; ELCENUC ;  ; PJ
+BASE ; REG1 ; ELCEOIL ;  ; PJ
+BASE ; REG1 ; ELCERNW ;  ; PJ
+BASE ; REG1 ; RSDEGAS ;  ; PJ
+BASE ; REG1 ; RSDNGAS ;  ; PJ
+BASE ; REG1 ; TRAEOIL ;  ; PJ
+BASE ; REG1 ; TRANOIL ;  ; PJ
+

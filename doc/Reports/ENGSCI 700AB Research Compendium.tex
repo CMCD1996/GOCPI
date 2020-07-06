@@ -1,0 +1,188 @@
+% !TEX TS-program = pdflatex
+% !TEX encoding = UTF-8 Unicode
+% !BIB TS-program = biber
+% !BIB program = biber
+
+\documentclass[12pt]{article}
+
+%%% PAGE DIMENSIONS
+\usepackage[margin=2.54cm]{geometry}
+\geometry{a4paper} 
+
+\usepackage{graphicx} % For better graphics
+\usepackage{pdfpages} % To insert pdfs into the library
+\usepackage{tikz}
+\usepackage{wrapfig}
+\usepackage{siunitx}
+
+%%% PACKAGES
+\usepackage{booktabs} % for much better looking tables
+\usepackage{amsmath} % for better maths
+\usepackage{paralist} % very flexible & customisable lists (eg. enumerate/itemize, etc.)
+\usepackage{verbatim} % adds environment for commenting out blocks of text & for better verbatim
+\usepackage{subfig} % make it possible to include more than one captioned figure/table in a single float
+\usepackage[framed,numbered]{matlab-prettifier} % enable inserting matlab code.
+\usepackage[parfill]{parskip}
+%\addtolength{\jot}{1em}
+\usepackage{amssymb}
+\usepackage{cancel}
+\usepackage{color}
+\usepackage{listings}
+\usepackage{multicol}
+\usepackage{float}
+
+% References
+\usepackage[backend=biber,style = numeric]{biblatex}
+\bibliography{sources}
+
+%%% HEADERS & FOOTERS
+\usepackage{fancyhdr} % This should be set AFTER setting up the page geometry
+\setlength{\headheight}{15pt}
+\pagestyle{fancy} % options: empty , plain , fancy
+\renewcommand{\headrulewidth}{0pt} % customise the layout...
+\lhead{ENGSCI 700AB}\chead{Global Carbon Pricing}\rhead{cmcd398}
+\lfoot{}\cfoot{\thepage}\rfoot{}
+
+%%% SECTION TITLE APPEARANCE
+\usepackage{sectsty}
+
+%%% ToC (table of contents) APPEARANCE
+\usepackage[nottoc,notlof,notlot]{tocbibind} % Put the bibliography in the ToC
+\usepackage[titles,subfigure]{tocloft} % Alter the style of the Table of Contents
+\renewcommand{\cftsecfont}{\rmfamily\mdseries\upshape}
+\renewcommand{\cftsecpagefont}{\rmfamily\mdseries\upshape} % No bold!
+
+%%% Hyperlinking 
+\usepackage{hyperref}
+\begin{document}
+\begin{titlepage}
+	\newcommand{\HRule}{\rule{\linewidth}{0.5mm}} % Defines a new command for horizontal lines, change thickness here
+	
+	\center
+	
+	%------------------------------------------------
+	%	Headings
+	%------------------------------------------------
+	
+	\textsc{\LARGE }\\[1.5cm] % Main heading such as the name of your university/college
+	
+	\textsc{\Large ENGSCI 700A/B}\\[0.5cm] % Major heading such as course name
+	
+	%------------------------------------------------
+	%	Title
+	%------------------------------------------------
+	
+	\HRule\\[0.5cm]
+	
+	{\huge\bfseries Research Compendium}\\[0.4cm] % Title of your document
+	
+	\HRule\\[0.5cm]
+	
+	%------------------------------------------------
+	%	Author(s)
+	%------------------------------------------------
+	
+	{\large\textit{Connor McDowall \\cmcd398 \\530913386}}\\
+	
+	%------------------------------------------------
+	%	Date
+	%------------------------------------------------
+	
+	\vfill\vfill\vfill % Position the date 3/4 down the remaining page
+	
+	{\large\today} % Date, change the \today to a set date if you want to be precise
+	 
+	%----------------------------------------------------------------------------------------
+	
+	\vfill % Push the date up 1/4 of the remaining page
+	
+\end{titlepage}
+\tableofcontents
+\listoffigures
+\listoftables
+\newpage
+\section{Project Log Book}
+Note: Rework points before this date.
+\subsection{January - February}
+\begin{itemize}
+	\item Began scoping energy related project during experience in the Commercial team at ExxonMobil Australia
+	\item Emailed and Meet with Rosalind
+	\item Decided to look at Carbon Pricing Initiatives to inform reinvestment and carbon pricing initiatives
+	\item Rosalind tasked with with investigating GAMS
+\end{itemize}
+\subsection{March 1st - May 30th}
+\begin{itemize}
+	\item Coronavirus was classified a worldwide pandemic
+	\item New Zealand was sent into lockdown
+	\item Researched 30+ Academic reports, articles, websites for Literature Review
+	\item Wrote 10 page Literature Review
+	\item Scoped the project
+	\item Submitted Mid-Semester Literature Review on May 5th
+	\item Installed GAMS on my local device
+	\item Began researching the construction of an energy system with Excel, VEDA FE, GAMS, VEDA BE, Python
+	\item Created GOCPI Geographies.gyp script to combined cities, countries and continents while providing granularity to the modelling process
+	\item Created GOCPI.html as a project display for selling the project
+	\item Ran into a series of installation and usage issues with VEDA and GAMS
+	\item Requested VM to work from home
+	\item Installed VMware and GAMS on FlexIT systems
+	\item Faced GAMS Licensing issues on FlexIT
+\end{itemize}
+\subsection{May 31st 2020}
+\begin{enumerate}
+	\item Installed Microsoft Remote Desktop and FortiClient VPN to access UoA Virtual Machine
+	\item Set up Virtual Machine
+\end{enumerate}
+\subsection{June 1st 2020}
+\begin{enumerate}
+	\item Installed VEDA FE and VEDA FE on Virtual Machine
+	\item Downloaded 12 Demo Models to build my TIMES Model
+\end{enumerate}
+\subsection{June 3rd}
+\begin{enumerate}
+	\item Begun testing the Model the Demo Models
+\end{enumerate}
+\subsection{June 4th - June 10th}
+\begin{enumerate}
+	\item Meeting with Rosalind. Discussed set up and action points moving forward.
+	\item Showed VEDA-FE. Four assessments were discussed.
+	\item Continued researching how to use VEDA
+\end{enumerate}
+\subsection{June 11th - Approximately 4 hours}
+\begin{enumerate}
+	\item Meeting with Rosalind at 10:30am via Zoom
+	\item Discussed action points moving forward.
+	\item Continued to adapt excel spreadsheets for Excel Data.
+	\item There is still an issue with GAMS Installation (Check with Tony. He knows a guy)
+	\item VEDA FE creates the necessary DD files. Continue to work through the DEMO Models to understand GAMS.
+\end{enumerate}
+\subsection{June 16th - July 1st}
+\begin{itemize}
+	\item No Progress - Study Break and Exams for ACCTG 371, FINANCE 362 and ENGSCI 711
+\end{itemize}
+\subsection{July 2nd}
+\begin{itemize}
+	\item Last meeting in Rosalind's corner office. Discussed online exams, Chegg, cheating and project next steps.
+	\item Agreed to adapt spreadsheets for user input and use BP's World Energy Outlook Statistics to determine production, conversion and consumption rates.
+\end{itemize}
+\subsection{July 3rd}
+\begin{itemize}
+	\item Began adapting Demo 12 model for custom inputs
+	\item Began using the openpyxl python library to manipulate excel (GOCPI Input.gyp)
+\end{itemize}
+\subsection{July 4rd}
+\begin{itemize}
+	\item Continue to work on openpyxl adaptation with xls and xlsx excel sheets
+\end{itemize}
+\subsection{July 6th}
+\begin{itemize}
+	\item Created a proper file directory for managing the project
+	\item Continued to adapt GOCPI Inputs.gyp to scale across multiple sheets
+	\item Adapted GOCPI.html, GOCPI Inputs.gyp and GOCPI Geographies to work after rearranging the geographies
+\end{itemize}
+\subsection{October 30th}
+\begin{itemize}
+	\item Continue to work on openpyxl adaptation with xls and xlsx excel sheets
+\end{itemize}
+\section{Bibliography}
+\printbibliography
+\end{document}
