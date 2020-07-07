@@ -56,5 +56,6 @@ source_file = source_root/'IEAEnergyBalance2017.xlsm'
 # Note the data is from #https://stats.oecd.org/ and #https://www-oecd-ilibrary-org.ezproxy.auckland.ac.nz/
 print(fileID)
 df_A = pd.read_excel(source_file,sheet_name = 'A',index_col = 0,header = 0)
+df_A.head(n=10)
 
 
