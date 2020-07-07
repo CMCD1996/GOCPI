@@ -1,4 +1,5 @@
-# GOCPI_Geographies Structures the data in a way
+# GOCPI_Geographies Structures the geographies into Countries, Cities and Continents
+
 # Import useful python packages
 # Git reposistory
 # https://github.com/CMCD1996/GOCPI.git
