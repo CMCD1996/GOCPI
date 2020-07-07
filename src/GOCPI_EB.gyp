@@ -55,6 +55,6 @@ source_file = source_root/'IEAEnergyBalance2017.xlsm'
 # Imports Pandas process IEA World Energy Statistics and Balances CSVs from Stats.OECD.org in the OECDiLibrary
 # Note the data is from #https://stats.oecd.org/ and #https://www-oecd-ilibrary-org.ezproxy.auckland.ac.nz/
 print(fileID)
-df_A = pd.read_excel(source_file,sheet_name = 'A',header = 0)
-print(df_A.head())
+df_A = pd.read_excel(source_file,sheet_name = 'A',index_col = 0,header = 0)
+
 
