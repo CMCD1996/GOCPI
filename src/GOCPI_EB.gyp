@@ -46,16 +46,32 @@ from pydrive.drive import GoogleDrive
 #     title_list.append(filex['title']) # IEAEnergyBalance.csvs Titles
 
 #Gets link to the two file wanted
+#Gets link to the two file wanted
 link = '1dHSJuPkgqTHhZtiD-iKSTEsMWkecbnC-' # File IDs for IEA Energy Balances for 2017
 
 fileID = 'https://drive.google.com/file/d/' + link
-source_file = source_root/'IEAEnergyBalance2017.xlsm'
+IEAWEBAK = source_root/'IEAWorldEnergyBalances2017A-K.csv'
+IEAWEBLZ = source_root/'IEAWorldEnergyBalances2017L-Z.csv'
+
 # Links for IEA Energy Balance for 2018 (A-K) and IEA Energy Balance for 2017 (L-Z)
 
-# Imports Pandas process IEA World Energy Statistics and Balances CSVs from Stats.OECD.org in the OECDiLibrary
+# Creates dataframes from IEA World Energy Statistics and Balances CSVs from Stats.OECD.org in the OECDiLibrary
 # Note the data is from #https://stats.oecd.org/ and #https://www-oecd-ilibrary-org.ezproxy.auckland.ac.nz/
-print(fileID)
-df_A = pd.read_excel(source_file,sheet_name = 'A',index_col = 0,header = 0)
-df_A.head(n=10)
+column_headers = ['ID','Unit','Geo_Code','Geo_Description','Prod_Code','Prod_Description','Flow_Code','Flow_Description','Year','Value(TJ)']
+f1 = open(IEAWEBAK,'r')
+df_A = pd.read_csv(f1,header = None)
+df_A.columns = column_headers
+df_A.info(verbose = True)
+f2 = open(IEAWEBLZ,'r')
+df_B = pd.read_csv(f2,header = None)
+df_B.columns = column_headers
+df_B.info(verbose = True)
+
+# Closes the files
+f1.close()
+f2.close()
+
+# Manipulates the folder depending on the information that comes through
+
 
 
