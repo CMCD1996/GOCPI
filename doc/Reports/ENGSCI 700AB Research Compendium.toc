@@ -12,5 +12,7 @@
 \contentsline {subsection}{\numberline {1.10}July 3rd}{3}{subsection.1.10}% 
 \contentsline {subsection}{\numberline {1.11}July 4rd}{3}{subsection.1.11}% 
 \contentsline {subsection}{\numberline {1.12}July 6th}{4}{subsection.1.12}% 
-\contentsline {subsection}{\numberline {1.13}October 30th}{4}{subsection.1.13}% 
+\contentsline {subsection}{\numberline {1.13}July 7th}{4}{subsection.1.13}% 
+\contentsline {subsection}{\numberline {1.14}July 7th}{4}{subsection.1.14}% 
+\contentsline {subsection}{\numberline {1.15}October 30th}{4}{subsection.1.15}% 
 \contentsline {section}{\numberline {2}Bibliography}{4}{section.2}% 

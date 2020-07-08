@@ -81,11 +81,7 @@ Primary = ['Domestic Supply','Imports','Exports','Total Primary Supply']
 Conversion = ['Energy Sector Consumption','Electricity Plants','Heat Plants','Petroluem Refineries','Total Conversion']
 Consumption = ['Residential','Commercial','Industry','Agriculture','Transport','Other','Non Energy','Bunkers','Total Final Consumption']
 
-#  Columns (Energy Types)
-Energy = ['Solid Fuels', 'Natural Gas', 'Crude Oil','Diesel Oil','Kerosene','LPG','Motor Spirit','Naphtha','Heavy Fuel Oil','Other Petroleum Products','Nuclear Energy','Biomass','Hydro power','Wind energy','Solar Energy','Industrial Wastes','Derived Heat','Electricity','Total']
-
-# Creates lists of all the sources
-# Primary
+# Primary (To complete)
 DomesticSupply = ['Production']
 Imports = ['Imports']
 Exports = ['Exports']
@@ -95,13 +91,94 @@ TotalPrimarySupply = ['Total primary energy supply']
 
 # Consumption (To complete)
 
+# Energy Flows
+Energy_Flows = ['Production', 'Imports', 'Exports', 'International marine bunkers',
+ 'International aviation bunkers', 'Stock changes',
+ 'Total primary energy supply', 'Transfers', 'Statistical differences',
+ 'Transformation processes', 'Main activity producer electricity plants',
+ 'Autoproducer electricity plants', 'Main activity producer CHP plants',
+ 'Autoproducer CHP plants', 'Main activity producer heat plants',
+ 'Autoproducer heat plants', 'Heat pumps', 'Electric boilers',
+ 'Chemical heat for electricity production', 'Blast furnaces', 'Gas works',
+ 'Coke ovens', 'Patent fuel plants', 'BKB/peat briquette plants',
+ 'Oil refineries','Petrochemical plants', 'Coal liquefaction plants',
+ 'Gas-to-liquids (GTL) plants', 'For blended natural gas',
+ 'Charcoal production plants', 'Non-specified (transformation)',
+ 'Energy industry own use', 'Coal mines', 'Oil and gas extraction',
+ 'Gasification plants for biogases',
+ 'Liquefaction (LNG) / regasification plants',
+ '"Own use in electricity, CHP and heat plants"', 'Pumped storage plants',
+ 'Nuclear industry', 'Non-specified (energy)', 'Losses',
+ 'Total final consumption', 'Industry', 'Mining and quarrying',
+ 'Construction', 'Manufacturing', 'Iron and steel',
+ 'Chemical and petrochemical', 'Non-ferrous metals', 'Non-metallic minerals',
+ 'Transport equipment', 'Machinery', 'Food and tobacco',
+ '"Paper, pulp and printing"', 'Wood and wood products',
+ 'Textile and leather', 'Industry not elsewhere specified', 'Transport',
+ 'World aviation bunkers', 'Domestic aviation', 'Road', 'Rail',
+ 'Pipeline transport', 'World marine bunkers', 'Domestic navigation',
+ 'Non-specified (transport)', 'Residential',
+ 'Commercial and public services', 'Agriculture/forestry', 'Fishing',
+ 'Final consumption not elsewhere specified', 'Non-energy use',
+ 'Non-energy use industry/transformation/energy',
+ 'Memo: Non-energy use in industry', 'Memo: Non-energy use in construction',
+ 'Memo: Non-energy use in mining and quarrying',
+ 'Memo: Non-energy use in iron and steel',
+ 'Memo: Non-energy use in chemical/petrochemical',
+ 'Memo: Non-energy use in non-ferrous metals',
+ 'Memo: Non-energy use in non-metallic minerals',
+ 'Memo: Non-energy use in transport equipment',
+ 'Memo: Non-energy use in machinery',
+ 'Memo: Non-energy use in food/beverages/tobacco',
+ 'Memo: Non-energy use in paper/pulp and printing',
+ 'Memo: Non-energy use in wood and wood products',
+ 'Memo: Non-energy use in textiles and leather',
+ 'Memo: Non-energy use in industry not elsewhere specified',
+ 'Non-energy use in transport', 'Non-energy use in other',
+ 'Electricity output (GWh)',
+ 'Electricity output (GWh)-main activity producer electricity plants',
+ 'Electricity output (GWh)-autoproducer electricity plants',
+ 'Electricity output (GWh)-main activity producer CHP plants',
+ 'Electricity output (GWh)-autoproducer CHP plants' 'Heat output',
+ 'Heat output-main activity producer CHP plants',
+ 'Heat output-autoproducer CHP plants',
+ 'Heat output-main activity producer heat plants',
+ 'Heat output-autoproducer heat plants']
+
+#  Columns (Energy Types)
+Energy = ['Solid Fuels', 'Natural Gas', 'Crude Oil','Diesel Oil','Kerosene','LPG','Motor Spirit','Naphtha','Heavy Fuel Oil','Other Petroleum Products','Nuclear Energy','Biomass','Hydro power','Wind energy','Solar Energy','Industrial Wastes','Derived Heat','Electricity','Total']
+
+Enery_Types = ['Hard coal (if no detail)', 'Brown coal (if no detail)', 'Anthracite',
+ 'Coking coal', 'Other bituminous coal', 'Sub-bituminous coal', 'Lignite',
+ 'Patent fuel', 'Coke oven coke', 'Gas coke', 'Coal tar' 'BKB',
+ 'Gas works gas', 'Coke oven gas', 'Blast furnace gas',
+ 'Other recovered gases', 'Peat', 'Peat products', 'Oil shale and oil sands',
+ 'Natural gas', 'Crude/NGL/feedstocks (if no detail)', 'Crude oil',
+ 'Natural gas liquids', 'Refinery feedstocks',
+ 'Additives/blending components', 'Other hydrocarbons', 'Refinery gas',
+ 'Ethane', 'Liquefied petroleum gases (LPG)',
+ 'Motor gasoline excl. biofuels', 'Aviation gasoline',
+ 'Gasoline type jet fuel', 'Kerosene type jet fuel excl. biofuels',
+ 'Other kerosene', 'Gas/diesel oil excl. biofuels', 'Fuel oil', 'Naphtha',
+ 'White spirit & SBP', 'Lubricants', 'Bitumen', 'Paraffin waxes',
+ 'Petroleum coke', 'Other oil products', 'Industrial waste',
+ 'Municipal waste (renewable)', 'Municipal waste (non-renewable)',
+ 'Primary solid biofuels', 'Biogases' 'Biogasoline' 'Biodiesels',
+ 'Bio jet kerosene', 'Other liquid biofuels',
+ 'Non-specified primary biofuels and waste', 'Charcoal',
+ 'Elec/heat output from non-specified manufactured gases',
+ 'Heat output from non-specified combustible fuels', 'Nuclear', 'Hydro',
+ 'Geothermal', 'Solar photovoltaics', 'Solar thermal',
+ '"Tide, wave and ocean"', 'Wind', 'Other sources', 'Electricity', 'Heat',
+ 'Total', 'Memo: Renewables']
+
 # Creates a pivot table to display the data in the way similar to the Energy Balance Sheet (cols = Energy Product, rows = Energy Flows)
 EBPT = pd.pivot_table(df,index=['Geo_Description','Flow_Description'],values=['Value(TJ)'],columns=['Prod_Description'],aggfunc=[np.sum],fill_value=0)
 # Filters to the geography the user has selected
 Selected_Geo = uv_geo[0] # Update once turned into a custom function
 Input_String = 'Geo_Description == ["'+ Selected_Geo +'"]'
 EBPTG = EBPT.query(Input_String)
-print(EBPTG)
+
 # Write the filtered pivot table to an excel file
 writer = pd.ExcelWriter(source_root/"Geo EB.xlsx")
 EBPTG.to_excel(writer,Selected_Geo) 
