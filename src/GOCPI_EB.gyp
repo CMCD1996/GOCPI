@@ -88,8 +88,22 @@ Exports = ['Exports']
 TotalPrimarySupply = ['Total primary energy supply']
 
 # Conversion (To complete)
+Energy_Sector_Consumption = ['']
+Electricity_Plants = ['']
+Heat_Plants = ['']
+Petroleum_Refineries = ['']
+Total_Conversion = ['']
 
 # Consumption (To complete)
+Residential = ['']
+Commercial = ['']
+Industry = ['']
+Agriculture = ['']
+Transport= ['']
+Other = ['Stock changes','Transfers','Statistical differences']
+Non_Energy = ['']
+Bunkers = ['International marine bunkers', 'International aviation bunkers']
+Total_Final_Consumption = ['']
 
 # Energy Flows
 Energy_Flows = ['Production', 'Imports', 'Exports', 'International marine bunkers',
@@ -147,6 +161,27 @@ Energy_Flows = ['Production', 'Imports', 'Exports', 'International marine bunker
 
 #  Columns (Energy Types)
 Energy = ['Solid Fuels', 'Natural Gas', 'Crude Oil','Diesel Oil','Kerosene','LPG','Motor Spirit','Naphtha','Heavy Fuel Oil','Other Petroleum Products','Nuclear Energy','Biomass','Hydro power','Wind energy','Solar Energy','Industrial Wastes','Derived Heat','Electricity','Total']
+
+Solid_Fuels = ['']
+Natural_Gas = ['']
+Crude_Oil = ['']
+Diesel_Oil = ['']
+Kerosene = ['']
+LPG = ['']
+Motor_Spirit = ['']
+Naphtha = ['']
+Heavy_Fuel_Oil = ['']
+Other_Petroleum_Products = ['']
+Nuclear_Energy = ['']
+Biomass = ['']
+Hydro_power = ['']
+Wind_Energy = ['']
+Solar_Energy = ['']
+Industrial_Wastes = ['']
+Derived_Heat = ['']
+Electricity = ['']
+Total = ['']
+
 
 Enery_Types = ['Hard coal (if no detail)', 'Brown coal (if no detail)', 'Anthracite',
  'Coking coal', 'Other bituminous coal', 'Sub-bituminous coal', 'Lignite',
