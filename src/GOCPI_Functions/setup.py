@@ -1,8 +1,8 @@
 from setuptools import setup
 
-setup(name='dist_alx',
-      version='0.0',
-      description='Gaussian and Binomial distributions',
-      packages=['dist_alx'],
-      author_email='mihajlovic.aleksa@gmail.com',
+setup(name='GOCPI_Functions',
+      version='1.0',
+      description='User Defined Functions for GOCPI Project',
+      packages=['GOCPI_Functions'],
+      author_email='connormcdowall@gmail.com',
       zip_safe=False)
