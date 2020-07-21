@@ -16,5 +16,11 @@
 \contentsline {subsection}{\numberline {1.14}July 7th}{4}{subsection.1.14}% 
 \contentsline {subsection}{\numberline {1.15}July 17th}{4}{subsection.1.15}% 
 \contentsline {subsection}{\numberline {1.16}July 18th}{4}{subsection.1.16}% 
-\contentsline {subsection}{\numberline {1.17}October 30th}{5}{subsection.1.17}% 
+\contentsline {subsection}{\numberline {1.17}July 19th}{5}{subsection.1.17}% 
+\contentsline {subsection}{\numberline {1.18}July 20th}{5}{subsection.1.18}% 
+\contentsline {subsection}{\numberline {1.19}July 21st}{5}{subsection.1.19}% 
+\contentsline {subsection}{\numberline {1.20}July 22nd}{5}{subsection.1.20}% 
+\contentsline {subsection}{\numberline {1.21}July 23rd}{5}{subsection.1.21}% 
+\contentsline {subsection}{\numberline {1.22}August 10th}{5}{subsection.1.22}% 
+\contentsline {subsection}{\numberline {1.23}October 30th}{5}{subsection.1.23}% 
 \contentsline {section}{\numberline {2}Bibliography}{5}{section.2}% 

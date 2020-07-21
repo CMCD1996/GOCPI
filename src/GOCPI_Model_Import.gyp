@@ -18,16 +18,6 @@ from pathlib import Path
 from openpyxl import load_workbook
 import GOCPI_Functions as GF
 
-# Custom functions necessary for this step
-# Finds a file within a function
-def Find_File(target_root,target_file):
-    for root, dirs, files in os.walk(target_root):
-        for name in files:
-            if name == target_file:
-                f = os.path.abspath(os.path.join(root, name))
-    return f
-# End of custom functions
-
 # Beginning of scripting
 # Very Important Step: Set directory root for file operations.
 model_roots = Path('/Users/connor/Google Drive/Documents/University/Courses/2020/ENGSCI 700A&B/GOCPI/data/Inputs/GOCPI OseMOSYS')
@@ -43,7 +33,7 @@ model = Location.Find_File()
 
 # data = Find_File(data_file,model_file)
 df = pd.read_excel(model,sheet_name = 'Model')
-
+print(df.columns)
 # Creates a new dataframe based on the variables on the Include column values
 df_Include = df[df.Include == 'Yes']
 df_model = df_Include[['Name']].copy()
@@ -55,5 +45,16 @@ model_location = os.path.join(model_roots,model_txt)
 # Saves the user defined model to a text file
 np.savetxt(model_location,df_model.values,fmt = '%s')
 
-'/Users/connor/Google Drive/Documents/University/Courses/2020/ENGSCI 700A&B/GOCPI'
-'/Users/connor/Google Drive/Documents/University/Courses/2020/ENGSCI 700A&B/GOCPI/src/GOCPI_Functions'
+# Creates array of parameters from select sets and functions
+df_Include = df[df.Include == 'Yes']
+df_target_sets = df_Include[df.Type == "Sets"]
+df_sets = df_target_sets[['Name']].copy()
+df_target_parameters = df_Include[df.Type == "Parameters"]
+df_parameters = df_target_parameters[['Name']].copy()
+
+# Reviews what sets and parameters must the user input for the optimisation model
+print(df.head())
+print(df_sets.head())
+print(df_parameters.head())
+
+# Creates the relevent input ranges for the various models
