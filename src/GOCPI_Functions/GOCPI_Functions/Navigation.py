@@ -1,6 +1,6 @@
 import os
 
-class Navigation():
+class Navigation:
     """ Navigation is a class for navigating, manipulating and editing data in the GOCPI model.
     
     Attributes:
@@ -10,23 +10,28 @@ class Navigation():
     TODO: Fill out all functions below
             
     """
-    def __init__(self):
+    def __init__(self,target_root, target_file):
+        self.target_root = target_root
+        self.target_file = target_file
+        """
+        No inputs/outputs required
+        """
                 
-        def Find_File(self,target_root,target_file):
-            """
-            Find_File searches for a target file, from a base directory, to construct
-            a target directory.
+    def Find_File(self):
+        """
+        Find_File searches for a target file, from a base directory, to construct
+        a target directory.
 
-            Inputs: 
-            target_root = The base directory to search from (string).
-            target_file = The name of the target file (string).
+        Inputs: 
+        target_root = The base directory to search from (string).
+        target_file = The name of the target file (string).
 
-            Outputs: 
-            f = Combinated target file location (string).
-            """
+        Outputs: 
+        f = Combinated target file location (string).
+        """
 
-            for root, dirs, files in os.walk(target_root):
-                for name in files:
-                    if name == target_file:
-                        f = os.path.abspath(os.path.join(root, name))
-            return f
+        for root, dirs, files in os.walk(self.target_root):
+            for name in files:
+                if name == self.target_file:
+                    f = os.path.abspath(os.path.join(root, name))
+        return f
