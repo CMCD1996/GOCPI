@@ -20,7 +20,8 @@ import GOCPI_Functions as GF
 
 # Beginning of scripting
 # Very Important Step: Set directory root for file operations.
-model_roots = Path('/Users/connor/Google Drive/Documents/University/Courses/2020/ENGSCI 700A&B/GOCPI/data/Inputs/GOCPI OseMOSYS')
+root = '/Users/connor/Google Drive/Documents/University/Courses/2020/ENGSCI 700A&B/GOCPI/data/Inputs/GOCPI OseMOSYS'
+model_roots = Path(root)
 
 # sets strings as excel file names for the model and parameter data.
 model_file = 'GOCPI_OseMOSYS_Structure.xlsx'
@@ -53,7 +54,7 @@ df_target_parameters = df_Include[df.Type == "Parameters"]
 df_parameters = df_target_parameters[['Name']].copy()
 
 # Reviews what sets and parameters must the user input for the optimisation model
-print(df.head())
+print(df.info())
 print(df_sets.head())
 print(df_parameters.head())
 
