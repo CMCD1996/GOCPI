@@ -23,7 +23,7 @@ import GOCPI as GF
 
 
 # Sets sets
-YEAR = ['1990','1991','1992','1993', '1994', '1995', '1996', '1997', '1998', '1999', '2000', '2001', '2002', '2003', '2004', '2005', '2006', '2007', '2008', '2009', '2010']
+YEAR = [1990,1991,1992,1993, 1994, 1995, 1996, 1997, 1998, 1999, 2000, 2001, 2002, 2003, 2004, 2005, 2006, 2007, 2008, 2009, 2010]
 REGION = ['UTOPIA']
 EMISSION = ['CO2','NOX']
 TECHNOLOGY = ['E01','E21','E31','E51','E70','IMPDSL1','IMPGSL1','IMPHCO1','IMPOIL1','IMPURN1', 'RHE','RHO','RL1','SRE','TXD','TXE','TXG','RIV','RHu','RLu','TXu']
@@ -51,14 +51,13 @@ ls = len(STORAGE)
 lld = len(DAYTYPE)
 lls = len(SEASON)
 llh = len(DAILYTIMEBRACKET)
-lengths = [ls,lr,le,lt,lf,ll,lm,ls,lld,lls,llh]
-for l in lengths:
-    print(l)
+lengths = [ly,lr,le,lt,lf,ll,lm,ls,lld,lls,llh]
+
 # Sets parameters
-YearSplit = []
-DiscountRate = []
-DaySplit = []
-Conversionls = []
+YearSplit = np.zeros((ll,ly))
+DiscountRate = np.zeros((lr))
+DaySplit = np.zeros((llh,ly))
+Conversionls = np.zeros((ll,ls))
 Conversionld = []
 Conversionlh = []
 DaysInDayType = []
