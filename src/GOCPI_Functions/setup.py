@@ -4,8 +4,10 @@ from setuptools import setup
 'Note: Make your own python package: https://towardsdatascience.com/make-your-own-python-package-6d08a400fc2d'
 'Note: PyPi https://pypi.org/manage/project/gocpi-functions/releases/#modal-close'
 setup(name='GOCPI_Functions',
-      version='1.3',
-      description='User Defined Functions for GOCPI Project',
+      version='1.4',
+      description='User Defined Functions and Energy Systems Data for GOCPI Project',
       packages=['GOCPI_Functions'],
       author_email='connormcdowall@gmail.com',
       zip_safe=False)
+      
+'/Users/connor/Google Drive/Documents/University/Courses/2020/ENGSCI 700A&B/GOCPI/src/GOCPI_Functions'

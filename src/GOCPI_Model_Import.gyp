@@ -16,7 +16,11 @@ import pathlib
 import os
 from pathlib import Path
 from openpyxl import load_workbook
+
+# Import custom functions for navigation
 import GOCPI_Functions as GF
+# Import data case for the model
+f = GF.Navigation
 
 # Beginning of scripting
 # Very Important Step: Set directory root for file operations.
@@ -58,4 +62,6 @@ print(df.info())
 print(df_sets.head())
 print(df_parameters.head())
 
-# Creates the relevent input ranges for the various models
+# Import the scenario with all sets and 
+YEAR = Utopia.YEAR
+print(YEAR)

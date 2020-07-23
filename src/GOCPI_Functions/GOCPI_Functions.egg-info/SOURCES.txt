@@ -1,8 +1,6 @@
 setup.cfg
 setup.py
-GOCPI_Functions/Binomialdistribution.py
-GOCPI_Functions/Gaussiandistribution.py
-GOCPI_Functions/Generaldistribution.py
+GOCPI_Functions/Energysystems.py
 GOCPI_Functions/Navigation.py
 GOCPI_Functions/__init__.py
 GOCPI_Functions.egg-info/PKG-INFO

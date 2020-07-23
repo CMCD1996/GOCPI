@@ -29,4 +29,4 @@ Running the Energy System Model with glpk solver
     4) Run the model in the terminal using the command 'glpsol -m Model.txt -d Data.txt -o Results.txt
 
 Running the Energy System Model with CPLEX solver
-    1) Add these steps
+    1) (Add these steps)
