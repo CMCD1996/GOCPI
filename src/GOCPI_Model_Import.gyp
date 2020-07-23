@@ -18,7 +18,7 @@ from pathlib import Path
 from openpyxl import load_workbook
 
 # Import custom functions for navigation
-# import GOCPI_Functions as GF
+import GOCPI as GF
 # Import data case for the model
 
 # Beginning of scripting

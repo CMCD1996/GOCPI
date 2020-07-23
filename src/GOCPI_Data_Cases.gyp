@@ -19,7 +19,7 @@ import pathlib
 import os
 from pathlib import Path
 from openpyxl import load_workbook
-import GOCPI_Functions as GF
+import GOCPI as GF
 
 # Beginning of scripting
 # Set the appropriate scripting details
