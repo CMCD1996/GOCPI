@@ -20,7 +20,6 @@ from openpyxl import load_workbook
 # Import custom functions for navigation
 import GOCPI_Functions as GF
 # Import data case for the model
-f = GF.Navigation
 
 # Beginning of scripting
 # Very Important Step: Set directory root for file operations.
@@ -38,7 +37,6 @@ model = Location.Find_File()
 
 # data = Find_File(data_file,model_file)
 df = pd.read_excel(model,sheet_name = 'Model')
-print(df.columns)
 # Creates a new dataframe based on the variables on the Include column values
 df_Include = df[df.Include == 'Yes']
 df_model = df_Include[['Name']].copy()
@@ -57,11 +55,4 @@ df_sets = df_target_sets[['Name']].copy()
 df_target_parameters = df_Include[df.Type == "Parameters"]
 df_parameters = df_target_parameters[['Name']].copy()
 
-# Reviews what sets and parameters must the user input for the optimisation model
-print(df.info())
-print(df_sets.head())
-print(df_parameters.head())
-
 # Import the scenario with all sets and 
-YEAR = Utopia.YEAR
-print(YEAR)

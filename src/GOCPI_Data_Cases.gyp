@@ -22,13 +22,12 @@ from openpyxl import load_workbook
 import GOCPI_Functions as GF
 
 # Beginning of scripting
-# Very Important Step: Set directory root for file operations.
+# Set the appropriate scripting details
 
-def Utopia(self):
-    self.YEAR = [1990,1991,1992,1993,1994]
+YEAR = [1990,1991,1992,1993, 1994, 1995, 1996, 1997, 1998, 1999, 2000, 2001, 2002, 2003, 2004, 2005, 2006, 2007, 2008, 2009, 2010]
+REGION = ['Utopia']
 
-def GOCPI(self):
-    self.YEAR = [1995,1996,1997,1998,1999]
+Utopia = GF.Energy_Systems(YEAR,REGION)
 
 
 
