@@ -22,7 +22,7 @@ class Energy_Systems:
                 ADD
         """
         self.year = year
-        self.year = region
+        self.region = region
 
     def Year(self):
         """Function to return energy system examples for a particular scenario

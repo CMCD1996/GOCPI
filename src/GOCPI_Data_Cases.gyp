@@ -21,13 +21,98 @@ from pathlib import Path
 from openpyxl import load_workbook
 import GOCPI as GF
 
-# Beginning of scripting
-# Set the appropriate scripting details
 
+# Sets sets
 YEAR = [1990,1991,1992,1993, 1994, 1995, 1996, 1997, 1998, 1999, 2000, 2001, 2002, 2003, 2004, 2005, 2006, 2007, 2008, 2009, 2010]
-REGION = ['Utopia']
+REGION = ['UTOPIA']
+EMISSION = ['CO2','NOX']
+TECHNOLOGY = ['E01','E21','E31','E51','E70','IMPDSL1','IMPGSL1','IMPHCO1','IMPOIL1','IMPURN1', 'RHE','RHO','RL1','SRE','TXD','TXE','TXG','RIV','RHu','RLu','TXu']
+FUEL = ['CSV','DSL','ELC','GSL','HCO','HYD','LTH','OIL','URN','RH','RL','TX']
+TIMESLICE = ['ID', 'IN','SD','SN','WD','WN']
+MODE_OF_OPERATION = [1,2]
+STORAGE = ['DAM']
+DAYTYPE = ['Dummy']
+SEASON = ['Dummy']
+DAILYTIMEBRACKET = ['Dummy']
 
-Utopia = GF.Energy_Systems(YEAR,REGION)
+# Sets Additional Sets
+BOUNDARY_INSTANCES = ['endc1']
+
+# Initialises Parameters
+# Finds lengths of all sets
+ly = len(YEAR)
+lr = len(REGION)
+le = len(EMISSION) 
+lt = len(TECHNOLOGY) 
+lf = len(FUEL) 
+ll = len(TIMESLICE)
+lm = len(MODE_OF_OPERATION)
+ls = len(STORAGE)
+lld = len(DAYTYPE)
+lls = len(SEASON)
+llh = len(DAILYTIMEBRACKET)
+lengths = [ls,lr,le,lt,lf,ll,lm,ls,lld,lls,llh]
+for l in lengths:
+    print(l)
+# Sets parameters
+YearSplit = []
+DiscountRate = []
+DaySplit = []
+Conversionls = []
+Conversionld = []
+Conversionlh = []
+DaysInDayType = []
+TradeRoute = []
+DepreciationMethod = []
+SpecifiedAnnualDemand = []
+SpecifiedDemandProfile = []
+AccumulatedAnnualDemand = []
+CapacityToActivityUnit = []
+CapacityFactor = []
+AvailabilityFactor = []
+OperationalLife = []
+ResidualCapacity = []
+InputActivityRatio = []
+OutputActivityRatio = []
+CapitalCost = []
+VariableCost = []
+FixedCost = []
+TechnologyToStorage = []
+TechnologyFromStorage = []
+StorageLevelStart = []
+StorageMaxChargeRate = []
+StorageMaxDischargeRate = []
+MinStorageCharge = []
+OperationalLifeStorage = []
+CapitalCostStorage = []
+ResidualStorageCapacity = []
+CapacityOfOneTechnologyUnit = []
+TotalAnnualMaxCapacity = []
+TotalAnnualMinCapacity = []
+TotalAnnualMaxCapacityInvestment = []
+TotalAnnualMinCapacityInvestment = []
+TotalTechnologyAnnualActivityLowerLimit= []
+TotalTechnologyAnnualActivityUpperLimit = []
+TotalTechnologyModelPeriodActivityUpperLimit = []
+TotalTechnologyModelPeriodActivityLowerLimit = []
+ReserveMarginTagTechnology = []
+ReserveMarginTagFuel = []
+ReserveMargin = []
+RETagTechnology = []
+RETagFuel = []
+REMinProductionTarget = []
+EmissionActivityRatio = []
+EmissionsPenalty = []
+AnnualExogenousEmission = []
+AnnualEmissionLimit = []
+ModelPeriodExogenousEmission = []
+ModelPeriodEmissionLimit = []
+
+# Additional Parameters
+
+# Use custom function to create values
+# Utopia = GF.Energy_Systems(YEAR,REGION)
+# print(Utopia.year)
 
 
 
