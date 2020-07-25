@@ -121,11 +121,12 @@ class Energy_Systems:
             The loaded in parameters and sets
     
         """    
-    def CreateDataFile(self,file_location,default_array):
+    def CreateDataFile(self,file_location,defaults_dictionary):
         """Function create the GOCPI OseMOSYS Energy Systems Data File necessary for optimisation
         
         Args: 
-            Default: An array of default values for the Energy System parameters
+            Defaults_dictionary: An array of default values for the Energy System parameters. It's important the order of these
+                                 parameters are preserved.
         
         Returns: 
             The GOCPI OseMOSYS file
@@ -144,34 +145,34 @@ class Energy_Systems:
             f.write('set YEAR\t:=\t{0};\n'.format(set_string))
             # region
             set_string = ' '.join(self.region)
-            f.write('set YEAR\t:=\t{0};\n'.format(set_string))
+            f.write('set REGION\t:=\t{0};\n'.format(set_string))
             # emission
             set_string = ' '.join(self.emission)
-            f.write('set YEAR\t:=\t{0};\n'.format(set_string))
+            f.write('set EMISSION\t:=\t{0};\n'.format(set_string))
             # technology
             set_string = ' '.join(self.technology)
-            f.write('set YEAR\t:=\t{0};\n'.format(set_string))
+            f.write('set TECHNOLOGY\t:=\t{0};\n'.format(set_string))
             # fuel
             set_string = ' '.join(self.fuel)
-            f.write('set YEAR\t:=\t{0};\n'.format(set_string))
+            f.write('set FUEL\t:=\t{0};\n'.format(set_string))
             # timeslice
             set_string = ' '.join(self.timeslice)
-            f.write('set YEAR\t:=\t{0};\n'.format(set_string))
+            f.write('set TIMESLICE\t:=\t{0};\n'.format(set_string))
             # mode_of_operation 
             set_string = ' '.join(self.mode_of_operation)
-            f.write('set YEAR\t:=\t{0};\n'.format(set_string))
+            f.write('set MODE_OF_OPERATION\t:=\t{0};\n'.format(set_string))
             # storage 
             set_string = ' '.join(self.storage)
-            f.write('set YEAR\t:=\t{0};\n'.format(set_string))
+            f.write('set STORAGE\t:=\t{0};\n'.format(set_string))
             # daytype
             set_string = ' '.join(self.daytype)
-            f.write('set YEAR\t:=\t{0};\n'.format(set_string))
+            f.write('set DAYTYPE\t:=\t{0};\n'.format(set_string))
             # season 
             set_string = ' '.join(self.season)
-            f.write('set YEAR\t:=\t{0};\n'.format(set_string))
+            f.write('set SEASON\t:=\t{0};\n'.format(set_string))
             # dailytimebracket 
             set_string = ' '.join(self.dailytimebracket)
-            f.write('set YEAR\t:=\t{0};\n'.format(set_string))
+            f.write('set DAILYTIMEBRACKET\t:=\t{0};\n'.format(set_string))
             f.write('#\n')
             # Parameters
 
@@ -223,8 +224,9 @@ class Energy_Systems:
             # REMinProductionTarget = np.zeros((lr,ly))
             # EmissionActivityRatio = np.zeros((lr,lt,le,lm,ly))
                 #Writes new line character at parameter metadata to the text file
+            param = 'EmissionActivityRatio'
             f.write('#\n')
-            f.write('param\tEmissionActivityRatio\tdefault\t%s:\n'%default)
+            f.write("param\t{0}\tdefault\t{1}:\n".format(param,defaults_dictionary[param]))
             # Writes parameter values to the text files
             for i in range(self.le):
                 # Sets index value for format string
