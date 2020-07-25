@@ -19,7 +19,7 @@ import pathlib
 import os
 from pathlib import Path
 from openpyxl import load_workbook
-import GOCPI as GF
+import GOCPI_CMCD as GF
 
 
 # Sets sets
@@ -38,80 +38,16 @@ DAILYTIMEBRACKET = ['Dummy']
 # Sets Additional Sets
 BOUNDARY_INSTANCES = ['endc1']
 
-# Initialises Parameters
-# Finds lengths of all sets
-ly = len(YEAR)
-lr = len(REGION)
-le = len(EMISSION) 
-lt = len(TECHNOLOGY) 
-lf = len(FUEL) 
-ll = len(TIMESLICE)
-lm = len(MODE_OF_OPERATION)
-ls = len(STORAGE)
-lld = len(DAYTYPE)
-lls = len(SEASON)
-llh = len(DAILYTIMEBRACKET)
-lengths = [ly,lr,le,lt,lf,ll,lm,ls,lld,lls,llh]
+# Sets 
+sets = [YEAR,REGION, EMISSION, TECHNOLOGY, FUEL, TIMESLICE, MODE_OF_OPERATION, STORAGE,DAYTYPE,SEASON,DAILYTIMEBRACKET]
 
-# Sets parameters
-YearSplit = np.zeros((ll,ly))
-DiscountRate = np.zeros((lr))
-DaySplit = np.zeros((llh,ly))
-Conversionls = np.zeros((ll,ls))
-Conversionld = []
-Conversionlh = []
-DaysInDayType = []
-TradeRoute = []
-DepreciationMethod = []
-SpecifiedAnnualDemand = []
-SpecifiedDemandProfile = []
-AccumulatedAnnualDemand = []
-CapacityToActivityUnit = []
-CapacityFactor = []
-AvailabilityFactor = []
-OperationalLife = []
-ResidualCapacity = []
-InputActivityRatio = []
-OutputActivityRatio = []
-CapitalCost = []
-VariableCost = []
-FixedCost = []
-TechnologyToStorage = []
-TechnologyFromStorage = []
-StorageLevelStart = []
-StorageMaxChargeRate = []
-StorageMaxDischargeRate = []
-MinStorageCharge = []
-OperationalLifeStorage = []
-CapitalCostStorage = []
-ResidualStorageCapacity = []
-CapacityOfOneTechnologyUnit = []
-TotalAnnualMaxCapacity = []
-TotalAnnualMinCapacity = []
-TotalAnnualMaxCapacityInvestment = []
-TotalAnnualMinCapacityInvestment = []
-TotalTechnologyAnnualActivityLowerLimit= []
-TotalTechnologyAnnualActivityUpperLimit = []
-TotalTechnologyModelPeriodActivityUpperLimit = []
-TotalTechnologyModelPeriodActivityLowerLimit = []
-ReserveMarginTagTechnology = []
-ReserveMarginTagFuel = []
-ReserveMargin = []
-RETagTechnology = []
-RETagFuel = []
-REMinProductionTarget = []
-EmissionActivityRatio = []
-EmissionsPenalty = []
-AnnualExogenousEmission = []
-AnnualEmissionLimit = []
-ModelPeriodExogenousEmission = []
-ModelPeriodEmissionLimit = []
+# Create the energy system with sets and initialised parameters. The parameter have the necessary parameters
+Demo = GF.Energy_Systems(YEAR,REGION, EMISSION, TECHNOLOGY, FUEL, TIMESLICE, MODE_OF_OPERATION, STORAGE,DAYTYPE,SEASON,DAILYTIMEBRACKET)
 
-# Additional Parameters
+# This user must now initialise the parameters as they choose to configure the energy system for the optimisation model.
+# This is incredibly important. The user must understand the configuration of the energy system to do this! Consult the
+# User manual to build this optimisation
 
-# Use custom function to create values
-# Utopia = GF.Energy_Systems(YEAR,REGION)
-# print(Utopia.year)
 
 
 

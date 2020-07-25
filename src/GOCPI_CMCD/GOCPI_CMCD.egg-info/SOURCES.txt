@@ -1,0 +1,10 @@
+setup.cfg
+setup.py
+GOCPI_CMCD/Energysystems.py
+GOCPI_CMCD/Navigation.py
+GOCPI_CMCD/__init__.py
+GOCPI_CMCD.egg-info/PKG-INFO
+GOCPI_CMCD.egg-info/SOURCES.txt
+GOCPI_CMCD.egg-info/dependency_links.txt
+GOCPI_CMCD.egg-info/not-zip-safe
+GOCPI_CMCD.egg-info/top_level.txt
