@@ -226,7 +226,7 @@ class Energy_Systems:
                 #Writes new line character at parameter metadata to the text file
             param = 'EmissionActivityRatio'
             f.write('#\n')
-            f.write("param\t{0}\tdefault\t{1}:\n".format(param,defaults_dictionary[param]))
+            f.write("param\t{0}\tdefault\t{1}:=\n".format(param,defaults_dictionary[param]))
             # Writes parameter values to the text files
             for i in range(self.le):
                 # Sets index value for format string
