@@ -5,7 +5,7 @@ from setuptools import setup
 'Note: PyPi https://pypi.org/manage/project/gocpi-functions/releases/#modal-close'
 
 setup(name='GOCPI_CMCD',
-      version='1.00',
+      version='1.10',
       description='User Defined Functions and Energy Systems Data for GOCPI Project',
       packages=['GOCPI_CMCD'],
       author_email='connormcdowall@gmail.com',
