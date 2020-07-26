@@ -1863,5 +1863,5 @@ class Energy_Systems:
                 combinedflat = combinedflat.replace(")",'')
                 f.write("{0}\n".format(combinedflat))
             f.write(';\n')
-            f,write('#')
+            f.write('#')
         return 
