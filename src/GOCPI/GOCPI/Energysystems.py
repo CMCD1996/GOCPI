@@ -135,7 +135,7 @@ class Energy_Systems:
         # Opens the file for write the data
         with open(file_location,'w') as f:
             # Sets up the preamble for the data file
-            f.write('# GOCPI OseMOSYS Data File\n')
+            f.write('# GOCPI Energy System Data File\n')
             f.write('# Insert instructions when the file is running properly\n')
             f.write('#\n')
             # Sets
@@ -177,60 +177,1503 @@ class Energy_Systems:
             # Parameters
 
             # YearSplit = np.zeros((ll,ly))
+            param = 'YearSplit'
+            f.write('#\n')
+            columns = self.year
+            column_string = ' '.join(columns)
+            # Converts maxtrix rows to list
+            array = np.array(self.timeslice)
+            array = array.T
+            lt = array.tolist()
+            # Creates 2D matrix for this value
+            mat = self.YearSplit[:,:]
+            # Converts combined matrix to list and combines lists
+            matlist = mat.tolist()
+            #Combines the two lists
+            combined_list = list(zip(lt,matlist))
+            # Writes index specific parameter values to the text files 
+            f.write("param\t{0}\t:{1}:=\n".format(param,column_string))
+            for line in combined_list:
+                combinedflat = ''.join(str(line))
+                combinedflat = combinedflat.replace('[','')
+                combinedflat = combinedflat.replace(']','')
+                combinedflat = combinedflat.replace("'",'')
+                combinedflat = combinedflat.replace(",",'')
+                combinedflat = combinedflat.replace("(",'')
+                combinedflat = combinedflat.replace(")",'')
+                f.write("{0}\n".format(combinedflat))
+            f.write(';\n')
+
             # DiscountRate = np.zeros((lr))
+            param = 'DiscountRate'
+            f.write('#\n')
+            f.write("param\t{0}\tdefault\t{1}:=\n".format(param,defaults_dictionary[param]))
+            # Converts maxtrix rows to list
+            array = np.array(self.region)
+            array = array.T
+            lt = array.tolist()
+            # Creates 2D matrix for this value
+            mat = self.DiscountRate[:]
+            # Converts combined matrix to list and combines lists
+            matlist = mat.tolist()
+            #Combines the two lists
+            combined_list = list(zip(lt,matlist))
+            # Writes index specific parameter values to the text files 
+            for line in combined_list:
+                combinedflat = ''.join(str(line))
+                combinedflat = combinedflat.replace('[','')
+                combinedflat = combinedflat.replace(']','')
+                combinedflat = combinedflat.replace("'",'')
+                combinedflat = combinedflat.replace(",",'')
+                combinedflat = combinedflat.replace("(",'')
+                combinedflat = combinedflat.replace(")",'')
+                f.write("{0}\n".format(combinedflat))
+            f.write(';\n')
+
             # DaySplit = np.zeros((llh,ly))
+            param = 'DaySplit'
+            f.write('#\n')
+            columns = self.year
+            column_string = ' '.join(columns)
+            # Converts maxtrix rows to list
+            array = np.array(self.dailytimebracket)
+            array = array.T
+            lt = array.tolist()
+            # Creates 2D matrix for this value
+            mat = self.DaySplit[:,:]
+            # Converts combined matrix to list and combines lists
+            matlist = mat.tolist()
+            #Combines the two lists
+            combined_list = list(zip(lt,matlist))
+            # Writes index specific parameter values to the text files 
+            f.write("param\t{0}\t:{1}:=\n".format(param,column_string))
+            for line in combined_list:
+                combinedflat = ''.join(str(line))
+                combinedflat = combinedflat.replace('[','')
+                combinedflat = combinedflat.replace(']','')
+                combinedflat = combinedflat.replace("'",'')
+                combinedflat = combinedflat.replace(",",'')
+                combinedflat = combinedflat.replace("(",'')
+                combinedflat = combinedflat.replace(")",'')
+                f.write("{0}\n".format(combinedflat))
+            f.write(';\n')
+
             # Conversionls = np.zeros((ll,ls))
+            param = 'Conversionls' # Change this line
+            f.write('#\n')
+            columns = self.storage # Change this line
+            column_string = ' '.join(columns)
+            # Converts maxtrix rows to list
+            array = np.array(self.timeslice) # Change this line
+            array = array.T
+            lt = array.tolist()
+            # Creates 2D matrix for this value
+            mat = self.Conversionls[:,:] # Change this line
+            # Converts combined matrix to list and combines lists
+            matlist = mat.tolist()
+            #Combines the two lists
+            combined_list = list(zip(lt,matlist))
+            # Writes index specific parameter values to the text files 
+            f.write("param\t{0}\t:{1}:=\n".format(param,column_string))
+            for line in combined_list:
+                combinedflat = ''.join(str(line))
+                combinedflat = combinedflat.replace('[','')
+                combinedflat = combinedflat.replace(']','')
+                combinedflat = combinedflat.replace("'",'')
+                combinedflat = combinedflat.replace(",",'')
+                combinedflat = combinedflat.replace("(",'')
+                combinedflat = combinedflat.replace(")",'')
+                f.write("{0}\n".format(combinedflat))
+            f.write(';\n')
+
             # Conversionld = np.zeros((lld,ls))
+            param = 'Conversionld' # Change this line
+            f.write('#\n')
+            columns = self.storage # Change this line
+            column_string = ' '.join(columns)
+            # Converts maxtrix rows to list
+            array = np.array(self.daytype) # Change this line
+            array = array.T
+            lt = array.tolist()
+            # Creates 2D matrix for this value
+            mat = self.Conversionld[:,:] # Change this line
+            # Converts combined matrix to list and combines lists
+            matlist = mat.tolist()
+            #Combines the two lists
+            combined_list = list(zip(lt,matlist))
+            # Writes index specific parameter values to the text files 
+            f.write("param\t{0}\t:{1}:=\n".format(param,column_string))
+            for line in combined_list:
+                combinedflat = ''.join(str(line))
+                combinedflat = combinedflat.replace('[','')
+                combinedflat = combinedflat.replace(']','')
+                combinedflat = combinedflat.replace("'",'')
+                combinedflat = combinedflat.replace(",",'')
+                combinedflat = combinedflat.replace("(",'')
+                combinedflat = combinedflat.replace(")",'')
+                f.write("{0}\n".format(combinedflat))
+            f.write(';\n')
+
             # Conversionlh = np.zeros((llh,ll))
+            param = 'Conversionlh' # Change this line
+            f.write('#\n')
+            columns = self.timeslice # Change this line
+            column_string = ' '.join(columns)
+            # Converts maxtrix rows to list
+            array = np.array(self.dailytimebracket) # Change this line
+            array = array.T
+            lt = array.tolist()
+            # Creates 2D matrix for this value
+            mat = self.Conversionlh[:,:] # Change this line
+            # Converts combined matrix to list and combines lists
+            matlist = mat.tolist()
+            #Combines the two lists
+            combined_list = list(zip(lt,matlist))
+            # Writes index specific parameter values to the text files 
+            f.write("param\t{0}\t:{1}:=\n".format(param,column_string))
+            for line in combined_list:
+                combinedflat = ''.join(str(line))
+                combinedflat = combinedflat.replace('[','')
+                combinedflat = combinedflat.replace(']','')
+                combinedflat = combinedflat.replace("'",'')
+                combinedflat = combinedflat.replace(",",'')
+                combinedflat = combinedflat.replace("(",'')
+                combinedflat = combinedflat.replace(")",'')
+                f.write("{0}\n".format(combinedflat))
+            f.write(';\n')
+
             # DaysInDayType = np.zeros((lls,lld,ly))
-            # TradeRoute = np.zeros((lr,lr,lf,ly))
-            # DepreciationMethod = np.zeros((lr))
-            # SpecifiedAnnualDemand = np.zeros((lr,lf,ly))
-            # SpecifiedDemandProfile = np.zeros((lr,lf,ll,ly))
-            # AccumulatedAnnualDemand = np.zeros((lr,lf,ly))
-            # CapacityToActivityUnit = np.zeros((lr,lt))
-            # CapacityFactor = np.zeros((lr,lt,ll,ly))
-            # AvailabilityFactor = np.zeros((lr,lt,ly))
-            # OperationalLife = np.zeros((lr,lt))
-            # ResidualCapacity = np.zeros((lr,lt,ly))
-            # InputActivityRatio = np.zeros((lr,lt,lf,lm,ly))
-            # OutputActivityRatio = np.zeros((lr,lt,lf,lm,ly))
-            # CapitalCost = np.zeros((lr,lt,ly))
-            # VariableCost = np.zeros((lr,lt,lm,ly))
-            # FixedCost = np.zeros((lr,lt,ly))
-            # TechnologyToStorage = np.zeros((lr,lt,ls,lm))
-            # TechnologyFromStorage = np.zeros((lr,lt,ls,lm))
-            # StorageLevelStart = np.zeros((lr,ls))
-            # StorageMaxChargeRate = np.zeros((lr,ls))
-            # StorageMaxDischargeRate = np.zeros((lr,ls))
-            # MinStorageCharge = np.zeros((lr,ls,ly))
-            # OperationalLifeStorage = np.zeros((lr,ls))
-            # CapitalCostStorage = np.zeros((lr,ls,ly))
-            # ResidualStorageCapacity = np.zeros((lr,ls,ly))
-            # CapacityOfOneTechnologyUnit = np.zeros((lr,lt,ly))
-            # TotalAnnualMaxCapacity = np.zeros((lr,lt,ly))
-            # TotalAnnualMinCapacity = np.zeros((lr,lt,ly))
-            # TotalAnnualMaxCapacityInvestment = np.zeros((lr,lt,ly))
-            # TotalAnnualMinCapacityInvestment = np.zeros((lr,lt,ly))
-            # TotalTechnologyAnnualActivityLowerLimit= np.zeros((lr,lt,ly))
-            # TotalTechnologyAnnualActivityUpperLimit = np.zeros((lr,lt,ly))
-            # TotalTechnologyModelPeriodActivityUpperLimit = np.zeros((lr,lt))
-            # TotalTechnologyModelPeriodActivityLowerLimit = np.zeros((lr,lt))
-            # ReserveMarginTagTechnology = np.zeros((lr,lt,ly))
-            # ReserveMarginTagFuel = np.zeros((lr,lf,ly))
-            # ReserveMargin = np.zeros((lr,ly))
-            # RETagTechnology = np.zeros((lr,lt,ly))
-            # RETagFuel = np.zeros((lr,lf,ly))
-            # REMinProductionTarget = np.zeros((lr,ly))
-            # EmissionActivityRatio = np.zeros((lr,lt,le,lm,ly))
-                #Writes new line character at parameter metadata to the text file
-            param = 'EmissionActivityRatio'
+            #Writes new line character at parameter metadata to the text file
+            param = 'DaysInDayType'
             f.write('#\n')
             f.write("param\t{0}\tdefault\t{1}:=\n".format(param,defaults_dictionary[param]))
             # Writes parameter values to the text files
-            for i in range(self.le):
+            for k in range(self.ly):
                 # Sets index value for format string
-                emission = self.emission[i]
+                y = self.year[k]
+                # Converts matrix columns to strings columns to strings
+                columns = self.daytype
+                column_string = ' '.join(columns)
+                # Converts maxtrix rows to list
+                array = np.array(self.season)
+                array = array.T
+                lt = array.tolist()
+                # Creates 2D matrix for this value
+                mat = self.DaysInDayType[:,:,k]
+                # Converts combined matrix to list and combines lists
+                matlist = mat.tolist()
+                #Combines the two lists
+                combined_list = list(zip(lt,matlist))
+                # Writes index specific parameter values to the text files 
+                f.write("\t[*,*,{0}]:\t{1}\t:=\n".format(y,column_string))
+                for line in combined_list:
+                    combinedflat = ''.join(str(line))
+                    combinedflat = combinedflat.replace('[','')
+                    combinedflat = combinedflat.replace(']','')
+                    combinedflat = combinedflat.replace("'",'')
+                    combinedflat = combinedflat.replace(",",'')
+                    combinedflat = combinedflat.replace("(",'')
+                    combinedflat = combinedflat.replace(")",'')
+                    f.write("{0}\n".format(combinedflat))
+            f.write(';\n')
+            
+            # TradeRoute = np.zeros((lr,lr,lf,ly))
+            param = 'TradeRoute' # Change this line
+            f.write('#\n')
+            f.write("param\t{0}\tdefault\t{1}:=\n".format(param,defaults_dictionary[param]))
+            # Writes parameter values to the text files
+            for j in range(self.lf):
+                # Sets index value for format string
+                fl = self.fuel[j]
+                for k in range(self.ly):
+                    # Sets index value for format string
+                    y = self.year[k]
+                    # Converts matrix columns to strings columns to strings
+                    columns = self.region
+                    column_string = ' '.join(columns)
+                    # Converts maxtrix rows to list
+                    array = np.array(self.region)
+                    array = array.T
+                    lt = array.tolist()
+                    # Creates 2D matrix for this value
+                    mat = self.TradeRoute[:,:,j,k]
+                    # Converts combined matrix to list and combines lists
+                    matlist = mat.tolist()
+                    #Combines the two lists
+                    combined_list = list(zip(lt,matlist))
+                    # Writes index specific parameter values to the text files 
+                    f.write("\t[*,*,{0},{1}]:\t{2}\t:=\n".format(fl,y,column_string))
+                    for line in combined_list:
+                        combinedflat = ''.join(str(line))
+                        combinedflat = combinedflat.replace('[','')
+                        combinedflat = combinedflat.replace(']','')
+                        combinedflat = combinedflat.replace("'",'')
+                        combinedflat = combinedflat.replace(",",'')
+                        combinedflat = combinedflat.replace("(",'')
+                        combinedflat = combinedflat.replace(")",'')
+                        f.write("{0}\n".format(combinedflat))
+            f.write(';\n')
+            # DepreciationMethod = np.zeros((lr))
+            param = 'DepreciationMethod'
+            f.write('#\n')
+            f.write("param\t{0}\tdefault\t{1}:=\n".format(param,defaults_dictionary[param]))
+            # Converts maxtrix rows to list
+            array = np.array(self.region)
+            array = array.T
+            lt = array.tolist()
+            # Creates 2D matrix for this value
+            mat = self.DepreciationMethod[:]
+            # Converts combined matrix to list and combines lists
+            matlist = mat.tolist()
+            #Combines the two lists
+            combined_list = list(zip(lt,matlist))
+            # Writes index specific parameter values to the text files 
+            for line in combined_list:
+                combinedflat = ''.join(str(line))
+                combinedflat = combinedflat.replace('[','')
+                combinedflat = combinedflat.replace(']','')
+                combinedflat = combinedflat.replace("'",'')
+                combinedflat = combinedflat.replace(",",'')
+                combinedflat = combinedflat.replace("(",'')
+                combinedflat = combinedflat.replace(")",'')
+                f.write("{0}\n".format(combinedflat))
+            f.write(';\n')
+
+            # SpecifiedAnnualDemand = np.zeros((lr,lf,ly))
+            param = 'SpecifiedAnnualDemand'
+            f.write('#\n')
+            f.write("param\t{0}\tdefault\t{1}:=\n".format(param,defaults_dictionary[param]))
+            # Writes parameter values to the text files
+            for k in range(self.ly):
+                # Sets index value for format string
+                y = self.year[k]
+                # Converts matrix columns to strings columns to strings
+                columns = self.fuel
+                column_string = ' '.join(columns)
+                # Converts maxtrix rows to list
+                array = np.array(self.region)
+                array = array.T
+                lt = array.tolist()
+                # Creates 2D matrix for this value
+                mat = self.SpecifiedAnnualDemand[:,:,k]
+                # Converts combined matrix to list and combines lists
+                matlist = mat.tolist()
+                #Combines the two lists
+                combined_list = list(zip(lt,matlist))
+                # Writes index specific parameter values to the text files 
+                f.write("\t[*,*,{0}]:\t{1}\t:=\n".format(y,column_string))
+                for line in combined_list:
+                    combinedflat = ''.join(str(line))
+                    combinedflat = combinedflat.replace('[','')
+                    combinedflat = combinedflat.replace(']','')
+                    combinedflat = combinedflat.replace("'",'')
+                    combinedflat = combinedflat.replace(",",'')
+                    combinedflat = combinedflat.replace("(",'')
+                    combinedflat = combinedflat.replace(")",'')
+                    f.write("{0}\n".format(combinedflat))
+            f.write(';\n')
+
+            # SpecifiedDemandProfile = np.zeros((lr,lf,ll,ly))
+            param = 'SpecifiedDemandProfile' # Change this line
+            f.write('#\n')
+            f.write("param\t{0}\tdefault\t{1}:=\n".format(param,defaults_dictionary[param]))
+            # Writes parameter values to the text files
+            for j in range(self.ll):
+                # Sets index value for format string
+                fl = self.fuel[j]
+                for k in range(self.ly):
+                    # Sets index value for format string
+                    y = self.year[k]
+                    # Converts matrix columns to strings columns to strings
+                    columns = self.fuel
+                    column_string = ' '.join(columns)
+                    # Converts maxtrix rows to list
+                    array = np.array(self.region)
+                    array = array.T
+                    lt = array.tolist()
+                    # Creates 2D matrix for this value
+                    mat = self.SpecifiedDemandProfile[:,:,j,k]
+                    # Converts combined matrix to list and combines lists
+                    matlist = mat.tolist()
+                    #Combines the two lists
+                    combined_list = list(zip(lt,matlist))
+                    # Writes index specific parameter values to the text files 
+                    f.write("\t[*,*,{0},{1}]:\t{2}\t:=\n".format(fl,y,column_string))
+                    for line in combined_list:
+                        combinedflat = ''.join(str(line))
+                        combinedflat = combinedflat.replace('[','')
+                        combinedflat = combinedflat.replace(']','')
+                        combinedflat = combinedflat.replace("'",'')
+                        combinedflat = combinedflat.replace(",",'')
+                        combinedflat = combinedflat.replace("(",'')
+                        combinedflat = combinedflat.replace(")",'')
+                        f.write("{0}\n".format(combinedflat))
+            f.write(';\n')
+
+            # AccumulatedAnnualDemand = np.zeros((lr,lf,ly))
+            param = 'AccumulatedAnnualDemand'
+            f.write('#\n')
+            f.write("param\t{0}\tdefault\t{1}:=\n".format(param,defaults_dictionary[param]))
+            # Writes parameter values to the text files
+            for k in range(self.ly):
+                # Sets index value for format string
+                y = self.year[k]
+                # Converts matrix columns to strings columns to strings
+                columns = self.fuel
+                column_string = ' '.join(columns)
+                # Converts maxtrix rows to list
+                array = np.array(self.region)
+                array = array.T
+                lt = array.tolist()
+                # Creates 2D matrix for this value
+                mat = self.SpecifiedAnnualDemand[:,:,k]
+                # Converts combined matrix to list and combines lists
+                matlist = mat.tolist()
+                #Combines the two lists
+                combined_list = list(zip(lt,matlist))
+                # Writes index specific parameter values to the text files 
+                f.write("\t[*,*,{0}]:\t{1}\t:=\n".format(y,column_string))
+                for line in combined_list:
+                    combinedflat = ''.join(str(line))
+                    combinedflat = combinedflat.replace('[','')
+                    combinedflat = combinedflat.replace(']','')
+                    combinedflat = combinedflat.replace("'",'')
+                    combinedflat = combinedflat.replace(",",'')
+                    combinedflat = combinedflat.replace("(",'')
+                    combinedflat = combinedflat.replace(")",'')
+                    f.write("{0}\n".format(combinedflat))
+            f.write(';\n')
+
+            # CapacityToActivityUnit = np.zeros((lr,lt))
+            param = 'CapacityToActivityUnit' # Change this line
+            f.write('#\n')
+            columns = self.timeslice # Change this line
+            column_string = ' '.join(columns)
+            # Converts maxtrix rows to list
+            array = np.array(self.region) # Change this line
+            array = array.T
+            lt = array.tolist()
+            # Creates 2D matrix for this value
+            mat = self.CapacityToActivityUnit[:,:] # Change this line
+            # Converts combined matrix to list and combines lists
+            matlist = mat.tolist()
+            #Combines the two lists
+            combined_list = list(zip(lt,matlist))
+            # Writes index specific parameter values to the text files 
+            f.write("param\t{0}\t:{1}:=\n".format(param,column_string))
+            for line in combined_list:
+                combinedflat = ''.join(str(line))
+                combinedflat = combinedflat.replace('[','')
+                combinedflat = combinedflat.replace(']','')
+                combinedflat = combinedflat.replace("'",'')
+                combinedflat = combinedflat.replace(",",'')
+                combinedflat = combinedflat.replace("(",'')
+                combinedflat = combinedflat.replace(")",'')
+                f.write("{0}\n".format(combinedflat))
+            f.write(';\n')
+
+            # CapacityFactor = np.zeros((lr,lt,ll,ly))
+            param = 'CapacityFactor' # Change this line
+            f.write('#\n')
+            f.write("param\t{0}\tdefault\t{1}:=\n".format(param,defaults_dictionary[param]))
+            # Writes parameter values to the text files
+            for j in range(self.ll):
+                # Sets index value for format string
+                x = self.timeslice[j]
+                for k in range(self.ly):
+                    # Sets index value for format string
+                    y = self.year[k]
+                    # Converts matrix columns to strings columns to strings
+                    columns = self.technology
+                    column_string = ' '.join(columns)
+                    # Converts maxtrix rows to list
+                    array = np.array(self.region)
+                    array = array.T
+                    lt = array.tolist()
+                    # Creates 2D matrix for this value
+                    mat = self.CapacityFactor[:,:,j,k]
+                    # Converts combined matrix to list and combines lists
+                    matlist = mat.tolist()
+                    #Combines the two lists
+                    combined_list = list(zip(lt,matlist))
+                    # Writes index specific parameter values to the text files 
+                    f.write("\t[*,*,{0},{1}]:\t{2}\t:=\n".format(x,y,column_string))
+                    for line in combined_list:
+                        combinedflat = ''.join(str(line))
+                        combinedflat = combinedflat.replace('[','')
+                        combinedflat = combinedflat.replace(']','')
+                        combinedflat = combinedflat.replace("'",'')
+                        combinedflat = combinedflat.replace(",",'')
+                        combinedflat = combinedflat.replace("(",'')
+                        combinedflat = combinedflat.replace(")",'')
+                        f.write("{0}\n".format(combinedflat))
+            f.write(';\n')
+            
+            # AvailabilityFactor = np.zeros((lr,lt,ly))
+            param = 'AvailabilityFactor'
+            f.write('#\n')
+            f.write("param\t{0}\tdefault\t{1}:=\n".format(param,defaults_dictionary[param]))
+            # Writes parameter values to the text files
+            for k in range(self.ly):
+                # Sets index value for format string
+                y = self.year[k]
+                # Converts matrix columns to strings columns to strings
+                columns = self.technology
+                column_string = ' '.join(columns)
+                # Converts maxtrix rows to list
+                array = np.array(self.region)
+                array = array.T
+                lt = array.tolist()
+                # Creates 2D matrix for this value
+                mat = self.AvailabilityFactor[:,:,k]
+                # Converts combined matrix to list and combines lists
+                matlist = mat.tolist()
+                #Combines the two lists
+                combined_list = list(zip(lt,matlist))
+                # Writes index specific parameter values to the text files 
+                f.write("\t[*,*,{0}]:\t{1}\t:=\n".format(y,column_string))
+                for line in combined_list:
+                    combinedflat = ''.join(str(line))
+                    combinedflat = combinedflat.replace('[','')
+                    combinedflat = combinedflat.replace(']','')
+                    combinedflat = combinedflat.replace("'",'')
+                    combinedflat = combinedflat.replace(",",'')
+                    combinedflat = combinedflat.replace("(",'')
+                    combinedflat = combinedflat.replace(")",'')
+                    f.write("{0}\n".format(combinedflat))
+            f.write(';\n')
+
+            # OperationalLife = np.zeros((lr,lt))
+            param = 'OperationalLife' # Change this line
+            f.write('#\n')
+            columns = self.timeslice # Change this line
+            column_string = ' '.join(columns)
+            # Converts maxtrix rows to list
+            array = np.array(self.region) # Change this line
+            array = array.T
+            lt = array.tolist()
+            # Creates 2D matrix for this value
+            mat = self.OperationalLife[:,:] # Change this line
+            # Converts combined matrix to list and combines lists
+            matlist = mat.tolist()
+            #Combines the two lists
+            combined_list = list(zip(lt,matlist))
+            # Writes index specific parameter values to the text files 
+            f.write("param\t{0}\t:{1}:=\n".format(param,column_string))
+            for line in combined_list:
+                combinedflat = ''.join(str(line))
+                combinedflat = combinedflat.replace('[','')
+                combinedflat = combinedflat.replace(']','')
+                combinedflat = combinedflat.replace("'",'')
+                combinedflat = combinedflat.replace(",",'')
+                combinedflat = combinedflat.replace("(",'')
+                combinedflat = combinedflat.replace(")",'')
+                f.write("{0}\n".format(combinedflat))
+            f.write(';\n')
+
+            # ResidualCapacity = np.zeros((lr,lt,ly))
+            param = 'ResidualCapacity'
+            f.write('#\n')
+            f.write("param\t{0}\tdefault\t{1}:=\n".format(param,defaults_dictionary[param]))
+            # Writes parameter values to the text files
+            for k in range(self.ly):
+                # Sets index value for format string
+                y = self.year[k]
+                # Converts matrix columns to strings columns to strings
+                columns = self.technology
+                column_string = ' '.join(columns)
+                # Converts maxtrix rows to list
+                array = np.array(self.region)
+                array = array.T
+                lt = array.tolist()
+                # Creates 2D matrix for this value
+                mat = self.ResidualCapacity[:,:,k]
+                # Converts combined matrix to list and combines lists
+                matlist = mat.tolist()
+                #Combines the two lists
+                combined_list = list(zip(lt,matlist))
+                # Writes index specific parameter values to the text files 
+                f.write("\t[*,*,{0}]:\t{1}\t:=\n".format(y,column_string))
+                for line in combined_list:
+                    combinedflat = ''.join(str(line))
+                    combinedflat = combinedflat.replace('[','')
+                    combinedflat = combinedflat.replace(']','')
+                    combinedflat = combinedflat.replace("'",'')
+                    combinedflat = combinedflat.replace(",",'')
+                    combinedflat = combinedflat.replace("(",'')
+                    combinedflat = combinedflat.replace(")",'')
+                    f.write("{0}\n".format(combinedflat))
+            f.write(';\n')
+            
+            # InputActivityRatio = np.zeros((lr,lt,lf,lm,ly))
+            param = 'InputActivityRatio' # Change this line
+            f.write('#\n')
+            f.write("param\t{0}\tdefault\t{1}:=\n".format(param,defaults_dictionary[param]))
+            # Writes parameter values to the text files
+            for i in range(self.lf): # Change loops if you need
+                # Sets index value for format string
+                x = self.fuel[i] 
+                for j in range(self.lm):
+                    # Sets index value for format string
+                    y = self.mode_of_operation[j]
+                    for k in range(self.ly):
+                        # Sets index value for format string
+                        z = self.year[k]
+                        # Converts matrix columns to strings columns to strings
+                        columns = self.technology
+                        column_string = ' '.join(columns)
+                        # Converts maxtrix rows to list
+                        array = np.array(self.region)
+                        array = array.T
+                        lt = array.tolist()
+                        # Creates 2D matrix for this value
+                        mat = self.InputActivityRatio[:,:,i,j,k]
+                        # Converts combined matrix to list and combines lists
+                        matlist = mat.tolist()
+                        #Combines the two lists
+                        combined_list = list(zip(lt,matlist))
+                        # Writes index specific parameter values to the text files 
+                        f.write("\t[*,*,{0},{1},{2}]:\t{3}\t:=\n".format(x,y,z,column_string))
+                        for line in combined_list:
+                            combinedflat = ''.join(str(line))
+                            combinedflat = combinedflat.replace('[','')
+                            combinedflat = combinedflat.replace(']','')
+                            combinedflat = combinedflat.replace("'",'')
+                            combinedflat = combinedflat.replace(",",'')
+                            combinedflat = combinedflat.replace("(",'')
+                            combinedflat = combinedflat.replace(")",'')
+                            f.write("{0}\n".format(combinedflat))
+            f.write(';\n')
+
+            # OutputActivityRatio = np.zeros((lr,lt,lf,lm,ly))
+            param = 'OutputActivityRatio' # Change this line
+            f.write('#\n')
+            f.write("param\t{0}\tdefault\t{1}:=\n".format(param,defaults_dictionary[param]))
+            # Writes parameter values to the text files
+            for i in range(self.lf): # Change loops if you need
+                # Sets index value for format string
+                x = self.fuel[i] 
+                for j in range(self.lm):
+                    # Sets index value for format string
+                    y = self.mode_of_operation[j]
+                    for k in range(self.ly):
+                        # Sets index value for format string
+                        z = self.year[k]
+                        # Converts matrix columns to strings columns to strings
+                        columns = self.technology
+                        column_string = ' '.join(columns)
+                        # Converts maxtrix rows to list
+                        array = np.array(self.region)
+                        array = array.T
+                        lt = array.tolist()
+                        # Creates 2D matrix for this value
+                        mat = self.OutputActivityRatio[:,:,i,j,k]
+                        # Converts combined matrix to list and combines lists
+                        matlist = mat.tolist()
+                        #Combines the two lists
+                        combined_list = list(zip(lt,matlist))
+                        # Writes index specific parameter values to the text files 
+                        f.write("\t[*,*,{0},{1},{2}]:\t{3}\t:=\n".format(x,y,z,column_string))
+                        for line in combined_list:
+                            combinedflat = ''.join(str(line))
+                            combinedflat = combinedflat.replace('[','')
+                            combinedflat = combinedflat.replace(']','')
+                            combinedflat = combinedflat.replace("'",'')
+                            combinedflat = combinedflat.replace(",",'')
+                            combinedflat = combinedflat.replace("(",'')
+                            combinedflat = combinedflat.replace(")",'')
+                            f.write("{0}\n".format(combinedflat))
+            f.write(';\n')
+            
+            # CapitalCost = np.zeros((lr,lt,ly))
+            param = 'CapitalCost'
+            f.write('#\n')
+            f.write("param\t{0}\tdefault\t{1}:=\n".format(param,defaults_dictionary[param]))
+            # Writes parameter values to the text files
+            for k in range(self.ly):
+                # Sets index value for format string
+                y = self.year[k]
+                # Converts matrix columns to strings columns to strings
+                columns = self.technology
+                column_string = ' '.join(columns)
+                # Converts maxtrix rows to list
+                array = np.array(self.region)
+                array = array.T
+                lt = array.tolist()
+                # Creates 2D matrix for this value
+                mat = self.CapitalCost[:,:,k]
+                # Converts combined matrix to list and combines lists
+                matlist = mat.tolist()
+                #Combines the two lists
+                combined_list = list(zip(lt,matlist))
+                # Writes index specific parameter values to the text files 
+                f.write("\t[*,*,{0}]:\t{1}\t:=\n".format(y,column_string))
+                for line in combined_list:
+                    combinedflat = ''.join(str(line))
+                    combinedflat = combinedflat.replace('[','')
+                    combinedflat = combinedflat.replace(']','')
+                    combinedflat = combinedflat.replace("'",'')
+                    combinedflat = combinedflat.replace(",",'')
+                    combinedflat = combinedflat.replace("(",'')
+                    combinedflat = combinedflat.replace(")",'')
+                    f.write("{0}\n".format(combinedflat))
+            f.write(';\n')
+
+            # VariableCost = np.zeros((lr,lt,lm,ly))
+            param = 'VariableCost' # Change this line
+            f.write('#\n')
+            f.write("param\t{0}\tdefault\t{1}:=\n".format(param,defaults_dictionary[param]))
+            # Writes parameter values to the text files
+            for j in range(self.lm):
+                # Sets index value for format string
+                x = self.mode_of_operation[j]
+                for k in range(self.ly):
+                    # Sets index value for format string
+                    y = self.year[k]
+                    # Converts matrix columns to strings columns to strings
+                    columns = self.technology
+                    column_string = ' '.join(columns)
+                    # Converts maxtrix rows to list
+                    array = np.array(self.region)
+                    array = array.T
+                    lt = array.tolist()
+                    # Creates 2D matrix for this value
+                    mat = self.VariableCost[:,:,j,k]
+                    # Converts combined matrix to list and combines lists
+                    matlist = mat.tolist()
+                    #Combines the two lists
+                    combined_list = list(zip(lt,matlist))
+                    # Writes index specific parameter values to the text files 
+                    f.write("\t[*,*,{0},{1}]:\t{2}\t:=\n".format(x,y,column_string))
+                    for line in combined_list:
+                        combinedflat = ''.join(str(line))
+                        combinedflat = combinedflat.replace('[','')
+                        combinedflat = combinedflat.replace(']','')
+                        combinedflat = combinedflat.replace("'",'')
+                        combinedflat = combinedflat.replace(",",'')
+                        combinedflat = combinedflat.replace("(",'')
+                        combinedflat = combinedflat.replace(")",'')
+                        f.write("{0}\n".format(combinedflat))
+            f.write(';\n')
+
+            # FixedCost = np.zeros((lr,lt,ly))
+            param = 'FixedCost'
+            f.write('#\n')
+            f.write("param\t{0}\tdefault\t{1}:=\n".format(param,defaults_dictionary[param]))
+            # Writes parameter values to the text files
+            for k in range(self.ly):
+                # Sets index value for format string
+                y = self.year[k]
+                # Converts matrix columns to strings columns to strings
+                columns = self.technology
+                column_string = ' '.join(columns)
+                # Converts maxtrix rows to list
+                array = np.array(self.region)
+                array = array.T
+                lt = array.tolist()
+                # Creates 2D matrix for this value
+                mat = self.FixedCost[:,:,k]
+                # Converts combined matrix to list and combines lists
+                matlist = mat.tolist()
+                #Combines the two lists
+                combined_list = list(zip(lt,matlist))
+                # Writes index specific parameter values to the text files 
+                f.write("\t[*,*,{0}]:\t{1}\t:=\n".format(y,column_string))
+                for line in combined_list:
+                    combinedflat = ''.join(str(line))
+                    combinedflat = combinedflat.replace('[','')
+                    combinedflat = combinedflat.replace(']','')
+                    combinedflat = combinedflat.replace("'",'')
+                    combinedflat = combinedflat.replace(",",'')
+                    combinedflat = combinedflat.replace("(",'')
+                    combinedflat = combinedflat.replace(")",'')
+                    f.write("{0}\n".format(combinedflat))
+            f.write(';\n')
+
+            # TechnologyToStorage = np.zeros((lr,lt,ls,lm))
+            param = 'TechnologyToStorage' # Change this line
+            f.write('#\n')
+            f.write("param\t{0}\tdefault\t{1}:=\n".format(param,defaults_dictionary[param]))
+            # Writes parameter values to the text files
+            for j in range(self.ls):
+                # Sets index value for format string
+                x = self.storage[j]
+                for k in range(self.lm):
+                    # Sets index value for format string
+                    y = self.mode_of_operation[k]
+                    # Converts matrix columns to strings columns to strings
+                    columns = self.technology
+                    column_string = ' '.join(columns)
+                    # Converts maxtrix rows to list
+                    array = np.array(self.region)
+                    array = array.T
+                    lt = array.tolist()
+                    # Creates 2D matrix for this value
+                    mat = self.TechnologyToStorage[:,:,j,k]
+                    # Converts combined matrix to list and combines lists
+                    matlist = mat.tolist()
+                    #Combines the two lists
+                    combined_list = list(zip(lt,matlist))
+                    # Writes index specific parameter values to the text files 
+                    f.write("\t[*,*,{0},{1}]:\t{2}\t:=\n".format(x,y,column_string))
+                    for line in combined_list:
+                        combinedflat = ''.join(str(line))
+                        combinedflat = combinedflat.replace('[','')
+                        combinedflat = combinedflat.replace(']','')
+                        combinedflat = combinedflat.replace("'",'')
+                        combinedflat = combinedflat.replace(",",'')
+                        combinedflat = combinedflat.replace("(",'')
+                        combinedflat = combinedflat.replace(")",'')
+                        f.write("{0}\n".format(combinedflat))
+            f.write(';\n')
+
+            # TechnologyFromStorage = np.zeros((lr,lt,ls,lm))
+            param = 'TechnologyFromStorage' # Change this line
+            f.write('#\n')
+            f.write("param\t{0}\tdefault\t{1}:=\n".format(param,defaults_dictionary[param]))
+            # Writes parameter values to the text files
+            for j in range(self.ls):
+                # Sets index value for format string
+                x = self.storage[j]
+                for k in range(self.lm):
+                    # Sets index value for format string
+                    y = self.mode_of_operation[k]
+                    # Converts matrix columns to strings columns to strings
+                    columns = self.technology
+                    column_string = ' '.join(columns)
+                    # Converts maxtrix rows to list
+                    array = np.array(self.region)
+                    array = array.T
+                    lt = array.tolist()
+                    # Creates 2D matrix for this value
+                    mat = self.TechnologyFromStorage[:,:,j,k]
+                    # Converts combined matrix to list and combines lists
+                    matlist = mat.tolist()
+                    #Combines the two lists
+                    combined_list = list(zip(lt,matlist))
+                    # Writes index specific parameter values to the text files 
+                    f.write("\t[*,*,{0},{1}]:\t{2}\t:=\n".format(x,y,column_string))
+                    for line in combined_list:
+                        combinedflat = ''.join(str(line))
+                        combinedflat = combinedflat.replace('[','')
+                        combinedflat = combinedflat.replace(']','')
+                        combinedflat = combinedflat.replace("'",'')
+                        combinedflat = combinedflat.replace(",",'')
+                        combinedflat = combinedflat.replace("(",'')
+                        combinedflat = combinedflat.replace(")",'')
+                        f.write("{0}\n".format(combinedflat))
+            f.write(';\n')
+
+            # StorageLevelStart = np.zeros((lr,ls))
+            param = 'StorageLevelStart' # Change this line
+            f.write('#\n')
+            columns = self.storage # Change this line
+            column_string = ' '.join(columns)
+            # Converts maxtrix rows to list
+            array = np.array(self.region) # Change this line
+            array = array.T
+            lt = array.tolist()
+            # Creates 2D matrix for this value
+            mat = self.StorageLevelStart[:,:] # Change this line
+            # Converts combined matrix to list and combines lists
+            matlist = mat.tolist()
+            #Combines the two lists
+            combined_list = list(zip(lt,matlist))
+            # Writes index specific parameter values to the text files 
+            f.write("param\t{0}\t:{1}:=\n".format(param,column_string))
+            for line in combined_list:
+                combinedflat = ''.join(str(line))
+                combinedflat = combinedflat.replace('[','')
+                combinedflat = combinedflat.replace(']','')
+                combinedflat = combinedflat.replace("'",'')
+                combinedflat = combinedflat.replace(",",'')
+                combinedflat = combinedflat.replace("(",'')
+                combinedflat = combinedflat.replace(")",'')
+                f.write("{0}\n".format(combinedflat))
+            f.write(';\n')
+
+            # StorageMaxChargeRate = np.zeros((lr,ls))
+            param = 'StorageMaxChargeRate' # Change this line
+            f.write('#\n')
+            columns = self.storage # Change this line
+            column_string = ' '.join(columns)
+            # Converts maxtrix rows to list
+            array = np.array(self.region) # Change this line
+            array = array.T
+            lt = array.tolist()
+            # Creates 2D matrix for this value
+            mat = self.StorageMaxChargeRate[:,:] # Change this line
+            # Converts combined matrix to list and combines lists
+            matlist = mat.tolist()
+            #Combines the two lists
+            combined_list = list(zip(lt,matlist))
+            # Writes index specific parameter values to the text files 
+            f.write("param\t{0}\t:{1}:=\n".format(param,column_string))
+            for line in combined_list:
+                combinedflat = ''.join(str(line))
+                combinedflat = combinedflat.replace('[','')
+                combinedflat = combinedflat.replace(']','')
+                combinedflat = combinedflat.replace("'",'')
+                combinedflat = combinedflat.replace(",",'')
+                combinedflat = combinedflat.replace("(",'')
+                combinedflat = combinedflat.replace(")",'')
+                f.write("{0}\n".format(combinedflat))
+            f.write(';\n')
+
+            # StorageMaxDischargeRate = np.zeros((lr,ls))
+            param = 'StorageMaxDischargeRate' # Change this line
+            f.write('#\n')
+            columns = self.storage # Change this line
+            column_string = ' '.join(columns)
+            # Converts maxtrix rows to list
+            array = np.array(self.region) # Change this line
+            array = array.T
+            lt = array.tolist()
+            # Creates 2D matrix for this value
+            mat = self.StorageMaxDischargeRate[:,:] # Change this line
+            # Converts combined matrix to list and combines lists
+            matlist = mat.tolist()
+            #Combines the two lists
+            combined_list = list(zip(lt,matlist))
+            # Writes index specific parameter values to the text files 
+            f.write("param\t{0}\t:{1}:=\n".format(param,column_string))
+            for line in combined_list:
+                combinedflat = ''.join(str(line))
+                combinedflat = combinedflat.replace('[','')
+                combinedflat = combinedflat.replace(']','')
+                combinedflat = combinedflat.replace("'",'')
+                combinedflat = combinedflat.replace(",",'')
+                combinedflat = combinedflat.replace("(",'')
+                combinedflat = combinedflat.replace(")",'')
+                f.write("{0}\n".format(combinedflat))
+            f.write(';\n')
+
+            # MinStorageCharge = np.zeros((lr,ls,ly))
+            param = 'MinStorageCharge'
+            f.write('#\n')
+            f.write("param\t{0}\tdefault\t{1}:=\n".format(param,defaults_dictionary[param]))
+            # Writes parameter values to the text files
+            for k in range(self.ly):
+                # Sets index value for format string
+                y = self.year[k]
+                # Converts matrix columns to strings columns to strings
+                columns = self.storage
+                column_string = ' '.join(columns)
+                # Converts maxtrix rows to list
+                array = np.array(self.region)
+                array = array.T
+                lt = array.tolist()
+                # Creates 2D matrix for this value
+                mat = self.MinStorageCharge[:,:,k]
+                # Converts combined matrix to list and combines lists
+                matlist = mat.tolist()
+                #Combines the two lists
+                combined_list = list(zip(lt,matlist))
+                # Writes index specific parameter values to the text files 
+                f.write("\t[*,*,{0}]:\t{1}\t:=\n".format(y,column_string))
+                for line in combined_list:
+                    combinedflat = ''.join(str(line))
+                    combinedflat = combinedflat.replace('[','')
+                    combinedflat = combinedflat.replace(']','')
+                    combinedflat = combinedflat.replace("'",'')
+                    combinedflat = combinedflat.replace(",",'')
+                    combinedflat = combinedflat.replace("(",'')
+                    combinedflat = combinedflat.replace(")",'')
+                    f.write("{0}\n".format(combinedflat))
+            f.write(';\n')
+
+            # OperationalLifeStorage = np.zeros((lr,ls))
+            param = 'OperationalLifeStorage' # Change this line
+            f.write('#\n')
+            columns = self.storage # Change this line
+            column_string = ' '.join(columns)
+            # Converts maxtrix rows to list
+            array = np.array(self.region) # Change this line
+            array = array.T
+            lt = array.tolist()
+            # Creates 2D matrix for this value
+            mat = self.OperationalLifeStorage[:,:] # Change this line
+            # Converts combined matrix to list and combines lists
+            matlist = mat.tolist()
+            #Combines the two lists
+            combined_list = list(zip(lt,matlist))
+            # Writes index specific parameter values to the text files 
+            f.write("param\t{0}\t:{1}:=\n".format(param,column_string))
+            for line in combined_list:
+                combinedflat = ''.join(str(line))
+                combinedflat = combinedflat.replace('[','')
+                combinedflat = combinedflat.replace(']','')
+                combinedflat = combinedflat.replace("'",'')
+                combinedflat = combinedflat.replace(",",'')
+                combinedflat = combinedflat.replace("(",'')
+                combinedflat = combinedflat.replace(")",'')
+                f.write("{0}\n".format(combinedflat))
+            f.write(';\n')
+
+            # CapitalCostStorage = np.zeros((lr,ls,ly))
+            param = 'CapitalCostStorage'
+            f.write('#\n')
+            f.write("param\t{0}\tdefault\t{1}:=\n".format(param,defaults_dictionary[param]))
+            # Writes parameter values to the text files
+            for k in range(self.ly):
+                # Sets index value for format string
+                y = self.year[k]
+                # Converts matrix columns to strings columns to strings
+                columns = self.storage
+                column_string = ' '.join(columns)
+                # Converts maxtrix rows to list
+                array = np.array(self.region)
+                array = array.T
+                lt = array.tolist()
+                # Creates 2D matrix for this value
+                mat = self.CapitalCostStorage[:,:,k]
+                # Converts combined matrix to list and combines lists
+                matlist = mat.tolist()
+                #Combines the two lists
+                combined_list = list(zip(lt,matlist))
+                # Writes index specific parameter values to the text files 
+                f.write("\t[*,*,{0}]:\t{1}\t:=\n".format(y,column_string))
+                for line in combined_list:
+                    combinedflat = ''.join(str(line))
+                    combinedflat = combinedflat.replace('[','')
+                    combinedflat = combinedflat.replace(']','')
+                    combinedflat = combinedflat.replace("'",'')
+                    combinedflat = combinedflat.replace(",",'')
+                    combinedflat = combinedflat.replace("(",'')
+                    combinedflat = combinedflat.replace(")",'')
+                    f.write("{0}\n".format(combinedflat))
+            f.write(';\n')
+
+
+            # ResidualStorageCapacity = np.zeros((lr,ls,ly))
+            param = 'ResidualStorageCapacity'
+            f.write('#\n')
+            f.write("param\t{0}\tdefault\t{1}:=\n".format(param,defaults_dictionary[param]))
+            # Writes parameter values to the text files
+            for k in range(self.ly):
+                # Sets index value for format string
+                y = self.year[k]
+                # Converts matrix columns to strings columns to strings
+                columns = self.storage
+                column_string = ' '.join(columns)
+                # Converts maxtrix rows to list
+                array = np.array(self.region)
+                array = array.T
+                lt = array.tolist()
+                # Creates 2D matrix for this value
+                mat = self.ResidualStorageCapacity[:,:,k]
+                # Converts combined matrix to list and combines lists
+                matlist = mat.tolist()
+                #Combines the two lists
+                combined_list = list(zip(lt,matlist))
+                # Writes index specific parameter values to the text files 
+                f.write("\t[*,*,{0}]:\t{1}\t:=\n".format(y,column_string))
+                for line in combined_list:
+                    combinedflat = ''.join(str(line))
+                    combinedflat = combinedflat.replace('[','')
+                    combinedflat = combinedflat.replace(']','')
+                    combinedflat = combinedflat.replace("'",'')
+                    combinedflat = combinedflat.replace(",",'')
+                    combinedflat = combinedflat.replace("(",'')
+                    combinedflat = combinedflat.replace(")",'')
+                    f.write("{0}\n".format(combinedflat))
+            f.write(';\n')
+
+            # CapacityOfOneTechnologyUnit = np.zeros((lr,lt,ly))
+            param = 'CapacityOfOneTechnologyUnit'
+            f.write('#\n')
+            f.write("param\t{0}\tdefault\t{1}:=\n".format(param,defaults_dictionary[param]))
+            # Writes parameter values to the text files
+            for k in range(self.ly):
+                # Sets index value for format string
+                y = self.year[k]
+                # Converts matrix columns to strings columns to strings
+                columns = self.technology
+                column_string = ' '.join(columns)
+                # Converts maxtrix rows to list
+                array = np.array(self.region)
+                array = array.T
+                lt = array.tolist()
+                # Creates 2D matrix for this value
+                mat = self.CapacityOfOneTechnologyUnit[:,:,k]
+                # Converts combined matrix to list and combines lists
+                matlist = mat.tolist()
+                #Combines the two lists
+                combined_list = list(zip(lt,matlist))
+                # Writes index specific parameter values to the text files 
+                f.write("\t[*,*,{0}]:\t{1}\t:=\n".format(y,column_string))
+                for line in combined_list:
+                    combinedflat = ''.join(str(line))
+                    combinedflat = combinedflat.replace('[','')
+                    combinedflat = combinedflat.replace(']','')
+                    combinedflat = combinedflat.replace("'",'')
+                    combinedflat = combinedflat.replace(",",'')
+                    combinedflat = combinedflat.replace("(",'')
+                    combinedflat = combinedflat.replace(")",'')
+                    f.write("{0}\n".format(combinedflat))
+            f.write(';\n')
+
+            # TotalAnnualMaxCapacity = np.zeros((lr,lt,ly))
+            param = 'TotalAnnualMaxCapacity'
+            f.write('#\n')
+            f.write("param\t{0}\tdefault\t{1}:=\n".format(param,defaults_dictionary[param]))
+            # Writes parameter values to the text files
+            for k in range(self.ly):
+                # Sets index value for format string
+                y = self.year[k]
+                # Converts matrix columns to strings columns to strings
+                columns = self.technology
+                column_string = ' '.join(columns)
+                # Converts maxtrix rows to list
+                array = np.array(self.region)
+                array = array.T
+                lt = array.tolist()
+                # Creates 2D matrix for this value
+                mat = self.TotalAnnualMaxCapacity[:,:,k]
+                # Converts combined matrix to list and combines lists
+                matlist = mat.tolist()
+                #Combines the two lists
+                combined_list = list(zip(lt,matlist))
+                # Writes index specific parameter values to the text files 
+                f.write("\t[*,*,{0}]:\t{1}\t:=\n".format(y,column_string))
+                for line in combined_list:
+                    combinedflat = ''.join(str(line))
+                    combinedflat = combinedflat.replace('[','')
+                    combinedflat = combinedflat.replace(']','')
+                    combinedflat = combinedflat.replace("'",'')
+                    combinedflat = combinedflat.replace(",",'')
+                    combinedflat = combinedflat.replace("(",'')
+                    combinedflat = combinedflat.replace(")",'')
+                    f.write("{0}\n".format(combinedflat))
+            f.write(';\n')
+            
+            # TotalAnnualMinCapacity = np.zeros((lr,lt,ly))
+            param = 'TotalAnnualMinCapacity'
+            f.write('#\n')
+            f.write("param\t{0}\tdefault\t{1}:=\n".format(param,defaults_dictionary[param]))
+            # Writes parameter values to the text files
+            for k in range(self.ly):
+                # Sets index value for format string
+                y = self.year[k]
+                # Converts matrix columns to strings columns to strings
+                columns = self.technology
+                column_string = ' '.join(columns)
+                # Converts maxtrix rows to list
+                array = np.array(self.region)
+                array = array.T
+                lt = array.tolist()
+                # Creates 2D matrix for this value
+                mat = self.TotalAnnualMinCapacity[:,:,k]
+                # Converts combined matrix to list and combines lists
+                matlist = mat.tolist()
+                #Combines the two lists
+                combined_list = list(zip(lt,matlist))
+                # Writes index specific parameter values to the text files 
+                f.write("\t[*,*,{0}]:\t{1}\t:=\n".format(y,column_string))
+                for line in combined_list:
+                    combinedflat = ''.join(str(line))
+                    combinedflat = combinedflat.replace('[','')
+                    combinedflat = combinedflat.replace(']','')
+                    combinedflat = combinedflat.replace("'",'')
+                    combinedflat = combinedflat.replace(",",'')
+                    combinedflat = combinedflat.replace("(",'')
+                    combinedflat = combinedflat.replace(")",'')
+                    f.write("{0}\n".format(combinedflat))
+            f.write(';\n')
+
+            # TotalAnnualMaxCapacityInvestment = np.zeros((lr,lt,ly))
+            param = 'TotalAnnualMaxCapacityInvestment'
+            f.write('#\n')
+            f.write("param\t{0}\tdefault\t{1}:=\n".format(param,defaults_dictionary[param]))
+            # Writes parameter values to the text files
+            for k in range(self.ly):
+                # Sets index value for format string
+                y = self.year[k]
+                # Converts matrix columns to strings columns to strings
+                columns = self.technology
+                column_string = ' '.join(columns)
+                # Converts maxtrix rows to list
+                array = np.array(self.region)
+                array = array.T
+                lt = array.tolist()
+                # Creates 2D matrix for this value
+                mat = self.TotalAnnualMaxCapacityInvestment[:,:,k]
+                # Converts combined matrix to list and combines lists
+                matlist = mat.tolist()
+                #Combines the two lists
+                combined_list = list(zip(lt,matlist))
+                # Writes index specific parameter values to the text files 
+                f.write("\t[*,*,{0}]:\t{1}\t:=\n".format(y,column_string))
+                for line in combined_list:
+                    combinedflat = ''.join(str(line))
+                    combinedflat = combinedflat.replace('[','')
+                    combinedflat = combinedflat.replace(']','')
+                    combinedflat = combinedflat.replace("'",'')
+                    combinedflat = combinedflat.replace(",",'')
+                    combinedflat = combinedflat.replace("(",'')
+                    combinedflat = combinedflat.replace(")",'')
+                    f.write("{0}\n".format(combinedflat))
+            f.write(';\n')
+
+            # TotalAnnualMinCapacityInvestment = np.zeros((lr,lt,ly))
+            param = 'TotalAnnualMinCapacityInvestment'
+            f.write('#\n')
+            f.write("param\t{0}\tdefault\t{1}:=\n".format(param,defaults_dictionary[param]))
+            # Writes parameter values to the text files
+            for k in range(self.ly):
+                # Sets index value for format string
+                y = self.year[k]
+                # Converts matrix columns to strings columns to strings
+                columns = self.technology
+                column_string = ' '.join(columns)
+                # Converts maxtrix rows to list
+                array = np.array(self.region)
+                array = array.T
+                lt = array.tolist()
+                # Creates 2D matrix for this value
+                mat = self.TotalAnnualMinCapacityInvestment[:,:,k]
+                # Converts combined matrix to list and combines lists
+                matlist = mat.tolist()
+                #Combines the two lists
+                combined_list = list(zip(lt,matlist))
+                # Writes index specific parameter values to the text files 
+                f.write("\t[*,*,{0}]:\t{1}\t:=\n".format(y,column_string))
+                for line in combined_list:
+                    combinedflat = ''.join(str(line))
+                    combinedflat = combinedflat.replace('[','')
+                    combinedflat = combinedflat.replace(']','')
+                    combinedflat = combinedflat.replace("'",'')
+                    combinedflat = combinedflat.replace(",",'')
+                    combinedflat = combinedflat.replace("(",'')
+                    combinedflat = combinedflat.replace(")",'')
+                    f.write("{0}\n".format(combinedflat))
+            f.write(';\n')
+
+            # TotalTechnologyAnnualActivityLowerLimit= np.zeros((lr,lt,ly))
+            param = 'TotalTechnologyAnnualActivityLowerLimit'
+            f.write('#\n')
+            f.write("param\t{0}\tdefault\t{1}:=\n".format(param,defaults_dictionary[param]))
+            # Writes parameter values to the text files
+            for k in range(self.ly):
+                # Sets index value for format string
+                y = self.year[k]
+                # Converts matrix columns to strings columns to strings
+                columns = self.technology
+                column_string = ' '.join(columns)
+                # Converts maxtrix rows to list
+                array = np.array(self.region)
+                array = array.T
+                lt = array.tolist()
+                # Creates 2D matrix for this value
+                mat = self.TotalTechnologyAnnualActivityLowerLimit[:,:,k]
+                # Converts combined matrix to list and combines lists
+                matlist = mat.tolist()
+                #Combines the two lists
+                combined_list = list(zip(lt,matlist))
+                # Writes index specific parameter values to the text files 
+                f.write("\t[*,*,{0}]:\t{1}\t:=\n".format(y,column_string))
+                for line in combined_list:
+                    combinedflat = ''.join(str(line))
+                    combinedflat = combinedflat.replace('[','')
+                    combinedflat = combinedflat.replace(']','')
+                    combinedflat = combinedflat.replace("'",'')
+                    combinedflat = combinedflat.replace(",",'')
+                    combinedflat = combinedflat.replace("(",'')
+                    combinedflat = combinedflat.replace(")",'')
+                    f.write("{0}\n".format(combinedflat))
+            f.write(';\n')
+
+            # TotalTechnologyAnnualActivityUpperLimit = np.zeros((lr,lt,ly))
+            param = 'TotalTechnologyAnnualActivityUpperLimit'
+            f.write('#\n')
+            f.write("param\t{0}\tdefault\t{1}:=\n".format(param,defaults_dictionary[param]))
+            # Writes parameter values to the text files
+            for k in range(self.ly):
+                # Sets index value for format string
+                y = self.year[k]
+                # Converts matrix columns to strings columns to strings
+                columns = self.technology
+                column_string = ' '.join(columns)
+                # Converts maxtrix rows to list
+                array = np.array(self.region)
+                array = array.T
+                lt = array.tolist()
+                # Creates 2D matrix for this value
+                mat = self.TotalTechnologyAnnualActivityUpperLimit[:,:,k]
+                # Converts combined matrix to list and combines lists
+                matlist = mat.tolist()
+                #Combines the two lists
+                combined_list = list(zip(lt,matlist))
+                # Writes index specific parameter values to the text files 
+                f.write("\t[*,*,{0}]:\t{1}\t:=\n".format(y,column_string))
+                for line in combined_list:
+                    combinedflat = ''.join(str(line))
+                    combinedflat = combinedflat.replace('[','')
+                    combinedflat = combinedflat.replace(']','')
+                    combinedflat = combinedflat.replace("'",'')
+                    combinedflat = combinedflat.replace(",",'')
+                    combinedflat = combinedflat.replace("(",'')
+                    combinedflat = combinedflat.replace(")",'')
+                    f.write("{0}\n".format(combinedflat))
+            f.write(';\n')
+
+            # TotalTechnologyModelPeriodActivityUpperLimit = np.zeros((lr,lt))
+            param = 'TotalTechnologyModelPeriodActivityUpperLimit' # Change this line
+            f.write('#\n')
+            columns = self.technology # Change this line
+            column_string = ' '.join(columns)
+            # Converts maxtrix rows to list
+            array = np.array(self.region) # Change this line
+            array = array.T
+            lt = array.tolist()
+            # Creates 2D matrix for this value
+            mat = self.TotalTechnologyModelPeriodActivityUpperLimit[:,:] # Change this line
+            # Converts combined matrix to list and combines lists
+            matlist = mat.tolist()
+            #Combines the two lists
+            combined_list = list(zip(lt,matlist))
+            # Writes index specific parameter values to the text files 
+            f.write("param\t{0}\t:{1}:=\n".format(param,column_string))
+            for line in combined_list:
+                combinedflat = ''.join(str(line))
+                combinedflat = combinedflat.replace('[','')
+                combinedflat = combinedflat.replace(']','')
+                combinedflat = combinedflat.replace("'",'')
+                combinedflat = combinedflat.replace(",",'')
+                combinedflat = combinedflat.replace("(",'')
+                combinedflat = combinedflat.replace(")",'')
+                f.write("{0}\n".format(combinedflat))
+            f.write(';\n')
+
+            # TotalTechnologyModelPeriodActivityLowerLimit = np.zeros((lr,lt))
+            param = 'TotalTechnologyModelPeriodActivityLowerLimit' # Change this line
+            f.write('#\n')
+            columns = self.technology # Change this line
+            column_string = ' '.join(columns)
+            # Converts maxtrix rows to list
+            array = np.array(self.region) # Change this line
+            array = array.T
+            lt = array.tolist()
+            # Creates 2D matrix for this value
+            mat = self.TotalTechnologyModelPeriodActivityLowerLimit[:,:] # Change this line
+            # Converts combined matrix to list and combines lists
+            matlist = mat.tolist()
+            #Combines the two lists
+            combined_list = list(zip(lt,matlist))
+            # Writes index specific parameter values to the text files 
+            f.write("param\t{0}\t:{1}:=\n".format(param,column_string))
+            for line in combined_list:
+                combinedflat = ''.join(str(line))
+                combinedflat = combinedflat.replace('[','')
+                combinedflat = combinedflat.replace(']','')
+                combinedflat = combinedflat.replace("'",'')
+                combinedflat = combinedflat.replace(",",'')
+                combinedflat = combinedflat.replace("(",'')
+                combinedflat = combinedflat.replace(")",'')
+                f.write("{0}\n".format(combinedflat))
+            f.write(';\n')
+
+            # ReserveMarginTagTechnology = np.zeros((lr,lt,ly))
+            param = 'ReserveMarginTagTechnology'
+            f.write('#\n')
+            f.write("param\t{0}\tdefault\t{1}:=\n".format(param,defaults_dictionary[param]))
+            # Writes parameter values to the text files
+            for k in range(self.ly):
+                # Sets index value for format string
+                y = self.year[k]
+                # Converts matrix columns to strings columns to strings
+                columns = self.technology
+                column_string = ' '.join(columns)
+                # Converts maxtrix rows to list
+                array = np.array(self.region)
+                array = array.T
+                lt = array.tolist()
+                # Creates 2D matrix for this value
+                mat = self.ReserveMarginTagTechnology[:,:,k]
+                # Converts combined matrix to list and combines lists
+                matlist = mat.tolist()
+                #Combines the two lists
+                combined_list = list(zip(lt,matlist))
+                # Writes index specific parameter values to the text files 
+                f.write("\t[*,*,{0}]:\t{1}\t:=\n".format(y,column_string))
+                for line in combined_list:
+                    combinedflat = ''.join(str(line))
+                    combinedflat = combinedflat.replace('[','')
+                    combinedflat = combinedflat.replace(']','')
+                    combinedflat = combinedflat.replace("'",'')
+                    combinedflat = combinedflat.replace(",",'')
+                    combinedflat = combinedflat.replace("(",'')
+                    combinedflat = combinedflat.replace(")",'')
+                    f.write("{0}\n".format(combinedflat))
+            f.write(';\n')
+
+            # ReserveMarginTagFuel = np.zeros((lr,lf,ly))
+            param = 'ReserveMarginTagFuel'
+            f.write('#\n')
+            f.write("param\t{0}\tdefault\t{1}:=\n".format(param,defaults_dictionary[param]))
+            # Writes parameter values to the text files
+            for k in range(self.ly):
+                # Sets index value for format string
+                y = self.year[k]
+                # Converts matrix columns to strings columns to strings
+                columns = self.fuel
+                column_string = ' '.join(columns)
+                # Converts maxtrix rows to list
+                array = np.array(self.region)
+                array = array.T
+                lt = array.tolist()
+                # Creates 2D matrix for this value
+                mat = self.ReserveMarginTagFuel[:,:,k]
+                # Converts combined matrix to list and combines lists
+                matlist = mat.tolist()
+                #Combines the two lists
+                combined_list = list(zip(lt,matlist))
+                # Writes index specific parameter values to the text files 
+                f.write("\t[*,*,{0}]:\t{1}\t:=\n".format(y,column_string))
+                for line in combined_list:
+                    combinedflat = ''.join(str(line))
+                    combinedflat = combinedflat.replace('[','')
+                    combinedflat = combinedflat.replace(']','')
+                    combinedflat = combinedflat.replace("'",'')
+                    combinedflat = combinedflat.replace(",",'')
+                    combinedflat = combinedflat.replace("(",'')
+                    combinedflat = combinedflat.replace(")",'')
+                    f.write("{0}\n".format(combinedflat))
+            f.write(';\n')
+
+            # ReserveMargin = np.zeros((lr,ly))
+            param = 'ReserveMargin' # Change this line
+            f.write('#\n')
+            columns = self.year # Change this line
+            column_string = ' '.join(columns)
+            # Converts maxtrix rows to list
+            array = np.array(self.region) # Change this line
+            array = array.T
+            lt = array.tolist()
+            # Creates 2D matrix for this value
+            mat = self.ReserveMargin[:,:] # Change this line
+            # Converts combined matrix to list and combines lists
+            matlist = mat.tolist()
+            #Combines the two lists
+            combined_list = list(zip(lt,matlist))
+            # Writes index specific parameter values to the text files 
+            f.write("param\t{0}\t:{1}:=\n".format(param,column_string))
+            for line in combined_list:
+                combinedflat = ''.join(str(line))
+                combinedflat = combinedflat.replace('[','')
+                combinedflat = combinedflat.replace(']','')
+                combinedflat = combinedflat.replace("'",'')
+                combinedflat = combinedflat.replace(",",'')
+                combinedflat = combinedflat.replace("(",'')
+                combinedflat = combinedflat.replace(")",'')
+                f.write("{0}\n".format(combinedflat))
+            f.write(';\n')
+
+            # RETagTechnology = np.zeros((lr,lt,ly))
+            param = 'RETagTechnology'
+            f.write('#\n')
+            f.write("param\t{0}\tdefault\t{1}:=\n".format(param,defaults_dictionary[param]))
+            # Writes parameter values to the text files
+            for k in range(self.ly):
+                # Sets index value for format string
+                y = self.year[k]
+                # Converts matrix columns to strings columns to strings
+                columns = self.technology
+                column_string = ' '.join(columns)
+                # Converts maxtrix rows to list
+                array = np.array(self.region)
+                array = array.T
+                lt = array.tolist()
+                # Creates 2D matrix for this value
+                mat = self.RETagTechnology[:,:,k]
+                # Converts combined matrix to list and combines lists
+                matlist = mat.tolist()
+                #Combines the two lists
+                combined_list = list(zip(lt,matlist))
+                # Writes index specific parameter values to the text files 
+                f.write("\t[*,*,{0}]:\t{1}\t:=\n".format(y,column_string))
+                for line in combined_list:
+                    combinedflat = ''.join(str(line))
+                    combinedflat = combinedflat.replace('[','')
+                    combinedflat = combinedflat.replace(']','')
+                    combinedflat = combinedflat.replace("'",'')
+                    combinedflat = combinedflat.replace(",",'')
+                    combinedflat = combinedflat.replace("(",'')
+                    combinedflat = combinedflat.replace(")",'')
+                    f.write("{0}\n".format(combinedflat))
+            f.write(';\n')
+            
+            # RETagFuel = np.zeros((lr,lf,ly))
+            param = 'RETagFuel'
+            f.write('#\n')
+            f.write("param\t{0}\tdefault\t{1}:=\n".format(param,defaults_dictionary[param]))
+            # Writes parameter values to the text files
+            for k in range(self.ly):
+                # Sets index value for format string
+                y = self.year[k]
+                # Converts matrix columns to strings columns to strings
+                columns = self.fuel
+                column_string = ' '.join(columns)
+                # Converts maxtrix rows to list
+                array = np.array(self.region)
+                array = array.T
+                lt = array.tolist()
+                # Creates 2D matrix for this value
+                mat = self.RETagFuel[:,:,k]
+                # Converts combined matrix to list and combines lists
+                matlist = mat.tolist()
+                #Combines the two lists
+                combined_list = list(zip(lt,matlist))
+                # Writes index specific parameter values to the text files 
+                f.write("\t[*,*,{0}]:\t{1}\t:=\n".format(y,column_string))
+                for line in combined_list:
+                    combinedflat = ''.join(str(line))
+                    combinedflat = combinedflat.replace('[','')
+                    combinedflat = combinedflat.replace(']','')
+                    combinedflat = combinedflat.replace("'",'')
+                    combinedflat = combinedflat.replace(",",'')
+                    combinedflat = combinedflat.replace("(",'')
+                    combinedflat = combinedflat.replace(")",'')
+                    f.write("{0}\n".format(combinedflat))
+            f.write(';\n')
+
+            # REMinProductionTarget = np.zeros((lr,ly))
+            param = 'REMinProductionTarget' # Change this line
+            f.write('#\n')
+            columns = self.year # Change this line
+            column_string = ' '.join(columns)
+            # Converts maxtrix rows to list
+            array = np.array(self.region) # Change this line
+            array = array.T
+            lt = array.tolist()
+            # Creates 2D matrix for this value
+            mat = self.REMinProductionTarget[:,:] # Change this line
+            # Converts combined matrix to list and combines lists
+            matlist = mat.tolist()
+            #Combines the two lists
+            combined_list = list(zip(lt,matlist))
+            # Writes index specific parameter values to the text files 
+            f.write("param\t{0}\t:{1}:=\n".format(param,column_string))
+            for line in combined_list:
+                combinedflat = ''.join(str(line))
+                combinedflat = combinedflat.replace('[','')
+                combinedflat = combinedflat.replace(']','')
+                combinedflat = combinedflat.replace("'",'')
+                combinedflat = combinedflat.replace(",",'')
+                combinedflat = combinedflat.replace("(",'')
+                combinedflat = combinedflat.replace(")",'')
+                f.write("{0}\n".format(combinedflat))
+            f.write(';\n')
+
+            # EmissionActivityRatio = np.zeros((lr,lt,le,lm,ly))
+            #Writes new line character at parameter metadata to the text file
+            param = 'EmissionActivityRatio' # Change this line
+            f.write('#\n')
+            f.write("param\t{0}\tdefault\t{1}:=\n".format(param,defaults_dictionary[param]))
+            # Writes parameter values to the text files
+            for i in range(self.le): # Change loops if you need
+                # Sets index value for format string
+                emission = self.emission[i] 
                 for j in range(self.lm):
                     # Sets index value for format string
                     MOO = self.mode_of_operation[j]
@@ -261,12 +1704,164 @@ class Energy_Systems:
                             combinedflat = combinedflat.replace("(",'')
                             combinedflat = combinedflat.replace(")",'')
                             f.write("{0}\n".format(combinedflat))
+            f.write(';\n')
 
-                f.write(';\n')
-        # EmissionsPenalty = np.zeros((lr,le,ly))
-        # AnnualExogenousEmission = np.zeros((lr,le,ly))
-        # AnnualEmissionLimit = np.zeros((lr,le,ly))
-        # ModelPeriodExogenousEmission = np.zeros((lr,le))
-        # ModelPeriodEmissionLimit = np.zeros((lr,le))
-        # 
+            # EmissionsPenalty = np.zeros((lr,le,ly))
+            param = 'EmissionsPenalty'
+            f.write('#\n')
+            f.write("param\t{0}\tdefault\t{1}:=\n".format(param,defaults_dictionary[param]))
+            # Writes parameter values to the text files
+            for k in range(self.ly):
+                # Sets index value for format string
+                y = self.year[k]
+                # Converts matrix columns to strings columns to strings
+                columns = self.emission
+                column_string = ' '.join(columns)
+                # Converts maxtrix rows to list
+                array = np.array(self.region)
+                array = array.T
+                lt = array.tolist()
+                # Creates 2D matrix for this value
+                mat = self.EmissionsPenalty[:,:,k]
+                # Converts combined matrix to list and combines lists
+                matlist = mat.tolist()
+                #Combines the two lists
+                combined_list = list(zip(lt,matlist))
+                # Writes index specific parameter values to the text files 
+                f.write("\t[*,*,{0}]:\t{1}\t:=\n".format(y,column_string))
+                for line in combined_list:
+                    combinedflat = ''.join(str(line))
+                    combinedflat = combinedflat.replace('[','')
+                    combinedflat = combinedflat.replace(']','')
+                    combinedflat = combinedflat.replace("'",'')
+                    combinedflat = combinedflat.replace(",",'')
+                    combinedflat = combinedflat.replace("(",'')
+                    combinedflat = combinedflat.replace(")",'')
+                    f.write("{0}\n".format(combinedflat))
+            f.write(';\n')
+
+            # AnnualExogenousEmission = np.zeros((lr,le,ly))
+            param = 'AnnualExogenousEmission'
+            f.write('#\n')
+            f.write("param\t{0}\tdefault\t{1}:=\n".format(param,defaults_dictionary[param]))
+            # Writes parameter values to the text files
+            for k in range(self.ly):
+                # Sets index value for format string
+                y = self.year[k]
+                # Converts matrix columns to strings columns to strings
+                columns = self.emission
+                column_string = ' '.join(columns)
+                # Converts maxtrix rows to list
+                array = np.array(self.region)
+                array = array.T
+                lt = array.tolist()
+                # Creates 2D matrix for this value
+                mat = self.AnnualExogenousEmission[:,:,k]
+                # Converts combined matrix to list and combines lists
+                matlist = mat.tolist()
+                #Combines the two lists
+                combined_list = list(zip(lt,matlist))
+                # Writes index specific parameter values to the text files 
+                f.write("\t[*,*,{0}]:\t{1}\t:=\n".format(y,column_string))
+                for line in combined_list:
+                    combinedflat = ''.join(str(line))
+                    combinedflat = combinedflat.replace('[','')
+                    combinedflat = combinedflat.replace(']','')
+                    combinedflat = combinedflat.replace("'",'')
+                    combinedflat = combinedflat.replace(",",'')
+                    combinedflat = combinedflat.replace("(",'')
+                    combinedflat = combinedflat.replace(")",'')
+                    f.write("{0}\n".format(combinedflat))
+            f.write(';\n')
+
+            # AnnualEmissionLimit = np.zeros((lr,le,ly))
+            param = 'AnnualEmissionLimit'
+            f.write('#\n')
+            f.write("param\t{0}\tdefault\t{1}:=\n".format(param,defaults_dictionary[param]))
+            # Writes parameter values to the text files
+            for k in range(self.ly):
+                # Sets index value for format string
+                y = self.year[k]
+                # Converts matrix columns to strings columns to strings
+                columns = self.emission
+                column_string = ' '.join(columns)
+                # Converts maxtrix rows to list
+                array = np.array(self.region)
+                array = array.T
+                lt = array.tolist()
+                # Creates 2D matrix for this value
+                mat = self.AnnualExogenousEmission[:,:,k]
+                # Converts combined matrix to list and combines lists
+                matlist = mat.tolist()
+                #Combines the two lists
+                combined_list = list(zip(lt,matlist))
+                # Writes index specific parameter values to the text files 
+                f.write("\t[*,*,{0}]:\t{1}\t:=\n".format(y,column_string))
+                for line in combined_list:
+                    combinedflat = ''.join(str(line))
+                    combinedflat = combinedflat.replace('[','')
+                    combinedflat = combinedflat.replace(']','')
+                    combinedflat = combinedflat.replace("'",'')
+                    combinedflat = combinedflat.replace(",",'')
+                    combinedflat = combinedflat.replace("(",'')
+                    combinedflat = combinedflat.replace(")",'')
+                    f.write("{0}\n".format(combinedflat))
+            f.write(';\n')
+
+            # ModelPeriodExogenousEmission = np.zeros((lr,le))
+            param = 'ModelPeriodExogenousEmission' # Change this line
+            f.write('#\n')
+            columns = self.emission # Change this line
+            column_string = ' '.join(columns)
+            # Converts maxtrix rows to list
+            array = np.array(self.region) # Change this line
+            array = array.T
+            lt = array.tolist()
+            # Creates 2D matrix for this value
+            mat = self.ModelPeriodExogenousEmission[:,:] # Change this line
+            # Converts combined matrix to list and combines lists
+            matlist = mat.tolist()
+            #Combines the two lists
+            combined_list = list(zip(lt,matlist))
+            # Writes index specific parameter values to the text files 
+            f.write("param\t{0}\t:{1}:=\n".format(param,column_string))
+            for line in combined_list:
+                combinedflat = ''.join(str(line))
+                combinedflat = combinedflat.replace('[','')
+                combinedflat = combinedflat.replace(']','')
+                combinedflat = combinedflat.replace("'",'')
+                combinedflat = combinedflat.replace(",",'')
+                combinedflat = combinedflat.replace("(",'')
+                combinedflat = combinedflat.replace(")",'')
+                f.write("{0}\n".format(combinedflat))
+            f.write(';\n')
+
+            # ModelPeriodEmissionLimit = np.zeros((lr,le))
+            param = 'ModelPeriodEmissionLimit' # Change this line
+            f.write('#\n')
+            columns = self.emission # Change this line
+            column_string = ' '.join(columns)
+            # Converts maxtrix rows to list
+            array = np.array(self.region) # Change this line
+            array = array.T
+            lt = array.tolist()
+            # Creates 2D matrix for this value
+            mat = self.ModelPeriodEmissionLimit[:,:] # Change this line
+            # Converts combined matrix to list and combines lists
+            matlist = mat.tolist()
+            #Combines the two lists
+            combined_list = list(zip(lt,matlist))
+            # Writes index specific parameter values to the text files 
+            f.write("param\t{0}\t:{1}:=\n".format(param,column_string))
+            for line in combined_list:
+                combinedflat = ''.join(str(line))
+                combinedflat = combinedflat.replace('[','')
+                combinedflat = combinedflat.replace(']','')
+                combinedflat = combinedflat.replace("'",'')
+                combinedflat = combinedflat.replace(",",'')
+                combinedflat = combinedflat.replace("(",'')
+                combinedflat = combinedflat.replace(")",'')
+                f.write("{0}\n".format(combinedflat))
+            f.write(';\n')
+            f,write('#')
         return 
