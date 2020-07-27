@@ -1,0 +1,22 @@
+!SESSION 2020-07-28 11:42:38.979 -----------------------------------------------
+eclipse.buildId=Build R0
+java.version=1.8.0_221
+java.vendor=Oracle Corporation
+BootLoader constants: OS=macosx, ARCH=x86_64, WS=cocoa, NL=en_NZ
+Framework arguments:  -keyring /Users/connor/.eclipse_keyring
+Command-line arguments:  -os macosx -ws cocoa -arch x86_64 -clean -keyring /Users/connor/.eclipse_keyring
+
+!ENTRY org.eclipse.osgi 4 0 2020-07-28 11:42:39.594
+!MESSAGE Bundle reference:file:com.ibm.ilog.optim.server.client_12.10.0.201911271611.jar@4 not found.
+
+!ENTRY org.eclipse.osgi 4 0 2020-07-28 11:42:39.603
+!MESSAGE Bundle reference:file:ilog.odms.ide.server.ui_12.10.0.201911271611.jar@4 not found.
+
+!ENTRY org.eclipse.osgi 4 0 2020-07-28 11:42:39.603
+!MESSAGE Bundle reference:file:ilog.odms.ide.server.ui.nl1_12.10.0.201911271611.jar@4 not found.
+
+!ENTRY org.eclipse.osgi 4 0 2020-07-28 11:42:39.603
+!MESSAGE Bundle reference:file:ilog.odms.ide.server.ui.nl2_12.10.0.201911271611.jar@4 not found.
+
+!ENTRY org.eclipse.core.net 1 0 2020-07-28 11:44:20.062
+!MESSAGE System property http.nonProxyHosts has been set to local|*.local|169.254/16|*.169.254/16 by an external source. This value will be overwritten using the values from the preferences

@@ -29,4 +29,15 @@ Running the Energy System Model with glpk solver
     4) Run the model in the terminal using the command 'glpsol -m Model.txt -d Data.txt -o Results.txt
 
 Running the Energy System Model with CPLEX solver
-    1) (Add these steps)
+    1) Use academic/student credentials to join the IBM Academic Initiative
+    2) Download IBM ILOG CPLEX Optimizer from IBM Academic Software Terminal
+    3) Follow installation instructions to install the CPLEX optimizer for your device
+    4) Install Python APIs on the Device using the following line in the directory
+       python [File Path]]/setup.py install in bash at terminal route
+       e.g. python /Applications/CPLEX_Studio1210/python/setup.py install
+       Information relating to the package is found here:
+       https://github.com/IBMDecisionOptimization/docplex-doc
+       Information relating to examples is here:
+       https://github.com/IBMDecisionOptimization/docplex-examples
+       
+
