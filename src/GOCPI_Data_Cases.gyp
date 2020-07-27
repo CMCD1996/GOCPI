@@ -69,49 +69,6 @@ default_parameters = {'YearSplit':0, 'DiscountRate':0, 'DaySplit':0, 'Conversion
 Demo.CreateDataFile(data_location,default_parameters)
 
 
-# # EmissionActivityRatio = np.zeros((lr,lt,le,lm,ly))
-# # Sets default for the function
-# default  = 0
-# with open(data_location,'w') as f:
-#     #Writes new line character at parameter metadata to the text file
-#     f.write('#\n')
-#     f.write('param\tEmissionActivityRatio\tdefault\t%s:\n'%default)
-#     # Writes parameter values to the text files
-#     for i in range(Demo.le):
-#         # Sets index value for format string
-#         emission = Demo.emission[i]
-#         for j in range(Demo.lm):
-#             # Sets index value for format string
-#             MOO = Demo.mode_of_operation[j]
-#             for k in range(Demo.ly):
-#                 # Sets index value for format string
-#                 y = Demo.year[k]
-#                 # Converts matrix columns to strings columns to strings
-#                 columns = Demo.technology
-#                 column_string = ' '.join(columns)
-#                 # Converts maxtrix rows to list
-#                 array = np.array(Demo.region)
-#                 array = array.T
-#                 lt = array.tolist()
-#                 # Creates 2D matrix for this value
-#                 mat = Demo.EmissionActivityRatio[:,:,i,j,k]
-#                 # Converts combined matrix to list and combines lists
-#                 matlist = mat.tolist()
-#                 #Combines the two lists
-#                 combined_list = list(zip(lt,matlist))
-#                 # Writes index specific parameter values to the text files 
-#                 f.write("\t[*,*,{0},{1},{2}]:\t{3}\t:=\n".format(emission,MOO,y,column_string))
-#                 for line in combined_list:
-#                     combinedflat = ''.join(str(line))
-#                     combinedflat = combinedflat.replace('[','')
-#                     combinedflat = combinedflat.replace(']','')
-#                     combinedflat = combinedflat.replace("'",'')
-#                     combinedflat = combinedflat.replace(",",'')
-#                     combinedflat = combinedflat.replace("(",'')
-#                     combinedflat = combinedflat.replace(")",'')
-#                     f.write("{0}\n".format(combinedflat))
-
-#     f.write(';\n')
             
 
 
