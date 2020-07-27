@@ -1,6 +1,9 @@
 \boolfalse {citerequest}\boolfalse {citetracker}\boolfalse {pagetracker}\boolfalse {backtracker}\relax 
-\contentsline {section}{\numberline {1}Completed Declaration of Contribution Form}{5}{section.1}% 
-\contentsline {section}{\numberline {2}Abstract}{6}{section.2}% 
-\contentsline {section}{\numberline {3}Acknowledgements}{7}{section.3}% 
-\contentsline {section}{\numberline {4}Bibliography}{7}{section.4}% 
-\contentsline {section}{\numberline {5}Appendix}{7}{section.5}% 
+\contentsline {section}{\numberline {1}Introduction}{7}{section.1}% 
+\contentsline {section}{\numberline {2}Literature Review}{7}{section.2}% 
+\contentsline {section}{\numberline {3}Methods}{7}{section.3}% 
+\contentsline {section}{\numberline {4}Results}{7}{section.4}% 
+\contentsline {section}{\numberline {5}Discussion}{7}{section.5}% 
+\contentsline {section}{\numberline {6}Summary and Conclusion}{7}{section.6}% 
+\contentsline {section}{\numberline {7}Appendices}{7}{section.7}% 
+\contentsline {section}{\numberline {8}References}{7}{section.8}% 
