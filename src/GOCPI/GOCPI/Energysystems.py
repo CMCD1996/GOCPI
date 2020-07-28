@@ -1,5 +1,6 @@
 import os
 import numpy as np
+import pandas as pd
 class Energy_Systems:
     
     """ 
@@ -120,7 +121,33 @@ class Energy_Systems:
         Returns: 
             The loaded in parameters and sets
     
-        """    
+        """
+    def CreateModelFile(self,root, file):
+        """Creates the model file necessary for the project to run
+        
+        Args: 
+            Parameters for the basic problem
+        
+        Returns: 
+            The loaded in parameters and sets
+    
+        """ 
+        # Finds the file
+        # data = Find_File(data_file,model_file)
+        model_location = os.path.join(root,file)
+        df = pd.read_excel(model_location,sheet_name = 'Model')
+        # Creates a new dataframe based on the variables on the Include column values
+        df_Include = df[df.Include == 'Yes']
+        df_model = df_Include[['Name']].copy()
+
+        # Creates a file location and write the model to a text file
+        model_txt = 'GOCPI_OseMOSYS_Model.txt'
+        model_location = os.path.join(root,model_txt)
+
+        # Saves the user defined model to a text file
+        np.savetxt(model_location,df_model.values,fmt = '%s')
+
+
     def CreateDataFile(self,file_location,defaults_dictionary):
         """Function create the GOCPI OseMOSYS Energy Systems Data File necessary for optimisation
         

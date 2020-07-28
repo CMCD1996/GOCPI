@@ -23,9 +23,9 @@ import GOCPI as GF
 import cplex as cp
 import docplex as dp
 
-# Sets sets
+# Sets sets (All must be one word)
 YEAR = ['1990','1991','1992','1993', '1994', '1995', '1996', '1997', '1998', '1999', '2000', '2001', '2002', '2003', '2004', '2005', '2006', '2007', '2008', '2009', '2010']
-REGION = ['UTOPIA','TOPIA','DYSTOPIA','NEW ZEALAND', 'AUSTRALIA','CANADA']
+REGION = ['UTOPIA','TOPIA','DYSTOPIA','NEWZEALAND', 'AUSTRALIA','CANADA']
 EMISSION = ['CO2','NOX','CO','METHANE']
 TECHNOLOGY = ['E01','E21','E31','E51','E70','IMPDSL1','IMPGSL1','IMPHCO1','IMPOIL1','IMPURN1', 'RHE','RHO','RL1','SRE','TXD','TXE','TXG','RIV','RHu','RLu','TXu']
 FUEL = ['CSV','DSL','ELC','GSL','HCO','HYD','LTH','OIL','URN','RH','RL','TX']
@@ -50,11 +50,15 @@ Demo = GF.Energy_Systems(YEAR,REGION, EMISSION, TECHNOLOGY, FUEL, TIMESLICE, MOD
 
 # Sets the textfile saved locations
 data_txt = 'GOCPI_OseMOSYS_Data.txt'
+model_source_file = 'GOCPI_OseMOSYS_Structure.xlsx'
 root = '/Users/connor/Google Drive/Documents/University/Courses/2020/ENGSCI 700A&B/GOCPI/data/Inputs/GOCPI OseMOSYS'
 data_roots = Path(root)
-data_location = os.path.join(data_roots,data_txt)
+data_location_1 = os.path.join(data_roots,data_txt)
+
 
 Demo.EmissionActivityRatio = np.ones(Demo.EmissionActivityRatio.shape)
+
+# Dictionary of default parameters for creating a model file
 default_parameters = {'YearSplit':0, 'DiscountRate':0, 'DaySplit':0, 'Conversionls':0, 'Conversionld':0, 'Conversionlh':0, 'DaysInDayType':0,
         'TradeRoute':0, 'DepreciationMethod':0, 'SpecifiedAnnualDemand':0, 'SpecifiedDemandProfile':0, 'AccumulatedAnnualDemand':0,
         'CapacityToActivityUnit':0, 'CapacityFactor':0, 'AvailabilityFactor':0, 'OperationalLife':0, 'ResidualCapacity':0, 'InputActivityRatio':0,
@@ -66,10 +70,13 @@ default_parameters = {'YearSplit':0, 'DiscountRate':0, 'DaySplit':0, 'Conversion
         'ReserveMarginTagFuel':0, 'ReserveMargin':0, 'RETagTechnology':0, 'RETagFuel':0, 'REMinProductionTarget':0, 'EmissionActivityRatio':0,
         'EmissionsPenalty':0, 'AnnualExogenousEmission':0, 'AnnualEmissionLimit':0, 'ModelPeriodExogenousEmission':0,'ModelPeriodEmissionLimit':0}
 
-# default_parameters
+# Create the Data File
+Demo.CreateDataFile(data_location_1,default_parameters)
 
-Demo.CreateDataFile(data_location,default_parameters)
+# Cereate the Model File
+Demo.CreateModelFile(root,model_source_file)
 
+# Convert created model and data files into a Linear Problem file (lp)
 
             
 
