@@ -37,6 +37,7 @@ Running the Energy System Model with CPLEX solver
        python [File Path]]/setup.py install in bash at terminal route
        e.g. python /Applications/CPLEX_Studio1210/python/setup.py install
        Information relating to the package is found here:
+       https://www.ibm.com/analytics/cplex-optimizer
        https://github.com/IBMDecisionOptimization/docplex-doc
        Information relating to examples is here:
        https://github.com/IBMDecisionOptimization/docplex-examples
