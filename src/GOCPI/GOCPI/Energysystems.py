@@ -574,7 +574,7 @@ class Energy_Systems:
             # CapacityToActivityUnit = np.zeros((lr,lt))
             param = 'CapacityToActivityUnit' # Change this line
             f.write('#\n')
-            columns = self.timeslice # Change this line
+            columns = self.technology # Change this line
             column_string = ' '.join(columns)
             # Converts maxtrix rows to list
             array = np.array(self.region) # Change this line
