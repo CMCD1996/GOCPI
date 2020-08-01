@@ -32,9 +32,9 @@ FUEL = ['CSV','DSL','ELC','GSL','HCO','HYD','LTH','OIL','URN','RH','RL','TX']
 TIMESLICE = ['ID','IN','SD','SN','WD','WN']
 MODE_OF_OPERATION = ['1','2']
 STORAGE = ['DAM']
-DAYTYPE = ['Dummy']
-SEASON = ['Dummy']
-DAILYTIMEBRACKET = ['Dummy']
+DAYTYPE = ['1','2','3']
+SEASON = ['1','2','3','4'] # Must be denoted in numbers to match constraints in model (1: Summer, 2: Autumn, 3: Winter, 4): Spring)
+DAILYTIMEBRACKET = ['1','2','3']
 
 # Sets 
 sets = [YEAR,REGION, EMISSION, TECHNOLOGY, FUEL, TIMESLICE, MODE_OF_OPERATION, STORAGE,DAYTYPE,SEASON,DAILYTIMEBRACKET]
@@ -55,20 +55,17 @@ root = '/Users/connor/Google Drive/Documents/University/Courses/2020/ENGSCI 700A
 data_roots = Path(root)
 data_location_1 = os.path.join(data_roots,data_txt)
 
-
-Demo.EmissionActivityRatio = np.ones(Demo.EmissionActivityRatio.shape)
-
 # Dictionary of default parameters for creating a model file
-default_parameters = {'YearSplit':0, 'DiscountRate':0, 'DaySplit':0, 'Conversionls':0, 'Conversionld':0, 'Conversionlh':0, 'DaysInDayType':0,
-        'TradeRoute':0, 'DepreciationMethod':0, 'SpecifiedAnnualDemand':0, 'SpecifiedDemandProfile':0, 'AccumulatedAnnualDemand':0,
-        'CapacityToActivityUnit':0, 'CapacityFactor':0, 'AvailabilityFactor':0, 'OperationalLife':0, 'ResidualCapacity':0, 'InputActivityRatio':0,
-        'OutputActivityRatio':0, 'CapitalCost':0, 'VariableCost':0, 'FixedCost':0 , 'TechnologyToStorage':0 , 'TechnologyFromStorage':0, 'StorageLevelStart':0,
-        'StorageMaxChargeRate':0, 'StorageMaxDischargeRate':0, 'MinStorageCharge':0, 'OperationalLifeStorage':0, 'CapitalCostStorage':0, 
-        'ResidualStorageCapacity':0, 'CapacityOfOneTechnologyUnit':0, 'TotalAnnualMaxCapacity':0, 'TotalAnnualMinCapacity':0, 'TotalAnnualMaxCapacityInvestment':0,
-        'TotalAnnualMinCapacityInvestment':0, 'TotalTechnologyAnnualActivityLowerLimit':0, 'TotalTechnologyAnnualActivityUpperLimit':0, 
-        'TotalTechnologyModelPeriodActivityUpperLimit':0, 'TotalTechnologyModelPeriodActivityLowerLimit':0, 'ReserveMarginTagTechnology':0,
-        'ReserveMarginTagFuel':0, 'ReserveMargin':0, 'RETagTechnology':0, 'RETagFuel':0, 'REMinProductionTarget':0, 'EmissionActivityRatio':0,
-        'EmissionsPenalty':0, 'AnnualExogenousEmission':0, 'AnnualEmissionLimit':0, 'ModelPeriodExogenousEmission':0,'ModelPeriodEmissionLimit':0}
+default_parameters = {'YearSplit':1, 'DiscountRate':1, 'DaySplit':1, 'Conversionls':1, 'Conversionld':1, 'Conversionlh':1, 'DaysInDayType':1,
+        'TradeRoute':1, 'DepreciationMethod':1, 'SpecifiedAnnualDemand':1, 'SpecifiedDemandProfile':1, 'AccumulatedAnnualDemand':1,
+        'CapacityToActivityUnit':1, 'CapacityFactor':1, 'AvailabilityFactor':1, 'OperationalLife':1, 'ResidualCapacity':1, 'InputActivityRatio':1,
+        'OutputActivityRatio':1, 'CapitalCost':1, 'VariableCost':1, 'FixedCost':1 , 'TechnologyToStorage':1, 'TechnologyFromStorage':1, 'StorageLevelStart':1,
+        'StorageMaxChargeRate':1, 'StorageMaxDischargeRate':1, 'MinStorageCharge':1, 'OperationalLifeStorage':1, 'CapitalCostStorage':1, 
+        'ResidualStorageCapacity':1, 'CapacityOfOneTechnologyUnit':1, 'TotalAnnualMaxCapacity':1, 'TotalAnnualMinCapacity':1, 'TotalAnnualMaxCapacityInvestment':1,
+        'TotalAnnualMinCapacityInvestment':1, 'TotalTechnologyAnnualActivityLowerLimit':1, 'TotalTechnologyAnnualActivityUpperLimit':1, 
+        'TotalTechnologyModelPeriodActivityUpperLimit':1, 'TotalTechnologyModelPeriodActivityLowerLimit':1, 'ReserveMarginTagTechnology':1,
+        'ReserveMarginTagFuel':1, 'ReserveMargin':1, 'RETagTechnology':1, 'RETagFuel':1, 'REMinProductionTarget':1, 'EmissionActivityRatio':1,
+        'EmissionsPenalty':1, 'AnnualExogenousEmission':1, 'AnnualEmissionLimit':1, 'ModelPeriodExogenousEmission':1,'ModelPeriodEmissionLimit':1}
 
 # Create the Data File
 Demo.CreateDataFile(data_location_1,default_parameters)
