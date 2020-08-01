@@ -17,6 +17,10 @@ To upload new versions
 Download new versions 
     1) pip install --upgrade GOCPI'
 
+Relevant working directories (Change for you system)
+    1) GOCPI Module Files: '/Users/connor/Google Drive/Documents/University/Courses/2020/ENGSCI 700A&B/GOCPI/src/GOCPI'
+    2) Data files to create scripts: '/Users/connor/Google Drive/Documents/University/Courses/2020/ENGSCI 700A&B/GOCPI/data/Inputs/GOCPI OseMOSYS'
+
 Resources
     Make your own python package: https://towardsdatascience.com/make-your-own-python-package-6d08a400fc2d'
     PyPi https://pypi.org/manage/project/gocpi-functions/releases/#modal-close'
