@@ -47,3 +47,7 @@ Running the Energy System Model with CPLEX solver
        https://github.com/IBMDecisionOptimization/docplex-examples
     5) 
 
+Methods for Controlling Git
+    1) Undo commits:https://bytefreaks.net/programming-2/how-to-undo-a-git-commit-that-was-not-pushed#:~:text=To%20undo%20a%20Git%20commit%20that%20was%20not%20pushed%2C%20you,commit%20and%20lose%20all%20changes
+    2) Storing large files: https://git-lfs.github.com/
+
