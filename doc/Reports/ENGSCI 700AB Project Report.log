@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.20 (TeX Live 2019) (preloaded format=pdflatex 2020.3.23)  28 JUL 2020 09:25
+This is pdfTeX, Version 3.14159265-2.6-1.40.20 (TeX Live 2019) (preloaded format=pdflatex 2020.3.23)  3 AUG 2020 09:00
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -1411,33 +1411,33 @@ l.102 \newpage
 
 
 
-LaTeX Warning: Empty bibliography on input line 122.
+LaTeX Warning: Empty bibliography on input line 124.
 
 [7]
-Package atveryend Info: Empty hook `BeforeClearDocument' on input line 123.
-Package atveryend Info: Empty hook `AfterLastShipout' on input line 123.
+Package atveryend Info: Empty hook `BeforeClearDocument' on input line 125.
+Package atveryend Info: Empty hook `AfterLastShipout' on input line 125.
  (./ENGSCI 700AB Project Report.aux)
-Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 123.
-Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 123.
+Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 125.
+Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 125.
 Package rerunfilecheck Info: File `"ENGSCI 700AB Project Report".out' has not changed.
-(rerunfilecheck)             Checksum: 1885731740B7CC1782E6565B4645D9E6;375.
+(rerunfilecheck)             Checksum: 5E5ABE1719F729BF727BC6BBDC3DA54D;476.
 Package logreq Info: Writing requests to '"ENGSCI 700AB Project Report".run.xml'.
 \openout1 = `"ENGSCI 700AB Project Report.run.xml"'.
 
  ) 
 Here is how much of TeX's memory you used:
- 39491 strings out of 492616
- 759844 string characters out of 6129481
- 1140796 words of memory out of 5000000
- 42891 multiletter control sequences out of 15000+600000
+ 39495 strings out of 492616
+ 759886 string characters out of 6129481
+ 1141796 words of memory out of 5000000
+ 42893 multiletter control sequences out of 15000+600000
  541462 words of font info for 58 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
  55i,11n,63p,925b,809s stack positions out of 5000i,500n,10000p,200000b,80000s
 </usr/local/texlive/2019/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx12.pfb></usr/local/texlive/2019/texmf-dist/fonts/type1/public/amsfonts/cm/cmcsc10.pfb></usr/local/texlive/2019/texmf-dist/fonts/type1/public/amsfonts/cm/cmr12.pfb></usr/local/texlive/2019/texmf-dist/fonts/type1/public/amsfonts/cm/cmti12.pfb>
-Output written on "ENGSCI 700AB Project Report.pdf" (8 pages, 56455 bytes).
+Output written on "ENGSCI 700AB Project Report.pdf" (8 pages, 58151 bytes).
 PDF statistics:
- 113 PDF objects out of 1000 (max. 8388607)
- 98 compressed objects within 1 object stream
- 23 named destinations out of 1000 (max. 500000)
- 77 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 125 PDF objects out of 1000 (max. 8388607)
+ 109 compressed objects within 2 object streams
+ 25 named destinations out of 1000 (max. 500000)
+ 93 words of extra memory for PDF output out of 10000 (max. 10000000)
 
