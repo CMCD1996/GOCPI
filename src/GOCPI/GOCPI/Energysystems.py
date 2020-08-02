@@ -59,64 +59,65 @@ class Energy_Systems:
         self.lls = lls
         self.llh = llh
 
-        self.YearSplit = np.zeros((ll,ly))
-        self.DiscountRate = np.zeros((lr))
-        self.DaySplit = np.zeros((llh,ly))
-        self.Conversionls = np.zeros((ll,ls))
-        self.Conversionld = np.zeros((lld,ls))
-        self.Conversionlh = np.zeros((llh,ll))
-        self.DaysInDayType = np.zeros((lls,lld,ly))
-        self.TradeRoute = np.zeros((lr,lr,lf,ly))
-        self.DepreciationMethod = np.zeros((lr))
-        self.SpecifiedAnnualDemand = np.zeros((lr,lf,ly))
-        self.SpecifiedDemandProfile = np.zeros((lr,lf,ll,ly))
-        self.AccumulatedAnnualDemand = np.zeros((lr,lf,ly))
-        self.CapacityToActivityUnit = np.zeros((lr,lt))
-        self.CapacityFactor = np.zeros((lr,lt,ll,ly))
-        self.AvailabilityFactor = np.zeros((lr,lt,ly))
-        self.OperationalLife = np.zeros((lr,lt))
-        self.ResidualCapacity = np.zeros((lr,lt,ly))
-        self.InputActivityRatio = np.zeros((lr,lt,lf,lm,ly))
-        self.OutputActivityRatio = np.zeros((lr,lt,lf,lm,ly))
-        self.CapitalCost = np.zeros((lr,lt,ly))
-        self.VariableCost = np.zeros((lr,lt,lm,ly))
-        self.FixedCost = np.zeros((lr,lt,ly))
-        self.TechnologyToStorage = np.zeros((lr,lt,ls,lm))
-        self.TechnologyFromStorage = np.zeros((lr,lt,ls,lm))
-        self.StorageLevelStart = np.zeros((lr,ls))
-        self.StorageMaxChargeRate = np.zeros((lr,ls))
-        self.StorageMaxDischargeRate = np.zeros((lr,ls))
-        self.MinStorageCharge = np.zeros((lr,ls,ly))
-        self.OperationalLifeStorage = np.zeros((lr,ls))
-        self.CapitalCostStorage = np.zeros((lr,ls,ly))
-        self.ResidualStorageCapacity = np.zeros((lr,ls,ly))
-        self.CapacityOfOneTechnologyUnit = np.zeros((lr,lt,ly))
-        self.TotalAnnualMaxCapacity = np.zeros((lr,lt,ly))
-        self.TotalAnnualMinCapacity = np.zeros((lr,lt,ly))
-        self.TotalAnnualMaxCapacityInvestment = np.zeros((lr,lt,ly))
-        self.TotalAnnualMinCapacityInvestment = np.zeros((lr,lt,ly))
-        self.TotalTechnologyAnnualActivityLowerLimit= np.zeros((lr,lt,ly))
-        self.TotalTechnologyAnnualActivityUpperLimit = np.zeros((lr,lt,ly))
-        self.TotalTechnologyModelPeriodActivityUpperLimit = np.zeros((lr,lt))
-        self.TotalTechnologyModelPeriodActivityLowerLimit = np.zeros((lr,lt))
-        self.ReserveMarginTagTechnology = np.zeros((lr,lt,ly))
-        self.ReserveMarginTagFuel = np.zeros((lr,lf,ly))
-        self.ReserveMargin = np.zeros((lr,ly))
-        self.RETagTechnology = np.zeros((lr,lt,ly))
-        self.RETagFuel = np.zeros((lr,lf,ly))
-        self.REMinProductionTarget = np.zeros((lr,ly))
-        self.EmissionActivityRatio = np.zeros((lr,lt,le,lm,ly))
-        self.EmissionsPenalty = np.zeros((lr,le,ly))
-        self.AnnualExogenousEmission = np.zeros((lr,le,ly))
-        self.AnnualEmissionLimit = np.zeros((lr,le,ly))
-        self.ModelPeriodExogenousEmission = np.zeros((lr,le))
-        self.ModelPeriodEmissionLimit = np.zeros((lr,le))
+        self.YearSplit = np.ones((ll,ly))
+        self.DiscountRate = np.ones((lr))
+        self.DaySplit = np.ones((llh,ly))
+        self.Conversionls = np.ones((ll,lls))
+        self.Conversionld = np.ones((ll,lld))
+        self.Conversionlh = np.ones((ll,llh))
+        self.DaysInDayType = np.ones((lls,lld,ly))
+        self.TradeRoute = np.ones((lr,lr,lf,ly))
+        self.DepreciationMethod = np.ones((lr))
+        self.SpecifiedAnnualDemand = np.ones((lr,lf,ly))
+        self.SpecifiedDemandProfile = np.ones((lr,lf,ll,ly))
+        self.AccumulatedAnnualDemand = np.ones((lr,lf,ly))
+        self.CapacityToActivityUnit = np.ones((lr,lt))
+        self.CapacityFactor = np.ones((lr,lt,ll,ly))
+        self.AvailabilityFactor = np.ones((lr,lt,ly))
+        self.OperationalLife = np.ones((lr,lt))
+        self.ResidualCapacity = np.ones((lr,lt,ly))
+        self.InputActivityRatio = np.ones((lr,lt,lf,lm,ly))
+        self.OutputActivityRatio = np.ones((lr,lt,lf,lm,ly))
+        self.CapitalCost = np.ones((lr,lt,ly))
+        self.VariableCost = np.ones((lr,lt,lm,ly))
+        self.FixedCost = np.ones((lr,lt,ly))
+        self.TechnologyToStorage = np.ones((lr,lt,ls,lm))
+        self.TechnologyFromStorage = np.ones((lr,lt,ls,lm))
+        self.StorageLevelStart = np.ones((lr,ls))
+        self.StorageMaxChargeRate = np.ones((lr,ls))
+        self.StorageMaxDischargeRate = np.ones((lr,ls))
+        self.MinStorageCharge = np.ones((lr,ls,ly))
+        self.OperationalLifeStorage = np.ones((lr,ls))
+        self.CapitalCostStorage = np.ones((lr,ls,ly))
+        self.ResidualStorageCapacity = np.ones((lr,ls,ly))
+        self.CapacityOfOneTechnologyUnit = np.ones((lr,lt,ly))
+        self.TotalAnnualMaxCapacity = np.ones((lr,lt,ly))
+        self.TotalAnnualMinCapacity = np.ones((lr,lt,ly))
+        self.TotalAnnualMaxCapacityInvestment = np.ones((lr,lt,ly))
+        self.TotalAnnualMinCapacityInvestment = np.ones((lr,lt,ly))
+        self.TotalTechnologyAnnualActivityLowerLimit= np.ones((lr,lt,ly))
+        self.TotalTechnologyAnnualActivityUpperLimit = np.ones((lr,lt,ly))
+        self.TotalTechnologyModelPeriodActivityUpperLimit = np.ones((lr,lt))
+        self.TotalTechnologyModelPeriodActivityLowerLimit = np.ones((lr,lt))
+        self.ReserveMarginTagTechnology = np.ones((lr,lt,ly))
+        self.ReserveMarginTagFuel = np.ones((lr,lf,ly))
+        self.ReserveMargin = np.ones((lr,ly))
+        self.RETagTechnology = np.ones((lr,lt,ly))
+        self.RETagFuel = np.ones((lr,lf,ly))
+        self.REMinProductionTarget = np.ones((lr,ly))
+        self.EmissionActivityRatio = np.ones((lr,lt,le,lm,ly))
+        self.EmissionsPenalty = np.ones((lr,le,ly))
+        self.AnnualExogenousEmission = np.ones((lr,le,ly))
+        self.AnnualEmissionLimit = np.ones((lr,le,ly))
+        self.ModelPeriodExogenousEmission = np.ones((lr,le))
+        self.ModelPeriodEmissionLimit = np.ones((lr,le))
 
-    def SetParameters(self):
+    def SetParameters(self,parameters):
         """Sets the parameters for the functions
         
         Args: 
-            Parameters for the basic problem
+            self: The base of the Energy_Systems Class
+            parameter: A list of parameters defined for the function
         
         Returns: 
             The loaded in parameters and sets
@@ -288,7 +289,7 @@ class Energy_Systems:
             # Conversionls = np.zeros((ll,ls))
             param = 'Conversionls' # Change this line
             f.write('#\n')
-            columns = self.storage # Change this line
+            columns = self.season # Change this line
             column_string = ' '.join(columns)
             # Converts maxtrix rows to list
             array = np.array(self.timeslice) # Change this line
@@ -313,13 +314,13 @@ class Energy_Systems:
                 f.write("{0}\n".format(combinedflat))
             f.write(';\n')
 
-            # Conversionld = np.zeros((lld,ls))
+            # Conversionld = np.zeros((ll,lld))
             param = 'Conversionld' # Change this line
             f.write('#\n')
-            columns = self.storage # Change this line
+            columns = self.daytype # Change this line
             column_string = ' '.join(columns)
             # Converts maxtrix rows to list
-            array = np.array(self.daytype) # Change this line
+            array = np.array(self.timeslice) # Change this line
             array = array.T
             lt = array.tolist()
             # Creates 2D matrix for this value
@@ -341,13 +342,13 @@ class Energy_Systems:
                 f.write("{0}\n".format(combinedflat))
             f.write(';\n')
 
-            # Conversionlh = np.zeros((llh,ll))
+            # Conversionlh = np.zeros((ll,llh))
             param = 'Conversionlh' # Change this line
             f.write('#\n')
-            columns = self.timeslice # Change this line
+            columns = self.dailytimebracket # Change this line
             column_string = ' '.join(columns)
             # Converts maxtrix rows to list
-            array = np.array(self.dailytimebracket) # Change this line
+            array = np.array(self.timeslice) # Change this line
             array = array.T
             lt = array.tolist()
             # Creates 2D matrix for this value
@@ -507,7 +508,7 @@ class Energy_Systems:
             # Writes parameter values to the text files
             for j in range(self.ll):
                 # Sets index value for format string
-                fl = self.fuel[j]
+                x = self.timeslice[j]
                 for k in range(self.ly):
                     # Sets index value for format string
                     y = self.year[k]
@@ -525,7 +526,7 @@ class Energy_Systems:
                     #Combines the two lists
                     combined_list = list(zip(lt,matlist))
                     # Writes index specific parameter values to the text files 
-                    f.write("\t[*,*,{0},{1}]:\t{2}\t:=\n".format(fl,y,column_string))
+                    f.write("\t[*,*,{0},{1}]:\t{2}\t:=\n".format(x,y,column_string))
                     for line in combined_list:
                         combinedflat = ''.join(str(line))
                         combinedflat = combinedflat.replace('[','')
@@ -673,7 +674,7 @@ class Energy_Systems:
             # OperationalLife = np.zeros((lr,lt))
             param = 'OperationalLife' # Change this line
             f.write('#\n')
-            columns = self.timeslice # Change this line
+            columns = self.technology # Change this line
             column_string = ' '.join(columns)
             # Converts maxtrix rows to list
             array = np.array(self.region) # Change this line
@@ -1890,5 +1891,6 @@ class Energy_Systems:
                 combinedflat = combinedflat.replace(")",'')
                 f.write("{0}\n".format(combinedflat))
             f.write(';\n')
+            f.write('end;\n')
             f.write('#')
         return 
