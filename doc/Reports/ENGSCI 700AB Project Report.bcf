@@ -1995,6 +1995,39 @@
     <bcf:datasource type="file" datatype="bibtex">sources.bib</bcf:datasource>
   </bcf:bibdata>
   <bcf:section number="0">
+    <bcf:citekey order="1">W:2</bcf:citekey>
+    <bcf:citekey order="2">J:3</bcf:citekey>
+    <bcf:citekey order="3">J:9</bcf:citekey>
+    <bcf:citekey order="4">TR:3</bcf:citekey>
+    <bcf:citekey order="5">TR:4</bcf:citekey>
+    <bcf:citekey order="6">W:3</bcf:citekey>
+    <bcf:citekey order="7">W:4</bcf:citekey>
+    <bcf:citekey order="8">TR:3</bcf:citekey>
+    <bcf:citekey order="9">TR:5</bcf:citekey>
+    <bcf:citekey order="10">W:5</bcf:citekey>
+    <bcf:citekey order="11">W:6</bcf:citekey>
+    <bcf:citekey order="12">J:4</bcf:citekey>
+    <bcf:citekey order="13">W:7</bcf:citekey>
+    <bcf:citekey order="14">J:5</bcf:citekey>
+    <bcf:citekey order="15">W:8</bcf:citekey>
+    <bcf:citekey order="16">TR:6</bcf:citekey>
+    <bcf:citekey order="17">J:6</bcf:citekey>
+    <bcf:citekey order="18">TR:7</bcf:citekey>
+    <bcf:citekey order="19">J:6</bcf:citekey>
+    <bcf:citekey order="20">A:3</bcf:citekey>
+    <bcf:citekey order="21">W:10</bcf:citekey>
+    <bcf:citekey order="22">A:2</bcf:citekey>
+    <bcf:citekey order="23">TR:8</bcf:citekey>
+    <bcf:citekey order="24">TR:1</bcf:citekey>
+    <bcf:citekey order="25">TR:2</bcf:citekey>
+    <bcf:citekey order="26">J:7</bcf:citekey>
+    <bcf:citekey order="27">J:8</bcf:citekey>
+    <bcf:citekey order="28">J:8</bcf:citekey>
+    <bcf:citekey order="29">W:12</bcf:citekey>
+    <bcf:citekey order="30">W:11</bcf:citekey>
+    <bcf:citekey order="31">W:13</bcf:citekey>
+    <bcf:citekey order="32">J:10</bcf:citekey>
+    <bcf:citekey order="33">Google_Drive</bcf:citekey>
   </bcf:section>
   <!-- SORTING TEMPLATES -->
   <bcf:sortingtemplate name="nty">

@@ -1,9 +1,21 @@
 [0] Config.pm:304> INFO - This is Biber 2.12
 [0] Config.pm:307> INFO - Logfile is 'ENGSCI 700AB Project Report.blg'
-[41] biber-darwin:315> INFO - === Mon Aug  3, 2020, 10:08:41
+[42] biber-darwin:315> INFO - === Wed Aug  5, 2020, 11:22:58
 [65] Biber.pm:371> INFO - Reading 'ENGSCI 700AB Project Report.bcf'
-[145] Biber.pm:889> INFO - Found 0 citekeys in bib section 0
-[152] Utils.pm:193> WARN - The file 'ENGSCI 700AB Project Report.bcf' does not contain any citations!
-[158] bbl.pm:636> INFO - Writing 'ENGSCI 700AB Project Report.bbl' with encoding 'UTF-8'
-[158] bbl.pm:739> INFO - Output to ENGSCI 700AB Project Report.bbl
-[158] Biber.pm:110> INFO - WARNINGS: 1
+[154] Biber.pm:889> INFO - Found 30 citekeys in bib section 0
+[166] Biber.pm:4093> INFO - Processing section 0
+[178] Biber.pm:4254> INFO - Looking for bibtex format file 'sources.bib' for section 0
+[180] bibtex.pm:1523> INFO - LaTeX decoding ...
+[217] bibtex.pm:1340> INFO - Found BibTeX data source 'sources.bib'
+[322] Utils.pm:193> WARN - BibTeX subsystem: /var/folders/pk/1vzw3fs97zgf0876ytxyth9r0000gn/T/v1sLlrxzF9/sources.bib_20103.utf8, line 31, warning: 1 characters of junk seen at toplevel
+[322] Utils.pm:193> WARN - BibTeX subsystem: /var/folders/pk/1vzw3fs97zgf0876ytxyth9r0000gn/T/v1sLlrxzF9/sources.bib_20103.utf8, line 49, warning: 99 characters of junk seen at toplevel
+[322] Utils.pm:193> WARN - BibTeX subsystem: /var/folders/pk/1vzw3fs97zgf0876ytxyth9r0000gn/T/v1sLlrxzF9/sources.bib_20103.utf8, line 84, warning: 15 characters of junk seen at toplevel
+[322] Utils.pm:193> WARN - BibTeX subsystem: /var/folders/pk/1vzw3fs97zgf0876ytxyth9r0000gn/T/v1sLlrxzF9/sources.bib_20103.utf8, line 179, warning: 9 characters of junk seen at toplevel
+[322] Utils.pm:193> WARN - BibTeX subsystem: /var/folders/pk/1vzw3fs97zgf0876ytxyth9r0000gn/T/v1sLlrxzF9/sources.bib_20103.utf8, line 263, warning: 9 characters of junk seen at toplevel
+[358] UCollate.pm:68> INFO - Overriding locale 'en-US' defaults 'normalization = NFD' with 'normalization = prenormalized'
+[358] UCollate.pm:68> INFO - Overriding locale 'en-US' defaults 'variable = shifted' with 'variable = non-ignorable'
+[358] Biber.pm:3921> INFO - Sorting list 'nty/global//global/global' of type 'entry' with template 'nty' and locale 'en-US'
+[359] Biber.pm:3927> INFO - No sort tailoring available for locale 'en-US'
+[391] bbl.pm:636> INFO - Writing 'ENGSCI 700AB Project Report.bbl' with encoding 'UTF-8'
+[400] bbl.pm:739> INFO - Output to ENGSCI 700AB Project Report.bbl
+[400] Biber.pm:110> INFO - WARNINGS: 5
