@@ -443,17 +443,65 @@ The model aims to communicate the key financial benefits of these initiatives wh
 GOCPI adopted Data Science best practices, as described by Wilson et al \cite{J:10}. Although these practices are
 mostly reserved for data science projects, their principles are suitable for product development and version control. All data and
 results are saved regularly and reproducible. The retention of data in all forms received high levels of attention. Project files were synched
-continuously Google Drive \cite{Google_Drive}.
+continuously Google Drive \cite{Google_Drive}. Git \cite{Git} was used to manage version control for GOCPI's source code, data, documentation and results.
+Git stores a complete history of versions using Git hashes. These hashes are strings unique to each state of the
+publicly available GOCPI repository\footnote[1]{https://github.com/CMCD1996/GOCPI}. Git hashes enable the discretisation of GOCPI's development over time,
+enabling the accessibility and recollection of all previous states given a unique git hash. This functionality
+enables reproducibility, error correction and the ability to revert to previous models.
 
 \subsubsection{Version Control}
+Git, hosted by GitHub, provides a comprehensive set of version control technologies. These technologies provide a range of benefits.
+Firstly, Git is excellent at providing and supporting collaborative functionalities. The master version of a project is accessible for all
+who have access to the repository. Each contributor can create custom copies on branches through pull requests on the master branch. Contributors
+can commit changes to custom branches and push these changes to the master branch through push requests. The product manager can review these push requests,
+approving suitable push requests to integrate changes to the master branch. Collaborative efforts were possible with
+commit messages describing the contributions from each contributor. This project had one developer. Git ensures the histories of code, work and authors are stored.
+The descriptive nature of the commit log ensures an accurate journal is kept.
+
 \subsubsection{Folder Structure}
-\subsubsection{Anaconda Package Management}
+GOCPI maintained the file folder structure recommended in Wilson et al \cite{J:10}. Project organisation was paramount as the modelling of energy systems involves
+integrating a range of optimisation models, data files and documents. Wilson et al's recommendations were appropriate as data science projects require similar 
+organisational rigor. Subsequently, file management and structure was most efficient and comprehensive. \textbf{GOCPI} is the root directory of this project and contains several
+sub directories: bin, data, doc, src and results.  The \textbf{bin} subdirectory contains external scripts and compiled
+programmes related to the GOCPI project. The \textbf{data} subdirectory contains all raw data associated with the project. 
+This data includes energy statistics, energy balance datasets, partitioned geographies, standardised optimisation models and TIMES modelling frameworks.
+The \textbf{doc} subdirectory stores GOCPI's user guides, academic resources, research reports and project deliverables.
+The \textbf{results} subdirectory contains the output from optimisation simulations and processed data to display on dashboards and websites to inform investment and policy decisions.
+The \textbf{src} subdirectory stores the source code for preparing raw data, partitioning sets of geographies with different granularities and the
+GOCPI python package available to download using PyPI\footnote[2]{https://pypi.org/} and install using pip\footnote[3]{https://pypi.org/project/pip/}.
+All files were continuously backed up using Google Drive.
+
 \subsubsection{Python}
+Python \textbf{[X]} was the primary coding language for the GOCPI project. 
+GOCPI's objective is to enable any user to design and model their own energy systems to inform investment and policy decisions.
+The intention is to empower users to discuss energy investment and policy decisions made by public and private parties.
+Additionally, GOCPI intends to reduce the discrepancy in education between energy policies and help assess the feasibility of meeting the International Energy Agency's Sustainable Development Scenario \cite{IEA_WEM}.
+Python is omnipresent, widespread in software development. 
+Python's language design makes the language highly productive and simple to use. 
+Python can hand off computationally straining tasks to C/C++ and has first-class integration capabilities with these two languages.
+The language also has a very active and supportive community \cite{Python_Features}.
+In addition, Python is the most popular coding language on the planet defined by the PYPL PopularitY of Programming Language Index. As at August 2020, Python had 31.59\% of all language tutorial search instances on Google \cite{PYPL_Pop}.
+Python has many useful packages such as NumPy, Scikit-learn, os, csv and Pandas useful for creating the GOCPI package. Programming is quick due to Python's dynamic nature.
+The language is also open-source with no cost.
+Subsequently, the GOCPI model should be accessible for many users to use and extend.
+
+\subsubsection{Anaconda Package Management}
+
+
 \subsubsection{Excel}
+
+
 \subsubsection{IBM Academic Initiative}
+
+
 \subsubsection{PyPI}
+
+
 \subsubsection{Code Style}
+
+
 \subsubsection{Infrastructure}
+
 
 \subsection{Standardised Forecasting Methodology}
 \subsection{Geographical Partitioning}

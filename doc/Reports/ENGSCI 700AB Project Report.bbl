@@ -41,6 +41,32 @@
       \field{howpublished}{Available at \url{https://www.iea.org/fuels-and-technologies} (2020/04/21)}
       \field{title}{Fuels and Technologies}
     \endentry
+    \entry{IEA_WEM}{report}{}
+      \name{author}{1}{}{%
+        {{hash=465b82815b27cd8a52e2be2cc108c330}{%
+           family={Agency},
+           familyi={A\bibinitperiod},
+           given={International\bibnamedelima Energy},
+           giveni={I\bibinitperiod\bibinitdelim E\bibinitperiod}}}%
+      }
+      \list{publisher}{1}{%
+        {International Energy Agency}%
+      }
+      \strng{namehash}{465b82815b27cd8a52e2be2cc108c330}
+      \strng{fullhash}{465b82815b27cd8a52e2be2cc108c330}
+      \strng{bibnamehash}{465b82815b27cd8a52e2be2cc108c330}
+      \strng{authorbibnamehash}{465b82815b27cd8a52e2be2cc108c330}
+      \strng{authornamehash}{465b82815b27cd8a52e2be2cc108c330}
+      \strng{authorfullhash}{465b82815b27cd8a52e2be2cc108c330}
+      \field{extraname}{2}
+      \field{sortinit}{A}
+      \field{sortinithash}{d77c7cdd82ff690d4c3ef13216f92f0b}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{title}{World Energy Model Documentation}
+      \field{type}{techreport}
+      \field{year}{2019}
+    \endentry
     \entry{W:4}{misc}{}
       \name{author}{1}{}{%
         {{hash=34605fd298257fdf64e8196ec3e114bd}{%
@@ -55,7 +81,7 @@
       \strng{authorbibnamehash}{34605fd298257fdf64e8196ec3e114bd}
       \strng{authornamehash}{34605fd298257fdf64e8196ec3e114bd}
       \strng{authorfullhash}{34605fd298257fdf64e8196ec3e114bd}
-      \field{extraname}{2}
+      \field{extraname}{3}
       \field{sortinit}{A}
       \field{sortinithash}{d77c7cdd82ff690d4c3ef13216f92f0b}
       \field{labelnamesource}{author}
@@ -512,6 +538,35 @@
       \field{volume}{q}
       \field{year}{2019}
     \endentry
+    \entry{Git}{software}{}
+      \name{author}{1}{}{%
+        {{hash=e0c51f779cb0dd87e38e549d999f4da9}{%
+           family={{Linus Torvalds}},
+           familyi={L\bibinitperiod}}}%
+      }
+      \strng{namehash}{e0c51f779cb0dd87e38e549d999f4da9}
+      \strng{fullhash}{e0c51f779cb0dd87e38e549d999f4da9}
+      \strng{bibnamehash}{e0c51f779cb0dd87e38e549d999f4da9}
+      \strng{authorbibnamehash}{e0c51f779cb0dd87e38e549d999f4da9}
+      \strng{authornamehash}{e0c51f779cb0dd87e38e549d999f4da9}
+      \strng{authorfullhash}{e0c51f779cb0dd87e38e549d999f4da9}
+      \field{sortinit}{L}
+      \field{sortinithash}{2c7981aaabc885868aba60f0c09ee20f}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{day}{5}
+      \field{month}{8}
+      \field{title}{Git}
+      \field{version}{2.28.0}
+      \field{year}{2020}
+      \field{dateera}{ce}
+      \verb{urlraw}
+      \verb https://git-scm.com/
+      \endverb
+      \verb{url}
+      \verb https://git-scm.com/
+      \endverb
+    \endentry
     \entry{J:7}{article}{}
       \name{author}{3}{}{%
         {{hash=f9234ef6ed6a711ef5e7c7940f38f953}{%
@@ -590,6 +645,25 @@
       \field{title}{Documentation for the TIMES Model - PART I 1–78}
       \field{year}{2005}
     \endentry
+    \entry{Python_Features}{misc}{}
+      \name{author}{1}{}{%
+        {{hash=87f8a6ab85c9ced3702b4ea641ad4bb5}{%
+           family={Medium},
+           familyi={M\bibinitperiod}}}%
+      }
+      \strng{namehash}{87f8a6ab85c9ced3702b4ea641ad4bb5}
+      \strng{fullhash}{87f8a6ab85c9ced3702b4ea641ad4bb5}
+      \strng{bibnamehash}{87f8a6ab85c9ced3702b4ea641ad4bb5}
+      \strng{authorbibnamehash}{87f8a6ab85c9ced3702b4ea641ad4bb5}
+      \strng{authornamehash}{87f8a6ab85c9ced3702b4ea641ad4bb5}
+      \strng{authorfullhash}{87f8a6ab85c9ced3702b4ea641ad4bb5}
+      \field{sortinit}{M}
+      \field{sortinithash}{cfd219b90152c06204fab207bc6c7cab}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{howpublished}{Available at \url{https://towardsdatascience.com/top-10-in-demand-programming-languages-to-learn-in-2020-4462eb7d8d3e} (2020/08/06)}
+      \field{title}{Top 10 In-Demand programming languages to learn in 2020}
+    \endentry
     \entry{TR:6}{report}{}
       \name{author}{1}{}{%
         {{hash=2d661e9167bd3a268ea03a3ee152926c}{%
@@ -660,6 +734,25 @@
       \field{type}{techreport}
       \field{volume}{68}
       \field{year}{2019}
+    \endentry
+    \entry{PYPL_Pop}{misc}{}
+      \name{author}{1}{}{%
+        {{hash=68da608daec4950bcdec8a2691f5a0ef}{%
+           family={PYPL},
+           familyi={P\bibinitperiod}}}%
+      }
+      \strng{namehash}{68da608daec4950bcdec8a2691f5a0ef}
+      \strng{fullhash}{68da608daec4950bcdec8a2691f5a0ef}
+      \strng{bibnamehash}{68da608daec4950bcdec8a2691f5a0ef}
+      \strng{authorbibnamehash}{68da608daec4950bcdec8a2691f5a0ef}
+      \strng{authornamehash}{68da608daec4950bcdec8a2691f5a0ef}
+      \strng{authorfullhash}{68da608daec4950bcdec8a2691f5a0ef}
+      \field{sortinit}{P}
+      \field{sortinithash}{8d51b3d5b78d75b54308d706b9bbe285}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{howpublished}{Available at \url{http://pypl.github.io/PYPL.html} (2020/08/06)}
+      \field{title}{PYPL PopularitY of Programming Language}
     \endentry
     \entry{TR:8}{report}{}
       \name{author}{1}{}{%
