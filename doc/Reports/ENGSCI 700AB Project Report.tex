@@ -498,8 +498,8 @@ Pip was used to install and update packages for python not available on Anaconda
 
 \subsubsection{Excel}
 It is important users are comfortable with using the GOCPI model. 
-Excel
-Excel is used to store the energy systems model formulayon GNU Mathprog 
+Excel is ubiquitous across several communities.
+Excel is used to store the energy systems model formulation GNU Mathprog 
 
 
 \subsubsection{IBM Academic Initiative}
@@ -522,7 +522,7 @@ Excel is used to store the energy systems model formulayon GNU Mathprog
 \subsubsection{OseMOYSIS}
 The combined use of both the OseMOSYS methodology and CPLEX solver required the formulation of an lp-format file through combining user-defined data and model text files.
 These files are written in GNU Mathprog, a language intended for describing linear mathematical programming models \cite{GNU_Mathprog}. 
-The model component of the OseMOSYS methodology is stored in an excel sheet to make the OseMOSYS methodology transparent for the user. The model structure is converted into the required text file using the CreateModelFile in the GOCPI package.
+The OseMOSYS model file is stored in an excel sheet to make the OseMOSYS methodology transparent for the user. The model structure is converted into the required text file using the CreateModelFile in the GOCPI package.
 GNU Mathprog is a subset of the Algebraic Mathematical Programming Language (AMPL) \cite{AMPL} and consists of user-defined sets of statements and data blocks.
 The custom anaconda environment (\textbf{osemosys}) was created to facilitate this model formulation. This environment contains the libcxx package which provides a standard library of C++ functionalities.
 The GNU Linear Programming Kit (GLPK) sits within this library. GLPK uses GNU Mathprog to solve large-scale linear programming (LP), mixed integer programming (MIP), and other related problems. 
