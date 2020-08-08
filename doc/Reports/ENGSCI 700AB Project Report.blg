@@ -1,23 +1,26 @@
 [0] Config.pm:304> INFO - This is Biber 2.12
 [0] Config.pm:307> INFO - Logfile is 'ENGSCI 700AB Project Report.blg'
-[74] biber-darwin:315> INFO - === Thu Aug  6, 2020, 12:48:40
-[196] Biber.pm:371> INFO - Reading 'ENGSCI 700AB Project Report.bcf'
-[293] Biber.pm:889> INFO - Found 34 citekeys in bib section 0
-[306] Biber.pm:4093> INFO - Processing section 0
-[318] Biber.pm:4254> INFO - Looking for bibtex format file 'sources.bib' for section 0
-[320] bibtex.pm:1523> INFO - LaTeX decoding ...
-[357] bibtex.pm:1340> INFO - Found BibTeX data source 'sources.bib'
-[477] Utils.pm:193> WARN - BibTeX subsystem: /var/folders/pk/1vzw3fs97zgf0876ytxyth9r0000gn/T/7w2dLX3uTf/sources.bib_28946.utf8, line 31, warning: 1 characters of junk seen at toplevel
-[477] Utils.pm:193> WARN - BibTeX subsystem: /var/folders/pk/1vzw3fs97zgf0876ytxyth9r0000gn/T/7w2dLX3uTf/sources.bib_28946.utf8, line 49, warning: 99 characters of junk seen at toplevel
-[477] Utils.pm:193> WARN - BibTeX subsystem: /var/folders/pk/1vzw3fs97zgf0876ytxyth9r0000gn/T/7w2dLX3uTf/sources.bib_28946.utf8, line 91, warning: 15 characters of junk seen at toplevel
-[477] Utils.pm:193> WARN - BibTeX subsystem: /var/folders/pk/1vzw3fs97zgf0876ytxyth9r0000gn/T/7w2dLX3uTf/sources.bib_28946.utf8, line 186, warning: 31 characters of junk seen at toplevel
-[477] Utils.pm:193> WARN - BibTeX subsystem: /var/folders/pk/1vzw3fs97zgf0876ytxyth9r0000gn/T/7w2dLX3uTf/sources.bib_28946.utf8, line 197, warning: 9 characters of junk seen at toplevel
-[477] Utils.pm:193> WARN - BibTeX subsystem: /var/folders/pk/1vzw3fs97zgf0876ytxyth9r0000gn/T/7w2dLX3uTf/sources.bib_28946.utf8, line 281, warning: 9 characters of junk seen at toplevel
-[477] Utils.pm:193> WARN - BibTeX subsystem: /var/folders/pk/1vzw3fs97zgf0876ytxyth9r0000gn/T/7w2dLX3uTf/sources.bib_28946.utf8, line 288, warning: 9 characters of junk seen at toplevel
-[514] UCollate.pm:68> INFO - Overriding locale 'en-US' defaults 'variable = shifted' with 'variable = non-ignorable'
-[514] UCollate.pm:68> INFO - Overriding locale 'en-US' defaults 'normalization = NFD' with 'normalization = prenormalized'
-[515] Biber.pm:3921> INFO - Sorting list 'nty/global//global/global' of type 'entry' with template 'nty' and locale 'en-US'
-[515] Biber.pm:3927> INFO - No sort tailoring available for locale 'en-US'
-[547] bbl.pm:636> INFO - Writing 'ENGSCI 700AB Project Report.bbl' with encoding 'UTF-8'
-[557] bbl.pm:739> INFO - Output to ENGSCI 700AB Project Report.bbl
-[557] Biber.pm:110> INFO - WARNINGS: 7
+[36] biber-darwin:315> INFO - === Sat Aug  8, 2020, 15:11:09
+[63] Biber.pm:371> INFO - Reading 'ENGSCI 700AB Project Report.bcf'
+[150] Biber.pm:889> INFO - Found 37 citekeys in bib section 0
+[162] Biber.pm:4093> INFO - Processing section 0
+[175] Biber.pm:4254> INFO - Looking for bibtex format file 'sources.bib' for section 0
+[177] bibtex.pm:1523> INFO - LaTeX decoding ...
+[217] bibtex.pm:1340> INFO - Found BibTeX data source 'sources.bib'
+[221] Utils.pm:193> WARN - Duplicate entry key: 'Google_Drive' in file 'sources.bib', skipping ...
+[352] Utils.pm:193> WARN - BibTeX subsystem: /var/folders/pk/1vzw3fs97zgf0876ytxyth9r0000gn/T/yQNFkRuli9/sources.bib_43205.utf8, line 31, warning: 1 characters of junk seen at toplevel
+[352] Utils.pm:193> WARN - BibTeX subsystem: /var/folders/pk/1vzw3fs97zgf0876ytxyth9r0000gn/T/yQNFkRuli9/sources.bib_43205.utf8, line 49, warning: 99 characters of junk seen at toplevel
+[352] Utils.pm:193> WARN - BibTeX subsystem: /var/folders/pk/1vzw3fs97zgf0876ytxyth9r0000gn/T/yQNFkRuli9/sources.bib_43205.utf8, line 91, warning: 15 characters of junk seen at toplevel
+[352] Utils.pm:193> WARN - BibTeX subsystem: /var/folders/pk/1vzw3fs97zgf0876ytxyth9r0000gn/T/yQNFkRuli9/sources.bib_43205.utf8, line 186, warning: 31 characters of junk seen at toplevel
+[352] Utils.pm:193> WARN - BibTeX subsystem: /var/folders/pk/1vzw3fs97zgf0876ytxyth9r0000gn/T/yQNFkRuli9/sources.bib_43205.utf8, line 197, warning: 34 characters of junk seen at toplevel
+[352] Utils.pm:193> WARN - BibTeX subsystem: /var/folders/pk/1vzw3fs97zgf0876ytxyth9r0000gn/T/yQNFkRuli9/sources.bib_43205.utf8, line 203, warning: 49 characters of junk seen at toplevel
+[352] Utils.pm:193> WARN - BibTeX subsystem: /var/folders/pk/1vzw3fs97zgf0876ytxyth9r0000gn/T/yQNFkRuli9/sources.bib_43205.utf8, line 209, warning: 9 characters of junk seen at toplevel
+[352] Utils.pm:193> WARN - BibTeX subsystem: /var/folders/pk/1vzw3fs97zgf0876ytxyth9r0000gn/T/yQNFkRuli9/sources.bib_43205.utf8, line 293, warning: 9 characters of junk seen at toplevel
+[352] Utils.pm:193> WARN - BibTeX subsystem: /var/folders/pk/1vzw3fs97zgf0876ytxyth9r0000gn/T/yQNFkRuli9/sources.bib_43205.utf8, line 300, warning: 9 characters of junk seen at toplevel
+[394] UCollate.pm:68> INFO - Overriding locale 'en-US' defaults 'variable = shifted' with 'variable = non-ignorable'
+[394] UCollate.pm:68> INFO - Overriding locale 'en-US' defaults 'normalization = NFD' with 'normalization = prenormalized'
+[394] Biber.pm:3921> INFO - Sorting list 'nty/global//global/global' of type 'entry' with template 'nty' and locale 'en-US'
+[394] Biber.pm:3927> INFO - No sort tailoring available for locale 'en-US'
+[429] bbl.pm:636> INFO - Writing 'ENGSCI 700AB Project Report.bbl' with encoding 'UTF-8'
+[446] bbl.pm:739> INFO - Output to ENGSCI 700AB Project Report.bbl
+[446] Biber.pm:110> INFO - WARNINGS: 10

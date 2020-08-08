@@ -82,7 +82,7 @@
 	%	Author(s)
 	%------------------------------------------------
 	
-	{\large\textit{Author: Connor McDowall \\Supervisor:}}\\
+	{\large\textit{Author: Connor McDowall \\Supervisor: Rosalind Archer}}\\
 	
 	%------------------------------------------------
 	%	Date
@@ -115,7 +115,7 @@ This form is to accompany
 \section{Introduction}
 \section{Literature Review}
 \subsection{An Introduction to Energy}
-Energy powers the world we live in.
+	Energy powers the world we live in.
 Industrial sectors use energy to power machining and production processes. Trade uses oil-based products to fuel shipping and logistics networks. 
 The technology sector uses energy to supply power to data centres to facilitate internet services. The manufacturing sector use the chemical properties of oil and natural gas to produce glass, synthetic, and explosive products. 
 In summary, energy has a role in every industry. Energy comes in many forms. 
@@ -422,6 +422,7 @@ The overall research objective is:
 \begin{center}
 \textbf{Develop a Global Carbon Pricing Optimisation Model}.
 \end{center}
+
 The model will be developed by the following process:
 
 \begin{enumerate}
@@ -435,8 +436,8 @@ The model will be developed by the following process:
 \end{enumerate}
 
 In conclusion, this project will attempt to address issue surrounding climate change. 
-The overall purpose of the model is to catalyse further discussion in implementing carbon pricing initiatives. 
-The model aims to communicate the key financial benefits of these initiatives which ultimately drive change and investment in industry. 
+GOCPI will enable any user to design and model their own energy system to inform investment and policy decisions.
+The intention is to empower users to discuss energy investment and policy decisions made by public and private parties.
 
 \section{Methodology and Implementation}
 \subsection{Project organisation}
@@ -472,7 +473,7 @@ GOCPI python package available to download using PyPI\footnote[2]{https://pypi.o
 All files were continuously backed up using Google Drive.
 
 \subsubsection{Python}
-Python \textbf{[X]} was the primary coding language for the GOCPI project. 
+Python 3.7 was the primary coding language for the GOCPI project. 
 GOCPI's objective is to enable any user to design and model their own energy system to inform investment and policy decisions.
 The intention is to empower users to discuss energy investment and policy decisions made by public and private parties.
 Additionally, GOCPI intends to reduce the discrepancy in education between energy policies and help assess the feasibility of meeting the International Energy Agency's Sustainable Development Scenario \cite{IEA_WEM}.
@@ -485,10 +486,20 @@ Python has many useful packages such as NumPy, Scikit-learn, os, csv and Pandas 
 The language is also open-source with no cost.
 Subsequently, the GOCPI model should be accessible for many users to use and extend.
 
-\subsubsection{Anaconda Package Management}
-
+\subsubsection{Package Management}
+The Anaconda package management platform for Python \cite{Anaconda} was the chosen coding environment.
+Anaconda is a well defined, free platform with known versions of python packages such as matplotlib, numpy and pip.
+The use of this environment ensures both reproducibility and consistency across infrastructure.
+These factors enable collaborative efforts. 
+Although this project required no collaboration, the use of Anaconda will inform future developers on how to manage collaborative processes, especially for packages
+which are less well-maintained. Anaconda allows you to create custom environments which was necessary for creating scalable linear optimization problems to express energy systems \textbf{Insert Reference}.
+Pip is Python's default package manager and included within the Anaconda package. 
+Pip was used to install and update packages for python not available on Anaconda such as twine and the custom GOCPI package developed for this project \textbf{[Insert Reference]}.
 
 \subsubsection{Excel}
+It is important users are comfortable with using the GOCPI model. 
+Excel
+Excel is used to store the energy systems model formulayon GNU Mathprog 
 
 
 \subsubsection{IBM Academic Initiative}
@@ -507,6 +518,15 @@ Subsequently, the GOCPI model should be accessible for many users to use and ext
 \subsection{Geographical Partitioning}
 \subsection{Forecasting Energy Systems}
 \subsection{TIMES/OseMOSYS Adaptation}
+\subsubsection{TIMES}
+\subsubsection{OseMOYSIS}
+The combined use of both the OseMOSYS methodology and CPLEX solver required the formulation of an lp-format file through combining user-defined data and model text files.
+These files are written in GNU Mathprog, a language intended for describing linear mathematical programming models \cite{GNU_Mathprog}. 
+The model component of the OseMOSYS methodology is stored in an excel sheet to make the OseMOSYS methodology transparent for the user. The model structure is converted into the required text file using the CreateModelFile in the GOCPI package.
+GNU Mathprog is a subset of the Algebraic Mathematical Programming Language (AMPL) \cite{AMPL} and consists of user-defined sets of statements and data blocks.
+The custom anaconda environment (\textbf{osemosys}) was created to facilitate this model formulation. This environment contains the libcxx package which provides a standard library of C++ functionalities.
+The GNU Linear Programming Kit (GLPK) sits within this library. GLPK uses GNU Mathprog to solve large-scale linear programming (LP), mixed integer programming (MIP), and other related problems. 
+GLPK is called using the \textbf{glpsol} command in the osemosys conda environment. 
 \subsection{Simulation Processes}
 \subsection{Development of Investment Strategies}
 \subsection{User Interface and User Experience Development}

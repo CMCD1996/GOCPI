@@ -2033,6 +2033,9 @@
     <bcf:citekey order="36">IEA_WEM</bcf:citekey>
     <bcf:citekey order="37">Python_Features</bcf:citekey>
     <bcf:citekey order="38">PYPL_Pop</bcf:citekey>
+    <bcf:citekey order="39">Anaconda</bcf:citekey>
+    <bcf:citekey order="40">GNU_Mathprog</bcf:citekey>
+    <bcf:citekey order="41">AMPL</bcf:citekey>
   </bcf:section>
   <!-- SORTING TEMPLATES -->
   <bcf:sortingtemplate name="nty">

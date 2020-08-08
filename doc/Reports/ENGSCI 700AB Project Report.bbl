@@ -89,6 +89,63 @@
       \field{howpublished}{Available at \url{https://www.epa.gov/ghgemissions/overview-greenhouse-gases} (2020/04/21)}
       \field{title}{Overview of Greenhouse Gas Emissions}
     \endentry
+    \entry{AMPL}{software}{}
+      \name{author}{1}{}{%
+        {{hash=e3999abe0186926967a47e787492378c}{%
+           family={{AMPL Optimization Inc}},
+           familyi={A\bibinitperiod}}}%
+      }
+      \strng{namehash}{e3999abe0186926967a47e787492378c}
+      \strng{fullhash}{e3999abe0186926967a47e787492378c}
+      \strng{bibnamehash}{e3999abe0186926967a47e787492378c}
+      \strng{authorbibnamehash}{e3999abe0186926967a47e787492378c}
+      \strng{authornamehash}{e3999abe0186926967a47e787492378c}
+      \strng{authorfullhash}{e3999abe0186926967a47e787492378c}
+      \field{sortinit}{A}
+      \field{sortinithash}{d77c7cdd82ff690d4c3ef13216f92f0b}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{day}{8}
+      \field{month}{8}
+      \field{title}{AMPL}
+      \field{year}{2020}
+      \field{dateera}{ce}
+      \verb{urlraw}
+      \verb https://ampl.com/
+      \endverb
+      \verb{url}
+      \verb https://ampl.com/
+      \endverb
+    \endentry
+    \entry{Anaconda}{software}{}
+      \name{author}{1}{}{%
+        {{hash=3d5945a4b3a932cac2494c0e5f6e12a6}{%
+           family={{Anaconda, Inc.}},
+           familyi={A\bibinitperiod}}}%
+      }
+      \strng{namehash}{3d5945a4b3a932cac2494c0e5f6e12a6}
+      \strng{fullhash}{3d5945a4b3a932cac2494c0e5f6e12a6}
+      \strng{bibnamehash}{3d5945a4b3a932cac2494c0e5f6e12a6}
+      \strng{authorbibnamehash}{3d5945a4b3a932cac2494c0e5f6e12a6}
+      \strng{authornamehash}{3d5945a4b3a932cac2494c0e5f6e12a6}
+      \strng{authorfullhash}{3d5945a4b3a932cac2494c0e5f6e12a6}
+      \field{sortinit}{A}
+      \field{sortinithash}{d77c7cdd82ff690d4c3ef13216f92f0b}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{day}{8}
+      \field{month}{8}
+      \field{title}{Anaconda}
+      \field{version}{2020.02}
+      \field{year}{2020}
+      \field{dateera}{ce}
+      \verb{urlraw}
+      \verb https://www.anaconda.com/
+      \endverb
+      \verb{url}
+      \verb https://www.anaconda.com/
+      \endverb
+    \endentry
     \entry{J:6}{article}{}
       \name{author}{2}{}{%
         {{hash=e3224997d0e85a9d2691f0b1e8e42db8}{%
@@ -832,6 +889,29 @@
       \field{title}{Pricing Carbon: The Challenges}
       \field{type}{phdthesis}
       \field{year}{2015}
+    \endentry
+    \entry{GNU_Mathprog}{misc}{}
+      \name{author}{1}{}{%
+        {{hash=44573a441e1c8d442ce057dd052e4987}{%
+           family={Technology},
+           familyi={T\bibinitperiod},
+           given={Massachusetts\bibnamedelima Institute},
+           giveni={M\bibinitperiod\bibinitdelim I\bibinitperiod},
+           prefix={of},
+           prefixi={o\bibinitperiod}}}%
+      }
+      \strng{namehash}{44573a441e1c8d442ce057dd052e4987}
+      \strng{fullhash}{44573a441e1c8d442ce057dd052e4987}
+      \strng{bibnamehash}{44573a441e1c8d442ce057dd052e4987}
+      \strng{authorbibnamehash}{44573a441e1c8d442ce057dd052e4987}
+      \strng{authornamehash}{44573a441e1c8d442ce057dd052e4987}
+      \strng{authorfullhash}{44573a441e1c8d442ce057dd052e4987}
+      \field{sortinit}{T}
+      \field{sortinithash}{6f7aff9db9dcfeb7f95fd5bbd2f78df9}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{howpublished}{Available at \url{http://web.mit.edu/lpsolve_v5525/doc/MathProg.htm} (2020/08/08)}
+      \field{title}{GNU Mathprog}
     \endentry
     \entry{W:3}{misc}{}
       \name{author}{1}{}{%
