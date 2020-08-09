@@ -711,6 +711,33 @@
       \field{volume}{q}
       \field{year}{2019}
     \endentry
+    \entry{PEP8}{unpublished}{}
+      \name{author}{2}{}{%
+        {{hash=6467ec401f141c16acd4cc3be2bf47dc}{%
+           family={Guido\bibnamedelimb Van\bibnamedelima Rossum},
+           familyi={G\bibinitperiod\bibinitdelim V\bibinitperiod\bibinitdelim R\bibinitperiod},
+           given={Barry\bibnamedelima Warsaw},
+           giveni={B\bibinitperiod\bibinitdelim W\bibinitperiod}}}%
+        {{hash=90b0e252e28a3ae865d44f3830798d17}{%
+           family={Coghlan},
+           familyi={C\bibinitperiod},
+           given={Nick},
+           giveni={N\bibinitperiod}}}%
+      }
+      \strng{namehash}{16d09d8251db68fc0a32dc84b7fd8fa2}
+      \strng{fullhash}{16d09d8251db68fc0a32dc84b7fd8fa2}
+      \strng{bibnamehash}{16d09d8251db68fc0a32dc84b7fd8fa2}
+      \strng{authorbibnamehash}{16d09d8251db68fc0a32dc84b7fd8fa2}
+      \strng{authornamehash}{16d09d8251db68fc0a32dc84b7fd8fa2}
+      \strng{authorfullhash}{16d09d8251db68fc0a32dc84b7fd8fa2}
+      \field{sortinit}{G}
+      \field{sortinithash}{5e8d2bf9d38de41b1528bd307546008f}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{note}{Python. org, 1565}
+      \field{title}{PEP 8: Style Guide for Python Code}
+      \field{year}{2001}
+    \endentry
     \entry{IBM_AI}{misc}{}
       \name{author}{1}{}{%
         {{hash=cbf44511d041dc6d1dd73cc0c033122c}{%

@@ -2039,8 +2039,9 @@
     <bcf:citekey order="42">IPM</bcf:citekey>
     <bcf:citekey order="43">Simplex</bcf:citekey>
     <bcf:citekey order="44">IBM_AI</bcf:citekey>
-    <bcf:citekey order="45">GNU_Mathprog</bcf:citekey>
-    <bcf:citekey order="46">AMPL</bcf:citekey>
+    <bcf:citekey order="45">PEP8</bcf:citekey>
+    <bcf:citekey order="46">GNU_Mathprog</bcf:citekey>
+    <bcf:citekey order="47">AMPL</bcf:citekey>
   </bcf:section>
   <!-- SORTING TEMPLATES -->
   <bcf:sortingtemplate name="nty">

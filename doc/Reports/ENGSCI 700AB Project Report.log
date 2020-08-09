@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.20 (TeX Live 2019) (preloaded format=pdflatex 2020.3.23)  9 AUG 2020 17:31
+This is pdfTeX, Version 3.14159265-2.6-1.40.20 (TeX Live 2019) (preloaded format=pdflatex 2020.3.23)  9 AUG 2020 19:24
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -1427,45 +1427,45 @@ Overfull \hbox (4.28487pt too wide) in paragraph at lines 258--260
 [12] [13] [14] [15] [16] [17] [18] [19] [20] [21] [22] [23] [24] [25]
 
 Package biblatex Warning: No driver for entry type 'software'.
-(biblatex)                Using fallback driver on input line 573.
+(biblatex)                Using fallback driver on input line 576.
 
 
 Package biblatex Warning: No driver for entry type 'software'.
-(biblatex)                Using fallback driver on input line 573.
+(biblatex)                Using fallback driver on input line 576.
 
 
-Overfull \hbox (0.30544pt too wide) in paragraph at lines 574--574
+Overfull \hbox (0.30544pt too wide) in paragraph at lines 577--577
 \OT1/cmr/m/n/12 CO2 Emis-sions and Eco-nomic Growth''. In: \OT1/cmr/m/it/12 The En-ergy Jour-nal \OT1/cmr/m/n/12 33.3 (2012), pp. 23{
  []
 
 [26]
-Overfull \hbox (4.13197pt too wide) in paragraph at lines 574--574
+Overfull \hbox (4.13197pt too wide) in paragraph at lines 577--577
 []\OT1/cmr/m/n/12 GAMS. \OT1/cmr/m/it/12 An In-tro-duc-tion to GAMS\OT1/cmr/m/n/12 . Avail-able at []$\OT1/cmtt/m/n/12 https : / / www . gams . com / products /
  []
 
 
 Package biblatex Warning: No driver for entry type 'software'.
-(biblatex)                Using fallback driver on input line 573.
+(biblatex)                Using fallback driver on input line 576.
 
 
 Package biblatex Warning: No driver for entry type 'software'.
-(biblatex)                Using fallback driver on input line 573.
+(biblatex)                Using fallback driver on input line 576.
 
 
 Package biblatex Warning: No driver for entry type 'software'.
-(biblatex)                Using fallback driver on input line 573.
+(biblatex)                Using fallback driver on input line 576.
 
 
-Overfull \hbox (0.91632pt too wide) in paragraph at lines 574--574
+Overfull \hbox (0.91632pt too wide) in paragraph at lines 577--577
 []\OT1/cmr/m/n/12 Richard Loulou, Gary Gold-stein, and Ken No-ble. ``Doc-u-men-ta-tion for the MARKEL
  []
 
 [27]
-Package atveryend Info: Empty hook `BeforeClearDocument' on input line 574.
-Package atveryend Info: Empty hook `AfterLastShipout' on input line 574.
+Package atveryend Info: Empty hook `BeforeClearDocument' on input line 577.
+Package atveryend Info: Empty hook `AfterLastShipout' on input line 577.
  (./ENGSCI 700AB Project Report.aux)
-Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 574.
-Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 574.
+Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 577.
+Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 577.
 Package rerunfilecheck Info: File `"ENGSCI 700AB Project Report".out' has not changed.
 (rerunfilecheck)             Checksum: A2EAD3C5A4EB46E8A2CD4A76BAF9EB37;3375.
 Package logreq Info: Writing requests to '"ENGSCI 700AB Project Report".run.xml'.
@@ -1473,18 +1473,18 @@ Package logreq Info: Writing requests to '"ENGSCI 700AB Project Report".run.xml'
 
  ) 
 Here is how much of TeX's memory you used:
- 39964 strings out of 492616
- 769533 string characters out of 6129481
- 1151523 words of memory out of 5000000
- 43245 multiletter control sequences out of 15000+600000
+ 39967 strings out of 492616
+ 769617 string characters out of 6129481
+ 1151560 words of memory out of 5000000
+ 43247 multiletter control sequences out of 15000+600000
  546238 words of font info for 77 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
  55i,11n,63p,934b,1707s stack positions out of 5000i,500n,10000p,200000b,80000s
 {/usr/local/texlive/2019/texmf-dist/fonts/enc/dvips/cm-super/cm-super-ts1.enc}</usr/local/texlive/2019/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx12.pfb></usr/local/texlive/2019/texmf-dist/fonts/type1/public/amsfonts/cm/cmcsc10.pfb></usr/local/texlive/2019/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi12.pfb></usr/local/texlive/2019/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb></usr/local/texlive/2019/texmf-dist/fonts/type1/public/amsfonts/cm/cmr12.pfb></usr/local/texlive/2019/texmf-dist/fonts/type1/public/amsfonts/cm/cmr7.pfb></usr/local/texlive/2019/texmf-dist/fonts/type1/public/amsfonts/cm/cmr8.pfb></usr/local/texlive/2019/texmf-dist/fonts/type1/public/amsfonts/cm/cmti12.pfb></usr/local/texlive/2019/texmf-dist/fonts/type1/public/amsfonts/cm/cmtt12.pfb></usr/local/texlive/2019/texmf-dist/fonts/type1/public/cm-super/sfrm1200.pfb>
-Output written on "ENGSCI 700AB Project Report.pdf" (28 pages, 190395 bytes).
+Output written on "ENGSCI 700AB Project Report.pdf" (28 pages, 190960 bytes).
 PDF statistics:
- 588 PDF objects out of 1000 (max. 8388607)
- 542 compressed objects within 6 object streams
- 135 named destinations out of 1000 (max. 500000)
+ 590 PDF objects out of 1000 (max. 8388607)
+ 544 compressed objects within 6 object streams
+ 136 named destinations out of 1000 (max. 500000)
  381 words of extra memory for PDF output out of 10000 (max. 10000000)
 
