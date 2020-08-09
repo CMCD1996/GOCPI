@@ -2034,8 +2034,13 @@
     <bcf:citekey order="37">Python_Features</bcf:citekey>
     <bcf:citekey order="38">PYPL_Pop</bcf:citekey>
     <bcf:citekey order="39">Anaconda</bcf:citekey>
-    <bcf:citekey order="40">GNU_Mathprog</bcf:citekey>
-    <bcf:citekey order="41">AMPL</bcf:citekey>
+    <bcf:citekey order="40">CBNF</bcf:citekey>
+    <bcf:citekey order="41">IBM_ILOG</bcf:citekey>
+    <bcf:citekey order="42">IPM</bcf:citekey>
+    <bcf:citekey order="43">Simplex</bcf:citekey>
+    <bcf:citekey order="44">IBM_AI</bcf:citekey>
+    <bcf:citekey order="45">GNU_Mathprog</bcf:citekey>
+    <bcf:citekey order="46">AMPL</bcf:citekey>
   </bcf:section>
   <!-- SORTING TEMPLATES -->
   <bcf:sortingtemplate name="nty">

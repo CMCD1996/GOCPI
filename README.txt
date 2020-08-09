@@ -51,3 +51,6 @@ Methods for Controlling Git
     1) Undo commits:https://bytefreaks.net/programming-2/how-to-undo-a-git-commit-that-was-not-pushed#:~:text=To%20undo%20a%20Git%20commit%20that%20was%20not%20pushed%2C%20you,commit%20and%20lose%20all%20changes
     2) Storing large files: https://git-lfs.github.com/
 
+Cplex and Docplex Jupiter Notebook Tutorials
+    1) Docplex: https://github.com/IBMDecisionOptimization/docplex-examples/blob/master/examples/mp/jupyter/tutorials/Linear_Programming.ipynb
+    2) cplex: https://www.ibm.com/support/knowledgecenter/SSSA5P_12.8.0/ilog.odms.cplex.help/refpythoncplex/html/cplex-module.html

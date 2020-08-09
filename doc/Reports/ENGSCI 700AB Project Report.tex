@@ -472,7 +472,7 @@ The \textbf{src} subdirectory stores the source code for preparing raw data, par
 GOCPI python package available to download using PyPI\footnote[2]{https://pypi.org/} and install using pip\footnote[3]{https://pypi.org/project/pip/}.
 All files were continuously backed up using Google Drive.
 
-\subsubsection{Python}
+\subsubsection{Python}\label{python}
 Python 3.7 was the primary coding language for the GOCPI project. 
 GOCPI's objective is to enable any user to design and model their own energy system to inform investment and policy decisions.
 The intention is to empower users to discuss energy investment and policy decisions made by public and private parties.
@@ -498,28 +498,56 @@ Pip was used to install and update packages for python not available on Anaconda
 
 \subsubsection{Excel}
 It is important users are comfortable with using the GOCPI model. 
-Excel is ubiquitous across several communities.
-Excel is used to store the energy systems model formulation GNU Mathprog 
+Energy modelling can be quite complex. The modelling process must be transparent to inform users how to build their own models.
+Excel is ubiquitous across academic and professional communities.
+Excel's omnipotence makes the software well-suited for describing the components of the GNU Mathprog energy system model.
+The \textbf{GOCPI OseMOSYS Structure.xlsx} file describes the sets, paramaters, constraints and objective function of an energy systems model.
+User may toggle statements to include. 
+The model is imported to a text file using the \textbf{CreateModelFile} module in the \textbf{GOCPI} package.
+However, data related to these energy systems is stored using Python dictionaries, lists and NumPy arrays.
+Excel is best for two dimensional variables or informatino stored Codd-Boyce relational databases \cite{CBNF}.
+Many of the parameters in energy system modelling are three or more dimensional. 
+Therefore, Excel is not suitable to store these parameters.
+Python dictionaries, lists and NumPy arrays are preferred alternatives.
 
+\subsubsection{IBM ILOG CPLEX Optimization}
+The OseMOSYS methodology (see \ref{OseMOSYS}) translates energy systems into linear programming problems. A solver is required to optimise these user-defined energy systems.
+The IBM ILOG Optimization Studio \cite{IBM_ILOG}, more commonly known as CPLEX, was chosen to be this solver.
+CPLEX solves very large linear programming problems using the Barrier Interior-point method \cite{IPM} or primal/dual variants of the Simplex Method \cite{Simplex}.
+GOCPI's user-defined energy systems can be scaled up to model very large systems, creating large linear programming problems.
 
-\subsubsection{IBM Academic Initiative}
+The IBM ILOG CPLEX Optimization Studio has an interface with the Python language based on a C programming interface.
+Subsequently, Python APIs are available to run the CPLEX solver when installed either locally or on a cloud service.
+The python packages are \textbf{cplex} and \textbf{docplex}. The cplex package contains classes for accessing CPLEX from the Python programming language. The Cplex class is the most important class in this module as provides methods for creating, modifying, querying, or solving an optimisation problem.
+Docplex also enables the formulation of new linear programmes where one creates the model, defines the decision variables, sets the constraints and expresses the objective function.
+The user can use docplex to solve the linear programme on a local solver. 
+Alternatively, the model can be solved on a private cloud or the Decision Optimisation on Cloud service through the provision of a service url and personal API key.
+The CPLEX Python APIs are most attractive as provides the user with a powerful commercial solver in an accessible format.
 
+There is a caveat to the use of the CPLEX solver. The IBM ILOG CPLEX Optimization Studio is commercial by nature and requires a license to use.
+Fortunately IBM have the IBM Academic Initiative \cite{IBM_AI}, granting students access to commercial software for free.
+This commercial nature creates accessibility issues for users who are not enrolled at an academic institution or can afford to pay for the software.
+Accessibility issues to commercial solvers will need to be addressed to enable the distribution of the GOCPI product.
 
 \subsubsection{PyPI}
-
+PyPI\footnote{https://pypi.org/} is the Python Package Index, a repository of software for the python programming language.
+This repository helps you find and install software developed by the Python community who have decided to share their work.
+The GOCPI package is distributed from this platform to enable as many as possible the ability to model their own energy systems to inform and question energy policy and investment.
+Enter command: \textbf{pip install GOCPI} in the terminal to install the package using pip package management software.
 
 \subsubsection{Code Style}
 
 
 \subsubsection{Infrastructure}
-
+GOCPI creates scalable energy systems optimisation models which change in complexity depending on there size.
+Computations either took place locally on a 128 GB, four core Apple MacBook Pro or remotely on a cloud service. 
 
 \subsection{Standardised Forecasting Methodology}
 \subsection{Geographical Partitioning}
 \subsection{Forecasting Energy Systems}
 \subsection{TIMES/OseMOSYS Adaptation}
 \subsubsection{TIMES}
-\subsubsection{OseMOYSIS}
+\subsubsection{OseMOYSIS}\label{OseMOSYS}
 The combined use of both the OseMOSYS methodology and CPLEX solver required the formulation of an lp-format file through combining user-defined data and model text files.
 These files are written in GNU Mathprog, a language intended for describing linear mathematical programming models \cite{GNU_Mathprog}. 
 The OseMOSYS model file is stored in an excel sheet to make the OseMOSYS methodology transparent for the user. The model structure is converted into the required text file using the CreateModelFile in the GOCPI package.

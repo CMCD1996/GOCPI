@@ -469,7 +469,7 @@
     </bindings>
     <bindings xmi:id="_FUes8dBjEeqAbdDfUyge1w" keySequence="ALT+COMMAND+G" command="_FT-91NBjEeqAbdDfUyge1w"/>
     <bindings xmi:id="_FUfT8NBjEeqAbdDfUyge1w" keySequence="COMMAND+W" command="_FUCA9NBjEeqAbdDfUyge1w"/>
-    <bindings xmi:id="_VARlcNBlEeqBz4Wf_dVfGA" keySequence="COMMAND+CTRL+F" command="_FU91EtBjEeqAbdDfUyge1w"/>
+    <bindings xmi:id="_uztH4dnUEeqnA-H0MLBJxw" keySequence="COMMAND+CTRL+F" command="_FU91EtBjEeqAbdDfUyge1w"/>
   </bindingTables>
   <bindingTables xmi:id="_FUX_MdBjEeqAbdDfUyge1w" elementId="org.eclipse.ui.textEditorScope" bindingContext="_FUD2IdBjEeqAbdDfUyge1w">
     <bindings xmi:id="_FUX_MtBjEeqAbdDfUyge1w" keySequence="COMMAND+END" command="_FT_kxtBjEeqAbdDfUyge1w"/>
@@ -686,7 +686,7 @@
     <bindings xmi:id="_FUdew9BjEeqAbdDfUyge1w" keySequence="COMMAND+SHIFT+I" command="_FUBaCtBjEeqAbdDfUyge1w"/>
   </bindingTables>
   <bindingTables xmi:id="_FU-cI9BjEeqAbdDfUyge1w" contributorURI="platform:/fragment/org.eclipse.e4.ui.workbench.renderers.swt.cocoa" bindingContext="_FTo_a9BjEeqAbdDfUyge1w">
-    <bindings xmi:id="_VARlcdBlEeqBz4Wf_dVfGA" keySequence="M1+W" command="_FU-cIdBjEeqAbdDfUyge1w"/>
+    <bindings xmi:id="_uztH4tnUEeqnA-H0MLBJxw" keySequence="M1+W" command="_FU-cIdBjEeqAbdDfUyge1w"/>
   </bindingTables>
   <bindingTables xmi:id="_FoLsAdBjEeqAbdDfUyge1w" bindingContext="_FoLsANBjEeqAbdDfUyge1w"/>
   <bindingTables xmi:id="_FoLsA9BjEeqAbdDfUyge1w" bindingContext="_FoLsAtBjEeqAbdDfUyge1w"/>
@@ -1670,7 +1670,7 @@
   <addons xmi:id="_FTo_dNBjEeqAbdDfUyge1w" elementId="MinMax Addon" contributorURI="platform:/plugin/org.eclipse.ui.workbench" contributionURI="bundleclass://org.eclipse.e4.ui.workbench.addons.swt/org.eclipse.e4.ui.workbench.addons.minmax.MinMaxAddon"/>
   <addons xmi:id="_FTo_ddBjEeqAbdDfUyge1w" elementId="org.eclipse.ui.workbench.addon.0" contributorURI="platform:/plugin/org.eclipse.ui.workbench" contributionURI="bundleclass://org.eclipse.e4.ui.workbench/org.eclipse.e4.ui.internal.workbench.addons.HandlerProcessingAddon"/>
   <addons xmi:id="_FTt34NBjEeqAbdDfUyge1w" elementId="SplitterAddon" contributionURI="bundleclass://org.eclipse.e4.ui.workbench.addons.swt/org.eclipse.e4.ui.workbench.addons.splitteraddon.SplitterAddon"/>
-  <addons xmi:id="_VAIbgdBlEeqBz4Wf_dVfGA" elementId="org.eclipse.ui.ide.addon.0" contributionURI="bundleclass://org.eclipse.ui.ide/org.eclipse.ui.internal.ide.addons.SaveAllDirtyPartsAddon"/>
+  <addons xmi:id="_IYS0IKimEeS11vbz3f9ezw" elementId="org.eclipse.ui.ide.addon.0" contributorURI="platform:/plugin/org.eclipse.ui.ide" contributionURI="bundleclass://org.eclipse.ui.ide/org.eclipse.ui.internal.ide.addons.SaveAllDirtyPartsAddon"/>
   <addons xmi:id="_dz0JgGOlEeSMMaPQU2nlzw" elementId="org.eclipse.ui.ide.application.addon.0" contributorURI="platform:/plugin/org.eclipse.ui.ide.application" contributionURI="bundleclass://org.eclipse.ui.ide.application/org.eclipse.ui.internal.ide.application.addons.ModelCleanupAddon"/>
   <addons xmi:id="_FU8m8NBjEeqAbdDfUyge1w" elementId="org.eclipse.e4.ui.workbench.renderers.swt.cocoa.CocoaUIHandler" contributionURI="bundleclass://org.eclipse.e4.ui.workbench.renderers.swt/org.eclipse.e4.ui.workbench.renderers.swt.cocoa.CocoaUIHandler"/>
   <categories xmi:id="_FT8hYNBjEeqAbdDfUyge1w" elementId="org.eclipse.team.ui.category.team" name="Team" description="Actions that apply when working with a Team"/>

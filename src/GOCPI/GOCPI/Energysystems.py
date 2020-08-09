@@ -6,11 +6,6 @@ class Energy_Systems:
     """ 
     Energy Systems are a set of user defined systems which includes 
     all of the sets and parameters necessary.
-    
-    Attributes:
-    
-    
-    TODO: Populate with energy sets when necessary
             
     """
     def __init__(self, year, region,emission,technology,fuel,timeslice,mode_of_operation,storage,daytype,season,dailytimebracket):
@@ -18,10 +13,8 @@ class Energy_Systems:
 
         Args:
             Sets:
-                YEAR = Set of Years
-                REGION = Set of Regions
-            Parameters:
-                ADD
+                year: Set of Years
+                region: Set of Regions
         """
         self.year = year
         self.region = region
@@ -153,6 +146,7 @@ class Energy_Systems:
         """Function create the GOCPI OseMOSYS Energy Systems Data File necessary for optimisation
         
         Args: 
+            file_location: 
             Defaults_dictionary: An array of default values for the Energy System parameters. It's important the order of these
                                  parameters are preserved.
         
