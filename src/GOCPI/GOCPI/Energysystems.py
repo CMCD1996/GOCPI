@@ -1,14 +1,17 @@
 import os
 import numpy as np
 import pandas as pd
+
+
 class Energy_Systems:
-    
     """ 
     Energy Systems are a set of user defined systems which includes 
     all of the sets and parameters necessary.
             
     """
-    def __init__(self, year, region,emission,technology,fuel,timeslice,mode_of_operation,storage,daytype,season,dailytimebracket):
+    def __init__(self, year, region, emission, technology, fuel, timeslice,
+                 mode_of_operation, storage, daytype, season,
+                 dailytimebracket):
         """ Function to create complete energy system set to prepare datafile, as per the established model.
 
         Args:
@@ -30,9 +33,9 @@ class Energy_Systems:
 
         ly = len(self.year)
         lr = len(self.region)
-        le = len(self.emission) 
-        lt = len(self.technology) 
-        lf = len(self.fuel) 
+        le = len(self.emission)
+        lt = len(self.technology)
+        lf = len(self.fuel)
         ll = len(self.timeslice)
         lm = len(self.mode_of_operation)
         ls = len(self.storage)
@@ -48,64 +51,64 @@ class Energy_Systems:
         self.ll = ll
         self.lm = lm
         self.ls = ls
-        self.lld = lld 
+        self.lld = lld
         self.lls = lls
         self.llh = llh
 
-        self.YearSplit = np.ones((ll,ly))
+        self.YearSplit = np.ones((ll, ly))
         self.DiscountRate = np.ones((lr))
-        self.DaySplit = np.ones((llh,ly))
-        self.Conversionls = np.ones((ll,lls))
-        self.Conversionld = np.ones((ll,lld))
-        self.Conversionlh = np.ones((ll,llh))
-        self.DaysInDayType = np.ones((lls,lld,ly))
-        self.TradeRoute = np.ones((lr,lr,lf,ly))
+        self.DaySplit = np.ones((llh, ly))
+        self.Conversionls = np.ones((ll, lls))
+        self.Conversionld = np.ones((ll, lld))
+        self.Conversionlh = np.ones((ll, llh))
+        self.DaysInDayType = np.ones((lls, lld, ly))
+        self.TradeRoute = np.ones((lr, lr, lf, ly))
         self.DepreciationMethod = np.ones((lr))
-        self.SpecifiedAnnualDemand = np.ones((lr,lf,ly))
-        self.SpecifiedDemandProfile = np.ones((lr,lf,ll,ly))
-        self.AccumulatedAnnualDemand = np.ones((lr,lf,ly))
-        self.CapacityToActivityUnit = np.ones((lr,lt))
-        self.CapacityFactor = np.ones((lr,lt,ll,ly))
-        self.AvailabilityFactor = np.ones((lr,lt,ly))
-        self.OperationalLife = np.ones((lr,lt))
-        self.ResidualCapacity = np.ones((lr,lt,ly))
-        self.InputActivityRatio = np.ones((lr,lt,lf,lm,ly))
-        self.OutputActivityRatio = np.ones((lr,lt,lf,lm,ly))
-        self.CapitalCost = np.ones((lr,lt,ly))
-        self.VariableCost = np.ones((lr,lt,lm,ly))
-        self.FixedCost = np.ones((lr,lt,ly))
-        self.TechnologyToStorage = np.ones((lr,lt,ls,lm))
-        self.TechnologyFromStorage = np.ones((lr,lt,ls,lm))
-        self.StorageLevelStart = np.ones((lr,ls))
-        self.StorageMaxChargeRate = np.ones((lr,ls))
-        self.StorageMaxDischargeRate = np.ones((lr,ls))
-        self.MinStorageCharge = np.ones((lr,ls,ly))
-        self.OperationalLifeStorage = np.ones((lr,ls))
-        self.CapitalCostStorage = np.ones((lr,ls,ly))
-        self.ResidualStorageCapacity = np.ones((lr,ls,ly))
-        self.CapacityOfOneTechnologyUnit = np.ones((lr,lt,ly))
-        self.TotalAnnualMaxCapacity = np.ones((lr,lt,ly))
-        self.TotalAnnualMinCapacity = np.ones((lr,lt,ly))
-        self.TotalAnnualMaxCapacityInvestment = np.ones((lr,lt,ly))
-        self.TotalAnnualMinCapacityInvestment = np.ones((lr,lt,ly))
-        self.TotalTechnologyAnnualActivityLowerLimit= np.ones((lr,lt,ly))
-        self.TotalTechnologyAnnualActivityUpperLimit = np.ones((lr,lt,ly))
-        self.TotalTechnologyModelPeriodActivityUpperLimit = np.ones((lr,lt))
-        self.TotalTechnologyModelPeriodActivityLowerLimit = np.ones((lr,lt))
-        self.ReserveMarginTagTechnology = np.ones((lr,lt,ly))
-        self.ReserveMarginTagFuel = np.ones((lr,lf,ly))
-        self.ReserveMargin = np.ones((lr,ly))
-        self.RETagTechnology = np.ones((lr,lt,ly))
-        self.RETagFuel = np.ones((lr,lf,ly))
-        self.REMinProductionTarget = np.ones((lr,ly))
-        self.EmissionActivityRatio = np.ones((lr,lt,le,lm,ly))
-        self.EmissionsPenalty = np.ones((lr,le,ly))
-        self.AnnualExogenousEmission = np.ones((lr,le,ly))
-        self.AnnualEmissionLimit = np.ones((lr,le,ly))
-        self.ModelPeriodExogenousEmission = np.ones((lr,le))
-        self.ModelPeriodEmissionLimit = np.ones((lr,le))
+        self.SpecifiedAnnualDemand = np.ones((lr, lf, ly))
+        self.SpecifiedDemandProfile = np.ones((lr, lf, ll, ly))
+        self.AccumulatedAnnualDemand = np.ones((lr, lf, ly))
+        self.CapacityToActivityUnit = np.ones((lr, lt))
+        self.CapacityFactor = np.ones((lr, lt, ll, ly))
+        self.AvailabilityFactor = np.ones((lr, lt, ly))
+        self.OperationalLife = np.ones((lr, lt))
+        self.ResidualCapacity = np.ones((lr, lt, ly))
+        self.InputActivityRatio = np.ones((lr, lt, lf, lm, ly))
+        self.OutputActivityRatio = np.ones((lr, lt, lf, lm, ly))
+        self.CapitalCost = np.ones((lr, lt, ly))
+        self.VariableCost = np.ones((lr, lt, lm, ly))
+        self.FixedCost = np.ones((lr, lt, ly))
+        self.TechnologyToStorage = np.ones((lr, lt, ls, lm))
+        self.TechnologyFromStorage = np.ones((lr, lt, ls, lm))
+        self.StorageLevelStart = np.ones((lr, ls))
+        self.StorageMaxChargeRate = np.ones((lr, ls))
+        self.StorageMaxDischargeRate = np.ones((lr, ls))
+        self.MinStorageCharge = np.ones((lr, ls, ly))
+        self.OperationalLifeStorage = np.ones((lr, ls))
+        self.CapitalCostStorage = np.ones((lr, ls, ly))
+        self.ResidualStorageCapacity = np.ones((lr, ls, ly))
+        self.CapacityOfOneTechnologyUnit = np.ones((lr, lt, ly))
+        self.TotalAnnualMaxCapacity = np.ones((lr, lt, ly))
+        self.TotalAnnualMinCapacity = np.ones((lr, lt, ly))
+        self.TotalAnnualMaxCapacityInvestment = np.ones((lr, lt, ly))
+        self.TotalAnnualMinCapacityInvestment = np.ones((lr, lt, ly))
+        self.TotalTechnologyAnnualActivityLowerLimit = np.ones((lr, lt, ly))
+        self.TotalTechnologyAnnualActivityUpperLimit = np.ones((lr, lt, ly))
+        self.TotalTechnologyModelPeriodActivityUpperLimit = np.ones((lr, lt))
+        self.TotalTechnologyModelPeriodActivityLowerLimit = np.ones((lr, lt))
+        self.ReserveMarginTagTechnology = np.ones((lr, lt, ly))
+        self.ReserveMarginTagFuel = np.ones((lr, lf, ly))
+        self.ReserveMargin = np.ones((lr, ly))
+        self.RETagTechnology = np.ones((lr, lt, ly))
+        self.RETagFuel = np.ones((lr, lf, ly))
+        self.REMinProductionTarget = np.ones((lr, ly))
+        self.EmissionActivityRatio = np.ones((lr, lt, le, lm, ly))
+        self.EmissionsPenalty = np.ones((lr, le, ly))
+        self.AnnualExogenousEmission = np.ones((lr, le, ly))
+        self.AnnualEmissionLimit = np.ones((lr, le, ly))
+        self.ModelPeriodExogenousEmission = np.ones((lr, le))
+        self.ModelPeriodEmissionLimit = np.ones((lr, le))
 
-    def SetParameters(self,parameters):
+    def SetParameters(self, parameters):
         """Sets the parameters for the functions
         
         Args: 
@@ -116,7 +119,8 @@ class Energy_Systems:
             The loaded in parameters and sets
     
         """
-    def CreateModelFile(self,root, file):
+
+    def CreateModelFile(self, root, file):
         """Creates the model file necessary for the project to run
         
         Args: 
@@ -125,24 +129,23 @@ class Energy_Systems:
         Returns: 
             The loaded in parameters and sets
     
-        """ 
+        """
         # Finds the file
         # data = Find_File(data_file,model_file)
-        model_location = os.path.join(root,file)
-        df = pd.read_excel(model_location,sheet_name = 'Model')
+        model_location = os.path.join(root, file)
+        df = pd.read_excel(model_location, sheet_name='Model')
         # Creates a new dataframe based on the variables on the Include column values
         df_Include = df[df.Include == 'Yes']
         df_model = df_Include[['Name']].copy()
 
         # Creates a file location and write the model to a text file
         model_txt = 'GOCPI_OseMOSYS_Model.txt'
-        model_location = os.path.join(root,model_txt)
+        model_location = os.path.join(root, model_txt)
 
         # Saves the user defined model to a text file
-        np.savetxt(model_location,df_model.values,fmt = '%s')
+        np.savetxt(model_location, df_model.values, fmt='%s')
 
-
-    def CreateDataFile(self,file_location,defaults_dictionary):
+    def CreateDataFile(self, file_location, defaults_dictionary):
         """Function create the GOCPI OseMOSYS Energy Systems Data File necessary for optimisation
         
         Args: 
@@ -155,10 +158,11 @@ class Energy_Systems:
     
         """
         # Opens the file for write the data
-        with open(file_location,'w') as f:
+        with open(file_location, 'w') as f:
             # Sets up the preamble for the data file
             f.write('# GOCPI Energy System Data File\n')
-            f.write('# Insert instructions when the file is running properly\n')
+            f.write(
+                '# Insert instructions when the file is running properly\n')
             f.write('#\n')
             # Sets
             f.write('# Sets\n#\n')
@@ -180,19 +184,19 @@ class Energy_Systems:
             # timeslice
             set_string = ' '.join(self.timeslice)
             f.write('set TIMESLICE\t:=\t{0};\n'.format(set_string))
-            # mode_of_operation 
+            # mode_of_operation
             set_string = ' '.join(self.mode_of_operation)
             f.write('set MODE_OF_OPERATION\t:=\t{0};\n'.format(set_string))
-            # storage 
+            # storage
             set_string = ' '.join(self.storage)
             f.write('set STORAGE\t:=\t{0};\n'.format(set_string))
             # daytype
             set_string = ' '.join(self.daytype)
             f.write('set DAYTYPE\t:=\t{0};\n'.format(set_string))
-            # season 
+            # season
             set_string = ' '.join(self.season)
             f.write('set SEASON\t:=\t{0};\n'.format(set_string))
-            # dailytimebracket 
+            # dailytimebracket
             set_string = ' '.join(self.dailytimebracket)
             f.write('set DAILYTIMEBRACKET\t:=\t{0};\n'.format(set_string))
             f.write('#\n')
@@ -208,28 +212,29 @@ class Energy_Systems:
             array = array.T
             lt = array.tolist()
             # Creates 2D matrix for this value
-            mat = self.YearSplit[:,:]
+            mat = self.YearSplit[:, :]
             # Converts combined matrix to list and combines lists
             matlist = mat.tolist()
             #Combines the two lists
-            combined_list = list(zip(lt,matlist))
-            # Writes index specific parameter values to the text files 
-            f.write("param\t{0}\t:{1}:=\n".format(param,column_string))
+            combined_list = list(zip(lt, matlist))
+            # Writes index specific parameter values to the text files
+            f.write("param\t{0}\t:{1}:=\n".format(param, column_string))
             for line in combined_list:
                 combinedflat = ''.join(str(line))
-                combinedflat = combinedflat.replace('[','')
-                combinedflat = combinedflat.replace(']','')
-                combinedflat = combinedflat.replace("'",'')
-                combinedflat = combinedflat.replace(",",'')
-                combinedflat = combinedflat.replace("(",'')
-                combinedflat = combinedflat.replace(")",'')
+                combinedflat = combinedflat.replace('[', '')
+                combinedflat = combinedflat.replace(']', '')
+                combinedflat = combinedflat.replace("'", '')
+                combinedflat = combinedflat.replace(",", '')
+                combinedflat = combinedflat.replace("(", '')
+                combinedflat = combinedflat.replace(")", '')
                 f.write("{0}\n".format(combinedflat))
             f.write(';\n')
 
             # DiscountRate = np.zeros((lr))
             param = 'DiscountRate'
             f.write('#\n')
-            f.write("param\t{0}\tdefault\t{1}:=\n".format(param,defaults_dictionary[param]))
+            f.write("param\t{0}\tdefault\t{1}:=\n".format(
+                param, defaults_dictionary[param]))
             # Converts maxtrix rows to list
             array = np.array(self.region)
             array = array.T
@@ -239,16 +244,16 @@ class Energy_Systems:
             # Converts combined matrix to list and combines lists
             matlist = mat.tolist()
             #Combines the two lists
-            combined_list = list(zip(lt,matlist))
-            # Writes index specific parameter values to the text files 
+            combined_list = list(zip(lt, matlist))
+            # Writes index specific parameter values to the text files
             for line in combined_list:
                 combinedflat = ''.join(str(line))
-                combinedflat = combinedflat.replace('[','')
-                combinedflat = combinedflat.replace(']','')
-                combinedflat = combinedflat.replace("'",'')
-                combinedflat = combinedflat.replace(",",'')
-                combinedflat = combinedflat.replace("(",'')
-                combinedflat = combinedflat.replace(")",'')
+                combinedflat = combinedflat.replace('[', '')
+                combinedflat = combinedflat.replace(']', '')
+                combinedflat = combinedflat.replace("'", '')
+                combinedflat = combinedflat.replace(",", '')
+                combinedflat = combinedflat.replace("(", '')
+                combinedflat = combinedflat.replace(")", '')
                 f.write("{0}\n".format(combinedflat))
             f.write(';\n')
 
@@ -262,105 +267,105 @@ class Energy_Systems:
             array = array.T
             lt = array.tolist()
             # Creates 2D matrix for this value
-            mat = self.DaySplit[:,:]
+            mat = self.DaySplit[:, :]
             # Converts combined matrix to list and combines lists
             matlist = mat.tolist()
             #Combines the two lists
-            combined_list = list(zip(lt,matlist))
-            # Writes index specific parameter values to the text files 
-            f.write("param\t{0}\t:{1}:=\n".format(param,column_string))
+            combined_list = list(zip(lt, matlist))
+            # Writes index specific parameter values to the text files
+            f.write("param\t{0}\t:{1}:=\n".format(param, column_string))
             for line in combined_list:
                 combinedflat = ''.join(str(line))
-                combinedflat = combinedflat.replace('[','')
-                combinedflat = combinedflat.replace(']','')
-                combinedflat = combinedflat.replace("'",'')
-                combinedflat = combinedflat.replace(",",'')
-                combinedflat = combinedflat.replace("(",'')
-                combinedflat = combinedflat.replace(")",'')
+                combinedflat = combinedflat.replace('[', '')
+                combinedflat = combinedflat.replace(']', '')
+                combinedflat = combinedflat.replace("'", '')
+                combinedflat = combinedflat.replace(",", '')
+                combinedflat = combinedflat.replace("(", '')
+                combinedflat = combinedflat.replace(")", '')
                 f.write("{0}\n".format(combinedflat))
             f.write(';\n')
 
             # Conversionls = np.zeros((ll,ls))
-            param = 'Conversionls' # Change this line
+            param = 'Conversionls'  # Change this line
             f.write('#\n')
-            columns = self.season # Change this line
+            columns = self.season  # Change this line
             column_string = ' '.join(columns)
             # Converts maxtrix rows to list
-            array = np.array(self.timeslice) # Change this line
+            array = np.array(self.timeslice)  # Change this line
             array = array.T
             lt = array.tolist()
             # Creates 2D matrix for this value
-            mat = self.Conversionls[:,:] # Change this line
+            mat = self.Conversionls[:, :]  # Change this line
             # Converts combined matrix to list and combines lists
             matlist = mat.tolist()
             #Combines the two lists
-            combined_list = list(zip(lt,matlist))
-            # Writes index specific parameter values to the text files 
-            f.write("param\t{0}\t:{1}:=\n".format(param,column_string))
+            combined_list = list(zip(lt, matlist))
+            # Writes index specific parameter values to the text files
+            f.write("param\t{0}\t:{1}:=\n".format(param, column_string))
             for line in combined_list:
                 combinedflat = ''.join(str(line))
-                combinedflat = combinedflat.replace('[','')
-                combinedflat = combinedflat.replace(']','')
-                combinedflat = combinedflat.replace("'",'')
-                combinedflat = combinedflat.replace(",",'')
-                combinedflat = combinedflat.replace("(",'')
-                combinedflat = combinedflat.replace(")",'')
+                combinedflat = combinedflat.replace('[', '')
+                combinedflat = combinedflat.replace(']', '')
+                combinedflat = combinedflat.replace("'", '')
+                combinedflat = combinedflat.replace(",", '')
+                combinedflat = combinedflat.replace("(", '')
+                combinedflat = combinedflat.replace(")", '')
                 f.write("{0}\n".format(combinedflat))
             f.write(';\n')
 
             # Conversionld = np.zeros((ll,lld))
-            param = 'Conversionld' # Change this line
+            param = 'Conversionld'  # Change this line
             f.write('#\n')
-            columns = self.daytype # Change this line
+            columns = self.daytype  # Change this line
             column_string = ' '.join(columns)
             # Converts maxtrix rows to list
-            array = np.array(self.timeslice) # Change this line
+            array = np.array(self.timeslice)  # Change this line
             array = array.T
             lt = array.tolist()
             # Creates 2D matrix for this value
-            mat = self.Conversionld[:,:] # Change this line
+            mat = self.Conversionld[:, :]  # Change this line
             # Converts combined matrix to list and combines lists
             matlist = mat.tolist()
             #Combines the two lists
-            combined_list = list(zip(lt,matlist))
-            # Writes index specific parameter values to the text files 
-            f.write("param\t{0}\t:{1}:=\n".format(param,column_string))
+            combined_list = list(zip(lt, matlist))
+            # Writes index specific parameter values to the text files
+            f.write("param\t{0}\t:{1}:=\n".format(param, column_string))
             for line in combined_list:
                 combinedflat = ''.join(str(line))
-                combinedflat = combinedflat.replace('[','')
-                combinedflat = combinedflat.replace(']','')
-                combinedflat = combinedflat.replace("'",'')
-                combinedflat = combinedflat.replace(",",'')
-                combinedflat = combinedflat.replace("(",'')
-                combinedflat = combinedflat.replace(")",'')
+                combinedflat = combinedflat.replace('[', '')
+                combinedflat = combinedflat.replace(']', '')
+                combinedflat = combinedflat.replace("'", '')
+                combinedflat = combinedflat.replace(",", '')
+                combinedflat = combinedflat.replace("(", '')
+                combinedflat = combinedflat.replace(")", '')
                 f.write("{0}\n".format(combinedflat))
             f.write(';\n')
 
             # Conversionlh = np.zeros((ll,llh))
-            param = 'Conversionlh' # Change this line
+            param = 'Conversionlh'  # Change this line
             f.write('#\n')
-            columns = self.dailytimebracket # Change this line
+            columns = self.dailytimebracket  # Change this line
             column_string = ' '.join(columns)
             # Converts maxtrix rows to list
-            array = np.array(self.timeslice) # Change this line
+            array = np.array(self.timeslice)  # Change this line
             array = array.T
             lt = array.tolist()
             # Creates 2D matrix for this value
-            mat = self.Conversionlh[:,:] # Change this line
+            mat = self.Conversionlh[:, :]  # Change this line
             # Converts combined matrix to list and combines lists
             matlist = mat.tolist()
             #Combines the two lists
-            combined_list = list(zip(lt,matlist))
-            # Writes index specific parameter values to the text files 
-            f.write("param\t{0}\t:{1}:=\n".format(param,column_string))
+            combined_list = list(zip(lt, matlist))
+            # Writes index specific parameter values to the text files
+            f.write("param\t{0}\t:{1}:=\n".format(param, column_string))
             for line in combined_list:
                 combinedflat = ''.join(str(line))
-                combinedflat = combinedflat.replace('[','')
-                combinedflat = combinedflat.replace(']','')
-                combinedflat = combinedflat.replace("'",'')
-                combinedflat = combinedflat.replace(",",'')
-                combinedflat = combinedflat.replace("(",'')
-                combinedflat = combinedflat.replace(")",'')
+                combinedflat = combinedflat.replace('[', '')
+                combinedflat = combinedflat.replace(']', '')
+                combinedflat = combinedflat.replace("'", '')
+                combinedflat = combinedflat.replace(",", '')
+                combinedflat = combinedflat.replace("(", '')
+                combinedflat = combinedflat.replace(")", '')
                 f.write("{0}\n".format(combinedflat))
             f.write(';\n')
 
@@ -368,7 +373,8 @@ class Energy_Systems:
             #Writes new line character at parameter metadata to the text file
             param = 'DaysInDayType'
             f.write('#\n')
-            f.write("param\t{0}\tdefault\t{1}:=\n".format(param,defaults_dictionary[param]))
+            f.write("param\t{0}\tdefault\t{1}:=\n".format(
+                param, defaults_dictionary[param]))
             # Writes parameter values to the text files
             for k in range(self.ly):
                 # Sets index value for format string
@@ -381,28 +387,29 @@ class Energy_Systems:
                 array = array.T
                 lt = array.tolist()
                 # Creates 2D matrix for this value
-                mat = self.DaysInDayType[:,:,k]
+                mat = self.DaysInDayType[:, :, k]
                 # Converts combined matrix to list and combines lists
                 matlist = mat.tolist()
                 #Combines the two lists
-                combined_list = list(zip(lt,matlist))
-                # Writes index specific parameter values to the text files 
-                f.write("\t[*,*,{0}]:\t{1}\t:=\n".format(y,column_string))
+                combined_list = list(zip(lt, matlist))
+                # Writes index specific parameter values to the text files
+                f.write("\t[*,*,{0}]:\t{1}\t:=\n".format(y, column_string))
                 for line in combined_list:
                     combinedflat = ''.join(str(line))
-                    combinedflat = combinedflat.replace('[','')
-                    combinedflat = combinedflat.replace(']','')
-                    combinedflat = combinedflat.replace("'",'')
-                    combinedflat = combinedflat.replace(",",'')
-                    combinedflat = combinedflat.replace("(",'')
-                    combinedflat = combinedflat.replace(")",'')
+                    combinedflat = combinedflat.replace('[', '')
+                    combinedflat = combinedflat.replace(']', '')
+                    combinedflat = combinedflat.replace("'", '')
+                    combinedflat = combinedflat.replace(",", '')
+                    combinedflat = combinedflat.replace("(", '')
+                    combinedflat = combinedflat.replace(")", '')
                     f.write("{0}\n".format(combinedflat))
             f.write(';\n')
-            
+
             # TradeRoute = np.zeros((lr,lr,lf,ly))
-            param = 'TradeRoute' # Change this line
+            param = 'TradeRoute'  # Change this line
             f.write('#\n')
-            f.write("param\t{0}\tdefault\t{1}:=\n".format(param,defaults_dictionary[param]))
+            f.write("param\t{0}\tdefault\t{1}:=\n".format(
+                param, defaults_dictionary[param]))
             # Writes parameter values to the text files
             for j in range(self.lf):
                 # Sets index value for format string
@@ -418,27 +425,29 @@ class Energy_Systems:
                     array = array.T
                     lt = array.tolist()
                     # Creates 2D matrix for this value
-                    mat = self.TradeRoute[:,:,j,k]
+                    mat = self.TradeRoute[:, :, j, k]
                     # Converts combined matrix to list and combines lists
                     matlist = mat.tolist()
                     #Combines the two lists
-                    combined_list = list(zip(lt,matlist))
-                    # Writes index specific parameter values to the text files 
-                    f.write("\t[*,*,{0},{1}]:\t{2}\t:=\n".format(fl,y,column_string))
+                    combined_list = list(zip(lt, matlist))
+                    # Writes index specific parameter values to the text files
+                    f.write("\t[*,*,{0},{1}]:\t{2}\t:=\n".format(
+                        fl, y, column_string))
                     for line in combined_list:
                         combinedflat = ''.join(str(line))
-                        combinedflat = combinedflat.replace('[','')
-                        combinedflat = combinedflat.replace(']','')
-                        combinedflat = combinedflat.replace("'",'')
-                        combinedflat = combinedflat.replace(",",'')
-                        combinedflat = combinedflat.replace("(",'')
-                        combinedflat = combinedflat.replace(")",'')
+                        combinedflat = combinedflat.replace('[', '')
+                        combinedflat = combinedflat.replace(']', '')
+                        combinedflat = combinedflat.replace("'", '')
+                        combinedflat = combinedflat.replace(",", '')
+                        combinedflat = combinedflat.replace("(", '')
+                        combinedflat = combinedflat.replace(")", '')
                         f.write("{0}\n".format(combinedflat))
             f.write(';\n')
             # DepreciationMethod = np.zeros((lr))
             param = 'DepreciationMethod'
             f.write('#\n')
-            f.write("param\t{0}\tdefault\t{1}:=\n".format(param,defaults_dictionary[param]))
+            f.write("param\t{0}\tdefault\t{1}:=\n".format(
+                param, defaults_dictionary[param]))
             # Converts maxtrix rows to list
             array = np.array(self.region)
             array = array.T
@@ -448,23 +457,24 @@ class Energy_Systems:
             # Converts combined matrix to list and combines lists
             matlist = mat.tolist()
             #Combines the two lists
-            combined_list = list(zip(lt,matlist))
-            # Writes index specific parameter values to the text files 
+            combined_list = list(zip(lt, matlist))
+            # Writes index specific parameter values to the text files
             for line in combined_list:
                 combinedflat = ''.join(str(line))
-                combinedflat = combinedflat.replace('[','')
-                combinedflat = combinedflat.replace(']','')
-                combinedflat = combinedflat.replace("'",'')
-                combinedflat = combinedflat.replace(",",'')
-                combinedflat = combinedflat.replace("(",'')
-                combinedflat = combinedflat.replace(")",'')
+                combinedflat = combinedflat.replace('[', '')
+                combinedflat = combinedflat.replace(']', '')
+                combinedflat = combinedflat.replace("'", '')
+                combinedflat = combinedflat.replace(",", '')
+                combinedflat = combinedflat.replace("(", '')
+                combinedflat = combinedflat.replace(")", '')
                 f.write("{0}\n".format(combinedflat))
             f.write(';\n')
 
             # SpecifiedAnnualDemand = np.zeros((lr,lf,ly))
             param = 'SpecifiedAnnualDemand'
             f.write('#\n')
-            f.write("param\t{0}\tdefault\t{1}:=\n".format(param,defaults_dictionary[param]))
+            f.write("param\t{0}\tdefault\t{1}:=\n".format(
+                param, defaults_dictionary[param]))
             # Writes parameter values to the text files
             for k in range(self.ly):
                 # Sets index value for format string
@@ -477,28 +487,29 @@ class Energy_Systems:
                 array = array.T
                 lt = array.tolist()
                 # Creates 2D matrix for this value
-                mat = self.SpecifiedAnnualDemand[:,:,k]
+                mat = self.SpecifiedAnnualDemand[:, :, k]
                 # Converts combined matrix to list and combines lists
                 matlist = mat.tolist()
                 #Combines the two lists
-                combined_list = list(zip(lt,matlist))
-                # Writes index specific parameter values to the text files 
-                f.write("\t[*,*,{0}]:\t{1}\t:=\n".format(y,column_string))
+                combined_list = list(zip(lt, matlist))
+                # Writes index specific parameter values to the text files
+                f.write("\t[*,*,{0}]:\t{1}\t:=\n".format(y, column_string))
                 for line in combined_list:
                     combinedflat = ''.join(str(line))
-                    combinedflat = combinedflat.replace('[','')
-                    combinedflat = combinedflat.replace(']','')
-                    combinedflat = combinedflat.replace("'",'')
-                    combinedflat = combinedflat.replace(",",'')
-                    combinedflat = combinedflat.replace("(",'')
-                    combinedflat = combinedflat.replace(")",'')
+                    combinedflat = combinedflat.replace('[', '')
+                    combinedflat = combinedflat.replace(']', '')
+                    combinedflat = combinedflat.replace("'", '')
+                    combinedflat = combinedflat.replace(",", '')
+                    combinedflat = combinedflat.replace("(", '')
+                    combinedflat = combinedflat.replace(")", '')
                     f.write("{0}\n".format(combinedflat))
             f.write(';\n')
 
             # SpecifiedDemandProfile = np.zeros((lr,lf,ll,ly))
-            param = 'SpecifiedDemandProfile' # Change this line
+            param = 'SpecifiedDemandProfile'  # Change this line
             f.write('#\n')
-            f.write("param\t{0}\tdefault\t{1}:=\n".format(param,defaults_dictionary[param]))
+            f.write("param\t{0}\tdefault\t{1}:=\n".format(
+                param, defaults_dictionary[param]))
             # Writes parameter values to the text files
             for j in range(self.ll):
                 # Sets index value for format string
@@ -514,28 +525,30 @@ class Energy_Systems:
                     array = array.T
                     lt = array.tolist()
                     # Creates 2D matrix for this value
-                    mat = self.SpecifiedDemandProfile[:,:,j,k]
+                    mat = self.SpecifiedDemandProfile[:, :, j, k]
                     # Converts combined matrix to list and combines lists
                     matlist = mat.tolist()
                     #Combines the two lists
-                    combined_list = list(zip(lt,matlist))
-                    # Writes index specific parameter values to the text files 
-                    f.write("\t[*,*,{0},{1}]:\t{2}\t:=\n".format(x,y,column_string))
+                    combined_list = list(zip(lt, matlist))
+                    # Writes index specific parameter values to the text files
+                    f.write("\t[*,*,{0},{1}]:\t{2}\t:=\n".format(
+                        x, y, column_string))
                     for line in combined_list:
                         combinedflat = ''.join(str(line))
-                        combinedflat = combinedflat.replace('[','')
-                        combinedflat = combinedflat.replace(']','')
-                        combinedflat = combinedflat.replace("'",'')
-                        combinedflat = combinedflat.replace(",",'')
-                        combinedflat = combinedflat.replace("(",'')
-                        combinedflat = combinedflat.replace(")",'')
+                        combinedflat = combinedflat.replace('[', '')
+                        combinedflat = combinedflat.replace(']', '')
+                        combinedflat = combinedflat.replace("'", '')
+                        combinedflat = combinedflat.replace(",", '')
+                        combinedflat = combinedflat.replace("(", '')
+                        combinedflat = combinedflat.replace(")", '')
                         f.write("{0}\n".format(combinedflat))
             f.write(';\n')
 
             # AccumulatedAnnualDemand = np.zeros((lr,lf,ly))
             param = 'AccumulatedAnnualDemand'
             f.write('#\n')
-            f.write("param\t{0}\tdefault\t{1}:=\n".format(param,defaults_dictionary[param]))
+            f.write("param\t{0}\tdefault\t{1}:=\n".format(
+                param, defaults_dictionary[param]))
             # Writes parameter values to the text files
             for k in range(self.ly):
                 # Sets index value for format string
@@ -548,56 +561,57 @@ class Energy_Systems:
                 array = array.T
                 lt = array.tolist()
                 # Creates 2D matrix for this value
-                mat = self.SpecifiedAnnualDemand[:,:,k]
+                mat = self.SpecifiedAnnualDemand[:, :, k]
                 # Converts combined matrix to list and combines lists
                 matlist = mat.tolist()
                 #Combines the two lists
-                combined_list = list(zip(lt,matlist))
-                # Writes index specific parameter values to the text files 
-                f.write("\t[*,*,{0}]:\t{1}\t:=\n".format(y,column_string))
+                combined_list = list(zip(lt, matlist))
+                # Writes index specific parameter values to the text files
+                f.write("\t[*,*,{0}]:\t{1}\t:=\n".format(y, column_string))
                 for line in combined_list:
                     combinedflat = ''.join(str(line))
-                    combinedflat = combinedflat.replace('[','')
-                    combinedflat = combinedflat.replace(']','')
-                    combinedflat = combinedflat.replace("'",'')
-                    combinedflat = combinedflat.replace(",",'')
-                    combinedflat = combinedflat.replace("(",'')
-                    combinedflat = combinedflat.replace(")",'')
+                    combinedflat = combinedflat.replace('[', '')
+                    combinedflat = combinedflat.replace(']', '')
+                    combinedflat = combinedflat.replace("'", '')
+                    combinedflat = combinedflat.replace(",", '')
+                    combinedflat = combinedflat.replace("(", '')
+                    combinedflat = combinedflat.replace(")", '')
                     f.write("{0}\n".format(combinedflat))
             f.write(';\n')
 
             # CapacityToActivityUnit = np.zeros((lr,lt))
-            param = 'CapacityToActivityUnit' # Change this line
+            param = 'CapacityToActivityUnit'  # Change this line
             f.write('#\n')
-            columns = self.technology # Change this line
+            columns = self.technology  # Change this line
             column_string = ' '.join(columns)
             # Converts maxtrix rows to list
-            array = np.array(self.region) # Change this line
+            array = np.array(self.region)  # Change this line
             array = array.T
             lt = array.tolist()
             # Creates 2D matrix for this value
-            mat = self.CapacityToActivityUnit[:,:] # Change this line
+            mat = self.CapacityToActivityUnit[:, :]  # Change this line
             # Converts combined matrix to list and combines lists
             matlist = mat.tolist()
             #Combines the two lists
-            combined_list = list(zip(lt,matlist))
-            # Writes index specific parameter values to the text files 
-            f.write("param\t{0}\t:{1}:=\n".format(param,column_string))
+            combined_list = list(zip(lt, matlist))
+            # Writes index specific parameter values to the text files
+            f.write("param\t{0}\t:{1}:=\n".format(param, column_string))
             for line in combined_list:
                 combinedflat = ''.join(str(line))
-                combinedflat = combinedflat.replace('[','')
-                combinedflat = combinedflat.replace(']','')
-                combinedflat = combinedflat.replace("'",'')
-                combinedflat = combinedflat.replace(",",'')
-                combinedflat = combinedflat.replace("(",'')
-                combinedflat = combinedflat.replace(")",'')
+                combinedflat = combinedflat.replace('[', '')
+                combinedflat = combinedflat.replace(']', '')
+                combinedflat = combinedflat.replace("'", '')
+                combinedflat = combinedflat.replace(",", '')
+                combinedflat = combinedflat.replace("(", '')
+                combinedflat = combinedflat.replace(")", '')
                 f.write("{0}\n".format(combinedflat))
             f.write(';\n')
 
             # CapacityFactor = np.zeros((lr,lt,ll,ly))
-            param = 'CapacityFactor' # Change this line
+            param = 'CapacityFactor'  # Change this line
             f.write('#\n')
-            f.write("param\t{0}\tdefault\t{1}:=\n".format(param,defaults_dictionary[param]))
+            f.write("param\t{0}\tdefault\t{1}:=\n".format(
+                param, defaults_dictionary[param]))
             # Writes parameter values to the text files
             for j in range(self.ll):
                 # Sets index value for format string
@@ -613,28 +627,30 @@ class Energy_Systems:
                     array = array.T
                     lt = array.tolist()
                     # Creates 2D matrix for this value
-                    mat = self.CapacityFactor[:,:,j,k]
+                    mat = self.CapacityFactor[:, :, j, k]
                     # Converts combined matrix to list and combines lists
                     matlist = mat.tolist()
                     #Combines the two lists
-                    combined_list = list(zip(lt,matlist))
-                    # Writes index specific parameter values to the text files 
-                    f.write("\t[*,*,{0},{1}]:\t{2}\t:=\n".format(x,y,column_string))
+                    combined_list = list(zip(lt, matlist))
+                    # Writes index specific parameter values to the text files
+                    f.write("\t[*,*,{0},{1}]:\t{2}\t:=\n".format(
+                        x, y, column_string))
                     for line in combined_list:
                         combinedflat = ''.join(str(line))
-                        combinedflat = combinedflat.replace('[','')
-                        combinedflat = combinedflat.replace(']','')
-                        combinedflat = combinedflat.replace("'",'')
-                        combinedflat = combinedflat.replace(",",'')
-                        combinedflat = combinedflat.replace("(",'')
-                        combinedflat = combinedflat.replace(")",'')
+                        combinedflat = combinedflat.replace('[', '')
+                        combinedflat = combinedflat.replace(']', '')
+                        combinedflat = combinedflat.replace("'", '')
+                        combinedflat = combinedflat.replace(",", '')
+                        combinedflat = combinedflat.replace("(", '')
+                        combinedflat = combinedflat.replace(")", '')
                         f.write("{0}\n".format(combinedflat))
             f.write(';\n')
-            
+
             # AvailabilityFactor = np.zeros((lr,lt,ly))
             param = 'AvailabilityFactor'
             f.write('#\n')
-            f.write("param\t{0}\tdefault\t{1}:=\n".format(param,defaults_dictionary[param]))
+            f.write("param\t{0}\tdefault\t{1}:=\n".format(
+                param, defaults_dictionary[param]))
             # Writes parameter values to the text files
             for k in range(self.ly):
                 # Sets index value for format string
@@ -647,56 +663,57 @@ class Energy_Systems:
                 array = array.T
                 lt = array.tolist()
                 # Creates 2D matrix for this value
-                mat = self.AvailabilityFactor[:,:,k]
+                mat = self.AvailabilityFactor[:, :, k]
                 # Converts combined matrix to list and combines lists
                 matlist = mat.tolist()
                 #Combines the two lists
-                combined_list = list(zip(lt,matlist))
-                # Writes index specific parameter values to the text files 
-                f.write("\t[*,*,{0}]:\t{1}\t:=\n".format(y,column_string))
+                combined_list = list(zip(lt, matlist))
+                # Writes index specific parameter values to the text files
+                f.write("\t[*,*,{0}]:\t{1}\t:=\n".format(y, column_string))
                 for line in combined_list:
                     combinedflat = ''.join(str(line))
-                    combinedflat = combinedflat.replace('[','')
-                    combinedflat = combinedflat.replace(']','')
-                    combinedflat = combinedflat.replace("'",'')
-                    combinedflat = combinedflat.replace(",",'')
-                    combinedflat = combinedflat.replace("(",'')
-                    combinedflat = combinedflat.replace(")",'')
+                    combinedflat = combinedflat.replace('[', '')
+                    combinedflat = combinedflat.replace(']', '')
+                    combinedflat = combinedflat.replace("'", '')
+                    combinedflat = combinedflat.replace(",", '')
+                    combinedflat = combinedflat.replace("(", '')
+                    combinedflat = combinedflat.replace(")", '')
                     f.write("{0}\n".format(combinedflat))
             f.write(';\n')
 
             # OperationalLife = np.zeros((lr,lt))
-            param = 'OperationalLife' # Change this line
+            param = 'OperationalLife'  # Change this line
             f.write('#\n')
-            columns = self.technology # Change this line
+            columns = self.technology  # Change this line
             column_string = ' '.join(columns)
             # Converts maxtrix rows to list
-            array = np.array(self.region) # Change this line
+            array = np.array(self.region)  # Change this line
             array = array.T
             lt = array.tolist()
             # Creates 2D matrix for this value
-            mat = self.OperationalLife[:,:] # Change this line
+            mat = self.OperationalLife[:, :]  # Change this line
             # Converts combined matrix to list and combines lists
             matlist = mat.tolist()
             #Combines the two lists
-            combined_list = list(zip(lt,matlist))
-            # Writes index specific parameter values to the text files 
-            f.write("param\t{0}\t:{1}:=\n".format(param,column_string))
+            combined_list = list(zip(lt, matlist))
+            # Writes index specific parameter values to the text files
+            f.write("param\t{0}\t:{1}:=\n".format(param, column_string))
             for line in combined_list:
                 combinedflat = ''.join(str(line))
-                combinedflat = combinedflat.replace('[','')
-                combinedflat = combinedflat.replace(']','')
-                combinedflat = combinedflat.replace("'",'')
-                combinedflat = combinedflat.replace(",",'')
-                combinedflat = combinedflat.replace("(",'')
-                combinedflat = combinedflat.replace(")",'')
+                combinedflat = combinedflat.replace('[', '')
+                combinedflat = combinedflat.replace(']', '')
+                combinedflat = combinedflat.replace("'", '')
+                combinedflat = combinedflat.replace(",", '')
+                combinedflat = combinedflat.replace("(", '')
+                combinedflat = combinedflat.replace(")", '')
                 f.write("{0}\n".format(combinedflat))
             f.write(';\n')
 
             # ResidualCapacity = np.zeros((lr,lt,ly))
             param = 'ResidualCapacity'
             f.write('#\n')
-            f.write("param\t{0}\tdefault\t{1}:=\n".format(param,defaults_dictionary[param]))
+            f.write("param\t{0}\tdefault\t{1}:=\n".format(
+                param, defaults_dictionary[param]))
             # Writes parameter values to the text files
             for k in range(self.ly):
                 # Sets index value for format string
@@ -709,32 +726,33 @@ class Energy_Systems:
                 array = array.T
                 lt = array.tolist()
                 # Creates 2D matrix for this value
-                mat = self.ResidualCapacity[:,:,k]
+                mat = self.ResidualCapacity[:, :, k]
                 # Converts combined matrix to list and combines lists
                 matlist = mat.tolist()
                 #Combines the two lists
-                combined_list = list(zip(lt,matlist))
-                # Writes index specific parameter values to the text files 
-                f.write("\t[*,*,{0}]:\t{1}\t:=\n".format(y,column_string))
+                combined_list = list(zip(lt, matlist))
+                # Writes index specific parameter values to the text files
+                f.write("\t[*,*,{0}]:\t{1}\t:=\n".format(y, column_string))
                 for line in combined_list:
                     combinedflat = ''.join(str(line))
-                    combinedflat = combinedflat.replace('[','')
-                    combinedflat = combinedflat.replace(']','')
-                    combinedflat = combinedflat.replace("'",'')
-                    combinedflat = combinedflat.replace(",",'')
-                    combinedflat = combinedflat.replace("(",'')
-                    combinedflat = combinedflat.replace(")",'')
+                    combinedflat = combinedflat.replace('[', '')
+                    combinedflat = combinedflat.replace(']', '')
+                    combinedflat = combinedflat.replace("'", '')
+                    combinedflat = combinedflat.replace(",", '')
+                    combinedflat = combinedflat.replace("(", '')
+                    combinedflat = combinedflat.replace(")", '')
                     f.write("{0}\n".format(combinedflat))
             f.write(';\n')
-            
+
             # InputActivityRatio = np.zeros((lr,lt,lf,lm,ly))
-            param = 'InputActivityRatio' # Change this line
+            param = 'InputActivityRatio'  # Change this line
             f.write('#\n')
-            f.write("param\t{0}\tdefault\t{1}:=\n".format(param,defaults_dictionary[param]))
+            f.write("param\t{0}\tdefault\t{1}:=\n".format(
+                param, defaults_dictionary[param]))
             # Writes parameter values to the text files
-            for i in range(self.lf): # Change loops if you need
+            for i in range(self.lf):  # Change loops if you need
                 # Sets index value for format string
-                x = self.fuel[i] 
+                x = self.fuel[i]
                 for j in range(self.lm):
                     # Sets index value for format string
                     y = self.mode_of_operation[j]
@@ -749,32 +767,34 @@ class Energy_Systems:
                         array = array.T
                         lt = array.tolist()
                         # Creates 2D matrix for this value
-                        mat = self.InputActivityRatio[:,:,i,j,k]
+                        mat = self.InputActivityRatio[:, :, i, j, k]
                         # Converts combined matrix to list and combines lists
                         matlist = mat.tolist()
                         #Combines the two lists
-                        combined_list = list(zip(lt,matlist))
-                        # Writes index specific parameter values to the text files 
-                        f.write("\t[*,*,{0},{1},{2}]:\t{3}\t:=\n".format(x,y,z,column_string))
+                        combined_list = list(zip(lt, matlist))
+                        # Writes index specific parameter values to the text files
+                        f.write("\t[*,*,{0},{1},{2}]:\t{3}\t:=\n".format(
+                            x, y, z, column_string))
                         for line in combined_list:
                             combinedflat = ''.join(str(line))
-                            combinedflat = combinedflat.replace('[','')
-                            combinedflat = combinedflat.replace(']','')
-                            combinedflat = combinedflat.replace("'",'')
-                            combinedflat = combinedflat.replace(",",'')
-                            combinedflat = combinedflat.replace("(",'')
-                            combinedflat = combinedflat.replace(")",'')
+                            combinedflat = combinedflat.replace('[', '')
+                            combinedflat = combinedflat.replace(']', '')
+                            combinedflat = combinedflat.replace("'", '')
+                            combinedflat = combinedflat.replace(",", '')
+                            combinedflat = combinedflat.replace("(", '')
+                            combinedflat = combinedflat.replace(")", '')
                             f.write("{0}\n".format(combinedflat))
             f.write(';\n')
 
             # OutputActivityRatio = np.zeros((lr,lt,lf,lm,ly))
-            param = 'OutputActivityRatio' # Change this line
+            param = 'OutputActivityRatio'  # Change this line
             f.write('#\n')
-            f.write("param\t{0}\tdefault\t{1}:=\n".format(param,defaults_dictionary[param]))
+            f.write("param\t{0}\tdefault\t{1}:=\n".format(
+                param, defaults_dictionary[param]))
             # Writes parameter values to the text files
-            for i in range(self.lf): # Change loops if you need
+            for i in range(self.lf):  # Change loops if you need
                 # Sets index value for format string
-                x = self.fuel[i] 
+                x = self.fuel[i]
                 for j in range(self.lm):
                     # Sets index value for format string
                     y = self.mode_of_operation[j]
@@ -789,28 +809,30 @@ class Energy_Systems:
                         array = array.T
                         lt = array.tolist()
                         # Creates 2D matrix for this value
-                        mat = self.OutputActivityRatio[:,:,i,j,k]
+                        mat = self.OutputActivityRatio[:, :, i, j, k]
                         # Converts combined matrix to list and combines lists
                         matlist = mat.tolist()
                         #Combines the two lists
-                        combined_list = list(zip(lt,matlist))
-                        # Writes index specific parameter values to the text files 
-                        f.write("\t[*,*,{0},{1},{2}]:\t{3}\t:=\n".format(x,y,z,column_string))
+                        combined_list = list(zip(lt, matlist))
+                        # Writes index specific parameter values to the text files
+                        f.write("\t[*,*,{0},{1},{2}]:\t{3}\t:=\n".format(
+                            x, y, z, column_string))
                         for line in combined_list:
                             combinedflat = ''.join(str(line))
-                            combinedflat = combinedflat.replace('[','')
-                            combinedflat = combinedflat.replace(']','')
-                            combinedflat = combinedflat.replace("'",'')
-                            combinedflat = combinedflat.replace(",",'')
-                            combinedflat = combinedflat.replace("(",'')
-                            combinedflat = combinedflat.replace(")",'')
+                            combinedflat = combinedflat.replace('[', '')
+                            combinedflat = combinedflat.replace(']', '')
+                            combinedflat = combinedflat.replace("'", '')
+                            combinedflat = combinedflat.replace(",", '')
+                            combinedflat = combinedflat.replace("(", '')
+                            combinedflat = combinedflat.replace(")", '')
                             f.write("{0}\n".format(combinedflat))
             f.write(';\n')
-            
+
             # CapitalCost = np.zeros((lr,lt,ly))
             param = 'CapitalCost'
             f.write('#\n')
-            f.write("param\t{0}\tdefault\t{1}:=\n".format(param,defaults_dictionary[param]))
+            f.write("param\t{0}\tdefault\t{1}:=\n".format(
+                param, defaults_dictionary[param]))
             # Writes parameter values to the text files
             for k in range(self.ly):
                 # Sets index value for format string
@@ -823,28 +845,29 @@ class Energy_Systems:
                 array = array.T
                 lt = array.tolist()
                 # Creates 2D matrix for this value
-                mat = self.CapitalCost[:,:,k]
+                mat = self.CapitalCost[:, :, k]
                 # Converts combined matrix to list and combines lists
                 matlist = mat.tolist()
                 #Combines the two lists
-                combined_list = list(zip(lt,matlist))
-                # Writes index specific parameter values to the text files 
-                f.write("\t[*,*,{0}]:\t{1}\t:=\n".format(y,column_string))
+                combined_list = list(zip(lt, matlist))
+                # Writes index specific parameter values to the text files
+                f.write("\t[*,*,{0}]:\t{1}\t:=\n".format(y, column_string))
                 for line in combined_list:
                     combinedflat = ''.join(str(line))
-                    combinedflat = combinedflat.replace('[','')
-                    combinedflat = combinedflat.replace(']','')
-                    combinedflat = combinedflat.replace("'",'')
-                    combinedflat = combinedflat.replace(",",'')
-                    combinedflat = combinedflat.replace("(",'')
-                    combinedflat = combinedflat.replace(")",'')
+                    combinedflat = combinedflat.replace('[', '')
+                    combinedflat = combinedflat.replace(']', '')
+                    combinedflat = combinedflat.replace("'", '')
+                    combinedflat = combinedflat.replace(",", '')
+                    combinedflat = combinedflat.replace("(", '')
+                    combinedflat = combinedflat.replace(")", '')
                     f.write("{0}\n".format(combinedflat))
             f.write(';\n')
 
             # VariableCost = np.zeros((lr,lt,lm,ly))
-            param = 'VariableCost' # Change this line
+            param = 'VariableCost'  # Change this line
             f.write('#\n')
-            f.write("param\t{0}\tdefault\t{1}:=\n".format(param,defaults_dictionary[param]))
+            f.write("param\t{0}\tdefault\t{1}:=\n".format(
+                param, defaults_dictionary[param]))
             # Writes parameter values to the text files
             for j in range(self.lm):
                 # Sets index value for format string
@@ -860,28 +883,30 @@ class Energy_Systems:
                     array = array.T
                     lt = array.tolist()
                     # Creates 2D matrix for this value
-                    mat = self.VariableCost[:,:,j,k]
+                    mat = self.VariableCost[:, :, j, k]
                     # Converts combined matrix to list and combines lists
                     matlist = mat.tolist()
                     #Combines the two lists
-                    combined_list = list(zip(lt,matlist))
-                    # Writes index specific parameter values to the text files 
-                    f.write("\t[*,*,{0},{1}]:\t{2}\t:=\n".format(x,y,column_string))
+                    combined_list = list(zip(lt, matlist))
+                    # Writes index specific parameter values to the text files
+                    f.write("\t[*,*,{0},{1}]:\t{2}\t:=\n".format(
+                        x, y, column_string))
                     for line in combined_list:
                         combinedflat = ''.join(str(line))
-                        combinedflat = combinedflat.replace('[','')
-                        combinedflat = combinedflat.replace(']','')
-                        combinedflat = combinedflat.replace("'",'')
-                        combinedflat = combinedflat.replace(",",'')
-                        combinedflat = combinedflat.replace("(",'')
-                        combinedflat = combinedflat.replace(")",'')
+                        combinedflat = combinedflat.replace('[', '')
+                        combinedflat = combinedflat.replace(']', '')
+                        combinedflat = combinedflat.replace("'", '')
+                        combinedflat = combinedflat.replace(",", '')
+                        combinedflat = combinedflat.replace("(", '')
+                        combinedflat = combinedflat.replace(")", '')
                         f.write("{0}\n".format(combinedflat))
             f.write(';\n')
 
             # FixedCost = np.zeros((lr,lt,ly))
             param = 'FixedCost'
             f.write('#\n')
-            f.write("param\t{0}\tdefault\t{1}:=\n".format(param,defaults_dictionary[param]))
+            f.write("param\t{0}\tdefault\t{1}:=\n".format(
+                param, defaults_dictionary[param]))
             # Writes parameter values to the text files
             for k in range(self.ly):
                 # Sets index value for format string
@@ -894,28 +919,29 @@ class Energy_Systems:
                 array = array.T
                 lt = array.tolist()
                 # Creates 2D matrix for this value
-                mat = self.FixedCost[:,:,k]
+                mat = self.FixedCost[:, :, k]
                 # Converts combined matrix to list and combines lists
                 matlist = mat.tolist()
                 #Combines the two lists
-                combined_list = list(zip(lt,matlist))
-                # Writes index specific parameter values to the text files 
-                f.write("\t[*,*,{0}]:\t{1}\t:=\n".format(y,column_string))
+                combined_list = list(zip(lt, matlist))
+                # Writes index specific parameter values to the text files
+                f.write("\t[*,*,{0}]:\t{1}\t:=\n".format(y, column_string))
                 for line in combined_list:
                     combinedflat = ''.join(str(line))
-                    combinedflat = combinedflat.replace('[','')
-                    combinedflat = combinedflat.replace(']','')
-                    combinedflat = combinedflat.replace("'",'')
-                    combinedflat = combinedflat.replace(",",'')
-                    combinedflat = combinedflat.replace("(",'')
-                    combinedflat = combinedflat.replace(")",'')
+                    combinedflat = combinedflat.replace('[', '')
+                    combinedflat = combinedflat.replace(']', '')
+                    combinedflat = combinedflat.replace("'", '')
+                    combinedflat = combinedflat.replace(",", '')
+                    combinedflat = combinedflat.replace("(", '')
+                    combinedflat = combinedflat.replace(")", '')
                     f.write("{0}\n".format(combinedflat))
             f.write(';\n')
 
             # TechnologyToStorage = np.zeros((lr,lt,ls,lm))
-            param = 'TechnologyToStorage' # Change this line
+            param = 'TechnologyToStorage'  # Change this line
             f.write('#\n')
-            f.write("param\t{0}\tdefault\t{1}:=\n".format(param,defaults_dictionary[param]))
+            f.write("param\t{0}\tdefault\t{1}:=\n".format(
+                param, defaults_dictionary[param]))
             # Writes parameter values to the text files
             for j in range(self.ls):
                 # Sets index value for format string
@@ -931,28 +957,30 @@ class Energy_Systems:
                     array = array.T
                     lt = array.tolist()
                     # Creates 2D matrix for this value
-                    mat = self.TechnologyToStorage[:,:,j,k]
+                    mat = self.TechnologyToStorage[:, :, j, k]
                     # Converts combined matrix to list and combines lists
                     matlist = mat.tolist()
                     #Combines the two lists
-                    combined_list = list(zip(lt,matlist))
-                    # Writes index specific parameter values to the text files 
-                    f.write("\t[*,*,{0},{1}]:\t{2}\t:=\n".format(x,y,column_string))
+                    combined_list = list(zip(lt, matlist))
+                    # Writes index specific parameter values to the text files
+                    f.write("\t[*,*,{0},{1}]:\t{2}\t:=\n".format(
+                        x, y, column_string))
                     for line in combined_list:
                         combinedflat = ''.join(str(line))
-                        combinedflat = combinedflat.replace('[','')
-                        combinedflat = combinedflat.replace(']','')
-                        combinedflat = combinedflat.replace("'",'')
-                        combinedflat = combinedflat.replace(",",'')
-                        combinedflat = combinedflat.replace("(",'')
-                        combinedflat = combinedflat.replace(")",'')
+                        combinedflat = combinedflat.replace('[', '')
+                        combinedflat = combinedflat.replace(']', '')
+                        combinedflat = combinedflat.replace("'", '')
+                        combinedflat = combinedflat.replace(",", '')
+                        combinedflat = combinedflat.replace("(", '')
+                        combinedflat = combinedflat.replace(")", '')
                         f.write("{0}\n".format(combinedflat))
             f.write(';\n')
 
             # TechnologyFromStorage = np.zeros((lr,lt,ls,lm))
-            param = 'TechnologyFromStorage' # Change this line
+            param = 'TechnologyFromStorage'  # Change this line
             f.write('#\n')
-            f.write("param\t{0}\tdefault\t{1}:=\n".format(param,defaults_dictionary[param]))
+            f.write("param\t{0}\tdefault\t{1}:=\n".format(
+                param, defaults_dictionary[param]))
             # Writes parameter values to the text files
             for j in range(self.ls):
                 # Sets index value for format string
@@ -968,112 +996,114 @@ class Energy_Systems:
                     array = array.T
                     lt = array.tolist()
                     # Creates 2D matrix for this value
-                    mat = self.TechnologyFromStorage[:,:,j,k]
+                    mat = self.TechnologyFromStorage[:, :, j, k]
                     # Converts combined matrix to list and combines lists
                     matlist = mat.tolist()
                     #Combines the two lists
-                    combined_list = list(zip(lt,matlist))
-                    # Writes index specific parameter values to the text files 
-                    f.write("\t[*,*,{0},{1}]:\t{2}\t:=\n".format(x,y,column_string))
+                    combined_list = list(zip(lt, matlist))
+                    # Writes index specific parameter values to the text files
+                    f.write("\t[*,*,{0},{1}]:\t{2}\t:=\n".format(
+                        x, y, column_string))
                     for line in combined_list:
                         combinedflat = ''.join(str(line))
-                        combinedflat = combinedflat.replace('[','')
-                        combinedflat = combinedflat.replace(']','')
-                        combinedflat = combinedflat.replace("'",'')
-                        combinedflat = combinedflat.replace(",",'')
-                        combinedflat = combinedflat.replace("(",'')
-                        combinedflat = combinedflat.replace(")",'')
+                        combinedflat = combinedflat.replace('[', '')
+                        combinedflat = combinedflat.replace(']', '')
+                        combinedflat = combinedflat.replace("'", '')
+                        combinedflat = combinedflat.replace(",", '')
+                        combinedflat = combinedflat.replace("(", '')
+                        combinedflat = combinedflat.replace(")", '')
                         f.write("{0}\n".format(combinedflat))
             f.write(';\n')
 
             # StorageLevelStart = np.zeros((lr,ls))
-            param = 'StorageLevelStart' # Change this line
+            param = 'StorageLevelStart'  # Change this line
             f.write('#\n')
-            columns = self.storage # Change this line
+            columns = self.storage  # Change this line
             column_string = ' '.join(columns)
             # Converts maxtrix rows to list
-            array = np.array(self.region) # Change this line
+            array = np.array(self.region)  # Change this line
             array = array.T
             lt = array.tolist()
             # Creates 2D matrix for this value
-            mat = self.StorageLevelStart[:,:] # Change this line
+            mat = self.StorageLevelStart[:, :]  # Change this line
             # Converts combined matrix to list and combines lists
             matlist = mat.tolist()
             #Combines the two lists
-            combined_list = list(zip(lt,matlist))
-            # Writes index specific parameter values to the text files 
-            f.write("param\t{0}\t:{1}:=\n".format(param,column_string))
+            combined_list = list(zip(lt, matlist))
+            # Writes index specific parameter values to the text files
+            f.write("param\t{0}\t:{1}:=\n".format(param, column_string))
             for line in combined_list:
                 combinedflat = ''.join(str(line))
-                combinedflat = combinedflat.replace('[','')
-                combinedflat = combinedflat.replace(']','')
-                combinedflat = combinedflat.replace("'",'')
-                combinedflat = combinedflat.replace(",",'')
-                combinedflat = combinedflat.replace("(",'')
-                combinedflat = combinedflat.replace(")",'')
+                combinedflat = combinedflat.replace('[', '')
+                combinedflat = combinedflat.replace(']', '')
+                combinedflat = combinedflat.replace("'", '')
+                combinedflat = combinedflat.replace(",", '')
+                combinedflat = combinedflat.replace("(", '')
+                combinedflat = combinedflat.replace(")", '')
                 f.write("{0}\n".format(combinedflat))
             f.write(';\n')
 
             # StorageMaxChargeRate = np.zeros((lr,ls))
-            param = 'StorageMaxChargeRate' # Change this line
+            param = 'StorageMaxChargeRate'  # Change this line
             f.write('#\n')
-            columns = self.storage # Change this line
+            columns = self.storage  # Change this line
             column_string = ' '.join(columns)
             # Converts maxtrix rows to list
-            array = np.array(self.region) # Change this line
+            array = np.array(self.region)  # Change this line
             array = array.T
             lt = array.tolist()
             # Creates 2D matrix for this value
-            mat = self.StorageMaxChargeRate[:,:] # Change this line
+            mat = self.StorageMaxChargeRate[:, :]  # Change this line
             # Converts combined matrix to list and combines lists
             matlist = mat.tolist()
             #Combines the two lists
-            combined_list = list(zip(lt,matlist))
-            # Writes index specific parameter values to the text files 
-            f.write("param\t{0}\t:{1}:=\n".format(param,column_string))
+            combined_list = list(zip(lt, matlist))
+            # Writes index specific parameter values to the text files
+            f.write("param\t{0}\t:{1}:=\n".format(param, column_string))
             for line in combined_list:
                 combinedflat = ''.join(str(line))
-                combinedflat = combinedflat.replace('[','')
-                combinedflat = combinedflat.replace(']','')
-                combinedflat = combinedflat.replace("'",'')
-                combinedflat = combinedflat.replace(",",'')
-                combinedflat = combinedflat.replace("(",'')
-                combinedflat = combinedflat.replace(")",'')
+                combinedflat = combinedflat.replace('[', '')
+                combinedflat = combinedflat.replace(']', '')
+                combinedflat = combinedflat.replace("'", '')
+                combinedflat = combinedflat.replace(",", '')
+                combinedflat = combinedflat.replace("(", '')
+                combinedflat = combinedflat.replace(")", '')
                 f.write("{0}\n".format(combinedflat))
             f.write(';\n')
 
             # StorageMaxDischargeRate = np.zeros((lr,ls))
-            param = 'StorageMaxDischargeRate' # Change this line
+            param = 'StorageMaxDischargeRate'  # Change this line
             f.write('#\n')
-            columns = self.storage # Change this line
+            columns = self.storage  # Change this line
             column_string = ' '.join(columns)
             # Converts maxtrix rows to list
-            array = np.array(self.region) # Change this line
+            array = np.array(self.region)  # Change this line
             array = array.T
             lt = array.tolist()
             # Creates 2D matrix for this value
-            mat = self.StorageMaxDischargeRate[:,:] # Change this line
+            mat = self.StorageMaxDischargeRate[:, :]  # Change this line
             # Converts combined matrix to list and combines lists
             matlist = mat.tolist()
             #Combines the two lists
-            combined_list = list(zip(lt,matlist))
-            # Writes index specific parameter values to the text files 
-            f.write("param\t{0}\t:{1}:=\n".format(param,column_string))
+            combined_list = list(zip(lt, matlist))
+            # Writes index specific parameter values to the text files
+            f.write("param\t{0}\t:{1}:=\n".format(param, column_string))
             for line in combined_list:
                 combinedflat = ''.join(str(line))
-                combinedflat = combinedflat.replace('[','')
-                combinedflat = combinedflat.replace(']','')
-                combinedflat = combinedflat.replace("'",'')
-                combinedflat = combinedflat.replace(",",'')
-                combinedflat = combinedflat.replace("(",'')
-                combinedflat = combinedflat.replace(")",'')
+                combinedflat = combinedflat.replace('[', '')
+                combinedflat = combinedflat.replace(']', '')
+                combinedflat = combinedflat.replace("'", '')
+                combinedflat = combinedflat.replace(",", '')
+                combinedflat = combinedflat.replace("(", '')
+                combinedflat = combinedflat.replace(")", '')
                 f.write("{0}\n".format(combinedflat))
             f.write(';\n')
 
             # MinStorageCharge = np.zeros((lr,ls,ly))
             param = 'MinStorageCharge'
             f.write('#\n')
-            f.write("param\t{0}\tdefault\t{1}:=\n".format(param,defaults_dictionary[param]))
+            f.write("param\t{0}\tdefault\t{1}:=\n".format(
+                param, defaults_dictionary[param]))
             # Writes parameter values to the text files
             for k in range(self.ly):
                 # Sets index value for format string
@@ -1086,56 +1116,57 @@ class Energy_Systems:
                 array = array.T
                 lt = array.tolist()
                 # Creates 2D matrix for this value
-                mat = self.MinStorageCharge[:,:,k]
+                mat = self.MinStorageCharge[:, :, k]
                 # Converts combined matrix to list and combines lists
                 matlist = mat.tolist()
                 #Combines the two lists
-                combined_list = list(zip(lt,matlist))
-                # Writes index specific parameter values to the text files 
-                f.write("\t[*,*,{0}]:\t{1}\t:=\n".format(y,column_string))
+                combined_list = list(zip(lt, matlist))
+                # Writes index specific parameter values to the text files
+                f.write("\t[*,*,{0}]:\t{1}\t:=\n".format(y, column_string))
                 for line in combined_list:
                     combinedflat = ''.join(str(line))
-                    combinedflat = combinedflat.replace('[','')
-                    combinedflat = combinedflat.replace(']','')
-                    combinedflat = combinedflat.replace("'",'')
-                    combinedflat = combinedflat.replace(",",'')
-                    combinedflat = combinedflat.replace("(",'')
-                    combinedflat = combinedflat.replace(")",'')
+                    combinedflat = combinedflat.replace('[', '')
+                    combinedflat = combinedflat.replace(']', '')
+                    combinedflat = combinedflat.replace("'", '')
+                    combinedflat = combinedflat.replace(",", '')
+                    combinedflat = combinedflat.replace("(", '')
+                    combinedflat = combinedflat.replace(")", '')
                     f.write("{0}\n".format(combinedflat))
             f.write(';\n')
 
             # OperationalLifeStorage = np.zeros((lr,ls))
-            param = 'OperationalLifeStorage' # Change this line
+            param = 'OperationalLifeStorage'  # Change this line
             f.write('#\n')
-            columns = self.storage # Change this line
+            columns = self.storage  # Change this line
             column_string = ' '.join(columns)
             # Converts maxtrix rows to list
-            array = np.array(self.region) # Change this line
+            array = np.array(self.region)  # Change this line
             array = array.T
             lt = array.tolist()
             # Creates 2D matrix for this value
-            mat = self.OperationalLifeStorage[:,:] # Change this line
+            mat = self.OperationalLifeStorage[:, :]  # Change this line
             # Converts combined matrix to list and combines lists
             matlist = mat.tolist()
             #Combines the two lists
-            combined_list = list(zip(lt,matlist))
-            # Writes index specific parameter values to the text files 
-            f.write("param\t{0}\t:{1}:=\n".format(param,column_string))
+            combined_list = list(zip(lt, matlist))
+            # Writes index specific parameter values to the text files
+            f.write("param\t{0}\t:{1}:=\n".format(param, column_string))
             for line in combined_list:
                 combinedflat = ''.join(str(line))
-                combinedflat = combinedflat.replace('[','')
-                combinedflat = combinedflat.replace(']','')
-                combinedflat = combinedflat.replace("'",'')
-                combinedflat = combinedflat.replace(",",'')
-                combinedflat = combinedflat.replace("(",'')
-                combinedflat = combinedflat.replace(")",'')
+                combinedflat = combinedflat.replace('[', '')
+                combinedflat = combinedflat.replace(']', '')
+                combinedflat = combinedflat.replace("'", '')
+                combinedflat = combinedflat.replace(",", '')
+                combinedflat = combinedflat.replace("(", '')
+                combinedflat = combinedflat.replace(")", '')
                 f.write("{0}\n".format(combinedflat))
             f.write(';\n')
 
             # CapitalCostStorage = np.zeros((lr,ls,ly))
             param = 'CapitalCostStorage'
             f.write('#\n')
-            f.write("param\t{0}\tdefault\t{1}:=\n".format(param,defaults_dictionary[param]))
+            f.write("param\t{0}\tdefault\t{1}:=\n".format(
+                param, defaults_dictionary[param]))
             # Writes parameter values to the text files
             for k in range(self.ly):
                 # Sets index value for format string
@@ -1148,29 +1179,29 @@ class Energy_Systems:
                 array = array.T
                 lt = array.tolist()
                 # Creates 2D matrix for this value
-                mat = self.CapitalCostStorage[:,:,k]
+                mat = self.CapitalCostStorage[:, :, k]
                 # Converts combined matrix to list and combines lists
                 matlist = mat.tolist()
                 #Combines the two lists
-                combined_list = list(zip(lt,matlist))
-                # Writes index specific parameter values to the text files 
-                f.write("\t[*,*,{0}]:\t{1}\t:=\n".format(y,column_string))
+                combined_list = list(zip(lt, matlist))
+                # Writes index specific parameter values to the text files
+                f.write("\t[*,*,{0}]:\t{1}\t:=\n".format(y, column_string))
                 for line in combined_list:
                     combinedflat = ''.join(str(line))
-                    combinedflat = combinedflat.replace('[','')
-                    combinedflat = combinedflat.replace(']','')
-                    combinedflat = combinedflat.replace("'",'')
-                    combinedflat = combinedflat.replace(",",'')
-                    combinedflat = combinedflat.replace("(",'')
-                    combinedflat = combinedflat.replace(")",'')
+                    combinedflat = combinedflat.replace('[', '')
+                    combinedflat = combinedflat.replace(']', '')
+                    combinedflat = combinedflat.replace("'", '')
+                    combinedflat = combinedflat.replace(",", '')
+                    combinedflat = combinedflat.replace("(", '')
+                    combinedflat = combinedflat.replace(")", '')
                     f.write("{0}\n".format(combinedflat))
             f.write(';\n')
-
 
             # ResidualStorageCapacity = np.zeros((lr,ls,ly))
             param = 'ResidualStorageCapacity'
             f.write('#\n')
-            f.write("param\t{0}\tdefault\t{1}:=\n".format(param,defaults_dictionary[param]))
+            f.write("param\t{0}\tdefault\t{1}:=\n".format(
+                param, defaults_dictionary[param]))
             # Writes parameter values to the text files
             for k in range(self.ly):
                 # Sets index value for format string
@@ -1183,28 +1214,29 @@ class Energy_Systems:
                 array = array.T
                 lt = array.tolist()
                 # Creates 2D matrix for this value
-                mat = self.ResidualStorageCapacity[:,:,k]
+                mat = self.ResidualStorageCapacity[:, :, k]
                 # Converts combined matrix to list and combines lists
                 matlist = mat.tolist()
                 #Combines the two lists
-                combined_list = list(zip(lt,matlist))
-                # Writes index specific parameter values to the text files 
-                f.write("\t[*,*,{0}]:\t{1}\t:=\n".format(y,column_string))
+                combined_list = list(zip(lt, matlist))
+                # Writes index specific parameter values to the text files
+                f.write("\t[*,*,{0}]:\t{1}\t:=\n".format(y, column_string))
                 for line in combined_list:
                     combinedflat = ''.join(str(line))
-                    combinedflat = combinedflat.replace('[','')
-                    combinedflat = combinedflat.replace(']','')
-                    combinedflat = combinedflat.replace("'",'')
-                    combinedflat = combinedflat.replace(",",'')
-                    combinedflat = combinedflat.replace("(",'')
-                    combinedflat = combinedflat.replace(")",'')
+                    combinedflat = combinedflat.replace('[', '')
+                    combinedflat = combinedflat.replace(']', '')
+                    combinedflat = combinedflat.replace("'", '')
+                    combinedflat = combinedflat.replace(",", '')
+                    combinedflat = combinedflat.replace("(", '')
+                    combinedflat = combinedflat.replace(")", '')
                     f.write("{0}\n".format(combinedflat))
             f.write(';\n')
 
             # CapacityOfOneTechnologyUnit = np.zeros((lr,lt,ly))
             param = 'CapacityOfOneTechnologyUnit'
             f.write('#\n')
-            f.write("param\t{0}\tdefault\t{1}:=\n".format(param,defaults_dictionary[param]))
+            f.write("param\t{0}\tdefault\t{1}:=\n".format(
+                param, defaults_dictionary[param]))
             # Writes parameter values to the text files
             for k in range(self.ly):
                 # Sets index value for format string
@@ -1217,28 +1249,29 @@ class Energy_Systems:
                 array = array.T
                 lt = array.tolist()
                 # Creates 2D matrix for this value
-                mat = self.CapacityOfOneTechnologyUnit[:,:,k]
+                mat = self.CapacityOfOneTechnologyUnit[:, :, k]
                 # Converts combined matrix to list and combines lists
                 matlist = mat.tolist()
                 #Combines the two lists
-                combined_list = list(zip(lt,matlist))
-                # Writes index specific parameter values to the text files 
-                f.write("\t[*,*,{0}]:\t{1}\t:=\n".format(y,column_string))
+                combined_list = list(zip(lt, matlist))
+                # Writes index specific parameter values to the text files
+                f.write("\t[*,*,{0}]:\t{1}\t:=\n".format(y, column_string))
                 for line in combined_list:
                     combinedflat = ''.join(str(line))
-                    combinedflat = combinedflat.replace('[','')
-                    combinedflat = combinedflat.replace(']','')
-                    combinedflat = combinedflat.replace("'",'')
-                    combinedflat = combinedflat.replace(",",'')
-                    combinedflat = combinedflat.replace("(",'')
-                    combinedflat = combinedflat.replace(")",'')
+                    combinedflat = combinedflat.replace('[', '')
+                    combinedflat = combinedflat.replace(']', '')
+                    combinedflat = combinedflat.replace("'", '')
+                    combinedflat = combinedflat.replace(",", '')
+                    combinedflat = combinedflat.replace("(", '')
+                    combinedflat = combinedflat.replace(")", '')
                     f.write("{0}\n".format(combinedflat))
             f.write(';\n')
 
             # TotalAnnualMaxCapacity = np.zeros((lr,lt,ly))
             param = 'TotalAnnualMaxCapacity'
             f.write('#\n')
-            f.write("param\t{0}\tdefault\t{1}:=\n".format(param,defaults_dictionary[param]))
+            f.write("param\t{0}\tdefault\t{1}:=\n".format(
+                param, defaults_dictionary[param]))
             # Writes parameter values to the text files
             for k in range(self.ly):
                 # Sets index value for format string
@@ -1251,28 +1284,29 @@ class Energy_Systems:
                 array = array.T
                 lt = array.tolist()
                 # Creates 2D matrix for this value
-                mat = self.TotalAnnualMaxCapacity[:,:,k]
+                mat = self.TotalAnnualMaxCapacity[:, :, k]
                 # Converts combined matrix to list and combines lists
                 matlist = mat.tolist()
                 #Combines the two lists
-                combined_list = list(zip(lt,matlist))
-                # Writes index specific parameter values to the text files 
-                f.write("\t[*,*,{0}]:\t{1}\t:=\n".format(y,column_string))
+                combined_list = list(zip(lt, matlist))
+                # Writes index specific parameter values to the text files
+                f.write("\t[*,*,{0}]:\t{1}\t:=\n".format(y, column_string))
                 for line in combined_list:
                     combinedflat = ''.join(str(line))
-                    combinedflat = combinedflat.replace('[','')
-                    combinedflat = combinedflat.replace(']','')
-                    combinedflat = combinedflat.replace("'",'')
-                    combinedflat = combinedflat.replace(",",'')
-                    combinedflat = combinedflat.replace("(",'')
-                    combinedflat = combinedflat.replace(")",'')
+                    combinedflat = combinedflat.replace('[', '')
+                    combinedflat = combinedflat.replace(']', '')
+                    combinedflat = combinedflat.replace("'", '')
+                    combinedflat = combinedflat.replace(",", '')
+                    combinedflat = combinedflat.replace("(", '')
+                    combinedflat = combinedflat.replace(")", '')
                     f.write("{0}\n".format(combinedflat))
             f.write(';\n')
-            
+
             # TotalAnnualMinCapacity = np.zeros((lr,lt,ly))
             param = 'TotalAnnualMinCapacity'
             f.write('#\n')
-            f.write("param\t{0}\tdefault\t{1}:=\n".format(param,defaults_dictionary[param]))
+            f.write("param\t{0}\tdefault\t{1}:=\n".format(
+                param, defaults_dictionary[param]))
             # Writes parameter values to the text files
             for k in range(self.ly):
                 # Sets index value for format string
@@ -1285,28 +1319,29 @@ class Energy_Systems:
                 array = array.T
                 lt = array.tolist()
                 # Creates 2D matrix for this value
-                mat = self.TotalAnnualMinCapacity[:,:,k]
+                mat = self.TotalAnnualMinCapacity[:, :, k]
                 # Converts combined matrix to list and combines lists
                 matlist = mat.tolist()
                 #Combines the two lists
-                combined_list = list(zip(lt,matlist))
-                # Writes index specific parameter values to the text files 
-                f.write("\t[*,*,{0}]:\t{1}\t:=\n".format(y,column_string))
+                combined_list = list(zip(lt, matlist))
+                # Writes index specific parameter values to the text files
+                f.write("\t[*,*,{0}]:\t{1}\t:=\n".format(y, column_string))
                 for line in combined_list:
                     combinedflat = ''.join(str(line))
-                    combinedflat = combinedflat.replace('[','')
-                    combinedflat = combinedflat.replace(']','')
-                    combinedflat = combinedflat.replace("'",'')
-                    combinedflat = combinedflat.replace(",",'')
-                    combinedflat = combinedflat.replace("(",'')
-                    combinedflat = combinedflat.replace(")",'')
+                    combinedflat = combinedflat.replace('[', '')
+                    combinedflat = combinedflat.replace(']', '')
+                    combinedflat = combinedflat.replace("'", '')
+                    combinedflat = combinedflat.replace(",", '')
+                    combinedflat = combinedflat.replace("(", '')
+                    combinedflat = combinedflat.replace(")", '')
                     f.write("{0}\n".format(combinedflat))
             f.write(';\n')
 
             # TotalAnnualMaxCapacityInvestment = np.zeros((lr,lt,ly))
             param = 'TotalAnnualMaxCapacityInvestment'
             f.write('#\n')
-            f.write("param\t{0}\tdefault\t{1}:=\n".format(param,defaults_dictionary[param]))
+            f.write("param\t{0}\tdefault\t{1}:=\n".format(
+                param, defaults_dictionary[param]))
             # Writes parameter values to the text files
             for k in range(self.ly):
                 # Sets index value for format string
@@ -1319,28 +1354,29 @@ class Energy_Systems:
                 array = array.T
                 lt = array.tolist()
                 # Creates 2D matrix for this value
-                mat = self.TotalAnnualMaxCapacityInvestment[:,:,k]
+                mat = self.TotalAnnualMaxCapacityInvestment[:, :, k]
                 # Converts combined matrix to list and combines lists
                 matlist = mat.tolist()
                 #Combines the two lists
-                combined_list = list(zip(lt,matlist))
-                # Writes index specific parameter values to the text files 
-                f.write("\t[*,*,{0}]:\t{1}\t:=\n".format(y,column_string))
+                combined_list = list(zip(lt, matlist))
+                # Writes index specific parameter values to the text files
+                f.write("\t[*,*,{0}]:\t{1}\t:=\n".format(y, column_string))
                 for line in combined_list:
                     combinedflat = ''.join(str(line))
-                    combinedflat = combinedflat.replace('[','')
-                    combinedflat = combinedflat.replace(']','')
-                    combinedflat = combinedflat.replace("'",'')
-                    combinedflat = combinedflat.replace(",",'')
-                    combinedflat = combinedflat.replace("(",'')
-                    combinedflat = combinedflat.replace(")",'')
+                    combinedflat = combinedflat.replace('[', '')
+                    combinedflat = combinedflat.replace(']', '')
+                    combinedflat = combinedflat.replace("'", '')
+                    combinedflat = combinedflat.replace(",", '')
+                    combinedflat = combinedflat.replace("(", '')
+                    combinedflat = combinedflat.replace(")", '')
                     f.write("{0}\n".format(combinedflat))
             f.write(';\n')
 
             # TotalAnnualMinCapacityInvestment = np.zeros((lr,lt,ly))
             param = 'TotalAnnualMinCapacityInvestment'
             f.write('#\n')
-            f.write("param\t{0}\tdefault\t{1}:=\n".format(param,defaults_dictionary[param]))
+            f.write("param\t{0}\tdefault\t{1}:=\n".format(
+                param, defaults_dictionary[param]))
             # Writes parameter values to the text files
             for k in range(self.ly):
                 # Sets index value for format string
@@ -1353,28 +1389,29 @@ class Energy_Systems:
                 array = array.T
                 lt = array.tolist()
                 # Creates 2D matrix for this value
-                mat = self.TotalAnnualMinCapacityInvestment[:,:,k]
+                mat = self.TotalAnnualMinCapacityInvestment[:, :, k]
                 # Converts combined matrix to list and combines lists
                 matlist = mat.tolist()
                 #Combines the two lists
-                combined_list = list(zip(lt,matlist))
-                # Writes index specific parameter values to the text files 
-                f.write("\t[*,*,{0}]:\t{1}\t:=\n".format(y,column_string))
+                combined_list = list(zip(lt, matlist))
+                # Writes index specific parameter values to the text files
+                f.write("\t[*,*,{0}]:\t{1}\t:=\n".format(y, column_string))
                 for line in combined_list:
                     combinedflat = ''.join(str(line))
-                    combinedflat = combinedflat.replace('[','')
-                    combinedflat = combinedflat.replace(']','')
-                    combinedflat = combinedflat.replace("'",'')
-                    combinedflat = combinedflat.replace(",",'')
-                    combinedflat = combinedflat.replace("(",'')
-                    combinedflat = combinedflat.replace(")",'')
+                    combinedflat = combinedflat.replace('[', '')
+                    combinedflat = combinedflat.replace(']', '')
+                    combinedflat = combinedflat.replace("'", '')
+                    combinedflat = combinedflat.replace(",", '')
+                    combinedflat = combinedflat.replace("(", '')
+                    combinedflat = combinedflat.replace(")", '')
                     f.write("{0}\n".format(combinedflat))
             f.write(';\n')
 
             # TotalTechnologyAnnualActivityLowerLimit= np.zeros((lr,lt,ly))
             param = 'TotalTechnologyAnnualActivityLowerLimit'
             f.write('#\n')
-            f.write("param\t{0}\tdefault\t{1}:=\n".format(param,defaults_dictionary[param]))
+            f.write("param\t{0}\tdefault\t{1}:=\n".format(
+                param, defaults_dictionary[param]))
             # Writes parameter values to the text files
             for k in range(self.ly):
                 # Sets index value for format string
@@ -1387,28 +1424,29 @@ class Energy_Systems:
                 array = array.T
                 lt = array.tolist()
                 # Creates 2D matrix for this value
-                mat = self.TotalTechnologyAnnualActivityLowerLimit[:,:,k]
+                mat = self.TotalTechnologyAnnualActivityLowerLimit[:, :, k]
                 # Converts combined matrix to list and combines lists
                 matlist = mat.tolist()
                 #Combines the two lists
-                combined_list = list(zip(lt,matlist))
-                # Writes index specific parameter values to the text files 
-                f.write("\t[*,*,{0}]:\t{1}\t:=\n".format(y,column_string))
+                combined_list = list(zip(lt, matlist))
+                # Writes index specific parameter values to the text files
+                f.write("\t[*,*,{0}]:\t{1}\t:=\n".format(y, column_string))
                 for line in combined_list:
                     combinedflat = ''.join(str(line))
-                    combinedflat = combinedflat.replace('[','')
-                    combinedflat = combinedflat.replace(']','')
-                    combinedflat = combinedflat.replace("'",'')
-                    combinedflat = combinedflat.replace(",",'')
-                    combinedflat = combinedflat.replace("(",'')
-                    combinedflat = combinedflat.replace(")",'')
+                    combinedflat = combinedflat.replace('[', '')
+                    combinedflat = combinedflat.replace(']', '')
+                    combinedflat = combinedflat.replace("'", '')
+                    combinedflat = combinedflat.replace(",", '')
+                    combinedflat = combinedflat.replace("(", '')
+                    combinedflat = combinedflat.replace(")", '')
                     f.write("{0}\n".format(combinedflat))
             f.write(';\n')
 
             # TotalTechnologyAnnualActivityUpperLimit = np.zeros((lr,lt,ly))
             param = 'TotalTechnologyAnnualActivityUpperLimit'
             f.write('#\n')
-            f.write("param\t{0}\tdefault\t{1}:=\n".format(param,defaults_dictionary[param]))
+            f.write("param\t{0}\tdefault\t{1}:=\n".format(
+                param, defaults_dictionary[param]))
             # Writes parameter values to the text files
             for k in range(self.ly):
                 # Sets index value for format string
@@ -1421,84 +1459,85 @@ class Energy_Systems:
                 array = array.T
                 lt = array.tolist()
                 # Creates 2D matrix for this value
-                mat = self.TotalTechnologyAnnualActivityUpperLimit[:,:,k]
+                mat = self.TotalTechnologyAnnualActivityUpperLimit[:, :, k]
                 # Converts combined matrix to list and combines lists
                 matlist = mat.tolist()
                 #Combines the two lists
-                combined_list = list(zip(lt,matlist))
-                # Writes index specific parameter values to the text files 
-                f.write("\t[*,*,{0}]:\t{1}\t:=\n".format(y,column_string))
+                combined_list = list(zip(lt, matlist))
+                # Writes index specific parameter values to the text files
+                f.write("\t[*,*,{0}]:\t{1}\t:=\n".format(y, column_string))
                 for line in combined_list:
                     combinedflat = ''.join(str(line))
-                    combinedflat = combinedflat.replace('[','')
-                    combinedflat = combinedflat.replace(']','')
-                    combinedflat = combinedflat.replace("'",'')
-                    combinedflat = combinedflat.replace(",",'')
-                    combinedflat = combinedflat.replace("(",'')
-                    combinedflat = combinedflat.replace(")",'')
+                    combinedflat = combinedflat.replace('[', '')
+                    combinedflat = combinedflat.replace(']', '')
+                    combinedflat = combinedflat.replace("'", '')
+                    combinedflat = combinedflat.replace(",", '')
+                    combinedflat = combinedflat.replace("(", '')
+                    combinedflat = combinedflat.replace(")", '')
                     f.write("{0}\n".format(combinedflat))
             f.write(';\n')
 
             # TotalTechnologyModelPeriodActivityUpperLimit = np.zeros((lr,lt))
-            param = 'TotalTechnologyModelPeriodActivityUpperLimit' # Change this line
+            param = 'TotalTechnologyModelPeriodActivityUpperLimit'  # Change this line
             f.write('#\n')
-            columns = self.technology # Change this line
+            columns = self.technology  # Change this line
             column_string = ' '.join(columns)
             # Converts maxtrix rows to list
-            array = np.array(self.region) # Change this line
+            array = np.array(self.region)  # Change this line
             array = array.T
             lt = array.tolist()
             # Creates 2D matrix for this value
-            mat = self.TotalTechnologyModelPeriodActivityUpperLimit[:,:] # Change this line
+            mat = self.TotalTechnologyModelPeriodActivityUpperLimit[:, :]  # Change this line
             # Converts combined matrix to list and combines lists
             matlist = mat.tolist()
             #Combines the two lists
-            combined_list = list(zip(lt,matlist))
-            # Writes index specific parameter values to the text files 
-            f.write("param\t{0}\t:{1}:=\n".format(param,column_string))
+            combined_list = list(zip(lt, matlist))
+            # Writes index specific parameter values to the text files
+            f.write("param\t{0}\t:{1}:=\n".format(param, column_string))
             for line in combined_list:
                 combinedflat = ''.join(str(line))
-                combinedflat = combinedflat.replace('[','')
-                combinedflat = combinedflat.replace(']','')
-                combinedflat = combinedflat.replace("'",'')
-                combinedflat = combinedflat.replace(",",'')
-                combinedflat = combinedflat.replace("(",'')
-                combinedflat = combinedflat.replace(")",'')
+                combinedflat = combinedflat.replace('[', '')
+                combinedflat = combinedflat.replace(']', '')
+                combinedflat = combinedflat.replace("'", '')
+                combinedflat = combinedflat.replace(",", '')
+                combinedflat = combinedflat.replace("(", '')
+                combinedflat = combinedflat.replace(")", '')
                 f.write("{0}\n".format(combinedflat))
             f.write(';\n')
 
             # TotalTechnologyModelPeriodActivityLowerLimit = np.zeros((lr,lt))
-            param = 'TotalTechnologyModelPeriodActivityLowerLimit' # Change this line
+            param = 'TotalTechnologyModelPeriodActivityLowerLimit'  # Change this line
             f.write('#\n')
-            columns = self.technology # Change this line
+            columns = self.technology  # Change this line
             column_string = ' '.join(columns)
             # Converts maxtrix rows to list
-            array = np.array(self.region) # Change this line
+            array = np.array(self.region)  # Change this line
             array = array.T
             lt = array.tolist()
             # Creates 2D matrix for this value
-            mat = self.TotalTechnologyModelPeriodActivityLowerLimit[:,:] # Change this line
+            mat = self.TotalTechnologyModelPeriodActivityLowerLimit[:, :]  # Change this line
             # Converts combined matrix to list and combines lists
             matlist = mat.tolist()
             #Combines the two lists
-            combined_list = list(zip(lt,matlist))
-            # Writes index specific parameter values to the text files 
-            f.write("param\t{0}\t:{1}:=\n".format(param,column_string))
+            combined_list = list(zip(lt, matlist))
+            # Writes index specific parameter values to the text files
+            f.write("param\t{0}\t:{1}:=\n".format(param, column_string))
             for line in combined_list:
                 combinedflat = ''.join(str(line))
-                combinedflat = combinedflat.replace('[','')
-                combinedflat = combinedflat.replace(']','')
-                combinedflat = combinedflat.replace("'",'')
-                combinedflat = combinedflat.replace(",",'')
-                combinedflat = combinedflat.replace("(",'')
-                combinedflat = combinedflat.replace(")",'')
+                combinedflat = combinedflat.replace('[', '')
+                combinedflat = combinedflat.replace(']', '')
+                combinedflat = combinedflat.replace("'", '')
+                combinedflat = combinedflat.replace(",", '')
+                combinedflat = combinedflat.replace("(", '')
+                combinedflat = combinedflat.replace(")", '')
                 f.write("{0}\n".format(combinedflat))
             f.write(';\n')
 
             # ReserveMarginTagTechnology = np.zeros((lr,lt,ly))
             param = 'ReserveMarginTagTechnology'
             f.write('#\n')
-            f.write("param\t{0}\tdefault\t{1}:=\n".format(param,defaults_dictionary[param]))
+            f.write("param\t{0}\tdefault\t{1}:=\n".format(
+                param, defaults_dictionary[param]))
             # Writes parameter values to the text files
             for k in range(self.ly):
                 # Sets index value for format string
@@ -1511,28 +1550,29 @@ class Energy_Systems:
                 array = array.T
                 lt = array.tolist()
                 # Creates 2D matrix for this value
-                mat = self.ReserveMarginTagTechnology[:,:,k]
+                mat = self.ReserveMarginTagTechnology[:, :, k]
                 # Converts combined matrix to list and combines lists
                 matlist = mat.tolist()
                 #Combines the two lists
-                combined_list = list(zip(lt,matlist))
-                # Writes index specific parameter values to the text files 
-                f.write("\t[*,*,{0}]:\t{1}\t:=\n".format(y,column_string))
+                combined_list = list(zip(lt, matlist))
+                # Writes index specific parameter values to the text files
+                f.write("\t[*,*,{0}]:\t{1}\t:=\n".format(y, column_string))
                 for line in combined_list:
                     combinedflat = ''.join(str(line))
-                    combinedflat = combinedflat.replace('[','')
-                    combinedflat = combinedflat.replace(']','')
-                    combinedflat = combinedflat.replace("'",'')
-                    combinedflat = combinedflat.replace(",",'')
-                    combinedflat = combinedflat.replace("(",'')
-                    combinedflat = combinedflat.replace(")",'')
+                    combinedflat = combinedflat.replace('[', '')
+                    combinedflat = combinedflat.replace(']', '')
+                    combinedflat = combinedflat.replace("'", '')
+                    combinedflat = combinedflat.replace(",", '')
+                    combinedflat = combinedflat.replace("(", '')
+                    combinedflat = combinedflat.replace(")", '')
                     f.write("{0}\n".format(combinedflat))
             f.write(';\n')
 
             # ReserveMarginTagFuel = np.zeros((lr,lf,ly))
             param = 'ReserveMarginTagFuel'
             f.write('#\n')
-            f.write("param\t{0}\tdefault\t{1}:=\n".format(param,defaults_dictionary[param]))
+            f.write("param\t{0}\tdefault\t{1}:=\n".format(
+                param, defaults_dictionary[param]))
             # Writes parameter values to the text files
             for k in range(self.ly):
                 # Sets index value for format string
@@ -1545,56 +1585,57 @@ class Energy_Systems:
                 array = array.T
                 lt = array.tolist()
                 # Creates 2D matrix for this value
-                mat = self.ReserveMarginTagFuel[:,:,k]
+                mat = self.ReserveMarginTagFuel[:, :, k]
                 # Converts combined matrix to list and combines lists
                 matlist = mat.tolist()
                 #Combines the two lists
-                combined_list = list(zip(lt,matlist))
-                # Writes index specific parameter values to the text files 
-                f.write("\t[*,*,{0}]:\t{1}\t:=\n".format(y,column_string))
+                combined_list = list(zip(lt, matlist))
+                # Writes index specific parameter values to the text files
+                f.write("\t[*,*,{0}]:\t{1}\t:=\n".format(y, column_string))
                 for line in combined_list:
                     combinedflat = ''.join(str(line))
-                    combinedflat = combinedflat.replace('[','')
-                    combinedflat = combinedflat.replace(']','')
-                    combinedflat = combinedflat.replace("'",'')
-                    combinedflat = combinedflat.replace(",",'')
-                    combinedflat = combinedflat.replace("(",'')
-                    combinedflat = combinedflat.replace(")",'')
+                    combinedflat = combinedflat.replace('[', '')
+                    combinedflat = combinedflat.replace(']', '')
+                    combinedflat = combinedflat.replace("'", '')
+                    combinedflat = combinedflat.replace(",", '')
+                    combinedflat = combinedflat.replace("(", '')
+                    combinedflat = combinedflat.replace(")", '')
                     f.write("{0}\n".format(combinedflat))
             f.write(';\n')
 
             # ReserveMargin = np.zeros((lr,ly))
-            param = 'ReserveMargin' # Change this line
+            param = 'ReserveMargin'  # Change this line
             f.write('#\n')
-            columns = self.year # Change this line
+            columns = self.year  # Change this line
             column_string = ' '.join(columns)
             # Converts maxtrix rows to list
-            array = np.array(self.region) # Change this line
+            array = np.array(self.region)  # Change this line
             array = array.T
             lt = array.tolist()
             # Creates 2D matrix for this value
-            mat = self.ReserveMargin[:,:] # Change this line
+            mat = self.ReserveMargin[:, :]  # Change this line
             # Converts combined matrix to list and combines lists
             matlist = mat.tolist()
             #Combines the two lists
-            combined_list = list(zip(lt,matlist))
-            # Writes index specific parameter values to the text files 
-            f.write("param\t{0}\t:{1}:=\n".format(param,column_string))
+            combined_list = list(zip(lt, matlist))
+            # Writes index specific parameter values to the text files
+            f.write("param\t{0}\t:{1}:=\n".format(param, column_string))
             for line in combined_list:
                 combinedflat = ''.join(str(line))
-                combinedflat = combinedflat.replace('[','')
-                combinedflat = combinedflat.replace(']','')
-                combinedflat = combinedflat.replace("'",'')
-                combinedflat = combinedflat.replace(",",'')
-                combinedflat = combinedflat.replace("(",'')
-                combinedflat = combinedflat.replace(")",'')
+                combinedflat = combinedflat.replace('[', '')
+                combinedflat = combinedflat.replace(']', '')
+                combinedflat = combinedflat.replace("'", '')
+                combinedflat = combinedflat.replace(",", '')
+                combinedflat = combinedflat.replace("(", '')
+                combinedflat = combinedflat.replace(")", '')
                 f.write("{0}\n".format(combinedflat))
             f.write(';\n')
 
             # RETagTechnology = np.zeros((lr,lt,ly))
             param = 'RETagTechnology'
             f.write('#\n')
-            f.write("param\t{0}\tdefault\t{1}:=\n".format(param,defaults_dictionary[param]))
+            f.write("param\t{0}\tdefault\t{1}:=\n".format(
+                param, defaults_dictionary[param]))
             # Writes parameter values to the text files
             for k in range(self.ly):
                 # Sets index value for format string
@@ -1607,28 +1648,29 @@ class Energy_Systems:
                 array = array.T
                 lt = array.tolist()
                 # Creates 2D matrix for this value
-                mat = self.RETagTechnology[:,:,k]
+                mat = self.RETagTechnology[:, :, k]
                 # Converts combined matrix to list and combines lists
                 matlist = mat.tolist()
                 #Combines the two lists
-                combined_list = list(zip(lt,matlist))
-                # Writes index specific parameter values to the text files 
-                f.write("\t[*,*,{0}]:\t{1}\t:=\n".format(y,column_string))
+                combined_list = list(zip(lt, matlist))
+                # Writes index specific parameter values to the text files
+                f.write("\t[*,*,{0}]:\t{1}\t:=\n".format(y, column_string))
                 for line in combined_list:
                     combinedflat = ''.join(str(line))
-                    combinedflat = combinedflat.replace('[','')
-                    combinedflat = combinedflat.replace(']','')
-                    combinedflat = combinedflat.replace("'",'')
-                    combinedflat = combinedflat.replace(",",'')
-                    combinedflat = combinedflat.replace("(",'')
-                    combinedflat = combinedflat.replace(")",'')
+                    combinedflat = combinedflat.replace('[', '')
+                    combinedflat = combinedflat.replace(']', '')
+                    combinedflat = combinedflat.replace("'", '')
+                    combinedflat = combinedflat.replace(",", '')
+                    combinedflat = combinedflat.replace("(", '')
+                    combinedflat = combinedflat.replace(")", '')
                     f.write("{0}\n".format(combinedflat))
             f.write(';\n')
-            
+
             # RETagFuel = np.zeros((lr,lf,ly))
             param = 'RETagFuel'
             f.write('#\n')
-            f.write("param\t{0}\tdefault\t{1}:=\n".format(param,defaults_dictionary[param]))
+            f.write("param\t{0}\tdefault\t{1}:=\n".format(
+                param, defaults_dictionary[param]))
             # Writes parameter values to the text files
             for k in range(self.ly):
                 # Sets index value for format string
@@ -1641,61 +1683,62 @@ class Energy_Systems:
                 array = array.T
                 lt = array.tolist()
                 # Creates 2D matrix for this value
-                mat = self.RETagFuel[:,:,k]
+                mat = self.RETagFuel[:, :, k]
                 # Converts combined matrix to list and combines lists
                 matlist = mat.tolist()
                 #Combines the two lists
-                combined_list = list(zip(lt,matlist))
-                # Writes index specific parameter values to the text files 
-                f.write("\t[*,*,{0}]:\t{1}\t:=\n".format(y,column_string))
+                combined_list = list(zip(lt, matlist))
+                # Writes index specific parameter values to the text files
+                f.write("\t[*,*,{0}]:\t{1}\t:=\n".format(y, column_string))
                 for line in combined_list:
                     combinedflat = ''.join(str(line))
-                    combinedflat = combinedflat.replace('[','')
-                    combinedflat = combinedflat.replace(']','')
-                    combinedflat = combinedflat.replace("'",'')
-                    combinedflat = combinedflat.replace(",",'')
-                    combinedflat = combinedflat.replace("(",'')
-                    combinedflat = combinedflat.replace(")",'')
+                    combinedflat = combinedflat.replace('[', '')
+                    combinedflat = combinedflat.replace(']', '')
+                    combinedflat = combinedflat.replace("'", '')
+                    combinedflat = combinedflat.replace(",", '')
+                    combinedflat = combinedflat.replace("(", '')
+                    combinedflat = combinedflat.replace(")", '')
                     f.write("{0}\n".format(combinedflat))
             f.write(';\n')
 
             # REMinProductionTarget = np.zeros((lr,ly))
-            param = 'REMinProductionTarget' # Change this line
+            param = 'REMinProductionTarget'  # Change this line
             f.write('#\n')
-            columns = self.year # Change this line
+            columns = self.year  # Change this line
             column_string = ' '.join(columns)
             # Converts maxtrix rows to list
-            array = np.array(self.region) # Change this line
+            array = np.array(self.region)  # Change this line
             array = array.T
             lt = array.tolist()
             # Creates 2D matrix for this value
-            mat = self.REMinProductionTarget[:,:] # Change this line
+            mat = self.REMinProductionTarget[:, :]  # Change this line
             # Converts combined matrix to list and combines lists
             matlist = mat.tolist()
             #Combines the two lists
-            combined_list = list(zip(lt,matlist))
-            # Writes index specific parameter values to the text files 
-            f.write("param\t{0}\t:{1}:=\n".format(param,column_string))
+            combined_list = list(zip(lt, matlist))
+            # Writes index specific parameter values to the text files
+            f.write("param\t{0}\t:{1}:=\n".format(param, column_string))
             for line in combined_list:
                 combinedflat = ''.join(str(line))
-                combinedflat = combinedflat.replace('[','')
-                combinedflat = combinedflat.replace(']','')
-                combinedflat = combinedflat.replace("'",'')
-                combinedflat = combinedflat.replace(",",'')
-                combinedflat = combinedflat.replace("(",'')
-                combinedflat = combinedflat.replace(")",'')
+                combinedflat = combinedflat.replace('[', '')
+                combinedflat = combinedflat.replace(']', '')
+                combinedflat = combinedflat.replace("'", '')
+                combinedflat = combinedflat.replace(",", '')
+                combinedflat = combinedflat.replace("(", '')
+                combinedflat = combinedflat.replace(")", '')
                 f.write("{0}\n".format(combinedflat))
             f.write(';\n')
 
             # EmissionActivityRatio = np.zeros((lr,lt,le,lm,ly))
             #Writes new line character at parameter metadata to the text file
-            param = 'EmissionActivityRatio' # Change this line
+            param = 'EmissionActivityRatio'  # Change this line
             f.write('#\n')
-            f.write("param\t{0}\tdefault\t{1}:=\n".format(param,defaults_dictionary[param]))
+            f.write("param\t{0}\tdefault\t{1}:=\n".format(
+                param, defaults_dictionary[param]))
             # Writes parameter values to the text files
-            for i in range(self.le): # Change loops if you need
+            for i in range(self.le):  # Change loops if you need
                 # Sets index value for format string
-                emission = self.emission[i] 
+                emission = self.emission[i]
                 for j in range(self.lm):
                     # Sets index value for format string
                     MOO = self.mode_of_operation[j]
@@ -1710,28 +1753,30 @@ class Energy_Systems:
                         array = array.T
                         lt = array.tolist()
                         # Creates 2D matrix for this value
-                        mat = self.EmissionActivityRatio[:,:,i,j,k]
+                        mat = self.EmissionActivityRatio[:, :, i, j, k]
                         # Converts combined matrix to list and combines lists
                         matlist = mat.tolist()
                         #Combines the two lists
-                        combined_list = list(zip(lt,matlist))
-                        # Writes index specific parameter values to the text files 
-                        f.write("\t[*,*,{0},{1},{2}]:\t{3}\t:=\n".format(emission,MOO,y,column_string))
+                        combined_list = list(zip(lt, matlist))
+                        # Writes index specific parameter values to the text files
+                        f.write("\t[*,*,{0},{1},{2}]:\t{3}\t:=\n".format(
+                            emission, MOO, y, column_string))
                         for line in combined_list:
                             combinedflat = ''.join(str(line))
-                            combinedflat = combinedflat.replace('[','')
-                            combinedflat = combinedflat.replace(']','')
-                            combinedflat = combinedflat.replace("'",'')
-                            combinedflat = combinedflat.replace(",",'')
-                            combinedflat = combinedflat.replace("(",'')
-                            combinedflat = combinedflat.replace(")",'')
+                            combinedflat = combinedflat.replace('[', '')
+                            combinedflat = combinedflat.replace(']', '')
+                            combinedflat = combinedflat.replace("'", '')
+                            combinedflat = combinedflat.replace(",", '')
+                            combinedflat = combinedflat.replace("(", '')
+                            combinedflat = combinedflat.replace(")", '')
                             f.write("{0}\n".format(combinedflat))
             f.write(';\n')
 
             # EmissionsPenalty = np.zeros((lr,le,ly))
             param = 'EmissionsPenalty'
             f.write('#\n')
-            f.write("param\t{0}\tdefault\t{1}:=\n".format(param,defaults_dictionary[param]))
+            f.write("param\t{0}\tdefault\t{1}:=\n".format(
+                param, defaults_dictionary[param]))
             # Writes parameter values to the text files
             for k in range(self.ly):
                 # Sets index value for format string
@@ -1744,28 +1789,29 @@ class Energy_Systems:
                 array = array.T
                 lt = array.tolist()
                 # Creates 2D matrix for this value
-                mat = self.EmissionsPenalty[:,:,k]
+                mat = self.EmissionsPenalty[:, :, k]
                 # Converts combined matrix to list and combines lists
                 matlist = mat.tolist()
                 #Combines the two lists
-                combined_list = list(zip(lt,matlist))
-                # Writes index specific parameter values to the text files 
-                f.write("\t[*,*,{0}]:\t{1}\t:=\n".format(y,column_string))
+                combined_list = list(zip(lt, matlist))
+                # Writes index specific parameter values to the text files
+                f.write("\t[*,*,{0}]:\t{1}\t:=\n".format(y, column_string))
                 for line in combined_list:
                     combinedflat = ''.join(str(line))
-                    combinedflat = combinedflat.replace('[','')
-                    combinedflat = combinedflat.replace(']','')
-                    combinedflat = combinedflat.replace("'",'')
-                    combinedflat = combinedflat.replace(",",'')
-                    combinedflat = combinedflat.replace("(",'')
-                    combinedflat = combinedflat.replace(")",'')
+                    combinedflat = combinedflat.replace('[', '')
+                    combinedflat = combinedflat.replace(']', '')
+                    combinedflat = combinedflat.replace("'", '')
+                    combinedflat = combinedflat.replace(",", '')
+                    combinedflat = combinedflat.replace("(", '')
+                    combinedflat = combinedflat.replace(")", '')
                     f.write("{0}\n".format(combinedflat))
             f.write(';\n')
 
             # AnnualExogenousEmission = np.zeros((lr,le,ly))
             param = 'AnnualExogenousEmission'
             f.write('#\n')
-            f.write("param\t{0}\tdefault\t{1}:=\n".format(param,defaults_dictionary[param]))
+            f.write("param\t{0}\tdefault\t{1}:=\n".format(
+                param, defaults_dictionary[param]))
             # Writes parameter values to the text files
             for k in range(self.ly):
                 # Sets index value for format string
@@ -1778,28 +1824,29 @@ class Energy_Systems:
                 array = array.T
                 lt = array.tolist()
                 # Creates 2D matrix for this value
-                mat = self.AnnualExogenousEmission[:,:,k]
+                mat = self.AnnualExogenousEmission[:, :, k]
                 # Converts combined matrix to list and combines lists
                 matlist = mat.tolist()
                 #Combines the two lists
-                combined_list = list(zip(lt,matlist))
-                # Writes index specific parameter values to the text files 
-                f.write("\t[*,*,{0}]:\t{1}\t:=\n".format(y,column_string))
+                combined_list = list(zip(lt, matlist))
+                # Writes index specific parameter values to the text files
+                f.write("\t[*,*,{0}]:\t{1}\t:=\n".format(y, column_string))
                 for line in combined_list:
                     combinedflat = ''.join(str(line))
-                    combinedflat = combinedflat.replace('[','')
-                    combinedflat = combinedflat.replace(']','')
-                    combinedflat = combinedflat.replace("'",'')
-                    combinedflat = combinedflat.replace(",",'')
-                    combinedflat = combinedflat.replace("(",'')
-                    combinedflat = combinedflat.replace(")",'')
+                    combinedflat = combinedflat.replace('[', '')
+                    combinedflat = combinedflat.replace(']', '')
+                    combinedflat = combinedflat.replace("'", '')
+                    combinedflat = combinedflat.replace(",", '')
+                    combinedflat = combinedflat.replace("(", '')
+                    combinedflat = combinedflat.replace(")", '')
                     f.write("{0}\n".format(combinedflat))
             f.write(';\n')
 
             # AnnualEmissionLimit = np.zeros((lr,le,ly))
             param = 'AnnualEmissionLimit'
             f.write('#\n')
-            f.write("param\t{0}\tdefault\t{1}:=\n".format(param,defaults_dictionary[param]))
+            f.write("param\t{0}\tdefault\t{1}:=\n".format(
+                param, defaults_dictionary[param]))
             # Writes parameter values to the text files
             for k in range(self.ly):
                 # Sets index value for format string
@@ -1812,79 +1859,79 @@ class Energy_Systems:
                 array = array.T
                 lt = array.tolist()
                 # Creates 2D matrix for this value
-                mat = self.AnnualExogenousEmission[:,:,k]
+                mat = self.AnnualExogenousEmission[:, :, k]
                 # Converts combined matrix to list and combines lists
                 matlist = mat.tolist()
                 #Combines the two lists
-                combined_list = list(zip(lt,matlist))
-                # Writes index specific parameter values to the text files 
-                f.write("\t[*,*,{0}]:\t{1}\t:=\n".format(y,column_string))
+                combined_list = list(zip(lt, matlist))
+                # Writes index specific parameter values to the text files
+                f.write("\t[*,*,{0}]:\t{1}\t:=\n".format(y, column_string))
                 for line in combined_list:
                     combinedflat = ''.join(str(line))
-                    combinedflat = combinedflat.replace('[','')
-                    combinedflat = combinedflat.replace(']','')
-                    combinedflat = combinedflat.replace("'",'')
-                    combinedflat = combinedflat.replace(",",'')
-                    combinedflat = combinedflat.replace("(",'')
-                    combinedflat = combinedflat.replace(")",'')
+                    combinedflat = combinedflat.replace('[', '')
+                    combinedflat = combinedflat.replace(']', '')
+                    combinedflat = combinedflat.replace("'", '')
+                    combinedflat = combinedflat.replace(",", '')
+                    combinedflat = combinedflat.replace("(", '')
+                    combinedflat = combinedflat.replace(")", '')
                     f.write("{0}\n".format(combinedflat))
             f.write(';\n')
 
             # ModelPeriodExogenousEmission = np.zeros((lr,le))
-            param = 'ModelPeriodExogenousEmission' # Change this line
+            param = 'ModelPeriodExogenousEmission'  # Change this line
             f.write('#\n')
-            columns = self.emission # Change this line
+            columns = self.emission  # Change this line
             column_string = ' '.join(columns)
             # Converts maxtrix rows to list
-            array = np.array(self.region) # Change this line
+            array = np.array(self.region)  # Change this line
             array = array.T
             lt = array.tolist()
             # Creates 2D matrix for this value
-            mat = self.ModelPeriodExogenousEmission[:,:] # Change this line
+            mat = self.ModelPeriodExogenousEmission[:, :]  # Change this line
             # Converts combined matrix to list and combines lists
             matlist = mat.tolist()
             #Combines the two lists
-            combined_list = list(zip(lt,matlist))
-            # Writes index specific parameter values to the text files 
-            f.write("param\t{0}\t:{1}:=\n".format(param,column_string))
+            combined_list = list(zip(lt, matlist))
+            # Writes index specific parameter values to the text files
+            f.write("param\t{0}\t:{1}:=\n".format(param, column_string))
             for line in combined_list:
                 combinedflat = ''.join(str(line))
-                combinedflat = combinedflat.replace('[','')
-                combinedflat = combinedflat.replace(']','')
-                combinedflat = combinedflat.replace("'",'')
-                combinedflat = combinedflat.replace(",",'')
-                combinedflat = combinedflat.replace("(",'')
-                combinedflat = combinedflat.replace(")",'')
+                combinedflat = combinedflat.replace('[', '')
+                combinedflat = combinedflat.replace(']', '')
+                combinedflat = combinedflat.replace("'", '')
+                combinedflat = combinedflat.replace(",", '')
+                combinedflat = combinedflat.replace("(", '')
+                combinedflat = combinedflat.replace(")", '')
                 f.write("{0}\n".format(combinedflat))
             f.write(';\n')
 
             # ModelPeriodEmissionLimit = np.zeros((lr,le))
-            param = 'ModelPeriodEmissionLimit' # Change this line
+            param = 'ModelPeriodEmissionLimit'  # Change this line
             f.write('#\n')
-            columns = self.emission # Change this line
+            columns = self.emission  # Change this line
             column_string = ' '.join(columns)
             # Converts maxtrix rows to list
-            array = np.array(self.region) # Change this line
+            array = np.array(self.region)  # Change this line
             array = array.T
             lt = array.tolist()
             # Creates 2D matrix for this value
-            mat = self.ModelPeriodEmissionLimit[:,:] # Change this line
+            mat = self.ModelPeriodEmissionLimit[:, :]  # Change this line
             # Converts combined matrix to list and combines lists
             matlist = mat.tolist()
             #Combines the two lists
-            combined_list = list(zip(lt,matlist))
-            # Writes index specific parameter values to the text files 
-            f.write("param\t{0}\t:{1}:=\n".format(param,column_string))
+            combined_list = list(zip(lt, matlist))
+            # Writes index specific parameter values to the text files
+            f.write("param\t{0}\t:{1}:=\n".format(param, column_string))
             for line in combined_list:
                 combinedflat = ''.join(str(line))
-                combinedflat = combinedflat.replace('[','')
-                combinedflat = combinedflat.replace(']','')
-                combinedflat = combinedflat.replace("'",'')
-                combinedflat = combinedflat.replace(",",'')
-                combinedflat = combinedflat.replace("(",'')
-                combinedflat = combinedflat.replace(")",'')
+                combinedflat = combinedflat.replace('[', '')
+                combinedflat = combinedflat.replace(']', '')
+                combinedflat = combinedflat.replace("'", '')
+                combinedflat = combinedflat.replace(",", '')
+                combinedflat = combinedflat.replace("(", '')
+                combinedflat = combinedflat.replace(")", '')
                 f.write("{0}\n".format(combinedflat))
             f.write(';\n')
             f.write('end;\n')
             f.write('#')
-        return 
+        return
