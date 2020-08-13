@@ -5,10 +5,11 @@ from setuptools import setup
 'Note: PyPi https://pypi.org/manage/project/gocpi-functions/releases/#modal-close'
 
 setup(name='GOCPI',
-      version='2.12',
-      description='User Defined Functions and Energy Systems Data for GOCPI Project',
+      version='2.13',
+      description=
+      'User Defined Functions and Energy Systems Data for GOCPI Project',
       packages=['GOCPI'],
       author_email='connormcdowall@gmail.com',
       zip_safe=False)
-      
+
 '/Users/connor/Google Drive/Documents/University/Courses/2020/ENGSCI 700A&B/GOCPI/src/GOCPI'
