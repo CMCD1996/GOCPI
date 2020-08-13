@@ -130,10 +130,10 @@ default_parameters = {
 }
 
 # Create the Data File
-Demo.CreateDataFile(data_location_1, default_parameters)
+Demo.create_data_file(data_location_1, default_parameters)
 
 # Cereate the Model File
-Demo.CreateModelFile(root, model_source_file)
+Demo.create_model_file(root, model_source_file)
 
 # Convert created model and data files into a Linear Problem file (lp)
 # Test the formatting

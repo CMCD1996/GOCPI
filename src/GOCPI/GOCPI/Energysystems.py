@@ -4,10 +4,7 @@ import pandas as pd
 
 
 class Energy_Systems:
-    """ 
-    Energy Systems are a set of user defined systems which includes 
-    all of the sets and parameters necessary.
-            
+    """ A class of methods to initialise energy sytems and create the data/model files needed for optimisation.
     """
     def __init__(self, year, region, emission, technology, fuel, timeslice,
                  mode_of_operation, storage, daytype, season,
@@ -16,8 +13,9 @@ class Energy_Systems:
 
         Args:
             Sets:
-                year: Set of Years
-                region: Set of Regions
+                year (list): Set of Years
+                region (region): Set of Regions
+                emission (list): Set of Emissions
         """
         self.year = year
         self.region = region
@@ -108,19 +106,14 @@ class Energy_Systems:
         self.ModelPeriodExogenousEmission = np.ones((lr, le))
         self.ModelPeriodEmissionLimit = np.ones((lr, le))
 
-    def SetParameters(self, parameters):
-        """Sets the parameters for the functions
-        
-        Args: 
-            self: The base of the Energy_Systems Class
-            parameter: A list of parameters defined for the function
-        
-        Returns: 
-            The loaded in parameters and sets
-    
+    def load_datacase(self, datacase):
+        """[summary]
+
+        Args:
+            datacase (list): Created datacase for the model
         """
 
-    def CreateModelFile(self, root, file):
+    def create_model_file(self, root, file):
         """Creates the model file necessary for the project to run
         
         Args: 
@@ -145,7 +138,7 @@ class Energy_Systems:
         # Saves the user defined model to a text file
         np.savetxt(model_location, df_model.values, fmt='%s')
 
-    def CreateDataFile(self, file_location, defaults_dictionary):
+    def create_data_file(self, file_location, defaults_dictionary):
         """Function create the GOCPI OseMOSYS Energy Systems Data File necessary for optimisation
         
         Args: 
