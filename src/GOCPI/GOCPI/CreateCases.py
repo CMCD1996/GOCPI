@@ -76,20 +76,20 @@ class CreateCases:
         self.ModelPeriodExogenousEmission = None
         self.ModelPeriodEmissionLimit = None
 
-    def set_year(self, start_year, end_year):
+    def set_year(self, start_year, end_year, interval):
         """ Sets a list of forecast years
 
         Args:
             start_year (int): Starting year for forecasting (Less than end_year)
             end_year (int): Ending year for forecasting (Greater than start_year)
-            
+            interval (int): Gap for forecasting period
         """
         # Sets year array for new value
         year = []
         count = start_year
         while count < end_year:
             year.append(str(count))
-            count + 1
+            count = count + interval
         self.year = year
 
     def set_region(self, regions):
@@ -97,4 +97,11 @@ class CreateCases:
 
         Args:
             regions (list): list
+        """
+
+    def set_emission(self, emissions):
+        """[summary]
+
+        Args:
+            emissions (List): [description]
         """

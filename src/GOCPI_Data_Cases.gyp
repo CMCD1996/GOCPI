@@ -135,5 +135,9 @@ Demo.create_data_file(data_location_1, default_parameters)
 # Cereate the Model File
 Demo.create_model_file(root, model_source_file)
 
+# Create
+NZ_Example = GF.CreateCases()
+NZ_Example.set_year(2020, 2030)
+# print(NZ_Example.year)
 # Convert created model and data files into a Linear Problem file (lp)
 # Test the formatting

@@ -1,5 +1,6 @@
 setup.cfg
 setup.py
+GOCPI/CreateCases.py
 GOCPI/Energysystems.py
 GOCPI/Navigation.py
 GOCPI/__init__.py
