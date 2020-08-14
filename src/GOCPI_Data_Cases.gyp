@@ -40,7 +40,10 @@ FUEL = [
     'CSV', 'DSL', 'ELC', 'GSL', 'HCO', 'HYD', 'LTH', 'OIL', 'URN', 'RH', 'RL',
     'TX'
 ]
-TIMESLICE = ['ID', 'IN', 'SD', 'SN', 'WD', 'WN']
+TIMESLICE = [
+    'INTERMEDIATE_DAY', 'INTERMEDIATE_NIGHT', 'SUMMER_DAY', 'SUMMER_NIGHT',
+    'WINTER_DAY', 'WINTER_NIGHT'
+]
 MODE_OF_OPERATION = ['1', '2']
 STORAGE = ['DAM']
 DAYTYPE = ['1', '2', '3']
@@ -137,7 +140,7 @@ Demo.create_model_file(root, model_source_file)
 
 # Create
 NZ_Example = GF.CreateCases()
-NZ_Example.set_year(2020, 2030)
-# print(NZ_Example.year)
+NZ_Example.set_year(2020, 2030, 1)
+print(NZ_Example.year)
 # Convert created model and data files into a Linear Problem file (lp)
 # Test the formatting
