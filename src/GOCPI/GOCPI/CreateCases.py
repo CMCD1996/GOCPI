@@ -144,7 +144,7 @@ class CreateCases:
         while count <= num_modes_of_operation:
             mode_of_operation.append(str(count))
             count = count + 1
-        self.mode_of_operation= mode_of_operation
+        self.mode_of_operation = mode_of_operation
 
     def set_storage(self, storage):
         """ Sets storage set of the datacase
@@ -163,10 +163,10 @@ class CreateCases:
         # Create set of daytypes
         daytype = []
         count = 1
-        while count <= num_modes_of_operation:
-            mode_of_operation.append(str(count))
+        while count <= num_daytypes:
+            daytype.append(str(count))
             count = count + 1
-        self.mode_of_operation= mode_of_operation
+        self.daytype = daytype
 
     def set_season(self, num_seasons):
         """ Creates set of seasons
@@ -318,20 +318,22 @@ class CreateCases:
         Args:
             parameters ([type]): [description]
         """
+
     def set_input_activity_ratio(self, parameters):
         """[summary]
 
         Args:
             parameters ([type]): [description]
         """
-     def set_output_activity_ratio(self, parameters):
+
+    def set_output_activity_ratio(self, parameters):
         """[summary]
 
         Args:
             parameters ([type]): [description]
-        """   
-        
-    def set_capital_cost(self,parameters):
+        """
+
+    def set_capital_cost(self, parameters):
         """[summary]
 
         Args:
@@ -358,49 +360,56 @@ class CreateCases:
         Args:
             parameters ([type]): [description]
         """
+
     def set_technology_from_storage(self, parameters):
         """[summary]
 
         Args:
             parameters ([type]): [description]
         """
+
     def set_min_storage_charge(self, parameters):
         """[summary]
 
         Args:
             parameters ([type]): [description]
         """
+
     def set_operational_life_storage(self, parameters):
         """[summary]
 
         Args:
             parameters ([type]): [description]
         """
+
     def set_capital_cost_storage(self, parameters):
         """[summary]
 
         Args:
             parameters ([type]): [description]
         """
+
     def set_storage_level_start(self, parameters):
         """[summary]
 
         Args:
             parameters ([type]): [description]
         """
+
     def set_storage_max_charge_rate(self, parameters):
         """[summary]
 
         Args:
             parameters ([type]): [description]
         """
+
     def set_storage_max_discharge_rate(self, parameters):
         """[summary]
 
         Args:
             parameters ([type]): [description]
         """
-       
+
     def set_residual_storage_capacity(self, parameters):
         """[summary]
 
@@ -408,115 +417,133 @@ class CreateCases:
             parameters ([type]): [description]
         """
         self.ResidualStorageCapacity = None
+
     def set_capacity_of_one_technology_unit(self, parameters):
         """[summary]
 
         Args:
             parameters ([type]): [description]
         """
+
     def set_total_annual_max_capacity(self, parameters):
         """[summary]
 
         Args:
             parameters ([type]): [description]
         """
-    
+
     def set_total_annual_min_capacity(self, parameters):
         """[summary]
 
         Args:
             parameters ([type]): [description]
         """
+
     def set_total_technology_annual_activity_lower_limit(self, parameters):
         """[summary]
 
         Args:
             parameters ([type]): [description]
         """
+
     def set_total_technology_annual_activity_upper_limit(self, parameters):
         """[summary]
 
         Args:
             parameters ([type]): [description]
         """
+
     def set_total_technology_period_activity_upper_limit(self, parameters):
         """[summary]
 
         Args:
             parameters ([type]): [description]
         """
+
     def set_total_technology_period_activity_lower_limit(self, parameters):
         """[summary]
 
         Args:
             parameters ([type]): [description]
         """
+
     def set_reserve_margin_tag_technology(self, parameters):
         """[summary]
 
         Args:
             parameters ([type]): [description]
         """
+
     def set_reserve_margin_tag_fuel(self, parameters):
         """[summary]
 
         Args:
             parameters ([type]): [description]
         """
+
     def set_reserve_margin(self, parameters):
         """[summary]
 
         Args:
             parameters ([type]): [description]
         """
+
     def set_re_tag_technology(self, parameters):
         """[summary]
 
         Args:
             parameters ([type]): [description]
         """
+
     def set_re_tag_fuel(self, parameters):
         """[summary]
 
         Args:
             parameters ([type]): [description]
         """
+
     def set_re_min_production_target(self, parameters):
         """[summary]
 
         Args:
             parameters ([type]): [description]
         """
+
     def set_emission_activity_ratio(self, parameters):
         """[summary]
 
         Args:
             parameters ([type]): [description]
         """
+
     def set_emissions_penalty(self, parameters):
         """[summary]
 
         Args:
             parameters ([type]): [description]
         """
+
     def set_annual_exogenous_emission(self, parameters):
         """[summary]
 
         Args:
             parameters ([type]): [description]
         """
+
     def set_annual_emission_limit(self, parameters):
         """[summary]
 
         Args:
             parameters ([type]): [description]
         """
+
     def set_model_period_exogenous_emission(self, parameters):
         """[summary]
 
         Args:
             parameters ([type]): [description]
         """
+
     def set_model_period_emission_limit(self, parameters):
         """[summary]
 
