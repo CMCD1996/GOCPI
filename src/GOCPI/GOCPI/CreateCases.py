@@ -98,7 +98,7 @@ class CreateCases:
         Args:
             regions (list): list of regions 
         """
-        self.regions = regions
+        self.region = regions
 
     def set_emission(self, emissions):
         """Sets the cases emission types
@@ -106,7 +106,7 @@ class CreateCases:
         Args:
             emissions (List): list of emission types
         """
-        self.emissions = emissions
+        self.emission = emissions
 
     def set_technology(self, technology):
         """ Sets the cases technology type
@@ -197,22 +197,30 @@ class CreateCases:
         self.dailytimebracket = dailytimebracket
 
     # Functions to define the parameters moving forward.
-    def set_year_split(self, YearSplit):
-        """ Sets the 2D parameter YearSplit
+    def set_year_split(self, timeslices, years, splits):
+        """ Creates 2D Numpy Array Parameter Splits.
+            (Note: The index positions of timelices and splits must match)
 
         Args:
-            yearsplit (int): 2D Matrix of Timeslice Partitions
+            timeslices (list): List of timeslices
+            years (list): List of years
+            splits (dict): A dictionary linking yearsplits to timeslices
         """
+        # Creates a 2D YearSplit parameter
+        YearSplit = np.ones((len(timeslices), len(years)))
+        index = 0
+        for time in timeslices:
+            YearSplit[index, :] = splits[time]
+            index = index + 1
         self.YearSplit = YearSplit
 
     def set_discount_rate(self, parameters):
-        """ Calculates the effective tax rates for each region
+        """ Calculates the weighted average cost of capital/discount rate
+            for each region.
 
         Args:
             parameters ([type]): [description]
         """
-
-        self.DaySplit = None
 
     def set_day_split(self, parameters):
         """[summary]

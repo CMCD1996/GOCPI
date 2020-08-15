@@ -25,10 +25,12 @@ nz_energy_system = GF.CreateCases()
 
 # Defines the forecast period
 nz_energy_system.set_year(2020, 2030, 1)
+print(nz_energy_system.year)
 
 # Defines the regions
 REGION = ['NEWZEALAND', 'AUSTRALIA']
 nz_energy_system.set_region(REGION)
+print(nz_energy_system.region)
 
 # Defines the Emissions
 EMISSION = ['CO2', 'NOX', 'CO', 'METHANE']
@@ -54,8 +56,8 @@ print(nz_energy_system.fuel)
 
 # Defines timeslices
 TIMESLICE = [
-    'INTERMEDIATE_DAY', 'INTERMEDIATE_NIGHT', 'SUMMER_DAY', 'SUMMER_NIGHT',
-    'WINTER_DAY', 'WINTER_NIGHT'
+    'DAY_SUMMER', 'NIGHT_SUMMER', 'DAY_WINTER', 'NIGHT_WINTER',
+    'DAY_INTERMEDIATE', 'NIGHT_INTERMEIATE'
 ]
 nz_energy_system.set_timeslice(TIMESLICE)
 print(nz_energy_system.timeslice)
@@ -80,3 +82,58 @@ print(nz_energy_system.season)
 # Defines the dailytimebracket
 nz_energy_system.set_daily_time_bracket(3)
 print(nz_energy_system.dailytimebracket)
+
+# Defines the YearSplit parameter
+# Creates Dictionary for number of days
+days = {
+    'January': 31,
+    'February': 28,
+    'March': 31,
+    'April': 30,
+    'May': 31,
+    'June': 30,
+    'July': 31,
+    'August': 31,
+    'September': 30,
+    'October': 31,
+    'November': 30,
+    'December': 31
+}
+
+# Combines summer, winter and intermediate nights
+days_summer = days['January'] + days['February'] + days['December']
+days_winter = days['June'] + days['July'] + days['August']
+days_intermediate = days['April'] + days['May'] + days['March'] + days[
+    'September'] + days['October'] + days['November']
+days_total = days_summer + days_winter + days_intermediate
+
+# Creates fractions and stores values in a dictionary
+day_summer = (0.5 * days_summer / days_total)
+night_summer = (0.5 * days_summer / days_total)
+day_winter = (0.5 * days_winter / days_total)
+night_winter = (0.5 * days_winter / days_total)
+day_intermediate = (0.5 * days_intermediate / days_total)
+night_intermediate = (0.5 * days_intermediate / days_total)
+
+# Dictionaries
+splits = {
+    'DAY_SUMMER': day_summer,
+    'NIGHT_SUMMER': night_summer,
+    'DAY_WINTER': day_winter,
+    'NIGHT_WINTER': night_winter,
+    'DAY_INTERMEDIATE': day_intermediate,
+    'NIGHT_INTERMEIATE': night_intermediate
+}
+
+# Imports S&P NZX:50 and S&P ASX:200 Indices Arrays to calculate market returns
+
+# Defines the Dictionaries required for country profiles
+equity = {'NEWZEALAND': 1, 'AUSTRALIA': 1}
+debt = {'NEWZEALAND': 110477000000, 'AUSTRALIA': 1}
+cost_of_equity = {'NEWZEALAND': 1, 'AUSTRALIA': 1}
+cost_of_debt = {'NEWZEALAND': 1, 'AUSTRALIA': 1}
+risk_free_rates = {'NEWZEALAND': 1, 'AUSTRALIA': 1}
+market_returns = {'NEWZEALAND': 1, 'AUSTRALIA': 1}
+effective_tax_rate = {'NEWZEALAND': 0.28, 'AUSTRALIA': 0.30}
+
+# Creates the YearSplit parameter 2D Matrix (make sure order is preserved when passing in functions)

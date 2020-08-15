@@ -5,7 +5,7 @@ from setuptools import setup
 'Note: PyPi https://pypi.org/manage/project/gocpi-functions/releases/#modal-close'
 
 setup(name='GOCPI',
-      version='2.18',
+      version='3.0.20',
       description=
       'User Defined Functions and Energy Systems Data for GOCPI Project',
       packages=['GOCPI'],
