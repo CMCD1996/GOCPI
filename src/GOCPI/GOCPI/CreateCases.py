@@ -214,13 +214,30 @@ class CreateCases:
             index = index + 1
         self.YearSplit = YearSplit
 
-    def set_discount_rate(self, parameters):
-        """ Calculates the weighted average cost of capital/discount rate
-            for each region.
+    def set_discount_rate(self, equity, debt, market_index,
+                          cost_of_debt_pre_tax, risk_free_rate,
+                          effective_tax_rate):
+        """ Calculates the discount rate for each region.
 
         Args:
-            parameters ([type]): [description]
+            equity (dict): Dictionary of equity totals from treasury balance sheets
+            debt (dict): Dictionary of equity totals from treasury balance sheets
+            market_index (int, array): Regional monthly index returns (Arrays)
+            cost_of_debt_pre_tax (dict): Dictionary of pre-tax cost of debts calculated from treasury balance sheets
+            risk_free_rate (dict): Dictionary of risk free rates from 10 year swap rates
+            effective_tax_rate (dict): Dictionary of company tax rates
+
+        Returns:
+           discount_rates (int): Regional discount rates stored in the object.
         """
+        # Calculates annualised returns for each regions market index
+        annualised_returns = {}
+        for region in market_index:
+            annualised_rate_of_return = (np.power(
+                (1 + ((market_index[region][-1] - market_index[region][0]) /
+                      market_index[region][0])),
+                (12 / len(market_index[region]))) - 1)
+            annualised_returns[region] = annualised_rate_of_return
 
     def set_day_split(self, parameters):
         """[summary]

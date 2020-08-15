@@ -35,16 +35,17 @@
 \contentsline {subsubsection}{\numberline {4.2.2}Meeting minutes}{20}{subsubsection.4.2.2}% 
 \contentsline {subsection}{\numberline {4.3}Standardised Forecasting Methodology}{21}{subsection.4.3}% 
 \contentsline {subsection}{\numberline {4.4}Geographical Partitioning}{21}{subsection.4.4}% 
-\contentsline {subsection}{\numberline {4.5}Forecasting Energy Systems}{21}{subsection.4.5}% 
+\contentsline {subsection}{\numberline {4.5}Forecasting Energy Systems: NZ Example}{21}{subsection.4.5}% 
+\contentsline {subsubsection}{\numberline {4.5.1}Energy System Functions}{21}{subsubsection.4.5.1}% 
 \contentsline {subsection}{\numberline {4.6}TIMES/OseMOSYS Adaptation}{21}{subsection.4.6}% 
 \contentsline {subsubsection}{\numberline {4.6.1}TIMES}{21}{subsubsection.4.6.1}% 
 \contentsline {subsubsection}{\numberline {4.6.2}OseMOYSIS}{21}{subsubsection.4.6.2}% 
-\contentsline {subsection}{\numberline {4.7}Simulation Processes}{21}{subsection.4.7}% 
-\contentsline {subsection}{\numberline {4.8}Development of Investment Strategies}{21}{subsection.4.8}% 
-\contentsline {subsection}{\numberline {4.9}User Interface and User Experience Development}{21}{subsection.4.9}% 
-\contentsline {section}{\numberline {5}Results}{22}{section.5}% 
-\contentsline {section}{\numberline {6}Discussion}{23}{section.6}% 
-\contentsline {section}{\numberline {7}Summary and Conclusion}{24}{section.7}% 
-\contentsline {section}{\numberline {8}Future Work}{25}{section.8}% 
-\contentsline {section}{\numberline {9}Appendices}{26}{section.9}% 
-\contentsline {section}{\numberline {10}References}{27}{section.10}% 
+\contentsline {subsection}{\numberline {4.7}Simulation Processes}{22}{subsection.4.7}% 
+\contentsline {subsection}{\numberline {4.8}Development of Investment Strategies}{22}{subsection.4.8}% 
+\contentsline {subsection}{\numberline {4.9}User Interface and User Experience Development}{22}{subsection.4.9}% 
+\contentsline {section}{\numberline {5}Results}{23}{section.5}% 
+\contentsline {section}{\numberline {6}Discussion}{24}{section.6}% 
+\contentsline {section}{\numberline {7}Summary and Conclusion}{25}{section.7}% 
+\contentsline {section}{\numberline {8}Future Work}{26}{section.8}% 
+\contentsline {section}{\numberline {9}Appendices}{27}{section.9}% 
+\contentsline {section}{\numberline {10}References}{28}{section.10}% 

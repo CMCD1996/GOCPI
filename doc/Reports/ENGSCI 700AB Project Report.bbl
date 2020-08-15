@@ -201,6 +201,29 @@
       \verb https://doi.org/10.1007/978-0-387-39940-9_1245
       \endverb
     \endentry
+    \entry{RBA_ZCL}{misc}{}
+      \name{author}{1}{}{%
+        {{hash=a6b518fb1261e86f86d510a0d170bd5e}{%
+           family={Australia},
+           familyi={A\bibinitperiod},
+           given={Reserve\bibnamedelima Bank},
+           giveni={R\bibinitperiod\bibinitdelim B\bibinitperiod},
+           prefix={of},
+           prefixi={o\bibinitperiod}}}%
+      }
+      \strng{namehash}{a6b518fb1261e86f86d510a0d170bd5e}
+      \strng{fullhash}{a6b518fb1261e86f86d510a0d170bd5e}
+      \strng{bibnamehash}{a6b518fb1261e86f86d510a0d170bd5e}
+      \strng{authorbibnamehash}{a6b518fb1261e86f86d510a0d170bd5e}
+      \strng{authornamehash}{a6b518fb1261e86f86d510a0d170bd5e}
+      \strng{authorfullhash}{a6b518fb1261e86f86d510a0d170bd5e}
+      \field{sortinit}{A}
+      \field{sortinithash}{d77c7cdd82ff690d4c3ef13216f92f0b}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{howpublished}{Available at \url{https://www.rba.gov.au/statistics/tables/} (2020/08/15)}
+      \field{title}{Zero Coupon Interest Rates - Analytical Series - 2009 to Current)}
+    \endentry
     \entry{J:6}{article}{}
       \name{author}{2}{}{%
         {{hash=e3224997d0e85a9d2691f0b1e8e42db8}{%
@@ -936,6 +959,29 @@
       \field{title}{Paris Agreement}
       \field{type}{techreport}
       \field{year}{2015}
+    \endentry
+    \entry{RBNZ_WIR}{misc}{}
+      \name{author}{1}{}{%
+        {{hash=cf6cc5abd5ab44fced481605f0a481f6}{%
+           family={New\bibnamedelima Zealand},
+           familyi={N\bibinitperiod\bibinitdelim Z\bibinitperiod},
+           given={Reserve\bibnamedelima Bank},
+           giveni={R\bibinitperiod\bibinitdelim B\bibinitperiod},
+           prefix={of},
+           prefixi={o\bibinitperiod}}}%
+      }
+      \strng{namehash}{cf6cc5abd5ab44fced481605f0a481f6}
+      \strng{fullhash}{cf6cc5abd5ab44fced481605f0a481f6}
+      \strng{bibnamehash}{cf6cc5abd5ab44fced481605f0a481f6}
+      \strng{authorbibnamehash}{cf6cc5abd5ab44fced481605f0a481f6}
+      \strng{authornamehash}{cf6cc5abd5ab44fced481605f0a481f6}
+      \strng{authorfullhash}{cf6cc5abd5ab44fced481605f0a481f6}
+      \field{sortinit}{N}
+      \field{sortinithash}{f7242c3ed3dc50029fca1be76c497c7c}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{howpublished}{Available at \url{https://www.rbnz.govt.nz/statistics/b2} (2020/08/15)}
+      \field{title}{Wholesale Interest Rates -B2}
     \endentry
     \entry{W:13}{misc}{}
       \name{author}{1}{}{%

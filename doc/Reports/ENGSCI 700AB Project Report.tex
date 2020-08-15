@@ -575,7 +575,44 @@ The minutes from these meetings accompanied project updates in the project logbo
 
 \subsection{Standardised Forecasting Methodology}
 \subsection{Geographical Partitioning}
-\subsection{Forecasting Energy Systems}
+\subsection{Forecasting Energy Systems: NZ Example}
+\subsubsection{Energy System Functions}
+Many functions were to enable scalable energy system modelling. 
+The most important functions are highlighted in this section.
+The function \textbf{def set\_discount\_rate} calculates the discount rate for each region.
+This function is most important as the discount rate underpins the total value of discounted cash flows and the objective function.
+The discount rate is calculated using the weighted average cost of capital (WACC) method.
+The WACC, cost of equity and pre-tax cost of debt are calculated as follows:
+\begin{align}
+	WACC &= \frac{D}{E+D+K}\times r_d \times (1-t) + \frac{E}{D+E+K}\times r_e + \frac{K}{D+E+K}\times r_k
+\end{align}
+\begin{align}
+	r_e &= r_f + \beta \times (r_m - r_f)\\
+	r_d &= \frac{i}{D}
+\end{align}
+\begin{equation*}
+	\begin{split}
+		&D= \text{Book value of debt (\$m)}\\
+		&r_f= \text{Risk free rates (\%)}\\
+		&K= \text{Market value of preferred equity (\$m)}\\
+		&r_d= \text{Pre-tax cost of debt (\%)}\\
+		&r_e= \text{Cost of ordinary equity (\%)}
+	\end{split}
+\quad\leftrightarrow\quad
+	\begin{split}
+		&r_k= \text{Cost of preferred equity (\%)}\\
+		&t= \text{Effective tax rate (\%)}\\
+		&i= \text{Cost of borrowings (\%)}\\
+		&\beta= \text{Market risk co-efficient (\%)}\\
+		&r_m= \text{Market return (\%)}\\
+		&E= \text{Market value of equity (\$m)}
+	\end{split}
+\end{equation*}
+The regions used in the energy system example are New Zealand and Australia. Both are public entities by nature.
+It is assumed the financial performance and position for each region, reported in the the New Zealand and Australian Government's financial reports, are suitable for providing the financials necessary for calculating discount rates.
+Each Government's respective Treasury produces these reports.
+Cost of borrowings (i), Equity (E) and Debt (D) are reported in each region's annual financial reports produced by Treasury ()
+Risk free rates were derived from average 10 Year Government bond yields using data from each region's respective Reserve Bank (Reserve Bank of New Zealand \cite{RBNZ_WIR} and Reserve Bank of Australia \cite{RBA_ZCL}). 
 \subsection{TIMES/OseMOSYS Adaptation}
 \subsubsection{TIMES}
 \subsubsection{OseMOYSIS}\label{OseMOSYS}

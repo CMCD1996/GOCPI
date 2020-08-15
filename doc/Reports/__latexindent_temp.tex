@@ -1,285 +1,425 @@
-% !TEX TS-program = pdflatex
-% !TEX encoding = UTF-8 Unicode
-% !BIB TS-program = biber
-% !BIB program = biber
+% This is my bib file with references
+% Use this PDF Link to get new sources.
+% http://web.mit.edu/rsi/www/pdfs/bibtex-format.pdf
 
-\documentclass[12pt]{article}
+%Technical Reports
+@techreport{TR:1,
+author = {BusinessNZ Energy Council},
+title = {New Zealand Energy Scenarios - Navigating Energy Futures to 2050},
+series = {Technical Report},
+volume = {q},
+publisher = {BusinessNZ Energy Council},
+year = {2015}
+}
+@techreport{TR:2,
+author = {BusinessNZ Energy Council},
+title = {New Zealand Energy Scenarios - Navigating Energy Futures to 2060},
+series = {Technical Report},
+volume = {q},
+publisher = {BusinessNZ Energy Council},
+year = {2019}
 
-%%% PAGE DIMENSIONS
-\usepackage[margin=2.54cm]{geometry}
-\geometry{a4paper} 
+}@techreport{TR:3,
+author = {BP plc},
+title = {BP Statistical Review of World Energy},
+series = {Technical Report},
+volume = {68},
+publisher = {BP plc},
+year = {2019}
+}
 
-\usepackage{graphicx} % For better graphics
-\usepackage{pdfpages} % To insert pdfs into the library
-\usepackage{tikz}
-\usepackage{wrapfig}
-\usepackage{siunitx}
+}@techreport{TR:4,
+author = {Deloitte US},
+title = {2020 Renewable Energy Industry Outlook},
+series = {Technical Report},
+volume = {q},
+publisher = {Deloitte US},
+year = {2019}
+}
 
-%%% PACKAGES
-\usepackage{booktabs} % for much better looking tables
-\usepackage{amsmath} % for better maths
-\usepackage{paralist} % very flexible & customisable lists (eg. enumerate/itemize, etc.)
-\usepackage{verbatim} % adds environment for commenting out blocks of text & for better verbatim
-\usepackage{subfig} % make it possible to include more than one captioned figure/table in a single float
-\usepackage[framed,numbered]{matlab-prettifier} % enable inserting matlab code.
-\usepackage[parfill]{parskip}
-%\addtolength{\jot}{1em}
-\usepackage{amssymb}
-\usepackage{cancel}
-\usepackage{color}
-\usepackage{listings}
-\usepackage{multicol}
-\usepackage{float}
+@techreport{TR:5,
+author = {Intergovernmental Panel on Climate Change},
+title = {Global Warming of 1.5 C}},
+series = {Technical Report},
+volume = {q},
+publisher = {Intergovernmental Panel on Climate Change},
+year = {2019}
+}
 
-% References
-\usepackage[backend=biber,style = numeric]{biblatex}
-\bibliography{sources}
+@techreport{TR:6,
+author = {United Nations},
+title = {Paris Agreement},
+publisher = {United Nations},
+year = {2015}
+}
 
-%%% HEADERS & FOOTERS
-\usepackage{fancyhdr} % This should be set AFTER setting up the page geometry
-\setlength{\headheight}{15pt}
-\pagestyle{fancy} % options: empty , plain , fancy
-\renewcommand{\headrulewidth}{0pt} % customise the layout...
-\lhead{ENGSCI 700AB}\chead{Global Carbon Pricing}\rhead{cmcd398}
-\lfoot{}\cfoot{\thepage}\rfoot{}
+@techreport{TR:7,
+author = {World Bank Group},
+title = {State and Trends of Carbon Pricing 2019},
+series = {Technical Report},
+volume = {q},
+publisher = {World Bank Group},
+year = {2019}
+}
 
-%%% SECTION TITLE APPEARANCE
-\usepackage{sectsty}
+@techreport{TR:8,
+author = {World Energy Scenarios},
+title = {World Energy Scenarios 2019},
+series = {Technical Report},
+volume = {q},
+publisher = {World Energy Council},
+year = {2019}
+}
 
-%%% ToC (table of contents) APPEARANCE
-\usepackage[nottoc,notlof,notlot]{tocbibind} % Put the bibliography in the ToC
-\usepackage[titles,subfigure]{tocloft} % Alter the style of the Table of Contents
-\renewcommand{\cftsecfont}{\rmfamily\mdseries\upshape}
-\renewcommand{\cftsecpagefont}{\rmfamily\mdseries\upshape} % No bold!
+@techreport{TR:9,
+author = {Connor McDowall},
+title = {ENGSC 700AB Research Compendium},
+series = {Global Optimisation Carbon Pricing Initiatives},
+volume = {q},
+publisher = {University of Auckland},
+year = {2020}
+}
 
-%%% Hyperlinking 
-\usepackage{hyperref}
-\begin{document}
-\begin{titlepage}
-	\newcommand{\HRule}{\rule{\linewidth}{0.5mm}} % Defines a new command for horizontal lines, change thickness here
-	
-	\center
-	
-	%------------------------------------------------
-	%	Headings
-	%------------------------------------------------
-	
-	\textsc{\LARGE }\\[1.5cm] % Main heading such as the name of your university/college
-	
-	\textsc{\Large ENGSCI 700A/B}\\[0.5cm] % Major heading such as course name
-	
-	%------------------------------------------------
-	%	Title
-	%------------------------------------------------
-	
-	\HRule\\[0.5cm]
-	
-	{\huge\bfseries Research Compendium}\\[0.4cm] % Title of your document
-	
-	\HRule\\[0.5cm]
-	
-	%------------------------------------------------
-	%	Author(s)
-	%------------------------------------------------
-	
-	{\large\textit{Connor McDowall \\cmcd398 \\530913386}}\\
-	
-	%------------------------------------------------
-	%	Date
-	%------------------------------------------------
-	
-	\vfill\vfill\vfill % Position the date 3/4 down the remaining page
-	
-	{\large\today} % Date, change the \today to a set date if you want to be precise
-	 
-	%----------------------------------------------------------------------------------------
-	
-	\vfill % Push the date up 1/4 of the remaining page
-	
-\end{titlepage}
-\tableofcontents
-\listoffigures
-\listoftables
-\newpage
-\section{Project Log Book}
-Note: Rework points before this date.
-\subsection{January - February}
-\begin{itemize}
-	\item Began scoping energy related project during experience in the Commercial team at ExxonMobil Australia
-	\item Emailed and Meet with Rosalind
-	\item Decided to look at Carbon Pricing Initiatives to inform reinvestment and carbon pricing initiatives
-	\item Rosalind tasked with with investigating GAMS
-\end{itemize}
-\subsection{March 1st - May 30th}
-\begin{itemize}
-	\item Coronavirus was classified a worldwide pandemic
-	\item New Zealand was sent into lockdown
-	\item Researched 30+ Academic reports, articles, websites for Literature Review
-	\item Wrote 10 page Literature Review
-	\item Scoped the project
-	\item Submitted Mid-Semester Literature Review on May 5th
-	\item Installed GAMS on my local device
-	\item Began researching the construction of an energy system with Excel, VEDA FE, GAMS, VEDA BE, Python
-	\item Created GOCPI Geographies.gyp script to combined cities, countries and continents while providing granularity to the modelling process
-	\item Created GOCPI.html as a project display for selling the project
-	\item Ran into a series of installation and usage issues with VEDA and GAMS
-	\item Requested VM to work from home
-	\item Installed VMware and GAMS on FlexIT systems
-	\item Faced GAMS Licensing issues on FlexIT
-\end{itemize}
-\subsection{May 31st 2020}
-\begin{enumerate}
-	\item Installed Microsoft Remote Desktop and FortiClient VPN to access UoA Virtual Machine
-	\item Set up Virtual Machine
-\end{enumerate}
-\subsection{June 1st 2020}
-\begin{enumerate}
-	\item Installed VEDA FE and VEDA FE on Virtual Machine
-	\item Downloaded 12 Demo Models to build my TIMES Model
-\end{enumerate}
-\subsection{June 3rd}
-\begin{enumerate}
-	\item Begun testing the Model the Demo Models
-\end{enumerate}
-\subsection{June 4th - June 10th}
-\begin{enumerate}
-	\item Meeting with Rosalind. Discussed set up and action points moving forward.
-	\item Showed VEDA-FE. Four assessments were discussed.
-	\item Continued researching how to use VEDA
-\end{enumerate}
-\subsection{June 11th - Approximately 4 hours}
-\begin{enumerate}
-	\item Meeting with Rosalind at 10:30am via Zoom
-	\item Discussed action points moving forward.
-	\item Continued to adapt excel spreadsheets for Excel Data.
-	\item There is still an issue with GAMS Installation (Check with Tony. He knows a guy)
-	\item VEDA FE creates the necessary DD files. Continue to work through the DEMO Models to understand GAMS.
-\end{enumerate}
-\subsection{June 16th - July 1st}
-\begin{itemize}
-	\item No Progress - Study Break and Exams for ACCTG 371, FINANCE 362 and ENGSCI 711
-\end{itemize}
-\subsection{July 2nd}
-\begin{itemize}
-	\item Last meeting in Rosalind's corner office. Discussed online exams, Chegg, cheating and project next steps.
-	\item Agreed to adapt spreadsheets for user input and use BP's World Energy Outlook Statistics to determine production, conversion and consumption rates.
-\end{itemize}
-\subsection{July 3rd}
-\begin{itemize}
-	\item Began adapting Demo 12 model for custom inputs
-	\item Began using the openpyxl python library to manipulate excel (GOCPI Input.gyp)
-\end{itemize}
-\subsection{July 4rd}
-\begin{itemize}
-	\item Continue to work on openpyxl adaptation with xls and xlsx excel sheets
-\end{itemize}
-\subsection{July 6th}
-\begin{itemize}
-	\item Created a proper file directory for managing the project
-	\item Continued to adapt GOCPI Inputs.gyp to scale across multiple sheets
-	\item Adapted GOCPI.html, GOCPI Inputs.gyp and GOCPI Geographies to work after rearranging the geographies
-	\item Nearly had a heart attacked as I was led to believe issues with Github and Git meant I deleted my entire project
-	\item Recovered entire project and reports
-\end{itemize}
-\subsection{July 7th}
-\begin{itemize}
-	\item Worked on file manipulation in Google Drive via Google Cloud APIs
-	\item Discovered IEA Energy Balances on stats.OECD.org via Uni library databases
-	\item Found 20GB csv on Energy Balances data
-	\item Processed 20GB csv to create two ~80MB csv for 2017 energy balance data using Microsoft Access
-\end{itemize}
-\subsection{July 7th}
-\begin{itemize}
-	\item Developed and resolved issues relating to git and Github
-	\item Developed processing methods for Energy Balance statistics using pandas pivot table function
-\end{itemize}
-\subsection{July 17th}
-\begin{itemize}
-	\item Meeting with Kiti (NZ TIMES Energy Modeler)
-	\item Discuss constraints associated TIMES and GAMS modelling
-	\item Introduced to OseMOSYS (Open Source, Energy Modelling Tool)
-	\item Introduced to MBIE,EECA (https://www.eeca.govt.nz/)
-	\item Agreed to explore OseMOSYS and alternative datasources to build an alternative product.
-	\item Agreed to keep Kiti updated on projec process moving forward.
-\end{itemize}
-\subsection{July 18th}
-\begin{itemize}
-	\item Downloaded MBIE Energy 
-	\item Research OseMOSYS energy modelling Approach
-	\item Downloaded OseMOSYS energy modelling tools
-	\item Tested Pyomo, GNU and GAMS approaches. GNU optimised using glpsol in conda environment. Progress works well.
-	\item Decision: Move away from TIMES/GAMS modelling to using Osemosys.
-	\item Began Scripting Sheet to generate model input text file
-\end{itemize}
-\subsection{July 19th}
-\begin{itemize}
-	\item Created excel spreadsheet to store OseMOSYS energy model inputs
-	\item Began adapting sets, parameters, variables, equations and constraints to excel template.
-	\item Researched more about OseMOSYS
-\end{itemize}
-\subsection{July 20th}
-\begin{itemize}
-	\item Continued to adapt 200+ lines of model code in the excel templates
-\end{itemize}
-\subsection{July 21st}
-\begin{itemize}
-	\item Learned to create custom python packages.
-	\item Began working on adjustable sets
-\end{itemize}
-\subsection{July 22nd}
-\begin{itemize}
-	\item 
-\end{itemize}
-\subsection{July 23rd}
-\begin{itemize}
-	\item Productive meeting with Rosalind, showed model output. (Rosalind said progress was really exciting)
-\end{itemize}
-\subsection{July 24th}
-\begin{itemize}
-	\item Continued creating a custom package for the GCOPI module.
-\end{itemize}
-\subsection{July 25th}
-\begin{itemize}
-	\item Started GOCPI module to create scalable data files
-\end{itemize}
-\subsection{July 26th}
-\begin{itemize}
-	\item Continued to adapt GOCPI custom package to create scalable data files (Completed)
-\end{itemize}
-\subsection{July 27th}
-\begin{itemize}
-	\item Edited report headings and created a structure for the Research Report.
-\end{itemize}
-\subsection{July 28th}
-\begin{itemize}
-	\item Investigated CPLEX Solvers
-	\item Registered for the IBM Academic Initiative
-	\item Downloaded and Installed IBM ILOG CPLEX Optimizer Studio
-	\item Installed cplex and docplex Python APIs from the IBM ILOG CPLEX Optimizer Studio
-	\item Added create model file model to GOCPI
-\end{itemize}
-\subsection{July 30th - August 9th}
-\begin{itemize}
-	\item Spent a day fixing git commit and push issues
-	\item Installed GIT LFS and the functionality of .gitignore to prevent the committing .mp4 and .lp files
-	\item Installed yapf in Microsoft Visual Studio Code to enable PEP-8 Autoformatting
-	\item Wrote 4.5 pages for the technical, mainly focusing on the setup of Python, Anaconda, CPLEX, Git, GitHub, folder structure suggested by Wilson et al and the OseMOSYS methodology.
-	\item Submitted the 4-6 page technical report.
-	\item Created presentation structure 
-\end{itemize}
-\subsection{August 10th}
-\begin{itemize}
-	\item Drafted and submitted four slide summary for presentation.
-	\item Recorded and submitted 5 minute presentation
-\end{itemize}
-\subsection{August 12th}
-\begin{itemize}
-	\item 
-\end{itemize}
-\subsection{October 30th}
-\begin{itemize}
-	\item \textbf{Submit Final Report}
-\end{itemize}
-\section{Bibliography}
-\printbibliography
-\end{document}
+@techreport{IEA_WEM,
+author = {International Energy Agency},
+title = {World Energy Model Documentation},
+publisher = {International Energy Agency},
+year = {2019}
+}
+
+# Website content
+@unpublished{A:1,
+author = {Joao Pedro Gouveia and Luís Dias and Patricia Fortes and Julia Seixas},
+title = {TIMES PT: Integrated Energy System Modeling},
+note = {Conference: IT4 Energy, At Lisbon},
+year = {2012}
+}
+@unpublished{A:2,
+author = {Chantel Beck and Sahar Rashidbeigi and Occo Roelofsen and Eveline Speelman},
+title = {The Future is Now: How Oil and Gas Companies can Decarbonixe},
+note = {McKinsey and Company: Oil and Gas Analysis},
+year = {2020}
+}
+@unpublished{PEP8,
+author = {Guido Van Rossum, Barry Warsaw, and Nick Coghlan},
+title = {PEP 8: Style Guide for Python Code},
+note = {Python. org, 1565},
+year = {2001}
+}
+
+@phdthesis{A:3,
+author = {T Sterner and G Kohlin},
+title = {Pricing Carbon: The Challenges},
+publisher = {University of Gothenburg},
+year = {2015}
+}
+
+@unpublished{A:4,
+author = {Chantel Beck and Sahar Rashidbeigi and Occo Roelofsen and Eveline Speelman},
+title = {The Future is Now: How Oil and Gas Companies can Decarbonixe},
+note = {McKinsey and Company: Oil and Gas Analysis},
+year = {2020}
+}
+% Websites
+@misc{W:1 ,
+    author = {Ministry of Business Innovation and Employment},
+    title = {Electricity Industry},
+    howpublished = {Available at \url{https://www.mbie.govt.nz/building-and-energy/energy-and-natural-resources/energy-generation-and-m                 arkets/electricity-market/electricity-industry/} (2019/04/23)}
+}
+@misc{W:2 ,
+    author = {International Electricity Agency},
+    title = {Fuels and Technologies},
+    howpublished = {Available at \url{https://www.iea.org/fuels-and-technologies} (2020/04/21)}
+}
+@misc{W:3 ,
+    author = {Financial Times},
+    title = {US Oil Price Back Below Zero After Historic Plunge},
+    howpublished = {Available at \url{https://www.ft.com/content/26ea5ef9-0619-4e50-b605-58e36d3fc4d9} (2020/04/21)}
+}
+@misc{W:4 ,
+    author = {United States Environmental Protection Agency},
+    title = {Overview of Greenhouse Gas Emissions},
+    howpublished = {Available at \url{https://www.epa.gov/ghgemissions/overview-greenhouse-gases} (2020/04/21)}
+}
+
+@misc{W:5 ,
+    author = {The World Bank},
+    title = {The World Bank Data},
+    howpublished = {Available at \url{https://data.worldbank.org/indicator/NY.GDP.PCAP.KD} (2020/04/21)}
+}
+@misc{W:6 ,
+    author = {The World Bank},
+    title = {World Bank Indicators: Structure of Output},
+    howpublished = {Available at \url{http://wdi.worldbank.org/table} (2020/04/23)}
+}
+@misc{W:7 ,
+    author = {United Nations Framework Convention on Climate Change},
+    title = {What is the Kyoto Protocol?},
+    howpublished = {Available at \url{https://unfccc.int/kyoto_protocol} (2020/04/23)}
+}
+
+@misc{W:8 ,
+    author = {United Nations Framework Convention on Climate Change},
+    title = {What is the Paris Agreement?},
+    howpublished = {Available at \url{https://unfccc.int/process-and-meetings/the-paris-agreement/what-is-the-paris-agreement} (2020/04/23)}
+}
+@misc{W:9 ,
+    author = {OECD},
+    title = {Emissions Trading Systems},
+    howpublished = {Available at \url{https://www.oecd.org/environment/tools-evaluation/emissiontradingsystems.htm} (2020/04/23)}
+}
+@misc{W:10,
+    author = {Bloomberg Green},
+    title = {Renewable Investment},
+    howpublished = {Available at \url{https://www.bloomberg.com/graphics/climate-change-data-green/investment.html} (2020/04/23)}
+}
+@misc{W:11,
+    author = {GAMS},
+    title = {An Introduction to GAMS},
+    howpublished = {Available at \url{https://www.gams.com/products/introduction/} (2020/04/23)}
+}
+@misc{W:12,
+    author = {ETSAP},
+    title = {Overview of TIMES Modelling Tool},
+    howpublished = {Available at \url{https://iea-etsap.org/index.php/etsap-tools/model-generators/times} (2020/04/26)}
+}
+@misc{W:13,
+    author = {OSeMOSYS},
+    title = {Open Source Energy Modelling System},
+    howpublished = {Available at \url{http://www.osemosys.org/} (2020/08/02)}
+}
+@misc{YAPF,
+    author = {Google},
+    title = {YAPF - A formatter for Python files.},
+    howpublished = {Available at \url{https://github.com/google/yapf} (2020/08/09)}
+}
+
+http://pypl.github.io/PYPL.html
+@misc{PYPL_Pop,
+    author = {PYPL},
+    title = {PYPL PopularitY of Programming Language},
+    howpublished = {Available at \url{http://pypl.github.io/PYPL.html} (2020/08/06)}
+}
+@misc{Python_Features,
+    author = {Medium},
+    title = {Top 10 In-Demand programming languages to learn in 2020},
+    howpublished = {Available at \url{https://towardsdatascience.com/top-10-in-demand-programming-languages-to-learn-in-2020-4462eb7d8d3e} (2020/08/06)}
+}
+https://www.gnu.org/software/glpk/
+@misc{glpk,
+    author = {GNU},
+    title = {GLPK (GNU Linear Programming Kit)},
+    howpublished = {Available at \url{https://www.gnu.org/software/glpk/} (2020/08/08)}
+}
+http://web.mit.edu/lpsolve_v5525/doc/MathProg.htm
+@misc{GNU_Mathprog,
+    author = {Massachusetts Institute of Technology},
+    title = {GNU Mathprog},
+    howpublished = {Available at \url{http://web.mit.edu/lpsolve_v5525/doc/MathProg.htm} (2020/08/08)}
+}
+https://www.ibm.com/academic/home
+@misc{IBM_AI,
+    author = {IBM},
+    title = {IBM Academic Initiative)},
+    howpublished = {Available at \url{https://www.ibm.com/academic/home} (2020/08/09)}
+}
+https://www.rba.gov.au/statistics/tables/
+@misc{RBA_ZCL,
+    author = {Reserve Bank of Australia},
+    title = {Zero Coupon Interest Rates - Analytical Series - 2009 to Current)},
+    howpublished = {Available at \url{https://www.rba.gov.au/statistics/tables/} (2020/08/15)}
+}
+https://www.rbnz.govt.nz/statistics/b2
+@misc{RBNZ_WIR,
+    author = {Reserve Bank of New Zealand},
+    title = {Wholesale Interest Rates -B2},
+    howpublished = {Available at \url{https://www.rbnz.govt.nz/statistics/b2} (2020/08/15)}
+}
+# Articles
+@article{J:1,
+author = {Richard J. Millar and Jan S. Fuglestvedt and Pierre Friedlingstein and Joeri Rogelj and Michael J. Grubb and H. Damon Matthews and Ragnhild B. Skeie and Piers M. Forster and David J. Frame and Myles R. Allen},
+title = {Emission budgets and pathways consistent with limiting warming to 1.5°C},
+journal = {Nature GeoScience},
+volume = {10},
+year = {2017},
+pages = {741--747}
+}
+@article{J:2,
+author = {Colin D. Butler},
+title = {Climate Change, Health and Existential Risks to Civilization: A Comprehensive Review (1989–2013)},
+journal = {International Journal of Environmental Research and Public Health},
+year = {2018},
+}
+@article{J:3,
+author = {Chaido Dritsaki and Melina Dritsaki},
+title = {Causal Relationship between Energy Consumption, Economic Growth and
+CO2 Emissions: A Dynamic Panel Data Approach},
+journal = {International Journal of Energy Economics and Policy},
+volume = {4},
+number = {2},
+year = {2014},
+pages = {125--136}
+}
+@article{J:4,
+author = {David I. Stern},
+title = {The Role of Energy in Economic Growth},
+journal = {SSRN Electronic Journal},
+year = {2010},
+}
+@article{J:5, 
+title={The Paris Climate Change Agreement: A New Hope?}, 
+volume={110}, 
+number={2}, 
+journal={American Journal of International Law}, 
+publisher={Cambridge University Press}, 
+author={Bodansky, Daniel}, 
+year={2016}, 
+pages={288–319}
+}
+@article{J:6, 
+title={Combating Global Climate Change: Why a Carbon Tax Is a Better Response to Global Warming Than Cap and Trade}, 
+volume={28}, 
+number={3}, 
+journal={Stanford Environmental Law Journal}, 
+publisher={U of Michigan Public Law Working Paper No. 117}, 
+author={Reven S. Avi-Yonah and David M.Uhlmann}, 
+year={2009}
+}
+@article{J:7, 
+title={Documentation for the MARKEL Family of Models},  
+publisher={ETSAP}, 
+author={Richard Loulou and Gary Goldstein and Ken Noble}, 
+year={2004}
+}
+@article{J:8, 
+title={Documentation for the TIMES Model - PART I 1–78},  
+publisher={ETSAP}, 
+author={Richard Loulou and Gary Goldstein and Uwe Remne and Amit Kanudia and Antti Lehtila}, 
+year={2005}
+}
+
+@article{J:9,
+title = {Linear and Non-linear Causality between CO2 Emissions and Economic Growth},
+volume = {33},
+number = {3},
+journal = {The Energy Journal},
+publisher = {International Association for Energy Economics},
+author = {Marco R. Barassi and Nicola Spagnolo},
+year = {2012},
+pages = {23--38}
+}
+@article{J:10,
+author = {Wilson, Greg and Bryan, Jennifer and Cranston, Karen and Kitzes, Justin and Nederbragt, Alexander and Teal, Tracy},
+year = {2016},
+month = {08},
+pages = {},
+title = {Good Enough Practices in Scientific Computing},
+volume = {13},
+journal = {PLOS Computational Biology},
+doi = {10.1371/journal.pcbi.1005510}
+}
+
+@article{IPM,
+title = "Interior-point methods",
+journal = "Journal of Computational and Applied Mathematics",
+volume = "124",
+number = "1",
+pages = "281 - 302",
+year = "2000",
+note = "Numerical Analysis 2000. Vol. IV: Optimization and Nonlinear Equations",
+issn = "0377-0427",
+doi = "https://doi.org/10.1016/S0377-0427(00)00433-7",
+url = "http://www.sciencedirect.com/science/article/pii/S0377042700004337",
+author = "Florian A. Potra and Stephen J. Wright",
+abstract = "The modern era of interior-point methods dates to 1984, when Karmarkar proposed his algorithm for linear programming. In the years since then, algorithms and software for linear programming have become quite sophisticated, while extensions to more general classes of problems, such as convex quadratic programming, semi-definite programming, and nonconvex and nonlinear problems, have reached varying levels of maturity. We review some of the key developments in the area, including comments on both the complexity theory and practical algorithms for linear programming, semi-definite programming, monotone linear complementarity, and convex programming over sets that can be characterized by self-concordant barrier functions."
+}
+
+
+# Inbook
+@Inbook{CBNF,
+author="Arenas, Marcelo",
+editor="LIU, LING
+and {\"O}ZSU, M. TAMER",
+title="Boyce-Codd Normal Form",
+bookTitle="Encyclopedia of Database Systems",
+year="2009",
+publisher="Springer US",
+address="Boston, MA",
+pages="264--265",
+isbn="978-0-387-39940-9",
+doi="10.1007/978-0-387-39940-9_1245",
+url="https://doi.org/10.1007/978-0-387-39940-9_1245"
+}
+
+# Incollections
+@incollection{Simplex,
+title = "4 - An Introduction to Optimization",
+editor = "Richard Bronson and Gabriel B. Costa",
+booktitle = "Matrix Methods (Third Edition)",
+publisher = "Academic Press",
+edition = "Third Edition",
+address = "Boston",
+pages = "127 - 148",
+year = "2009",
+isbn = "978-0-12-374427-2",
+doi = "https://doi.org/10.1016/B978-0-08-092225-6.50010-3",
+url = "http://www.sciencedirect.com/science/article/pii/B9780080922256500103",
+author = "Richard Bronson and Gabriel B. Costa"
+}
+# Software
+@software{Google_Drive,
+  author = {{Google LLC}},
+  title = {Google Drive},
+  url = {https://www.google.com/drive/},
+  date = {2020-08-05},
+}
+# Software
+@software{Git,
+  author = {{Linus Torvalds}},
+  title = {Git},
+  version = {2.28.0},
+  url = {https://git-scm.com/},
+  date = {2020-08-05},
+}
+@software{Anaconda,
+  author = {{Anaconda, Inc.}},
+  title = {Anaconda},
+  url = {https://www.anaconda.com/},
+  version = {2020.02},
+  date = {2020-08-08},
+}
+@software{Google_Drive,
+  author = {{Google LLC}},
+  title = {Google Drive},
+  url = {https://www.google.com/drive/},
+  version = {0.20.2},
+  date = {2020-08-05},
+}
+@software{AMPL,
+  author = {{AMPL Optimization Inc}},
+  title = {AMPL},
+  url = {https://ampl.com/},
+  date = {2020-08-08},
+}
+@software{VSC,
+  author = {{Microsoft Corporation}},
+  title = {Microsoft Visual Studio Code},
+  url = {https://code.visualstudio.com/},
+  version = {1.47.3},
+  date = {2020-08-09},
+}
+@software{Excel,
+  author = {{Microsoft Corporation}},
+  title = {Microsoft Excel},
+  url = {https://www.microsoft.com/en-us/microsoft-365/excel},
+  version = {16.39},
+  date = {2020-08-09},
+}
+@software{IBM_ILOG,
+  author = {{International Business Machines Corporation}},
+  title = {IBM ILOG CPLEX Optimization Studio},
+  url = {https://www.ibm.com/nz-en/products/ilog-cplex-optimization-studio},
+  version = {12.10},
+  date = {2020-08-09},
+}
+# Financial Reports

@@ -124,29 +124,42 @@ splits = {
     'DAY_INTERMEDIATE': day_intermediate,
     'NIGHT_INTERMEIATE': night_intermediate
 }
+# Creates the YearSplit parameter 2D Matrix
+nz_energy_system.set_year_split(TIMESLICE, nz_energy_system.year, splits)
 
 # Imports S&P NZX:50 and S&P ASX:200 Indices Arrays to calculate market returns
 root = '/Users/connor/Google Drive/Documents/University/Courses/2020/ENGSCI 700A&B/GOCPI/data/Inputs/GOCPI OseMOSYS'
 file_root = Path(root)
 file_spreadsheet = 'Returns.xls'
 location = GF.Navigation(file_root, file_spreadsheet)
-
-# print(location)
 market_returns = location.Find_File()
-print(market_returns)
 nz_df = pd.read_excel(market_returns, sheet_name='NZ')
 aus_df = pd.read_excel(market_returns, sheet_name='AUS')
-# aus_df = pd.read_excel(market_returns, sheet_name='AUSTRALIA')
-# print(nz_df.head())
-# print(aus_df.head())
+nz_index = nz_df[["Monthly_Returns"]].to_numpy()
+aus_index = aus_df[["Monthly_Returns"]].to_numpy()
 
-# Defines the Dictionaries required for country profiles
-equity = {'NEWZEALAND': 1, 'AUSTRALIA': 1}
+market_index = {'NEWZEALAND': nz_index, 'AUSTRALIA': aus_index}
+annualised_returns = {}
+for region in market_index:
+    annualised_rate_of_return = (np.power(
+        (1 + ((market_index[region][-1] - market_index[region][0]) /
+              market_index[region][0])), (12 / len(market_index[region]))) - 1)
+    annualised_returns[region] = annualised_rate_of_return
+print(annualised_returns)
+
+# Defines the Dictionaries required for Region. All regions should have the same names
+# Creates a dictionary of market indices
+market_index = {'NEWZEALAND': nz_index, 'AUSTRALIA': aus_index}
+# Tresury Equity Balances as at 2019
+equity = {'NEWZEALAND': 139746000000, 'AUSTRALIA': 1}
+# Tresury Debt Balance as at 2019
 debt = {'NEWZEALAND': 110477000000, 'AUSTRALIA': 1}
-cost_of_equity = {'NEWZEALAND': 1, 'AUSTRALIA': 1}
-cost_of_debt = {'NEWZEALAND': 1, 'AUSTRALIA': 1}
-risk_free_rates = {'NEWZEALAND': 1, 'AUSTRALIA': 1}
-market_returns = {'NEWZEALAND': 1, 'AUSTRALIA': 1}
+# Tresury Finance Cost(Interest Expense)/Total Borrowings as at 2019
+cost_of_debt_pre_tax = {
+    'NEWZEALAND': (4059000000 / 110477000000),
+    'AUSTRALIA': 1
+}
+# Calculated from 10 Year Treasury Bonds (10 Year Average)
+risk_free_rate = {'NEWZEALAND': 0.0360, 'AUSTRALIA': 1}
+# Company Tax Rates
 effective_tax_rate = {'NEWZEALAND': 0.28, 'AUSTRALIA': 0.30}
-
-# Creates the YearSplit parameter 2D Matrix (make sure order is preserved when passing in functions)
