@@ -35,7 +35,7 @@ print(nz_energy_system.region)
 # Defines the Emissions
 EMISSION = ['CO2', 'NOX', 'CO', 'METHANE']
 nz_energy_system.set_emission(EMISSION)
-print(nz_energy_system.emissions)
+print(nz_energy_system.emission)
 
 # Defines the technology set
 TECHNOLOGY = [
@@ -126,6 +126,17 @@ splits = {
 }
 
 # Imports S&P NZX:50 and S&P ASX:200 Indices Arrays to calculate market returns
+root = '/Users/connor/Google Drive/Documents/University/Courses/2020/ENGSCI 700A&B/GOCPI/data/Inputs/GOCPI OseMOSYS'
+file_root = Path(root)
+file_spreadsheet = 'region_annualised_market_returns.xlsx'
+location = GF.Navigation(file_root, file_spreadsheet)
+print(location)
+market_returns = location.Find_File()
+print(market_returns)
+nz_df = pd.read_excel(market_returns, sheet_name='NZ')
+# aus_df = pd.read_excel(market_returns, sheet_name='AUSTRALIA')
+# print(nz_df.head())
+# print(aus_df.head())
 
 # Defines the Dictionaries required for country profiles
 equity = {'NEWZEALAND': 1, 'AUSTRALIA': 1}
