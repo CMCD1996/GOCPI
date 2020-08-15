@@ -128,12 +128,14 @@ splits = {
 # Imports S&P NZX:50 and S&P ASX:200 Indices Arrays to calculate market returns
 root = '/Users/connor/Google Drive/Documents/University/Courses/2020/ENGSCI 700A&B/GOCPI/data/Inputs/GOCPI OseMOSYS'
 file_root = Path(root)
-file_spreadsheet = 'region_annualised_market_returns.xlsx'
+file_spreadsheet = 'Returns.xls'
 location = GF.Navigation(file_root, file_spreadsheet)
-print(location)
+
+# print(location)
 market_returns = location.Find_File()
 print(market_returns)
 nz_df = pd.read_excel(market_returns, sheet_name='NZ')
+aus_df = pd.read_excel(market_returns, sheet_name='AUS')
 # aus_df = pd.read_excel(market_returns, sheet_name='AUSTRALIA')
 # print(nz_df.head())
 # print(aus_df.head())
