@@ -37,9 +37,9 @@
 \contentsline {subsection}{\numberline {4.4}Geographical Partitioning}{21}{subsection.4.4}% 
 \contentsline {subsection}{\numberline {4.5}Forecasting Energy Systems: NZ Example}{21}{subsection.4.5}% 
 \contentsline {subsubsection}{\numberline {4.5.1}Energy System Functions}{21}{subsubsection.4.5.1}% 
-\contentsline {subsection}{\numberline {4.6}TIMES/OseMOSYS Adaptation}{21}{subsection.4.6}% 
-\contentsline {subsubsection}{\numberline {4.6.1}TIMES}{21}{subsubsection.4.6.1}% 
-\contentsline {subsubsection}{\numberline {4.6.2}OseMOYSIS}{21}{subsubsection.4.6.2}% 
+\contentsline {subsection}{\numberline {4.6}TIMES/OseMOSYS Adaptation}{22}{subsection.4.6}% 
+\contentsline {subsubsection}{\numberline {4.6.1}TIMES}{22}{subsubsection.4.6.1}% 
+\contentsline {subsubsection}{\numberline {4.6.2}OseMOYSIS}{22}{subsubsection.4.6.2}% 
 \contentsline {subsection}{\numberline {4.7}Simulation Processes}{22}{subsection.4.7}% 
 \contentsline {subsection}{\numberline {4.8}Development of Investment Strategies}{22}{subsection.4.8}% 
 \contentsline {subsection}{\numberline {4.9}User Interface and User Experience Development}{22}{subsection.4.9}% 

@@ -582,13 +582,14 @@ The most important functions are highlighted in this section.
 The function \textbf{def set\_discount\_rate} calculates the discount rate for each region.
 This function is most important as the discount rate underpins the total value of discounted cash flows and the objective function.
 The discount rate is calculated using the weighted average cost of capital (WACC) method.
-The WACC, cost of equity and pre-tax cost of debt are calculated as follows:
+The WACC, cost of equity, cost of preference equity and pre-tax cost of debt are calculated as follows:
 \begin{align}
 	WACC &= \frac{D}{E+D+K}\times r_d \times (1-t) + \frac{E}{D+E+K}\times r_e + \frac{K}{D+E+K}\times r_k
 \end{align}
 \begin{align}
 	r_e &= r_f + \beta \times (r_m - r_f)\\
-	r_d &= \frac{i}{D}
+	r_d &= \frac{i}{D}\\
+	r_k &= \frac{Div}{MV_{ps}}
 \end{align}
 \begin{equation*}
 	\begin{split}
@@ -596,9 +597,11 @@ The WACC, cost of equity and pre-tax cost of debt are calculated as follows:
 		&r_f= \text{Risk free rates (\%)}\\
 		&K= \text{Market value of preferred equity (\$m)}\\
 		&r_d= \text{Pre-tax cost of debt (\%)}\\
-		&r_e= \text{Cost of ordinary equity (\%)}
+		&r_e= \text{Cost of ordinary equity (\%)}\\
+		&Div= \text{Preference Dividends (\$)}\\
+		& MV_{ps}= \text{Market value of preference shares (\$)}
 	\end{split}
-\quad\leftrightarrow\quad
+\quad\quad
 	\begin{split}
 		&r_k= \text{Cost of preferred equity (\%)}\\
 		&t= \text{Effective tax rate (\%)}\\
@@ -608,11 +611,28 @@ The WACC, cost of equity and pre-tax cost of debt are calculated as follows:
 		&E= \text{Market value of equity (\$m)}
 	\end{split}
 \end{equation*}
-The regions used in the energy system example are New Zealand and Australia. Both are public entities by nature.
+
+The regions used in the energy system example are New Zealand and Australia. 
+Both are public entities in this case.
+The model may be used for both private and public entities.
 It is assumed the financial performance and position for each region, reported in the the New Zealand and Australian Government's financial reports, are suitable for providing the financials necessary for calculating discount rates.
-Each Government's respective Treasury produces these reports.
-Cost of borrowings (i), Equity (E) and Debt (D) are reported in each region's annual financial reports produced by Treasury ()
-Risk free rates were derived from average 10 Year Government bond yields using data from each region's respective Reserve Bank (Reserve Bank of New Zealand \cite{RBNZ_WIR} and Reserve Bank of Australia \cite{RBA_ZCL}). 
+Cost of borrowings (i), Equity (E),  Debt (D) and Preference Equity (K) 
+are reported in each region's annual financial reports (New Zealand \cite{TNZ_FR} and Australia \cite{AG_FR}).
+It is assumed both have no preference shareholders, do not distribute preference dividends (Div), list preference shares ($MV_{ps}$) or have preference equity (K).
+The effective tax rates (t) are each region's company tax rate. 
+This example assumes New Zealand's market value of equity (E) is zero as not publically traded and Australia's negative net work implies market equity (E) is zero.
+Risk free rates ($r_f$) were derived from average 10 Year Government bond yields using data from each region's respective 
+Reserve Bank (Reserve Bank of New Zealand \cite{RBNZ_WIR} and Reserve Bank of Australia \cite{RBA_ZCL}). 
+The monthly market returns for each region are annualised to calculate the market return ($r_m$). 
+Each regions has a market index which serves as a proxy for the market. 
+New Zealand has the NZX 50 and Australia has the ASX 200 \textbf{[Insert NZX50 and ASX200 references later]}.
+Monthly returns are annualised as follows: 
+\begin{align}
+	\text{Annualised Monthly Return} = ((1 + \frac{\text{Index}_{\text{Ending}}-\text{Index}_{\text{Beginning}}}{\text{Index}_{\text{Beginning}}})^{(\frac{12}{\text{Number of Months}})})-1
+\end{align}
+The cost of ordinary equity is calculated using the Capital Assets Pricing Model (CAPM). 
+Both New Zealand and Australia are assumed to have market risk co-efficients ($\beta$) of zero as their fiscal policy is market independent.
+This methodology is appropriate for both public and private entities.
 \subsection{TIMES/OseMOSYS Adaptation}
 \subsubsection{TIMES}
 \subsubsection{OseMOYSIS}\label{OseMOSYS}
@@ -623,7 +643,8 @@ The model structure is converted into the required text file using the CreateMod
 GNU Mathprog is a subset of the Algebraic Mathematical Programming Language (AMPL) \cite{AMPL} and consists of user-defined sets of statements and data blocks.
 The custom anaconda environment (\textbf{osemosys}) was created to facilitate this model formulation. This environment contains the libcxx package which provides a standard library of C++ functionalities.
 The GNU Linear Programming Kit (GLPK) sits within this library. GLPK uses GNU Mathprog to solve large-scale linear programming (LP), mixed integer programming (MIP), and other related problems. 
-GLPK is called using the \textbf{glpsol} command in the osemosys conda environment. 
+GLPK is called using the \textbf{glpsol} command in the osemosys conda environment. \
+
 \subsection{Simulation Processes}
 \subsection{Development of Investment Strategies}
 \subsection{User Interface and User Experience Development}

@@ -151,15 +151,23 @@ print(annualised_returns)
 # Creates a dictionary of market indices
 market_index = {'NEWZEALAND': nz_index, 'AUSTRALIA': aus_index}
 # Tresury Equity Balances as at 2019
-equity = {'NEWZEALAND': 139746000000, 'AUSTRALIA': 1}
+# (Australia has negative equity, New Zealand has $139746000000)
+# However, Governments do not have market equity so should be zer for both
+equity = {'NEWZEALAND': 0, 'AUSTRALIA': 0}
 # Tresury Debt Balance as at 2019
-debt = {'NEWZEALAND': 110477000000, 'AUSTRALIA': 1}
+debt = {'NEWZEALAND': 110477000000, 'AUSTRALIA': 619219000000}
 # Tresury Finance Cost(Interest Expense)/Total Borrowings as at 2019
 cost_of_debt_pre_tax = {
     'NEWZEALAND': (4059000000 / 110477000000),
-    'AUSTRALIA': 1
+    'AUSTRALIA': (17088000000 / 619219000000)
 }
+# Preference Equity (None for governments)
+preference_equity = {'NEWZEALAND': 0, 'AUSTRALIA': 0}
+market_value_preference_shares = {'NEWZEALAND': 0, 'AUSTRALIA': 0}
+preference_dividends = {'NEWZEALAND': 0, 'AUSTRALIA': 0}
 # Calculated from 10 Year Treasury Bonds (10 Year Average)
-risk_free_rate = {'NEWZEALAND': 0.0360, 'AUSTRALIA': 1}
+risk_free_rate = {'NEWZEALAND': 0.0360, 'AUSTRALIA': 0.0335}
 # Company Tax Rates
 effective_tax_rate = {'NEWZEALAND': 0.28, 'AUSTRALIA': 0.30}
+# Beta for region modelled
+market_risk_coefficient = {'NEWZEALAND': 0, 'AUSTRALIA': 0}

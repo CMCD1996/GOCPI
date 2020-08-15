@@ -216,28 +216,66 @@ class CreateCases:
 
     def set_discount_rate(self, equity, debt, market_index,
                           cost_of_debt_pre_tax, risk_free_rate,
-                          effective_tax_rate):
-        """ Calculates the discount rate for each region.
+                          effective_tax_rate, preference_equity,
+                          market_value_preference_shares, preference_dividends,
+                          market_risk_coefficient):
+        """[summary]
 
         Args:
             equity (dict): Dictionary of equity totals from treasury balance sheets
             debt (dict): Dictionary of equity totals from treasury balance sheets
             market_index (int, array): Regional monthly index returns (Arrays)
             cost_of_debt_pre_tax (dict): Dictionary of pre-tax cost of debts calculated from treasury balance sheets
-            risk_free_rate (dict): Dictionary of risk free rates from 10 year swap rates
-            effective_tax_rate (dict): Dictionary of company tax rates
+            risk_free_rate (dict): Dictionary of risk free rates from 10 year swap rates for each region
+            effective_tax_rate (dict): Dictionary of company tax rates for each region
+            preference_equity (dict): Dictionary of preference equity for each region
+            market_value_preference_shares (dict): Dictionary of the market value of prefence shares for each region
+            preference_dividends (dict): Dictionary of prefence dividends for each region
+            market_risk_coefficient (dict): Dictionary of markey risk co-efficients
 
         Returns:
-           discount_rates (int): Regional discount rates stored in the object.
+            [int, array]: Numpy array of discount rates
         """
-        # Calculates annualised returns for each regions market index
+        # Creates empty dictionaries to stored values
         annualised_returns = {}
+        cost_of_equity = {}
+        cost_of_debt = {}
+        cost_of_preference_equity = {}
+        WACC = {}
+        discount_rates = []
+        # Calculates
         for region in market_index:
+            # Calculates annualised returns for each regions market index
             annualised_rate_of_return = (np.power(
                 (1 + ((market_index[region][-1] - market_index[region][0]) /
                       market_index[region][0])),
                 (12 / len(market_index[region]))) - 1)
             annualised_returns[region] = annualised_rate_of_return
+            # Calculates cost of equity
+            cost_of_equity[region] = (
+                risk_free_rate[region] + (market_risk_coefficient[region]) *
+                (annualised_returns[region] - risk_free_rate[region]))
+            # Calculates cost of debt
+            cost_of_debt[region] = (cost_of_debt_pre_tax[region] / debt[region]
+                                    ) * (1 - effective_tax_rate[region])
+            # Calculates cost of preference equity
+            cost_of_preference_equity[region] = preference_dividends[
+                region] / market_value_preference_shares[region]
+            # Calculates WACC
+            WACC[region] = (
+                cost_of_equity[region] *
+                (equity[region] /
+                 (equity[region] + debt[region] + preference_equity[region])) +
+                cost_of_debt[region] *
+                (debt[region] /
+                 (equity[region] + debt[region] + preference_equity[region])) +
+                cost_of_preference_equity[region] *
+                (preference_equity[region] /
+                 (equity[region] + debt[region] + preference_equity[region])))
+            # Sets discount rates for each region
+            discount_rates.append(WACC[region])
+        # Set discount array
+        self.DiscountRate = np.asarray(discount_rates)
 
     def set_day_split(self, parameters):
         """[summary]
