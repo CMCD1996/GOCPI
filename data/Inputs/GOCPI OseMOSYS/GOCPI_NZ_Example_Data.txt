@@ -510,7 +510,7 @@ NEWZEALAND 1.0 1.0
 AUSTRALIA 1.0 1.0
 ;
 #
-param	DepreciationMethod	default	1:=
+param	DepreciationMethod	default	2:=
 NEWZEALAND 1.0
 AUSTRALIA 1.0
 ;

@@ -169,7 +169,6 @@ num_hours = 24
 nz_energy_system.set_day_split(nz_energy_system.dailytimebracket,
                                nz_energy_system.year, hour_split, num_days,
                                num_hours)
-print(nz_energy_system.DaySplit)
 
 # Sets a dictionary to match the timeslice with season
 link_ls = {
@@ -244,6 +243,16 @@ override_depreciation = None
 nz_energy_system.set_depreciation_method(nz_energy_system.region,
                                          depreciation_methods,
                                          override_depreciation)
+
+print(nz_energy_system.YearSplit)
+print(nz_energy_system.DiscountRate)
+print(nz_energy_system.DaySplit)
+print(nz_energy_system.Conversionld)
+print(nz_energy_system.Conversionls)
+print(nz_energy_system.Conversionlh)
+print(nz_energy_system.TradeRoute)
+print(nz_energy_system.DaysInDayType)
+print(nz_energy_system.DepreciationMethod)
 
 # Initialises yet to be written parameters to check progress / load Parameters (Delete later)
 ly = len(nz_energy_system.year)
@@ -395,7 +404,7 @@ load_status = {
 }
 
 # Loads the datacase to the system
-system.load_datacase(case, system, load_status)
+system = system.load_datacase(case, system, load_status)
 
 # Sets up location information
 data_txt = 'GOCPI_NZ_Example_Data.txt'
@@ -414,7 +423,7 @@ default_parameters = {
     'Conversionlh': 1,
     'DaysInDayType': 1,
     'TradeRoute': 1,
-    'DepreciationMethod': 1,
+    'DepreciationMethod': 2,
     'SpecifiedAnnualDemand': 1,
     'SpecifiedDemandProfile': 1,
     'AccumulatedAnnualDemand': 1,

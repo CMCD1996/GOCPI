@@ -114,6 +114,9 @@ class Energy_Systems:
             case (object): Energy system datacase
             system (object): Initialised energy system
             load_status (dict): Dictionary setting the required sets and parameters to load
+
+        Returns:
+            system_case (dict): Returns the updated dictionary
         """
         # Creates the dictionaries to load the data
         data_case = {
@@ -269,6 +272,80 @@ class Energy_Systems:
         for variable in load_status:
             if load_status[variable] == 1:
                 system_case[variable] = data_case[variable]
+
+            # Sets
+            system.year = case.year 
+            system.region = case.region
+            system.emission = case.emission
+            system.technology = case.technology
+            system.fuel = case.fuel
+            "timeslice": system.timeslice
+            "mode_of+operation": system.mode_of_operation
+            "storage": system.storage
+            "daytype": system.daytype
+            "season": system.season
+            "dailtytimebracket": system.dailytimebracket
+            # Parameters
+            "YearSplit": system.YearSplit,
+            "DiscountRate": system.DiscountRate,
+            "DaySplit": system.DaySplit,
+            "Conversionls": system.Conversionls,
+            "Conversionld": system.Conversionld,
+            "Conversionlh": system.Conversionlh,
+            "DaysInDayType": system.DaysInDayType,
+            "TradeRoute": system.TradeRoute,
+            "DepreciationMethod": system.DepreciationMethod,
+            "SpecifiedAnnualDemand": system.SpecifiedAnnualDemand,
+            "SpecifiedDemandProfile": system.SpecifiedDemandProfile,
+            "AccumulatedAnnualDemand": system.AccumulatedAnnualDemand,
+            "CapacityToActivityUnit": system.CapacityToActivityUnit,
+            "CapacityFactor": system.CapacityFactor,
+            "AvailabilityFactor": system.AvailabilityFactor,
+            "OperationalLife": system.OperationalLife,
+            "ResidualCapacity": system.ResidualCapacity,
+            "InputActivityRatio": system.InputActivityRatio,
+            "OutputActivityRatio": system.OutputActivityRatio,
+            "CapitalCost": system.CapitalCost,
+            "VariableCost": system.VariableCost,
+            "FixedCost": system.FixedCost,
+            "TechnologyToStorage": system.TechnologyToStorage,
+            "TechnologyFromStorage": system.TechnologyFromStorage,
+            "StorageLevelStart": system.StorageLevelStart,
+            "StorageMaxChargeRate": system.StorageMaxChargeRate,
+            "StorageMaxDischargeRate": system.StorageMaxDischargeRate,
+            "MinStorageCharge": system.MinStorageCharge,
+            "OperationalLifeStorage": system.OperationalLifeStorage,
+            "CapitalCostStorage": system.CapitalCostStorage,
+            "ResidualStorageCapacity": system.ResidualStorageCapacity,
+            "CapacityOfOneTechnologyUnit": system.CapacityOfOneTechnologyUnit,
+            "TotalAnnualMaxCapacity": system.TotalAnnualMaxCapacity,
+            "TotalAnnualMinCapacity": system.TotalAnnualMinCapacity,
+            "TotalAnnualMaxCapacityInvestment":
+            system.TotalAnnualMaxCapacityInvestment,
+            "TotalAnnualMinCapacityInvestment":
+            system.TotalAnnualMinCapacityInvestment,
+            "TotalTechnologyAnnualActivityLowerLimit":
+            system.TotalTechnologyAnnualActivityLowerLimit,
+            "TotalTechnologyAnnualActivityUpperLimit":
+            system.TotalTechnologyAnnualActivityUpperLimit,
+            "TotalTechnologyModelPeriodActivityUpperLimit":
+            system.TotalTechnologyModelPeriodActivityUpperLimit,
+            "TotalTechnologyModelPeriodActivityLowerLimit":
+            system.TotalTechnologyModelPeriodActivityLowerLimit,
+            "ReserveMarginTagTechnology": system.ReserveMarginTagTechnology,
+            "ReserveMarginTagFuel": system.ReserveMarginTagFuel,
+            "ReserveMargin": system.ReserveMargin,
+            "RETagTechnology": system.RETagTechnology,
+            "RETagFuel": system.RETagFuel,
+            "REMinProductionTarget": system.REMinProductionTarget,
+            "EmissionActivityRatio": system.EmissionActivityRatio,
+            "EmissionsPenalty": system.EmissionsPenalty,
+            "AnnualExogenousEmission": system.AnnualExogenousEmission,
+            "AnnualEmissionLimit": system.AnnualEmissionLimit,
+            "ModelPeriodExogenousEmission":
+            system.ModelPeriodExogenousEmission,
+            "ModelPeriodEmissionLimit": system.ModelPeriodEmissionLimit,
+        
 
     def create_model_file(self, root, file):
         """Creates the model file necessary for the project to run
