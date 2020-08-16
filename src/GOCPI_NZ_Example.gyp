@@ -138,15 +138,6 @@ aus_df = pd.read_excel(market_returns, sheet_name='AUS')
 nz_index = nz_df[["Monthly_Returns"]].to_numpy()
 aus_index = aus_df[["Monthly_Returns"]].to_numpy()
 
-market_index = {'NEWZEALAND': nz_index, 'AUSTRALIA': aus_index}
-annualised_returns = {}
-for region in market_index:
-    annualised_rate_of_return = (np.power(
-        (1 + ((market_index[region][-1] - market_index[region][0]) /
-              market_index[region][0])), (12 / len(market_index[region]))) - 1)
-    annualised_returns[region] = annualised_rate_of_return
-print(annualised_returns)
-
 # Defines the Dictionaries required for Region. All regions should have the same names
 # Creates a dictionary of market indices
 market_index = {'NEWZEALAND': nz_index, 'AUSTRALIA': aus_index}
@@ -156,14 +147,12 @@ market_index = {'NEWZEALAND': nz_index, 'AUSTRALIA': aus_index}
 equity = {'NEWZEALAND': 0, 'AUSTRALIA': 0}
 # Tresury Debt Balance as at 2019
 debt = {'NEWZEALAND': 110477000000, 'AUSTRALIA': 619219000000}
-# Tresury Finance Cost(Interest Expense)/Total Borrowings as at 2019
-cost_of_debt_pre_tax = {
-    'NEWZEALAND': (4059000000 / 110477000000),
-    'AUSTRALIA': (17088000000 / 619219000000)
-}
+# Tresury Finance Cost(Interest Expenses on Debt as at 2019
+cost_of_debt_pre_tax = {'NEWZEALAND': 4059000000, 'AUSTRALIA': 17088000000}
 # Preference Equity (None for governments)
 preference_equity = {'NEWZEALAND': 0, 'AUSTRALIA': 0}
-market_value_preference_shares = {'NEWZEALAND': 0, 'AUSTRALIA': 0}
+market_value_preference_shares = {'NEWZEALAND': 1, 'AUSTRALIA': 1}
+# (Set to zero if none otherwise you get an error)
 preference_dividends = {'NEWZEALAND': 0, 'AUSTRALIA': 0}
 # Calculated from 10 Year Treasury Bonds (10 Year Average)
 risk_free_rate = {'NEWZEALAND': 0.0360, 'AUSTRALIA': 0.0335}
@@ -171,3 +160,88 @@ risk_free_rate = {'NEWZEALAND': 0.0360, 'AUSTRALIA': 0.0335}
 effective_tax_rate = {'NEWZEALAND': 0.28, 'AUSTRALIA': 0.30}
 # Beta for region modelled
 market_risk_coefficient = {'NEWZEALAND': 0, 'AUSTRALIA': 0}
+
+# Set discount rates
+nz_energy_system.set_discount_rate(equity, debt, market_index,
+                                   cost_of_debt_pre_tax, risk_free_rate,
+                                   effective_tax_rate, preference_equity,
+                                   market_value_preference_shares,
+                                   preference_dividends,
+                                   market_risk_coefficient)
+print(np.size(nz_energy_system.DiscountRate))
+
+case = nz_energy_system
+system = GF.Energy_Systems(
+    nz_energy_system.year, nz_energy_system.region, nz_energy_system.emission,
+    nz_energy_system.technology, nz_energy_system.fuel,
+    nz_energy_system.timeslice, nz_energy_system.mode_of_operation,
+    nz_energy_system.storage, nz_energy_system.daytype,
+    nz_energy_system.season, nz_energy_system.dailytimebracket)
+
+load_status = {
+    # sets
+    "year": 1,
+    "region": 1,
+    "emission": 1,
+    "technology": 1,
+    "fuel": 1,
+    "timeslice": 1,
+    "mode_of+operation": 1,
+    "storage": 1,
+    "daytype": 1,
+    "season": 1,
+    "dailtytimebracket": 1,
+    # Parameters
+    "YearSplit": 1,
+    "DiscountRate": 1,
+    "DaySplit": 0,
+    "Conversionls": 0,
+    "Conversionld": 0,
+    "Conversionlh": 0,
+    "DaysInDayType": 0,
+    "TradeRoute": 0,
+    "DepreciationMethod": 0,
+    "SpecifiedAnnualDemand": 0,
+    "SpecifiedDemandProfile": 0,
+    "AccumulatedAnnualDemand": 0,
+    "CapacityToActivityUnit": 0,
+    "CapacityFactor": 0,
+    "AvailabilityFactor": 0,
+    "OperationalLife": 0,
+    "ResidualCapacity": 0,
+    "InputActivityRatio": 0,
+    "OutputActivityRatio": 0,
+    "CapitalCost": 0,
+    "VariableCost": 0,
+    "FixedCost": 0,
+    "TechnologyToStorage": 0,
+    "TechnologyFromStorage": 0,
+    "StorageLevelStart": 0,
+    "StorageMaxChargeRate": 0,
+    "StorageMaxDischargeRate": 0,
+    "MinStorageCharge": 0,
+    "OperationalLifeStorage": 0,
+    "CapitalCostStorage": 0,
+    "ResidualStorageCapacity": 0,
+    "CapacityOfOneTechnologyUnit": 0,
+    "TotalAnnualMaxCapacity": 0,
+    "TotalAnnualMinCapacity": 0,
+    "TotalAnnualMaxCapacityInvestment": 0,
+    "TotalAnnualMinCapacityInvestment": 0,
+    "TotalTechnologyAnnualActivityLowerLimit": 0,
+    "TotalTechnologyAnnualActivityUpperLimit": 0,
+    "TotalTechnologyModelPeriodActivityUpperLimit": 0,
+    "TotalTechnologyModelPeriodActivityLowerLimit": 0,
+    "ReserveMarginTagTechnology": 0,
+    "ReserveMarginTagFuel": 0,
+    "ReserveMargin": 0,
+    "RETagTechnology": 0,
+    "RETagFuel": 0,
+    "REMinProductionTarget": 0,
+    "EmissionActivityRatio": 0,
+    "EmissionsPenalty": 0,
+    "AnnualExogenousEmission": 0,
+    "AnnualEmissionLimit": 0,
+    "ModelPeriodExogenousEmission": 0,
+    "ModelPeriodEmissionLimit": 0,
+}
