@@ -23,9 +23,6 @@ class CreateCases:
         self.dailytimebracket = None
 
         # Parameters
-        self.YearSplit = None
-        self.DiscountRate = None
-        self.DaySplit = None
         self.Conversionls = None
         self.Conversionld = None
         self.Conversionlh = None
@@ -277,54 +274,117 @@ class CreateCases:
         # Set discount array
         self.DiscountRate = np.asarray(discount_rates)
 
-    def set_day_split(self, parameters):
-        """[summary]
+    def set_day_split(self, daily_time_bracket, years, hour_split, num_days,
+                      num_hours):
+        """ Sets the day split parameter
 
         Args:
-            parameters ([type]): [description]
+            daily_time_bracket (list): List of daily time brackets
+            years (list): List of year
+            hour_split (dict): Dictonary of hours in a daily time bracket 
+            num_days (int): Number of days in a year
+            num_hours (int): Number of hours in a day
         """
+        # Initilises the DaySplit Array
+        DaySplit = np.ones((len(daily_time_bracket), len(years)))
+        index = 0
+        for split in daily_time_bracket:
+            DaySplit[index, :] = hour_split[split] / (num_days * num_hours)
+            index = index + 1
+        self.DaySplit = DaySplit
 
-    def set_conversation_ls(self, parameters):
-        """[summary]
+    def set_conversion_ls(self, timeslice, season, link):
+        """ Sets the Conversionls parameter
 
         Args:
-            parameters ([type]): [description]
+            timeslice (list): List of timeslices
+            season (list): List of seasons
+            link (dict): Dictionary describing the connection between timeslices and seasons
         """
+        Conversionls = np.zeros((len(timeslice), len(season)))
+        for i in range(0, len(timeslice), 1):
+            for j in range(0, len(season), 1):
+                if link[timeslice[i]] == season[j]:
+                    Conversionls[i, j] = 1
 
-    def set_conversion_ld(self, parameters):
-        """[summary]
+        self.Conversionls = Conversionls
+
+    def set_conversion_ld(self, timeslice, daytype, link):
+        """ Sets the Conversionld parameter
 
         Args:
-            parameters ([type]): [description]
+            timeslice (list): List of timeslices
+            daytype (list): List of daytypes
+            link (dict): Dictionary describing the connection between timeslices and daytypes
         """
+        Conversionld = np.zeros((len(timeslice), len(daytype)))
+        for i in range(0, len(timeslice), 1):
+            Conversionld[i, :] = link[timeslice[i]]
 
-    def set_conversion_lh(self, parameters):
-        """[summary]
+        self.Conversionld = Conversionld
+
+    def set_conversion_lh(self, timeslice, dailytimebracket, link, override):
+        """ Sets the Conversionlh parameter
 
         Args:
-            parameters ([type]): [description]
+            timeslice (list): List of timeslices
+            dailytimebracket (list): List of dailytimebracket
+            link (dict): Dictionary describing the connection between timeslices and dailytimebrackets
+            override (int, array): Override if want to manually put in the array
         """
+        if override == None:
+            Conversionlh = np.zeros((len(timeslice), len(dailytimebracket)))
+            for i in range(0, len(timeslice), 1):
+                Conversionlh[i, :] = link[timeslice[i]]
+            self.Conversionlh = Conversionlh
+        else:
+            self.Conversionlh = override
 
-    def set_days_in_day_type(self, parameters):
-        """[summary]
+    def set_days_in_day_type(self, season, daytype, year, link, override):
+        """ Sets the DaysInDayType parameter
 
         Args:
-            parameters ([type]): [description]
+            season (list): List of seasons
+            daytype (list): List of daytypes
+            year (list): List of years
+            link (dict): Dictionary relating seasons to daytypes
+            override (int, array): Override if want to manually put in the array
         """
+        if override == None:
+            DaysInDayType = np.zeros((len(season), len(daytype), len(year)))
+            for i in range(0, len(season), 1):
+                for j in range(0, len(year), 1):
+                    DaysInDayType[i, :, j] = link[season[i]]
+            self.DaysInDayType = DaysInDayType
+        else:
+            self.DaysInDayType = override
 
-    def set_trade_route(self, parameters):
-        """[summary]
+    def set_trade_route(self, trade):
+        """ Sets TradeRoute parameter
 
         Args:
-            parameters ([type]): [description]
+            trade (int, array): 2D Array
+            
         """
+        self.TradeRoute = trade
 
-    def set_depreciation_method(self, parameters):
-        """[summary]
+    def set_depreciation_method(self, region, methods, override):
+        """ Sets DepreciationMethod
+            (1 = Sinking Fund Depreciation, 2 = Straightline Depreciation)
 
         Args:
-            parameters ([type]): [description]
+            region (list): List of regions
+            override (int, array): Manual array for setting depreciation methods
+            methods (dict): Dictionary assigning methods to regions
         """
+
+        if override == None:
+            depreciation_method = np.ones((len(region)))
+            for i in range(0, len(region), 1):
+                depreciation_method[i] = methods[region[i]]
+            self.DepreciationMethod = depreciation_method
+        else:
+            self.DepreciationMethod = override
 
     def set_specified_annual_demand(self, parameters):
         """[summary]

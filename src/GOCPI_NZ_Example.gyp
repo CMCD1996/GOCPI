@@ -25,17 +25,14 @@ nz_energy_system = GF.CreateCases()
 
 # Defines the forecast period
 nz_energy_system.set_year(2020, 2030, 1)
-print(nz_energy_system.year)
 
 # Defines the regions
 REGION = ['NEWZEALAND', 'AUSTRALIA']
 nz_energy_system.set_region(REGION)
-print(nz_energy_system.region)
 
 # Defines the Emissions
 EMISSION = ['CO2', 'NOX', 'CO', 'METHANE']
 nz_energy_system.set_emission(EMISSION)
-print(nz_energy_system.emission)
 
 # Defines the technology set
 TECHNOLOGY = [
@@ -44,7 +41,6 @@ TECHNOLOGY = [
     'RIV', 'RHu', 'RLu', 'TXu'
 ]
 nz_energy_system.set_technology(TECHNOLOGY)
-print(nz_energy_system.technology)
 
 # Defines the fuels set
 FUEL = [
@@ -52,36 +48,32 @@ FUEL = [
     'TX'
 ]
 nz_energy_system.set_fuel(FUEL)
-print(nz_energy_system.fuel)
 
 # Defines timeslices
 TIMESLICE = [
     'DAY_SUMMER', 'NIGHT_SUMMER', 'DAY_WINTER', 'NIGHT_WINTER',
-    'DAY_INTERMEDIATE', 'NIGHT_INTERMEIATE'
+    'DAY_INTERMEDIATE', 'NIGHT_INTERMEDIATE'
 ]
 nz_energy_system.set_timeslice(TIMESLICE)
-print(nz_energy_system.timeslice)
 
 # Defines Modes of Operation
 nz_energy_system.set_mode_of_operation(2)
-print(nz_energy_system.mode_of_operation)
 
 # Defines the storage set
 STORAGE = ['DAM']
 nz_energy_system.set_storage(STORAGE)
-print(nz_energy_system.storage)
 
 # Defines the daytype (numbers represent different daytypes)
-nz_energy_system.set_daytype(3)
-print(nz_energy_system.daytype)
+# 1 = Weekday (Mon - Fri), 2 = Weekend (Sat & Sun)
+nz_energy_system.set_daytype(2)
 
 # Defines the seasons
-nz_energy_system.set_season(4)
-print(nz_energy_system.season)
+# (Three seasons (Summer (1), Winter (2) and Intermediate (3)))
+nz_energy_system.set_season(3)
 
-# Defines the dailytimebracket
-nz_energy_system.set_daily_time_bracket(3)
-print(nz_energy_system.dailytimebracket)
+# Defines the dailytimebracket (Number of distinct periods in a day)
+# 4 = Morning (6hrs), Afternoon (6hrs), Evening (6hrs), Night (6hrs)
+nz_energy_system.set_daily_time_bracket(4)
 
 # Defines the YearSplit parameter
 # Creates Dictionary for number of days
@@ -122,7 +114,7 @@ splits = {
     'DAY_WINTER': day_winter,
     'NIGHT_WINTER': night_winter,
     'DAY_INTERMEDIATE': day_intermediate,
-    'NIGHT_INTERMEIATE': night_intermediate
+    'NIGHT_INTERMEDIATE': night_intermediate
 }
 # Creates the YearSplit parameter 2D Matrix
 nz_energy_system.set_year_split(TIMESLICE, nz_energy_system.year, splits)
@@ -161,16 +153,164 @@ effective_tax_rate = {'NEWZEALAND': 0.28, 'AUSTRALIA': 0.30}
 # Beta for region modelled
 market_risk_coefficient = {'NEWZEALAND': 0, 'AUSTRALIA': 0}
 
-# Set discount rates
+# Sets the discount rates
 nz_energy_system.set_discount_rate(equity, debt, market_index,
                                    cost_of_debt_pre_tax, risk_free_rate,
                                    effective_tax_rate, preference_equity,
                                    market_value_preference_shares,
                                    preference_dividends,
                                    market_risk_coefficient)
-print(np.size(nz_energy_system.DiscountRate))
 
+# Creates Dictionary of day splits (assumes constant accross years)
+# Preserve the order of the split.
+hour_split = {"1": 6, "2": 6, "3": 6, "4": 6}
+num_days = 365
+num_hours = 24
+nz_energy_system.set_day_split(nz_energy_system.dailytimebracket,
+                               nz_energy_system.year, hour_split, num_days,
+                               num_hours)
+print(nz_energy_system.DaySplit)
+
+# Sets a dictionary to match the timeslice with season
+link_ls = {
+    "DAY_SUMMER": "1",
+    "NIGHT_SUMMER": "1",
+    "DAY_WINTER": "2",
+    "NIGHT_WINTER": "2",
+    "DAY_INTERMEDIATE": "3",
+    "NIGHT_INTERMEDIATE": "3"
+}
+nz_energy_system.set_conversion_ls(nz_energy_system.timeslice,
+                                   nz_energy_system.season, link_ls)
+# Sets a dictionary to match the timeslice with daytype
+# Daytypes: 1 = Weekday (Mon - Fri), 2 = Weekend (Sat & Sun)
+# Order must be preserved
+link_ld = {
+    "DAY_SUMMER": np.ones((1, 2)),
+    "NIGHT_SUMMER": np.ones((1, 2)),
+    "DAY_WINTER": np.ones((1, 2)),
+    "NIGHT_WINTER": np.ones((1, 2)),
+    "DAY_INTERMEDIATE": np.ones((1, 2)),
+    "NIGHT_INTERMEDIATE": np.ones((1, 2))
+}
+nz_energy_system.set_conversion_ld(nz_energy_system.timeslice,
+                                   nz_energy_system.daytype, link_ld)
+# Sets a dictionary to match the timeslice with daytype
+# 1). Morning (6hrs), 2).Afternoon (6hrs), 3).Evening (6hrs), 4).Night (6hrs)
+# Order must be preserved in the arrays
+link_lh = {
+    "DAY_SUMMER": np.array([1, 1, 0, 0]),
+    "NIGHT_SUMMER": np.array([0, 0, 1, 1]),
+    "DAY_WINTER": np.array([1, 1, 0, 0]),
+    "NIGHT_WINTER": np.array([0, 0, 1, 1]),
+    "DAY_INTERMEDIATE": np.array([1, 1, 0, 0]),
+    "NIGHT_INTERMEDIATE": np.array([0, 0, 1, 1])
+}
+override_conversionlh = None
+# Sets the Conversionlh parameter
+
+nz_energy_system.set_conversion_lh(nz_energy_system.timeslice,
+                                   nz_energy_system.dailytimebracket, link_lh,
+                                   override_conversionlh)
+# Creates season dictionary for daytypes (Assumed to be the same each year)
+link_dtdt = {
+    "1": np.array([5, 2]),
+    "2": np.array([5, 2]),
+    "3": np.array([5, 2])
+}
+override_dtdt = None
+# Sets the DaysInDayType parameter
+nz_energy_system.set_days_in_day_type(nz_energy_system.season,
+                                      nz_energy_system.daytype,
+                                      nz_energy_system.year, link_dtdt,
+                                      override_dtdt)
+
+# Creates trade relationships using an 2D numpy array
+# Must [NEWZEALAND, AUSTRALIA],[NEWZEALAND, AUSTRALIA]
+trade = np.array([[0, 1], [1, 0]])
+nz_energy_system.set_trade_route(trade)
+
+# Creates depreciation methods dictionary
+depreciation_methods = {"NEWZEALAND": 2, "AUSTRALIA": 2}
+override_depreciation = None
+nz_energy_system.set_depreciation_method(nz_energy_system.region,
+                                         depreciation_methods,
+                                         override_depreciation)
+
+# Initialises yet to be written parameters to check progress / load Parameters (Delete later)
+ly = len(nz_energy_system.year)
+lr = len(nz_energy_system.region)
+le = len(nz_energy_system.emission)
+lt = len(nz_energy_system.technology)
+lf = len(nz_energy_system.fuel)
+ll = len(nz_energy_system.timeslice)
+lm = len(nz_energy_system.mode_of_operation)
+ls = len(nz_energy_system.storage)
+lld = len(nz_energy_system.daytype)
+lls = len(nz_energy_system.season)
+llh = len(nz_energy_system.dailytimebracket)
+
+#nz_energy_system.YearSplit = np.ones((ll, ly))
+#nz_energy_system.DiscountRate = np.ones((lr))
+#nz_energy_system.DaySplit = np.ones((llh, ly))
+#nz_energy_system.Conversionls = np.ones((ll, lls))
+#nz_energy_system.Conversionld = np.ones((ll, lld))
+#nz_energy_system.Conversionlh = np.ones((ll, llh))
+#nz_energy_system.DaysInDayType = np.ones((lls, lld, ly))
+#nz_energy_system.TradeRoute = np.ones((lr, lr, lf, ly))
+#nz_energy_system.DepreciationMethod = np.ones((lr))
+nz_energy_system.SpecifiedAnnualDemand = np.ones((lr, lf, ly))
+nz_energy_system.SpecifiedDemandProfile = np.ones((lr, lf, ll, ly))
+nz_energy_system.AccumulatedAnnualDemand = np.ones((lr, lf, ly))
+nz_energy_system.CapacityToActivityUnit = np.ones((lr, lt))
+nz_energy_system.CapacityFactor = np.ones((lr, lt, ll, ly))
+nz_energy_system.AvailabilityFactor = np.ones((lr, lt, ly))
+nz_energy_system.OperationalLife = np.ones((lr, lt))
+nz_energy_system.ResidualCapacity = np.ones((lr, lt, ly))
+nz_energy_system.InputActivityRatio = np.ones((lr, lt, lf, lm, ly))
+nz_energy_system.OutputActivityRatio = np.ones((lr, lt, lf, lm, ly))
+nz_energy_system.CapitalCost = np.ones((lr, lt, ly))
+nz_energy_system.VariableCost = np.ones((lr, lt, lm, ly))
+nz_energy_system.FixedCost = np.ones((lr, lt, ly))
+nz_energy_system.TechnologyToStorage = np.ones((lr, lt, ls, lm))
+nz_energy_system.TechnologyFromStorage = np.ones((lr, lt, ls, lm))
+nz_energy_system.StorageLevelStart = np.ones((lr, ls))
+nz_energy_system.StorageMaxChargeRate = np.ones((lr, ls))
+nz_energy_system.StorageMaxDischargeRate = np.ones((lr, ls))
+nz_energy_system.MinStorageCharge = np.ones((lr, ls, ly))
+nz_energy_system.OperationalLifeStorage = np.ones((lr, ls))
+nz_energy_system.CapitalCostStorage = np.ones((lr, ls, ly))
+nz_energy_system.ResidualStorageCapacity = np.ones((lr, ls, ly))
+nz_energy_system.CapacityOfOneTechnologyUnit = np.ones((lr, lt, ly))
+nz_energy_system.TotalAnnualMaxCapacity = np.ones((lr, lt, ly))
+nz_energy_system.TotalAnnualMinCapacity = np.ones((lr, lt, ly))
+nz_energy_system.TotalAnnualMaxCapacityInvestment = np.ones((lr, lt, ly))
+nz_energy_system.TotalAnnualMinCapacityInvestment = np.ones((lr, lt, ly))
+nz_energy_system.TotalTechnologyAnnualActivityLowerLimit = np.ones(
+    (lr, lt, ly))
+nz_energy_system.TotalTechnologyAnnualActivityUpperLimit = np.ones(
+    (lr, lt, ly))
+nz_energy_system.TotalTechnologyModelPeriodActivityUpperLimit = np.ones(
+    (lr, lt))
+nz_energy_system.TotalTechnologyModelPeriodActivityLowerLimit = np.ones(
+    (lr, lt))
+nz_energy_system.ReserveMarginTagTechnology = np.ones((lr, lt, ly))
+nz_energy_system.ReserveMarginTagFuel = np.ones((lr, lf, ly))
+nz_energy_system.ReserveMargin = np.ones((lr, ly))
+nz_energy_system.RETagTechnology = np.ones((lr, lt, ly))
+nz_energy_system.RETagFuel = np.ones((lr, lf, ly))
+nz_energy_system.REMinProductionTarget = np.ones((lr, ly))
+nz_energy_system.EmissionActivityRatio = np.ones((lr, lt, le, lm, ly))
+nz_energy_system.EmissionsPenalty = np.ones((lr, le, ly))
+nz_energy_system.AnnualExogenousEmission = np.ones((lr, le, ly))
+nz_energy_system.AnnualEmissionLimit = np.ones((lr, le, ly))
+nz_energy_system.ModelPeriodExogenousEmission = np.ones((lr, le))
+nz_energy_system.ModelPeriodEmissionLimit = np.ones((lr, le))
+
+# Sets the case (Toggle depending on the data set you choose to use)
 case = nz_energy_system
+
+# Initialises the energy system
 system = GF.Energy_Systems(
     nz_energy_system.year, nz_energy_system.region, nz_energy_system.emission,
     nz_energy_system.technology, nz_energy_system.fuel,
@@ -245,3 +385,75 @@ load_status = {
     "ModelPeriodExogenousEmission": 0,
     "ModelPeriodEmissionLimit": 0,
 }
+
+# Loads the datacase to the system
+system.load_datacase(case, system, load_status)
+
+# Sets up location information
+data_txt = 'GOCPI_NZ_Example_Data.txt'
+model_source_file = 'GOCPI_OseMOSYS_Structure.xlsx'
+root = '/Users/connor/Google Drive/Documents/University/Courses/2020/ENGSCI 700A&B/GOCPI/data/Inputs/GOCPI OseMOSYS'
+data_roots = Path(root)
+data_location_1 = os.path.join(data_roots, data_txt)
+
+# Sets the default parameters
+default_parameters = {
+    'YearSplit': 1,
+    'DiscountRate': 1,
+    'DaySplit': 1,
+    'Conversionls': 1,
+    'Conversionld': 1,
+    'Conversionlh': 1,
+    'DaysInDayType': 1,
+    'TradeRoute': 1,
+    'DepreciationMethod': 1,
+    'SpecifiedAnnualDemand': 1,
+    'SpecifiedDemandProfile': 1,
+    'AccumulatedAnnualDemand': 1,
+    'CapacityToActivityUnit': 1,
+    'CapacityFactor': 1,
+    'AvailabilityFactor': 1,
+    'OperationalLife': 1,
+    'ResidualCapacity': 1,
+    'InputActivityRatio': 1,
+    'OutputActivityRatio': 1,
+    'CapitalCost': 1,
+    'VariableCost': 1,
+    'FixedCost': 1,
+    'TechnologyToStorage': 1,
+    'TechnologyFromStorage': 1,
+    'StorageLevelStart': 1,
+    'StorageMaxChargeRate': 1,
+    'StorageMaxDischargeRate': 1,
+    'MinStorageCharge': 1,
+    'OperationalLifeStorage': 1,
+    'CapitalCostStorage': 1,
+    'ResidualStorageCapacity': 1,
+    'CapacityOfOneTechnologyUnit': 1,
+    'TotalAnnualMaxCapacity': 1,
+    'TotalAnnualMinCapacity': 1,
+    'TotalAnnualMaxCapacityInvestment': 1,
+    'TotalAnnualMinCapacityInvestment': 1,
+    'TotalTechnologyAnnualActivityLowerLimit': 1,
+    'TotalTechnologyAnnualActivityUpperLimit': 1,
+    'TotalTechnologyModelPeriodActivityUpperLimit': 1,
+    'TotalTechnologyModelPeriodActivityLowerLimit': 1,
+    'ReserveMarginTagTechnology': 1,
+    'ReserveMarginTagFuel': 1,
+    'ReserveMargin': 1,
+    'RETagTechnology': 1,
+    'RETagFuel': 1,
+    'REMinProductionTarget': 1,
+    'EmissionActivityRatio': 1,
+    'EmissionsPenalty': 1,
+    'AnnualExogenousEmission': 1,
+    'AnnualEmissionLimit': 1,
+    'ModelPeriodExogenousEmission': 1,
+    'ModelPeriodEmissionLimit': 1
+}
+
+# Create the Data File
+system.create_data_file(data_location_1, default_parameters)
+
+# Cereate the Model File
+system.create_model_file(root, model_source_file)

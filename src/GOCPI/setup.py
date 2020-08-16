@@ -3,9 +3,10 @@ from setuptools import setup
 'Note: To download 1) pip install --upgrade GOCPI'
 'Note: Make your own python package: https://towardsdatascience.com/make-your-own-python-package-6d08a400fc2d'
 'Note: PyPi https://pypi.org/manage/project/gocpi-functions/releases/#modal-close'
+'Note: Enter dist/GOCPI-X.X.X.tar.gz to upload one file'
 
 setup(name='GOCPI',
-      version='3.0.50',
+      version='3.0.68',
       description=
       'User Defined Functions and Energy Systems Data for GOCPI Project',
       packages=['GOCPI'],
