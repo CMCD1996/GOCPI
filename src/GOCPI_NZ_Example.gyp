@@ -227,7 +227,15 @@ nz_energy_system.set_days_in_day_type(nz_energy_system.season,
 
 # Creates trade relationships using an 2D numpy array
 # Must [NEWZEALAND, AUSTRALIA],[NEWZEALAND, AUSTRALIA]
-trade = np.array([[0, 1], [1, 0]])
+# Hypothetically, you can model any trade relationship for any fuel in any year
+# FUEL = ['CSV', 'DSL', 'ELC', 'GSL', 'HCO', 'HYD', 'LTH', 'OIL', 'URN', 'RH', 'RL','TX']
+# YEAR = 2020 - 2030 (11)
+trade = np.zeros((len(nz_energy_system.region), len(nz_energy_system.region),
+                  len(nz_energy_system.fuel), len(nz_energy_system.year)))
+trade_all_fuels = np.array([[0, 1], [1, 0]])
+for i in range(0, len(nz_energy_system.fuel), 1):
+    for j in range(0, len(nz_energy_system.year), 1):
+        trade[:, :, i, j] = trade_all_fuels
 nz_energy_system.set_trade_route(trade)
 
 # Creates depreciation methods dictionary
@@ -334,13 +342,13 @@ load_status = {
     # Parameters
     "YearSplit": 1,
     "DiscountRate": 1,
-    "DaySplit": 0,
-    "Conversionls": 0,
-    "Conversionld": 0,
-    "Conversionlh": 0,
-    "DaysInDayType": 0,
-    "TradeRoute": 0,
-    "DepreciationMethod": 0,
+    "DaySplit": 1,
+    "Conversionls": 1,
+    "Conversionld": 1,
+    "Conversionlh": 1,
+    "DaysInDayType": 1,
+    "TradeRoute": 1,
+    "DepreciationMethod": 1,
     "SpecifiedAnnualDemand": 0,
     "SpecifiedDemandProfile": 0,
     "AccumulatedAnnualDemand": 0,
@@ -399,7 +407,7 @@ data_location_1 = os.path.join(data_roots, data_txt)
 # Sets the default parameters
 default_parameters = {
     'YearSplit': 1,
-    'DiscountRate': 1,
+    'DiscountRate': 0.05,
     'DaySplit': 1,
     'Conversionls': 1,
     'Conversionld': 1,

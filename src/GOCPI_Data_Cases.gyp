@@ -62,7 +62,6 @@ sets = [
 Demo = GF.Energy_Systems(YEAR, REGION, EMISSION, TECHNOLOGY, FUEL, TIMESLICE,
                          MODE_OF_OPERATION, STORAGE, DAYTYPE, SEASON,
                          DAILYTIMEBRACKET)
-print(np.siz(Demo.DiscountRate))
 
 # This user must now initialise the parameters as they choose to configure the energy system for the optimisation model.
 # This is incredibly important. The user must understand the configuration of the energy system to do this! Consult the

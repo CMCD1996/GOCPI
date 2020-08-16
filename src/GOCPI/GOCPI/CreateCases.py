@@ -360,11 +360,13 @@ class CreateCases:
             self.DaysInDayType = override
 
     def set_trade_route(self, trade):
-        """ Sets TradeRoute parameter
+        """ Sets the TradeRoute parameter between regions
+            (Assume it is the same across fuels and years)
 
         Args:
-            trade (int, array): 2D Array
-            
+            trade (int ,array): 4D array representing trade relationships 
+                                between regions, fuels and years. You 
+                                must model this manually.
         """
         self.TradeRoute = trade
 
