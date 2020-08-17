@@ -42,7 +42,17 @@ TECHNOLOGY = [
 ]
 nz_energy_system.set_technology(TECHNOLOGY)
 
-# Defines the fuels set
+# Sets names for the energy balance sheets
+root_energy_balance = pathlib.Path(
+    '/Users/connor/Google Drive/Documents/University/Courses/2020/ENGSCI 700A&B/GOCPI/data/Energy Balances'
+)
+IEA_World_Energy_Balances_A2K = 'IEAWorldEnergyBalances2017A-K.csv'
+IEA_World_Energy_Balances_L2Z = 'IEAWorldEnergyBalances2017L-Z.csv'
+
+energy_balance_table = GF.Forecasting(root_energy_balance,
+                                      IEA_World_Energy_Balances_A2K,
+                                      IEA_World_Energy_Balances_L2Z, geography)
+# Defines the fuels set (Derived from MBIE Energy Balance Statistics in this example)
 FUEL = [
     'CSV', 'DSL', 'ELC', 'GSL', 'HCO', 'HYD', 'LTH', 'OIL', 'URN', 'RH', 'RL',
     'TX'
@@ -404,7 +414,7 @@ load_status = {
 }
 
 # Loads the datacase to the system
-system = system.load_datacase(case, system, load_status)
+system.load_datacase(case, system, load_status)
 
 # Sets up location information
 data_txt = 'GOCPI_NZ_Example_Data.txt'
@@ -470,6 +480,7 @@ default_parameters = {
 }
 
 # Create the Data File
+print(system.YearSplit)
 system.create_data_file(data_location_1, default_parameters)
 
 # Cereate the Model File

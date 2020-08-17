@@ -106,7 +106,7 @@ class Energy_Systems:
         self.ModelPeriodExogenousEmission = np.ones((lr, le))
         self.ModelPeriodEmissionLimit = np.ones((lr, le))
 
-    def load_datacase(self, case, system, load_status):
+    def load_datacase(self, case, system):
         """ Loads the data case to a correct configured and intialised energy system
             (The load status dictionary must be compatible with the data_case and system_case)
 
@@ -118,234 +118,71 @@ class Energy_Systems:
         Returns:
             system_case (dict): Returns the updated dictionary
         """
-        # Creates the dictionaries to load the data
-        data_case = {
-            # Sets
-            "year": case.year,
-            "region": case.region,
-            "emission": case.emission,
-            "technology": case.technology,
-            "fuel": case.fuel,
-            "timeslice": case.timeslice,
-            "mode_of+operation": case.mode_of_operation,
-            "storage": case.storage,
-            "daytype": case.daytype,
-            "season": case.season,
-            "dailtytimebracket": case.dailytimebracket,
-            # Parameters
-            "YearSplit": case.YearSplit,
-            "DiscountRate": case.DiscountRate,
-            "DaySplit": case.DaySplit,
-            "Conversionls": case.Conversionls,
-            "Conversionld": case.Conversionld,
-            "Conversionlh": case.Conversionlh,
-            "DaysInDayType": case.DaysInDayType,
-            "TradeRoute": case.TradeRoute,
-            "DepreciationMethod": case.DepreciationMethod,
-            "SpecifiedAnnualDemand": case.SpecifiedAnnualDemand,
-            "SpecifiedDemandProfile": case.SpecifiedDemandProfile,
-            "AccumulatedAnnualDemand": case.AccumulatedAnnualDemand,
-            "CapacityToActivityUnit": case.CapacityToActivityUnit,
-            "CapacityFactor": case.CapacityFactor,
-            "AvailabilityFactor": case.AvailabilityFactor,
-            "OperationalLife": case.OperationalLife,
-            "ResidualCapacity": case.ResidualCapacity,
-            "InputActivityRatio": case.InputActivityRatio,
-            "OutputActivityRatio": case.OutputActivityRatio,
-            "CapitalCost": case.CapitalCost,
-            "VariableCost": case.VariableCost,
-            "FixedCost": case.FixedCost,
-            "TechnologyToStorage": case.TechnologyToStorage,
-            "TechnologyFromStorage": case.TechnologyFromStorage,
-            "StorageLevelStart": case.StorageLevelStart,
-            "StorageMaxChargeRate": case.StorageMaxChargeRate,
-            "StorageMaxDischargeRate": case.StorageMaxDischargeRate,
-            "MinStorageCharge": case.MinStorageCharge,
-            "OperationalLifeStorage": case.OperationalLifeStorage,
-            "CapitalCostStorage": case.CapitalCostStorage,
-            "ResidualStorageCapacity": case.ResidualStorageCapacity,
-            "CapacityOfOneTechnologyUnit": case.CapacityOfOneTechnologyUnit,
-            "TotalAnnualMaxCapacity": case.TotalAnnualMaxCapacity,
-            "TotalAnnualMinCapacity": case.TotalAnnualMinCapacity,
-            "TotalAnnualMaxCapacityInvestment":
-            case.TotalAnnualMaxCapacityInvestment,
-            "TotalAnnualMinCapacityInvestment":
-            case.TotalAnnualMinCapacityInvestment,
-            "TotalTechnologyAnnualActivityLowerLimit":
-            case.TotalTechnologyAnnualActivityLowerLimit,
-            "TotalTechnologyAnnualActivityUpperLimit":
-            case.TotalTechnologyAnnualActivityUpperLimit,
-            "TotalTechnologyModelPeriodActivityUpperLimit":
-            case.TotalTechnologyModelPeriodActivityUpperLimit,
-            "TotalTechnologyModelPeriodActivityLowerLimit":
-            case.TotalTechnologyModelPeriodActivityLowerLimit,
-            "ReserveMarginTagTechnology": case.ReserveMarginTagTechnology,
-            "ReserveMarginTagFuel": case.ReserveMarginTagFuel,
-            "ReserveMargin": case.ReserveMargin,
-            "RETagTechnology": case.RETagTechnology,
-            "RETagFuel": case.RETagFuel,
-            "REMinProductionTarget": case.REMinProductionTarget,
-            "EmissionActivityRatio": case.EmissionActivityRatio,
-            "EmissionsPenalty": case.EmissionsPenalty,
-            "AnnualExogenousEmission": case.AnnualExogenousEmission,
-            "AnnualEmissionLimit": case.AnnualEmissionLimit,
-            "ModelPeriodExogenousEmission": case.ModelPeriodExogenousEmission,
-            "ModelPeriodEmissionLimit": case.ModelPeriodEmissionLimit,
-        }
-        # Creates energy systems dictionary
-
-        system_case = {
-            # Sets
-            "year": system.year,
-            "region": system.region,
-            "emission": system.emission,
-            "technology": system.technology,
-            "fuel": system.fuel,
-            "timeslice": system.timeslice,
-            "mode_of+operation": system.mode_of_operation,
-            "storage": system.storage,
-            "daytype": system.daytype,
-            "season": system.season,
-            "dailtytimebracket": system.dailytimebracket,
-            # Parameters
-            "YearSplit": system.YearSplit,
-            "DiscountRate": system.DiscountRate,
-            "DaySplit": system.DaySplit,
-            "Conversionls": system.Conversionls,
-            "Conversionld": system.Conversionld,
-            "Conversionlh": system.Conversionlh,
-            "DaysInDayType": system.DaysInDayType,
-            "TradeRoute": system.TradeRoute,
-            "DepreciationMethod": system.DepreciationMethod,
-            "SpecifiedAnnualDemand": system.SpecifiedAnnualDemand,
-            "SpecifiedDemandProfile": system.SpecifiedDemandProfile,
-            "AccumulatedAnnualDemand": system.AccumulatedAnnualDemand,
-            "CapacityToActivityUnit": system.CapacityToActivityUnit,
-            "CapacityFactor": system.CapacityFactor,
-            "AvailabilityFactor": system.AvailabilityFactor,
-            "OperationalLife": system.OperationalLife,
-            "ResidualCapacity": system.ResidualCapacity,
-            "InputActivityRatio": system.InputActivityRatio,
-            "OutputActivityRatio": system.OutputActivityRatio,
-            "CapitalCost": system.CapitalCost,
-            "VariableCost": system.VariableCost,
-            "FixedCost": system.FixedCost,
-            "TechnologyToStorage": system.TechnologyToStorage,
-            "TechnologyFromStorage": system.TechnologyFromStorage,
-            "StorageLevelStart": system.StorageLevelStart,
-            "StorageMaxChargeRate": system.StorageMaxChargeRate,
-            "StorageMaxDischargeRate": system.StorageMaxDischargeRate,
-            "MinStorageCharge": system.MinStorageCharge,
-            "OperationalLifeStorage": system.OperationalLifeStorage,
-            "CapitalCostStorage": system.CapitalCostStorage,
-            "ResidualStorageCapacity": system.ResidualStorageCapacity,
-            "CapacityOfOneTechnologyUnit": system.CapacityOfOneTechnologyUnit,
-            "TotalAnnualMaxCapacity": system.TotalAnnualMaxCapacity,
-            "TotalAnnualMinCapacity": system.TotalAnnualMinCapacity,
-            "TotalAnnualMaxCapacityInvestment":
-            system.TotalAnnualMaxCapacityInvestment,
-            "TotalAnnualMinCapacityInvestment":
-            system.TotalAnnualMinCapacityInvestment,
-            "TotalTechnologyAnnualActivityLowerLimit":
-            system.TotalTechnologyAnnualActivityLowerLimit,
-            "TotalTechnologyAnnualActivityUpperLimit":
-            system.TotalTechnologyAnnualActivityUpperLimit,
-            "TotalTechnologyModelPeriodActivityUpperLimit":
-            system.TotalTechnologyModelPeriodActivityUpperLimit,
-            "TotalTechnologyModelPeriodActivityLowerLimit":
-            system.TotalTechnologyModelPeriodActivityLowerLimit,
-            "ReserveMarginTagTechnology": system.ReserveMarginTagTechnology,
-            "ReserveMarginTagFuel": system.ReserveMarginTagFuel,
-            "ReserveMargin": system.ReserveMargin,
-            "RETagTechnology": system.RETagTechnology,
-            "RETagFuel": system.RETagFuel,
-            "REMinProductionTarget": system.REMinProductionTarget,
-            "EmissionActivityRatio": system.EmissionActivityRatio,
-            "EmissionsPenalty": system.EmissionsPenalty,
-            "AnnualExogenousEmission": system.AnnualExogenousEmission,
-            "AnnualEmissionLimit": system.AnnualEmissionLimit,
-            "ModelPeriodExogenousEmission":
-            system.ModelPeriodExogenousEmission,
-            "ModelPeriodEmissionLimit": system.ModelPeriodEmissionLimit,
-        }
-        # Loads the appropriate data cases
-        for variable in load_status:
-            if load_status[variable] == 1:
-                system_case[variable] = data_case[variable]
-
-            # Sets
-            system.year = case.year 
-            system.region = case.region
-            system.emission = case.emission
-            system.technology = case.technology
-            system.fuel = case.fuel
-            "timeslice": system.timeslice
-            "mode_of+operation": system.mode_of_operation
-            "storage": system.storage
-            "daytype": system.daytype
-            "season": system.season
-            "dailtytimebracket": system.dailytimebracket
-            # Parameters
-            "YearSplit": system.YearSplit,
-            "DiscountRate": system.DiscountRate,
-            "DaySplit": system.DaySplit,
-            "Conversionls": system.Conversionls,
-            "Conversionld": system.Conversionld,
-            "Conversionlh": system.Conversionlh,
-            "DaysInDayType": system.DaysInDayType,
-            "TradeRoute": system.TradeRoute,
-            "DepreciationMethod": system.DepreciationMethod,
-            "SpecifiedAnnualDemand": system.SpecifiedAnnualDemand,
-            "SpecifiedDemandProfile": system.SpecifiedDemandProfile,
-            "AccumulatedAnnualDemand": system.AccumulatedAnnualDemand,
-            "CapacityToActivityUnit": system.CapacityToActivityUnit,
-            "CapacityFactor": system.CapacityFactor,
-            "AvailabilityFactor": system.AvailabilityFactor,
-            "OperationalLife": system.OperationalLife,
-            "ResidualCapacity": system.ResidualCapacity,
-            "InputActivityRatio": system.InputActivityRatio,
-            "OutputActivityRatio": system.OutputActivityRatio,
-            "CapitalCost": system.CapitalCost,
-            "VariableCost": system.VariableCost,
-            "FixedCost": system.FixedCost,
-            "TechnologyToStorage": system.TechnologyToStorage,
-            "TechnologyFromStorage": system.TechnologyFromStorage,
-            "StorageLevelStart": system.StorageLevelStart,
-            "StorageMaxChargeRate": system.StorageMaxChargeRate,
-            "StorageMaxDischargeRate": system.StorageMaxDischargeRate,
-            "MinStorageCharge": system.MinStorageCharge,
-            "OperationalLifeStorage": system.OperationalLifeStorage,
-            "CapitalCostStorage": system.CapitalCostStorage,
-            "ResidualStorageCapacity": system.ResidualStorageCapacity,
-            "CapacityOfOneTechnologyUnit": system.CapacityOfOneTechnologyUnit,
-            "TotalAnnualMaxCapacity": system.TotalAnnualMaxCapacity,
-            "TotalAnnualMinCapacity": system.TotalAnnualMinCapacity,
-            "TotalAnnualMaxCapacityInvestment":
-            system.TotalAnnualMaxCapacityInvestment,
-            "TotalAnnualMinCapacityInvestment":
-            system.TotalAnnualMinCapacityInvestment,
-            "TotalTechnologyAnnualActivityLowerLimit":
-            system.TotalTechnologyAnnualActivityLowerLimit,
-            "TotalTechnologyAnnualActivityUpperLimit":
-            system.TotalTechnologyAnnualActivityUpperLimit,
-            "TotalTechnologyModelPeriodActivityUpperLimit":
-            system.TotalTechnologyModelPeriodActivityUpperLimit,
-            "TotalTechnologyModelPeriodActivityLowerLimit":
-            system.TotalTechnologyModelPeriodActivityLowerLimit,
-            "ReserveMarginTagTechnology": system.ReserveMarginTagTechnology,
-            "ReserveMarginTagFuel": system.ReserveMarginTagFuel,
-            "ReserveMargin": system.ReserveMargin,
-            "RETagTechnology": system.RETagTechnology,
-            "RETagFuel": system.RETagFuel,
-            "REMinProductionTarget": system.REMinProductionTarget,
-            "EmissionActivityRatio": system.EmissionActivityRatio,
-            "EmissionsPenalty": system.EmissionsPenalty,
-            "AnnualExogenousEmission": system.AnnualExogenousEmission,
-            "AnnualEmissionLimit": system.AnnualEmissionLimit,
-            "ModelPeriodExogenousEmission":
-            system.ModelPeriodExogenousEmission,
-            "ModelPeriodEmissionLimit": system.ModelPeriodEmissionLimit,
-        
+        # Loads the sets to the energy system
+        system.year = case.year
+        system.region = case.region
+        system.emission = case.emission
+        system.technology = case.technology
+        system.fuel = case.fuel
+        system.timeslice
+        system.mode_of_operation
+        system.storage
+        system.daytype
+        system.season
+        system.dailytimebracket
+        # Loads the parameters to the energy system
+        system.YearSplit = case.YearSplit
+        system.DiscountRate = case.DiscountRate
+        system.DaySplit = case.DaySplit
+        system.Conversionls = case.Conversionls
+        system.Conversionld = case.Conversionld
+        system.Conversionlh = case.Conversionlh
+        system.DaysInDayType = case.DaysInDayType
+        system.TradeRoute = case.TradeRoute
+        system.DepreciationMethod = case.DepreciationMethod
+        system.SpecifiedAnnualDemand = case.SpecifiedAnnualDemand
+        system.SpecifiedDemandProfile = case.SpecifiedDemandProfile
+        system.AccumulatedAnnualDemand = case.AccumulatedAnnualDemand
+        system.CapacityToActivityUnit = case.CapacityToActivityUnit
+        system.CapacityFactor = case.CapacityFactor
+        system.AvailabilityFactor = case.AvailabilityFactor
+        system.OperationalLife = case.OperationalLife
+        system.ResidualCapacity = case.ResidualCapacity
+        system.InputActivityRatio = case.InputActivityRatio
+        system.OutputActivityRatio = case.OutputActivityRatio
+        system.CapitalCost = case.CapitalCost
+        system.VariableCost = case.VariableCost
+        system.FixedCost = case.FixedCost
+        system.TechnologyToStorage = case.TechnologyToStorage
+        system.TechnologyFromStorage = case.TechnologyFromStorage
+        system.StorageLevelStart = case.StorageLevelStart
+        system.StorageMaxChargeRate = case.StorageMaxChargeRate
+        system.StorageMaxDischargeRate = case.StorageMaxDischargeRate
+        system.MinStorageCharge = case.MinStorageCharge
+        system.OperationalLifeStorage = case.OperationalLifeStorage
+        system.CapitalCostStorage = case.CapitalCostStorage
+        system.ResidualStorageCapacity = case.ResidualStorageCapacity
+        system.CapacityOfOneTechnologyUnit = case.CapacityOfOneTechnologyUnit
+        system.TotalAnnualMaxCapacity = case.TotalAnnualMaxCapacity
+        system.TotalAnnualMinCapacity = case.TotalAnnualMinCapacity
+        system.TotalAnnualMaxCapacityInvestment = case.TotalAnnualMaxCapacityInvestment
+        system.TotalAnnualMinCapacityInvestment = case.TotalAnnualMinCapacityInvestment
+        system.TotalTechnologyAnnualActivityLowerLimit = case.TotalTechnologyAnnualActivityLowerLimit
+        system.TotalTechnologyAnnualActivityUpperLimit = case.TotalTechnologyAnnualActivityUpperLimit
+        system.TotalTechnologyModelPeriodActivityUpperLimit = case.TotalTechnologyModelPeriodActivityUpperLimit
+        system.TotalTechnologyModelPeriodActivityLowerLimit = case.TotalTechnologyModelPeriodActivityLowerLimit
+        system.ReserveMarginTagTechnology = case.ReserveMarginTagTechnology
+        system.ReserveMarginTagFuel = case.ReserveMarginTagFuel
+        system.ReserveMargin = case.ReserveMargin
+        system.RETagTechnology = case.RETagTechnology
+        system.RETagFuel = case.RETagFuel
+        system.REMinProductionTarget = case.REMinProductionTarget
+        system.EmissionActivityRatio = case.EmissionActivityRatio
+        system.EmissionsPenalty = case.EmissionsPenalty
+        system.AnnualExogenousEmission = case.AnnualExogenousEmission
+        system.AnnualEmissionLimit = case.AnnualEmissionLimit
+        system.ModelPeriodExogenousEmission = case.ModelPeriodExogenousEmission
+        system.ModelPeriodEmissionLimit = case.ModelPeriodEmissionLimit
 
     def create_model_file(self, root, file):
         """Creates the model file necessary for the project to run
