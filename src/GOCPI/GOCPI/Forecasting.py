@@ -54,20 +54,21 @@ class Forecasting:
         # unique_fuel = df.Prod_Description.unique()
         unique_geography = df.Geo_Description.unique()
         # unique_technology = df.Flow_Description.unique()
+        print(unique_geography)
 
         # Asks for a user to select a geography using the inquirer function
-        #Selected_Geo = input(
-        #   "Please enter the geography you wish to extract energy balances")
+        selected_geo = input(
+            "Please enter the geography you wish to extract energy balances")
 
-        questions = [
-            iq.List(
-                "geography",
-                message="Which geography's energy balance do you need?",
-                choices=unique_geography,
-            ),
-        ]
-        selected_geo = iq.prompt(questions)
-        print(selected_geo["geography"])
+        # questions = [
+        #     iq.List(
+        #         "geography",
+        #         message="Which geography's energy balance do you need?",
+        #         choices=unique_geography,
+        #     ),
+        # ]
+        # selected_geo = iq.prompt(questions)
+        # print(selected_geo["geography"])
 
         # Creates a pivot table to display the data in the way similar to the Energy Balance Sheet (cols = Energy Product, rows = Energy Flows)
         EBPT = pd.pivot_table(df,

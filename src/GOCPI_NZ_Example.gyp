@@ -52,9 +52,9 @@ IEA_World_Energy_Balances_L2Z = 'IEAWorldEnergyBalances2017L-Z.csv'
 create_excel_spreadsheet = True
 
 # Creates the geography dataframe
-# outputs = NZ_energy_balances.energy_balance_base(
-#     root_energy_balance, IEA_World_Energy_Balances_A2K,
-#     IEA_World_Energy_Balances_L2Z, create_excel_spreadsheet)
+outputs = NZ_energy_balances.energy_balance_base(
+    root_energy_balance, IEA_World_Energy_Balances_A2K,
+    IEA_World_Energy_Balances_L2Z, create_excel_spreadsheet)
 # Defines the fuels set (Derived from MBIE Energy Balance Statistics in this example)
 FUEL = [
     'CSV', 'DSL', 'ELC', 'GSL', 'HCO', 'HYD', 'LTH', 'OIL', 'URN', 'RH', 'RL',
@@ -417,7 +417,7 @@ load_status = {
 }
 
 # Loads the datacase to the system
-system.load_datacase(case, system, load_status)
+system.load_datacase(case, system)
 
 # Sets up location information
 data_txt = 'GOCPI_NZ_Example_Data.txt'
