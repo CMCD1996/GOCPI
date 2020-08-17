@@ -1,6 +1,7 @@
 import os
 import numpy as np
 import pandas as pd
+import inquirer as iq
 
 
 class Forecasting:
@@ -10,22 +11,21 @@ class Forecasting:
         self.forecasts = None
 
     def energy_balance_base(self, root, IEA_World_Energy_Balances_1,
-                            IEA_World_Energy_Balances_Sheet_2, geography,
+                            IEA_World_Energy_Balances_2,
                             create_excel_spreadsheet):
-        """[summary]
+        """ Creates the baseline energy balance for forecasting
 
         Args:
-            root ([type]): [description]
-            IEA_World_Energy_Balances_1 ([type]): [description]
-            IEA_World_Energy_Balances_Sheet_2 ([type]): [description]
-            geography ([type]): [description]
-            create_excel_spreadsheet ([type]): [description]
+            root (path): Path to provide access to all the files
+            IEA_World_Energy_Balances_1 (str): File name for Energy Balance A to K
+            IEA_World_Energy_Balances_2 ([type]): File name for Energy Balance L to Z
+            create_excel_spreadsheet (boolean): True/false on whether to create a spreadsheet
 
         Returns:
-            (dataframe): Dataframe of base year energy balances based on selected geography
+            (dataframe): filtered dataframe of the chosen energy balances and unique lists 
         """
         IEAWEBAK = root / IEA_World_Energy_Balances_1
-        IEAWEBLZ = root / IEA_World_Energy_Balances_Sheet_2
+        IEAWEBLZ = root / IEA_World_Energy_Balances_2
 
         # Creates dataframes from IEA World Energy Statistics and Balances CSVs from Stats.OECD.org in the OECDiLibrary
         # Note the data is from #https:s//stats.oecd.org/ and #https://www-oecd-ilibrary-org.ezproxy.auckland.ac.nz/
@@ -50,14 +50,24 @@ class Forecasting:
         f1.close()
         f2.close()
 
-        # Find the unique items in each list of the energy balance sheets
-        uv_prod = df.Prod_Description.unique()
-        uv_geo = df.Geo_Description.unique()
-        uv_flow = df.Flow_Description.unique()
+        # Finds the unique items in each list of the energy balance sheets
+        # unique_fuel = df.Prod_Description.unique()
+        unique_geography = df.Geo_Description.unique()
+        # unique_technology = df.Flow_Description.unique()
 
-        # Asks for an input
-        Selected_Geo = input(
-            "Please enter the geography you wish to extract energy balances")
+        # Asks for a user to select a geography using the inquirer function
+        #Selected_Geo = input(
+        #   "Please enter the geography you wish to extract energy balances")
+
+        questions = [
+            iq.List(
+                "geography",
+                message="Which geography's energy balance do you need?",
+                choices=unique_geography,
+            ),
+        ]
+        selected_geo = iq.prompt(questions)
+        print(selected_geo["geography"])
 
         # Creates a pivot table to display the data in the way similar to the Energy Balance Sheet (cols = Energy Product, rows = Energy Flows)
         EBPT = pd.pivot_table(df,
@@ -67,14 +77,14 @@ class Forecasting:
                               aggfunc=[np.sum],
                               fill_value=0)
         # Filters to the geography the user has selected
-        Input_String = 'Geo_Description == ["' + Selected_Geo + '"]'
+        Input_String = 'Geo_Description == ["' + selected_geo + '"]'
         EBPTG = EBPT.query(Input_String)
 
         if create_excel_spreadsheet == True:
             # Write the filtered pivot table to an excel file
-            writer = pd.ExcelWriter(root / "Geo EB.xlsx")
-            EBPTG.to_excel(writer, Selected_Geo)
+            writer = pd.ExcelWriter(root / "Geo_EB.xlsx")
+            EBPTG.to_excel(writer, selected_geo)
             writer.save()
 
-        # Returns the filtered pivot table as a dataframe
+        # Returns the unique lists and filtered pivot table as a dataframe
         return EBPTG

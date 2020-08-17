@@ -43,15 +43,18 @@ TECHNOLOGY = [
 nz_energy_system.set_technology(TECHNOLOGY)
 
 # Sets names for the energy balance sheets
+NZ_energy_balances = GF.Forecasting()
 root_energy_balance = pathlib.Path(
     '/Users/connor/Google Drive/Documents/University/Courses/2020/ENGSCI 700A&B/GOCPI/data/Energy Balances'
 )
 IEA_World_Energy_Balances_A2K = 'IEAWorldEnergyBalances2017A-K.csv'
 IEA_World_Energy_Balances_L2Z = 'IEAWorldEnergyBalances2017L-Z.csv'
+create_excel_spreadsheet = True
 
-energy_balance_table = GF.Forecasting(root_energy_balance,
-                                      IEA_World_Energy_Balances_A2K,
-                                      IEA_World_Energy_Balances_L2Z, geography)
+# Creates the geography dataframe
+# outputs = NZ_energy_balances.energy_balance_base(
+#     root_energy_balance, IEA_World_Energy_Balances_A2K,
+#     IEA_World_Energy_Balances_L2Z, create_excel_spreadsheet)
 # Defines the fuels set (Derived from MBIE Energy Balance Statistics in this example)
 FUEL = [
     'CSV', 'DSL', 'ELC', 'GSL', 'HCO', 'HYD', 'LTH', 'OIL', 'URN', 'RH', 'RL',

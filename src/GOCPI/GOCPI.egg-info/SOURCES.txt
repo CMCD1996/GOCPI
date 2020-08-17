@@ -2,6 +2,7 @@ setup.cfg
 setup.py
 GOCPI/CreateCases.py
 GOCPI/Energysystems.py
+GOCPI/Forecasting.py
 GOCPI/Navigation.py
 GOCPI/__init__.py
 GOCPI.egg-info/PKG-INFO
