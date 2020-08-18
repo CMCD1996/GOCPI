@@ -34,13 +34,36 @@ nz_energy_system.set_region(REGION)
 EMISSION = ['CO2', 'NOX', 'CO', 'METHANE']
 nz_energy_system.set_emission(EMISSION)
 
-# Defines the technology set
-TECHNOLOGY = [
-    'E01', 'E21', 'E31', 'E51', 'E70', 'IMPDSL1', 'IMPGSL1', 'IMPHCO1',
-    'IMPOIL1', 'IMPURN1', 'RHE', 'RHO', 'RL1', 'SRE', 'TXD', 'TXE', 'TXG',
-    'RIV', 'RHu', 'RLu', 'TXu'
+### TECHNOLOGY ###
+# Defines the technology set (MBIE Energy Statistics Energy Supply and Demand - Gross PJ (Higher Heating Value))
+Production = [
+    'Indigenous_Production', 'Imports', 'Exports', 'Stock_Change',
+    'International_Transport'
 ]
+Conversion = [
+    'Electricity_Generation', 'Cogeneration', 'Fuel_Production',
+    'Other_Transformation', 'Losses_and_Own_Use'
+]
+Non_Energy = ['Non_Energy_Use']
+Consumption = [
+    'Agriculture', 'Forestry_and_Logging', 'Fishing', 'Mining',
+    'Food_Processing', 'Textiles', 'Wood_Pulp_Paper_and_Printing', 'Chemicals',
+    'Non_Metallic_Minerals', 'Basic_Metals',
+    'Mechanical_Electrical_Equippment', 'Building_and_Construction',
+    'Unallocated', 'Commercial', 'Transport', 'Residential'
+]
+Statistical_Differences = ['Statistical_Differences']
+TECHNOLOGY_ALL = [
+    Production, Conversion, Non_Energy, Consumption, Statistical_Differences
+]
+TECHNOLOGY = []
+for tech in TECHNOLOGY_ALL:
+    for i in range(0, len(tech), 1):
+        TECHNOLOGY.append(tech[i])
+
+# Sets the technology set
 nz_energy_system.set_technology(TECHNOLOGY)
+print(nz_energy_system.technology)
 
 # Sets names for the energy balance sheets
 NZ_energy_balances = GF.Forecasting()
@@ -50,17 +73,37 @@ root_energy_balance = pathlib.Path(
 IEA_World_Energy_Balances_A2K = 'IEAWorldEnergyBalances2017A-K.csv'
 IEA_World_Energy_Balances_L2Z = 'IEAWorldEnergyBalances2017L-Z.csv'
 create_excel_spreadsheet = True
+output_file = "Geo EB.xlsx"
 
 # Creates the geography dataframe
 outputs = NZ_energy_balances.energy_balance_base(
     root_energy_balance, IEA_World_Energy_Balances_A2K,
-    IEA_World_Energy_Balances_L2Z, create_excel_spreadsheet)
-# Defines the fuels set (Derived from MBIE Energy Balance Statistics in this example)
-FUEL = [
-    'CSV', 'DSL', 'ELC', 'GSL', 'HCO', 'HYD', 'LTH', 'OIL', 'URN', 'RH', 'RL',
-    'TX'
+    IEA_World_Energy_Balances_L2Z, create_excel_spreadsheet, output_file)
+
+print(outputs['Energy Balances'])
+
+### FUELS ###
+# Defines the fuel set (MBIE Energy Statistics Energy Supply and Demand - Gross PJ (Higher Heating Value))
+Coal = ['Bituminous_and_Sub_Bitumious', 'Lignite']
+Oil = [
+    'Crude_Feedstocks_NGL', 'LPG', 'Petrol', 'Diesel', 'Fuel_Oil',
+    'Aviation_Fuel_and_Kerosine', 'Oil_Other'
 ]
+Natural_Gas = ['Natural_Gas']
+Renewables = [
+    'Hydro', 'Geothermal', 'Solar', 'Wind', 'Liquid_Biofuels', 'Biogas', 'Wood'
+]
+Electricity = ['Electricity']
+Waste_Heat = ['Waste_Heat']
+
+FUEl_ALL = [Coal, Oil, Natural_Gas, Renewables, Electricity, Waste_Heat]
+FUEL = []
+for fuel_type in FUEl_ALL:
+    for i in range(0, len(fuel_type), 1):
+        fuel_type.append(fuel_type[i])
+
 nz_energy_system.set_fuel(FUEL)
+print(nz_energy_system.fuel)
 
 # Defines timeslices
 TIMESLICE = [
@@ -70,7 +113,7 @@ TIMESLICE = [
 nz_energy_system.set_timeslice(TIMESLICE)
 
 # Defines Modes of Operation
-nz_energy_system.set_mode_of_operation(2)
+nz_energy_system.set_mode_of_operation(1)
 
 # Defines the storage set
 STORAGE = ['DAM']
@@ -240,7 +283,7 @@ nz_energy_system.set_days_in_day_type(nz_energy_system.season,
 # Creates trade relationships using an 2D numpy array
 # Must [NEWZEALAND, AUSTRALIA],[NEWZEALAND, AUSTRALIA]
 # Hypothetically, you can model any trade relationship for any fuel in any year
-# FUEL = ['CSV', 'DSL', 'ELC', 'GSL', 'HCO', 'HYD', 'LTH', 'OIL', 'URN', 'RH', 'RL','TX']
+# FUELS = As above
 # YEAR = 2020 - 2030 (11)
 trade = np.zeros((len(nz_energy_system.region), len(nz_energy_system.region),
                   len(nz_energy_system.fuel), len(nz_energy_system.year)))
@@ -257,15 +300,27 @@ nz_energy_system.set_depreciation_method(nz_energy_system.region,
                                          depreciation_methods,
                                          override_depreciation)
 
-print(nz_energy_system.YearSplit)
-print(nz_energy_system.DiscountRate)
-print(nz_energy_system.DaySplit)
-print(nz_energy_system.Conversionld)
-print(nz_energy_system.Conversionls)
-print(nz_energy_system.Conversionlh)
-print(nz_energy_system.TradeRoute)
-print(nz_energy_system.DaysInDayType)
-print(nz_energy_system.DepreciationMethod)
+# Sets dictionaries to calculate CAGR for Fuels Forecasts
+New_Zealand_Fuels = {}
+Australia_Fuels = {}
+CAGR_dictionaries = [New_Zealand_Fuels, Australia_Fuels]
+
+# Populate dictionaries with fuel types
+for i in range(0, len(nz_energy_system.fuel), 1):
+    New_Zealand_Fuels[nz_energy_system.fuel[i]] = 0.05
+    Australia_Fuels[nz_energy_system.fuel[i]] = 0.05
+print(New_Zealand_Fuels)
+print(Australia_Fuels)
+# Prints the parameters
+# print(nz_energy_system.YearSplit)
+# print(nz_energy_system.DiscountRate)
+# print(nz_energy_system.DaySplit)
+# print(nz_energy_system.Conversionld)
+# print(nz_energy_system.Conversionls)
+# print(nz_energy_system.Conversionlh)
+# print(nz_energy_system.TradeRoute)
+# print(nz_energy_system.DaysInDayType)
+# print(nz_energy_system.DepreciationMethod)
 
 # Initialises yet to be written parameters to check progress / load Parameters (Delete later)
 ly = len(nz_energy_system.year)
@@ -483,7 +538,6 @@ default_parameters = {
 }
 
 # Create the Data File
-print(system.YearSplit)
 system.create_data_file(data_location_1, default_parameters)
 
 # Cereate the Model File

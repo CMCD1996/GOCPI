@@ -12,7 +12,7 @@ class Forecasting:
 
     def energy_balance_base(self, root, IEA_World_Energy_Balances_1,
                             IEA_World_Energy_Balances_2,
-                            create_excel_spreadsheet):
+                            create_excel_spreadsheet, output_file):
         """ Creates the baseline energy balance for forecasting
 
         Args:
@@ -20,9 +20,10 @@ class Forecasting:
             IEA_World_Energy_Balances_1 (str): File name for Energy Balance A to K
             IEA_World_Energy_Balances_2 ([type]): File name for Energy Balance L to Z
             create_excel_spreadsheet (boolean): True/false on whether to create a spreadsheet
+            output_file (str): Name of output energy balance spreadsheet
 
         Returns:
-            (dataframe): filtered dataframe of the chosen energy balances and unique lists 
+            (dict): Dictionary of energy balances and unique lists (Use these key words to access: Energy Balances, Fuel, Geography, Technology)
         """
         IEAWEBAK = root / IEA_World_Energy_Balances_1
         IEAWEBLZ = root / IEA_World_Energy_Balances_2
@@ -51,41 +52,67 @@ class Forecasting:
         f2.close()
 
         # Finds the unique items in each list of the energy balance sheets
-        # unique_fuel = df.Prod_Description.unique()
+        unique_fuel = df.Prod_Description.unique()
         unique_geography = df.Geo_Description.unique()
-        # unique_technology = df.Flow_Description.unique()
+        unique_technology = df.Flow_Description.unique()
         print(unique_geography)
 
         # Asks for a user to select a geography using the inquirer function
         selected_geo = input(
-            "Please enter the geography you wish to extract energy balances")
-
-        # questions = [
-        #     iq.List(
-        #         "geography",
-        #         message="Which geography's energy balance do you need?",
-        #         choices=unique_geography,
-        #     ),
-        # ]
-        # selected_geo = iq.prompt(questions)
-        # print(selected_geo["geography"])
+            "Please enter the geography you wish to extract energy balances:  "
+        )
 
         # Creates a pivot table to display the data in the way similar to the Energy Balance Sheet (cols = Energy Product, rows = Energy Flows)
-        EBPT = pd.pivot_table(df,
-                              index=['Geo_Description', 'Flow_Description'],
-                              values=['Value(TJ)'],
-                              columns=['Prod_Description'],
-                              aggfunc=[np.sum],
-                              fill_value=0)
+        energy_balance_pivot_table = pd.pivot_table(
+            df,
+            index=['Geo_Description', 'Flow_Description'],
+            # Converted values to PJ
+            values=['Value(TJ)'],
+            columns=['Prod_Description'],
+            aggfunc=[np.sum],
+            fill_value=0)
         # Filters to the geography the user has selected
         Input_String = 'Geo_Description == ["' + selected_geo + '"]'
-        EBPTG = EBPT.query(Input_String)
+        geography_energy_balance_pivot_table = energy_balance_pivot_table.query(
+            Input_String)
 
         if create_excel_spreadsheet == True:
             # Write the filtered pivot table to an excel file
-            writer = pd.ExcelWriter(root / "Geo_EB.xlsx")
-            EBPTG.to_excel(writer, selected_geo)
+            writer = pd.ExcelWriter(root / output_file)
+            geography_energy_balance_pivot_table.to_excel(writer, selected_geo)
             writer.save()
 
         # Returns the unique lists and filtered pivot table as a dataframe
-        return EBPTG
+        return {
+            "Energy Balances": geography_energy_balance_pivot_table,
+            "Fuel": unique_fuel,
+            "Geography": unique_geography,
+            "Technology": unique_technology
+        }
+
+    def calculate_constant_average_growth_rate(self, start_year, end_year,
+                                               start_value, end_value):
+        """ Calculates the constant average growth rate (CAGR)
+
+        Args:
+            start_year (int): Starting year
+            end_year (int): Ending year
+            start_value (int): Initial value
+            end_value (int): Final value
+
+        Returns:
+            cagr: Constant average growth rate (decimal)
+        """
+        cagr = np.power((end_value / start_value),
+                        (1 / (end_year - start_year))) - 1
+        return cagr
+
+    def calculate_cagr_forecasts(self, cagr_dictionary):
+        """ Calculate the
+
+        Args:
+            cagr_dictionary (Dict): Dictionary for each CAGR in the regions
+
+        Returns:
+            [dict]: Dictionary of cagr forecasts
+        """

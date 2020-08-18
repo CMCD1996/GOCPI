@@ -388,14 +388,15 @@ class CreateCases:
         else:
             self.DepreciationMethod = override
 
-    def set_specified_annual_demand(self, parameters):
+    def set_specified_annual_demand(self, region, fuel, year, override):
         """[summary]
 
         Args:
             parameters ([type]): [description]
         """
 
-    def set_specified_demand_profile(self, parameters):
+    def set_specified_demand_profile(self, region, fuel, year, timeslice,
+                                     override):
         """[summary]
 
         Args:
