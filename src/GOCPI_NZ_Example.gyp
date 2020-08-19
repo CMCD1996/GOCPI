@@ -21,7 +21,9 @@ import docplex as dp
 # Creates a New Zealand Energy System Scenario using the CreateCases Module
 nz_energy_system = GF.CreateCases()
 
-# Creates the set for all the sets
+# Set Definitions
+###############################################################################
+###############################################################################
 
 # Defines the forecast period
 nz_energy_system.set_year(2020, 2030, 1)
@@ -34,7 +36,9 @@ nz_energy_system.set_region(REGION)
 EMISSION = ['CO2', 'NOX', 'CO', 'METHANE']
 nz_energy_system.set_emission(EMISSION)
 
-### TECHNOLOGY ###
+# Technology
+###############################################################################
+###############################################################################
 # Defines the technology set (MBIE Energy Statistics Energy Supply and Demand - Gross PJ (Higher Heating Value))
 Production = [
     'Indigenous_Production', 'Imports', 'Exports', 'Stock_Change',
@@ -65,6 +69,10 @@ for tech in TECHNOLOGY_ALL:
 nz_energy_system.set_technology(TECHNOLOGY)
 print(nz_energy_system.technology)
 
+###############################################################################
+# Calculates Energy Balances Base Year
+###############################################################################
+
 # Sets names for the energy balance sheets
 NZ_energy_balances = GF.Forecasting()
 root_energy_balance = pathlib.Path(
@@ -82,9 +90,11 @@ outputs = NZ_energy_balances.energy_balance_base(
 
 print(outputs['Energy Balances'])
 
-### FUELS ###
+###############################################################################
+# Calculates Fuels
+###############################################################################
 # Defines the fuel set (MBIE Energy Statistics Energy Supply and Demand - Gross PJ (Higher Heating Value))
-Coal = ['Bituminous_and_Sub_Bitumious', 'Lignite']
+Coal = ['Bituminous', 'Sub_Bitumious', 'Lignite']
 Oil = [
     'Crude_Feedstocks_NGL', 'LPG', 'Petrol', 'Diesel', 'Fuel_Oil',
     'Aviation_Fuel_and_Kerosine', 'Oil_Other'
@@ -96,15 +106,18 @@ Renewables = [
 Electricity = ['Electricity']
 Waste_Heat = ['Waste_Heat']
 
-FUEl_ALL = [Coal, Oil, Natural_Gas, Renewables, Electricity, Waste_Heat]
+FUEL_ALL = [Coal, Oil, Natural_Gas, Renewables, Electricity, Waste_Heat]
 FUEL = []
-for fuel_type in FUEl_ALL:
+for fuel_type in FUEL_ALL:
     for i in range(0, len(fuel_type), 1):
-        fuel_type.append(fuel_type[i])
+        FUEL.append(fuel_type[i])
 
 nz_energy_system.set_fuel(FUEL)
 print(nz_energy_system.fuel)
 
+###############################################################################
+# Continues defining sets
+###############################################################################
 # Defines timeslices
 TIMESLICE = [
     'DAY_SUMMER', 'NIGHT_SUMMER', 'DAY_WINTER', 'NIGHT_WINTER',
@@ -131,6 +144,9 @@ nz_energy_system.set_season(3)
 # 4 = Morning (6hrs), Afternoon (6hrs), Evening (6hrs), Night (6hrs)
 nz_energy_system.set_daily_time_bracket(4)
 
+###############################################################################
+# Defines Global Parameters
+###############################################################################
 # Defines the YearSplit parameter
 # Creates Dictionary for number of days
 days = {
@@ -300,18 +316,84 @@ nz_energy_system.set_depreciation_method(nz_energy_system.region,
                                          depreciation_methods,
                                          override_depreciation)
 
+###############################################################################
+# Initialisation and Definition of demand parameters (Including forecasting)
+###############################################################################
 # Sets dictionaries to calculate CAGR for Fuels Forecasts
-New_Zealand_Fuels = {}
-Australia_Fuels = {}
-CAGR_dictionaries = [New_Zealand_Fuels, Australia_Fuels]
+new_zealand_fuels = {}
+australia_fuels = {}
+cagr_dictionaries_regions = [new_zealand_fuels, australia_fuels]
+nz_start_year_fuels = {}
+nz_end_year_fuels = {}
+nz_start_value_fuels = {}
+nz_end_value_fuels = {}
+aus_start_year_fuels = {}
+aus_end_year_fuels = {}
+aus_start_value_fuels = {}
+aus_end_value_fuels = {}
+nz_cagr_dictionaries_parameters = [
+    nz_start_year_fuels, nz_end_year_fuels, nz_start_value_fuels,
+    nz_end_value_fuels
+]
+aus_cagr_dictionaries_parameters = [
+    aus_start_year_fuels, aus_end_year_fuels, aus_start_value_fuels,
+    aus_end_value_fuels
+]
 
-# Populate dictionaries with fuel types
+# Populates regional dictionaries with new entry, all fuel types with default cagr values
+for region_fuels in cagr_dictionaries_regions:
+    for i in range(0, len(nz_energy_system.fuel), 1):
+        region_fuels[nz_energy_system.fuel[i]] = 0.05
+
+# Populates regional dictionaries with new entry, all fuel types with default values
+for parameters in cagr_dictionaries_parameters:
+    for i in range(0, len(nz_energy_system.fuel), 1):
+        region_fuels[nz_energy_system.fuel[i]] = 1
+
+# Loads demand data to the parameter dictionaries (Energy units are in PJs)
+# New Zealand
+nz_start_years = np.zeros(len(nz_energy_system.fuel))
+nz_start_years[:] = 2010
+nz_end_years = np.zeros(len(nz_energy_system.fuel))
+nz_end_years[:] = 2018
+nz_start_values = np.array([
+    7.23, 13.24, 4.19, 0, 7.11, 110.43, 106.09, 7.11, 14.62, 0, 60.29, 0, 9.21,
+    0.35, 0, 0, 0.33, 55.89, 146.49, 0
+])
+nz_end_values = np.zeros(len(nz_energy_system.fuel))
+nz_end_values = np.array([
+    3.07, 16.26, 5.14, 0, 8.71, 113.22, 138.79, 5.82, 16.23, 0, 73.97, 0, 8.03,
+    0.36, 0, 0, 0.33, 56.61, 142.87, 0
+])
+# Australia
+aus_start_years = np.zeros(len(nz_energy_system.fuel))
+aus_start_years[:] = 2017
+aus_end_years = np.zeros(len(nz_energy_system.fuel))
+aus_end_years[:] = 2018
+aus_start_values = np.array([
+    104.9, 9.0, 0.5, 2.3, 72.4, 847.9724, 1038.76619, 42.39862, 190.79379, 0.0,
+    0.0, 0, 15.7, 0.0, 8.4, 94.7, 79.2, 821.8, 0
+])
+aus_end_values = np.zeros(len(nz_energy_system.fuel))
+aus_end_values = np.array([
+    104.445, 8.737, 0.38, 2.019, 67.499, 904.7584, 1108.32904, 45.23792,
+    135.71376, 0.35788, 942.965, 0, 0, 16.56, 0, 8.642, 83.592, 76.81, 835.439,
+    0
+])
+# Assign values to the dictionary
 for i in range(0, len(nz_energy_system.fuel), 1):
-    New_Zealand_Fuels[nz_energy_system.fuel[i]] = 0.05
-    Australia_Fuels[nz_energy_system.fuel[i]] = 0.05
-print(New_Zealand_Fuels)
-print(Australia_Fuels)
-# Prints the parameters
+    aus_start_years[i]
+    aus_start_years[i]
+    aus_end_years[i]
+    aus_start_values[i]
+    aus_end_values[i]
+    nz_start_years[i]
+    nz_start_years[i]
+    nz_end_years[i]
+    nz_start_values[i]
+    nz_end_values[i]
+
+# Assigns
 # print(nz_energy_system.YearSplit)
 # print(nz_energy_system.DiscountRate)
 # print(nz_energy_system.DaySplit)
