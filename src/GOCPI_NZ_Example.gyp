@@ -320,9 +320,10 @@ nz_energy_system.set_depreciation_method(nz_energy_system.region,
 # Initialisation and Definition of demand parameters (Including forecasting)
 ###############################################################################
 # Sets dictionaries to calculate CAGR for Fuels Forecasts
-new_zealand_fuels = {}
-australia_fuels = {}
-cagr_dictionaries_regions = [new_zealand_fuels, australia_fuels]
+nz_cagr_fuels = {}
+aus_cagr_fuels = {}
+cagr_dictionaries_regions = [nz_cagr_fuels, aus_cagr_fuels]
+# Initialises cagr parameters
 nz_start_year_fuels = {}
 nz_end_year_fuels = {}
 nz_start_value_fuels = {}
@@ -346,10 +347,13 @@ for region_fuels in cagr_dictionaries_regions:
         region_fuels[nz_energy_system.fuel[i]] = 0.05
 
 # Populates regional dictionaries with new entry, all fuel types with default values
-for parameters in cagr_dictionaries_parameters:
+for parameters in nz_cagr_dictionaries_parameters:
     for i in range(0, len(nz_energy_system.fuel), 1):
         region_fuels[nz_energy_system.fuel[i]] = 1
 
+for parameters in nz_cagr_dictionaries_parameters:
+    for i in range(0, len(nz_energy_system.fuel), 1):
+        region_fuels[nz_energy_system.fuel[i]] = 1
 # Loads demand data to the parameter dictionaries (Energy units are in PJs)
 # New Zealand
 nz_start_years = np.zeros(len(nz_energy_system.fuel))
@@ -368,11 +372,12 @@ nz_end_values = np.array([
 # Australia
 aus_start_years = np.zeros(len(nz_energy_system.fuel))
 aus_start_years[:] = 2017
+print(aus_start_years)
 aus_end_years = np.zeros(len(nz_energy_system.fuel))
 aus_end_years[:] = 2018
 aus_start_values = np.array([
     104.9, 9.0, 0.5, 2.3, 72.4, 847.9724, 1038.76619, 42.39862, 190.79379, 0.0,
-    0.0, 0, 15.7, 0.0, 8.4, 94.7, 79.2, 821.8, 0
+    0.0, 0.0, 0, 15.7, 0.0, 8.4, 94.7, 79.2, 821.8, 0
 ])
 aus_end_values = np.zeros(len(nz_energy_system.fuel))
 aus_end_values = np.array([
@@ -382,16 +387,28 @@ aus_end_values = np.array([
 ])
 # Assign values to the dictionary
 for i in range(0, len(nz_energy_system.fuel), 1):
-    aus_start_years[i]
-    aus_start_years[i]
-    aus_end_years[i]
-    aus_start_values[i]
-    aus_end_values[i]
-    nz_start_years[i]
-    nz_start_years[i]
-    nz_end_years[i]
-    nz_start_values[i]
-    nz_end_values[i]
+    aus_start_year_fuels[nz_energy_system.fuel[i]] = aus_start_years[i]
+    aus_end_year_fuels[nz_energy_system.fuel[i]] = aus_end_years[i]
+    aus_start_value_fuels[nz_energy_system.fuel[i]] = aus_start_values[i]
+    aus_end_value_fuels[nz_energy_system.fuel[i]] = aus_end_values[i]
+    nz_start_year_fuels[nz_energy_system.fuel[i]] = nz_start_years[i]
+    nz_end_year_fuels[nz_energy_system.fuel[i]] = nz_end_years[i]
+    nz_start_value_fuels[nz_energy_system.fuel[i]] = nz_start_values[i]
+    nz_end_year_fuels[nz_energy_system.fuel[i]] = nz_end_values[i]
+
+print(nz_start_year_fuels)
+# Calculates the cagr dictionary
+forecasting_functions = GF.Forecasting()
+for fuel in nz_cagr_fuels:
+    nz_cagr_fuels[
+        fuel] = forecasting_functions.calculate_constant_average_growth_rate(
+            nz_start_year_fuels[fuel], nz_end_year_fuels[fuel],
+            nz_start_value_fuels[fuel], nz_end_year_fuels[fuel])
+for fuel in aus_cagr_fuels:
+    aus_cagr_fuels[
+        fuel] = forecasting_functions.calculate_constant_average_growth_rate(
+            aus_start_year_fuels[fuel], aus_end_year_fuels[fuel],
+            aus_start_value_fuels[fuel], aus_end_year_fuels[fuel])
 
 # Assigns
 # print(nz_energy_system.YearSplit)

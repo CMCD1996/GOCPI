@@ -103,16 +103,23 @@ class Forecasting:
         Returns:
             cagr: Constant average growth rate (decimal)
         """
-        cagr = np.power((end_value / start_value),
-                        (1 / (end_year - start_year))) - 1
+        if start_value == 0 or (end_year - start_year) == 0:
+            cagr = 1
+        else:
+            cagr = np.power((end_value / start_value),
+                            (1 / (end_year - start_year))) - 1
         return cagr
 
-    def calculate_cagr_forecasts(self, cagr_dictionary):
-        """ Calculate the
+    def calculate_cagr_forecasts(self, cagr_dictionaries,
+                                 base_year_dictionaries, override):
+        """ Forecasts base year fuels by a constant average growth rate for a forecast period
 
         Args:
-            cagr_dictionary (Dict): Dictionary for each CAGR in the regions
+            cagr_dictionaries (dict): Dictionaries of Constant Average Growth Rates from Fuels
+            base_year_dictionaries (Dict): Dictionary if Base Years to forecast fuels
+            override (float, array): Override if you want to load in forecasts
 
         Returns:
-            [dict]: Dictionary of cagr forecasts
+            (float, array): 
         """
+        return forecasts

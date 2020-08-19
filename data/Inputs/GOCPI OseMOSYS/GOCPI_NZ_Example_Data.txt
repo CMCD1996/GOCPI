@@ -7,7 +7,7 @@ set YEAR	:=	2020 2021 2022 2023 2024 2025 2026 2027 2028 2029 2030;
 set REGION	:=	NEWZEALAND AUSTRALIA;
 set EMISSION	:=	CO2 NOX CO METHANE;
 set TECHNOLOGY	:=	Indigenous_Production Imports Exports Stock_Change International_Transport Electricity_Generation Cogeneration Fuel_Production Other_Transformation Losses_and_Own_Use Non_Energy_Use Agriculture Forestry_and_Logging Fishing Mining Food_Processing Textiles Wood_Pulp_Paper_and_Printing Chemicals Non_Metallic_Minerals Basic_Metals Mechanical_Electrical_Equippment Building_and_Construction Unallocated Commercial Transport Residential Statistical_Differences;
-set FUEL	:=	Bituminous_and_Sub_Bitumious Lignite Crude_Feedstocks_NGL LPG Petrol Diesel Fuel_Oil Aviation_Fuel_and_Kerosine Oil_Other Natural_Gas Hydro Geothermal Solar Wind Liquid_Biofuels Biogas Wood Electricity Waste_Heat;
+set FUEL	:=	Bituminous Sub_Bitumious Lignite Crude_Feedstocks_NGL LPG Petrol Diesel Fuel_Oil Aviation_Fuel_and_Kerosine Oil_Other Natural_Gas Hydro Geothermal Solar Wind Liquid_Biofuels Biogas Wood Electricity Waste_Heat;
 set TIMESLICE	:=	DAY_SUMMER NIGHT_SUMMER DAY_WINTER NIGHT_WINTER DAY_INTERMEDIATE NIGHT_INTERMEDIATE;
 set MODE_OF_OPERATION	:=	1;
 set STORAGE	:=	DAM;
@@ -112,37 +112,70 @@ param	DaysInDayType	default	1:=
 ;
 #
 param	TradeRoute	default	1:=
-	[*,*,Bituminous_and_Sub_Bitumious,2020]:	NEWZEALAND AUSTRALIA	:=
+	[*,*,Bituminous,2020]:	NEWZEALAND AUSTRALIA	:=
 NEWZEALAND 0.0 1.0
 AUSTRALIA 1.0 0.0
-	[*,*,Bituminous_and_Sub_Bitumious,2021]:	NEWZEALAND AUSTRALIA	:=
+	[*,*,Bituminous,2021]:	NEWZEALAND AUSTRALIA	:=
 NEWZEALAND 0.0 1.0
 AUSTRALIA 1.0 0.0
-	[*,*,Bituminous_and_Sub_Bitumious,2022]:	NEWZEALAND AUSTRALIA	:=
+	[*,*,Bituminous,2022]:	NEWZEALAND AUSTRALIA	:=
 NEWZEALAND 0.0 1.0
 AUSTRALIA 1.0 0.0
-	[*,*,Bituminous_and_Sub_Bitumious,2023]:	NEWZEALAND AUSTRALIA	:=
+	[*,*,Bituminous,2023]:	NEWZEALAND AUSTRALIA	:=
 NEWZEALAND 0.0 1.0
 AUSTRALIA 1.0 0.0
-	[*,*,Bituminous_and_Sub_Bitumious,2024]:	NEWZEALAND AUSTRALIA	:=
+	[*,*,Bituminous,2024]:	NEWZEALAND AUSTRALIA	:=
 NEWZEALAND 0.0 1.0
 AUSTRALIA 1.0 0.0
-	[*,*,Bituminous_and_Sub_Bitumious,2025]:	NEWZEALAND AUSTRALIA	:=
+	[*,*,Bituminous,2025]:	NEWZEALAND AUSTRALIA	:=
 NEWZEALAND 0.0 1.0
 AUSTRALIA 1.0 0.0
-	[*,*,Bituminous_and_Sub_Bitumious,2026]:	NEWZEALAND AUSTRALIA	:=
+	[*,*,Bituminous,2026]:	NEWZEALAND AUSTRALIA	:=
 NEWZEALAND 0.0 1.0
 AUSTRALIA 1.0 0.0
-	[*,*,Bituminous_and_Sub_Bitumious,2027]:	NEWZEALAND AUSTRALIA	:=
+	[*,*,Bituminous,2027]:	NEWZEALAND AUSTRALIA	:=
 NEWZEALAND 0.0 1.0
 AUSTRALIA 1.0 0.0
-	[*,*,Bituminous_and_Sub_Bitumious,2028]:	NEWZEALAND AUSTRALIA	:=
+	[*,*,Bituminous,2028]:	NEWZEALAND AUSTRALIA	:=
 NEWZEALAND 0.0 1.0
 AUSTRALIA 1.0 0.0
-	[*,*,Bituminous_and_Sub_Bitumious,2029]:	NEWZEALAND AUSTRALIA	:=
+	[*,*,Bituminous,2029]:	NEWZEALAND AUSTRALIA	:=
 NEWZEALAND 0.0 1.0
 AUSTRALIA 1.0 0.0
-	[*,*,Bituminous_and_Sub_Bitumious,2030]:	NEWZEALAND AUSTRALIA	:=
+	[*,*,Bituminous,2030]:	NEWZEALAND AUSTRALIA	:=
+NEWZEALAND 0.0 1.0
+AUSTRALIA 1.0 0.0
+	[*,*,Sub_Bitumious,2020]:	NEWZEALAND AUSTRALIA	:=
+NEWZEALAND 0.0 1.0
+AUSTRALIA 1.0 0.0
+	[*,*,Sub_Bitumious,2021]:	NEWZEALAND AUSTRALIA	:=
+NEWZEALAND 0.0 1.0
+AUSTRALIA 1.0 0.0
+	[*,*,Sub_Bitumious,2022]:	NEWZEALAND AUSTRALIA	:=
+NEWZEALAND 0.0 1.0
+AUSTRALIA 1.0 0.0
+	[*,*,Sub_Bitumious,2023]:	NEWZEALAND AUSTRALIA	:=
+NEWZEALAND 0.0 1.0
+AUSTRALIA 1.0 0.0
+	[*,*,Sub_Bitumious,2024]:	NEWZEALAND AUSTRALIA	:=
+NEWZEALAND 0.0 1.0
+AUSTRALIA 1.0 0.0
+	[*,*,Sub_Bitumious,2025]:	NEWZEALAND AUSTRALIA	:=
+NEWZEALAND 0.0 1.0
+AUSTRALIA 1.0 0.0
+	[*,*,Sub_Bitumious,2026]:	NEWZEALAND AUSTRALIA	:=
+NEWZEALAND 0.0 1.0
+AUSTRALIA 1.0 0.0
+	[*,*,Sub_Bitumious,2027]:	NEWZEALAND AUSTRALIA	:=
+NEWZEALAND 0.0 1.0
+AUSTRALIA 1.0 0.0
+	[*,*,Sub_Bitumious,2028]:	NEWZEALAND AUSTRALIA	:=
+NEWZEALAND 0.0 1.0
+AUSTRALIA 1.0 0.0
+	[*,*,Sub_Bitumious,2029]:	NEWZEALAND AUSTRALIA	:=
+NEWZEALAND 0.0 1.0
+AUSTRALIA 1.0 0.0
+	[*,*,Sub_Bitumious,2030]:	NEWZEALAND AUSTRALIA	:=
 NEWZEALAND 0.0 1.0
 AUSTRALIA 1.0 0.0
 	[*,*,Lignite,2020]:	NEWZEALAND AUSTRALIA	:=
@@ -747,276 +780,276 @@ AUSTRALIA 2.0
 ;
 #
 param	SpecifiedAnnualDemand	default	1:=
-	[*,*,2020]:	Bituminous_and_Sub_Bitumious Lignite Crude_Feedstocks_NGL LPG Petrol Diesel Fuel_Oil Aviation_Fuel_and_Kerosine Oil_Other Natural_Gas Hydro Geothermal Solar Wind Liquid_Biofuels Biogas Wood Electricity Waste_Heat	:=
-NEWZEALAND 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0
-AUSTRALIA 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0
-	[*,*,2021]:	Bituminous_and_Sub_Bitumious Lignite Crude_Feedstocks_NGL LPG Petrol Diesel Fuel_Oil Aviation_Fuel_and_Kerosine Oil_Other Natural_Gas Hydro Geothermal Solar Wind Liquid_Biofuels Biogas Wood Electricity Waste_Heat	:=
-NEWZEALAND 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0
-AUSTRALIA 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0
-	[*,*,2022]:	Bituminous_and_Sub_Bitumious Lignite Crude_Feedstocks_NGL LPG Petrol Diesel Fuel_Oil Aviation_Fuel_and_Kerosine Oil_Other Natural_Gas Hydro Geothermal Solar Wind Liquid_Biofuels Biogas Wood Electricity Waste_Heat	:=
-NEWZEALAND 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0
-AUSTRALIA 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0
-	[*,*,2023]:	Bituminous_and_Sub_Bitumious Lignite Crude_Feedstocks_NGL LPG Petrol Diesel Fuel_Oil Aviation_Fuel_and_Kerosine Oil_Other Natural_Gas Hydro Geothermal Solar Wind Liquid_Biofuels Biogas Wood Electricity Waste_Heat	:=
-NEWZEALAND 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0
-AUSTRALIA 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0
-	[*,*,2024]:	Bituminous_and_Sub_Bitumious Lignite Crude_Feedstocks_NGL LPG Petrol Diesel Fuel_Oil Aviation_Fuel_and_Kerosine Oil_Other Natural_Gas Hydro Geothermal Solar Wind Liquid_Biofuels Biogas Wood Electricity Waste_Heat	:=
-NEWZEALAND 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0
-AUSTRALIA 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0
-	[*,*,2025]:	Bituminous_and_Sub_Bitumious Lignite Crude_Feedstocks_NGL LPG Petrol Diesel Fuel_Oil Aviation_Fuel_and_Kerosine Oil_Other Natural_Gas Hydro Geothermal Solar Wind Liquid_Biofuels Biogas Wood Electricity Waste_Heat	:=
-NEWZEALAND 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0
-AUSTRALIA 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0
-	[*,*,2026]:	Bituminous_and_Sub_Bitumious Lignite Crude_Feedstocks_NGL LPG Petrol Diesel Fuel_Oil Aviation_Fuel_and_Kerosine Oil_Other Natural_Gas Hydro Geothermal Solar Wind Liquid_Biofuels Biogas Wood Electricity Waste_Heat	:=
-NEWZEALAND 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0
-AUSTRALIA 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0
-	[*,*,2027]:	Bituminous_and_Sub_Bitumious Lignite Crude_Feedstocks_NGL LPG Petrol Diesel Fuel_Oil Aviation_Fuel_and_Kerosine Oil_Other Natural_Gas Hydro Geothermal Solar Wind Liquid_Biofuels Biogas Wood Electricity Waste_Heat	:=
-NEWZEALAND 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0
-AUSTRALIA 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0
-	[*,*,2028]:	Bituminous_and_Sub_Bitumious Lignite Crude_Feedstocks_NGL LPG Petrol Diesel Fuel_Oil Aviation_Fuel_and_Kerosine Oil_Other Natural_Gas Hydro Geothermal Solar Wind Liquid_Biofuels Biogas Wood Electricity Waste_Heat	:=
-NEWZEALAND 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0
-AUSTRALIA 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0
-	[*,*,2029]:	Bituminous_and_Sub_Bitumious Lignite Crude_Feedstocks_NGL LPG Petrol Diesel Fuel_Oil Aviation_Fuel_and_Kerosine Oil_Other Natural_Gas Hydro Geothermal Solar Wind Liquid_Biofuels Biogas Wood Electricity Waste_Heat	:=
-NEWZEALAND 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0
-AUSTRALIA 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0
-	[*,*,2030]:	Bituminous_and_Sub_Bitumious Lignite Crude_Feedstocks_NGL LPG Petrol Diesel Fuel_Oil Aviation_Fuel_and_Kerosine Oil_Other Natural_Gas Hydro Geothermal Solar Wind Liquid_Biofuels Biogas Wood Electricity Waste_Heat	:=
-NEWZEALAND 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0
-AUSTRALIA 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0
+	[*,*,2020]:	Bituminous Sub_Bitumious Lignite Crude_Feedstocks_NGL LPG Petrol Diesel Fuel_Oil Aviation_Fuel_and_Kerosine Oil_Other Natural_Gas Hydro Geothermal Solar Wind Liquid_Biofuels Biogas Wood Electricity Waste_Heat	:=
+NEWZEALAND 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0
+AUSTRALIA 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0
+	[*,*,2021]:	Bituminous Sub_Bitumious Lignite Crude_Feedstocks_NGL LPG Petrol Diesel Fuel_Oil Aviation_Fuel_and_Kerosine Oil_Other Natural_Gas Hydro Geothermal Solar Wind Liquid_Biofuels Biogas Wood Electricity Waste_Heat	:=
+NEWZEALAND 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0
+AUSTRALIA 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0
+	[*,*,2022]:	Bituminous Sub_Bitumious Lignite Crude_Feedstocks_NGL LPG Petrol Diesel Fuel_Oil Aviation_Fuel_and_Kerosine Oil_Other Natural_Gas Hydro Geothermal Solar Wind Liquid_Biofuels Biogas Wood Electricity Waste_Heat	:=
+NEWZEALAND 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0
+AUSTRALIA 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0
+	[*,*,2023]:	Bituminous Sub_Bitumious Lignite Crude_Feedstocks_NGL LPG Petrol Diesel Fuel_Oil Aviation_Fuel_and_Kerosine Oil_Other Natural_Gas Hydro Geothermal Solar Wind Liquid_Biofuels Biogas Wood Electricity Waste_Heat	:=
+NEWZEALAND 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0
+AUSTRALIA 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0
+	[*,*,2024]:	Bituminous Sub_Bitumious Lignite Crude_Feedstocks_NGL LPG Petrol Diesel Fuel_Oil Aviation_Fuel_and_Kerosine Oil_Other Natural_Gas Hydro Geothermal Solar Wind Liquid_Biofuels Biogas Wood Electricity Waste_Heat	:=
+NEWZEALAND 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0
+AUSTRALIA 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0
+	[*,*,2025]:	Bituminous Sub_Bitumious Lignite Crude_Feedstocks_NGL LPG Petrol Diesel Fuel_Oil Aviation_Fuel_and_Kerosine Oil_Other Natural_Gas Hydro Geothermal Solar Wind Liquid_Biofuels Biogas Wood Electricity Waste_Heat	:=
+NEWZEALAND 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0
+AUSTRALIA 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0
+	[*,*,2026]:	Bituminous Sub_Bitumious Lignite Crude_Feedstocks_NGL LPG Petrol Diesel Fuel_Oil Aviation_Fuel_and_Kerosine Oil_Other Natural_Gas Hydro Geothermal Solar Wind Liquid_Biofuels Biogas Wood Electricity Waste_Heat	:=
+NEWZEALAND 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0
+AUSTRALIA 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0
+	[*,*,2027]:	Bituminous Sub_Bitumious Lignite Crude_Feedstocks_NGL LPG Petrol Diesel Fuel_Oil Aviation_Fuel_and_Kerosine Oil_Other Natural_Gas Hydro Geothermal Solar Wind Liquid_Biofuels Biogas Wood Electricity Waste_Heat	:=
+NEWZEALAND 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0
+AUSTRALIA 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0
+	[*,*,2028]:	Bituminous Sub_Bitumious Lignite Crude_Feedstocks_NGL LPG Petrol Diesel Fuel_Oil Aviation_Fuel_and_Kerosine Oil_Other Natural_Gas Hydro Geothermal Solar Wind Liquid_Biofuels Biogas Wood Electricity Waste_Heat	:=
+NEWZEALAND 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0
+AUSTRALIA 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0
+	[*,*,2029]:	Bituminous Sub_Bitumious Lignite Crude_Feedstocks_NGL LPG Petrol Diesel Fuel_Oil Aviation_Fuel_and_Kerosine Oil_Other Natural_Gas Hydro Geothermal Solar Wind Liquid_Biofuels Biogas Wood Electricity Waste_Heat	:=
+NEWZEALAND 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0
+AUSTRALIA 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0
+	[*,*,2030]:	Bituminous Sub_Bitumious Lignite Crude_Feedstocks_NGL LPG Petrol Diesel Fuel_Oil Aviation_Fuel_and_Kerosine Oil_Other Natural_Gas Hydro Geothermal Solar Wind Liquid_Biofuels Biogas Wood Electricity Waste_Heat	:=
+NEWZEALAND 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0
+AUSTRALIA 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0
 ;
 #
 param	SpecifiedDemandProfile	default	1:=
-	[*,*,DAY_SUMMER,2020]:	Bituminous_and_Sub_Bitumious Lignite Crude_Feedstocks_NGL LPG Petrol Diesel Fuel_Oil Aviation_Fuel_and_Kerosine Oil_Other Natural_Gas Hydro Geothermal Solar Wind Liquid_Biofuels Biogas Wood Electricity Waste_Heat	:=
-NEWZEALAND 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0
-AUSTRALIA 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0
-	[*,*,DAY_SUMMER,2021]:	Bituminous_and_Sub_Bitumious Lignite Crude_Feedstocks_NGL LPG Petrol Diesel Fuel_Oil Aviation_Fuel_and_Kerosine Oil_Other Natural_Gas Hydro Geothermal Solar Wind Liquid_Biofuels Biogas Wood Electricity Waste_Heat	:=
-NEWZEALAND 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0
-AUSTRALIA 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0
-	[*,*,DAY_SUMMER,2022]:	Bituminous_and_Sub_Bitumious Lignite Crude_Feedstocks_NGL LPG Petrol Diesel Fuel_Oil Aviation_Fuel_and_Kerosine Oil_Other Natural_Gas Hydro Geothermal Solar Wind Liquid_Biofuels Biogas Wood Electricity Waste_Heat	:=
-NEWZEALAND 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0
-AUSTRALIA 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0
-	[*,*,DAY_SUMMER,2023]:	Bituminous_and_Sub_Bitumious Lignite Crude_Feedstocks_NGL LPG Petrol Diesel Fuel_Oil Aviation_Fuel_and_Kerosine Oil_Other Natural_Gas Hydro Geothermal Solar Wind Liquid_Biofuels Biogas Wood Electricity Waste_Heat	:=
-NEWZEALAND 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0
-AUSTRALIA 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0
-	[*,*,DAY_SUMMER,2024]:	Bituminous_and_Sub_Bitumious Lignite Crude_Feedstocks_NGL LPG Petrol Diesel Fuel_Oil Aviation_Fuel_and_Kerosine Oil_Other Natural_Gas Hydro Geothermal Solar Wind Liquid_Biofuels Biogas Wood Electricity Waste_Heat	:=
-NEWZEALAND 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0
-AUSTRALIA 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0
-	[*,*,DAY_SUMMER,2025]:	Bituminous_and_Sub_Bitumious Lignite Crude_Feedstocks_NGL LPG Petrol Diesel Fuel_Oil Aviation_Fuel_and_Kerosine Oil_Other Natural_Gas Hydro Geothermal Solar Wind Liquid_Biofuels Biogas Wood Electricity Waste_Heat	:=
-NEWZEALAND 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0
-AUSTRALIA 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0
-	[*,*,DAY_SUMMER,2026]:	Bituminous_and_Sub_Bitumious Lignite Crude_Feedstocks_NGL LPG Petrol Diesel Fuel_Oil Aviation_Fuel_and_Kerosine Oil_Other Natural_Gas Hydro Geothermal Solar Wind Liquid_Biofuels Biogas Wood Electricity Waste_Heat	:=
-NEWZEALAND 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0
-AUSTRALIA 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0
-	[*,*,DAY_SUMMER,2027]:	Bituminous_and_Sub_Bitumious Lignite Crude_Feedstocks_NGL LPG Petrol Diesel Fuel_Oil Aviation_Fuel_and_Kerosine Oil_Other Natural_Gas Hydro Geothermal Solar Wind Liquid_Biofuels Biogas Wood Electricity Waste_Heat	:=
-NEWZEALAND 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0
-AUSTRALIA 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0
-	[*,*,DAY_SUMMER,2028]:	Bituminous_and_Sub_Bitumious Lignite Crude_Feedstocks_NGL LPG Petrol Diesel Fuel_Oil Aviation_Fuel_and_Kerosine Oil_Other Natural_Gas Hydro Geothermal Solar Wind Liquid_Biofuels Biogas Wood Electricity Waste_Heat	:=
-NEWZEALAND 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0
-AUSTRALIA 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0
-	[*,*,DAY_SUMMER,2029]:	Bituminous_and_Sub_Bitumious Lignite Crude_Feedstocks_NGL LPG Petrol Diesel Fuel_Oil Aviation_Fuel_and_Kerosine Oil_Other Natural_Gas Hydro Geothermal Solar Wind Liquid_Biofuels Biogas Wood Electricity Waste_Heat	:=
-NEWZEALAND 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0
-AUSTRALIA 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0
-	[*,*,DAY_SUMMER,2030]:	Bituminous_and_Sub_Bitumious Lignite Crude_Feedstocks_NGL LPG Petrol Diesel Fuel_Oil Aviation_Fuel_and_Kerosine Oil_Other Natural_Gas Hydro Geothermal Solar Wind Liquid_Biofuels Biogas Wood Electricity Waste_Heat	:=
-NEWZEALAND 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0
-AUSTRALIA 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0
-	[*,*,NIGHT_SUMMER,2020]:	Bituminous_and_Sub_Bitumious Lignite Crude_Feedstocks_NGL LPG Petrol Diesel Fuel_Oil Aviation_Fuel_and_Kerosine Oil_Other Natural_Gas Hydro Geothermal Solar Wind Liquid_Biofuels Biogas Wood Electricity Waste_Heat	:=
-NEWZEALAND 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0
-AUSTRALIA 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0
-	[*,*,NIGHT_SUMMER,2021]:	Bituminous_and_Sub_Bitumious Lignite Crude_Feedstocks_NGL LPG Petrol Diesel Fuel_Oil Aviation_Fuel_and_Kerosine Oil_Other Natural_Gas Hydro Geothermal Solar Wind Liquid_Biofuels Biogas Wood Electricity Waste_Heat	:=
-NEWZEALAND 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0
-AUSTRALIA 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0
-	[*,*,NIGHT_SUMMER,2022]:	Bituminous_and_Sub_Bitumious Lignite Crude_Feedstocks_NGL LPG Petrol Diesel Fuel_Oil Aviation_Fuel_and_Kerosine Oil_Other Natural_Gas Hydro Geothermal Solar Wind Liquid_Biofuels Biogas Wood Electricity Waste_Heat	:=
-NEWZEALAND 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0
-AUSTRALIA 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0
-	[*,*,NIGHT_SUMMER,2023]:	Bituminous_and_Sub_Bitumious Lignite Crude_Feedstocks_NGL LPG Petrol Diesel Fuel_Oil Aviation_Fuel_and_Kerosine Oil_Other Natural_Gas Hydro Geothermal Solar Wind Liquid_Biofuels Biogas Wood Electricity Waste_Heat	:=
-NEWZEALAND 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0
-AUSTRALIA 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0
-	[*,*,NIGHT_SUMMER,2024]:	Bituminous_and_Sub_Bitumious Lignite Crude_Feedstocks_NGL LPG Petrol Diesel Fuel_Oil Aviation_Fuel_and_Kerosine Oil_Other Natural_Gas Hydro Geothermal Solar Wind Liquid_Biofuels Biogas Wood Electricity Waste_Heat	:=
-NEWZEALAND 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0
-AUSTRALIA 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0
-	[*,*,NIGHT_SUMMER,2025]:	Bituminous_and_Sub_Bitumious Lignite Crude_Feedstocks_NGL LPG Petrol Diesel Fuel_Oil Aviation_Fuel_and_Kerosine Oil_Other Natural_Gas Hydro Geothermal Solar Wind Liquid_Biofuels Biogas Wood Electricity Waste_Heat	:=
-NEWZEALAND 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0
-AUSTRALIA 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0
-	[*,*,NIGHT_SUMMER,2026]:	Bituminous_and_Sub_Bitumious Lignite Crude_Feedstocks_NGL LPG Petrol Diesel Fuel_Oil Aviation_Fuel_and_Kerosine Oil_Other Natural_Gas Hydro Geothermal Solar Wind Liquid_Biofuels Biogas Wood Electricity Waste_Heat	:=
-NEWZEALAND 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0
-AUSTRALIA 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0
-	[*,*,NIGHT_SUMMER,2027]:	Bituminous_and_Sub_Bitumious Lignite Crude_Feedstocks_NGL LPG Petrol Diesel Fuel_Oil Aviation_Fuel_and_Kerosine Oil_Other Natural_Gas Hydro Geothermal Solar Wind Liquid_Biofuels Biogas Wood Electricity Waste_Heat	:=
-NEWZEALAND 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0
-AUSTRALIA 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0
-	[*,*,NIGHT_SUMMER,2028]:	Bituminous_and_Sub_Bitumious Lignite Crude_Feedstocks_NGL LPG Petrol Diesel Fuel_Oil Aviation_Fuel_and_Kerosine Oil_Other Natural_Gas Hydro Geothermal Solar Wind Liquid_Biofuels Biogas Wood Electricity Waste_Heat	:=
-NEWZEALAND 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0
-AUSTRALIA 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0
-	[*,*,NIGHT_SUMMER,2029]:	Bituminous_and_Sub_Bitumious Lignite Crude_Feedstocks_NGL LPG Petrol Diesel Fuel_Oil Aviation_Fuel_and_Kerosine Oil_Other Natural_Gas Hydro Geothermal Solar Wind Liquid_Biofuels Biogas Wood Electricity Waste_Heat	:=
-NEWZEALAND 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0
-AUSTRALIA 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0
-	[*,*,NIGHT_SUMMER,2030]:	Bituminous_and_Sub_Bitumious Lignite Crude_Feedstocks_NGL LPG Petrol Diesel Fuel_Oil Aviation_Fuel_and_Kerosine Oil_Other Natural_Gas Hydro Geothermal Solar Wind Liquid_Biofuels Biogas Wood Electricity Waste_Heat	:=
-NEWZEALAND 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0
-AUSTRALIA 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0
-	[*,*,DAY_WINTER,2020]:	Bituminous_and_Sub_Bitumious Lignite Crude_Feedstocks_NGL LPG Petrol Diesel Fuel_Oil Aviation_Fuel_and_Kerosine Oil_Other Natural_Gas Hydro Geothermal Solar Wind Liquid_Biofuels Biogas Wood Electricity Waste_Heat	:=
-NEWZEALAND 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0
-AUSTRALIA 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0
-	[*,*,DAY_WINTER,2021]:	Bituminous_and_Sub_Bitumious Lignite Crude_Feedstocks_NGL LPG Petrol Diesel Fuel_Oil Aviation_Fuel_and_Kerosine Oil_Other Natural_Gas Hydro Geothermal Solar Wind Liquid_Biofuels Biogas Wood Electricity Waste_Heat	:=
-NEWZEALAND 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0
-AUSTRALIA 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0
-	[*,*,DAY_WINTER,2022]:	Bituminous_and_Sub_Bitumious Lignite Crude_Feedstocks_NGL LPG Petrol Diesel Fuel_Oil Aviation_Fuel_and_Kerosine Oil_Other Natural_Gas Hydro Geothermal Solar Wind Liquid_Biofuels Biogas Wood Electricity Waste_Heat	:=
-NEWZEALAND 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0
-AUSTRALIA 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0
-	[*,*,DAY_WINTER,2023]:	Bituminous_and_Sub_Bitumious Lignite Crude_Feedstocks_NGL LPG Petrol Diesel Fuel_Oil Aviation_Fuel_and_Kerosine Oil_Other Natural_Gas Hydro Geothermal Solar Wind Liquid_Biofuels Biogas Wood Electricity Waste_Heat	:=
-NEWZEALAND 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0
-AUSTRALIA 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0
-	[*,*,DAY_WINTER,2024]:	Bituminous_and_Sub_Bitumious Lignite Crude_Feedstocks_NGL LPG Petrol Diesel Fuel_Oil Aviation_Fuel_and_Kerosine Oil_Other Natural_Gas Hydro Geothermal Solar Wind Liquid_Biofuels Biogas Wood Electricity Waste_Heat	:=
-NEWZEALAND 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0
-AUSTRALIA 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0
-	[*,*,DAY_WINTER,2025]:	Bituminous_and_Sub_Bitumious Lignite Crude_Feedstocks_NGL LPG Petrol Diesel Fuel_Oil Aviation_Fuel_and_Kerosine Oil_Other Natural_Gas Hydro Geothermal Solar Wind Liquid_Biofuels Biogas Wood Electricity Waste_Heat	:=
-NEWZEALAND 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0
-AUSTRALIA 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0
-	[*,*,DAY_WINTER,2026]:	Bituminous_and_Sub_Bitumious Lignite Crude_Feedstocks_NGL LPG Petrol Diesel Fuel_Oil Aviation_Fuel_and_Kerosine Oil_Other Natural_Gas Hydro Geothermal Solar Wind Liquid_Biofuels Biogas Wood Electricity Waste_Heat	:=
-NEWZEALAND 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0
-AUSTRALIA 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0
-	[*,*,DAY_WINTER,2027]:	Bituminous_and_Sub_Bitumious Lignite Crude_Feedstocks_NGL LPG Petrol Diesel Fuel_Oil Aviation_Fuel_and_Kerosine Oil_Other Natural_Gas Hydro Geothermal Solar Wind Liquid_Biofuels Biogas Wood Electricity Waste_Heat	:=
-NEWZEALAND 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0
-AUSTRALIA 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0
-	[*,*,DAY_WINTER,2028]:	Bituminous_and_Sub_Bitumious Lignite Crude_Feedstocks_NGL LPG Petrol Diesel Fuel_Oil Aviation_Fuel_and_Kerosine Oil_Other Natural_Gas Hydro Geothermal Solar Wind Liquid_Biofuels Biogas Wood Electricity Waste_Heat	:=
-NEWZEALAND 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0
-AUSTRALIA 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0
-	[*,*,DAY_WINTER,2029]:	Bituminous_and_Sub_Bitumious Lignite Crude_Feedstocks_NGL LPG Petrol Diesel Fuel_Oil Aviation_Fuel_and_Kerosine Oil_Other Natural_Gas Hydro Geothermal Solar Wind Liquid_Biofuels Biogas Wood Electricity Waste_Heat	:=
-NEWZEALAND 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0
-AUSTRALIA 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0
-	[*,*,DAY_WINTER,2030]:	Bituminous_and_Sub_Bitumious Lignite Crude_Feedstocks_NGL LPG Petrol Diesel Fuel_Oil Aviation_Fuel_and_Kerosine Oil_Other Natural_Gas Hydro Geothermal Solar Wind Liquid_Biofuels Biogas Wood Electricity Waste_Heat	:=
-NEWZEALAND 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0
-AUSTRALIA 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0
-	[*,*,NIGHT_WINTER,2020]:	Bituminous_and_Sub_Bitumious Lignite Crude_Feedstocks_NGL LPG Petrol Diesel Fuel_Oil Aviation_Fuel_and_Kerosine Oil_Other Natural_Gas Hydro Geothermal Solar Wind Liquid_Biofuels Biogas Wood Electricity Waste_Heat	:=
-NEWZEALAND 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0
-AUSTRALIA 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0
-	[*,*,NIGHT_WINTER,2021]:	Bituminous_and_Sub_Bitumious Lignite Crude_Feedstocks_NGL LPG Petrol Diesel Fuel_Oil Aviation_Fuel_and_Kerosine Oil_Other Natural_Gas Hydro Geothermal Solar Wind Liquid_Biofuels Biogas Wood Electricity Waste_Heat	:=
-NEWZEALAND 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0
-AUSTRALIA 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0
-	[*,*,NIGHT_WINTER,2022]:	Bituminous_and_Sub_Bitumious Lignite Crude_Feedstocks_NGL LPG Petrol Diesel Fuel_Oil Aviation_Fuel_and_Kerosine Oil_Other Natural_Gas Hydro Geothermal Solar Wind Liquid_Biofuels Biogas Wood Electricity Waste_Heat	:=
-NEWZEALAND 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0
-AUSTRALIA 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0
-	[*,*,NIGHT_WINTER,2023]:	Bituminous_and_Sub_Bitumious Lignite Crude_Feedstocks_NGL LPG Petrol Diesel Fuel_Oil Aviation_Fuel_and_Kerosine Oil_Other Natural_Gas Hydro Geothermal Solar Wind Liquid_Biofuels Biogas Wood Electricity Waste_Heat	:=
-NEWZEALAND 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0
-AUSTRALIA 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0
-	[*,*,NIGHT_WINTER,2024]:	Bituminous_and_Sub_Bitumious Lignite Crude_Feedstocks_NGL LPG Petrol Diesel Fuel_Oil Aviation_Fuel_and_Kerosine Oil_Other Natural_Gas Hydro Geothermal Solar Wind Liquid_Biofuels Biogas Wood Electricity Waste_Heat	:=
-NEWZEALAND 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0
-AUSTRALIA 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0
-	[*,*,NIGHT_WINTER,2025]:	Bituminous_and_Sub_Bitumious Lignite Crude_Feedstocks_NGL LPG Petrol Diesel Fuel_Oil Aviation_Fuel_and_Kerosine Oil_Other Natural_Gas Hydro Geothermal Solar Wind Liquid_Biofuels Biogas Wood Electricity Waste_Heat	:=
-NEWZEALAND 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0
-AUSTRALIA 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0
-	[*,*,NIGHT_WINTER,2026]:	Bituminous_and_Sub_Bitumious Lignite Crude_Feedstocks_NGL LPG Petrol Diesel Fuel_Oil Aviation_Fuel_and_Kerosine Oil_Other Natural_Gas Hydro Geothermal Solar Wind Liquid_Biofuels Biogas Wood Electricity Waste_Heat	:=
-NEWZEALAND 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0
-AUSTRALIA 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0
-	[*,*,NIGHT_WINTER,2027]:	Bituminous_and_Sub_Bitumious Lignite Crude_Feedstocks_NGL LPG Petrol Diesel Fuel_Oil Aviation_Fuel_and_Kerosine Oil_Other Natural_Gas Hydro Geothermal Solar Wind Liquid_Biofuels Biogas Wood Electricity Waste_Heat	:=
-NEWZEALAND 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0
-AUSTRALIA 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0
-	[*,*,NIGHT_WINTER,2028]:	Bituminous_and_Sub_Bitumious Lignite Crude_Feedstocks_NGL LPG Petrol Diesel Fuel_Oil Aviation_Fuel_and_Kerosine Oil_Other Natural_Gas Hydro Geothermal Solar Wind Liquid_Biofuels Biogas Wood Electricity Waste_Heat	:=
-NEWZEALAND 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0
-AUSTRALIA 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0
-	[*,*,NIGHT_WINTER,2029]:	Bituminous_and_Sub_Bitumious Lignite Crude_Feedstocks_NGL LPG Petrol Diesel Fuel_Oil Aviation_Fuel_and_Kerosine Oil_Other Natural_Gas Hydro Geothermal Solar Wind Liquid_Biofuels Biogas Wood Electricity Waste_Heat	:=
-NEWZEALAND 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0
-AUSTRALIA 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0
-	[*,*,NIGHT_WINTER,2030]:	Bituminous_and_Sub_Bitumious Lignite Crude_Feedstocks_NGL LPG Petrol Diesel Fuel_Oil Aviation_Fuel_and_Kerosine Oil_Other Natural_Gas Hydro Geothermal Solar Wind Liquid_Biofuels Biogas Wood Electricity Waste_Heat	:=
-NEWZEALAND 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0
-AUSTRALIA 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0
-	[*,*,DAY_INTERMEDIATE,2020]:	Bituminous_and_Sub_Bitumious Lignite Crude_Feedstocks_NGL LPG Petrol Diesel Fuel_Oil Aviation_Fuel_and_Kerosine Oil_Other Natural_Gas Hydro Geothermal Solar Wind Liquid_Biofuels Biogas Wood Electricity Waste_Heat	:=
-NEWZEALAND 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0
-AUSTRALIA 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0
-	[*,*,DAY_INTERMEDIATE,2021]:	Bituminous_and_Sub_Bitumious Lignite Crude_Feedstocks_NGL LPG Petrol Diesel Fuel_Oil Aviation_Fuel_and_Kerosine Oil_Other Natural_Gas Hydro Geothermal Solar Wind Liquid_Biofuels Biogas Wood Electricity Waste_Heat	:=
-NEWZEALAND 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0
-AUSTRALIA 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0
-	[*,*,DAY_INTERMEDIATE,2022]:	Bituminous_and_Sub_Bitumious Lignite Crude_Feedstocks_NGL LPG Petrol Diesel Fuel_Oil Aviation_Fuel_and_Kerosine Oil_Other Natural_Gas Hydro Geothermal Solar Wind Liquid_Biofuels Biogas Wood Electricity Waste_Heat	:=
-NEWZEALAND 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0
-AUSTRALIA 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0
-	[*,*,DAY_INTERMEDIATE,2023]:	Bituminous_and_Sub_Bitumious Lignite Crude_Feedstocks_NGL LPG Petrol Diesel Fuel_Oil Aviation_Fuel_and_Kerosine Oil_Other Natural_Gas Hydro Geothermal Solar Wind Liquid_Biofuels Biogas Wood Electricity Waste_Heat	:=
-NEWZEALAND 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0
-AUSTRALIA 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0
-	[*,*,DAY_INTERMEDIATE,2024]:	Bituminous_and_Sub_Bitumious Lignite Crude_Feedstocks_NGL LPG Petrol Diesel Fuel_Oil Aviation_Fuel_and_Kerosine Oil_Other Natural_Gas Hydro Geothermal Solar Wind Liquid_Biofuels Biogas Wood Electricity Waste_Heat	:=
-NEWZEALAND 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0
-AUSTRALIA 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0
-	[*,*,DAY_INTERMEDIATE,2025]:	Bituminous_and_Sub_Bitumious Lignite Crude_Feedstocks_NGL LPG Petrol Diesel Fuel_Oil Aviation_Fuel_and_Kerosine Oil_Other Natural_Gas Hydro Geothermal Solar Wind Liquid_Biofuels Biogas Wood Electricity Waste_Heat	:=
-NEWZEALAND 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0
-AUSTRALIA 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0
-	[*,*,DAY_INTERMEDIATE,2026]:	Bituminous_and_Sub_Bitumious Lignite Crude_Feedstocks_NGL LPG Petrol Diesel Fuel_Oil Aviation_Fuel_and_Kerosine Oil_Other Natural_Gas Hydro Geothermal Solar Wind Liquid_Biofuels Biogas Wood Electricity Waste_Heat	:=
-NEWZEALAND 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0
-AUSTRALIA 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0
-	[*,*,DAY_INTERMEDIATE,2027]:	Bituminous_and_Sub_Bitumious Lignite Crude_Feedstocks_NGL LPG Petrol Diesel Fuel_Oil Aviation_Fuel_and_Kerosine Oil_Other Natural_Gas Hydro Geothermal Solar Wind Liquid_Biofuels Biogas Wood Electricity Waste_Heat	:=
-NEWZEALAND 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0
-AUSTRALIA 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0
-	[*,*,DAY_INTERMEDIATE,2028]:	Bituminous_and_Sub_Bitumious Lignite Crude_Feedstocks_NGL LPG Petrol Diesel Fuel_Oil Aviation_Fuel_and_Kerosine Oil_Other Natural_Gas Hydro Geothermal Solar Wind Liquid_Biofuels Biogas Wood Electricity Waste_Heat	:=
-NEWZEALAND 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0
-AUSTRALIA 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0
-	[*,*,DAY_INTERMEDIATE,2029]:	Bituminous_and_Sub_Bitumious Lignite Crude_Feedstocks_NGL LPG Petrol Diesel Fuel_Oil Aviation_Fuel_and_Kerosine Oil_Other Natural_Gas Hydro Geothermal Solar Wind Liquid_Biofuels Biogas Wood Electricity Waste_Heat	:=
-NEWZEALAND 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0
-AUSTRALIA 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0
-	[*,*,DAY_INTERMEDIATE,2030]:	Bituminous_and_Sub_Bitumious Lignite Crude_Feedstocks_NGL LPG Petrol Diesel Fuel_Oil Aviation_Fuel_and_Kerosine Oil_Other Natural_Gas Hydro Geothermal Solar Wind Liquid_Biofuels Biogas Wood Electricity Waste_Heat	:=
-NEWZEALAND 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0
-AUSTRALIA 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0
-	[*,*,NIGHT_INTERMEDIATE,2020]:	Bituminous_and_Sub_Bitumious Lignite Crude_Feedstocks_NGL LPG Petrol Diesel Fuel_Oil Aviation_Fuel_and_Kerosine Oil_Other Natural_Gas Hydro Geothermal Solar Wind Liquid_Biofuels Biogas Wood Electricity Waste_Heat	:=
-NEWZEALAND 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0
-AUSTRALIA 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0
-	[*,*,NIGHT_INTERMEDIATE,2021]:	Bituminous_and_Sub_Bitumious Lignite Crude_Feedstocks_NGL LPG Petrol Diesel Fuel_Oil Aviation_Fuel_and_Kerosine Oil_Other Natural_Gas Hydro Geothermal Solar Wind Liquid_Biofuels Biogas Wood Electricity Waste_Heat	:=
-NEWZEALAND 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0
-AUSTRALIA 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0
-	[*,*,NIGHT_INTERMEDIATE,2022]:	Bituminous_and_Sub_Bitumious Lignite Crude_Feedstocks_NGL LPG Petrol Diesel Fuel_Oil Aviation_Fuel_and_Kerosine Oil_Other Natural_Gas Hydro Geothermal Solar Wind Liquid_Biofuels Biogas Wood Electricity Waste_Heat	:=
-NEWZEALAND 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0
-AUSTRALIA 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0
-	[*,*,NIGHT_INTERMEDIATE,2023]:	Bituminous_and_Sub_Bitumious Lignite Crude_Feedstocks_NGL LPG Petrol Diesel Fuel_Oil Aviation_Fuel_and_Kerosine Oil_Other Natural_Gas Hydro Geothermal Solar Wind Liquid_Biofuels Biogas Wood Electricity Waste_Heat	:=
-NEWZEALAND 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0
-AUSTRALIA 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0
-	[*,*,NIGHT_INTERMEDIATE,2024]:	Bituminous_and_Sub_Bitumious Lignite Crude_Feedstocks_NGL LPG Petrol Diesel Fuel_Oil Aviation_Fuel_and_Kerosine Oil_Other Natural_Gas Hydro Geothermal Solar Wind Liquid_Biofuels Biogas Wood Electricity Waste_Heat	:=
-NEWZEALAND 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0
-AUSTRALIA 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0
-	[*,*,NIGHT_INTERMEDIATE,2025]:	Bituminous_and_Sub_Bitumious Lignite Crude_Feedstocks_NGL LPG Petrol Diesel Fuel_Oil Aviation_Fuel_and_Kerosine Oil_Other Natural_Gas Hydro Geothermal Solar Wind Liquid_Biofuels Biogas Wood Electricity Waste_Heat	:=
-NEWZEALAND 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0
-AUSTRALIA 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0
-	[*,*,NIGHT_INTERMEDIATE,2026]:	Bituminous_and_Sub_Bitumious Lignite Crude_Feedstocks_NGL LPG Petrol Diesel Fuel_Oil Aviation_Fuel_and_Kerosine Oil_Other Natural_Gas Hydro Geothermal Solar Wind Liquid_Biofuels Biogas Wood Electricity Waste_Heat	:=
-NEWZEALAND 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0
-AUSTRALIA 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0
-	[*,*,NIGHT_INTERMEDIATE,2027]:	Bituminous_and_Sub_Bitumious Lignite Crude_Feedstocks_NGL LPG Petrol Diesel Fuel_Oil Aviation_Fuel_and_Kerosine Oil_Other Natural_Gas Hydro Geothermal Solar Wind Liquid_Biofuels Biogas Wood Electricity Waste_Heat	:=
-NEWZEALAND 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0
-AUSTRALIA 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0
-	[*,*,NIGHT_INTERMEDIATE,2028]:	Bituminous_and_Sub_Bitumious Lignite Crude_Feedstocks_NGL LPG Petrol Diesel Fuel_Oil Aviation_Fuel_and_Kerosine Oil_Other Natural_Gas Hydro Geothermal Solar Wind Liquid_Biofuels Biogas Wood Electricity Waste_Heat	:=
-NEWZEALAND 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0
-AUSTRALIA 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0
-	[*,*,NIGHT_INTERMEDIATE,2029]:	Bituminous_and_Sub_Bitumious Lignite Crude_Feedstocks_NGL LPG Petrol Diesel Fuel_Oil Aviation_Fuel_and_Kerosine Oil_Other Natural_Gas Hydro Geothermal Solar Wind Liquid_Biofuels Biogas Wood Electricity Waste_Heat	:=
-NEWZEALAND 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0
-AUSTRALIA 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0
-	[*,*,NIGHT_INTERMEDIATE,2030]:	Bituminous_and_Sub_Bitumious Lignite Crude_Feedstocks_NGL LPG Petrol Diesel Fuel_Oil Aviation_Fuel_and_Kerosine Oil_Other Natural_Gas Hydro Geothermal Solar Wind Liquid_Biofuels Biogas Wood Electricity Waste_Heat	:=
-NEWZEALAND 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0
-AUSTRALIA 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0
+	[*,*,DAY_SUMMER,2020]:	Bituminous Sub_Bitumious Lignite Crude_Feedstocks_NGL LPG Petrol Diesel Fuel_Oil Aviation_Fuel_and_Kerosine Oil_Other Natural_Gas Hydro Geothermal Solar Wind Liquid_Biofuels Biogas Wood Electricity Waste_Heat	:=
+NEWZEALAND 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0
+AUSTRALIA 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0
+	[*,*,DAY_SUMMER,2021]:	Bituminous Sub_Bitumious Lignite Crude_Feedstocks_NGL LPG Petrol Diesel Fuel_Oil Aviation_Fuel_and_Kerosine Oil_Other Natural_Gas Hydro Geothermal Solar Wind Liquid_Biofuels Biogas Wood Electricity Waste_Heat	:=
+NEWZEALAND 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0
+AUSTRALIA 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0
+	[*,*,DAY_SUMMER,2022]:	Bituminous Sub_Bitumious Lignite Crude_Feedstocks_NGL LPG Petrol Diesel Fuel_Oil Aviation_Fuel_and_Kerosine Oil_Other Natural_Gas Hydro Geothermal Solar Wind Liquid_Biofuels Biogas Wood Electricity Waste_Heat	:=
+NEWZEALAND 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0
+AUSTRALIA 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0
+	[*,*,DAY_SUMMER,2023]:	Bituminous Sub_Bitumious Lignite Crude_Feedstocks_NGL LPG Petrol Diesel Fuel_Oil Aviation_Fuel_and_Kerosine Oil_Other Natural_Gas Hydro Geothermal Solar Wind Liquid_Biofuels Biogas Wood Electricity Waste_Heat	:=
+NEWZEALAND 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0
+AUSTRALIA 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0
+	[*,*,DAY_SUMMER,2024]:	Bituminous Sub_Bitumious Lignite Crude_Feedstocks_NGL LPG Petrol Diesel Fuel_Oil Aviation_Fuel_and_Kerosine Oil_Other Natural_Gas Hydro Geothermal Solar Wind Liquid_Biofuels Biogas Wood Electricity Waste_Heat	:=
+NEWZEALAND 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0
+AUSTRALIA 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0
+	[*,*,DAY_SUMMER,2025]:	Bituminous Sub_Bitumious Lignite Crude_Feedstocks_NGL LPG Petrol Diesel Fuel_Oil Aviation_Fuel_and_Kerosine Oil_Other Natural_Gas Hydro Geothermal Solar Wind Liquid_Biofuels Biogas Wood Electricity Waste_Heat	:=
+NEWZEALAND 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0
+AUSTRALIA 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0
+	[*,*,DAY_SUMMER,2026]:	Bituminous Sub_Bitumious Lignite Crude_Feedstocks_NGL LPG Petrol Diesel Fuel_Oil Aviation_Fuel_and_Kerosine Oil_Other Natural_Gas Hydro Geothermal Solar Wind Liquid_Biofuels Biogas Wood Electricity Waste_Heat	:=
+NEWZEALAND 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0
+AUSTRALIA 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0
+	[*,*,DAY_SUMMER,2027]:	Bituminous Sub_Bitumious Lignite Crude_Feedstocks_NGL LPG Petrol Diesel Fuel_Oil Aviation_Fuel_and_Kerosine Oil_Other Natural_Gas Hydro Geothermal Solar Wind Liquid_Biofuels Biogas Wood Electricity Waste_Heat	:=
+NEWZEALAND 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0
+AUSTRALIA 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0
+	[*,*,DAY_SUMMER,2028]:	Bituminous Sub_Bitumious Lignite Crude_Feedstocks_NGL LPG Petrol Diesel Fuel_Oil Aviation_Fuel_and_Kerosine Oil_Other Natural_Gas Hydro Geothermal Solar Wind Liquid_Biofuels Biogas Wood Electricity Waste_Heat	:=
+NEWZEALAND 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0
+AUSTRALIA 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0
+	[*,*,DAY_SUMMER,2029]:	Bituminous Sub_Bitumious Lignite Crude_Feedstocks_NGL LPG Petrol Diesel Fuel_Oil Aviation_Fuel_and_Kerosine Oil_Other Natural_Gas Hydro Geothermal Solar Wind Liquid_Biofuels Biogas Wood Electricity Waste_Heat	:=
+NEWZEALAND 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0
+AUSTRALIA 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0
+	[*,*,DAY_SUMMER,2030]:	Bituminous Sub_Bitumious Lignite Crude_Feedstocks_NGL LPG Petrol Diesel Fuel_Oil Aviation_Fuel_and_Kerosine Oil_Other Natural_Gas Hydro Geothermal Solar Wind Liquid_Biofuels Biogas Wood Electricity Waste_Heat	:=
+NEWZEALAND 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0
+AUSTRALIA 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0
+	[*,*,NIGHT_SUMMER,2020]:	Bituminous Sub_Bitumious Lignite Crude_Feedstocks_NGL LPG Petrol Diesel Fuel_Oil Aviation_Fuel_and_Kerosine Oil_Other Natural_Gas Hydro Geothermal Solar Wind Liquid_Biofuels Biogas Wood Electricity Waste_Heat	:=
+NEWZEALAND 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0
+AUSTRALIA 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0
+	[*,*,NIGHT_SUMMER,2021]:	Bituminous Sub_Bitumious Lignite Crude_Feedstocks_NGL LPG Petrol Diesel Fuel_Oil Aviation_Fuel_and_Kerosine Oil_Other Natural_Gas Hydro Geothermal Solar Wind Liquid_Biofuels Biogas Wood Electricity Waste_Heat	:=
+NEWZEALAND 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0
+AUSTRALIA 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0
+	[*,*,NIGHT_SUMMER,2022]:	Bituminous Sub_Bitumious Lignite Crude_Feedstocks_NGL LPG Petrol Diesel Fuel_Oil Aviation_Fuel_and_Kerosine Oil_Other Natural_Gas Hydro Geothermal Solar Wind Liquid_Biofuels Biogas Wood Electricity Waste_Heat	:=
+NEWZEALAND 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0
+AUSTRALIA 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0
+	[*,*,NIGHT_SUMMER,2023]:	Bituminous Sub_Bitumious Lignite Crude_Feedstocks_NGL LPG Petrol Diesel Fuel_Oil Aviation_Fuel_and_Kerosine Oil_Other Natural_Gas Hydro Geothermal Solar Wind Liquid_Biofuels Biogas Wood Electricity Waste_Heat	:=
+NEWZEALAND 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0
+AUSTRALIA 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0
+	[*,*,NIGHT_SUMMER,2024]:	Bituminous Sub_Bitumious Lignite Crude_Feedstocks_NGL LPG Petrol Diesel Fuel_Oil Aviation_Fuel_and_Kerosine Oil_Other Natural_Gas Hydro Geothermal Solar Wind Liquid_Biofuels Biogas Wood Electricity Waste_Heat	:=
+NEWZEALAND 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0
+AUSTRALIA 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0
+	[*,*,NIGHT_SUMMER,2025]:	Bituminous Sub_Bitumious Lignite Crude_Feedstocks_NGL LPG Petrol Diesel Fuel_Oil Aviation_Fuel_and_Kerosine Oil_Other Natural_Gas Hydro Geothermal Solar Wind Liquid_Biofuels Biogas Wood Electricity Waste_Heat	:=
+NEWZEALAND 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0
+AUSTRALIA 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0
+	[*,*,NIGHT_SUMMER,2026]:	Bituminous Sub_Bitumious Lignite Crude_Feedstocks_NGL LPG Petrol Diesel Fuel_Oil Aviation_Fuel_and_Kerosine Oil_Other Natural_Gas Hydro Geothermal Solar Wind Liquid_Biofuels Biogas Wood Electricity Waste_Heat	:=
+NEWZEALAND 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0
+AUSTRALIA 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0
+	[*,*,NIGHT_SUMMER,2027]:	Bituminous Sub_Bitumious Lignite Crude_Feedstocks_NGL LPG Petrol Diesel Fuel_Oil Aviation_Fuel_and_Kerosine Oil_Other Natural_Gas Hydro Geothermal Solar Wind Liquid_Biofuels Biogas Wood Electricity Waste_Heat	:=
+NEWZEALAND 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0
+AUSTRALIA 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0
+	[*,*,NIGHT_SUMMER,2028]:	Bituminous Sub_Bitumious Lignite Crude_Feedstocks_NGL LPG Petrol Diesel Fuel_Oil Aviation_Fuel_and_Kerosine Oil_Other Natural_Gas Hydro Geothermal Solar Wind Liquid_Biofuels Biogas Wood Electricity Waste_Heat	:=
+NEWZEALAND 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0
+AUSTRALIA 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0
+	[*,*,NIGHT_SUMMER,2029]:	Bituminous Sub_Bitumious Lignite Crude_Feedstocks_NGL LPG Petrol Diesel Fuel_Oil Aviation_Fuel_and_Kerosine Oil_Other Natural_Gas Hydro Geothermal Solar Wind Liquid_Biofuels Biogas Wood Electricity Waste_Heat	:=
+NEWZEALAND 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0
+AUSTRALIA 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0
+	[*,*,NIGHT_SUMMER,2030]:	Bituminous Sub_Bitumious Lignite Crude_Feedstocks_NGL LPG Petrol Diesel Fuel_Oil Aviation_Fuel_and_Kerosine Oil_Other Natural_Gas Hydro Geothermal Solar Wind Liquid_Biofuels Biogas Wood Electricity Waste_Heat	:=
+NEWZEALAND 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0
+AUSTRALIA 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0
+	[*,*,DAY_WINTER,2020]:	Bituminous Sub_Bitumious Lignite Crude_Feedstocks_NGL LPG Petrol Diesel Fuel_Oil Aviation_Fuel_and_Kerosine Oil_Other Natural_Gas Hydro Geothermal Solar Wind Liquid_Biofuels Biogas Wood Electricity Waste_Heat	:=
+NEWZEALAND 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0
+AUSTRALIA 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0
+	[*,*,DAY_WINTER,2021]:	Bituminous Sub_Bitumious Lignite Crude_Feedstocks_NGL LPG Petrol Diesel Fuel_Oil Aviation_Fuel_and_Kerosine Oil_Other Natural_Gas Hydro Geothermal Solar Wind Liquid_Biofuels Biogas Wood Electricity Waste_Heat	:=
+NEWZEALAND 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0
+AUSTRALIA 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0
+	[*,*,DAY_WINTER,2022]:	Bituminous Sub_Bitumious Lignite Crude_Feedstocks_NGL LPG Petrol Diesel Fuel_Oil Aviation_Fuel_and_Kerosine Oil_Other Natural_Gas Hydro Geothermal Solar Wind Liquid_Biofuels Biogas Wood Electricity Waste_Heat	:=
+NEWZEALAND 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0
+AUSTRALIA 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0
+	[*,*,DAY_WINTER,2023]:	Bituminous Sub_Bitumious Lignite Crude_Feedstocks_NGL LPG Petrol Diesel Fuel_Oil Aviation_Fuel_and_Kerosine Oil_Other Natural_Gas Hydro Geothermal Solar Wind Liquid_Biofuels Biogas Wood Electricity Waste_Heat	:=
+NEWZEALAND 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0
+AUSTRALIA 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0
+	[*,*,DAY_WINTER,2024]:	Bituminous Sub_Bitumious Lignite Crude_Feedstocks_NGL LPG Petrol Diesel Fuel_Oil Aviation_Fuel_and_Kerosine Oil_Other Natural_Gas Hydro Geothermal Solar Wind Liquid_Biofuels Biogas Wood Electricity Waste_Heat	:=
+NEWZEALAND 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0
+AUSTRALIA 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0
+	[*,*,DAY_WINTER,2025]:	Bituminous Sub_Bitumious Lignite Crude_Feedstocks_NGL LPG Petrol Diesel Fuel_Oil Aviation_Fuel_and_Kerosine Oil_Other Natural_Gas Hydro Geothermal Solar Wind Liquid_Biofuels Biogas Wood Electricity Waste_Heat	:=
+NEWZEALAND 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0
+AUSTRALIA 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0
+	[*,*,DAY_WINTER,2026]:	Bituminous Sub_Bitumious Lignite Crude_Feedstocks_NGL LPG Petrol Diesel Fuel_Oil Aviation_Fuel_and_Kerosine Oil_Other Natural_Gas Hydro Geothermal Solar Wind Liquid_Biofuels Biogas Wood Electricity Waste_Heat	:=
+NEWZEALAND 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0
+AUSTRALIA 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0
+	[*,*,DAY_WINTER,2027]:	Bituminous Sub_Bitumious Lignite Crude_Feedstocks_NGL LPG Petrol Diesel Fuel_Oil Aviation_Fuel_and_Kerosine Oil_Other Natural_Gas Hydro Geothermal Solar Wind Liquid_Biofuels Biogas Wood Electricity Waste_Heat	:=
+NEWZEALAND 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0
+AUSTRALIA 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0
+	[*,*,DAY_WINTER,2028]:	Bituminous Sub_Bitumious Lignite Crude_Feedstocks_NGL LPG Petrol Diesel Fuel_Oil Aviation_Fuel_and_Kerosine Oil_Other Natural_Gas Hydro Geothermal Solar Wind Liquid_Biofuels Biogas Wood Electricity Waste_Heat	:=
+NEWZEALAND 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0
+AUSTRALIA 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0
+	[*,*,DAY_WINTER,2029]:	Bituminous Sub_Bitumious Lignite Crude_Feedstocks_NGL LPG Petrol Diesel Fuel_Oil Aviation_Fuel_and_Kerosine Oil_Other Natural_Gas Hydro Geothermal Solar Wind Liquid_Biofuels Biogas Wood Electricity Waste_Heat	:=
+NEWZEALAND 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0
+AUSTRALIA 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0
+	[*,*,DAY_WINTER,2030]:	Bituminous Sub_Bitumious Lignite Crude_Feedstocks_NGL LPG Petrol Diesel Fuel_Oil Aviation_Fuel_and_Kerosine Oil_Other Natural_Gas Hydro Geothermal Solar Wind Liquid_Biofuels Biogas Wood Electricity Waste_Heat	:=
+NEWZEALAND 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0
+AUSTRALIA 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0
+	[*,*,NIGHT_WINTER,2020]:	Bituminous Sub_Bitumious Lignite Crude_Feedstocks_NGL LPG Petrol Diesel Fuel_Oil Aviation_Fuel_and_Kerosine Oil_Other Natural_Gas Hydro Geothermal Solar Wind Liquid_Biofuels Biogas Wood Electricity Waste_Heat	:=
+NEWZEALAND 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0
+AUSTRALIA 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0
+	[*,*,NIGHT_WINTER,2021]:	Bituminous Sub_Bitumious Lignite Crude_Feedstocks_NGL LPG Petrol Diesel Fuel_Oil Aviation_Fuel_and_Kerosine Oil_Other Natural_Gas Hydro Geothermal Solar Wind Liquid_Biofuels Biogas Wood Electricity Waste_Heat	:=
+NEWZEALAND 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0
+AUSTRALIA 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0
+	[*,*,NIGHT_WINTER,2022]:	Bituminous Sub_Bitumious Lignite Crude_Feedstocks_NGL LPG Petrol Diesel Fuel_Oil Aviation_Fuel_and_Kerosine Oil_Other Natural_Gas Hydro Geothermal Solar Wind Liquid_Biofuels Biogas Wood Electricity Waste_Heat	:=
+NEWZEALAND 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0
+AUSTRALIA 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0
+	[*,*,NIGHT_WINTER,2023]:	Bituminous Sub_Bitumious Lignite Crude_Feedstocks_NGL LPG Petrol Diesel Fuel_Oil Aviation_Fuel_and_Kerosine Oil_Other Natural_Gas Hydro Geothermal Solar Wind Liquid_Biofuels Biogas Wood Electricity Waste_Heat	:=
+NEWZEALAND 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0
+AUSTRALIA 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0
+	[*,*,NIGHT_WINTER,2024]:	Bituminous Sub_Bitumious Lignite Crude_Feedstocks_NGL LPG Petrol Diesel Fuel_Oil Aviation_Fuel_and_Kerosine Oil_Other Natural_Gas Hydro Geothermal Solar Wind Liquid_Biofuels Biogas Wood Electricity Waste_Heat	:=
+NEWZEALAND 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0
+AUSTRALIA 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0
+	[*,*,NIGHT_WINTER,2025]:	Bituminous Sub_Bitumious Lignite Crude_Feedstocks_NGL LPG Petrol Diesel Fuel_Oil Aviation_Fuel_and_Kerosine Oil_Other Natural_Gas Hydro Geothermal Solar Wind Liquid_Biofuels Biogas Wood Electricity Waste_Heat	:=
+NEWZEALAND 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0
+AUSTRALIA 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0
+	[*,*,NIGHT_WINTER,2026]:	Bituminous Sub_Bitumious Lignite Crude_Feedstocks_NGL LPG Petrol Diesel Fuel_Oil Aviation_Fuel_and_Kerosine Oil_Other Natural_Gas Hydro Geothermal Solar Wind Liquid_Biofuels Biogas Wood Electricity Waste_Heat	:=
+NEWZEALAND 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0
+AUSTRALIA 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0
+	[*,*,NIGHT_WINTER,2027]:	Bituminous Sub_Bitumious Lignite Crude_Feedstocks_NGL LPG Petrol Diesel Fuel_Oil Aviation_Fuel_and_Kerosine Oil_Other Natural_Gas Hydro Geothermal Solar Wind Liquid_Biofuels Biogas Wood Electricity Waste_Heat	:=
+NEWZEALAND 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0
+AUSTRALIA 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0
+	[*,*,NIGHT_WINTER,2028]:	Bituminous Sub_Bitumious Lignite Crude_Feedstocks_NGL LPG Petrol Diesel Fuel_Oil Aviation_Fuel_and_Kerosine Oil_Other Natural_Gas Hydro Geothermal Solar Wind Liquid_Biofuels Biogas Wood Electricity Waste_Heat	:=
+NEWZEALAND 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0
+AUSTRALIA 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0
+	[*,*,NIGHT_WINTER,2029]:	Bituminous Sub_Bitumious Lignite Crude_Feedstocks_NGL LPG Petrol Diesel Fuel_Oil Aviation_Fuel_and_Kerosine Oil_Other Natural_Gas Hydro Geothermal Solar Wind Liquid_Biofuels Biogas Wood Electricity Waste_Heat	:=
+NEWZEALAND 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0
+AUSTRALIA 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0
+	[*,*,NIGHT_WINTER,2030]:	Bituminous Sub_Bitumious Lignite Crude_Feedstocks_NGL LPG Petrol Diesel Fuel_Oil Aviation_Fuel_and_Kerosine Oil_Other Natural_Gas Hydro Geothermal Solar Wind Liquid_Biofuels Biogas Wood Electricity Waste_Heat	:=
+NEWZEALAND 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0
+AUSTRALIA 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0
+	[*,*,DAY_INTERMEDIATE,2020]:	Bituminous Sub_Bitumious Lignite Crude_Feedstocks_NGL LPG Petrol Diesel Fuel_Oil Aviation_Fuel_and_Kerosine Oil_Other Natural_Gas Hydro Geothermal Solar Wind Liquid_Biofuels Biogas Wood Electricity Waste_Heat	:=
+NEWZEALAND 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0
+AUSTRALIA 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0
+	[*,*,DAY_INTERMEDIATE,2021]:	Bituminous Sub_Bitumious Lignite Crude_Feedstocks_NGL LPG Petrol Diesel Fuel_Oil Aviation_Fuel_and_Kerosine Oil_Other Natural_Gas Hydro Geothermal Solar Wind Liquid_Biofuels Biogas Wood Electricity Waste_Heat	:=
+NEWZEALAND 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0
+AUSTRALIA 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0
+	[*,*,DAY_INTERMEDIATE,2022]:	Bituminous Sub_Bitumious Lignite Crude_Feedstocks_NGL LPG Petrol Diesel Fuel_Oil Aviation_Fuel_and_Kerosine Oil_Other Natural_Gas Hydro Geothermal Solar Wind Liquid_Biofuels Biogas Wood Electricity Waste_Heat	:=
+NEWZEALAND 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0
+AUSTRALIA 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0
+	[*,*,DAY_INTERMEDIATE,2023]:	Bituminous Sub_Bitumious Lignite Crude_Feedstocks_NGL LPG Petrol Diesel Fuel_Oil Aviation_Fuel_and_Kerosine Oil_Other Natural_Gas Hydro Geothermal Solar Wind Liquid_Biofuels Biogas Wood Electricity Waste_Heat	:=
+NEWZEALAND 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0
+AUSTRALIA 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0
+	[*,*,DAY_INTERMEDIATE,2024]:	Bituminous Sub_Bitumious Lignite Crude_Feedstocks_NGL LPG Petrol Diesel Fuel_Oil Aviation_Fuel_and_Kerosine Oil_Other Natural_Gas Hydro Geothermal Solar Wind Liquid_Biofuels Biogas Wood Electricity Waste_Heat	:=
+NEWZEALAND 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0
+AUSTRALIA 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0
+	[*,*,DAY_INTERMEDIATE,2025]:	Bituminous Sub_Bitumious Lignite Crude_Feedstocks_NGL LPG Petrol Diesel Fuel_Oil Aviation_Fuel_and_Kerosine Oil_Other Natural_Gas Hydro Geothermal Solar Wind Liquid_Biofuels Biogas Wood Electricity Waste_Heat	:=
+NEWZEALAND 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0
+AUSTRALIA 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0
+	[*,*,DAY_INTERMEDIATE,2026]:	Bituminous Sub_Bitumious Lignite Crude_Feedstocks_NGL LPG Petrol Diesel Fuel_Oil Aviation_Fuel_and_Kerosine Oil_Other Natural_Gas Hydro Geothermal Solar Wind Liquid_Biofuels Biogas Wood Electricity Waste_Heat	:=
+NEWZEALAND 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0
+AUSTRALIA 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0
+	[*,*,DAY_INTERMEDIATE,2027]:	Bituminous Sub_Bitumious Lignite Crude_Feedstocks_NGL LPG Petrol Diesel Fuel_Oil Aviation_Fuel_and_Kerosine Oil_Other Natural_Gas Hydro Geothermal Solar Wind Liquid_Biofuels Biogas Wood Electricity Waste_Heat	:=
+NEWZEALAND 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0
+AUSTRALIA 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0
+	[*,*,DAY_INTERMEDIATE,2028]:	Bituminous Sub_Bitumious Lignite Crude_Feedstocks_NGL LPG Petrol Diesel Fuel_Oil Aviation_Fuel_and_Kerosine Oil_Other Natural_Gas Hydro Geothermal Solar Wind Liquid_Biofuels Biogas Wood Electricity Waste_Heat	:=
+NEWZEALAND 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0
+AUSTRALIA 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0
+	[*,*,DAY_INTERMEDIATE,2029]:	Bituminous Sub_Bitumious Lignite Crude_Feedstocks_NGL LPG Petrol Diesel Fuel_Oil Aviation_Fuel_and_Kerosine Oil_Other Natural_Gas Hydro Geothermal Solar Wind Liquid_Biofuels Biogas Wood Electricity Waste_Heat	:=
+NEWZEALAND 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0
+AUSTRALIA 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0
+	[*,*,DAY_INTERMEDIATE,2030]:	Bituminous Sub_Bitumious Lignite Crude_Feedstocks_NGL LPG Petrol Diesel Fuel_Oil Aviation_Fuel_and_Kerosine Oil_Other Natural_Gas Hydro Geothermal Solar Wind Liquid_Biofuels Biogas Wood Electricity Waste_Heat	:=
+NEWZEALAND 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0
+AUSTRALIA 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0
+	[*,*,NIGHT_INTERMEDIATE,2020]:	Bituminous Sub_Bitumious Lignite Crude_Feedstocks_NGL LPG Petrol Diesel Fuel_Oil Aviation_Fuel_and_Kerosine Oil_Other Natural_Gas Hydro Geothermal Solar Wind Liquid_Biofuels Biogas Wood Electricity Waste_Heat	:=
+NEWZEALAND 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0
+AUSTRALIA 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0
+	[*,*,NIGHT_INTERMEDIATE,2021]:	Bituminous Sub_Bitumious Lignite Crude_Feedstocks_NGL LPG Petrol Diesel Fuel_Oil Aviation_Fuel_and_Kerosine Oil_Other Natural_Gas Hydro Geothermal Solar Wind Liquid_Biofuels Biogas Wood Electricity Waste_Heat	:=
+NEWZEALAND 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0
+AUSTRALIA 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0
+	[*,*,NIGHT_INTERMEDIATE,2022]:	Bituminous Sub_Bitumious Lignite Crude_Feedstocks_NGL LPG Petrol Diesel Fuel_Oil Aviation_Fuel_and_Kerosine Oil_Other Natural_Gas Hydro Geothermal Solar Wind Liquid_Biofuels Biogas Wood Electricity Waste_Heat	:=
+NEWZEALAND 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0
+AUSTRALIA 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0
+	[*,*,NIGHT_INTERMEDIATE,2023]:	Bituminous Sub_Bitumious Lignite Crude_Feedstocks_NGL LPG Petrol Diesel Fuel_Oil Aviation_Fuel_and_Kerosine Oil_Other Natural_Gas Hydro Geothermal Solar Wind Liquid_Biofuels Biogas Wood Electricity Waste_Heat	:=
+NEWZEALAND 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0
+AUSTRALIA 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0
+	[*,*,NIGHT_INTERMEDIATE,2024]:	Bituminous Sub_Bitumious Lignite Crude_Feedstocks_NGL LPG Petrol Diesel Fuel_Oil Aviation_Fuel_and_Kerosine Oil_Other Natural_Gas Hydro Geothermal Solar Wind Liquid_Biofuels Biogas Wood Electricity Waste_Heat	:=
+NEWZEALAND 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0
+AUSTRALIA 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0
+	[*,*,NIGHT_INTERMEDIATE,2025]:	Bituminous Sub_Bitumious Lignite Crude_Feedstocks_NGL LPG Petrol Diesel Fuel_Oil Aviation_Fuel_and_Kerosine Oil_Other Natural_Gas Hydro Geothermal Solar Wind Liquid_Biofuels Biogas Wood Electricity Waste_Heat	:=
+NEWZEALAND 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0
+AUSTRALIA 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0
+	[*,*,NIGHT_INTERMEDIATE,2026]:	Bituminous Sub_Bitumious Lignite Crude_Feedstocks_NGL LPG Petrol Diesel Fuel_Oil Aviation_Fuel_and_Kerosine Oil_Other Natural_Gas Hydro Geothermal Solar Wind Liquid_Biofuels Biogas Wood Electricity Waste_Heat	:=
+NEWZEALAND 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0
+AUSTRALIA 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0
+	[*,*,NIGHT_INTERMEDIATE,2027]:	Bituminous Sub_Bitumious Lignite Crude_Feedstocks_NGL LPG Petrol Diesel Fuel_Oil Aviation_Fuel_and_Kerosine Oil_Other Natural_Gas Hydro Geothermal Solar Wind Liquid_Biofuels Biogas Wood Electricity Waste_Heat	:=
+NEWZEALAND 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0
+AUSTRALIA 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0
+	[*,*,NIGHT_INTERMEDIATE,2028]:	Bituminous Sub_Bitumious Lignite Crude_Feedstocks_NGL LPG Petrol Diesel Fuel_Oil Aviation_Fuel_and_Kerosine Oil_Other Natural_Gas Hydro Geothermal Solar Wind Liquid_Biofuels Biogas Wood Electricity Waste_Heat	:=
+NEWZEALAND 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0
+AUSTRALIA 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0
+	[*,*,NIGHT_INTERMEDIATE,2029]:	Bituminous Sub_Bitumious Lignite Crude_Feedstocks_NGL LPG Petrol Diesel Fuel_Oil Aviation_Fuel_and_Kerosine Oil_Other Natural_Gas Hydro Geothermal Solar Wind Liquid_Biofuels Biogas Wood Electricity Waste_Heat	:=
+NEWZEALAND 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0
+AUSTRALIA 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0
+	[*,*,NIGHT_INTERMEDIATE,2030]:	Bituminous Sub_Bitumious Lignite Crude_Feedstocks_NGL LPG Petrol Diesel Fuel_Oil Aviation_Fuel_and_Kerosine Oil_Other Natural_Gas Hydro Geothermal Solar Wind Liquid_Biofuels Biogas Wood Electricity Waste_Heat	:=
+NEWZEALAND 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0
+AUSTRALIA 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0
 ;
 #
 param	AccumulatedAnnualDemand	default	1:=
-	[*,*,2020]:	Bituminous_and_Sub_Bitumious Lignite Crude_Feedstocks_NGL LPG Petrol Diesel Fuel_Oil Aviation_Fuel_and_Kerosine Oil_Other Natural_Gas Hydro Geothermal Solar Wind Liquid_Biofuels Biogas Wood Electricity Waste_Heat	:=
-NEWZEALAND 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0
-AUSTRALIA 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0
-	[*,*,2021]:	Bituminous_and_Sub_Bitumious Lignite Crude_Feedstocks_NGL LPG Petrol Diesel Fuel_Oil Aviation_Fuel_and_Kerosine Oil_Other Natural_Gas Hydro Geothermal Solar Wind Liquid_Biofuels Biogas Wood Electricity Waste_Heat	:=
-NEWZEALAND 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0
-AUSTRALIA 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0
-	[*,*,2022]:	Bituminous_and_Sub_Bitumious Lignite Crude_Feedstocks_NGL LPG Petrol Diesel Fuel_Oil Aviation_Fuel_and_Kerosine Oil_Other Natural_Gas Hydro Geothermal Solar Wind Liquid_Biofuels Biogas Wood Electricity Waste_Heat	:=
-NEWZEALAND 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0
-AUSTRALIA 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0
-	[*,*,2023]:	Bituminous_and_Sub_Bitumious Lignite Crude_Feedstocks_NGL LPG Petrol Diesel Fuel_Oil Aviation_Fuel_and_Kerosine Oil_Other Natural_Gas Hydro Geothermal Solar Wind Liquid_Biofuels Biogas Wood Electricity Waste_Heat	:=
-NEWZEALAND 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0
-AUSTRALIA 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0
-	[*,*,2024]:	Bituminous_and_Sub_Bitumious Lignite Crude_Feedstocks_NGL LPG Petrol Diesel Fuel_Oil Aviation_Fuel_and_Kerosine Oil_Other Natural_Gas Hydro Geothermal Solar Wind Liquid_Biofuels Biogas Wood Electricity Waste_Heat	:=
-NEWZEALAND 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0
-AUSTRALIA 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0
-	[*,*,2025]:	Bituminous_and_Sub_Bitumious Lignite Crude_Feedstocks_NGL LPG Petrol Diesel Fuel_Oil Aviation_Fuel_and_Kerosine Oil_Other Natural_Gas Hydro Geothermal Solar Wind Liquid_Biofuels Biogas Wood Electricity Waste_Heat	:=
-NEWZEALAND 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0
-AUSTRALIA 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0
-	[*,*,2026]:	Bituminous_and_Sub_Bitumious Lignite Crude_Feedstocks_NGL LPG Petrol Diesel Fuel_Oil Aviation_Fuel_and_Kerosine Oil_Other Natural_Gas Hydro Geothermal Solar Wind Liquid_Biofuels Biogas Wood Electricity Waste_Heat	:=
-NEWZEALAND 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0
-AUSTRALIA 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0
-	[*,*,2027]:	Bituminous_and_Sub_Bitumious Lignite Crude_Feedstocks_NGL LPG Petrol Diesel Fuel_Oil Aviation_Fuel_and_Kerosine Oil_Other Natural_Gas Hydro Geothermal Solar Wind Liquid_Biofuels Biogas Wood Electricity Waste_Heat	:=
-NEWZEALAND 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0
-AUSTRALIA 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0
-	[*,*,2028]:	Bituminous_and_Sub_Bitumious Lignite Crude_Feedstocks_NGL LPG Petrol Diesel Fuel_Oil Aviation_Fuel_and_Kerosine Oil_Other Natural_Gas Hydro Geothermal Solar Wind Liquid_Biofuels Biogas Wood Electricity Waste_Heat	:=
-NEWZEALAND 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0
-AUSTRALIA 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0
-	[*,*,2029]:	Bituminous_and_Sub_Bitumious Lignite Crude_Feedstocks_NGL LPG Petrol Diesel Fuel_Oil Aviation_Fuel_and_Kerosine Oil_Other Natural_Gas Hydro Geothermal Solar Wind Liquid_Biofuels Biogas Wood Electricity Waste_Heat	:=
-NEWZEALAND 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0
-AUSTRALIA 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0
-	[*,*,2030]:	Bituminous_and_Sub_Bitumious Lignite Crude_Feedstocks_NGL LPG Petrol Diesel Fuel_Oil Aviation_Fuel_and_Kerosine Oil_Other Natural_Gas Hydro Geothermal Solar Wind Liquid_Biofuels Biogas Wood Electricity Waste_Heat	:=
-NEWZEALAND 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0
-AUSTRALIA 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0
+	[*,*,2020]:	Bituminous Sub_Bitumious Lignite Crude_Feedstocks_NGL LPG Petrol Diesel Fuel_Oil Aviation_Fuel_and_Kerosine Oil_Other Natural_Gas Hydro Geothermal Solar Wind Liquid_Biofuels Biogas Wood Electricity Waste_Heat	:=
+NEWZEALAND 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0
+AUSTRALIA 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0
+	[*,*,2021]:	Bituminous Sub_Bitumious Lignite Crude_Feedstocks_NGL LPG Petrol Diesel Fuel_Oil Aviation_Fuel_and_Kerosine Oil_Other Natural_Gas Hydro Geothermal Solar Wind Liquid_Biofuels Biogas Wood Electricity Waste_Heat	:=
+NEWZEALAND 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0
+AUSTRALIA 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0
+	[*,*,2022]:	Bituminous Sub_Bitumious Lignite Crude_Feedstocks_NGL LPG Petrol Diesel Fuel_Oil Aviation_Fuel_and_Kerosine Oil_Other Natural_Gas Hydro Geothermal Solar Wind Liquid_Biofuels Biogas Wood Electricity Waste_Heat	:=
+NEWZEALAND 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0
+AUSTRALIA 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0
+	[*,*,2023]:	Bituminous Sub_Bitumious Lignite Crude_Feedstocks_NGL LPG Petrol Diesel Fuel_Oil Aviation_Fuel_and_Kerosine Oil_Other Natural_Gas Hydro Geothermal Solar Wind Liquid_Biofuels Biogas Wood Electricity Waste_Heat	:=
+NEWZEALAND 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0
+AUSTRALIA 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0
+	[*,*,2024]:	Bituminous Sub_Bitumious Lignite Crude_Feedstocks_NGL LPG Petrol Diesel Fuel_Oil Aviation_Fuel_and_Kerosine Oil_Other Natural_Gas Hydro Geothermal Solar Wind Liquid_Biofuels Biogas Wood Electricity Waste_Heat	:=
+NEWZEALAND 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0
+AUSTRALIA 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0
+	[*,*,2025]:	Bituminous Sub_Bitumious Lignite Crude_Feedstocks_NGL LPG Petrol Diesel Fuel_Oil Aviation_Fuel_and_Kerosine Oil_Other Natural_Gas Hydro Geothermal Solar Wind Liquid_Biofuels Biogas Wood Electricity Waste_Heat	:=
+NEWZEALAND 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0
+AUSTRALIA 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0
+	[*,*,2026]:	Bituminous Sub_Bitumious Lignite Crude_Feedstocks_NGL LPG Petrol Diesel Fuel_Oil Aviation_Fuel_and_Kerosine Oil_Other Natural_Gas Hydro Geothermal Solar Wind Liquid_Biofuels Biogas Wood Electricity Waste_Heat	:=
+NEWZEALAND 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0
+AUSTRALIA 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0
+	[*,*,2027]:	Bituminous Sub_Bitumious Lignite Crude_Feedstocks_NGL LPG Petrol Diesel Fuel_Oil Aviation_Fuel_and_Kerosine Oil_Other Natural_Gas Hydro Geothermal Solar Wind Liquid_Biofuels Biogas Wood Electricity Waste_Heat	:=
+NEWZEALAND 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0
+AUSTRALIA 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0
+	[*,*,2028]:	Bituminous Sub_Bitumious Lignite Crude_Feedstocks_NGL LPG Petrol Diesel Fuel_Oil Aviation_Fuel_and_Kerosine Oil_Other Natural_Gas Hydro Geothermal Solar Wind Liquid_Biofuels Biogas Wood Electricity Waste_Heat	:=
+NEWZEALAND 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0
+AUSTRALIA 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0
+	[*,*,2029]:	Bituminous Sub_Bitumious Lignite Crude_Feedstocks_NGL LPG Petrol Diesel Fuel_Oil Aviation_Fuel_and_Kerosine Oil_Other Natural_Gas Hydro Geothermal Solar Wind Liquid_Biofuels Biogas Wood Electricity Waste_Heat	:=
+NEWZEALAND 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0
+AUSTRALIA 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0
+	[*,*,2030]:	Bituminous Sub_Bitumious Lignite Crude_Feedstocks_NGL LPG Petrol Diesel Fuel_Oil Aviation_Fuel_and_Kerosine Oil_Other Natural_Gas Hydro Geothermal Solar Wind Liquid_Biofuels Biogas Wood Electricity Waste_Heat	:=
+NEWZEALAND 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0
+AUSTRALIA 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0
 ;
 #
 param	CapacityToActivityUnit	:Indigenous_Production Imports Exports Stock_Change International_Transport Electricity_Generation Cogeneration Fuel_Production Other_Transformation Losses_and_Own_Use Non_Energy_Use Agriculture Forestry_and_Logging Fishing Mining Food_Processing Textiles Wood_Pulp_Paper_and_Printing Chemicals Non_Metallic_Minerals Basic_Metals Mechanical_Electrical_Equippment Building_and_Construction Unallocated Commercial Transport Residential Statistical_Differences:=
@@ -1303,37 +1336,70 @@ AUSTRALIA 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.
 ;
 #
 param	InputActivityRatio	default	1:=
-	[*,*,Bituminous_and_Sub_Bitumious,1,2020]:	Indigenous_Production Imports Exports Stock_Change International_Transport Electricity_Generation Cogeneration Fuel_Production Other_Transformation Losses_and_Own_Use Non_Energy_Use Agriculture Forestry_and_Logging Fishing Mining Food_Processing Textiles Wood_Pulp_Paper_and_Printing Chemicals Non_Metallic_Minerals Basic_Metals Mechanical_Electrical_Equippment Building_and_Construction Unallocated Commercial Transport Residential Statistical_Differences	:=
+	[*,*,Bituminous,1,2020]:	Indigenous_Production Imports Exports Stock_Change International_Transport Electricity_Generation Cogeneration Fuel_Production Other_Transformation Losses_and_Own_Use Non_Energy_Use Agriculture Forestry_and_Logging Fishing Mining Food_Processing Textiles Wood_Pulp_Paper_and_Printing Chemicals Non_Metallic_Minerals Basic_Metals Mechanical_Electrical_Equippment Building_and_Construction Unallocated Commercial Transport Residential Statistical_Differences	:=
 NEWZEALAND 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0
 AUSTRALIA 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0
-	[*,*,Bituminous_and_Sub_Bitumious,1,2021]:	Indigenous_Production Imports Exports Stock_Change International_Transport Electricity_Generation Cogeneration Fuel_Production Other_Transformation Losses_and_Own_Use Non_Energy_Use Agriculture Forestry_and_Logging Fishing Mining Food_Processing Textiles Wood_Pulp_Paper_and_Printing Chemicals Non_Metallic_Minerals Basic_Metals Mechanical_Electrical_Equippment Building_and_Construction Unallocated Commercial Transport Residential Statistical_Differences	:=
+	[*,*,Bituminous,1,2021]:	Indigenous_Production Imports Exports Stock_Change International_Transport Electricity_Generation Cogeneration Fuel_Production Other_Transformation Losses_and_Own_Use Non_Energy_Use Agriculture Forestry_and_Logging Fishing Mining Food_Processing Textiles Wood_Pulp_Paper_and_Printing Chemicals Non_Metallic_Minerals Basic_Metals Mechanical_Electrical_Equippment Building_and_Construction Unallocated Commercial Transport Residential Statistical_Differences	:=
 NEWZEALAND 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0
 AUSTRALIA 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0
-	[*,*,Bituminous_and_Sub_Bitumious,1,2022]:	Indigenous_Production Imports Exports Stock_Change International_Transport Electricity_Generation Cogeneration Fuel_Production Other_Transformation Losses_and_Own_Use Non_Energy_Use Agriculture Forestry_and_Logging Fishing Mining Food_Processing Textiles Wood_Pulp_Paper_and_Printing Chemicals Non_Metallic_Minerals Basic_Metals Mechanical_Electrical_Equippment Building_and_Construction Unallocated Commercial Transport Residential Statistical_Differences	:=
+	[*,*,Bituminous,1,2022]:	Indigenous_Production Imports Exports Stock_Change International_Transport Electricity_Generation Cogeneration Fuel_Production Other_Transformation Losses_and_Own_Use Non_Energy_Use Agriculture Forestry_and_Logging Fishing Mining Food_Processing Textiles Wood_Pulp_Paper_and_Printing Chemicals Non_Metallic_Minerals Basic_Metals Mechanical_Electrical_Equippment Building_and_Construction Unallocated Commercial Transport Residential Statistical_Differences	:=
 NEWZEALAND 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0
 AUSTRALIA 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0
-	[*,*,Bituminous_and_Sub_Bitumious,1,2023]:	Indigenous_Production Imports Exports Stock_Change International_Transport Electricity_Generation Cogeneration Fuel_Production Other_Transformation Losses_and_Own_Use Non_Energy_Use Agriculture Forestry_and_Logging Fishing Mining Food_Processing Textiles Wood_Pulp_Paper_and_Printing Chemicals Non_Metallic_Minerals Basic_Metals Mechanical_Electrical_Equippment Building_and_Construction Unallocated Commercial Transport Residential Statistical_Differences	:=
+	[*,*,Bituminous,1,2023]:	Indigenous_Production Imports Exports Stock_Change International_Transport Electricity_Generation Cogeneration Fuel_Production Other_Transformation Losses_and_Own_Use Non_Energy_Use Agriculture Forestry_and_Logging Fishing Mining Food_Processing Textiles Wood_Pulp_Paper_and_Printing Chemicals Non_Metallic_Minerals Basic_Metals Mechanical_Electrical_Equippment Building_and_Construction Unallocated Commercial Transport Residential Statistical_Differences	:=
 NEWZEALAND 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0
 AUSTRALIA 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0
-	[*,*,Bituminous_and_Sub_Bitumious,1,2024]:	Indigenous_Production Imports Exports Stock_Change International_Transport Electricity_Generation Cogeneration Fuel_Production Other_Transformation Losses_and_Own_Use Non_Energy_Use Agriculture Forestry_and_Logging Fishing Mining Food_Processing Textiles Wood_Pulp_Paper_and_Printing Chemicals Non_Metallic_Minerals Basic_Metals Mechanical_Electrical_Equippment Building_and_Construction Unallocated Commercial Transport Residential Statistical_Differences	:=
+	[*,*,Bituminous,1,2024]:	Indigenous_Production Imports Exports Stock_Change International_Transport Electricity_Generation Cogeneration Fuel_Production Other_Transformation Losses_and_Own_Use Non_Energy_Use Agriculture Forestry_and_Logging Fishing Mining Food_Processing Textiles Wood_Pulp_Paper_and_Printing Chemicals Non_Metallic_Minerals Basic_Metals Mechanical_Electrical_Equippment Building_and_Construction Unallocated Commercial Transport Residential Statistical_Differences	:=
 NEWZEALAND 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0
 AUSTRALIA 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0
-	[*,*,Bituminous_and_Sub_Bitumious,1,2025]:	Indigenous_Production Imports Exports Stock_Change International_Transport Electricity_Generation Cogeneration Fuel_Production Other_Transformation Losses_and_Own_Use Non_Energy_Use Agriculture Forestry_and_Logging Fishing Mining Food_Processing Textiles Wood_Pulp_Paper_and_Printing Chemicals Non_Metallic_Minerals Basic_Metals Mechanical_Electrical_Equippment Building_and_Construction Unallocated Commercial Transport Residential Statistical_Differences	:=
+	[*,*,Bituminous,1,2025]:	Indigenous_Production Imports Exports Stock_Change International_Transport Electricity_Generation Cogeneration Fuel_Production Other_Transformation Losses_and_Own_Use Non_Energy_Use Agriculture Forestry_and_Logging Fishing Mining Food_Processing Textiles Wood_Pulp_Paper_and_Printing Chemicals Non_Metallic_Minerals Basic_Metals Mechanical_Electrical_Equippment Building_and_Construction Unallocated Commercial Transport Residential Statistical_Differences	:=
 NEWZEALAND 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0
 AUSTRALIA 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0
-	[*,*,Bituminous_and_Sub_Bitumious,1,2026]:	Indigenous_Production Imports Exports Stock_Change International_Transport Electricity_Generation Cogeneration Fuel_Production Other_Transformation Losses_and_Own_Use Non_Energy_Use Agriculture Forestry_and_Logging Fishing Mining Food_Processing Textiles Wood_Pulp_Paper_and_Printing Chemicals Non_Metallic_Minerals Basic_Metals Mechanical_Electrical_Equippment Building_and_Construction Unallocated Commercial Transport Residential Statistical_Differences	:=
+	[*,*,Bituminous,1,2026]:	Indigenous_Production Imports Exports Stock_Change International_Transport Electricity_Generation Cogeneration Fuel_Production Other_Transformation Losses_and_Own_Use Non_Energy_Use Agriculture Forestry_and_Logging Fishing Mining Food_Processing Textiles Wood_Pulp_Paper_and_Printing Chemicals Non_Metallic_Minerals Basic_Metals Mechanical_Electrical_Equippment Building_and_Construction Unallocated Commercial Transport Residential Statistical_Differences	:=
 NEWZEALAND 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0
 AUSTRALIA 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0
-	[*,*,Bituminous_and_Sub_Bitumious,1,2027]:	Indigenous_Production Imports Exports Stock_Change International_Transport Electricity_Generation Cogeneration Fuel_Production Other_Transformation Losses_and_Own_Use Non_Energy_Use Agriculture Forestry_and_Logging Fishing Mining Food_Processing Textiles Wood_Pulp_Paper_and_Printing Chemicals Non_Metallic_Minerals Basic_Metals Mechanical_Electrical_Equippment Building_and_Construction Unallocated Commercial Transport Residential Statistical_Differences	:=
+	[*,*,Bituminous,1,2027]:	Indigenous_Production Imports Exports Stock_Change International_Transport Electricity_Generation Cogeneration Fuel_Production Other_Transformation Losses_and_Own_Use Non_Energy_Use Agriculture Forestry_and_Logging Fishing Mining Food_Processing Textiles Wood_Pulp_Paper_and_Printing Chemicals Non_Metallic_Minerals Basic_Metals Mechanical_Electrical_Equippment Building_and_Construction Unallocated Commercial Transport Residential Statistical_Differences	:=
 NEWZEALAND 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0
 AUSTRALIA 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0
-	[*,*,Bituminous_and_Sub_Bitumious,1,2028]:	Indigenous_Production Imports Exports Stock_Change International_Transport Electricity_Generation Cogeneration Fuel_Production Other_Transformation Losses_and_Own_Use Non_Energy_Use Agriculture Forestry_and_Logging Fishing Mining Food_Processing Textiles Wood_Pulp_Paper_and_Printing Chemicals Non_Metallic_Minerals Basic_Metals Mechanical_Electrical_Equippment Building_and_Construction Unallocated Commercial Transport Residential Statistical_Differences	:=
+	[*,*,Bituminous,1,2028]:	Indigenous_Production Imports Exports Stock_Change International_Transport Electricity_Generation Cogeneration Fuel_Production Other_Transformation Losses_and_Own_Use Non_Energy_Use Agriculture Forestry_and_Logging Fishing Mining Food_Processing Textiles Wood_Pulp_Paper_and_Printing Chemicals Non_Metallic_Minerals Basic_Metals Mechanical_Electrical_Equippment Building_and_Construction Unallocated Commercial Transport Residential Statistical_Differences	:=
 NEWZEALAND 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0
 AUSTRALIA 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0
-	[*,*,Bituminous_and_Sub_Bitumious,1,2029]:	Indigenous_Production Imports Exports Stock_Change International_Transport Electricity_Generation Cogeneration Fuel_Production Other_Transformation Losses_and_Own_Use Non_Energy_Use Agriculture Forestry_and_Logging Fishing Mining Food_Processing Textiles Wood_Pulp_Paper_and_Printing Chemicals Non_Metallic_Minerals Basic_Metals Mechanical_Electrical_Equippment Building_and_Construction Unallocated Commercial Transport Residential Statistical_Differences	:=
+	[*,*,Bituminous,1,2029]:	Indigenous_Production Imports Exports Stock_Change International_Transport Electricity_Generation Cogeneration Fuel_Production Other_Transformation Losses_and_Own_Use Non_Energy_Use Agriculture Forestry_and_Logging Fishing Mining Food_Processing Textiles Wood_Pulp_Paper_and_Printing Chemicals Non_Metallic_Minerals Basic_Metals Mechanical_Electrical_Equippment Building_and_Construction Unallocated Commercial Transport Residential Statistical_Differences	:=
 NEWZEALAND 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0
 AUSTRALIA 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0
-	[*,*,Bituminous_and_Sub_Bitumious,1,2030]:	Indigenous_Production Imports Exports Stock_Change International_Transport Electricity_Generation Cogeneration Fuel_Production Other_Transformation Losses_and_Own_Use Non_Energy_Use Agriculture Forestry_and_Logging Fishing Mining Food_Processing Textiles Wood_Pulp_Paper_and_Printing Chemicals Non_Metallic_Minerals Basic_Metals Mechanical_Electrical_Equippment Building_and_Construction Unallocated Commercial Transport Residential Statistical_Differences	:=
+	[*,*,Bituminous,1,2030]:	Indigenous_Production Imports Exports Stock_Change International_Transport Electricity_Generation Cogeneration Fuel_Production Other_Transformation Losses_and_Own_Use Non_Energy_Use Agriculture Forestry_and_Logging Fishing Mining Food_Processing Textiles Wood_Pulp_Paper_and_Printing Chemicals Non_Metallic_Minerals Basic_Metals Mechanical_Electrical_Equippment Building_and_Construction Unallocated Commercial Transport Residential Statistical_Differences	:=
+NEWZEALAND 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0
+AUSTRALIA 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0
+	[*,*,Sub_Bitumious,1,2020]:	Indigenous_Production Imports Exports Stock_Change International_Transport Electricity_Generation Cogeneration Fuel_Production Other_Transformation Losses_and_Own_Use Non_Energy_Use Agriculture Forestry_and_Logging Fishing Mining Food_Processing Textiles Wood_Pulp_Paper_and_Printing Chemicals Non_Metallic_Minerals Basic_Metals Mechanical_Electrical_Equippment Building_and_Construction Unallocated Commercial Transport Residential Statistical_Differences	:=
+NEWZEALAND 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0
+AUSTRALIA 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0
+	[*,*,Sub_Bitumious,1,2021]:	Indigenous_Production Imports Exports Stock_Change International_Transport Electricity_Generation Cogeneration Fuel_Production Other_Transformation Losses_and_Own_Use Non_Energy_Use Agriculture Forestry_and_Logging Fishing Mining Food_Processing Textiles Wood_Pulp_Paper_and_Printing Chemicals Non_Metallic_Minerals Basic_Metals Mechanical_Electrical_Equippment Building_and_Construction Unallocated Commercial Transport Residential Statistical_Differences	:=
+NEWZEALAND 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0
+AUSTRALIA 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0
+	[*,*,Sub_Bitumious,1,2022]:	Indigenous_Production Imports Exports Stock_Change International_Transport Electricity_Generation Cogeneration Fuel_Production Other_Transformation Losses_and_Own_Use Non_Energy_Use Agriculture Forestry_and_Logging Fishing Mining Food_Processing Textiles Wood_Pulp_Paper_and_Printing Chemicals Non_Metallic_Minerals Basic_Metals Mechanical_Electrical_Equippment Building_and_Construction Unallocated Commercial Transport Residential Statistical_Differences	:=
+NEWZEALAND 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0
+AUSTRALIA 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0
+	[*,*,Sub_Bitumious,1,2023]:	Indigenous_Production Imports Exports Stock_Change International_Transport Electricity_Generation Cogeneration Fuel_Production Other_Transformation Losses_and_Own_Use Non_Energy_Use Agriculture Forestry_and_Logging Fishing Mining Food_Processing Textiles Wood_Pulp_Paper_and_Printing Chemicals Non_Metallic_Minerals Basic_Metals Mechanical_Electrical_Equippment Building_and_Construction Unallocated Commercial Transport Residential Statistical_Differences	:=
+NEWZEALAND 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0
+AUSTRALIA 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0
+	[*,*,Sub_Bitumious,1,2024]:	Indigenous_Production Imports Exports Stock_Change International_Transport Electricity_Generation Cogeneration Fuel_Production Other_Transformation Losses_and_Own_Use Non_Energy_Use Agriculture Forestry_and_Logging Fishing Mining Food_Processing Textiles Wood_Pulp_Paper_and_Printing Chemicals Non_Metallic_Minerals Basic_Metals Mechanical_Electrical_Equippment Building_and_Construction Unallocated Commercial Transport Residential Statistical_Differences	:=
+NEWZEALAND 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0
+AUSTRALIA 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0
+	[*,*,Sub_Bitumious,1,2025]:	Indigenous_Production Imports Exports Stock_Change International_Transport Electricity_Generation Cogeneration Fuel_Production Other_Transformation Losses_and_Own_Use Non_Energy_Use Agriculture Forestry_and_Logging Fishing Mining Food_Processing Textiles Wood_Pulp_Paper_and_Printing Chemicals Non_Metallic_Minerals Basic_Metals Mechanical_Electrical_Equippment Building_and_Construction Unallocated Commercial Transport Residential Statistical_Differences	:=
+NEWZEALAND 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0
+AUSTRALIA 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0
+	[*,*,Sub_Bitumious,1,2026]:	Indigenous_Production Imports Exports Stock_Change International_Transport Electricity_Generation Cogeneration Fuel_Production Other_Transformation Losses_and_Own_Use Non_Energy_Use Agriculture Forestry_and_Logging Fishing Mining Food_Processing Textiles Wood_Pulp_Paper_and_Printing Chemicals Non_Metallic_Minerals Basic_Metals Mechanical_Electrical_Equippment Building_and_Construction Unallocated Commercial Transport Residential Statistical_Differences	:=
+NEWZEALAND 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0
+AUSTRALIA 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0
+	[*,*,Sub_Bitumious,1,2027]:	Indigenous_Production Imports Exports Stock_Change International_Transport Electricity_Generation Cogeneration Fuel_Production Other_Transformation Losses_and_Own_Use Non_Energy_Use Agriculture Forestry_and_Logging Fishing Mining Food_Processing Textiles Wood_Pulp_Paper_and_Printing Chemicals Non_Metallic_Minerals Basic_Metals Mechanical_Electrical_Equippment Building_and_Construction Unallocated Commercial Transport Residential Statistical_Differences	:=
+NEWZEALAND 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0
+AUSTRALIA 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0
+	[*,*,Sub_Bitumious,1,2028]:	Indigenous_Production Imports Exports Stock_Change International_Transport Electricity_Generation Cogeneration Fuel_Production Other_Transformation Losses_and_Own_Use Non_Energy_Use Agriculture Forestry_and_Logging Fishing Mining Food_Processing Textiles Wood_Pulp_Paper_and_Printing Chemicals Non_Metallic_Minerals Basic_Metals Mechanical_Electrical_Equippment Building_and_Construction Unallocated Commercial Transport Residential Statistical_Differences	:=
+NEWZEALAND 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0
+AUSTRALIA 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0
+	[*,*,Sub_Bitumious,1,2029]:	Indigenous_Production Imports Exports Stock_Change International_Transport Electricity_Generation Cogeneration Fuel_Production Other_Transformation Losses_and_Own_Use Non_Energy_Use Agriculture Forestry_and_Logging Fishing Mining Food_Processing Textiles Wood_Pulp_Paper_and_Printing Chemicals Non_Metallic_Minerals Basic_Metals Mechanical_Electrical_Equippment Building_and_Construction Unallocated Commercial Transport Residential Statistical_Differences	:=
+NEWZEALAND 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0
+AUSTRALIA 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0
+	[*,*,Sub_Bitumious,1,2030]:	Indigenous_Production Imports Exports Stock_Change International_Transport Electricity_Generation Cogeneration Fuel_Production Other_Transformation Losses_and_Own_Use Non_Energy_Use Agriculture Forestry_and_Logging Fishing Mining Food_Processing Textiles Wood_Pulp_Paper_and_Printing Chemicals Non_Metallic_Minerals Basic_Metals Mechanical_Electrical_Equippment Building_and_Construction Unallocated Commercial Transport Residential Statistical_Differences	:=
 NEWZEALAND 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0
 AUSTRALIA 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0
 	[*,*,Lignite,1,2020]:	Indigenous_Production Imports Exports Stock_Change International_Transport Electricity_Generation Cogeneration Fuel_Production Other_Transformation Losses_and_Own_Use Non_Energy_Use Agriculture Forestry_and_Logging Fishing Mining Food_Processing Textiles Wood_Pulp_Paper_and_Printing Chemicals Non_Metallic_Minerals Basic_Metals Mechanical_Electrical_Equippment Building_and_Construction Unallocated Commercial Transport Residential Statistical_Differences	:=
@@ -1933,37 +1999,70 @@ AUSTRALIA 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.
 ;
 #
 param	OutputActivityRatio	default	1:=
-	[*,*,Bituminous_and_Sub_Bitumious,1,2020]:	Indigenous_Production Imports Exports Stock_Change International_Transport Electricity_Generation Cogeneration Fuel_Production Other_Transformation Losses_and_Own_Use Non_Energy_Use Agriculture Forestry_and_Logging Fishing Mining Food_Processing Textiles Wood_Pulp_Paper_and_Printing Chemicals Non_Metallic_Minerals Basic_Metals Mechanical_Electrical_Equippment Building_and_Construction Unallocated Commercial Transport Residential Statistical_Differences	:=
+	[*,*,Bituminous,1,2020]:	Indigenous_Production Imports Exports Stock_Change International_Transport Electricity_Generation Cogeneration Fuel_Production Other_Transformation Losses_and_Own_Use Non_Energy_Use Agriculture Forestry_and_Logging Fishing Mining Food_Processing Textiles Wood_Pulp_Paper_and_Printing Chemicals Non_Metallic_Minerals Basic_Metals Mechanical_Electrical_Equippment Building_and_Construction Unallocated Commercial Transport Residential Statistical_Differences	:=
 NEWZEALAND 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0
 AUSTRALIA 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0
-	[*,*,Bituminous_and_Sub_Bitumious,1,2021]:	Indigenous_Production Imports Exports Stock_Change International_Transport Electricity_Generation Cogeneration Fuel_Production Other_Transformation Losses_and_Own_Use Non_Energy_Use Agriculture Forestry_and_Logging Fishing Mining Food_Processing Textiles Wood_Pulp_Paper_and_Printing Chemicals Non_Metallic_Minerals Basic_Metals Mechanical_Electrical_Equippment Building_and_Construction Unallocated Commercial Transport Residential Statistical_Differences	:=
+	[*,*,Bituminous,1,2021]:	Indigenous_Production Imports Exports Stock_Change International_Transport Electricity_Generation Cogeneration Fuel_Production Other_Transformation Losses_and_Own_Use Non_Energy_Use Agriculture Forestry_and_Logging Fishing Mining Food_Processing Textiles Wood_Pulp_Paper_and_Printing Chemicals Non_Metallic_Minerals Basic_Metals Mechanical_Electrical_Equippment Building_and_Construction Unallocated Commercial Transport Residential Statistical_Differences	:=
 NEWZEALAND 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0
 AUSTRALIA 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0
-	[*,*,Bituminous_and_Sub_Bitumious,1,2022]:	Indigenous_Production Imports Exports Stock_Change International_Transport Electricity_Generation Cogeneration Fuel_Production Other_Transformation Losses_and_Own_Use Non_Energy_Use Agriculture Forestry_and_Logging Fishing Mining Food_Processing Textiles Wood_Pulp_Paper_and_Printing Chemicals Non_Metallic_Minerals Basic_Metals Mechanical_Electrical_Equippment Building_and_Construction Unallocated Commercial Transport Residential Statistical_Differences	:=
+	[*,*,Bituminous,1,2022]:	Indigenous_Production Imports Exports Stock_Change International_Transport Electricity_Generation Cogeneration Fuel_Production Other_Transformation Losses_and_Own_Use Non_Energy_Use Agriculture Forestry_and_Logging Fishing Mining Food_Processing Textiles Wood_Pulp_Paper_and_Printing Chemicals Non_Metallic_Minerals Basic_Metals Mechanical_Electrical_Equippment Building_and_Construction Unallocated Commercial Transport Residential Statistical_Differences	:=
 NEWZEALAND 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0
 AUSTRALIA 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0
-	[*,*,Bituminous_and_Sub_Bitumious,1,2023]:	Indigenous_Production Imports Exports Stock_Change International_Transport Electricity_Generation Cogeneration Fuel_Production Other_Transformation Losses_and_Own_Use Non_Energy_Use Agriculture Forestry_and_Logging Fishing Mining Food_Processing Textiles Wood_Pulp_Paper_and_Printing Chemicals Non_Metallic_Minerals Basic_Metals Mechanical_Electrical_Equippment Building_and_Construction Unallocated Commercial Transport Residential Statistical_Differences	:=
+	[*,*,Bituminous,1,2023]:	Indigenous_Production Imports Exports Stock_Change International_Transport Electricity_Generation Cogeneration Fuel_Production Other_Transformation Losses_and_Own_Use Non_Energy_Use Agriculture Forestry_and_Logging Fishing Mining Food_Processing Textiles Wood_Pulp_Paper_and_Printing Chemicals Non_Metallic_Minerals Basic_Metals Mechanical_Electrical_Equippment Building_and_Construction Unallocated Commercial Transport Residential Statistical_Differences	:=
 NEWZEALAND 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0
 AUSTRALIA 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0
-	[*,*,Bituminous_and_Sub_Bitumious,1,2024]:	Indigenous_Production Imports Exports Stock_Change International_Transport Electricity_Generation Cogeneration Fuel_Production Other_Transformation Losses_and_Own_Use Non_Energy_Use Agriculture Forestry_and_Logging Fishing Mining Food_Processing Textiles Wood_Pulp_Paper_and_Printing Chemicals Non_Metallic_Minerals Basic_Metals Mechanical_Electrical_Equippment Building_and_Construction Unallocated Commercial Transport Residential Statistical_Differences	:=
+	[*,*,Bituminous,1,2024]:	Indigenous_Production Imports Exports Stock_Change International_Transport Electricity_Generation Cogeneration Fuel_Production Other_Transformation Losses_and_Own_Use Non_Energy_Use Agriculture Forestry_and_Logging Fishing Mining Food_Processing Textiles Wood_Pulp_Paper_and_Printing Chemicals Non_Metallic_Minerals Basic_Metals Mechanical_Electrical_Equippment Building_and_Construction Unallocated Commercial Transport Residential Statistical_Differences	:=
 NEWZEALAND 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0
 AUSTRALIA 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0
-	[*,*,Bituminous_and_Sub_Bitumious,1,2025]:	Indigenous_Production Imports Exports Stock_Change International_Transport Electricity_Generation Cogeneration Fuel_Production Other_Transformation Losses_and_Own_Use Non_Energy_Use Agriculture Forestry_and_Logging Fishing Mining Food_Processing Textiles Wood_Pulp_Paper_and_Printing Chemicals Non_Metallic_Minerals Basic_Metals Mechanical_Electrical_Equippment Building_and_Construction Unallocated Commercial Transport Residential Statistical_Differences	:=
+	[*,*,Bituminous,1,2025]:	Indigenous_Production Imports Exports Stock_Change International_Transport Electricity_Generation Cogeneration Fuel_Production Other_Transformation Losses_and_Own_Use Non_Energy_Use Agriculture Forestry_and_Logging Fishing Mining Food_Processing Textiles Wood_Pulp_Paper_and_Printing Chemicals Non_Metallic_Minerals Basic_Metals Mechanical_Electrical_Equippment Building_and_Construction Unallocated Commercial Transport Residential Statistical_Differences	:=
 NEWZEALAND 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0
 AUSTRALIA 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0
-	[*,*,Bituminous_and_Sub_Bitumious,1,2026]:	Indigenous_Production Imports Exports Stock_Change International_Transport Electricity_Generation Cogeneration Fuel_Production Other_Transformation Losses_and_Own_Use Non_Energy_Use Agriculture Forestry_and_Logging Fishing Mining Food_Processing Textiles Wood_Pulp_Paper_and_Printing Chemicals Non_Metallic_Minerals Basic_Metals Mechanical_Electrical_Equippment Building_and_Construction Unallocated Commercial Transport Residential Statistical_Differences	:=
+	[*,*,Bituminous,1,2026]:	Indigenous_Production Imports Exports Stock_Change International_Transport Electricity_Generation Cogeneration Fuel_Production Other_Transformation Losses_and_Own_Use Non_Energy_Use Agriculture Forestry_and_Logging Fishing Mining Food_Processing Textiles Wood_Pulp_Paper_and_Printing Chemicals Non_Metallic_Minerals Basic_Metals Mechanical_Electrical_Equippment Building_and_Construction Unallocated Commercial Transport Residential Statistical_Differences	:=
 NEWZEALAND 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0
 AUSTRALIA 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0
-	[*,*,Bituminous_and_Sub_Bitumious,1,2027]:	Indigenous_Production Imports Exports Stock_Change International_Transport Electricity_Generation Cogeneration Fuel_Production Other_Transformation Losses_and_Own_Use Non_Energy_Use Agriculture Forestry_and_Logging Fishing Mining Food_Processing Textiles Wood_Pulp_Paper_and_Printing Chemicals Non_Metallic_Minerals Basic_Metals Mechanical_Electrical_Equippment Building_and_Construction Unallocated Commercial Transport Residential Statistical_Differences	:=
+	[*,*,Bituminous,1,2027]:	Indigenous_Production Imports Exports Stock_Change International_Transport Electricity_Generation Cogeneration Fuel_Production Other_Transformation Losses_and_Own_Use Non_Energy_Use Agriculture Forestry_and_Logging Fishing Mining Food_Processing Textiles Wood_Pulp_Paper_and_Printing Chemicals Non_Metallic_Minerals Basic_Metals Mechanical_Electrical_Equippment Building_and_Construction Unallocated Commercial Transport Residential Statistical_Differences	:=
 NEWZEALAND 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0
 AUSTRALIA 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0
-	[*,*,Bituminous_and_Sub_Bitumious,1,2028]:	Indigenous_Production Imports Exports Stock_Change International_Transport Electricity_Generation Cogeneration Fuel_Production Other_Transformation Losses_and_Own_Use Non_Energy_Use Agriculture Forestry_and_Logging Fishing Mining Food_Processing Textiles Wood_Pulp_Paper_and_Printing Chemicals Non_Metallic_Minerals Basic_Metals Mechanical_Electrical_Equippment Building_and_Construction Unallocated Commercial Transport Residential Statistical_Differences	:=
+	[*,*,Bituminous,1,2028]:	Indigenous_Production Imports Exports Stock_Change International_Transport Electricity_Generation Cogeneration Fuel_Production Other_Transformation Losses_and_Own_Use Non_Energy_Use Agriculture Forestry_and_Logging Fishing Mining Food_Processing Textiles Wood_Pulp_Paper_and_Printing Chemicals Non_Metallic_Minerals Basic_Metals Mechanical_Electrical_Equippment Building_and_Construction Unallocated Commercial Transport Residential Statistical_Differences	:=
 NEWZEALAND 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0
 AUSTRALIA 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0
-	[*,*,Bituminous_and_Sub_Bitumious,1,2029]:	Indigenous_Production Imports Exports Stock_Change International_Transport Electricity_Generation Cogeneration Fuel_Production Other_Transformation Losses_and_Own_Use Non_Energy_Use Agriculture Forestry_and_Logging Fishing Mining Food_Processing Textiles Wood_Pulp_Paper_and_Printing Chemicals Non_Metallic_Minerals Basic_Metals Mechanical_Electrical_Equippment Building_and_Construction Unallocated Commercial Transport Residential Statistical_Differences	:=
+	[*,*,Bituminous,1,2029]:	Indigenous_Production Imports Exports Stock_Change International_Transport Electricity_Generation Cogeneration Fuel_Production Other_Transformation Losses_and_Own_Use Non_Energy_Use Agriculture Forestry_and_Logging Fishing Mining Food_Processing Textiles Wood_Pulp_Paper_and_Printing Chemicals Non_Metallic_Minerals Basic_Metals Mechanical_Electrical_Equippment Building_and_Construction Unallocated Commercial Transport Residential Statistical_Differences	:=
 NEWZEALAND 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0
 AUSTRALIA 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0
-	[*,*,Bituminous_and_Sub_Bitumious,1,2030]:	Indigenous_Production Imports Exports Stock_Change International_Transport Electricity_Generation Cogeneration Fuel_Production Other_Transformation Losses_and_Own_Use Non_Energy_Use Agriculture Forestry_and_Logging Fishing Mining Food_Processing Textiles Wood_Pulp_Paper_and_Printing Chemicals Non_Metallic_Minerals Basic_Metals Mechanical_Electrical_Equippment Building_and_Construction Unallocated Commercial Transport Residential Statistical_Differences	:=
+	[*,*,Bituminous,1,2030]:	Indigenous_Production Imports Exports Stock_Change International_Transport Electricity_Generation Cogeneration Fuel_Production Other_Transformation Losses_and_Own_Use Non_Energy_Use Agriculture Forestry_and_Logging Fishing Mining Food_Processing Textiles Wood_Pulp_Paper_and_Printing Chemicals Non_Metallic_Minerals Basic_Metals Mechanical_Electrical_Equippment Building_and_Construction Unallocated Commercial Transport Residential Statistical_Differences	:=
+NEWZEALAND 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0
+AUSTRALIA 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0
+	[*,*,Sub_Bitumious,1,2020]:	Indigenous_Production Imports Exports Stock_Change International_Transport Electricity_Generation Cogeneration Fuel_Production Other_Transformation Losses_and_Own_Use Non_Energy_Use Agriculture Forestry_and_Logging Fishing Mining Food_Processing Textiles Wood_Pulp_Paper_and_Printing Chemicals Non_Metallic_Minerals Basic_Metals Mechanical_Electrical_Equippment Building_and_Construction Unallocated Commercial Transport Residential Statistical_Differences	:=
+NEWZEALAND 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0
+AUSTRALIA 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0
+	[*,*,Sub_Bitumious,1,2021]:	Indigenous_Production Imports Exports Stock_Change International_Transport Electricity_Generation Cogeneration Fuel_Production Other_Transformation Losses_and_Own_Use Non_Energy_Use Agriculture Forestry_and_Logging Fishing Mining Food_Processing Textiles Wood_Pulp_Paper_and_Printing Chemicals Non_Metallic_Minerals Basic_Metals Mechanical_Electrical_Equippment Building_and_Construction Unallocated Commercial Transport Residential Statistical_Differences	:=
+NEWZEALAND 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0
+AUSTRALIA 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0
+	[*,*,Sub_Bitumious,1,2022]:	Indigenous_Production Imports Exports Stock_Change International_Transport Electricity_Generation Cogeneration Fuel_Production Other_Transformation Losses_and_Own_Use Non_Energy_Use Agriculture Forestry_and_Logging Fishing Mining Food_Processing Textiles Wood_Pulp_Paper_and_Printing Chemicals Non_Metallic_Minerals Basic_Metals Mechanical_Electrical_Equippment Building_and_Construction Unallocated Commercial Transport Residential Statistical_Differences	:=
+NEWZEALAND 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0
+AUSTRALIA 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0
+	[*,*,Sub_Bitumious,1,2023]:	Indigenous_Production Imports Exports Stock_Change International_Transport Electricity_Generation Cogeneration Fuel_Production Other_Transformation Losses_and_Own_Use Non_Energy_Use Agriculture Forestry_and_Logging Fishing Mining Food_Processing Textiles Wood_Pulp_Paper_and_Printing Chemicals Non_Metallic_Minerals Basic_Metals Mechanical_Electrical_Equippment Building_and_Construction Unallocated Commercial Transport Residential Statistical_Differences	:=
+NEWZEALAND 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0
+AUSTRALIA 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0
+	[*,*,Sub_Bitumious,1,2024]:	Indigenous_Production Imports Exports Stock_Change International_Transport Electricity_Generation Cogeneration Fuel_Production Other_Transformation Losses_and_Own_Use Non_Energy_Use Agriculture Forestry_and_Logging Fishing Mining Food_Processing Textiles Wood_Pulp_Paper_and_Printing Chemicals Non_Metallic_Minerals Basic_Metals Mechanical_Electrical_Equippment Building_and_Construction Unallocated Commercial Transport Residential Statistical_Differences	:=
+NEWZEALAND 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0
+AUSTRALIA 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0
+	[*,*,Sub_Bitumious,1,2025]:	Indigenous_Production Imports Exports Stock_Change International_Transport Electricity_Generation Cogeneration Fuel_Production Other_Transformation Losses_and_Own_Use Non_Energy_Use Agriculture Forestry_and_Logging Fishing Mining Food_Processing Textiles Wood_Pulp_Paper_and_Printing Chemicals Non_Metallic_Minerals Basic_Metals Mechanical_Electrical_Equippment Building_and_Construction Unallocated Commercial Transport Residential Statistical_Differences	:=
+NEWZEALAND 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0
+AUSTRALIA 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0
+	[*,*,Sub_Bitumious,1,2026]:	Indigenous_Production Imports Exports Stock_Change International_Transport Electricity_Generation Cogeneration Fuel_Production Other_Transformation Losses_and_Own_Use Non_Energy_Use Agriculture Forestry_and_Logging Fishing Mining Food_Processing Textiles Wood_Pulp_Paper_and_Printing Chemicals Non_Metallic_Minerals Basic_Metals Mechanical_Electrical_Equippment Building_and_Construction Unallocated Commercial Transport Residential Statistical_Differences	:=
+NEWZEALAND 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0
+AUSTRALIA 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0
+	[*,*,Sub_Bitumious,1,2027]:	Indigenous_Production Imports Exports Stock_Change International_Transport Electricity_Generation Cogeneration Fuel_Production Other_Transformation Losses_and_Own_Use Non_Energy_Use Agriculture Forestry_and_Logging Fishing Mining Food_Processing Textiles Wood_Pulp_Paper_and_Printing Chemicals Non_Metallic_Minerals Basic_Metals Mechanical_Electrical_Equippment Building_and_Construction Unallocated Commercial Transport Residential Statistical_Differences	:=
+NEWZEALAND 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0
+AUSTRALIA 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0
+	[*,*,Sub_Bitumious,1,2028]:	Indigenous_Production Imports Exports Stock_Change International_Transport Electricity_Generation Cogeneration Fuel_Production Other_Transformation Losses_and_Own_Use Non_Energy_Use Agriculture Forestry_and_Logging Fishing Mining Food_Processing Textiles Wood_Pulp_Paper_and_Printing Chemicals Non_Metallic_Minerals Basic_Metals Mechanical_Electrical_Equippment Building_and_Construction Unallocated Commercial Transport Residential Statistical_Differences	:=
+NEWZEALAND 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0
+AUSTRALIA 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0
+	[*,*,Sub_Bitumious,1,2029]:	Indigenous_Production Imports Exports Stock_Change International_Transport Electricity_Generation Cogeneration Fuel_Production Other_Transformation Losses_and_Own_Use Non_Energy_Use Agriculture Forestry_and_Logging Fishing Mining Food_Processing Textiles Wood_Pulp_Paper_and_Printing Chemicals Non_Metallic_Minerals Basic_Metals Mechanical_Electrical_Equippment Building_and_Construction Unallocated Commercial Transport Residential Statistical_Differences	:=
+NEWZEALAND 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0
+AUSTRALIA 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0
+	[*,*,Sub_Bitumious,1,2030]:	Indigenous_Production Imports Exports Stock_Change International_Transport Electricity_Generation Cogeneration Fuel_Production Other_Transformation Losses_and_Own_Use Non_Energy_Use Agriculture Forestry_and_Logging Fishing Mining Food_Processing Textiles Wood_Pulp_Paper_and_Printing Chemicals Non_Metallic_Minerals Basic_Metals Mechanical_Electrical_Equippment Building_and_Construction Unallocated Commercial Transport Residential Statistical_Differences	:=
 NEWZEALAND 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0
 AUSTRALIA 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0
 	[*,*,Lignite,1,2020]:	Indigenous_Production Imports Exports Stock_Change International_Transport Electricity_Generation Cogeneration Fuel_Production Other_Transformation Losses_and_Own_Use Non_Energy_Use Agriculture Forestry_and_Logging Fishing Mining Food_Processing Textiles Wood_Pulp_Paper_and_Printing Chemicals Non_Metallic_Minerals Basic_Metals Mechanical_Electrical_Equippment Building_and_Construction Unallocated Commercial Transport Residential Statistical_Differences	:=
@@ -3109,39 +3208,39 @@ AUSTRALIA 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.
 ;
 #
 param	ReserveMarginTagFuel	default	1:=
-	[*,*,2020]:	Bituminous_and_Sub_Bitumious Lignite Crude_Feedstocks_NGL LPG Petrol Diesel Fuel_Oil Aviation_Fuel_and_Kerosine Oil_Other Natural_Gas Hydro Geothermal Solar Wind Liquid_Biofuels Biogas Wood Electricity Waste_Heat	:=
-NEWZEALAND 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0
-AUSTRALIA 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0
-	[*,*,2021]:	Bituminous_and_Sub_Bitumious Lignite Crude_Feedstocks_NGL LPG Petrol Diesel Fuel_Oil Aviation_Fuel_and_Kerosine Oil_Other Natural_Gas Hydro Geothermal Solar Wind Liquid_Biofuels Biogas Wood Electricity Waste_Heat	:=
-NEWZEALAND 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0
-AUSTRALIA 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0
-	[*,*,2022]:	Bituminous_and_Sub_Bitumious Lignite Crude_Feedstocks_NGL LPG Petrol Diesel Fuel_Oil Aviation_Fuel_and_Kerosine Oil_Other Natural_Gas Hydro Geothermal Solar Wind Liquid_Biofuels Biogas Wood Electricity Waste_Heat	:=
-NEWZEALAND 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0
-AUSTRALIA 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0
-	[*,*,2023]:	Bituminous_and_Sub_Bitumious Lignite Crude_Feedstocks_NGL LPG Petrol Diesel Fuel_Oil Aviation_Fuel_and_Kerosine Oil_Other Natural_Gas Hydro Geothermal Solar Wind Liquid_Biofuels Biogas Wood Electricity Waste_Heat	:=
-NEWZEALAND 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0
-AUSTRALIA 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0
-	[*,*,2024]:	Bituminous_and_Sub_Bitumious Lignite Crude_Feedstocks_NGL LPG Petrol Diesel Fuel_Oil Aviation_Fuel_and_Kerosine Oil_Other Natural_Gas Hydro Geothermal Solar Wind Liquid_Biofuels Biogas Wood Electricity Waste_Heat	:=
-NEWZEALAND 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0
-AUSTRALIA 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0
-	[*,*,2025]:	Bituminous_and_Sub_Bitumious Lignite Crude_Feedstocks_NGL LPG Petrol Diesel Fuel_Oil Aviation_Fuel_and_Kerosine Oil_Other Natural_Gas Hydro Geothermal Solar Wind Liquid_Biofuels Biogas Wood Electricity Waste_Heat	:=
-NEWZEALAND 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0
-AUSTRALIA 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0
-	[*,*,2026]:	Bituminous_and_Sub_Bitumious Lignite Crude_Feedstocks_NGL LPG Petrol Diesel Fuel_Oil Aviation_Fuel_and_Kerosine Oil_Other Natural_Gas Hydro Geothermal Solar Wind Liquid_Biofuels Biogas Wood Electricity Waste_Heat	:=
-NEWZEALAND 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0
-AUSTRALIA 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0
-	[*,*,2027]:	Bituminous_and_Sub_Bitumious Lignite Crude_Feedstocks_NGL LPG Petrol Diesel Fuel_Oil Aviation_Fuel_and_Kerosine Oil_Other Natural_Gas Hydro Geothermal Solar Wind Liquid_Biofuels Biogas Wood Electricity Waste_Heat	:=
-NEWZEALAND 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0
-AUSTRALIA 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0
-	[*,*,2028]:	Bituminous_and_Sub_Bitumious Lignite Crude_Feedstocks_NGL LPG Petrol Diesel Fuel_Oil Aviation_Fuel_and_Kerosine Oil_Other Natural_Gas Hydro Geothermal Solar Wind Liquid_Biofuels Biogas Wood Electricity Waste_Heat	:=
-NEWZEALAND 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0
-AUSTRALIA 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0
-	[*,*,2029]:	Bituminous_and_Sub_Bitumious Lignite Crude_Feedstocks_NGL LPG Petrol Diesel Fuel_Oil Aviation_Fuel_and_Kerosine Oil_Other Natural_Gas Hydro Geothermal Solar Wind Liquid_Biofuels Biogas Wood Electricity Waste_Heat	:=
-NEWZEALAND 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0
-AUSTRALIA 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0
-	[*,*,2030]:	Bituminous_and_Sub_Bitumious Lignite Crude_Feedstocks_NGL LPG Petrol Diesel Fuel_Oil Aviation_Fuel_and_Kerosine Oil_Other Natural_Gas Hydro Geothermal Solar Wind Liquid_Biofuels Biogas Wood Electricity Waste_Heat	:=
-NEWZEALAND 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0
-AUSTRALIA 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0
+	[*,*,2020]:	Bituminous Sub_Bitumious Lignite Crude_Feedstocks_NGL LPG Petrol Diesel Fuel_Oil Aviation_Fuel_and_Kerosine Oil_Other Natural_Gas Hydro Geothermal Solar Wind Liquid_Biofuels Biogas Wood Electricity Waste_Heat	:=
+NEWZEALAND 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0
+AUSTRALIA 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0
+	[*,*,2021]:	Bituminous Sub_Bitumious Lignite Crude_Feedstocks_NGL LPG Petrol Diesel Fuel_Oil Aviation_Fuel_and_Kerosine Oil_Other Natural_Gas Hydro Geothermal Solar Wind Liquid_Biofuels Biogas Wood Electricity Waste_Heat	:=
+NEWZEALAND 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0
+AUSTRALIA 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0
+	[*,*,2022]:	Bituminous Sub_Bitumious Lignite Crude_Feedstocks_NGL LPG Petrol Diesel Fuel_Oil Aviation_Fuel_and_Kerosine Oil_Other Natural_Gas Hydro Geothermal Solar Wind Liquid_Biofuels Biogas Wood Electricity Waste_Heat	:=
+NEWZEALAND 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0
+AUSTRALIA 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0
+	[*,*,2023]:	Bituminous Sub_Bitumious Lignite Crude_Feedstocks_NGL LPG Petrol Diesel Fuel_Oil Aviation_Fuel_and_Kerosine Oil_Other Natural_Gas Hydro Geothermal Solar Wind Liquid_Biofuels Biogas Wood Electricity Waste_Heat	:=
+NEWZEALAND 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0
+AUSTRALIA 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0
+	[*,*,2024]:	Bituminous Sub_Bitumious Lignite Crude_Feedstocks_NGL LPG Petrol Diesel Fuel_Oil Aviation_Fuel_and_Kerosine Oil_Other Natural_Gas Hydro Geothermal Solar Wind Liquid_Biofuels Biogas Wood Electricity Waste_Heat	:=
+NEWZEALAND 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0
+AUSTRALIA 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0
+	[*,*,2025]:	Bituminous Sub_Bitumious Lignite Crude_Feedstocks_NGL LPG Petrol Diesel Fuel_Oil Aviation_Fuel_and_Kerosine Oil_Other Natural_Gas Hydro Geothermal Solar Wind Liquid_Biofuels Biogas Wood Electricity Waste_Heat	:=
+NEWZEALAND 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0
+AUSTRALIA 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0
+	[*,*,2026]:	Bituminous Sub_Bitumious Lignite Crude_Feedstocks_NGL LPG Petrol Diesel Fuel_Oil Aviation_Fuel_and_Kerosine Oil_Other Natural_Gas Hydro Geothermal Solar Wind Liquid_Biofuels Biogas Wood Electricity Waste_Heat	:=
+NEWZEALAND 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0
+AUSTRALIA 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0
+	[*,*,2027]:	Bituminous Sub_Bitumious Lignite Crude_Feedstocks_NGL LPG Petrol Diesel Fuel_Oil Aviation_Fuel_and_Kerosine Oil_Other Natural_Gas Hydro Geothermal Solar Wind Liquid_Biofuels Biogas Wood Electricity Waste_Heat	:=
+NEWZEALAND 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0
+AUSTRALIA 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0
+	[*,*,2028]:	Bituminous Sub_Bitumious Lignite Crude_Feedstocks_NGL LPG Petrol Diesel Fuel_Oil Aviation_Fuel_and_Kerosine Oil_Other Natural_Gas Hydro Geothermal Solar Wind Liquid_Biofuels Biogas Wood Electricity Waste_Heat	:=
+NEWZEALAND 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0
+AUSTRALIA 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0
+	[*,*,2029]:	Bituminous Sub_Bitumious Lignite Crude_Feedstocks_NGL LPG Petrol Diesel Fuel_Oil Aviation_Fuel_and_Kerosine Oil_Other Natural_Gas Hydro Geothermal Solar Wind Liquid_Biofuels Biogas Wood Electricity Waste_Heat	:=
+NEWZEALAND 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0
+AUSTRALIA 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0
+	[*,*,2030]:	Bituminous Sub_Bitumious Lignite Crude_Feedstocks_NGL LPG Petrol Diesel Fuel_Oil Aviation_Fuel_and_Kerosine Oil_Other Natural_Gas Hydro Geothermal Solar Wind Liquid_Biofuels Biogas Wood Electricity Waste_Heat	:=
+NEWZEALAND 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0
+AUSTRALIA 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0
 ;
 #
 param	ReserveMargin	:2020 2021 2022 2023 2024 2025 2026 2027 2028 2029 2030:=
@@ -3186,39 +3285,39 @@ AUSTRALIA 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.
 ;
 #
 param	RETagFuel	default	1:=
-	[*,*,2020]:	Bituminous_and_Sub_Bitumious Lignite Crude_Feedstocks_NGL LPG Petrol Diesel Fuel_Oil Aviation_Fuel_and_Kerosine Oil_Other Natural_Gas Hydro Geothermal Solar Wind Liquid_Biofuels Biogas Wood Electricity Waste_Heat	:=
-NEWZEALAND 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0
-AUSTRALIA 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0
-	[*,*,2021]:	Bituminous_and_Sub_Bitumious Lignite Crude_Feedstocks_NGL LPG Petrol Diesel Fuel_Oil Aviation_Fuel_and_Kerosine Oil_Other Natural_Gas Hydro Geothermal Solar Wind Liquid_Biofuels Biogas Wood Electricity Waste_Heat	:=
-NEWZEALAND 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0
-AUSTRALIA 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0
-	[*,*,2022]:	Bituminous_and_Sub_Bitumious Lignite Crude_Feedstocks_NGL LPG Petrol Diesel Fuel_Oil Aviation_Fuel_and_Kerosine Oil_Other Natural_Gas Hydro Geothermal Solar Wind Liquid_Biofuels Biogas Wood Electricity Waste_Heat	:=
-NEWZEALAND 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0
-AUSTRALIA 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0
-	[*,*,2023]:	Bituminous_and_Sub_Bitumious Lignite Crude_Feedstocks_NGL LPG Petrol Diesel Fuel_Oil Aviation_Fuel_and_Kerosine Oil_Other Natural_Gas Hydro Geothermal Solar Wind Liquid_Biofuels Biogas Wood Electricity Waste_Heat	:=
-NEWZEALAND 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0
-AUSTRALIA 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0
-	[*,*,2024]:	Bituminous_and_Sub_Bitumious Lignite Crude_Feedstocks_NGL LPG Petrol Diesel Fuel_Oil Aviation_Fuel_and_Kerosine Oil_Other Natural_Gas Hydro Geothermal Solar Wind Liquid_Biofuels Biogas Wood Electricity Waste_Heat	:=
-NEWZEALAND 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0
-AUSTRALIA 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0
-	[*,*,2025]:	Bituminous_and_Sub_Bitumious Lignite Crude_Feedstocks_NGL LPG Petrol Diesel Fuel_Oil Aviation_Fuel_and_Kerosine Oil_Other Natural_Gas Hydro Geothermal Solar Wind Liquid_Biofuels Biogas Wood Electricity Waste_Heat	:=
-NEWZEALAND 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0
-AUSTRALIA 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0
-	[*,*,2026]:	Bituminous_and_Sub_Bitumious Lignite Crude_Feedstocks_NGL LPG Petrol Diesel Fuel_Oil Aviation_Fuel_and_Kerosine Oil_Other Natural_Gas Hydro Geothermal Solar Wind Liquid_Biofuels Biogas Wood Electricity Waste_Heat	:=
-NEWZEALAND 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0
-AUSTRALIA 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0
-	[*,*,2027]:	Bituminous_and_Sub_Bitumious Lignite Crude_Feedstocks_NGL LPG Petrol Diesel Fuel_Oil Aviation_Fuel_and_Kerosine Oil_Other Natural_Gas Hydro Geothermal Solar Wind Liquid_Biofuels Biogas Wood Electricity Waste_Heat	:=
-NEWZEALAND 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0
-AUSTRALIA 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0
-	[*,*,2028]:	Bituminous_and_Sub_Bitumious Lignite Crude_Feedstocks_NGL LPG Petrol Diesel Fuel_Oil Aviation_Fuel_and_Kerosine Oil_Other Natural_Gas Hydro Geothermal Solar Wind Liquid_Biofuels Biogas Wood Electricity Waste_Heat	:=
-NEWZEALAND 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0
-AUSTRALIA 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0
-	[*,*,2029]:	Bituminous_and_Sub_Bitumious Lignite Crude_Feedstocks_NGL LPG Petrol Diesel Fuel_Oil Aviation_Fuel_and_Kerosine Oil_Other Natural_Gas Hydro Geothermal Solar Wind Liquid_Biofuels Biogas Wood Electricity Waste_Heat	:=
-NEWZEALAND 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0
-AUSTRALIA 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0
-	[*,*,2030]:	Bituminous_and_Sub_Bitumious Lignite Crude_Feedstocks_NGL LPG Petrol Diesel Fuel_Oil Aviation_Fuel_and_Kerosine Oil_Other Natural_Gas Hydro Geothermal Solar Wind Liquid_Biofuels Biogas Wood Electricity Waste_Heat	:=
-NEWZEALAND 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0
-AUSTRALIA 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0
+	[*,*,2020]:	Bituminous Sub_Bitumious Lignite Crude_Feedstocks_NGL LPG Petrol Diesel Fuel_Oil Aviation_Fuel_and_Kerosine Oil_Other Natural_Gas Hydro Geothermal Solar Wind Liquid_Biofuels Biogas Wood Electricity Waste_Heat	:=
+NEWZEALAND 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0
+AUSTRALIA 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0
+	[*,*,2021]:	Bituminous Sub_Bitumious Lignite Crude_Feedstocks_NGL LPG Petrol Diesel Fuel_Oil Aviation_Fuel_and_Kerosine Oil_Other Natural_Gas Hydro Geothermal Solar Wind Liquid_Biofuels Biogas Wood Electricity Waste_Heat	:=
+NEWZEALAND 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0
+AUSTRALIA 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0
+	[*,*,2022]:	Bituminous Sub_Bitumious Lignite Crude_Feedstocks_NGL LPG Petrol Diesel Fuel_Oil Aviation_Fuel_and_Kerosine Oil_Other Natural_Gas Hydro Geothermal Solar Wind Liquid_Biofuels Biogas Wood Electricity Waste_Heat	:=
+NEWZEALAND 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0
+AUSTRALIA 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0
+	[*,*,2023]:	Bituminous Sub_Bitumious Lignite Crude_Feedstocks_NGL LPG Petrol Diesel Fuel_Oil Aviation_Fuel_and_Kerosine Oil_Other Natural_Gas Hydro Geothermal Solar Wind Liquid_Biofuels Biogas Wood Electricity Waste_Heat	:=
+NEWZEALAND 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0
+AUSTRALIA 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0
+	[*,*,2024]:	Bituminous Sub_Bitumious Lignite Crude_Feedstocks_NGL LPG Petrol Diesel Fuel_Oil Aviation_Fuel_and_Kerosine Oil_Other Natural_Gas Hydro Geothermal Solar Wind Liquid_Biofuels Biogas Wood Electricity Waste_Heat	:=
+NEWZEALAND 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0
+AUSTRALIA 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0
+	[*,*,2025]:	Bituminous Sub_Bitumious Lignite Crude_Feedstocks_NGL LPG Petrol Diesel Fuel_Oil Aviation_Fuel_and_Kerosine Oil_Other Natural_Gas Hydro Geothermal Solar Wind Liquid_Biofuels Biogas Wood Electricity Waste_Heat	:=
+NEWZEALAND 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0
+AUSTRALIA 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0
+	[*,*,2026]:	Bituminous Sub_Bitumious Lignite Crude_Feedstocks_NGL LPG Petrol Diesel Fuel_Oil Aviation_Fuel_and_Kerosine Oil_Other Natural_Gas Hydro Geothermal Solar Wind Liquid_Biofuels Biogas Wood Electricity Waste_Heat	:=
+NEWZEALAND 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0
+AUSTRALIA 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0
+	[*,*,2027]:	Bituminous Sub_Bitumious Lignite Crude_Feedstocks_NGL LPG Petrol Diesel Fuel_Oil Aviation_Fuel_and_Kerosine Oil_Other Natural_Gas Hydro Geothermal Solar Wind Liquid_Biofuels Biogas Wood Electricity Waste_Heat	:=
+NEWZEALAND 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0
+AUSTRALIA 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0
+	[*,*,2028]:	Bituminous Sub_Bitumious Lignite Crude_Feedstocks_NGL LPG Petrol Diesel Fuel_Oil Aviation_Fuel_and_Kerosine Oil_Other Natural_Gas Hydro Geothermal Solar Wind Liquid_Biofuels Biogas Wood Electricity Waste_Heat	:=
+NEWZEALAND 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0
+AUSTRALIA 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0
+	[*,*,2029]:	Bituminous Sub_Bitumious Lignite Crude_Feedstocks_NGL LPG Petrol Diesel Fuel_Oil Aviation_Fuel_and_Kerosine Oil_Other Natural_Gas Hydro Geothermal Solar Wind Liquid_Biofuels Biogas Wood Electricity Waste_Heat	:=
+NEWZEALAND 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0
+AUSTRALIA 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0
+	[*,*,2030]:	Bituminous Sub_Bitumious Lignite Crude_Feedstocks_NGL LPG Petrol Diesel Fuel_Oil Aviation_Fuel_and_Kerosine Oil_Other Natural_Gas Hydro Geothermal Solar Wind Liquid_Biofuels Biogas Wood Electricity Waste_Heat	:=
+NEWZEALAND 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0
+AUSTRALIA 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0
 ;
 #
 param	REMinProductionTarget	:2020 2021 2022 2023 2024 2025 2026 2027 2028 2029 2030:=
