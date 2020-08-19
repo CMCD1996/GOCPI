@@ -101,25 +101,37 @@ class Forecasting:
             end_value (int): Final value
 
         Returns:
-            cagr: Constant average growth rate (decimal)
+            cagr: Constant average growth rate (1+ decimal)
         """
         if start_value == 0 or (end_year - start_year) == 0:
             cagr = 1
         else:
             cagr = np.power((end_value / start_value),
-                            (1 / (end_year - start_year))) - 1
+                            (1 / (end_year - start_year)))
         return cagr
 
-    def calculate_cagr_forecasts(self, cagr_dictionaries,
-                                 base_year_dictionaries, override):
+    def calculate_cagr_forecasts(self, cagr_dictionary, base_year_dictionary,
+                                 fuel, year):
         """ Forecasts base year fuels by a constant average growth rate for a forecast period
 
         Args:
-            cagr_dictionaries (dict): Dictionaries of Constant Average Growth Rates from Fuels
-            base_year_dictionaries (Dict): Dictionary if Base Years to forecast fuels
-            override (float, array): Override if you want to load in forecasts
+            cagr_dictionary (Dict): Dictionary of constant average growth rates per fuel
+            base_year_dictionary ([type]): Dictionary of base year fuel consumption in energy types
+            fuel (list): List of Fuels
+            year (list): List of forecast years
 
         Returns:
-            (float, array): 
+            [float, array]: 2D Array of demand forecasts per fuel
         """
-        return forecasts
+        # Initialises the size of the array
+        forecast = np.ones((len(fuel), len(year)))
+        # Set the first forecast as the base year
+        for i in range(1, len(fuel), 1):
+            forecast[i, 0] = base_year_dictionary[fuel[i]]
+
+        # Calculates the forecasting
+        for i in range(0, len(fuel), 1):
+            for j in range(1, len(year), 1):
+                forecast[i, j] = forecast[i, j - 1] * cagr_dictionary[fuel[j]]
+
+        return forecast

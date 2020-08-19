@@ -410,7 +410,11 @@ for fuel in aus_cagr_fuels:
             aus_start_year_fuels[fuel], aus_end_year_fuels[fuel],
             aus_start_value_fuels[fuel], aus_end_year_fuels[fuel])
 
-# Assigns
+# Calculates CAGR forecasts
+nz_fuel_forecast = forecasting_functions.calculate_cagr_forecasts()
+
+
+
 # print(nz_energy_system.YearSplit)
 # print(nz_energy_system.DiscountRate)
 # print(nz_energy_system.DaySplit)
