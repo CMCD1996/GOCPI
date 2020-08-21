@@ -356,6 +356,7 @@ for parameters in nz_cagr_dictionaries_parameters:
         region_fuels[nz_energy_system.fuel[i]] = 1
 # Loads demand data to the parameter dictionaries (Energy units are in PJs)
 # New Zealand
+
 nz_start_years = np.zeros(len(nz_energy_system.fuel))
 nz_start_years[:] = 2010
 nz_end_years = np.zeros(len(nz_energy_system.fuel))
@@ -372,7 +373,6 @@ nz_end_values = np.array([
 # Australia
 aus_start_years = np.zeros(len(nz_energy_system.fuel))
 aus_start_years[:] = 2017
-print(aus_start_years)
 aus_end_years = np.zeros(len(nz_energy_system.fuel))
 aus_end_years[:] = 2018
 aus_start_values = np.array([
@@ -394,27 +394,57 @@ for i in range(0, len(nz_energy_system.fuel), 1):
     nz_start_year_fuels[nz_energy_system.fuel[i]] = nz_start_years[i]
     nz_end_year_fuels[nz_energy_system.fuel[i]] = nz_end_years[i]
     nz_start_value_fuels[nz_energy_system.fuel[i]] = nz_start_values[i]
-    nz_end_year_fuels[nz_energy_system.fuel[i]] = nz_end_values[i]
+    nz_end_value_fuels[nz_energy_system.fuel[i]] = nz_end_values[i]
 
-print(nz_start_year_fuels)
+print("nz_start_year_fuels", nz_start_year_fuels)
+print("nz_end_year_fuels", nz_end_year_fuels)
+print("nz_start_value_fuels", nz_start_value_fuels)
+print("nz_end_value_fuels", nz_end_value_fuels)
+print("aus_start_year_fuels", aus_start_year_fuels)
+print("aus_end_year_fuels", aus_end_year_fuels)
+print("aus_start_value_fuels", aus_start_value_fuels)
+print("aus_end_value_fuels", aus_end_value_fuels)
+
 # Calculates the cagr dictionary
 forecasting_functions = GF.Forecasting()
 for fuel in nz_cagr_fuels:
     nz_cagr_fuels[
         fuel] = forecasting_functions.calculate_constant_average_growth_rate(
             nz_start_year_fuels[fuel], nz_end_year_fuels[fuel],
-            nz_start_value_fuels[fuel], nz_end_year_fuels[fuel])
+            nz_start_value_fuels[fuel], nz_end_value_fuels[fuel])
 for fuel in aus_cagr_fuels:
     aus_cagr_fuels[
         fuel] = forecasting_functions.calculate_constant_average_growth_rate(
             aus_start_year_fuels[fuel], aus_end_year_fuels[fuel],
-            aus_start_value_fuels[fuel], aus_end_year_fuels[fuel])
+            aus_start_value_fuels[fuel], aus_end_value_fuels[fuel])
 
-# Calculates CAGR forecasts
-nz_fuel_forecast = forecasting_functions.calculate_cagr_forecasts()
+# Prints the dictionaries
+print("nz_cagr_fuels", nz_cagr_fuels)
+print("aus_cagr_fuels", aus_cagr_fuels)
 
+# Calculates NZ CAGR forecasts
+nz_fuel_forecast = forecasting_functions.calculate_cagr_forecasts(
+    nz_cagr_fuels, nz_end_year_fuels, nz_energy_system.fuel,
+    nz_energy_system.year)
 
+# Calculates AUS CAGR forecasts
+aus_fuel_forecast = forecasting_functions.calculate_cagr_forecasts(
+    aus_cagr_fuels, aus_end_value_fuels, nz_energy_system.fuel,
+    nz_energy_system.year)
 
+fuel_forecasts = [nz_fuel_forecast, aus_fuel_forecast]
+
+print("nz_fuel_forecast", nz_fuel_forecast)
+print("aus_fuel_forecast", aus_fuel_forecast)
+
+# Creates the forecast 3D array
+forecast = np.zeros((len(nz_energy_system.region), len(nz_energy_system.fuel),
+                     len(nz_energy_system.year)))
+for i in range(0, len(fuel_forecasts), 1):
+    forecast[i, :, :] = fuel_forecasts[i]
+
+# Sets the Specified Demand Profiles
+nz_energy_system.set_specified_annual_demand(forecast)
 # print(nz_energy_system.YearSplit)
 # print(nz_energy_system.DiscountRate)
 # print(nz_energy_system.DaySplit)
@@ -447,7 +477,7 @@ llh = len(nz_energy_system.dailytimebracket)
 #nz_energy_system.DaysInDayType = np.ones((lls, lld, ly))
 #nz_energy_system.TradeRoute = np.ones((lr, lr, lf, ly))
 #nz_energy_system.DepreciationMethod = np.ones((lr))
-nz_energy_system.SpecifiedAnnualDemand = np.ones((lr, lf, ly))
+#nz_energy_system.SpecifiedAnnualDemand = np.ones((lr, lf, ly))
 nz_energy_system.SpecifiedDemandProfile = np.ones((lr, lf, ll, ly))
 nz_energy_system.AccumulatedAnnualDemand = np.ones((lr, lf, ly))
 nz_energy_system.CapacityToActivityUnit = np.ones((lr, lt))
@@ -505,74 +535,6 @@ system = GF.Energy_Systems(
     nz_energy_system.timeslice, nz_energy_system.mode_of_operation,
     nz_energy_system.storage, nz_energy_system.daytype,
     nz_energy_system.season, nz_energy_system.dailytimebracket)
-
-load_status = {
-    # sets
-    "year": 1,
-    "region": 1,
-    "emission": 1,
-    "technology": 1,
-    "fuel": 1,
-    "timeslice": 1,
-    "mode_of+operation": 1,
-    "storage": 1,
-    "daytype": 1,
-    "season": 1,
-    "dailtytimebracket": 1,
-    # Parameters
-    "YearSplit": 1,
-    "DiscountRate": 1,
-    "DaySplit": 1,
-    "Conversionls": 1,
-    "Conversionld": 1,
-    "Conversionlh": 1,
-    "DaysInDayType": 1,
-    "TradeRoute": 1,
-    "DepreciationMethod": 1,
-    "SpecifiedAnnualDemand": 0,
-    "SpecifiedDemandProfile": 0,
-    "AccumulatedAnnualDemand": 0,
-    "CapacityToActivityUnit": 0,
-    "CapacityFactor": 0,
-    "AvailabilityFactor": 0,
-    "OperationalLife": 0,
-    "ResidualCapacity": 0,
-    "InputActivityRatio": 0,
-    "OutputActivityRatio": 0,
-    "CapitalCost": 0,
-    "VariableCost": 0,
-    "FixedCost": 0,
-    "TechnologyToStorage": 0,
-    "TechnologyFromStorage": 0,
-    "StorageLevelStart": 0,
-    "StorageMaxChargeRate": 0,
-    "StorageMaxDischargeRate": 0,
-    "MinStorageCharge": 0,
-    "OperationalLifeStorage": 0,
-    "CapitalCostStorage": 0,
-    "ResidualStorageCapacity": 0,
-    "CapacityOfOneTechnologyUnit": 0,
-    "TotalAnnualMaxCapacity": 0,
-    "TotalAnnualMinCapacity": 0,
-    "TotalAnnualMaxCapacityInvestment": 0,
-    "TotalAnnualMinCapacityInvestment": 0,
-    "TotalTechnologyAnnualActivityLowerLimit": 0,
-    "TotalTechnologyAnnualActivityUpperLimit": 0,
-    "TotalTechnologyModelPeriodActivityUpperLimit": 0,
-    "TotalTechnologyModelPeriodActivityLowerLimit": 0,
-    "ReserveMarginTagTechnology": 0,
-    "ReserveMarginTagFuel": 0,
-    "ReserveMargin": 0,
-    "RETagTechnology": 0,
-    "RETagFuel": 0,
-    "REMinProductionTarget": 0,
-    "EmissionActivityRatio": 0,
-    "EmissionsPenalty": 0,
-    "AnnualExogenousEmission": 0,
-    "AnnualEmissionLimit": 0,
-    "ModelPeriodExogenousEmission": 0,
-    "ModelPeriodEmissionLimit": 0,
-}
 
 # Loads the datacase to the system
 system.load_datacase(case, system)

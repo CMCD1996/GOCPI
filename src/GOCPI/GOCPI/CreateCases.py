@@ -388,12 +388,13 @@ class CreateCases:
         else:
             self.DepreciationMethod = override
 
-    def set_specified_annual_demand(self, region, fuel, year, override):
-        """[summary]
+    def set_specified_annual_demand(self, forecast):
+        """ Sets the annual demand for fuels per region over the forecast period (Must be accurate)
 
         Args:
-            parameters ([type]): [description]
+            forecast (float, array): The forecast array of size (len(region),len(fuel),len(year))
         """
+        self.SpecifiedAnnualDemand = forecast
 
     def set_specified_demand_profile(self, region, fuel, year, timeslice,
                                      override):
