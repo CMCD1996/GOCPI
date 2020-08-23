@@ -15,6 +15,7 @@ class CreateCases:
         self.emission = None
         self.technology = None
         self.capacity_technology = None
+        self.availability_technology = None
         self.fuel = None
         self.specified_fuel = None
         self.accumulated_fuel = None
@@ -116,13 +117,21 @@ class CreateCases:
         """
         self.technology = technology
 
-    def set_capacity_technology(self, technology):
+    def set_capacity_technology(self, capacity_technology):
         """ Sets the cases capacity_technology type
 
         Args:
             capacity_technology (list): List of technologies
         """
         self.capacity_technology = capacity_technology
+
+    def set_availability_technology(self, availability_technology):
+        """ Sets the cases availability_technology type
+
+        Args:
+            availability_technology (list): List of technologies
+        """
+        self.availability_technology = availability_technology
 
     def set_fuel(self, fuel):
         """ Sets the case's fuel types
@@ -467,26 +476,40 @@ class CreateCases:
         """
         self.AccumulatedAnnualDemand = accumulated_forecast
 
-    def set_capacity_to_activity_unit(self, parameters):
-        """[summary]
+    def set_capacity_to_activity_unit(self, region, technology,
+                                      capacity_dictionaries, override):
+        """ Sets the capacity to activity parameter
 
         Args:
-            parameters ([type]): [description]
+            region (list): List of regions
+            technology (list): List of technologies
+            capacity_dictionaries (list): List of dictionaries to assign value
+            override (float, array) = 2D Array to assign override values
         """
+        if override == None:
+            cap_to_act = np.zeros((len(region), len(technology)))
+            for i in range(0, len(capacity_dictionaries), 1):
+                for j in range(0, len(technology), 1):
+                    cap_to_act[i, j] = capacity_dictionaries[i][technology[j]]
+            self.CapacityToActivityUnit = cap_to_act
+        else:
+            self.CapacityToActivityUnit = override
 
-    def set_capacity_factor(self, parameters):
-        """[summary]
+    def set_capacity_factor(self, factor_matrix):
+        """ Sets capacity factors for conversion technologies.
 
         Args:
-            parameters ([type]): [description]
+            factor_matrix (float, array); Capacity Factors
         """
+        self.CapacityFactor = factor_matrix
 
-    def set_availability_factor(self, parameters):
-        """[summary]
+    def set_availability_factor(self, availablility_matrix):
+        """ Sets the availability factors
 
         Args:
-            parameters ([type]): [description]
+            availablility_matrix (float, array): Matrix describing availability factors for given technologies
         """
+        self.AvailabilityFactor = availablility_matrix
 
     def set_operational_life(self, parameters):
         """[summary]

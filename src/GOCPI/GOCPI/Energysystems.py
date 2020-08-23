@@ -7,9 +7,9 @@ class Energy_Systems:
     """ A class of methods to initialise energy sytems and create the data/model files needed for optimisation.
     """
     def __init__(self, year, region, emission, technology, capacity_technology,
-                 fuel, specified_fuel, accumulated_fuel, timeslice,
-                 mode_of_operation, storage, daytype, season,
-                 dailytimebracket):
+                 availability_technology, fuel, specified_fuel,
+                 accumulated_fuel, timeslice, mode_of_operation, storage,
+                 daytype, season, dailytimebracket):
         """ Function to create complete energy system set to prepare datafile, as per the established model.
 
         Args:
@@ -23,6 +23,7 @@ class Energy_Systems:
         self.emission = emission
         self.technology = technology
         self.capacity_technology = capacity_technology
+        self.availability_technology = availability_technology
         self.fuel = fuel
         self.specified_fuel = specified_fuel
         self.accumulated_fuel = accumulated_fuel
@@ -38,6 +39,7 @@ class Energy_Systems:
         le = len(self.emission)
         lt = len(self.technology)
         lct = len(self.capacity_technology)
+        lat = len(self.availability_technology)
         lf = len(self.fuel)
         lsf = len(self.specified_fuel)
         laf = len(self.specified_fuel)
@@ -52,6 +54,8 @@ class Energy_Systems:
         self.lr = lr
         self.le = le
         self.lt = lt
+        self.lct = lct
+        self.lat = lat
         self.lf = lf
         self.lsf = lsf
         self.laf = laf
@@ -729,7 +733,7 @@ class Energy_Systems:
                 # Sets index value for format string
                 y = self.year[k]
                 # Converts matrix columns to strings columns to strings
-                columns = self.technology
+                columns = self.availability_technology
                 column_string = ' '.join(columns)
                 # Converts maxtrix rows to list
                 array = np.array(self.region)

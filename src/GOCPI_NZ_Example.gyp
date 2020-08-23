@@ -70,7 +70,9 @@ nz_energy_system.set_technology(TECHNOLOGY)
 
 # Sets capacity technologies for energy production
 CAPACITY_TECHNOLOGY = Conversion
+CONSUMPTION_TECHNOLOGY = Consumption
 nz_energy_system.set_capacity_technology(CAPACITY_TECHNOLOGY)
+nz_energy_system.set_availability_technology(CONSUMPTION_TECHNOLOGY)
 # Sets the Conversion Sets
 
 ###############################################################################
@@ -472,7 +474,35 @@ nz_energy_system.set_specified_demand_profile(
     nz_energy_system.specified_fuel, nz_energy_system.year,
     nz_energy_system.timeslice, linear_profile, override)
 
-#
+# Sets the Capacity to Activity Factors (Assume conversion of GW to PJ)
+nz_capacity_to_activity = {}
+aus_capacity_to_activity = {}
+for tech in nz_energy_system.capacity_technology:
+    nz_capacity_to_activity[tech] = 31.536
+    aus_capacity_to_activity[tech] = 31.536
+print()
+
+capacity_dictionaries = [nz_capacity_to_activity, aus_capacity_to_activity]
+# Sets the CapacityToActivty Function
+override = None
+nz_energy_system.set_capacity_to_activity_unit(
+    nz_energy_system.region, nz_energy_system.capacity_technology,
+    capacity_dictionaries, override)
+
+# Sets capacity factor matrix to operate in every timeslice (Assumes operate 0.8 of the time).
+capacity_factors = np.zeros(
+    (nz_energy_system.region, nz_energy_system.capacity_technology,
+     nz_energy_system.timeslice, nz_energy_system.year))
+capacity_factors[:, :, :, :] = 0.8
+
+nz_energy_system.set_capacity_factor(capacity_factors)
+
+# Set availability factors
+availability_factors = np.zeros(
+    (nz_energy_system.region, nz_energy_system.capacity_technology,
+     nz_energy_system.year))
+capacity_factors[:, :, :] = 1
+nz_energy_system.set_availability_factor(availability_factors)
 #
 #
 #
@@ -512,8 +542,8 @@ llh = len(nz_energy_system.dailytimebracket)
 #nz_energy_system.SpecifiedAnnualDemand = np.ones((lr, lf, ly))
 #nz_energy_system.SpecifiedDemandProfile = np.ones((lr, lf, ll, ly))
 #nz_energy_system.AccumulatedAnnualDemand = np.ones((lr, lf, ly))
-nz_energy_system.CapacityToActivityUnit = np.ones((lr, lt))
-nz_energy_system.CapacityFactor = np.ones((lr, lt, ll, ly))
+#nz_energy_system.CapacityToActivityUnit = np.ones((lr, lt))
+#nz_energy_system.CapacityFactor = np.ones((lr, lt, ll, ly))
 nz_energy_system.AvailabilityFactor = np.ones((lr, lt, ly))
 nz_energy_system.OperationalLife = np.ones((lr, lt))
 nz_energy_system.ResidualCapacity = np.ones((lr, lt, ly))
@@ -564,11 +594,11 @@ case = nz_energy_system
 system = GF.Energy_Systems(
     nz_energy_system.year, nz_energy_system.region, nz_energy_system.emission,
     nz_energy_system.technology, nz_energy_system.capacity_technology,
-    nz_energy_system.fuel, nz_energy_system.specified_fuel,
-    nz_energy_system.accumulated_fuel, nz_energy_system.timeslice,
-    nz_energy_system.mode_of_operation, nz_energy_system.storage,
-    nz_energy_system.daytype, nz_energy_system.season,
-    nz_energy_system.dailytimebracket)
+    nz_energy_system.availibility_technology, nz_energy_system.fuel,
+    nz_energy_system.specified_fuel, nz_energy_system.accumulated_fuel,
+    nz_energy_system.timeslice, nz_energy_system.mode_of_operation,
+    nz_energy_system.storage, nz_energy_system.daytype,
+    nz_energy_system.season, nz_energy_system.dailytimebracket)
 
 # Loads the datacase to the system
 system.load_datacase(case, system)
