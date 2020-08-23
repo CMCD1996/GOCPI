@@ -6,7 +6,8 @@ import pandas as pd
 class Energy_Systems:
     """ A class of methods to initialise energy sytems and create the data/model files needed for optimisation.
     """
-    def __init__(self, year, region, emission, technology, fuel, timeslice,
+    def __init__(self, year, region, emission, technology, fuel,
+                 specified_fuel, accumulated_fuel, timeslice,
                  mode_of_operation, storage, daytype, season,
                  dailytimebracket):
         """ Function to create complete energy system set to prepare datafile, as per the established model.
@@ -22,6 +23,8 @@ class Energy_Systems:
         self.emission = emission
         self.technology = technology
         self.fuel = fuel
+        self.specified_fuel = specified_fuel
+        self.accumulated_fuel = accumulated_fuel
         self.timeslice = timeslice
         self.mode_of_operation = mode_of_operation
         self.storage = storage
@@ -34,6 +37,8 @@ class Energy_Systems:
         le = len(self.emission)
         lt = len(self.technology)
         lf = len(self.fuel)
+        lsf = len(self.specified_fuel)
+        laf = len(self.specified_fuel)
         ll = len(self.timeslice)
         lm = len(self.mode_of_operation)
         ls = len(self.storage)
@@ -46,6 +51,8 @@ class Energy_Systems:
         self.le = le
         self.lt = lt
         self.lf = lf
+        self.lsf = lsf
+        self.laf = laf
         self.ll = ll
         self.lm = lm
         self.ls = ls
@@ -62,9 +69,9 @@ class Energy_Systems:
         self.DaysInDayType = np.ones((lls, lld, ly))
         self.TradeRoute = np.ones((lr, lr, lf, ly))
         self.DepreciationMethod = np.ones((lr))
-        self.SpecifiedAnnualDemand = np.ones((lr, lf, ly))
+        self.SpecifiedAnnualDemand = np.ones((lr, lsf, ly))
         self.SpecifiedDemandProfile = np.ones((lr, lf, ll, ly))
-        self.AccumulatedAnnualDemand = np.ones((lr, lf, ly))
+        self.AccumulatedAnnualDemand = np.ones((lr, laf, ly))
         self.CapacityToActivityUnit = np.ones((lr, lt))
         self.CapacityFactor = np.ones((lr, lt, ll, ly))
         self.AvailabilityFactor = np.ones((lr, lt, ly))
@@ -534,7 +541,7 @@ class Energy_Systems:
                 f.write("{0}\n".format(combinedflat))
             f.write(';\n')
 
-            # SpecifiedAnnualDemand = np.zeros((lr,lf,ly))
+            # SpecifiedAnnualDemand = np.zeros((lr,lsf,ly))
             param = 'SpecifiedAnnualDemand'
             f.write('#\n')
             f.write("param\t{0}\tdefault\t{1}:=\n".format(
@@ -544,7 +551,7 @@ class Energy_Systems:
                 # Sets index value for format string
                 y = self.year[k]
                 # Converts matrix columns to strings columns to strings
-                columns = self.fuel
+                columns = self.specified_fuel
                 column_string = ' '.join(columns)
                 # Converts maxtrix rows to list
                 array = np.array(self.region)
@@ -582,7 +589,7 @@ class Energy_Systems:
                     # Sets index value for format string
                     y = self.year[k]
                     # Converts matrix columns to strings columns to strings
-                    columns = self.fuel
+                    columns = self.specified_fuel
                     column_string = ' '.join(columns)
                     # Converts maxtrix rows to list
                     array = np.array(self.region)
@@ -618,14 +625,14 @@ class Energy_Systems:
                 # Sets index value for format string
                 y = self.year[k]
                 # Converts matrix columns to strings columns to strings
-                columns = self.fuel
+                columns = self.accumulated_fuel
                 column_string = ' '.join(columns)
                 # Converts maxtrix rows to list
                 array = np.array(self.region)
                 array = array.T
                 lt = array.tolist()
                 # Creates 2D matrix for this value
-                mat = self.SpecifiedAnnualDemand[:, :, k]
+                mat = self.AccumulatedAnnualDemand[:, :, k]
                 # Converts combined matrix to list and combines lists
                 matlist = mat.tolist()
                 #Combines the two lists

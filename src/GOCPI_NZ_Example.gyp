@@ -112,9 +112,27 @@ for fuel_type in FUEL_ALL:
     for i in range(0, len(fuel_type), 1):
         FUEL.append(fuel_type[i])
 
-nz_energy_system.set_fuel(FUEL)
-print(nz_energy_system.fuel)
+# Sets Specified Fuels
+SPECIFIED_FUEL_ALL = [Coal, Oil, Natural_Gas, Renewables, Electricity]
+SPECIFIED_FUEL = []
+for fuel_type in SPECIFIED_FUEL_ALL:
+    for i in range(0, len(fuel_type), 1):
+        SPECIFIED_FUEL.append(fuel_type[i])
 
+# Sets Accumulated Fuels
+ACCUMULATED_FUEL_ALL = [Waste_Heat]
+ACCUMULATED_FUEL = []
+for fuel_type in ACCUMULATED_FUEL_ALL:
+    for i in range(0, len(fuel_type), 1):
+        ACCUMULATED_FUEL.append(fuel_type[i])
+
+# Sets the total fuels
+nz_energy_system.set_fuel(FUEL)
+nz_energy_system.set_specified_fuel(SPECIFIED_FUEL)
+nz_energy_system.set_accumulated_fuel(ACCUMULATED_FUEL)
+print(nz_energy_system.fuel)
+print(nz_energy_system.specified_fuel)
+print(nz_energy_system.accumulated_fuel)
 ###############################################################################
 # Continues defining sets
 ###############################################################################
@@ -424,7 +442,7 @@ print("aus_cagr_fuels", aus_cagr_fuels)
 
 # Calculates NZ CAGR forecasts
 nz_fuel_forecast = forecasting_functions.calculate_cagr_forecasts(
-    nz_cagr_fuels, nz_end_year_fuels, nz_energy_system.fuel,
+    nz_cagr_fuels, nz_end_value_fuels, nz_energy_system.fuel,
     nz_energy_system.year)
 
 # Calculates AUS CAGR forecasts
@@ -440,11 +458,39 @@ print("aus_fuel_forecast", aus_fuel_forecast)
 # Creates the forecast 3D array
 forecast = np.zeros((len(nz_energy_system.region), len(nz_energy_system.fuel),
                      len(nz_energy_system.year)))
+
+# Sets the forecast 3D array with CAGR forecast values
 for i in range(0, len(fuel_forecasts), 1):
     forecast[i, :, :] = fuel_forecasts[i]
 
 # Sets the Specified Demand Profiles
-nz_energy_system.set_specified_annual_demand(forecast)
+nz_energy_system.set_specified_annual_demand(forecast[:, 0:-1, :])
+# Sets the Accumulated Demand Profiles (Hack to make sure 3D Array)
+acc_forecast = np.zeros(
+    (len(nz_energy_system.region), len(nz_energy_system.accumulated_fuel),
+     len(nz_energy_system.year)))
+acc_forecast[:, 0, :] = forecast[:, -1, :]
+nz_energy_system.set_accumulated_annual_demand(acc_forecast)
+
+# Sets linear profile for timeslices (In this example, is is assumed the fuel is consumed uniformally in time splits)
+linear_profile = splits
+override = None
+# Sets the Specifief Demand Profiles
+nz_energy_system.set_specified_demand_profile(
+    nz_energy_system.SpecifiedAnnualDemand, nz_energy_system.region,
+    nz_energy_system.specified_fuel, nz_energy_system.year,
+    nz_energy_system.timeslice, linear_profile, override)
+
+print(np.shape(nz_energy_system.SpecifiedAnnualDemand))
+print(np.shape(nz_energy_system.AccumulatedAnnualDemand))
+# Sets the accumulated annual demand assuming all specified demand is consumed.
+# (All fuel types are previously defined in the specified)
+
+#
+#
+#
+#
+#
 # print(nz_energy_system.YearSplit)
 # print(nz_energy_system.DiscountRate)
 # print(nz_energy_system.DaySplit)
@@ -478,8 +524,8 @@ llh = len(nz_energy_system.dailytimebracket)
 #nz_energy_system.TradeRoute = np.ones((lr, lr, lf, ly))
 #nz_energy_system.DepreciationMethod = np.ones((lr))
 #nz_energy_system.SpecifiedAnnualDemand = np.ones((lr, lf, ly))
-nz_energy_system.SpecifiedDemandProfile = np.ones((lr, lf, ll, ly))
-nz_energy_system.AccumulatedAnnualDemand = np.ones((lr, lf, ly))
+#nz_energy_system.SpecifiedDemandProfile = np.ones((lr, lf, ll, ly))
+#nz_energy_system.AccumulatedAnnualDemand = np.ones((lr, lf, ly))
 nz_energy_system.CapacityToActivityUnit = np.ones((lr, lt))
 nz_energy_system.CapacityFactor = np.ones((lr, lt, ll, ly))
 nz_energy_system.AvailabilityFactor = np.ones((lr, lt, ly))
@@ -532,6 +578,7 @@ case = nz_energy_system
 system = GF.Energy_Systems(
     nz_energy_system.year, nz_energy_system.region, nz_energy_system.emission,
     nz_energy_system.technology, nz_energy_system.fuel,
+    nz_energy_system.specified_fuel, nz_energy_system.accumulated_fuel,
     nz_energy_system.timeslice, nz_energy_system.mode_of_operation,
     nz_energy_system.storage, nz_energy_system.daytype,
     nz_energy_system.season, nz_energy_system.dailytimebracket)

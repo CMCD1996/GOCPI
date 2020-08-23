@@ -32,6 +32,7 @@ Running the Energy System Model with glpk solver
     3) Load the conda environment ''(Do this every time you load a new terminal) using conda activate osemosys
     4) Run the model in the terminal using the command 'glpsol -m Model.txt -d Data.txt -o Results.txt
     5) Write LP File for CPLEX using:  glpsol -m GOCPI_OSeMOSYS_Model.txt -d GOCPI_OSeMOSYS_Data.txt --wlp GOCPI.lp
+                                       glpsol -m GOCPI_OSeMOSYS_Model.txt -d GOCPI_NZ_Example_Data.txt --wlp GOCPI_NZ_Example.lp
 
 Running the Energy System Model with CPLEX solver
     1) Use academic/student credentials to join the IBM Academic Initiative

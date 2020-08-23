@@ -15,6 +15,8 @@ class CreateCases:
         self.emission = None
         self.technology = None
         self.fuel = None
+        self.specified_fuel = None
+        self.accumulated_fuel = None
         self.timeslice = None
         self.mode_of_operation = None
         self.storage = None
@@ -120,6 +122,22 @@ class CreateCases:
             fuel (list): list of fuels
         """
         self.fuel = fuel
+
+    def set_specified_fuel(self, specified_fuel):
+        """ Sets the case's specified fuel types
+
+        Args:
+            specified_fuel (list): list of specified fuels
+        """
+        self.specified_fuel = specified_fuel
+
+    def set_accumulated_fuel(self, accumulated_fuel):
+        """ Sets the case's accumulated fuel types
+
+        Args:
+            specified_fuel (list): list of specified fuels
+        """
+        self.accumulated_fuel = accumulated_fuel
 
     def set_timeslice(self, timeslice):
         """ Set of timeslices
@@ -388,28 +406,57 @@ class CreateCases:
         else:
             self.DepreciationMethod = override
 
-    def set_specified_annual_demand(self, forecast):
+    def set_specified_annual_demand(self, specified_forecast):
         """ Sets the annual demand for fuels per region over the forecast period (Must be accurate)
 
         Args:
             forecast (float, array): The forecast array of size (len(region),len(fuel),len(year))
         """
-        self.SpecifiedAnnualDemand = forecast
+        self.SpecifiedAnnualDemand = specified_forecast
 
-    def set_specified_demand_profile(self, region, fuel, year, timeslice,
-                                     override):
-        """[summary]
-
-        Args:
-            parameters ([type]): [description]
-        """
-
-    def set_accumulated_annual_demand(self, parameters):
-        """[summary]
+    def set_specified_demand_profile(self, specified_annual_demand, region,
+                                     fuel, year, timeslice, profile, override):
+        """ Sets the specified annual demand profiles using the specified annual demand.
 
         Args:
-            parameters ([type]): [description]
+            specified_annual_demand (float, array): Specified annual demand profiles
+            region (list): List of regions
+            fuel (list): List of fuels
+            year (list): List of years
+            timeslice (list): List of timeslices
+            profile (Dict): Dictionary of fuel allocations to timeslices
+            override (float, array): Manual override for the specified annual demand profiles.
         """
+        # Initialises the linear array
+        demand_profile = np.zeros(
+            (len(region), len(fuel), len(timeslice), len(year)))
+        if override == None:
+            # Calculates the demand profile
+            for place in region:
+                for fuel_type in fuel:
+                    for time in timeslice:
+                        for year_num in year:
+                            region_index = region.index(place)
+                            fuel_index = fuel.index(fuel_type)
+                            timeslice_index = timeslice.index(time)
+                            year_index = year.index(year_num)
+                            demand_profile[region_index, fuel_index,
+                                           timeslice_index,
+                                           year_index] = profile[time]
+
+            self.SpecifiedDemandProfile = demand_profile
+        else:
+            self.SpecifiedDemandProfile = override
+
+    def set_accumulated_annual_demand(self, accumulated_forecast):
+        """ Sets the accumulated annual demand for fuels per region over the forecast period.
+            This function relies on a similar forecasting methodology as set_specific_demand.
+            Fuels set in this function cannot be defined in set_specific_demand.
+
+        Args:
+            accumulated_forecast (float, array): The forecast array of size (len(region),len(fuel),len(year))
+        """
+        self.AccumulatedAnnualDemand = accumulated_forecast
 
     def set_capacity_to_activity_unit(self, parameters):
         """[summary]

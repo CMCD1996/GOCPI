@@ -125,8 +125,9 @@ class Forecasting:
         """
         # Initialises the size of the array
         forecast = np.ones((len(fuel), len(year)))
+
         # Set the first forecast as the base year
-        for i in range(1, len(fuel), 1):
+        for i in range(0, len(fuel), 1):
             forecast[i, 0] = base_year_dictionary[fuel[i]]
 
         # Calculates the forecasting
