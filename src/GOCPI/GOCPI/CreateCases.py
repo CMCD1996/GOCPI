@@ -14,6 +14,7 @@ class CreateCases:
         self.region = None
         self.emission = None
         self.technology = None
+        self.capacity_technology = None
         self.fuel = None
         self.specified_fuel = None
         self.accumulated_fuel = None
@@ -114,6 +115,14 @@ class CreateCases:
             technology (list): List of technologies
         """
         self.technology = technology
+
+    def set_capacity_technology(self, technology):
+        """ Sets the cases capacity_technology type
+
+        Args:
+            capacity_technology (list): List of technologies
+        """
+        self.capacity_technology = capacity_technology
 
     def set_fuel(self, fuel):
         """ Sets the case's fuel types

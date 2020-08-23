@@ -6,8 +6,8 @@ import pandas as pd
 class Energy_Systems:
     """ A class of methods to initialise energy sytems and create the data/model files needed for optimisation.
     """
-    def __init__(self, year, region, emission, technology, fuel,
-                 specified_fuel, accumulated_fuel, timeslice,
+    def __init__(self, year, region, emission, technology, capacity_technology,
+                 fuel, specified_fuel, accumulated_fuel, timeslice,
                  mode_of_operation, storage, daytype, season,
                  dailytimebracket):
         """ Function to create complete energy system set to prepare datafile, as per the established model.
@@ -22,6 +22,7 @@ class Energy_Systems:
         self.region = region
         self.emission = emission
         self.technology = technology
+        self.capacity_technology = capacity_technology
         self.fuel = fuel
         self.specified_fuel = specified_fuel
         self.accumulated_fuel = accumulated_fuel
@@ -36,6 +37,7 @@ class Energy_Systems:
         lr = len(self.region)
         le = len(self.emission)
         lt = len(self.technology)
+        lct = len(self.capacity_technology)
         lf = len(self.fuel)
         lsf = len(self.specified_fuel)
         laf = len(self.specified_fuel)
@@ -72,7 +74,7 @@ class Energy_Systems:
         self.SpecifiedAnnualDemand = np.ones((lr, lsf, ly))
         self.SpecifiedDemandProfile = np.ones((lr, lf, ll, ly))
         self.AccumulatedAnnualDemand = np.ones((lr, laf, ly))
-        self.CapacityToActivityUnit = np.ones((lr, lt))
+        self.CapacityToActivityUnit = np.ones((lr, lct))
         self.CapacityFactor = np.ones((lr, lt, ll, ly))
         self.AvailabilityFactor = np.ones((lr, lt, ly))
         self.OperationalLife = np.ones((lr, lt))
@@ -653,7 +655,7 @@ class Energy_Systems:
             # CapacityToActivityUnit = np.zeros((lr,lt))
             param = 'CapacityToActivityUnit'  # Change this line
             f.write('#\n')
-            columns = self.technology  # Change this line
+            columns = self.capacity_technology  # Change this line
             column_string = ' '.join(columns)
             # Converts maxtrix rows to list
             array = np.array(self.region)  # Change this line

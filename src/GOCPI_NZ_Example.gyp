@@ -67,7 +67,11 @@ for tech in TECHNOLOGY_ALL:
 
 # Sets the technology set
 nz_energy_system.set_technology(TECHNOLOGY)
-print(nz_energy_system.technology)
+
+# Sets capacity technologies for energy production
+CAPACITY_TECHNOLOGY = Conversion
+nz_energy_system.set_capacity_technology(CAPACITY_TECHNOLOGY)
+# Sets the Conversion Sets
 
 ###############################################################################
 # Calculates Energy Balances Base Year
@@ -87,8 +91,6 @@ output_file = "Geo EB.xlsx"
 outputs = NZ_energy_balances.energy_balance_base(
     root_energy_balance, IEA_World_Energy_Balances_A2K,
     IEA_World_Energy_Balances_L2Z, create_excel_spreadsheet, output_file)
-
-print(outputs['Energy Balances'])
 
 ###############################################################################
 # Calculates Fuels
@@ -130,9 +132,6 @@ for fuel_type in ACCUMULATED_FUEL_ALL:
 nz_energy_system.set_fuel(FUEL)
 nz_energy_system.set_specified_fuel(SPECIFIED_FUEL)
 nz_energy_system.set_accumulated_fuel(ACCUMULATED_FUEL)
-print(nz_energy_system.fuel)
-print(nz_energy_system.specified_fuel)
-print(nz_energy_system.accumulated_fuel)
 ###############################################################################
 # Continues defining sets
 ###############################################################################
@@ -436,10 +435,6 @@ for fuel in aus_cagr_fuels:
             aus_start_year_fuels[fuel], aus_end_year_fuels[fuel],
             aus_start_value_fuels[fuel], aus_end_value_fuels[fuel])
 
-# Prints the dictionaries
-print("nz_cagr_fuels", nz_cagr_fuels)
-print("aus_cagr_fuels", aus_cagr_fuels)
-
 # Calculates NZ CAGR forecasts
 nz_fuel_forecast = forecasting_functions.calculate_cagr_forecasts(
     nz_cagr_fuels, nz_end_value_fuels, nz_energy_system.fuel,
@@ -451,9 +446,6 @@ aus_fuel_forecast = forecasting_functions.calculate_cagr_forecasts(
     nz_energy_system.year)
 
 fuel_forecasts = [nz_fuel_forecast, aus_fuel_forecast]
-
-print("nz_fuel_forecast", nz_fuel_forecast)
-print("aus_fuel_forecast", aus_fuel_forecast)
 
 # Creates the forecast 3D array
 forecast = np.zeros((len(nz_energy_system.region), len(nz_energy_system.fuel),
@@ -471,7 +463,6 @@ acc_forecast = np.zeros(
      len(nz_energy_system.year)))
 acc_forecast[:, 0, :] = forecast[:, -1, :]
 nz_energy_system.set_accumulated_annual_demand(acc_forecast)
-
 # Sets linear profile for timeslices (In this example, is is assumed the fuel is consumed uniformally in time splits)
 linear_profile = splits
 override = None
@@ -480,11 +471,6 @@ nz_energy_system.set_specified_demand_profile(
     nz_energy_system.SpecifiedAnnualDemand, nz_energy_system.region,
     nz_energy_system.specified_fuel, nz_energy_system.year,
     nz_energy_system.timeslice, linear_profile, override)
-
-print(np.shape(nz_energy_system.SpecifiedAnnualDemand))
-print(np.shape(nz_energy_system.AccumulatedAnnualDemand))
-# Sets the accumulated annual demand assuming all specified demand is consumed.
-# (All fuel types are previously defined in the specified)
 
 #
 #
@@ -577,11 +563,12 @@ case = nz_energy_system
 # Initialises the energy system
 system = GF.Energy_Systems(
     nz_energy_system.year, nz_energy_system.region, nz_energy_system.emission,
-    nz_energy_system.technology, nz_energy_system.fuel,
-    nz_energy_system.specified_fuel, nz_energy_system.accumulated_fuel,
-    nz_energy_system.timeslice, nz_energy_system.mode_of_operation,
-    nz_energy_system.storage, nz_energy_system.daytype,
-    nz_energy_system.season, nz_energy_system.dailytimebracket)
+    nz_energy_system.technology, nz_energy_system.capacity_technology,
+    nz_energy_system.fuel, nz_energy_system.specified_fuel,
+    nz_energy_system.accumulated_fuel, nz_energy_system.timeslice,
+    nz_energy_system.mode_of_operation, nz_energy_system.storage,
+    nz_energy_system.daytype, nz_energy_system.season,
+    nz_energy_system.dailytimebracket)
 
 # Loads the datacase to the system
 system.load_datacase(case, system)
