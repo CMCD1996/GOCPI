@@ -491,20 +491,20 @@ nz_energy_system.set_capacity_to_activity_unit(
 
 # Sets capacity factor matrix to operate in every timeslice (Assumes operate 0.8 of the time).
 capacity_factors = np.zeros(
-    (nz_energy_system.region, nz_energy_system.capacity_technology,
-     nz_energy_system.timeslice, nz_energy_system.year))
+    (len(nz_energy_system.region), len(nz_energy_system.capacity_technology),
+     len(nz_energy_system.timeslice), len(nz_energy_system.year)))
 capacity_factors[:, :, :, :] = 0.8
 
 nz_energy_system.set_capacity_factor(capacity_factors)
 
 # Set availability factors
 availability_factors = np.zeros(
-    (nz_energy_system.region, nz_energy_system.capacity_technology,
-     nz_energy_system.year))
-capacity_factors[:, :, :] = 1
+    (len(nz_energy_system.region), len(nz_energy_system.capacity_technology),
+     len(nz_energy_system.year)))
+
+availability_factors[:, :, :] = 1
 nz_energy_system.set_availability_factor(availability_factors)
-#
-#
+
 #
 #
 # print(nz_energy_system.YearSplit)
