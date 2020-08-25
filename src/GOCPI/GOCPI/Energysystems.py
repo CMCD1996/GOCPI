@@ -279,10 +279,11 @@ class Energy_Systems:
             # YearSplit = np.zeros((ll,ly))
             param = 'YearSplit'
             f.write('#\n')
-            f.write("param\t{0}\t:{1}:=\n".format(param, column_string))
             columns = self.year
             column_string = ' '.join(columns)
-            f.write("param\t{0}\t:{1}:=\n".format(param, column_string))
+            # Writes index specific parameter values to the text files
+            f.write("param\t{0}\tdefault\t{1}:\t{2}:=\n".format(
+                param, defaults_dictionary[param], column_string))
             if toggle_defaults[param] == True:
                 # Converts maxtrix rows to list
                 array = np.array(self.timeslice)
@@ -294,8 +295,6 @@ class Energy_Systems:
                 matlist = mat.tolist()
                 #Combines the two lists
                 combined_list = list(zip(lt, matlist))
-                # Writes index specific parameter values to the text files
-                f.write("param\t{0}\t:{1}:=\n".format(param, column_string))
                 for line in combined_list:
                     combinedflat = ''.join(str(line))
                     combinedflat = combinedflat.replace('[', '')
@@ -761,31 +760,29 @@ class Energy_Systems:
             # OperationalLife = np.zeros((lr,lt))
             param = 'OperationalLife'  # Change this line
             f.write('#\n')
-
+            columns = self.technology  # Change this line
+            column_string = ' '.join(columns)
             # Writes index specific parameter values to the text files
             f.write("param\t{0}\t:{1}:=\n".format(param, column_string))
-            if self.OperationalLife.all() != None:
-                columns = self.technology  # Change this line
-                column_string = ' '.join(columns)
-                # Converts maxtrix rows to list
-                array = np.array(self.region)  # Change this line
-                array = array.T
-                lt = array.tolist()
-                # Creates 2D matrix for this value
-                mat = self.OperationalLife[:, :]  # Change this line
-                # Converts combined matrix to list and combines lists
-                matlist = mat.tolist()
-                #Combines the two lists
-                combined_list = list(zip(lt, matlist))
-                for line in combined_list:
-                    combinedflat = ''.join(str(line))
-                    combinedflat = combinedflat.replace('[', '')
-                    combinedflat = combinedflat.replace(']', '')
-                    combinedflat = combinedflat.replace("'", '')
-                    combinedflat = combinedflat.replace(",", '')
-                    combinedflat = combinedflat.replace("(", '')
-                    combinedflat = combinedflat.replace(")", '')
-                    f.write("{0}\n".format(combinedflat))
+            # Converts maxtrix rows to list
+            array = np.array(self.region)  # Change this line
+            array = array.T
+            lt = array.tolist()
+            # Creates 2D matrix for this value
+            mat = self.OperationalLife[:, :]  # Change this line
+            # Converts combined matrix to list and combines lists
+            matlist = mat.tolist()
+            #Combines the two lists
+            combined_list = list(zip(lt, matlist))
+            for line in combined_list:
+                combinedflat = ''.join(str(line))
+                combinedflat = combinedflat.replace('[', '')
+                combinedflat = combinedflat.replace(']', '')
+                combinedflat = combinedflat.replace("'", '')
+                combinedflat = combinedflat.replace(",", '')
+                combinedflat = combinedflat.replace("(", '')
+                combinedflat = combinedflat.replace(")", '')
+                f.write("{0}\n".format(combinedflat))
             f.write(';\n')
 
             # ResidualCapacity = np.zeros((lr,lt,ly))

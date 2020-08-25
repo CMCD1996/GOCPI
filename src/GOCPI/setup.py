@@ -6,7 +6,7 @@ from setuptools import setup
 'Note: Enter dist/GOCPI-X.X.X.tar.gz to upload one file'
 
 setup(name='GOCPI',
-      version='3.0.916',
+      version='3.0.921',
       description=
       'User Defined Functions and Energy Systems Data for GOCPI Project',
       packages=['GOCPI'],

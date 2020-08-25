@@ -16,7 +16,7 @@ set SEASON	:=	1 2 3;
 set DAILYTIMEBRACKET	:=	1 2 3 4;
 #
 #
-param	YearSplit	:2020 2021 2022 2023 2024 2025 2026 2027 2028 2029 2030:=
+param	YearSplit	default	1:	2020 2021 2022 2023 2024 2025 2026 2027 2028 2029 2030:=
 DAY_SUMMER 0.1232876712328767 0.1232876712328767 0.1232876712328767 0.1232876712328767 0.1232876712328767 0.1232876712328767 0.1232876712328767 0.1232876712328767 0.1232876712328767 0.1232876712328767 0.1232876712328767
 NIGHT_SUMMER 0.1232876712328767 0.1232876712328767 0.1232876712328767 0.1232876712328767 0.1232876712328767 0.1232876712328767 0.1232876712328767 0.1232876712328767 0.1232876712328767 0.1232876712328767 0.1232876712328767
 DAY_WINTER 0.12602739726027398 0.12602739726027398 0.12602739726027398 0.12602739726027398 0.12602739726027398 0.12602739726027398 0.12602739726027398 0.12602739726027398 0.12602739726027398 0.12602739726027398 0.12602739726027398
@@ -1294,7 +1294,7 @@ NEWZEALAND 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0
 AUSTRALIA 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0
 ;
 #
-param	OperationalLife	:Agriculture Forestry_and_Logging Fishing Mining Food_Processing Textiles Wood_Pulp_Paper_and_Printing Chemicals Non_Metallic_Minerals Basic_Metals Mechanical_Electrical_Equippment Building_and_Construction Unallocated Commercial Transport Residential:=
+param	OperationalLife	:Indigenous_Production Imports Exports Stock_Change International_Transport Electricity_Generation Cogeneration Fuel_Production Other_Transformation Losses_and_Own_Use Non_Energy_Use Agriculture Forestry_and_Logging Fishing Mining Food_Processing Textiles Wood_Pulp_Paper_and_Printing Chemicals Non_Metallic_Minerals Basic_Metals Mechanical_Electrical_Equippment Building_and_Construction Unallocated Commercial Transport Residential Statistical_Differences:=
 NEWZEALAND 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0
 AUSTRALIA 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0
 ;
@@ -2945,7 +2945,7 @@ NEWZEALAND 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1
 AUSTRALIA 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0
 ;
 #
-param	TotalAnnualMaxCapacity	default	1:=
+param	TotalAnnualMaxCapacity	default	99999:=
 	[*,*,2020]:	Indigenous_Production Imports Exports Stock_Change International_Transport Electricity_Generation Cogeneration Fuel_Production Other_Transformation Losses_and_Own_Use Non_Energy_Use Agriculture Forestry_and_Logging Fishing Mining Food_Processing Textiles Wood_Pulp_Paper_and_Printing Chemicals Non_Metallic_Minerals Basic_Metals Mechanical_Electrical_Equippment Building_and_Construction Unallocated Commercial Transport Residential Statistical_Differences	:=
 NEWZEALAND 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0
 AUSTRALIA 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0
@@ -3017,7 +3017,7 @@ NEWZEALAND 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1
 AUSTRALIA 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0
 ;
 #
-param	TotalAnnualMaxCapacityInvestment	default	1:=
+param	TotalAnnualMaxCapacityInvestment	default	999999:=
 	[*,*,2020]:	Indigenous_Production Imports Exports Stock_Change International_Transport Electricity_Generation Cogeneration Fuel_Production Other_Transformation Losses_and_Own_Use Non_Energy_Use Agriculture Forestry_and_Logging Fishing Mining Food_Processing Textiles Wood_Pulp_Paper_and_Printing Chemicals Non_Metallic_Minerals Basic_Metals Mechanical_Electrical_Equippment Building_and_Construction Unallocated Commercial Transport Residential Statistical_Differences	:=
 NEWZEALAND 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0
 AUSTRALIA 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0
@@ -3053,7 +3053,7 @@ NEWZEALAND 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1
 AUSTRALIA 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0
 ;
 #
-param	TotalAnnualMinCapacityInvestment	default	1:=
+param	TotalAnnualMinCapacityInvestment	default	0:=
 	[*,*,2020]:	Indigenous_Production Imports Exports Stock_Change International_Transport Electricity_Generation Cogeneration Fuel_Production Other_Transformation Losses_and_Own_Use Non_Energy_Use Agriculture Forestry_and_Logging Fishing Mining Food_Processing Textiles Wood_Pulp_Paper_and_Printing Chemicals Non_Metallic_Minerals Basic_Metals Mechanical_Electrical_Equippment Building_and_Construction Unallocated Commercial Transport Residential Statistical_Differences	:=
 NEWZEALAND 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0
 AUSTRALIA 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0
@@ -3089,7 +3089,7 @@ NEWZEALAND 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1
 AUSTRALIA 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0
 ;
 #
-param	TotalTechnologyAnnualActivityLowerLimit	default	1:=
+param	TotalTechnologyAnnualActivityLowerLimit	default	0:=
 	[*,*,2020]:	Indigenous_Production Imports Exports Stock_Change International_Transport Electricity_Generation Cogeneration Fuel_Production Other_Transformation Losses_and_Own_Use Non_Energy_Use Agriculture Forestry_and_Logging Fishing Mining Food_Processing Textiles Wood_Pulp_Paper_and_Printing Chemicals Non_Metallic_Minerals Basic_Metals Mechanical_Electrical_Equippment Building_and_Construction Unallocated Commercial Transport Residential Statistical_Differences	:=
 NEWZEALAND 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0
 AUSTRALIA 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0
@@ -3125,7 +3125,7 @@ NEWZEALAND 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1
 AUSTRALIA 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0
 ;
 #
-param	TotalTechnologyAnnualActivityUpperLimit	default	1:=
+param	TotalTechnologyAnnualActivityUpperLimit	default	999999:=
 	[*,*,2020]:	Indigenous_Production Imports Exports Stock_Change International_Transport Electricity_Generation Cogeneration Fuel_Production Other_Transformation Losses_and_Own_Use Non_Energy_Use Agriculture Forestry_and_Logging Fishing Mining Food_Processing Textiles Wood_Pulp_Paper_and_Printing Chemicals Non_Metallic_Minerals Basic_Metals Mechanical_Electrical_Equippment Building_and_Construction Unallocated Commercial Transport Residential Statistical_Differences	:=
 NEWZEALAND 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0
 AUSTRALIA 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0
