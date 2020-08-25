@@ -498,12 +498,15 @@ capacity_factors[:, :, :, :] = 0.8
 nz_energy_system.set_capacity_factor(capacity_factors)
 
 # Set availability factors
-availability_factors = np.zeros(
-    (len(nz_energy_system.region), len(nz_energy_system.capacity_technology),
-     len(nz_energy_system.year)))
+availability_factors = np.zeros((len(nz_energy_system.region),
+                                 len(nz_energy_system.availability_technology),
+                                 len(nz_energy_system.year)))
 
 availability_factors[:, :, :] = 1
 nz_energy_system.set_availability_factor(availability_factors)
+
+
+# Sets up operational life
 
 #
 #
@@ -594,7 +597,7 @@ case = nz_energy_system
 system = GF.Energy_Systems(
     nz_energy_system.year, nz_energy_system.region, nz_energy_system.emission,
     nz_energy_system.technology, nz_energy_system.capacity_technology,
-    nz_energy_system.availibility_technology, nz_energy_system.fuel,
+    nz_energy_system.availability_technology, nz_energy_system.fuel,
     nz_energy_system.specified_fuel, nz_energy_system.accumulated_fuel,
     nz_energy_system.timeslice, nz_energy_system.mode_of_operation,
     nz_energy_system.storage, nz_energy_system.daytype,

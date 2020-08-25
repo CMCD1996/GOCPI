@@ -1058,238 +1058,238 @@ AUSTRALIA 31.536 31.536 31.536 31.536 31.536
 ;
 #
 param	CapacityFactor	default	1:=
-	[*,*,DAY_SUMMER,2020]:	Indigenous_Production Imports Exports Stock_Change International_Transport Electricity_Generation Cogeneration Fuel_Production Other_Transformation Losses_and_Own_Use Non_Energy_Use Agriculture Forestry_and_Logging Fishing Mining Food_Processing Textiles Wood_Pulp_Paper_and_Printing Chemicals Non_Metallic_Minerals Basic_Metals Mechanical_Electrical_Equippment Building_and_Construction Unallocated Commercial Transport Residential Statistical_Differences	:=
-NEWZEALAND 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0
-AUSTRALIA 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0
-	[*,*,DAY_SUMMER,2021]:	Indigenous_Production Imports Exports Stock_Change International_Transport Electricity_Generation Cogeneration Fuel_Production Other_Transformation Losses_and_Own_Use Non_Energy_Use Agriculture Forestry_and_Logging Fishing Mining Food_Processing Textiles Wood_Pulp_Paper_and_Printing Chemicals Non_Metallic_Minerals Basic_Metals Mechanical_Electrical_Equippment Building_and_Construction Unallocated Commercial Transport Residential Statistical_Differences	:=
-NEWZEALAND 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0
-AUSTRALIA 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0
-	[*,*,DAY_SUMMER,2022]:	Indigenous_Production Imports Exports Stock_Change International_Transport Electricity_Generation Cogeneration Fuel_Production Other_Transformation Losses_and_Own_Use Non_Energy_Use Agriculture Forestry_and_Logging Fishing Mining Food_Processing Textiles Wood_Pulp_Paper_and_Printing Chemicals Non_Metallic_Minerals Basic_Metals Mechanical_Electrical_Equippment Building_and_Construction Unallocated Commercial Transport Residential Statistical_Differences	:=
-NEWZEALAND 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0
-AUSTRALIA 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0
-	[*,*,DAY_SUMMER,2023]:	Indigenous_Production Imports Exports Stock_Change International_Transport Electricity_Generation Cogeneration Fuel_Production Other_Transformation Losses_and_Own_Use Non_Energy_Use Agriculture Forestry_and_Logging Fishing Mining Food_Processing Textiles Wood_Pulp_Paper_and_Printing Chemicals Non_Metallic_Minerals Basic_Metals Mechanical_Electrical_Equippment Building_and_Construction Unallocated Commercial Transport Residential Statistical_Differences	:=
-NEWZEALAND 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0
-AUSTRALIA 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0
-	[*,*,DAY_SUMMER,2024]:	Indigenous_Production Imports Exports Stock_Change International_Transport Electricity_Generation Cogeneration Fuel_Production Other_Transformation Losses_and_Own_Use Non_Energy_Use Agriculture Forestry_and_Logging Fishing Mining Food_Processing Textiles Wood_Pulp_Paper_and_Printing Chemicals Non_Metallic_Minerals Basic_Metals Mechanical_Electrical_Equippment Building_and_Construction Unallocated Commercial Transport Residential Statistical_Differences	:=
-NEWZEALAND 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0
-AUSTRALIA 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0
-	[*,*,DAY_SUMMER,2025]:	Indigenous_Production Imports Exports Stock_Change International_Transport Electricity_Generation Cogeneration Fuel_Production Other_Transformation Losses_and_Own_Use Non_Energy_Use Agriculture Forestry_and_Logging Fishing Mining Food_Processing Textiles Wood_Pulp_Paper_and_Printing Chemicals Non_Metallic_Minerals Basic_Metals Mechanical_Electrical_Equippment Building_and_Construction Unallocated Commercial Transport Residential Statistical_Differences	:=
-NEWZEALAND 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0
-AUSTRALIA 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0
-	[*,*,DAY_SUMMER,2026]:	Indigenous_Production Imports Exports Stock_Change International_Transport Electricity_Generation Cogeneration Fuel_Production Other_Transformation Losses_and_Own_Use Non_Energy_Use Agriculture Forestry_and_Logging Fishing Mining Food_Processing Textiles Wood_Pulp_Paper_and_Printing Chemicals Non_Metallic_Minerals Basic_Metals Mechanical_Electrical_Equippment Building_and_Construction Unallocated Commercial Transport Residential Statistical_Differences	:=
-NEWZEALAND 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0
-AUSTRALIA 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0
-	[*,*,DAY_SUMMER,2027]:	Indigenous_Production Imports Exports Stock_Change International_Transport Electricity_Generation Cogeneration Fuel_Production Other_Transformation Losses_and_Own_Use Non_Energy_Use Agriculture Forestry_and_Logging Fishing Mining Food_Processing Textiles Wood_Pulp_Paper_and_Printing Chemicals Non_Metallic_Minerals Basic_Metals Mechanical_Electrical_Equippment Building_and_Construction Unallocated Commercial Transport Residential Statistical_Differences	:=
-NEWZEALAND 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0
-AUSTRALIA 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0
-	[*,*,DAY_SUMMER,2028]:	Indigenous_Production Imports Exports Stock_Change International_Transport Electricity_Generation Cogeneration Fuel_Production Other_Transformation Losses_and_Own_Use Non_Energy_Use Agriculture Forestry_and_Logging Fishing Mining Food_Processing Textiles Wood_Pulp_Paper_and_Printing Chemicals Non_Metallic_Minerals Basic_Metals Mechanical_Electrical_Equippment Building_and_Construction Unallocated Commercial Transport Residential Statistical_Differences	:=
-NEWZEALAND 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0
-AUSTRALIA 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0
-	[*,*,DAY_SUMMER,2029]:	Indigenous_Production Imports Exports Stock_Change International_Transport Electricity_Generation Cogeneration Fuel_Production Other_Transformation Losses_and_Own_Use Non_Energy_Use Agriculture Forestry_and_Logging Fishing Mining Food_Processing Textiles Wood_Pulp_Paper_and_Printing Chemicals Non_Metallic_Minerals Basic_Metals Mechanical_Electrical_Equippment Building_and_Construction Unallocated Commercial Transport Residential Statistical_Differences	:=
-NEWZEALAND 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0
-AUSTRALIA 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0
-	[*,*,DAY_SUMMER,2030]:	Indigenous_Production Imports Exports Stock_Change International_Transport Electricity_Generation Cogeneration Fuel_Production Other_Transformation Losses_and_Own_Use Non_Energy_Use Agriculture Forestry_and_Logging Fishing Mining Food_Processing Textiles Wood_Pulp_Paper_and_Printing Chemicals Non_Metallic_Minerals Basic_Metals Mechanical_Electrical_Equippment Building_and_Construction Unallocated Commercial Transport Residential Statistical_Differences	:=
-NEWZEALAND 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0
-AUSTRALIA 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0
-	[*,*,NIGHT_SUMMER,2020]:	Indigenous_Production Imports Exports Stock_Change International_Transport Electricity_Generation Cogeneration Fuel_Production Other_Transformation Losses_and_Own_Use Non_Energy_Use Agriculture Forestry_and_Logging Fishing Mining Food_Processing Textiles Wood_Pulp_Paper_and_Printing Chemicals Non_Metallic_Minerals Basic_Metals Mechanical_Electrical_Equippment Building_and_Construction Unallocated Commercial Transport Residential Statistical_Differences	:=
-NEWZEALAND 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0
-AUSTRALIA 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0
-	[*,*,NIGHT_SUMMER,2021]:	Indigenous_Production Imports Exports Stock_Change International_Transport Electricity_Generation Cogeneration Fuel_Production Other_Transformation Losses_and_Own_Use Non_Energy_Use Agriculture Forestry_and_Logging Fishing Mining Food_Processing Textiles Wood_Pulp_Paper_and_Printing Chemicals Non_Metallic_Minerals Basic_Metals Mechanical_Electrical_Equippment Building_and_Construction Unallocated Commercial Transport Residential Statistical_Differences	:=
-NEWZEALAND 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0
-AUSTRALIA 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0
-	[*,*,NIGHT_SUMMER,2022]:	Indigenous_Production Imports Exports Stock_Change International_Transport Electricity_Generation Cogeneration Fuel_Production Other_Transformation Losses_and_Own_Use Non_Energy_Use Agriculture Forestry_and_Logging Fishing Mining Food_Processing Textiles Wood_Pulp_Paper_and_Printing Chemicals Non_Metallic_Minerals Basic_Metals Mechanical_Electrical_Equippment Building_and_Construction Unallocated Commercial Transport Residential Statistical_Differences	:=
-NEWZEALAND 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0
-AUSTRALIA 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0
-	[*,*,NIGHT_SUMMER,2023]:	Indigenous_Production Imports Exports Stock_Change International_Transport Electricity_Generation Cogeneration Fuel_Production Other_Transformation Losses_and_Own_Use Non_Energy_Use Agriculture Forestry_and_Logging Fishing Mining Food_Processing Textiles Wood_Pulp_Paper_and_Printing Chemicals Non_Metallic_Minerals Basic_Metals Mechanical_Electrical_Equippment Building_and_Construction Unallocated Commercial Transport Residential Statistical_Differences	:=
-NEWZEALAND 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0
-AUSTRALIA 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0
-	[*,*,NIGHT_SUMMER,2024]:	Indigenous_Production Imports Exports Stock_Change International_Transport Electricity_Generation Cogeneration Fuel_Production Other_Transformation Losses_and_Own_Use Non_Energy_Use Agriculture Forestry_and_Logging Fishing Mining Food_Processing Textiles Wood_Pulp_Paper_and_Printing Chemicals Non_Metallic_Minerals Basic_Metals Mechanical_Electrical_Equippment Building_and_Construction Unallocated Commercial Transport Residential Statistical_Differences	:=
-NEWZEALAND 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0
-AUSTRALIA 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0
-	[*,*,NIGHT_SUMMER,2025]:	Indigenous_Production Imports Exports Stock_Change International_Transport Electricity_Generation Cogeneration Fuel_Production Other_Transformation Losses_and_Own_Use Non_Energy_Use Agriculture Forestry_and_Logging Fishing Mining Food_Processing Textiles Wood_Pulp_Paper_and_Printing Chemicals Non_Metallic_Minerals Basic_Metals Mechanical_Electrical_Equippment Building_and_Construction Unallocated Commercial Transport Residential Statistical_Differences	:=
-NEWZEALAND 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0
-AUSTRALIA 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0
-	[*,*,NIGHT_SUMMER,2026]:	Indigenous_Production Imports Exports Stock_Change International_Transport Electricity_Generation Cogeneration Fuel_Production Other_Transformation Losses_and_Own_Use Non_Energy_Use Agriculture Forestry_and_Logging Fishing Mining Food_Processing Textiles Wood_Pulp_Paper_and_Printing Chemicals Non_Metallic_Minerals Basic_Metals Mechanical_Electrical_Equippment Building_and_Construction Unallocated Commercial Transport Residential Statistical_Differences	:=
-NEWZEALAND 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0
-AUSTRALIA 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0
-	[*,*,NIGHT_SUMMER,2027]:	Indigenous_Production Imports Exports Stock_Change International_Transport Electricity_Generation Cogeneration Fuel_Production Other_Transformation Losses_and_Own_Use Non_Energy_Use Agriculture Forestry_and_Logging Fishing Mining Food_Processing Textiles Wood_Pulp_Paper_and_Printing Chemicals Non_Metallic_Minerals Basic_Metals Mechanical_Electrical_Equippment Building_and_Construction Unallocated Commercial Transport Residential Statistical_Differences	:=
-NEWZEALAND 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0
-AUSTRALIA 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0
-	[*,*,NIGHT_SUMMER,2028]:	Indigenous_Production Imports Exports Stock_Change International_Transport Electricity_Generation Cogeneration Fuel_Production Other_Transformation Losses_and_Own_Use Non_Energy_Use Agriculture Forestry_and_Logging Fishing Mining Food_Processing Textiles Wood_Pulp_Paper_and_Printing Chemicals Non_Metallic_Minerals Basic_Metals Mechanical_Electrical_Equippment Building_and_Construction Unallocated Commercial Transport Residential Statistical_Differences	:=
-NEWZEALAND 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0
-AUSTRALIA 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0
-	[*,*,NIGHT_SUMMER,2029]:	Indigenous_Production Imports Exports Stock_Change International_Transport Electricity_Generation Cogeneration Fuel_Production Other_Transformation Losses_and_Own_Use Non_Energy_Use Agriculture Forestry_and_Logging Fishing Mining Food_Processing Textiles Wood_Pulp_Paper_and_Printing Chemicals Non_Metallic_Minerals Basic_Metals Mechanical_Electrical_Equippment Building_and_Construction Unallocated Commercial Transport Residential Statistical_Differences	:=
-NEWZEALAND 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0
-AUSTRALIA 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0
-	[*,*,NIGHT_SUMMER,2030]:	Indigenous_Production Imports Exports Stock_Change International_Transport Electricity_Generation Cogeneration Fuel_Production Other_Transformation Losses_and_Own_Use Non_Energy_Use Agriculture Forestry_and_Logging Fishing Mining Food_Processing Textiles Wood_Pulp_Paper_and_Printing Chemicals Non_Metallic_Minerals Basic_Metals Mechanical_Electrical_Equippment Building_and_Construction Unallocated Commercial Transport Residential Statistical_Differences	:=
-NEWZEALAND 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0
-AUSTRALIA 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0
-	[*,*,DAY_WINTER,2020]:	Indigenous_Production Imports Exports Stock_Change International_Transport Electricity_Generation Cogeneration Fuel_Production Other_Transformation Losses_and_Own_Use Non_Energy_Use Agriculture Forestry_and_Logging Fishing Mining Food_Processing Textiles Wood_Pulp_Paper_and_Printing Chemicals Non_Metallic_Minerals Basic_Metals Mechanical_Electrical_Equippment Building_and_Construction Unallocated Commercial Transport Residential Statistical_Differences	:=
-NEWZEALAND 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0
-AUSTRALIA 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0
-	[*,*,DAY_WINTER,2021]:	Indigenous_Production Imports Exports Stock_Change International_Transport Electricity_Generation Cogeneration Fuel_Production Other_Transformation Losses_and_Own_Use Non_Energy_Use Agriculture Forestry_and_Logging Fishing Mining Food_Processing Textiles Wood_Pulp_Paper_and_Printing Chemicals Non_Metallic_Minerals Basic_Metals Mechanical_Electrical_Equippment Building_and_Construction Unallocated Commercial Transport Residential Statistical_Differences	:=
-NEWZEALAND 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0
-AUSTRALIA 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0
-	[*,*,DAY_WINTER,2022]:	Indigenous_Production Imports Exports Stock_Change International_Transport Electricity_Generation Cogeneration Fuel_Production Other_Transformation Losses_and_Own_Use Non_Energy_Use Agriculture Forestry_and_Logging Fishing Mining Food_Processing Textiles Wood_Pulp_Paper_and_Printing Chemicals Non_Metallic_Minerals Basic_Metals Mechanical_Electrical_Equippment Building_and_Construction Unallocated Commercial Transport Residential Statistical_Differences	:=
-NEWZEALAND 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0
-AUSTRALIA 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0
-	[*,*,DAY_WINTER,2023]:	Indigenous_Production Imports Exports Stock_Change International_Transport Electricity_Generation Cogeneration Fuel_Production Other_Transformation Losses_and_Own_Use Non_Energy_Use Agriculture Forestry_and_Logging Fishing Mining Food_Processing Textiles Wood_Pulp_Paper_and_Printing Chemicals Non_Metallic_Minerals Basic_Metals Mechanical_Electrical_Equippment Building_and_Construction Unallocated Commercial Transport Residential Statistical_Differences	:=
-NEWZEALAND 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0
-AUSTRALIA 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0
-	[*,*,DAY_WINTER,2024]:	Indigenous_Production Imports Exports Stock_Change International_Transport Electricity_Generation Cogeneration Fuel_Production Other_Transformation Losses_and_Own_Use Non_Energy_Use Agriculture Forestry_and_Logging Fishing Mining Food_Processing Textiles Wood_Pulp_Paper_and_Printing Chemicals Non_Metallic_Minerals Basic_Metals Mechanical_Electrical_Equippment Building_and_Construction Unallocated Commercial Transport Residential Statistical_Differences	:=
-NEWZEALAND 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0
-AUSTRALIA 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0
-	[*,*,DAY_WINTER,2025]:	Indigenous_Production Imports Exports Stock_Change International_Transport Electricity_Generation Cogeneration Fuel_Production Other_Transformation Losses_and_Own_Use Non_Energy_Use Agriculture Forestry_and_Logging Fishing Mining Food_Processing Textiles Wood_Pulp_Paper_and_Printing Chemicals Non_Metallic_Minerals Basic_Metals Mechanical_Electrical_Equippment Building_and_Construction Unallocated Commercial Transport Residential Statistical_Differences	:=
-NEWZEALAND 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0
-AUSTRALIA 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0
-	[*,*,DAY_WINTER,2026]:	Indigenous_Production Imports Exports Stock_Change International_Transport Electricity_Generation Cogeneration Fuel_Production Other_Transformation Losses_and_Own_Use Non_Energy_Use Agriculture Forestry_and_Logging Fishing Mining Food_Processing Textiles Wood_Pulp_Paper_and_Printing Chemicals Non_Metallic_Minerals Basic_Metals Mechanical_Electrical_Equippment Building_and_Construction Unallocated Commercial Transport Residential Statistical_Differences	:=
-NEWZEALAND 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0
-AUSTRALIA 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0
-	[*,*,DAY_WINTER,2027]:	Indigenous_Production Imports Exports Stock_Change International_Transport Electricity_Generation Cogeneration Fuel_Production Other_Transformation Losses_and_Own_Use Non_Energy_Use Agriculture Forestry_and_Logging Fishing Mining Food_Processing Textiles Wood_Pulp_Paper_and_Printing Chemicals Non_Metallic_Minerals Basic_Metals Mechanical_Electrical_Equippment Building_and_Construction Unallocated Commercial Transport Residential Statistical_Differences	:=
-NEWZEALAND 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0
-AUSTRALIA 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0
-	[*,*,DAY_WINTER,2028]:	Indigenous_Production Imports Exports Stock_Change International_Transport Electricity_Generation Cogeneration Fuel_Production Other_Transformation Losses_and_Own_Use Non_Energy_Use Agriculture Forestry_and_Logging Fishing Mining Food_Processing Textiles Wood_Pulp_Paper_and_Printing Chemicals Non_Metallic_Minerals Basic_Metals Mechanical_Electrical_Equippment Building_and_Construction Unallocated Commercial Transport Residential Statistical_Differences	:=
-NEWZEALAND 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0
-AUSTRALIA 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0
-	[*,*,DAY_WINTER,2029]:	Indigenous_Production Imports Exports Stock_Change International_Transport Electricity_Generation Cogeneration Fuel_Production Other_Transformation Losses_and_Own_Use Non_Energy_Use Agriculture Forestry_and_Logging Fishing Mining Food_Processing Textiles Wood_Pulp_Paper_and_Printing Chemicals Non_Metallic_Minerals Basic_Metals Mechanical_Electrical_Equippment Building_and_Construction Unallocated Commercial Transport Residential Statistical_Differences	:=
-NEWZEALAND 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0
-AUSTRALIA 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0
-	[*,*,DAY_WINTER,2030]:	Indigenous_Production Imports Exports Stock_Change International_Transport Electricity_Generation Cogeneration Fuel_Production Other_Transformation Losses_and_Own_Use Non_Energy_Use Agriculture Forestry_and_Logging Fishing Mining Food_Processing Textiles Wood_Pulp_Paper_and_Printing Chemicals Non_Metallic_Minerals Basic_Metals Mechanical_Electrical_Equippment Building_and_Construction Unallocated Commercial Transport Residential Statistical_Differences	:=
-NEWZEALAND 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0
-AUSTRALIA 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0
-	[*,*,NIGHT_WINTER,2020]:	Indigenous_Production Imports Exports Stock_Change International_Transport Electricity_Generation Cogeneration Fuel_Production Other_Transformation Losses_and_Own_Use Non_Energy_Use Agriculture Forestry_and_Logging Fishing Mining Food_Processing Textiles Wood_Pulp_Paper_and_Printing Chemicals Non_Metallic_Minerals Basic_Metals Mechanical_Electrical_Equippment Building_and_Construction Unallocated Commercial Transport Residential Statistical_Differences	:=
-NEWZEALAND 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0
-AUSTRALIA 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0
-	[*,*,NIGHT_WINTER,2021]:	Indigenous_Production Imports Exports Stock_Change International_Transport Electricity_Generation Cogeneration Fuel_Production Other_Transformation Losses_and_Own_Use Non_Energy_Use Agriculture Forestry_and_Logging Fishing Mining Food_Processing Textiles Wood_Pulp_Paper_and_Printing Chemicals Non_Metallic_Minerals Basic_Metals Mechanical_Electrical_Equippment Building_and_Construction Unallocated Commercial Transport Residential Statistical_Differences	:=
-NEWZEALAND 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0
-AUSTRALIA 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0
-	[*,*,NIGHT_WINTER,2022]:	Indigenous_Production Imports Exports Stock_Change International_Transport Electricity_Generation Cogeneration Fuel_Production Other_Transformation Losses_and_Own_Use Non_Energy_Use Agriculture Forestry_and_Logging Fishing Mining Food_Processing Textiles Wood_Pulp_Paper_and_Printing Chemicals Non_Metallic_Minerals Basic_Metals Mechanical_Electrical_Equippment Building_and_Construction Unallocated Commercial Transport Residential Statistical_Differences	:=
-NEWZEALAND 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0
-AUSTRALIA 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0
-	[*,*,NIGHT_WINTER,2023]:	Indigenous_Production Imports Exports Stock_Change International_Transport Electricity_Generation Cogeneration Fuel_Production Other_Transformation Losses_and_Own_Use Non_Energy_Use Agriculture Forestry_and_Logging Fishing Mining Food_Processing Textiles Wood_Pulp_Paper_and_Printing Chemicals Non_Metallic_Minerals Basic_Metals Mechanical_Electrical_Equippment Building_and_Construction Unallocated Commercial Transport Residential Statistical_Differences	:=
-NEWZEALAND 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0
-AUSTRALIA 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0
-	[*,*,NIGHT_WINTER,2024]:	Indigenous_Production Imports Exports Stock_Change International_Transport Electricity_Generation Cogeneration Fuel_Production Other_Transformation Losses_and_Own_Use Non_Energy_Use Agriculture Forestry_and_Logging Fishing Mining Food_Processing Textiles Wood_Pulp_Paper_and_Printing Chemicals Non_Metallic_Minerals Basic_Metals Mechanical_Electrical_Equippment Building_and_Construction Unallocated Commercial Transport Residential Statistical_Differences	:=
-NEWZEALAND 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0
-AUSTRALIA 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0
-	[*,*,NIGHT_WINTER,2025]:	Indigenous_Production Imports Exports Stock_Change International_Transport Electricity_Generation Cogeneration Fuel_Production Other_Transformation Losses_and_Own_Use Non_Energy_Use Agriculture Forestry_and_Logging Fishing Mining Food_Processing Textiles Wood_Pulp_Paper_and_Printing Chemicals Non_Metallic_Minerals Basic_Metals Mechanical_Electrical_Equippment Building_and_Construction Unallocated Commercial Transport Residential Statistical_Differences	:=
-NEWZEALAND 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0
-AUSTRALIA 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0
-	[*,*,NIGHT_WINTER,2026]:	Indigenous_Production Imports Exports Stock_Change International_Transport Electricity_Generation Cogeneration Fuel_Production Other_Transformation Losses_and_Own_Use Non_Energy_Use Agriculture Forestry_and_Logging Fishing Mining Food_Processing Textiles Wood_Pulp_Paper_and_Printing Chemicals Non_Metallic_Minerals Basic_Metals Mechanical_Electrical_Equippment Building_and_Construction Unallocated Commercial Transport Residential Statistical_Differences	:=
-NEWZEALAND 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0
-AUSTRALIA 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0
-	[*,*,NIGHT_WINTER,2027]:	Indigenous_Production Imports Exports Stock_Change International_Transport Electricity_Generation Cogeneration Fuel_Production Other_Transformation Losses_and_Own_Use Non_Energy_Use Agriculture Forestry_and_Logging Fishing Mining Food_Processing Textiles Wood_Pulp_Paper_and_Printing Chemicals Non_Metallic_Minerals Basic_Metals Mechanical_Electrical_Equippment Building_and_Construction Unallocated Commercial Transport Residential Statistical_Differences	:=
-NEWZEALAND 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0
-AUSTRALIA 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0
-	[*,*,NIGHT_WINTER,2028]:	Indigenous_Production Imports Exports Stock_Change International_Transport Electricity_Generation Cogeneration Fuel_Production Other_Transformation Losses_and_Own_Use Non_Energy_Use Agriculture Forestry_and_Logging Fishing Mining Food_Processing Textiles Wood_Pulp_Paper_and_Printing Chemicals Non_Metallic_Minerals Basic_Metals Mechanical_Electrical_Equippment Building_and_Construction Unallocated Commercial Transport Residential Statistical_Differences	:=
-NEWZEALAND 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0
-AUSTRALIA 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0
-	[*,*,NIGHT_WINTER,2029]:	Indigenous_Production Imports Exports Stock_Change International_Transport Electricity_Generation Cogeneration Fuel_Production Other_Transformation Losses_and_Own_Use Non_Energy_Use Agriculture Forestry_and_Logging Fishing Mining Food_Processing Textiles Wood_Pulp_Paper_and_Printing Chemicals Non_Metallic_Minerals Basic_Metals Mechanical_Electrical_Equippment Building_and_Construction Unallocated Commercial Transport Residential Statistical_Differences	:=
-NEWZEALAND 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0
-AUSTRALIA 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0
-	[*,*,NIGHT_WINTER,2030]:	Indigenous_Production Imports Exports Stock_Change International_Transport Electricity_Generation Cogeneration Fuel_Production Other_Transformation Losses_and_Own_Use Non_Energy_Use Agriculture Forestry_and_Logging Fishing Mining Food_Processing Textiles Wood_Pulp_Paper_and_Printing Chemicals Non_Metallic_Minerals Basic_Metals Mechanical_Electrical_Equippment Building_and_Construction Unallocated Commercial Transport Residential Statistical_Differences	:=
-NEWZEALAND 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0
-AUSTRALIA 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0
-	[*,*,DAY_INTERMEDIATE,2020]:	Indigenous_Production Imports Exports Stock_Change International_Transport Electricity_Generation Cogeneration Fuel_Production Other_Transformation Losses_and_Own_Use Non_Energy_Use Agriculture Forestry_and_Logging Fishing Mining Food_Processing Textiles Wood_Pulp_Paper_and_Printing Chemicals Non_Metallic_Minerals Basic_Metals Mechanical_Electrical_Equippment Building_and_Construction Unallocated Commercial Transport Residential Statistical_Differences	:=
-NEWZEALAND 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0
-AUSTRALIA 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0
-	[*,*,DAY_INTERMEDIATE,2021]:	Indigenous_Production Imports Exports Stock_Change International_Transport Electricity_Generation Cogeneration Fuel_Production Other_Transformation Losses_and_Own_Use Non_Energy_Use Agriculture Forestry_and_Logging Fishing Mining Food_Processing Textiles Wood_Pulp_Paper_and_Printing Chemicals Non_Metallic_Minerals Basic_Metals Mechanical_Electrical_Equippment Building_and_Construction Unallocated Commercial Transport Residential Statistical_Differences	:=
-NEWZEALAND 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0
-AUSTRALIA 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0
-	[*,*,DAY_INTERMEDIATE,2022]:	Indigenous_Production Imports Exports Stock_Change International_Transport Electricity_Generation Cogeneration Fuel_Production Other_Transformation Losses_and_Own_Use Non_Energy_Use Agriculture Forestry_and_Logging Fishing Mining Food_Processing Textiles Wood_Pulp_Paper_and_Printing Chemicals Non_Metallic_Minerals Basic_Metals Mechanical_Electrical_Equippment Building_and_Construction Unallocated Commercial Transport Residential Statistical_Differences	:=
-NEWZEALAND 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0
-AUSTRALIA 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0
-	[*,*,DAY_INTERMEDIATE,2023]:	Indigenous_Production Imports Exports Stock_Change International_Transport Electricity_Generation Cogeneration Fuel_Production Other_Transformation Losses_and_Own_Use Non_Energy_Use Agriculture Forestry_and_Logging Fishing Mining Food_Processing Textiles Wood_Pulp_Paper_and_Printing Chemicals Non_Metallic_Minerals Basic_Metals Mechanical_Electrical_Equippment Building_and_Construction Unallocated Commercial Transport Residential Statistical_Differences	:=
-NEWZEALAND 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0
-AUSTRALIA 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0
-	[*,*,DAY_INTERMEDIATE,2024]:	Indigenous_Production Imports Exports Stock_Change International_Transport Electricity_Generation Cogeneration Fuel_Production Other_Transformation Losses_and_Own_Use Non_Energy_Use Agriculture Forestry_and_Logging Fishing Mining Food_Processing Textiles Wood_Pulp_Paper_and_Printing Chemicals Non_Metallic_Minerals Basic_Metals Mechanical_Electrical_Equippment Building_and_Construction Unallocated Commercial Transport Residential Statistical_Differences	:=
-NEWZEALAND 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0
-AUSTRALIA 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0
-	[*,*,DAY_INTERMEDIATE,2025]:	Indigenous_Production Imports Exports Stock_Change International_Transport Electricity_Generation Cogeneration Fuel_Production Other_Transformation Losses_and_Own_Use Non_Energy_Use Agriculture Forestry_and_Logging Fishing Mining Food_Processing Textiles Wood_Pulp_Paper_and_Printing Chemicals Non_Metallic_Minerals Basic_Metals Mechanical_Electrical_Equippment Building_and_Construction Unallocated Commercial Transport Residential Statistical_Differences	:=
-NEWZEALAND 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0
-AUSTRALIA 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0
-	[*,*,DAY_INTERMEDIATE,2026]:	Indigenous_Production Imports Exports Stock_Change International_Transport Electricity_Generation Cogeneration Fuel_Production Other_Transformation Losses_and_Own_Use Non_Energy_Use Agriculture Forestry_and_Logging Fishing Mining Food_Processing Textiles Wood_Pulp_Paper_and_Printing Chemicals Non_Metallic_Minerals Basic_Metals Mechanical_Electrical_Equippment Building_and_Construction Unallocated Commercial Transport Residential Statistical_Differences	:=
-NEWZEALAND 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0
-AUSTRALIA 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0
-	[*,*,DAY_INTERMEDIATE,2027]:	Indigenous_Production Imports Exports Stock_Change International_Transport Electricity_Generation Cogeneration Fuel_Production Other_Transformation Losses_and_Own_Use Non_Energy_Use Agriculture Forestry_and_Logging Fishing Mining Food_Processing Textiles Wood_Pulp_Paper_and_Printing Chemicals Non_Metallic_Minerals Basic_Metals Mechanical_Electrical_Equippment Building_and_Construction Unallocated Commercial Transport Residential Statistical_Differences	:=
-NEWZEALAND 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0
-AUSTRALIA 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0
-	[*,*,DAY_INTERMEDIATE,2028]:	Indigenous_Production Imports Exports Stock_Change International_Transport Electricity_Generation Cogeneration Fuel_Production Other_Transformation Losses_and_Own_Use Non_Energy_Use Agriculture Forestry_and_Logging Fishing Mining Food_Processing Textiles Wood_Pulp_Paper_and_Printing Chemicals Non_Metallic_Minerals Basic_Metals Mechanical_Electrical_Equippment Building_and_Construction Unallocated Commercial Transport Residential Statistical_Differences	:=
-NEWZEALAND 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0
-AUSTRALIA 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0
-	[*,*,DAY_INTERMEDIATE,2029]:	Indigenous_Production Imports Exports Stock_Change International_Transport Electricity_Generation Cogeneration Fuel_Production Other_Transformation Losses_and_Own_Use Non_Energy_Use Agriculture Forestry_and_Logging Fishing Mining Food_Processing Textiles Wood_Pulp_Paper_and_Printing Chemicals Non_Metallic_Minerals Basic_Metals Mechanical_Electrical_Equippment Building_and_Construction Unallocated Commercial Transport Residential Statistical_Differences	:=
-NEWZEALAND 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0
-AUSTRALIA 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0
-	[*,*,DAY_INTERMEDIATE,2030]:	Indigenous_Production Imports Exports Stock_Change International_Transport Electricity_Generation Cogeneration Fuel_Production Other_Transformation Losses_and_Own_Use Non_Energy_Use Agriculture Forestry_and_Logging Fishing Mining Food_Processing Textiles Wood_Pulp_Paper_and_Printing Chemicals Non_Metallic_Minerals Basic_Metals Mechanical_Electrical_Equippment Building_and_Construction Unallocated Commercial Transport Residential Statistical_Differences	:=
-NEWZEALAND 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0
-AUSTRALIA 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0
-	[*,*,NIGHT_INTERMEDIATE,2020]:	Indigenous_Production Imports Exports Stock_Change International_Transport Electricity_Generation Cogeneration Fuel_Production Other_Transformation Losses_and_Own_Use Non_Energy_Use Agriculture Forestry_and_Logging Fishing Mining Food_Processing Textiles Wood_Pulp_Paper_and_Printing Chemicals Non_Metallic_Minerals Basic_Metals Mechanical_Electrical_Equippment Building_and_Construction Unallocated Commercial Transport Residential Statistical_Differences	:=
-NEWZEALAND 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0
-AUSTRALIA 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0
-	[*,*,NIGHT_INTERMEDIATE,2021]:	Indigenous_Production Imports Exports Stock_Change International_Transport Electricity_Generation Cogeneration Fuel_Production Other_Transformation Losses_and_Own_Use Non_Energy_Use Agriculture Forestry_and_Logging Fishing Mining Food_Processing Textiles Wood_Pulp_Paper_and_Printing Chemicals Non_Metallic_Minerals Basic_Metals Mechanical_Electrical_Equippment Building_and_Construction Unallocated Commercial Transport Residential Statistical_Differences	:=
-NEWZEALAND 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0
-AUSTRALIA 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0
-	[*,*,NIGHT_INTERMEDIATE,2022]:	Indigenous_Production Imports Exports Stock_Change International_Transport Electricity_Generation Cogeneration Fuel_Production Other_Transformation Losses_and_Own_Use Non_Energy_Use Agriculture Forestry_and_Logging Fishing Mining Food_Processing Textiles Wood_Pulp_Paper_and_Printing Chemicals Non_Metallic_Minerals Basic_Metals Mechanical_Electrical_Equippment Building_and_Construction Unallocated Commercial Transport Residential Statistical_Differences	:=
-NEWZEALAND 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0
-AUSTRALIA 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0
-	[*,*,NIGHT_INTERMEDIATE,2023]:	Indigenous_Production Imports Exports Stock_Change International_Transport Electricity_Generation Cogeneration Fuel_Production Other_Transformation Losses_and_Own_Use Non_Energy_Use Agriculture Forestry_and_Logging Fishing Mining Food_Processing Textiles Wood_Pulp_Paper_and_Printing Chemicals Non_Metallic_Minerals Basic_Metals Mechanical_Electrical_Equippment Building_and_Construction Unallocated Commercial Transport Residential Statistical_Differences	:=
-NEWZEALAND 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0
-AUSTRALIA 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0
-	[*,*,NIGHT_INTERMEDIATE,2024]:	Indigenous_Production Imports Exports Stock_Change International_Transport Electricity_Generation Cogeneration Fuel_Production Other_Transformation Losses_and_Own_Use Non_Energy_Use Agriculture Forestry_and_Logging Fishing Mining Food_Processing Textiles Wood_Pulp_Paper_and_Printing Chemicals Non_Metallic_Minerals Basic_Metals Mechanical_Electrical_Equippment Building_and_Construction Unallocated Commercial Transport Residential Statistical_Differences	:=
-NEWZEALAND 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0
-AUSTRALIA 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0
-	[*,*,NIGHT_INTERMEDIATE,2025]:	Indigenous_Production Imports Exports Stock_Change International_Transport Electricity_Generation Cogeneration Fuel_Production Other_Transformation Losses_and_Own_Use Non_Energy_Use Agriculture Forestry_and_Logging Fishing Mining Food_Processing Textiles Wood_Pulp_Paper_and_Printing Chemicals Non_Metallic_Minerals Basic_Metals Mechanical_Electrical_Equippment Building_and_Construction Unallocated Commercial Transport Residential Statistical_Differences	:=
-NEWZEALAND 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0
-AUSTRALIA 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0
-	[*,*,NIGHT_INTERMEDIATE,2026]:	Indigenous_Production Imports Exports Stock_Change International_Transport Electricity_Generation Cogeneration Fuel_Production Other_Transformation Losses_and_Own_Use Non_Energy_Use Agriculture Forestry_and_Logging Fishing Mining Food_Processing Textiles Wood_Pulp_Paper_and_Printing Chemicals Non_Metallic_Minerals Basic_Metals Mechanical_Electrical_Equippment Building_and_Construction Unallocated Commercial Transport Residential Statistical_Differences	:=
-NEWZEALAND 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0
-AUSTRALIA 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0
-	[*,*,NIGHT_INTERMEDIATE,2027]:	Indigenous_Production Imports Exports Stock_Change International_Transport Electricity_Generation Cogeneration Fuel_Production Other_Transformation Losses_and_Own_Use Non_Energy_Use Agriculture Forestry_and_Logging Fishing Mining Food_Processing Textiles Wood_Pulp_Paper_and_Printing Chemicals Non_Metallic_Minerals Basic_Metals Mechanical_Electrical_Equippment Building_and_Construction Unallocated Commercial Transport Residential Statistical_Differences	:=
-NEWZEALAND 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0
-AUSTRALIA 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0
-	[*,*,NIGHT_INTERMEDIATE,2028]:	Indigenous_Production Imports Exports Stock_Change International_Transport Electricity_Generation Cogeneration Fuel_Production Other_Transformation Losses_and_Own_Use Non_Energy_Use Agriculture Forestry_and_Logging Fishing Mining Food_Processing Textiles Wood_Pulp_Paper_and_Printing Chemicals Non_Metallic_Minerals Basic_Metals Mechanical_Electrical_Equippment Building_and_Construction Unallocated Commercial Transport Residential Statistical_Differences	:=
-NEWZEALAND 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0
-AUSTRALIA 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0
-	[*,*,NIGHT_INTERMEDIATE,2029]:	Indigenous_Production Imports Exports Stock_Change International_Transport Electricity_Generation Cogeneration Fuel_Production Other_Transformation Losses_and_Own_Use Non_Energy_Use Agriculture Forestry_and_Logging Fishing Mining Food_Processing Textiles Wood_Pulp_Paper_and_Printing Chemicals Non_Metallic_Minerals Basic_Metals Mechanical_Electrical_Equippment Building_and_Construction Unallocated Commercial Transport Residential Statistical_Differences	:=
-NEWZEALAND 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0
-AUSTRALIA 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0
-	[*,*,NIGHT_INTERMEDIATE,2030]:	Indigenous_Production Imports Exports Stock_Change International_Transport Electricity_Generation Cogeneration Fuel_Production Other_Transformation Losses_and_Own_Use Non_Energy_Use Agriculture Forestry_and_Logging Fishing Mining Food_Processing Textiles Wood_Pulp_Paper_and_Printing Chemicals Non_Metallic_Minerals Basic_Metals Mechanical_Electrical_Equippment Building_and_Construction Unallocated Commercial Transport Residential Statistical_Differences	:=
-NEWZEALAND 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0
-AUSTRALIA 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0
+	[*,*,DAY_SUMMER,2020]:	Electricity_Generation Cogeneration Fuel_Production Other_Transformation Losses_and_Own_Use	:=
+NEWZEALAND 0.8 0.8 0.8 0.8 0.8
+AUSTRALIA 0.8 0.8 0.8 0.8 0.8
+	[*,*,DAY_SUMMER,2021]:	Electricity_Generation Cogeneration Fuel_Production Other_Transformation Losses_and_Own_Use	:=
+NEWZEALAND 0.8 0.8 0.8 0.8 0.8
+AUSTRALIA 0.8 0.8 0.8 0.8 0.8
+	[*,*,DAY_SUMMER,2022]:	Electricity_Generation Cogeneration Fuel_Production Other_Transformation Losses_and_Own_Use	:=
+NEWZEALAND 0.8 0.8 0.8 0.8 0.8
+AUSTRALIA 0.8 0.8 0.8 0.8 0.8
+	[*,*,DAY_SUMMER,2023]:	Electricity_Generation Cogeneration Fuel_Production Other_Transformation Losses_and_Own_Use	:=
+NEWZEALAND 0.8 0.8 0.8 0.8 0.8
+AUSTRALIA 0.8 0.8 0.8 0.8 0.8
+	[*,*,DAY_SUMMER,2024]:	Electricity_Generation Cogeneration Fuel_Production Other_Transformation Losses_and_Own_Use	:=
+NEWZEALAND 0.8 0.8 0.8 0.8 0.8
+AUSTRALIA 0.8 0.8 0.8 0.8 0.8
+	[*,*,DAY_SUMMER,2025]:	Electricity_Generation Cogeneration Fuel_Production Other_Transformation Losses_and_Own_Use	:=
+NEWZEALAND 0.8 0.8 0.8 0.8 0.8
+AUSTRALIA 0.8 0.8 0.8 0.8 0.8
+	[*,*,DAY_SUMMER,2026]:	Electricity_Generation Cogeneration Fuel_Production Other_Transformation Losses_and_Own_Use	:=
+NEWZEALAND 0.8 0.8 0.8 0.8 0.8
+AUSTRALIA 0.8 0.8 0.8 0.8 0.8
+	[*,*,DAY_SUMMER,2027]:	Electricity_Generation Cogeneration Fuel_Production Other_Transformation Losses_and_Own_Use	:=
+NEWZEALAND 0.8 0.8 0.8 0.8 0.8
+AUSTRALIA 0.8 0.8 0.8 0.8 0.8
+	[*,*,DAY_SUMMER,2028]:	Electricity_Generation Cogeneration Fuel_Production Other_Transformation Losses_and_Own_Use	:=
+NEWZEALAND 0.8 0.8 0.8 0.8 0.8
+AUSTRALIA 0.8 0.8 0.8 0.8 0.8
+	[*,*,DAY_SUMMER,2029]:	Electricity_Generation Cogeneration Fuel_Production Other_Transformation Losses_and_Own_Use	:=
+NEWZEALAND 0.8 0.8 0.8 0.8 0.8
+AUSTRALIA 0.8 0.8 0.8 0.8 0.8
+	[*,*,DAY_SUMMER,2030]:	Electricity_Generation Cogeneration Fuel_Production Other_Transformation Losses_and_Own_Use	:=
+NEWZEALAND 0.8 0.8 0.8 0.8 0.8
+AUSTRALIA 0.8 0.8 0.8 0.8 0.8
+	[*,*,NIGHT_SUMMER,2020]:	Electricity_Generation Cogeneration Fuel_Production Other_Transformation Losses_and_Own_Use	:=
+NEWZEALAND 0.8 0.8 0.8 0.8 0.8
+AUSTRALIA 0.8 0.8 0.8 0.8 0.8
+	[*,*,NIGHT_SUMMER,2021]:	Electricity_Generation Cogeneration Fuel_Production Other_Transformation Losses_and_Own_Use	:=
+NEWZEALAND 0.8 0.8 0.8 0.8 0.8
+AUSTRALIA 0.8 0.8 0.8 0.8 0.8
+	[*,*,NIGHT_SUMMER,2022]:	Electricity_Generation Cogeneration Fuel_Production Other_Transformation Losses_and_Own_Use	:=
+NEWZEALAND 0.8 0.8 0.8 0.8 0.8
+AUSTRALIA 0.8 0.8 0.8 0.8 0.8
+	[*,*,NIGHT_SUMMER,2023]:	Electricity_Generation Cogeneration Fuel_Production Other_Transformation Losses_and_Own_Use	:=
+NEWZEALAND 0.8 0.8 0.8 0.8 0.8
+AUSTRALIA 0.8 0.8 0.8 0.8 0.8
+	[*,*,NIGHT_SUMMER,2024]:	Electricity_Generation Cogeneration Fuel_Production Other_Transformation Losses_and_Own_Use	:=
+NEWZEALAND 0.8 0.8 0.8 0.8 0.8
+AUSTRALIA 0.8 0.8 0.8 0.8 0.8
+	[*,*,NIGHT_SUMMER,2025]:	Electricity_Generation Cogeneration Fuel_Production Other_Transformation Losses_and_Own_Use	:=
+NEWZEALAND 0.8 0.8 0.8 0.8 0.8
+AUSTRALIA 0.8 0.8 0.8 0.8 0.8
+	[*,*,NIGHT_SUMMER,2026]:	Electricity_Generation Cogeneration Fuel_Production Other_Transformation Losses_and_Own_Use	:=
+NEWZEALAND 0.8 0.8 0.8 0.8 0.8
+AUSTRALIA 0.8 0.8 0.8 0.8 0.8
+	[*,*,NIGHT_SUMMER,2027]:	Electricity_Generation Cogeneration Fuel_Production Other_Transformation Losses_and_Own_Use	:=
+NEWZEALAND 0.8 0.8 0.8 0.8 0.8
+AUSTRALIA 0.8 0.8 0.8 0.8 0.8
+	[*,*,NIGHT_SUMMER,2028]:	Electricity_Generation Cogeneration Fuel_Production Other_Transformation Losses_and_Own_Use	:=
+NEWZEALAND 0.8 0.8 0.8 0.8 0.8
+AUSTRALIA 0.8 0.8 0.8 0.8 0.8
+	[*,*,NIGHT_SUMMER,2029]:	Electricity_Generation Cogeneration Fuel_Production Other_Transformation Losses_and_Own_Use	:=
+NEWZEALAND 0.8 0.8 0.8 0.8 0.8
+AUSTRALIA 0.8 0.8 0.8 0.8 0.8
+	[*,*,NIGHT_SUMMER,2030]:	Electricity_Generation Cogeneration Fuel_Production Other_Transformation Losses_and_Own_Use	:=
+NEWZEALAND 0.8 0.8 0.8 0.8 0.8
+AUSTRALIA 0.8 0.8 0.8 0.8 0.8
+	[*,*,DAY_WINTER,2020]:	Electricity_Generation Cogeneration Fuel_Production Other_Transformation Losses_and_Own_Use	:=
+NEWZEALAND 0.8 0.8 0.8 0.8 0.8
+AUSTRALIA 0.8 0.8 0.8 0.8 0.8
+	[*,*,DAY_WINTER,2021]:	Electricity_Generation Cogeneration Fuel_Production Other_Transformation Losses_and_Own_Use	:=
+NEWZEALAND 0.8 0.8 0.8 0.8 0.8
+AUSTRALIA 0.8 0.8 0.8 0.8 0.8
+	[*,*,DAY_WINTER,2022]:	Electricity_Generation Cogeneration Fuel_Production Other_Transformation Losses_and_Own_Use	:=
+NEWZEALAND 0.8 0.8 0.8 0.8 0.8
+AUSTRALIA 0.8 0.8 0.8 0.8 0.8
+	[*,*,DAY_WINTER,2023]:	Electricity_Generation Cogeneration Fuel_Production Other_Transformation Losses_and_Own_Use	:=
+NEWZEALAND 0.8 0.8 0.8 0.8 0.8
+AUSTRALIA 0.8 0.8 0.8 0.8 0.8
+	[*,*,DAY_WINTER,2024]:	Electricity_Generation Cogeneration Fuel_Production Other_Transformation Losses_and_Own_Use	:=
+NEWZEALAND 0.8 0.8 0.8 0.8 0.8
+AUSTRALIA 0.8 0.8 0.8 0.8 0.8
+	[*,*,DAY_WINTER,2025]:	Electricity_Generation Cogeneration Fuel_Production Other_Transformation Losses_and_Own_Use	:=
+NEWZEALAND 0.8 0.8 0.8 0.8 0.8
+AUSTRALIA 0.8 0.8 0.8 0.8 0.8
+	[*,*,DAY_WINTER,2026]:	Electricity_Generation Cogeneration Fuel_Production Other_Transformation Losses_and_Own_Use	:=
+NEWZEALAND 0.8 0.8 0.8 0.8 0.8
+AUSTRALIA 0.8 0.8 0.8 0.8 0.8
+	[*,*,DAY_WINTER,2027]:	Electricity_Generation Cogeneration Fuel_Production Other_Transformation Losses_and_Own_Use	:=
+NEWZEALAND 0.8 0.8 0.8 0.8 0.8
+AUSTRALIA 0.8 0.8 0.8 0.8 0.8
+	[*,*,DAY_WINTER,2028]:	Electricity_Generation Cogeneration Fuel_Production Other_Transformation Losses_and_Own_Use	:=
+NEWZEALAND 0.8 0.8 0.8 0.8 0.8
+AUSTRALIA 0.8 0.8 0.8 0.8 0.8
+	[*,*,DAY_WINTER,2029]:	Electricity_Generation Cogeneration Fuel_Production Other_Transformation Losses_and_Own_Use	:=
+NEWZEALAND 0.8 0.8 0.8 0.8 0.8
+AUSTRALIA 0.8 0.8 0.8 0.8 0.8
+	[*,*,DAY_WINTER,2030]:	Electricity_Generation Cogeneration Fuel_Production Other_Transformation Losses_and_Own_Use	:=
+NEWZEALAND 0.8 0.8 0.8 0.8 0.8
+AUSTRALIA 0.8 0.8 0.8 0.8 0.8
+	[*,*,NIGHT_WINTER,2020]:	Electricity_Generation Cogeneration Fuel_Production Other_Transformation Losses_and_Own_Use	:=
+NEWZEALAND 0.8 0.8 0.8 0.8 0.8
+AUSTRALIA 0.8 0.8 0.8 0.8 0.8
+	[*,*,NIGHT_WINTER,2021]:	Electricity_Generation Cogeneration Fuel_Production Other_Transformation Losses_and_Own_Use	:=
+NEWZEALAND 0.8 0.8 0.8 0.8 0.8
+AUSTRALIA 0.8 0.8 0.8 0.8 0.8
+	[*,*,NIGHT_WINTER,2022]:	Electricity_Generation Cogeneration Fuel_Production Other_Transformation Losses_and_Own_Use	:=
+NEWZEALAND 0.8 0.8 0.8 0.8 0.8
+AUSTRALIA 0.8 0.8 0.8 0.8 0.8
+	[*,*,NIGHT_WINTER,2023]:	Electricity_Generation Cogeneration Fuel_Production Other_Transformation Losses_and_Own_Use	:=
+NEWZEALAND 0.8 0.8 0.8 0.8 0.8
+AUSTRALIA 0.8 0.8 0.8 0.8 0.8
+	[*,*,NIGHT_WINTER,2024]:	Electricity_Generation Cogeneration Fuel_Production Other_Transformation Losses_and_Own_Use	:=
+NEWZEALAND 0.8 0.8 0.8 0.8 0.8
+AUSTRALIA 0.8 0.8 0.8 0.8 0.8
+	[*,*,NIGHT_WINTER,2025]:	Electricity_Generation Cogeneration Fuel_Production Other_Transformation Losses_and_Own_Use	:=
+NEWZEALAND 0.8 0.8 0.8 0.8 0.8
+AUSTRALIA 0.8 0.8 0.8 0.8 0.8
+	[*,*,NIGHT_WINTER,2026]:	Electricity_Generation Cogeneration Fuel_Production Other_Transformation Losses_and_Own_Use	:=
+NEWZEALAND 0.8 0.8 0.8 0.8 0.8
+AUSTRALIA 0.8 0.8 0.8 0.8 0.8
+	[*,*,NIGHT_WINTER,2027]:	Electricity_Generation Cogeneration Fuel_Production Other_Transformation Losses_and_Own_Use	:=
+NEWZEALAND 0.8 0.8 0.8 0.8 0.8
+AUSTRALIA 0.8 0.8 0.8 0.8 0.8
+	[*,*,NIGHT_WINTER,2028]:	Electricity_Generation Cogeneration Fuel_Production Other_Transformation Losses_and_Own_Use	:=
+NEWZEALAND 0.8 0.8 0.8 0.8 0.8
+AUSTRALIA 0.8 0.8 0.8 0.8 0.8
+	[*,*,NIGHT_WINTER,2029]:	Electricity_Generation Cogeneration Fuel_Production Other_Transformation Losses_and_Own_Use	:=
+NEWZEALAND 0.8 0.8 0.8 0.8 0.8
+AUSTRALIA 0.8 0.8 0.8 0.8 0.8
+	[*,*,NIGHT_WINTER,2030]:	Electricity_Generation Cogeneration Fuel_Production Other_Transformation Losses_and_Own_Use	:=
+NEWZEALAND 0.8 0.8 0.8 0.8 0.8
+AUSTRALIA 0.8 0.8 0.8 0.8 0.8
+	[*,*,DAY_INTERMEDIATE,2020]:	Electricity_Generation Cogeneration Fuel_Production Other_Transformation Losses_and_Own_Use	:=
+NEWZEALAND 0.8 0.8 0.8 0.8 0.8
+AUSTRALIA 0.8 0.8 0.8 0.8 0.8
+	[*,*,DAY_INTERMEDIATE,2021]:	Electricity_Generation Cogeneration Fuel_Production Other_Transformation Losses_and_Own_Use	:=
+NEWZEALAND 0.8 0.8 0.8 0.8 0.8
+AUSTRALIA 0.8 0.8 0.8 0.8 0.8
+	[*,*,DAY_INTERMEDIATE,2022]:	Electricity_Generation Cogeneration Fuel_Production Other_Transformation Losses_and_Own_Use	:=
+NEWZEALAND 0.8 0.8 0.8 0.8 0.8
+AUSTRALIA 0.8 0.8 0.8 0.8 0.8
+	[*,*,DAY_INTERMEDIATE,2023]:	Electricity_Generation Cogeneration Fuel_Production Other_Transformation Losses_and_Own_Use	:=
+NEWZEALAND 0.8 0.8 0.8 0.8 0.8
+AUSTRALIA 0.8 0.8 0.8 0.8 0.8
+	[*,*,DAY_INTERMEDIATE,2024]:	Electricity_Generation Cogeneration Fuel_Production Other_Transformation Losses_and_Own_Use	:=
+NEWZEALAND 0.8 0.8 0.8 0.8 0.8
+AUSTRALIA 0.8 0.8 0.8 0.8 0.8
+	[*,*,DAY_INTERMEDIATE,2025]:	Electricity_Generation Cogeneration Fuel_Production Other_Transformation Losses_and_Own_Use	:=
+NEWZEALAND 0.8 0.8 0.8 0.8 0.8
+AUSTRALIA 0.8 0.8 0.8 0.8 0.8
+	[*,*,DAY_INTERMEDIATE,2026]:	Electricity_Generation Cogeneration Fuel_Production Other_Transformation Losses_and_Own_Use	:=
+NEWZEALAND 0.8 0.8 0.8 0.8 0.8
+AUSTRALIA 0.8 0.8 0.8 0.8 0.8
+	[*,*,DAY_INTERMEDIATE,2027]:	Electricity_Generation Cogeneration Fuel_Production Other_Transformation Losses_and_Own_Use	:=
+NEWZEALAND 0.8 0.8 0.8 0.8 0.8
+AUSTRALIA 0.8 0.8 0.8 0.8 0.8
+	[*,*,DAY_INTERMEDIATE,2028]:	Electricity_Generation Cogeneration Fuel_Production Other_Transformation Losses_and_Own_Use	:=
+NEWZEALAND 0.8 0.8 0.8 0.8 0.8
+AUSTRALIA 0.8 0.8 0.8 0.8 0.8
+	[*,*,DAY_INTERMEDIATE,2029]:	Electricity_Generation Cogeneration Fuel_Production Other_Transformation Losses_and_Own_Use	:=
+NEWZEALAND 0.8 0.8 0.8 0.8 0.8
+AUSTRALIA 0.8 0.8 0.8 0.8 0.8
+	[*,*,DAY_INTERMEDIATE,2030]:	Electricity_Generation Cogeneration Fuel_Production Other_Transformation Losses_and_Own_Use	:=
+NEWZEALAND 0.8 0.8 0.8 0.8 0.8
+AUSTRALIA 0.8 0.8 0.8 0.8 0.8
+	[*,*,NIGHT_INTERMEDIATE,2020]:	Electricity_Generation Cogeneration Fuel_Production Other_Transformation Losses_and_Own_Use	:=
+NEWZEALAND 0.8 0.8 0.8 0.8 0.8
+AUSTRALIA 0.8 0.8 0.8 0.8 0.8
+	[*,*,NIGHT_INTERMEDIATE,2021]:	Electricity_Generation Cogeneration Fuel_Production Other_Transformation Losses_and_Own_Use	:=
+NEWZEALAND 0.8 0.8 0.8 0.8 0.8
+AUSTRALIA 0.8 0.8 0.8 0.8 0.8
+	[*,*,NIGHT_INTERMEDIATE,2022]:	Electricity_Generation Cogeneration Fuel_Production Other_Transformation Losses_and_Own_Use	:=
+NEWZEALAND 0.8 0.8 0.8 0.8 0.8
+AUSTRALIA 0.8 0.8 0.8 0.8 0.8
+	[*,*,NIGHT_INTERMEDIATE,2023]:	Electricity_Generation Cogeneration Fuel_Production Other_Transformation Losses_and_Own_Use	:=
+NEWZEALAND 0.8 0.8 0.8 0.8 0.8
+AUSTRALIA 0.8 0.8 0.8 0.8 0.8
+	[*,*,NIGHT_INTERMEDIATE,2024]:	Electricity_Generation Cogeneration Fuel_Production Other_Transformation Losses_and_Own_Use	:=
+NEWZEALAND 0.8 0.8 0.8 0.8 0.8
+AUSTRALIA 0.8 0.8 0.8 0.8 0.8
+	[*,*,NIGHT_INTERMEDIATE,2025]:	Electricity_Generation Cogeneration Fuel_Production Other_Transformation Losses_and_Own_Use	:=
+NEWZEALAND 0.8 0.8 0.8 0.8 0.8
+AUSTRALIA 0.8 0.8 0.8 0.8 0.8
+	[*,*,NIGHT_INTERMEDIATE,2026]:	Electricity_Generation Cogeneration Fuel_Production Other_Transformation Losses_and_Own_Use	:=
+NEWZEALAND 0.8 0.8 0.8 0.8 0.8
+AUSTRALIA 0.8 0.8 0.8 0.8 0.8
+	[*,*,NIGHT_INTERMEDIATE,2027]:	Electricity_Generation Cogeneration Fuel_Production Other_Transformation Losses_and_Own_Use	:=
+NEWZEALAND 0.8 0.8 0.8 0.8 0.8
+AUSTRALIA 0.8 0.8 0.8 0.8 0.8
+	[*,*,NIGHT_INTERMEDIATE,2028]:	Electricity_Generation Cogeneration Fuel_Production Other_Transformation Losses_and_Own_Use	:=
+NEWZEALAND 0.8 0.8 0.8 0.8 0.8
+AUSTRALIA 0.8 0.8 0.8 0.8 0.8
+	[*,*,NIGHT_INTERMEDIATE,2029]:	Electricity_Generation Cogeneration Fuel_Production Other_Transformation Losses_and_Own_Use	:=
+NEWZEALAND 0.8 0.8 0.8 0.8 0.8
+AUSTRALIA 0.8 0.8 0.8 0.8 0.8
+	[*,*,NIGHT_INTERMEDIATE,2030]:	Electricity_Generation Cogeneration Fuel_Production Other_Transformation Losses_and_Own_Use	:=
+NEWZEALAND 0.8 0.8 0.8 0.8 0.8
+AUSTRALIA 0.8 0.8 0.8 0.8 0.8
 ;
 #
 param	AvailabilityFactor	default	1:=
-	[*,*,2020]:	Indigenous_Production Imports Exports Stock_Change International_Transport Electricity_Generation Cogeneration Fuel_Production Other_Transformation Losses_and_Own_Use Non_Energy_Use Agriculture Forestry_and_Logging Fishing Mining Food_Processing Textiles Wood_Pulp_Paper_and_Printing Chemicals Non_Metallic_Minerals Basic_Metals Mechanical_Electrical_Equippment Building_and_Construction Unallocated Commercial Transport Residential Statistical_Differences	:=
+	[*,*,2020]:	Agriculture Forestry_and_Logging Fishing Mining Food_Processing Textiles Wood_Pulp_Paper_and_Printing Chemicals Non_Metallic_Minerals Basic_Metals Mechanical_Electrical_Equippment Building_and_Construction Unallocated Commercial Transport Residential	:=
 NEWZEALAND 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0
 AUSTRALIA 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0
-	[*,*,2021]:	Indigenous_Production Imports Exports Stock_Change International_Transport Electricity_Generation Cogeneration Fuel_Production Other_Transformation Losses_and_Own_Use Non_Energy_Use Agriculture Forestry_and_Logging Fishing Mining Food_Processing Textiles Wood_Pulp_Paper_and_Printing Chemicals Non_Metallic_Minerals Basic_Metals Mechanical_Electrical_Equippment Building_and_Construction Unallocated Commercial Transport Residential Statistical_Differences	:=
+	[*,*,2021]:	Agriculture Forestry_and_Logging Fishing Mining Food_Processing Textiles Wood_Pulp_Paper_and_Printing Chemicals Non_Metallic_Minerals Basic_Metals Mechanical_Electrical_Equippment Building_and_Construction Unallocated Commercial Transport Residential	:=
 NEWZEALAND 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0
 AUSTRALIA 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0
-	[*,*,2022]:	Indigenous_Production Imports Exports Stock_Change International_Transport Electricity_Generation Cogeneration Fuel_Production Other_Transformation Losses_and_Own_Use Non_Energy_Use Agriculture Forestry_and_Logging Fishing Mining Food_Processing Textiles Wood_Pulp_Paper_and_Printing Chemicals Non_Metallic_Minerals Basic_Metals Mechanical_Electrical_Equippment Building_and_Construction Unallocated Commercial Transport Residential Statistical_Differences	:=
+	[*,*,2022]:	Agriculture Forestry_and_Logging Fishing Mining Food_Processing Textiles Wood_Pulp_Paper_and_Printing Chemicals Non_Metallic_Minerals Basic_Metals Mechanical_Electrical_Equippment Building_and_Construction Unallocated Commercial Transport Residential	:=
 NEWZEALAND 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0
 AUSTRALIA 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0
-	[*,*,2023]:	Indigenous_Production Imports Exports Stock_Change International_Transport Electricity_Generation Cogeneration Fuel_Production Other_Transformation Losses_and_Own_Use Non_Energy_Use Agriculture Forestry_and_Logging Fishing Mining Food_Processing Textiles Wood_Pulp_Paper_and_Printing Chemicals Non_Metallic_Minerals Basic_Metals Mechanical_Electrical_Equippment Building_and_Construction Unallocated Commercial Transport Residential Statistical_Differences	:=
+	[*,*,2023]:	Agriculture Forestry_and_Logging Fishing Mining Food_Processing Textiles Wood_Pulp_Paper_and_Printing Chemicals Non_Metallic_Minerals Basic_Metals Mechanical_Electrical_Equippment Building_and_Construction Unallocated Commercial Transport Residential	:=
 NEWZEALAND 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0
 AUSTRALIA 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0
-	[*,*,2024]:	Indigenous_Production Imports Exports Stock_Change International_Transport Electricity_Generation Cogeneration Fuel_Production Other_Transformation Losses_and_Own_Use Non_Energy_Use Agriculture Forestry_and_Logging Fishing Mining Food_Processing Textiles Wood_Pulp_Paper_and_Printing Chemicals Non_Metallic_Minerals Basic_Metals Mechanical_Electrical_Equippment Building_and_Construction Unallocated Commercial Transport Residential Statistical_Differences	:=
+	[*,*,2024]:	Agriculture Forestry_and_Logging Fishing Mining Food_Processing Textiles Wood_Pulp_Paper_and_Printing Chemicals Non_Metallic_Minerals Basic_Metals Mechanical_Electrical_Equippment Building_and_Construction Unallocated Commercial Transport Residential	:=
 NEWZEALAND 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0
 AUSTRALIA 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0
-	[*,*,2025]:	Indigenous_Production Imports Exports Stock_Change International_Transport Electricity_Generation Cogeneration Fuel_Production Other_Transformation Losses_and_Own_Use Non_Energy_Use Agriculture Forestry_and_Logging Fishing Mining Food_Processing Textiles Wood_Pulp_Paper_and_Printing Chemicals Non_Metallic_Minerals Basic_Metals Mechanical_Electrical_Equippment Building_and_Construction Unallocated Commercial Transport Residential Statistical_Differences	:=
+	[*,*,2025]:	Agriculture Forestry_and_Logging Fishing Mining Food_Processing Textiles Wood_Pulp_Paper_and_Printing Chemicals Non_Metallic_Minerals Basic_Metals Mechanical_Electrical_Equippment Building_and_Construction Unallocated Commercial Transport Residential	:=
 NEWZEALAND 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0
 AUSTRALIA 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0
-	[*,*,2026]:	Indigenous_Production Imports Exports Stock_Change International_Transport Electricity_Generation Cogeneration Fuel_Production Other_Transformation Losses_and_Own_Use Non_Energy_Use Agriculture Forestry_and_Logging Fishing Mining Food_Processing Textiles Wood_Pulp_Paper_and_Printing Chemicals Non_Metallic_Minerals Basic_Metals Mechanical_Electrical_Equippment Building_and_Construction Unallocated Commercial Transport Residential Statistical_Differences	:=
+	[*,*,2026]:	Agriculture Forestry_and_Logging Fishing Mining Food_Processing Textiles Wood_Pulp_Paper_and_Printing Chemicals Non_Metallic_Minerals Basic_Metals Mechanical_Electrical_Equippment Building_and_Construction Unallocated Commercial Transport Residential	:=
 NEWZEALAND 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0
 AUSTRALIA 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0
-	[*,*,2027]:	Indigenous_Production Imports Exports Stock_Change International_Transport Electricity_Generation Cogeneration Fuel_Production Other_Transformation Losses_and_Own_Use Non_Energy_Use Agriculture Forestry_and_Logging Fishing Mining Food_Processing Textiles Wood_Pulp_Paper_and_Printing Chemicals Non_Metallic_Minerals Basic_Metals Mechanical_Electrical_Equippment Building_and_Construction Unallocated Commercial Transport Residential Statistical_Differences	:=
+	[*,*,2027]:	Agriculture Forestry_and_Logging Fishing Mining Food_Processing Textiles Wood_Pulp_Paper_and_Printing Chemicals Non_Metallic_Minerals Basic_Metals Mechanical_Electrical_Equippment Building_and_Construction Unallocated Commercial Transport Residential	:=
 NEWZEALAND 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0
 AUSTRALIA 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0
-	[*,*,2028]:	Indigenous_Production Imports Exports Stock_Change International_Transport Electricity_Generation Cogeneration Fuel_Production Other_Transformation Losses_and_Own_Use Non_Energy_Use Agriculture Forestry_and_Logging Fishing Mining Food_Processing Textiles Wood_Pulp_Paper_and_Printing Chemicals Non_Metallic_Minerals Basic_Metals Mechanical_Electrical_Equippment Building_and_Construction Unallocated Commercial Transport Residential Statistical_Differences	:=
+	[*,*,2028]:	Agriculture Forestry_and_Logging Fishing Mining Food_Processing Textiles Wood_Pulp_Paper_and_Printing Chemicals Non_Metallic_Minerals Basic_Metals Mechanical_Electrical_Equippment Building_and_Construction Unallocated Commercial Transport Residential	:=
 NEWZEALAND 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0
 AUSTRALIA 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0
-	[*,*,2029]:	Indigenous_Production Imports Exports Stock_Change International_Transport Electricity_Generation Cogeneration Fuel_Production Other_Transformation Losses_and_Own_Use Non_Energy_Use Agriculture Forestry_and_Logging Fishing Mining Food_Processing Textiles Wood_Pulp_Paper_and_Printing Chemicals Non_Metallic_Minerals Basic_Metals Mechanical_Electrical_Equippment Building_and_Construction Unallocated Commercial Transport Residential Statistical_Differences	:=
+	[*,*,2029]:	Agriculture Forestry_and_Logging Fishing Mining Food_Processing Textiles Wood_Pulp_Paper_and_Printing Chemicals Non_Metallic_Minerals Basic_Metals Mechanical_Electrical_Equippment Building_and_Construction Unallocated Commercial Transport Residential	:=
 NEWZEALAND 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0
 AUSTRALIA 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0
-	[*,*,2030]:	Indigenous_Production Imports Exports Stock_Change International_Transport Electricity_Generation Cogeneration Fuel_Production Other_Transformation Losses_and_Own_Use Non_Energy_Use Agriculture Forestry_and_Logging Fishing Mining Food_Processing Textiles Wood_Pulp_Paper_and_Printing Chemicals Non_Metallic_Minerals Basic_Metals Mechanical_Electrical_Equippment Building_and_Construction Unallocated Commercial Transport Residential Statistical_Differences	:=
+	[*,*,2030]:	Agriculture Forestry_and_Logging Fishing Mining Food_Processing Textiles Wood_Pulp_Paper_and_Printing Chemicals Non_Metallic_Minerals Basic_Metals Mechanical_Electrical_Equippment Building_and_Construction Unallocated Commercial Transport Residential	:=
 NEWZEALAND 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0
 AUSTRALIA 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0
 ;

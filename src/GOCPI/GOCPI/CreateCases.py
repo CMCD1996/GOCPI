@@ -511,11 +511,11 @@ class CreateCases:
         """
         self.AvailabilityFactor = availablility_matrix
 
-    def set_operational_life(self, parameters):
-        """[summary]
+    def set_operational_life(self, operational_lives):
+        """ Sets operational life
 
         Args:
-            parameters ([type]): [description]
+            operational_lives (list):
         """
 
     def set_residual_capacity(self, parameters):

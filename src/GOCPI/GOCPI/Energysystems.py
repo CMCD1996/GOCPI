@@ -697,7 +697,7 @@ class Energy_Systems:
                     # Sets index value for format string
                     y = self.year[k]
                     # Converts matrix columns to strings columns to strings
-                    columns = self.technology
+                    columns = self.capacity_technology
                     column_string = ' '.join(columns)
                     # Converts maxtrix rows to list
                     array = np.array(self.region)
