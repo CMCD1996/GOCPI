@@ -1260,41 +1260,41 @@ AUSTRALIA 0.8 0.8 0.8 0.8 0.8
 #
 param	AvailabilityFactor	default	1:=
 	[*,*,2020]:	Agriculture Forestry_and_Logging Fishing Mining Food_Processing Textiles Wood_Pulp_Paper_and_Printing Chemicals Non_Metallic_Minerals Basic_Metals Mechanical_Electrical_Equippment Building_and_Construction Unallocated Commercial Transport Residential	:=
-NEWZEALAND 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0
-AUSTRALIA 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0
+NEWZEALAND 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0
+AUSTRALIA 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0
 	[*,*,2021]:	Agriculture Forestry_and_Logging Fishing Mining Food_Processing Textiles Wood_Pulp_Paper_and_Printing Chemicals Non_Metallic_Minerals Basic_Metals Mechanical_Electrical_Equippment Building_and_Construction Unallocated Commercial Transport Residential	:=
-NEWZEALAND 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0
-AUSTRALIA 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0
+NEWZEALAND 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0
+AUSTRALIA 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0
 	[*,*,2022]:	Agriculture Forestry_and_Logging Fishing Mining Food_Processing Textiles Wood_Pulp_Paper_and_Printing Chemicals Non_Metallic_Minerals Basic_Metals Mechanical_Electrical_Equippment Building_and_Construction Unallocated Commercial Transport Residential	:=
-NEWZEALAND 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0
-AUSTRALIA 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0
+NEWZEALAND 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0
+AUSTRALIA 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0
 	[*,*,2023]:	Agriculture Forestry_and_Logging Fishing Mining Food_Processing Textiles Wood_Pulp_Paper_and_Printing Chemicals Non_Metallic_Minerals Basic_Metals Mechanical_Electrical_Equippment Building_and_Construction Unallocated Commercial Transport Residential	:=
-NEWZEALAND 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0
-AUSTRALIA 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0
+NEWZEALAND 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0
+AUSTRALIA 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0
 	[*,*,2024]:	Agriculture Forestry_and_Logging Fishing Mining Food_Processing Textiles Wood_Pulp_Paper_and_Printing Chemicals Non_Metallic_Minerals Basic_Metals Mechanical_Electrical_Equippment Building_and_Construction Unallocated Commercial Transport Residential	:=
-NEWZEALAND 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0
-AUSTRALIA 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0
+NEWZEALAND 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0
+AUSTRALIA 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0
 	[*,*,2025]:	Agriculture Forestry_and_Logging Fishing Mining Food_Processing Textiles Wood_Pulp_Paper_and_Printing Chemicals Non_Metallic_Minerals Basic_Metals Mechanical_Electrical_Equippment Building_and_Construction Unallocated Commercial Transport Residential	:=
-NEWZEALAND 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0
-AUSTRALIA 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0
+NEWZEALAND 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0
+AUSTRALIA 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0
 	[*,*,2026]:	Agriculture Forestry_and_Logging Fishing Mining Food_Processing Textiles Wood_Pulp_Paper_and_Printing Chemicals Non_Metallic_Minerals Basic_Metals Mechanical_Electrical_Equippment Building_and_Construction Unallocated Commercial Transport Residential	:=
-NEWZEALAND 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0
-AUSTRALIA 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0
+NEWZEALAND 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0
+AUSTRALIA 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0
 	[*,*,2027]:	Agriculture Forestry_and_Logging Fishing Mining Food_Processing Textiles Wood_Pulp_Paper_and_Printing Chemicals Non_Metallic_Minerals Basic_Metals Mechanical_Electrical_Equippment Building_and_Construction Unallocated Commercial Transport Residential	:=
-NEWZEALAND 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0
-AUSTRALIA 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0
+NEWZEALAND 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0
+AUSTRALIA 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0
 	[*,*,2028]:	Agriculture Forestry_and_Logging Fishing Mining Food_Processing Textiles Wood_Pulp_Paper_and_Printing Chemicals Non_Metallic_Minerals Basic_Metals Mechanical_Electrical_Equippment Building_and_Construction Unallocated Commercial Transport Residential	:=
-NEWZEALAND 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0
-AUSTRALIA 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0
+NEWZEALAND 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0
+AUSTRALIA 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0
 	[*,*,2029]:	Agriculture Forestry_and_Logging Fishing Mining Food_Processing Textiles Wood_Pulp_Paper_and_Printing Chemicals Non_Metallic_Minerals Basic_Metals Mechanical_Electrical_Equippment Building_and_Construction Unallocated Commercial Transport Residential	:=
-NEWZEALAND 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0
-AUSTRALIA 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0
+NEWZEALAND 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0
+AUSTRALIA 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0
 	[*,*,2030]:	Agriculture Forestry_and_Logging Fishing Mining Food_Processing Textiles Wood_Pulp_Paper_and_Printing Chemicals Non_Metallic_Minerals Basic_Metals Mechanical_Electrical_Equippment Building_and_Construction Unallocated Commercial Transport Residential	:=
-NEWZEALAND 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0
-AUSTRALIA 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0
+NEWZEALAND 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0
+AUSTRALIA 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0
 ;
 #
-param	OperationalLife	:Indigenous_Production Imports Exports Stock_Change International_Transport Electricity_Generation Cogeneration Fuel_Production Other_Transformation Losses_and_Own_Use Non_Energy_Use Agriculture Forestry_and_Logging Fishing Mining Food_Processing Textiles Wood_Pulp_Paper_and_Printing Chemicals Non_Metallic_Minerals Basic_Metals Mechanical_Electrical_Equippment Building_and_Construction Unallocated Commercial Transport Residential Statistical_Differences:=
+param	OperationalLife	:Agriculture Forestry_and_Logging Fishing Mining Food_Processing Textiles Wood_Pulp_Paper_and_Printing Chemicals Non_Metallic_Minerals Basic_Metals Mechanical_Electrical_Equippment Building_and_Construction Unallocated Commercial Transport Residential:=
 NEWZEALAND 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0
 AUSTRALIA 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0
 ;
