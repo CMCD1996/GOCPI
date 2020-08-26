@@ -452,25 +452,25 @@ class Energy_Systems:
             if toggle_defaults[param] == True:
                 f.write("param\t{0}\tdefault\t{1}:\t{2}:=\n".format(
                     param, defaults_dictionary[param], column_string))
-            # Converts maxtrix rows to list
-            array = np.array(self.timeslice)  # Change this line
-            array = array.T
-            lt = array.tolist()
-            # Creates 2D matrix for this value
-            mat = self.Conversionlh[:, :]  # Change this line
-            # Converts combined matrix to list and combines lists
-            matlist = mat.tolist()
-            #Combines the two lists
-            combined_list = list(zip(lt, matlist))
-            for line in combined_list:
-                combinedflat = ''.join(str(line))
-                combinedflat = combinedflat.replace('[', '')
-                combinedflat = combinedflat.replace(']', '')
-                combinedflat = combinedflat.replace("'", '')
-                combinedflat = combinedflat.replace(",", '')
-                combinedflat = combinedflat.replace("(", '')
-                combinedflat = combinedflat.replace(")", '')
-                f.write("{0}\n".format(combinedflat))
+                # Converts maxtrix rows to list
+                array = np.array(self.timeslice)  # Change this line
+                array = array.T
+                lt = array.tolist()
+                # Creates 2D matrix for this value
+                mat = self.Conversionlh[:, :]  # Change this line
+                # Converts combined matrix to list and combines lists
+                matlist = mat.tolist()
+                #Combines the two lists
+                combined_list = list(zip(lt, matlist))
+                for line in combined_list:
+                    combinedflat = ''.join(str(line))
+                    combinedflat = combinedflat.replace('[', '')
+                    combinedflat = combinedflat.replace(']', '')
+                    combinedflat = combinedflat.replace("'", '')
+                    combinedflat = combinedflat.replace(",", '')
+                    combinedflat = combinedflat.replace("(", '')
+                    combinedflat = combinedflat.replace(")", '')
+                    f.write("{0}\n".format(combinedflat))
             else:
                 f.write("param\t{0}\tdefault\t{1}:=\n".format(
                     param, defaults_dictionary[param]))

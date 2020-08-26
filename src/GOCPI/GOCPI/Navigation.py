@@ -1,5 +1,6 @@
 import os
 
+
 class Navigation:
     """ Navigation is a class for navigating, manipulating and editing data in the GOCPI model.
     
@@ -10,13 +11,16 @@ class Navigation:
     TODO: Fill out all functions below
             
     """
-    def __init__(self,target_root, target_file):
+    def __init__(self, target_root, target_file):
+        """ Initialises the navigation functions
+
+        Args:
+            target_root (str): Base directory to search from
+            target_file (str): Name of file to search for
+        """
         self.target_root = target_root
         self.target_file = target_file
-        """
-        No inputs/outputs required
-        """
-                
+
     def Find_File(self):
         """
         Find_File searches for a target file, from a base directory, to construct
@@ -35,3 +39,18 @@ class Navigation:
                 if name == self.target_file:
                     f = os.path.abspath(os.path.join(root, name))
         return f
+
+    def create_linear_programme_file(self, directory, data_file, model_file,
+                                     output_file):
+        """ Creates the model file through executing model system commands
+
+        Args:
+            directory (str): Name of directory to put data into
+            data_file (str): Name of energy system data file
+            model_file (str): Name of energy system model file
+            output_file (str): Name of output linear programme
+        """
+        # Change the working directory
+        os.chdir(directory)
+
+        # Execute working g

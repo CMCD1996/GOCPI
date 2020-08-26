@@ -19,7 +19,7 @@ set DAILYTIMEBRACKET	:=	1 2 3 4;
 param	YearSplit	default	1:=
 ;
 #
-param	DiscountRate	default	0.05:	2020 2021 2022 2023 2024 2025 2026 2027 2028 2029 2030:=
+param	DiscountRate	default	0.05:=
 ;
 #
 param	DaySplit	default	1:=
@@ -28,12 +28,6 @@ param	DaySplit	default	1:=
 param	Conversionls	default	1:=
 ;
 #
-DAY_SUMMER 1.0 1.0
-NIGHT_SUMMER 1.0 1.0
-DAY_WINTER 1.0 1.0
-NIGHT_WINTER 1.0 1.0
-DAY_INTERMEDIATE 1.0 1.0
-NIGHT_INTERMEDIATE 1.0 1.0
 param	Conversionld	default	1:=
 ;
 #
