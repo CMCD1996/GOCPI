@@ -71,8 +71,8 @@ nz_energy_system.set_technology(TECHNOLOGY)
 # Sets capacity technologies for energy production
 CAPACITY_TECHNOLOGY = Conversion
 CONSUMPTION_TECHNOLOGY = Consumption
-nz_energy_system.set_capacity_technology(CAPACITY_TECHNOLOGY)
-nz_energy_system.set_availability_technology(CONSUMPTION_TECHNOLOGY)
+nz_energy_system.set_capacity_technology(TECHNOLOGY)
+nz_energy_system.set_availability_technology(TECHNOLOGY)
 # Sets the Conversion Sets
 
 ###############################################################################
@@ -117,14 +117,18 @@ for fuel_type in FUEL_ALL:
         FUEL.append(fuel_type[i])
 
 # Sets Specified Fuels
-SPECIFIED_FUEL_ALL = [Coal, Oil, Natural_Gas, Renewables, Electricity]
+SPECIFIED_FUEL_ALL = [
+    Coal, Oil, Natural_Gas, Renewables, Electricity, Waste_Heat
+]
 SPECIFIED_FUEL = []
 for fuel_type in SPECIFIED_FUEL_ALL:
     for i in range(0, len(fuel_type), 1):
         SPECIFIED_FUEL.append(fuel_type[i])
 
 # Sets Accumulated Fuels
-ACCUMULATED_FUEL_ALL = [Waste_Heat]
+ACCUMULATED_FUEL_ALL = [
+    Coal, Oil, Natural_Gas, Renewables, Electricity, Waste_Heat
+]
 ACCUMULATED_FUEL = []
 for fuel_type in ACCUMULATED_FUEL_ALL:
     for i in range(0, len(fuel_type), 1):
@@ -132,8 +136,8 @@ for fuel_type in ACCUMULATED_FUEL_ALL:
 
 # Sets the total fuels
 nz_energy_system.set_fuel(FUEL)
-nz_energy_system.set_specified_fuel(SPECIFIED_FUEL)
-nz_energy_system.set_accumulated_fuel(ACCUMULATED_FUEL)
+nz_energy_system.set_specified_fuel(FUEL)
+nz_energy_system.set_accumulated_fuel(FUEL)
 ###############################################################################
 # Continues defining sets
 ###############################################################################
@@ -458,13 +462,16 @@ for i in range(0, len(fuel_forecasts), 1):
     forecast[i, :, :] = fuel_forecasts[i]
 
 # Sets the Specified Demand Profiles
-nz_energy_system.set_specified_annual_demand(forecast[:, 0:-1, :])
+# nz_energy_system.set_specified_annual_demand(forecast[:, 0:-1, :])
+nz_energy_system.set_specified_annual_demand(forecast[:, :, :])
 # Sets the Accumulated Demand Profiles (Hack to make sure 3D Array)
 acc_forecast = np.zeros(
     (len(nz_energy_system.region), len(nz_energy_system.accumulated_fuel),
      len(nz_energy_system.year)))
 acc_forecast[:, 0, :] = forecast[:, -1, :]
-nz_energy_system.set_accumulated_annual_demand(acc_forecast)
+
+# Make adjustments to the accumumulated fuel forecasts
+nz_energy_system.set_accumulated_annual_demand(forecast[:, :, :])
 # Sets linear profile for timeslices (In this example, is is assumed the fuel is consumed uniformally in time splits)
 linear_profile = splits
 override = None
@@ -487,6 +494,7 @@ override = None
 nz_energy_system.set_capacity_to_activity_unit(
     nz_energy_system.region, nz_energy_system.capacity_technology,
     capacity_dictionaries, override)
+print(nz_energy_system.capacity_technology)
 print(nz_energy_system.CapacityToActivityUnit)
 
 # Sets capacity factor matrix to operate in every timeslice (Assumes operate 0.8 of the time).
@@ -670,52 +678,52 @@ default_parameters = {
 
 # Sets the default toggles (To only use defaults)
 toggle_defaults = {
-    'YearSplit': True,
-    'DiscountRate': True,
-    'DaySplit': True,
-    'Conversionls': True,
-    'Conversionld': True,
-    'Conversionlh': True,
-    'DaysInDayType': True,
-    'TradeRoute': True,
-    'DepreciationMethod': True,
-    'SpecifiedAnnualDemand': True,
-    'SpecifiedDemandProfile': True,
-    'AccumulatedAnnualDemand': True,
-    'CapacityToActivityUnit': True,
-    'CapacityFactor': True,
-    'AvailabilityFactor': True,
-    'OperationalLife': True,
-    'ResidualCapacity': True,
-    'InputActivityRatio': True,
-    'OutputActivityRatio': True,
-    'CapitalCost': True,
-    'VariableCost': True,
-    'FixedCost': True,
-    'TechnologyToStorage': True,
-    'TechnologyFromStorage': True,
-    'StorageLevelStart': True,
-    'StorageMaxChargeRate': True,
-    'StorageMaxDischargeRate': True,
-    'MinStorageCharge': True,
-    'OperationalLifeStorage': True,
-    'CapitalCostStorage': True,
-    'ResidualStorageCapacity': True,
-    'CapacityOfOneTechnologyUnit': True,
-    'TotalAnnualMaxCapacity': True,
-    'TotalAnnualMinCapacity': True,
-    'TotalAnnualMaxCapacityInvestment': True,
-    'TotalAnnualMinCapacityInvestment': True,
-    'TotalTechnologyAnnualActivityLowerLimit': True,
-    'TotalTechnologyAnnualActivityUpperLimit': True,
-    'TotalTechnologyModelPeriodActivityUpperLimit': True,
-    'TotalTechnologyModelPeriodActivityLowerLimit': True,
-    'ReserveMarginTagTechnology': True,
-    'ReserveMarginTagFuel': True,
-    'ReserveMargin': True,
-    'RETagTechnology': True,
-    'RETagFuel': True,
-    'REMinProductionTarget': True,
+    'YearSplit': False,
+    'DiscountRate': False,
+    'DaySplit': False,
+    'Conversionls': False,
+    'Conversionld': False,
+    'Conversionlh': False,
+    'DaysInDayType': False,
+    'TradeRoute': False,
+    'DepreciationMethod': False,
+    'SpecifiedAnnualDemand': False,
+    'SpecifiedDemandProfile': False,
+    'AccumulatedAnnualDemand': False,
+    'CapacityToActivityUnit': False,
+    'CapacityFactor': False,
+    'AvailabilityFactor': False,
+    'OperationalLife': False,
+    'ResidualCapacity': False,
+    'InputActivityRatio': False,
+    'OutputActivityRatio': False,
+    'CapitalCost': False,
+    'VariableCost': False,
+    'FixedCost': False,
+    'TechnologyToStorage': False,
+    'TechnologyFromStorage': False,
+    'StorageLevelStart': False,
+    'StorageMaxChargeRate': False,
+    'StorageMaxDischargeRate': False,
+    'MinStorageCharge': False,
+    'OperationalLifeStorage': False,
+    'CapitalCostStorage': False,
+    'ResidualStorageCapacity': False,
+    'CapacityOfOneTechnologyUnit': False,
+    'TotalAnnualMaxCapacity': False,
+    'TotalAnnualMinCapacity': False,
+    'TotalAnnualMaxCapacityInvestment': False,
+    'TotalAnnualMinCapacityInvestment': False,
+    'TotalTechnologyAnnualActivityLowerLimit': False,
+    'TotalTechnologyAnnualActivityUpperLimit': False,
+    'TotalTechnologyModelPeriodActivityUpperLimit': False,
+    'TotalTechnologyModelPeriodActivityLowerLimit': False,
+    'ReserveMarginTagTechnology': False,
+    'ReserveMarginTagFuel': False,
+    'ReserveMargin': False,
+    'RETagTechnology': False,
+    'RETagFuel': False,
+    'REMinProductionTarget': False,
     'EmissionActivityRatio': False,
     'EmissionsPenalty': False,
     'AnnualExogenousEmission': False,
@@ -723,6 +731,61 @@ toggle_defaults = {
     'ModelPeriodExogenousEmission': False,
     'ModelPeriodEmissionLimit': False
 }
+# Sets the default toggles (To only use defaults)
+# toggle_defaults = {
+#     'YearSplit': False,
+#     'DiscountRate': False,
+#     'DaySplit': False,
+#     'Conversionls': False,
+#     'Conversionld': True,
+#     'Conversionlh': True,
+#     'DaysInDayType': True,
+#     'TradeRoute': True,
+#     'DepreciationMethod': True,
+#     'SpecifiedAnnualDemand': True,
+#     'SpecifiedDemandProfile': True,
+#     'AccumulatedAnnualDemand': True,
+#     'CapacityToActivityUnit': True,
+#     'CapacityFactor': True,
+#     'AvailabilityFactor': True,
+#     'OperationalLife': True,
+#     'ResidualCapacity': True,
+#     'InputActivityRatio': True,
+#     'OutputActivityRatio': True,
+#     'CapitalCost': True,
+#     'VariableCost': True,
+#     'FixedCost': True,
+#     'TechnologyToStorage': True,
+#     'TechnologyFromStorage': True,
+#     'StorageLevelStart': True,
+#     'StorageMaxChargeRate': True,
+#     'StorageMaxDischargeRate': True,
+#     'MinStorageCharge': True,
+#     'OperationalLifeStorage': True,
+#     'CapitalCostStorage': True,
+#     'ResidualStorageCapacity': True,
+#     'CapacityOfOneTechnologyUnit': True,
+#     'TotalAnnualMaxCapacity': True,
+#     'TotalAnnualMinCapacity': True,
+#     'TotalAnnualMaxCapacityInvestment': True,
+#     'TotalAnnualMinCapacityInvestment': True,
+#     'TotalTechnologyAnnualActivityLowerLimit': True,
+#     'TotalTechnologyAnnualActivityUpperLimit': True,
+#     'TotalTechnologyModelPeriodActivityUpperLimit': True,
+#     'TotalTechnologyModelPeriodActivityLowerLimit': True,
+#     'ReserveMarginTagTechnology': True,
+#     'ReserveMarginTagFuel': True,
+#     'ReserveMargin': True,
+#     'RETagTechnology': True,
+#     'RETagFuel': True,
+#     'REMinProductionTarget': True,
+#     'EmissionActivityRatio': False,
+#     'EmissionsPenalty': False,
+#     'AnnualExogenousEmission': False,
+#     'AnnualEmissionLimit': False,
+#     'ModelPeriodExogenousEmission': False,
+#     'ModelPeriodEmissionLimit': False
+# }
 
 # Create the Data File
 system.create_data_file(data_location_1, default_parameters, toggle_defaults)
