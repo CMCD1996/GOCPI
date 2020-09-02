@@ -1,6 +1,9 @@
 # GOCPI_NZ_Example.gyp is an exemplar script in how to build a
 # data case for the Model
 
+###############################################################################
+# This is a major input script for creating data files.
+###############################################################################
 # Import all necessary python packages
 import numpy as np
 import pandas as pd

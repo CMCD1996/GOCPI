@@ -1,15 +1,16 @@
 # GOCPI_Inputs is a file processing script. This script prepare the spreadsheets for VEDA processing to
 # be feed into the GAMS Optimisation
+# This script was adpated into the GOCPI module
 
 # Import useful python packages
 # Git reposistory
 # https://github.com/CMCD1996/GOCPI.git
 # Make more changes from the pull request
-import numpy as np 
-import pandas as pd 
+import numpy as np
+import pandas as pd
 import matplotlib.pyplot as plt
-import scipy as sc 
-import sklearn as skl 
+import scipy as sc
+import sklearn as skl
 import csv as csv
 import openpyxl
 import pathlib
@@ -18,11 +19,14 @@ from pathlib import Path
 from openpyxl import load_workbook
 
 # Very Important Step: Set directory root for file operations.
-source_root = Path('/Users/connor/Google Drive/Documents/University/Courses/2020/ENGSCI 700A&B/GOCPI/data/Inputs')
+source_root = Path(
+    '/Users/connor/Google Drive/Documents/University/Courses/2020/ENGSCI 700A&B/GOCPI/data/Inputs'
+)
 print(source_root)
 
+
 # Finds a file within a function
-def Find_File(target_root,target_file):
+def Find_File(target_root, target_file):
     for root, dirs, files in os.walk(target_root):
         for name in files:
             if name == target_file:
@@ -32,36 +36,38 @@ def Find_File(target_root,target_file):
 
 # Defines custom functions necessary for excel script processing
 # Set_Values updates single cell inputs for the VEDA spreadsheet
-def Set_Values(source_root,source_file, source_sheet, source_range,updated_value, destination_file):
+def Set_Values(source_root, source_file, source_sheet, source_range,
+               updated_value, destination_file):
     from openpyxl import load_workbook
     from pathlib import Path
     # Finds the source file from the assign root directory
-    f = Find_File(source_root,source_file)
+    f = Find_File(source_root, source_file)
     # Performs the workbook manipulation and updates values
-    workbook = load_workbook(filename = f)
+    workbook = load_workbook(filename=f)
     sheet = workbook[source_sheet]
     defined_range = workbook.defined_names[source_range]
     split_string = defined_range.attr_text.split('$')
     address = split_string[1] + split_string[2]
     sheet[str(address)].value = updated_value
     # Finds the destination file
-    f = Find_File(source_root,destination_file)
+    f = Find_File(source_root, destination_file)
     # Saves the updated file
-    workbook.save(filename = f)
+    workbook.save(filename=f)
+
 
 # Initialises all variables in the System Settings. These are created in arrays and interated through via for loops.
 
-# Book Region_Maps (Number of Regions Base Sheet Mechanics relate to, 
+# Book Region_Maps (Number of Regions Base Sheet Mechanics relate to,
 # This will be expanded upon depending on the sets of geographies to be included.
 # We will begin with two regions (Based off TIMES Demo Model 12)s
-REG1 = 'REG1' # Ideally two selected Regions (New Zealand)
-REG2 = 'REG2' # (Australia)
+REG1 = 'REG1'  # Ideally two selected Regions (New Zealand)
+REG2 = 'REG2'  # (Australia)
 
 # Timeslices
-SZN1 = "S" # Summer
-SZN2 = "W" # Winter
-DN1 = "D" # Day
-DN2 = "N" # Night
+SZN1 = "S"  # Summer
+SZN2 = "W"  # Winter
+DN1 = "D"  # Day
+DN2 = "N"  # Night
 
 # Time Periods
 StartYear = 2030
@@ -82,8 +88,8 @@ APDEF = "Pdef-11"
 
 # Constants for the modelling process in the modelling sheet
 # (TFM_INS)
-GDY = StartYear # Discount Year
-Discount = 0.05 # Discount Rate (This discount rate will change depending on the region in question
+GDY = StartYear  # Discount Year
+Discount = 0.05  # Discount Rate (This discount rate will change depending on the region in question
 # Figure out how to vary dicount rates depending on financial inputs)
 
 # Fraction of year for season and day/night level (Should change depending on the geography)
@@ -91,15 +97,15 @@ Discount = 0.05 # Discount Rate (This discount rate will change depending on the
 REG_Num_Sum_Days = 175
 REG_Num_Days = 365
 REG_Num_Win_Days = (REG_Num_Days - REG_Num_Sum_Days)
-Frac_REG_Num_Sum_Days = REG_Num_Sum_Days/REG_Num_Days
-Frac_REG_Num_Win_Days = REG_Num_Win_Days/REG_Num_Days
+Frac_REG_Num_Sum_Days = REG_Num_Sum_Days / REG_Num_Days
+Frac_REG_Num_Win_Days = REG_Num_Win_Days / REG_Num_Days
 
 Sum_Hours_Per_Day = 12.5
 Win_Hours_Per_Day = 11.5
 Hours_Per_Day = 24
 
-Frac_Sum_Hours_Per_Day = Sum_Hours_Per_Day/ (Hours_Per_Day)
-Frac_Win_Hours_Per_Day = Sum_Hours_Per_Day/ (Hours_Per_Day)
+Frac_Sum_Hours_Per_Day = Sum_Hours_Per_Day / (Hours_Per_Day)
+Frac_Win_Hours_Per_Day = Sum_Hours_Per_Day / (Hours_Per_Day)
 Frac_Sum_Hours_Per_Night = (1 - Frac_Sum_Hours_Per_Day)
 Frac_Win_Hours_Per_Night = (1 - Frac_Win_Hours_Per_Day)
 
@@ -125,5 +131,5 @@ updated_value = StartYear
 destination_file = "SysSettings.xls"
 
 # Update the StartYear
-Set_Values(source_root,source_file, source_sheet, source_range, updated_value, destination_file)
-
+Set_Values(source_root, source_file, source_sheet, source_range, updated_value,
+           destination_file)

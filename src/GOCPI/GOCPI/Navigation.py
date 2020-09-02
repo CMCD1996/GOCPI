@@ -52,5 +52,10 @@ class Navigation:
         """
         # Change the working directory
         os.chdir(directory)
-
-        # Execute working g
+        # Load the custom anaconda environment
+        # This assumes the conda environment has already been initialised.
+        os.system('conda activate osemosys')
+        # Execute the file structure to create the linear programming file
+        # (glpsol -m GOCPI_OSeMOSYS_Model.txt -d GOCPI_NZ_Example_Data.txt --wlp GOCPI_NZ_Example.lp)
+        command = 'glpsol -m ' + data_file + ' -d ' + model_file + '--wlp ' + output_file
+        os.system(command)

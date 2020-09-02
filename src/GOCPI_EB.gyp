@@ -1,4 +1,5 @@
 # GOCPI_EB prepares the energy balance across time for certain geographies
+# This script was adapted into the GOCPI Module
 
 # Import useful python packages
 # Git reposistory

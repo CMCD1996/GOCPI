@@ -1,5 +1,8 @@
 # GOCPI_Model_Import is a file processing script. This script prepares the text files from an Excel spreadsheet
 # for the user defined energy systems model.
+#################################################################################
+# This script was adapted into the GOCPI module.
+#################################################################################
 
 # Import useful python packages
 # Git reposistory
