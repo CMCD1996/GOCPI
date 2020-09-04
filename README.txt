@@ -33,6 +33,7 @@ Running the Energy System Model with glpk solver
     4) Run the model in the terminal using the command 'glpsol -m Model.txt -d Data.txt -o Results.txt
     5) Write LP File for CPLEX using:  glpsol -m GOCPI_OSeMOSYS_Model.txt -d GOCPI_OSeMOSYS_Data.txt --wlp GOCPI.lp
                                        glpsol -m GOCPI_OSeMOSYS_Model.txt -d GOCPI_NZ_Example_Data.txt --wlp GOCPI_NZ_Example.lp
+                                       glpsol -m GOCPI_Model.txt -d GOCPI_Data.txt --wlp GOCPI.lp
 
 Running the Energy System Model with CPLEX solver
     1) Use academic/student credentials to join the IBM Academic Initiative
@@ -42,6 +43,8 @@ Running the Energy System Model with CPLEX solver
        python [File Path]]/setup.py install in bash at terminal route
        e.g. python /Applications/CPLEX_Studio1210/python/setup.py install
        Information relating to the package is found here:
+       https://www.ibm.com/academic/home (IBM Academic Initiative)
+       https://cloud.ibm.com/ (IBM Cloud)
        https://www.ibm.com/analytics/cplex-optimizer
        https://github.com/IBMDecisionOptimization/docplex-doc
        Information relating to examples is here:
@@ -55,3 +58,9 @@ Methods for Controlling Git
 Cplex and Docplex Jupiter Notebook Tutorials
     1) Docplex: https://github.com/IBMDecisionOptimization/docplex-examples/blob/master/examples/mp/jupyter/tutorials/Linear_Programming.ipynb
     2) cplex: https://www.ibm.com/support/knowledgecenter/SSSA5P_12.8.0/ilog.odms.cplex.help/refpythoncplex/html/cplex-module.html
+
+Log into IBM Cloud
+    1) ibmcloud login -a https://cloud.ibm.com -u Border@6 -p ENdgOinXpK
+
+Deploying the optimisation model
+1) curl -X https://HOST-CLUSTER-HERE/v1/preauth/validateAuth -u USER-NAME-HERE:PASSWORD-HERE

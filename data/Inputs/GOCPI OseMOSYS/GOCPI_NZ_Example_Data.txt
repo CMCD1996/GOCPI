@@ -31,12 +31,6 @@ param	Conversionls	default	1:=
 param	Conversionld	default	1:=
 ;
 #
-DAY_SUMMER 1.0 1.0 0.0 0.0
-NIGHT_SUMMER 0.0 0.0 1.0 1.0
-DAY_WINTER 1.0 1.0 0.0 0.0
-NIGHT_WINTER 0.0 0.0 1.0 1.0
-DAY_INTERMEDIATE 1.0 1.0 0.0 0.0
-NIGHT_INTERMEDIATE 0.0 0.0 1.0 1.0
 param	Conversionlh	default	1:=
 ;
 #
