@@ -93,7 +93,27 @@ class Optimisation:
             Section. Note: You must have access to IBM Watson Studio
             and Cloud Products through the IBM Academic Initiative or
             Similar.
+
+        Args:
+            apikey ([type]): [description]
+            url ([type]): [description]
+            deployment_space_name ([type]): [description]
+            cloud_object_storage_credential ([type]): [description]
+            service_instance_id ([type]): [description]
+            deployment_space_exists ([type]): [description]
+            data_assets_exist ([type]): [description]
+            data_asset_dictionary ([type]): [description]
+            model_name ([type]): [description]
+            model_type ([type]): [description]
+            model_runtime_uid ([type]): [description]
+            model_tar_file ([type]): [description]
+            num_nodes ([type]): [description]
+            deployment_exists ([type]): [description]
+            payload_input_data_id ([type]): [description]
+            payload_input_data_file ([type]): [description]
+            payload_output_data_id ([type]): [description]
         """
+
         # Creates the Watson Machine learning Credientials
         api_wml_credentials = {
             # IBM Cloud User Account Access Code
