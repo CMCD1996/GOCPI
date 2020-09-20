@@ -58,9 +58,11 @@ Methods for Controlling Git
 Cplex and Docplex Jupiter Notebook Tutorials
     1) Docplex: https://github.com/IBMDecisionOptimization/docplex-examples/blob/master/examples/mp/jupyter/tutorials/Linear_Programming.ipynb
     2) cplex: https://www.ibm.com/support/knowledgecenter/SSSA5P_12.8.0/ilog.odms.cplex.help/refpythoncplex/html/cplex-module.html
+    3) watson_machine_learning
 
 Log into IBM Cloud
     1) ibmcloud login -a https://cloud.ibm.com -u Border@6 -p ENdgOinXpK
+
 
 Deploying the optimisation model
 1) curl -X https://HOST-CLUSTER-HERE/v1/preauth/validateAuth -u USER-NAME-HERE:PASSWORD-HERE
