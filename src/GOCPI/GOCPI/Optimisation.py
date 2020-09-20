@@ -9,6 +9,7 @@ import docplex as dp
 import subprocess as sp
 from ibm_watson_machine_learning import APIClient
 import tarfile as tf
+import time
 
 
 # Begin class breakdown
@@ -71,7 +72,8 @@ class Optimisation:
                        deployment_space_exists, data_assets_exist,
                        data_asset_dictionary, model_name, model_type,
                        model_runtime_uid, model_tar_file, num_nodes,
-                       deployment_exists):
+                       deployment_exists, payload_input_data_id,
+                       payload_input_data_file, payload_output_data_id):
         """ This function enables the user to solve python-based
             optimisation models. The legacy offering
             to solve optimisation models on IBM cloud was using
@@ -184,18 +186,33 @@ class Optimisation:
                 model_uid, meta_props=meta_props)
             deployment_uid = client.deployments.get_uid(deployment_details)
 
-        # Creates Payload
-        energy_system_payload = {
-            client.deployments.DecisionOptimizationMetaNames.SOLVE_PARAMETERS: {
-                "oaas.logTailEnabled": "true"
-    }
+        # Creates a payload for the solver to solve (Note: Ammend based on the model you are solving)
+        payload = {
             client.deployments.DecisionOptimizationMetaNames.INPUT_DATA: [{
-         "id": lp_file
-     }],
-     client.deployments.DecisionOptimizationMetaNames.OUTPUT_DATA: [{
-        "id":
-         csv_file
-     }]
+                "id":
+                payload_input_data_id,
+                "values":
+                payload_input_data_file
+            }],
+            client.deployments.DecisionOptimizationMetaNames.OUTPUT_DATA: [{
+                "id":
+                payload_output_data_id
+            }]
+        }
+
+        # Creates a new job using the deployment and payload
+        job_details = client.deployments.create_job(deployment_uid, payload)
+        job_uid = client.deployments.get_job_uid(job_details)
+
+        # Print the status of the job until competition
+        while job_details['entity']['decision_optimization']['status'][
+                'state'] not in ['completed', 'failed', 'canceled']:
+            print(job_details['entity']['decision_optimization']['status']
+                  ['state'] + '...')
+            job_details = client.deployments.get_job_details(job_uid)
+            time.sleep(5)
+            print(job_details['entity']['decision_optimization']['status']
+                  ['state'])
 
     # Reset tarfile function (Source: IBM Watson Machine Learning)
     def reset(self, tarinfo):
