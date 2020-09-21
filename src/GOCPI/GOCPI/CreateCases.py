@@ -517,242 +517,283 @@ class CreateCases:
         Args:
             operational_lives (list):
         """
+        self.OperationalLife = operational_lives
 
-    def set_residual_capacity(self, parameters):
-        """[summary]
-
-        Args:
-            parameters ([type]): [description]
-        """
-
-    def set_input_activity_ratio(self, parameters):
-        """[summary]
+    def set_residual_capacity(self, residential_capacities):
+        """ Set residual capacity
 
         Args:
-            parameters ([type]): [description]
+            residential_capacities (float, array): residual capacities parameter
         """
+        self.ResidualCapacity = residential_capacities
 
-    def set_output_activity_ratio(self, parameters):
-        """[summary]
+    def set_input_activity_ratio(self, input_activity_ratios):
+        """ Sets input activity ratios
 
         Args:
-            parameters ([type]): [description]
+            input_activity_ratios (float, array): Sets the input activity ratio
         """
+        self.InputActivityRatio = input_activity_ratios
 
-    def set_capital_cost(self, parameters):
-        """[summary]
+    def set_output_activity_ratio(self, output_activity_ratios):
+        """ Sets output activity ratio
 
         Args:
-            parameters ([type]): [description]
+            output_activity_ratios (float, array): output activity ratio parameters
         """
 
-    def set_variable_cost(self, parameters):
-        """[summary]
+    def set_capital_cost(self, capital_costs):
+        """ Sets capital costs
 
         Args:
-            parameters ([type]): [description]
+            capital_costs (float, array): capital cost paramters
         """
+        self.CapitalCost = capital_costs
 
-    def set_fixed_cost(self, parameters):
-        """[summary]
+    def set_variable_cost(self, variable_costs):
+        """ Sets variable costs
 
         Args:
-            parameters ([type]): [description]
+            variable_costs (float, array): variable costs parameters
         """
+        self.VariableCost = variable_costs
 
-    def set_technology_to_storage(self, parameters):
-        """[summary]
+    def set_fixed_cost(self, fixed_costs):
+        """ Set fixed costs
 
         Args:
-            parameters ([type]): [description]
+            fixed_costs (float, array): fixed cost parameters
         """
+        self.FixedCost = fixed_costs
 
-    def set_technology_from_storage(self, parameters):
-        """[summary]
+    def set_technology_to_storage(self, technology_to_storage):
+        """ Sets the technology to storage parameter
 
         Args:
-            parameters ([type]): [description]
+            technology_to_storage (float, array): technology to storage parameter
         """
+        self.TechnologyToStorage = technology_to_storage
 
-    def set_min_storage_charge(self, parameters):
-        """[summary]
+    def set_technology_from_storage(self, technology_from_storage):
+        """ Sets technology from storage binary paramter
 
         Args:
-            parameters ([type]): [description]
+            technology_from_storage (float, array): technology from storage parameter
         """
+        self.TechnologyFromStorage = technology_from_storage
 
-    def set_operational_life_storage(self, parameters):
-        """[summary]
+    def set_min_storage_charge(self, minimum_storage_charges):
+        """ Sets the minimum storage charges
 
         Args:
-            parameters ([type]): [description]
+            minimum_storage_charges (float, array): minimum storage parameters
         """
+        self.MinStorageCharge = minimum_storage_charges
 
-    def set_capital_cost_storage(self, parameters):
-        """[summary]
+    def set_operational_life_storage(self, operational_life_storage):
+        """ Sets the operational life storage
 
         Args:
-            parameters ([type]): [description]
+            operational_life_storage (float, array): operational life storage parameters
         """
+        self.OperationalLifeStorage = operational_life_storage
 
-    def set_storage_level_start(self, parameters):
-        """[summary]
+    def set_capital_cost_storage(self, capital_cost_storage):
+        """ Sets the capital costs of using storage technologies
 
         Args:
-            parameters ([type]): [description]
+            capital_cost_storage (float, array): capital cost of storage technologies
         """
+        self.CapitalCostStorage = capital_cost_storage
 
-    def set_storage_max_charge_rate(self, parameters):
-        """[summary]
+    def set_storage_level_start(self, storage_level_start):
+        """ Sets the storage level starting point
 
         Args:
-            parameters ([type]): [description]
+            storage_level_start (float, array): storage starting level
         """
+        self.StorageLevelStart = storage_level_start
 
-    def set_storage_max_discharge_rate(self, parameters):
-        """[summary]
+    def set_storage_max_charge_rate(self, storage_max_level_charge_rates):
+        """ Sets the storgae max charge rate
 
         Args:
-            parameters ([type]): [description]
+            storage_max_level_charge_rates (float, array): Storage max level charge rates
         """
+        self.StorageMaxChargeRate = storage_max_level_charge_rates
 
-    def set_residual_storage_capacity(self, parameters):
-        """[summary]
+    def set_storage_max_discharge_rate(self,
+                                       storage_max_level_discharge_rates):
+        """ Sets storage technologies maximum discharge rates
 
         Args:
-            parameters ([type]): [description]
+            storage_max_level_discharge_rates (float, array): Discharge rates for storage paramters
         """
-        self.ResidualStorageCapacity = None
+        self.StorageMaxDischargeRate = storage_max_level_discharge_rates
 
-    def set_capacity_of_one_technology_unit(self, parameters):
-        """[summary]
+    def set_residual_storage_capacity(self, residual_storage_capacities):
+        """ Sets residual storage capacities
 
         Args:
-            parameters ([type]): [description]
+            residual_storage_capacities (float, array): residual storage capacities
         """
+        self.ResidualStorageCapacity = residual_storage_capacities
 
-    def set_total_annual_max_capacity(self, parameters):
-        """[summary]
+    def set_capacity_of_one_technology_unit(self,
+                                            capacity_of_one_technology_unit):
+        """ Set the capacity of one technology units for all technologies
 
         Args:
-            parameters ([type]): [description]
+            capacity_of_one_technology_unit (float, array): capacities for one technology units
         """
+        self.CapacityOfOneTechnologyUnit = capacity_of_one_technology_unit
 
-    def set_total_annual_min_capacity(self, parameters):
-        """[summary]
+    def set_total_annual_max_capacity(self, total_annual_max_capacities):
+        """ Sets the total annual maximum capacities
 
         Args:
-            parameters ([type]): [description]
+            total_annual_max_capacities (float, array): Total Annual Max Capacities
         """
+        self.TotalAnnualMaxCapacity = total_annual_max_capacities
 
-    def set_total_technology_annual_activity_lower_limit(self, parameters):
-        """[summary]
+    def set_total_annual_min_capacity(self, total_annual_min_capacities):
+        """ Sets the totoal annual minimum capacities
 
         Args:
-            parameters ([type]): [description]
+            total_annual_min_capacities (float, array): Total Annual Min Capacities
         """
+        self.TotalAnnualMinCapacity = total_annual_min_capacities
 
-    def set_total_technology_annual_activity_upper_limit(self, parameters):
-        """[summary]
+    def set_total_technology_annual_activity_lower_limit(
+            self, total_technology_activity_lower_limits):
+        """ Sets the Total Technology Activity Lower Limits
 
         Args:
-            parameters ([type]): [description]
+            total_technology_activity_lower_limits (float, array): Technology Activity Lower Limits
         """
+        self.TotalTechnologyAnnualActivityLowerLimit = total_technology_activity_lower_limits
 
-    def set_total_technology_period_activity_upper_limit(self, parameters):
-        """[summary]
+    def set_total_technology_annual_activity_upper_limit(
+            self, total_technology_annual_activity_upper_limits):
+        """ Sets the Total Technology Activity Upper Limits
 
         Args:
-            parameters ([type]): [description]
+            total_technology_annual_activity_upper_limits (float, array): Technology Activity Upper Limits
         """
+        self.TotalTechnologyAnnualActivityUpperLimit = total_technology_annual_activity_upper_limits
 
-    def set_total_technology_period_activity_lower_limit(self, parameters):
-        """[summary]
+    def set_total_technology_period_activity_upper_limit(
+            self, total_technology_period_activity_upper_limits):
+        """ Sets Total Technology Period Activity Upper Limits
 
         Args:
-            parameters ([type]): [description]
+            total_technology_period_activity_upper_limits (float, array): Total Technology Period Activity Upper Limit
         """
+        self.TotalTechnologyModelPeriodActivityUpperLimit = total_technology_period_activity_upper_limits
 
-    def set_reserve_margin_tag_technology(self, parameters):
-        """[summary]
+    def set_total_technology_period_activity_lower_limit(
+            self, total_technology_period_activity_lower_limits):
+        """Sets Total Technology Period Activity Lower Limits
 
         Args:
-            parameters ([type]): [description]
+            total_technology_period_activity_lower_limits ([type]): Total Technology Period Activity Lower Limit
         """
+        self.TotalTechnologyModelPeriodActivityLowerLimit = total_technology_period_activity_lower_limits
 
-    def set_reserve_margin_tag_fuel(self, parameters):
-        """[summary]
+    def set_reserve_margin_tag_technology(self,
+                                          reserve_margin_tag_technologies):
+        """ Sets Reserve Margin Tag Technology
 
         Args:
-            parameters ([type]): [description]
+            reserve_margin_tag_technologies (float, array): Reserve Margin Tag Technologies
         """
+        self.ReserveMarginTagTechnology = reserve_margin_tag_technologies
 
-    def set_reserve_margin(self, parameters):
-        """[summary]
+    def set_reserve_margin_tag_fuel(self, reserve_margin_fuel_tags):
+        """ Sets the reserve margin tag fuels
 
         Args:
-            parameters ([type]): [description]
+            reserve_margin_fuel_tags (float, array): Sets the reserve margin tag fuel parameters
         """
+        self.ReserveMarginTagFuel = reserve_margin_fuel_tags
 
-    def set_re_tag_technology(self, parameters):
-        """[summary]
+    def set_reserve_margin(self, reserve_margins):
+        """ Sets reserve margins
 
         Args:
-            parameters ([type]): [description]
+            reserve_margins (float, array): Reserve Margins
         """
+        self.ReserveMargin = reserve_margins
 
-    def set_re_tag_fuel(self, parameters):
-        """[summary]
+    def set_re_tag_technology(self, re_tag_technologies):
+        """ Sets RE Tag Technology
 
         Args:
-            parameters ([type]): [description]
+            re_tag_technologies (float, array): RE Tag Technologies
         """
+        self.RETagTechnology = re_tag_technologies
 
-    def set_re_min_production_target(self, parameters):
-        """[summary]
+    def set_re_tag_fuel(self, re_tag_fuels):
+        """ Sets RE Tag Fuels
 
         Args:
-            parameters ([type]): [description]
+            re_tag_fuels (float, array): RE Tag Fuels
         """
+        self.RETagFuel = re_tag_fuels
 
-    def set_emission_activity_ratio(self, parameters):
-        """[summary]
+    def set_re_min_production_target(self, re_min_production_targets):
+        """ Sets Renewable Energy Minimum Production Targets
 
         Args:
-            parameters ([type]): [description]
+            re_min_production_targets (float, array): Renewable Energy Minimum Production Targets
         """
+        self.REMinProductionTarget = re_min_production_targets
 
-    def set_emissions_penalty(self, parameters):
-        """[summary]
+    def set_emission_activity_ratio(self, emission_activity_ratios):
+        """ Sets Emission Activity Ratios
 
         Args:
-            parameters ([type]): [description]
+            emission_activity_ratios ([float, array): Emission Activity Ratios
         """
+        self.EmissionActivityRatio = emission_activity_ratios
 
-    def set_annual_exogenous_emission(self, parameters):
-        """[summary]
+    def set_emissions_penalty(self, emissions_penalties):
+        """ Sets Emissions Penalties
 
         Args:
-            parameters ([type]): [description]
+            emissions_penalties (float, penalties): Emissions Penalties
         """
+        self.EmissionsPenalty = emissions_penalties
 
-    def set_annual_emission_limit(self, parameters):
-        """[summary]
+    def set_annual_exogenous_emission(self, annual_exogenous_emission):
+        """ Sets Annual Exogneous Emissions
 
         Args:
-            parameters ([type]): [description]
+            annual_exogenous_emission (float, array): Annual Exogenous Emissions
         """
+        self.AnnualExogenousEmission = annual_exogenous_emission
 
-    def set_model_period_exogenous_emission(self, parameters):
-        """[summary]
+    def set_annual_emission_limit(self, annual_emission_limits):
+        """ Sets Annual Emission Limits
 
         Args:
-            parameters ([type]): [description]
+            annual_emission_limits (float, array): Annual Emission Limits
         """
+        self.AnnualEmissionLimit = annual_emission_limits
 
-    def set_model_period_emission_limit(self, parameters):
-        """[summary]
+    def set_model_period_exogenous_emission(self,
+                                            model_period_exogenous_emissions):
+        """ Sets Model Period Exogenous Emissions
 
         Args:
-            parameters ([type]): [description]
+            model_period_exogenous_emissions (float, array): Model Period Exogenous Emissions
         """
+        self.ModelPeriodExogenousEmission = model_period_exogenous_emissions
+
+    def set_model_period_emission_limit(self, model_period_emission_limits):
+        """ Sets Model Period Emission Limits
+
+        Args:
+            model_period_emission_limits (float, array): Model Period Emission Limits
+        """
+        self.ModelPeriodEmissionLimit = model_period_emission_limits

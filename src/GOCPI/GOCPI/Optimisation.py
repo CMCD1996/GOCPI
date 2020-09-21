@@ -95,23 +95,23 @@ class Optimisation:
             Similar.
 
         Args:
-            apikey ([type]): [description]
-            url ([type]): [description]
-            deployment_space_name ([type]): [description]
-            cloud_object_storage_credential ([type]): [description]
-            service_instance_id ([type]): [description]
-            deployment_space_exists ([type]): [description]
-            data_assets_exist ([type]): [description]
-            data_asset_dictionary ([type]): [description]
-            model_name ([type]): [description]
-            model_type ([type]): [description]
-            model_runtime_uid ([type]): [description]
-            model_tar_file ([type]): [description]
-            num_nodes ([type]): [description]
-            deployment_exists ([type]): [description]
-            payload_input_data_id ([type]): [description]
-            payload_input_data_file ([type]): [description]
-            payload_output_data_id ([type]): [description]
+            apikey (str): API key from user's IBM Cloud Account
+            url ([type]): URL for the server the user is using for the IBM services
+            deployment_space_name (str): Name of the deployment space
+            cloud_object_storage_credential (str): Credential for the cloud object storage asset
+            service_instance_id (str): Service instance id for the service being used (IBM WML)
+            deployment_space_exists (boolean): True/False if the deployment space already exists
+            data_assets_exist (boolean): True/False if the data assets (e.g. input data stored on cloud)
+            data_asset_dictionary (dict): A dictionary of data assets to stored on IBM cloud
+            model_name (str): Name of the model
+            model_type (str): Name of the model
+            model_runtime_uid (str): Runtime ID for the model
+            model_tar_file (tar): Tar file containing the python model
+            num_nodes (int): Number of nodes the model is run off.
+            deployment_exists (boolean): True/False if the deployment already exists
+            payload_input_data_id (str): Name of input data
+            payload_input_data_file (dataframe): Input data file in the form of a dataframe
+            payload_output_data_id (str): Name of output data file
         """
 
         # Creates the Watson Machine learning Credientials
