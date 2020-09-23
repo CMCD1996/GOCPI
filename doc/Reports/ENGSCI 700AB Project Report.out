@@ -37,24 +37,27 @@
 \BOOKMARK [2][-]{subsection.4.4}{TIMES and OseMOSYS Adaptation}{section.4}% 37
 \BOOKMARK [3][-]{subsubsection.4.4.1}{TIMES: The Integrated Markel-Eform System}{subsection.4.4}% 38
 \BOOKMARK [3][-]{subsubsection.4.4.2}{OseMOYSIS}{subsection.4.4}% 39
-\BOOKMARK [2][-]{subsection.4.5}{Standardised Forecasting Methodology: GOCPI Package}{section.4}% 40
+\BOOKMARK [2][-]{subsection.4.5}{Standardised Forecasting Methodology: GOCPI Package Development}{section.4}% 40
 \BOOKMARK [3][-]{subsubsection.4.5.1}{Navigation Module}{subsection.4.5}% 41
 \BOOKMARK [3][-]{subsubsection.4.5.2}{EnergySystems Module}{subsection.4.5}% 42
 \BOOKMARK [3][-]{subsubsection.4.5.3}{CreateCases Module}{subsection.4.5}% 43
 \BOOKMARK [3][-]{subsubsection.4.5.4}{Forecasting Module}{subsection.4.5}% 44
 \BOOKMARK [3][-]{subsubsection.4.5.5}{Optimisation Module}{subsection.4.5}% 45
-\BOOKMARK [2][-]{subsection.4.6}{Forecasting Energy Systems: NZ Example}{section.4}% 46
-\BOOKMARK [3][-]{subsubsection.4.6.1}{Energy System Functions}{subsection.4.6}% 47
-\BOOKMARK [1][-]{section.5}{Results}{}% 48
-\BOOKMARK [1][-]{section.6}{Discussion}{}% 49
-\BOOKMARK [1][-]{section.7}{Summary and Conclusion}{}% 50
-\BOOKMARK [1][-]{section.8}{Future Work}{}% 51
-\BOOKMARK [2][-]{subsection.8.1}{Python Development}{section.8}% 52
-\BOOKMARK [2][-]{subsection.8.2}{NZ Example Completion}{section.8}% 53
-\BOOKMARK [2][-]{subsection.8.3}{Develop Simulation Processes}{section.8}% 54
-\BOOKMARK [2][-]{subsection.8.4}{Develop Investment Strategies}{section.8}% 55
-\BOOKMARK [2][-]{subsection.8.5}{Develop UI and UX}{section.8}% 56
-\BOOKMARK [1][-]{section.9}{Reflection}{}% 57
-\BOOKMARK [1][-]{section.10}{Appendices}{}% 58
-\BOOKMARK [2][-]{subsection.10.1}{Project Modules}{section.10}% 59
-\BOOKMARK [1][-]{section.11}{References}{}% 60
+\BOOKMARK [2][-]{subsection.4.6}{Forecasting Energy Systems}{section.4}% 46
+\BOOKMARK [3][-]{subsubsection.4.6.1}{NZ Example}{subsection.4.6}% 47
+\BOOKMARK [3][-]{subsubsection.4.6.2}{Utopia Example}{subsection.4.6}% 48
+\BOOKMARK [3][-]{subsubsection.4.6.3}{Energy System Functions}{subsection.4.6}% 49
+\BOOKMARK [1][-]{section.5}{Results}{}% 50
+\BOOKMARK [1][-]{section.6}{Discussion}{}% 51
+\BOOKMARK [1][-]{section.7}{Summary and Conclusion}{}% 52
+\BOOKMARK [1][-]{section.8}{Future Work}{}% 53
+\BOOKMARK [2][-]{subsection.8.1}{Python Development}{section.8}% 54
+\BOOKMARK [2][-]{subsection.8.2}{NZ Example Completion}{section.8}% 55
+\BOOKMARK [2][-]{subsection.8.3}{Develop Simulation Processes}{section.8}% 56
+\BOOKMARK [2][-]{subsection.8.4}{Develop Investment Strategies}{section.8}% 57
+\BOOKMARK [2][-]{subsection.8.5}{Develop UI and UX}{section.8}% 58
+\BOOKMARK [1][-]{section.9}{Reflection}{}% 59
+\BOOKMARK [1][-]{section.10}{Appendices}{}% 60
+\BOOKMARK [2][-]{subsection.10.1}{Project Modules}{section.10}% 61
+\BOOKMARK [2][-]{subsection.10.2}{OseMOSYS Model}{section.10}% 62
+\BOOKMARK [1][-]{section.11}{References}{}% 63

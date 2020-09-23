@@ -582,7 +582,9 @@ These meetings included discussions on energy markets, modelling methodologies, 
 The minutes from these meetings accompanied project updates in the project logbook nested within the research compendium.
 
 \subsection{Geographical Partitioning}
-The first stage of the GOCPI project was to come up with an exhaustive
+The first stage of the GOCPI project was to come up with an exhaustive list of geographies. 
+The user has the choice to either model the energy systems of these geographies individually or a network of geographies connection by trade relationships.
+
 \subsection{TIMES and OseMOSYS Adaptation}
 \subsubsection{TIMES: The Integrated Markel-Eform System}
 \subsubsection{OseMOYSIS}\label{OseMOSYS}
@@ -594,14 +596,16 @@ GNU Mathprog is a subset of the Algebraic Mathematical Programming Language (AMP
 The custom anaconda environment (\textbf{osemosys}) was created to facilitate this model formulation. This environment contains the libcxx package which provides a standard library of C++ functionalities.
 The GNU Linear Programming Kit (GLPK) sits within this library. GLPK uses GNU Mathprog to solve large-scale linear programming (LP), mixed integer programming (MIP), and other related problems. 
 GLPK is called using the \textbf{glpsol} command in the osemosys conda environment. \
-\subsection{Standardised Forecasting Methodology: GOCPI Package}
+\subsection{Standardised Forecasting Methodology: GOCPI Package Development}
 \subsubsection{Navigation Module}
 \subsubsection{EnergySystems Module}
 \subsubsection{CreateCases Module}
 \subsubsection{Forecasting Module}
 \subsubsection{Optimisation Module}
-\subsection{Forecasting Energy Systems: NZ Example}
-The intention of the project 
+\subsection{Forecasting Energy Systems}
+\subsubsection{NZ Example}
+\subsubsection{Utopia Example}
+The intention of the 
 \subsubsection{Energy System Functions}
 Many functions were to enable scalable energy system modelling. 
 The most important functions are highlighted in this section.
@@ -677,6 +681,9 @@ This methodology is appropriate for both public and private entities.
 \newpage
 \section{Appendices}
 \subsection{Project Modules}
+\subsection{OseMOSYS Model}
+The Open Source Energy Modelling System is a linear programme with sets, parameters, an objective function and constraints related to energy systems.
+The model is described below. Please refer to GOCPI OseMOSYS Structure.xlsx in the GitHub Repository for full descriptions of the sets, parameters and constraints.
 \newpage
 \section{References}
 \printbibliography
