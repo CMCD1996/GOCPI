@@ -26,25 +26,35 @@
 \BOOKMARK [3][-]{subsubsection.4.1.4}{Package Management}{subsection.4.1}% 26
 \BOOKMARK [3][-]{subsubsection.4.1.5}{Excel}{subsection.4.1}% 27
 \BOOKMARK [3][-]{subsubsection.4.1.6}{IBM ILOG CPLEX Optimization}{subsection.4.1}% 28
-\BOOKMARK [3][-]{subsubsection.4.1.7}{PyPI}{subsection.4.1}% 29
-\BOOKMARK [3][-]{subsubsection.4.1.8}{Code Style}{subsection.4.1}% 30
-\BOOKMARK [3][-]{subsubsection.4.1.9}{Infrastructure}{subsection.4.1}% 31
-\BOOKMARK [2][-]{subsection.4.2}{Documentation}{section.4}% 32
-\BOOKMARK [3][-]{subsubsection.4.2.1}{Project updates}{subsection.4.2}% 33
-\BOOKMARK [3][-]{subsubsection.4.2.2}{Meeting minutes}{subsection.4.2}% 34
-\BOOKMARK [2][-]{subsection.4.3}{Standardised Forecasting Methodology}{section.4}% 35
-\BOOKMARK [2][-]{subsection.4.4}{Geographical Partitioning}{section.4}% 36
-\BOOKMARK [2][-]{subsection.4.5}{Forecasting Energy Systems: NZ Example}{section.4}% 37
-\BOOKMARK [3][-]{subsubsection.4.5.1}{Energy System Functions}{subsection.4.5}% 38
-\BOOKMARK [2][-]{subsection.4.6}{TIMES/OseMOSYS Adaptation}{section.4}% 39
-\BOOKMARK [3][-]{subsubsection.4.6.1}{TIMES}{subsection.4.6}% 40
-\BOOKMARK [3][-]{subsubsection.4.6.2}{OseMOYSIS}{subsection.4.6}% 41
-\BOOKMARK [2][-]{subsection.4.7}{Simulation Processes}{section.4}% 42
-\BOOKMARK [2][-]{subsection.4.8}{Development of Investment Strategies}{section.4}% 43
-\BOOKMARK [2][-]{subsection.4.9}{User Interface and User Experience Development}{section.4}% 44
-\BOOKMARK [1][-]{section.5}{Results}{}% 45
-\BOOKMARK [1][-]{section.6}{Discussion}{}% 46
-\BOOKMARK [1][-]{section.7}{Summary and Conclusion}{}% 47
-\BOOKMARK [1][-]{section.8}{Future Work}{}% 48
-\BOOKMARK [1][-]{section.9}{Appendices}{}% 49
-\BOOKMARK [1][-]{section.10}{References}{}% 50
+\BOOKMARK [3][-]{subsubsection.4.1.7}{IBM Watson Machine Learning Service}{subsection.4.1}% 29
+\BOOKMARK [3][-]{subsubsection.4.1.8}{PyPI}{subsection.4.1}% 30
+\BOOKMARK [3][-]{subsubsection.4.1.9}{Code Style}{subsection.4.1}% 31
+\BOOKMARK [3][-]{subsubsection.4.1.10}{Infrastructure}{subsection.4.1}% 32
+\BOOKMARK [2][-]{subsection.4.2}{Documentation}{section.4}% 33
+\BOOKMARK [3][-]{subsubsection.4.2.1}{Project updates}{subsection.4.2}% 34
+\BOOKMARK [3][-]{subsubsection.4.2.2}{Meeting minutes}{subsection.4.2}% 35
+\BOOKMARK [2][-]{subsection.4.3}{Geographical Partitioning}{section.4}% 36
+\BOOKMARK [2][-]{subsection.4.4}{TIMES and OseMOSYS Adaptation}{section.4}% 37
+\BOOKMARK [3][-]{subsubsection.4.4.1}{TIMES: The Integrated Markel-Eform System}{subsection.4.4}% 38
+\BOOKMARK [3][-]{subsubsection.4.4.2}{OseMOYSIS}{subsection.4.4}% 39
+\BOOKMARK [2][-]{subsection.4.5}{Standardised Forecasting Methodology: GOCPI Package}{section.4}% 40
+\BOOKMARK [3][-]{subsubsection.4.5.1}{Navigation Module}{subsection.4.5}% 41
+\BOOKMARK [3][-]{subsubsection.4.5.2}{EnergySystems Module}{subsection.4.5}% 42
+\BOOKMARK [3][-]{subsubsection.4.5.3}{CreateCases Module}{subsection.4.5}% 43
+\BOOKMARK [3][-]{subsubsection.4.5.4}{Forecasting Module}{subsection.4.5}% 44
+\BOOKMARK [3][-]{subsubsection.4.5.5}{Optimisation Module}{subsection.4.5}% 45
+\BOOKMARK [2][-]{subsection.4.6}{Forecasting Energy Systems: NZ Example}{section.4}% 46
+\BOOKMARK [3][-]{subsubsection.4.6.1}{Energy System Functions}{subsection.4.6}% 47
+\BOOKMARK [1][-]{section.5}{Results}{}% 48
+\BOOKMARK [1][-]{section.6}{Discussion}{}% 49
+\BOOKMARK [1][-]{section.7}{Summary and Conclusion}{}% 50
+\BOOKMARK [1][-]{section.8}{Future Work}{}% 51
+\BOOKMARK [2][-]{subsection.8.1}{Python Development}{section.8}% 52
+\BOOKMARK [2][-]{subsection.8.2}{NZ Example Completion}{section.8}% 53
+\BOOKMARK [2][-]{subsection.8.3}{Develop Simulation Processes}{section.8}% 54
+\BOOKMARK [2][-]{subsection.8.4}{Develop Investment Strategies}{section.8}% 55
+\BOOKMARK [2][-]{subsection.8.5}{Develop UI and UX}{section.8}% 56
+\BOOKMARK [1][-]{section.9}{Reflection}{}% 57
+\BOOKMARK [1][-]{section.10}{Appendices}{}% 58
+\BOOKMARK [2][-]{subsection.10.1}{Project Modules}{section.10}% 59
+\BOOKMARK [1][-]{section.11}{References}{}% 60

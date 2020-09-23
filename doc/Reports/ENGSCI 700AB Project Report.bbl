@@ -796,12 +796,33 @@
       \strng{authorbibnamehash}{cbf44511d041dc6d1dd73cc0c033122c}
       \strng{authornamehash}{cbf44511d041dc6d1dd73cc0c033122c}
       \strng{authorfullhash}{cbf44511d041dc6d1dd73cc0c033122c}
+      \field{extraname}{1}
       \field{sortinit}{I}
       \field{sortinithash}{320bc8fe8101b9376f9f21cd507de0e8}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
       \field{howpublished}{Available at \url{https://www.ibm.com/academic/home} (2020/08/09)}
       \field{title}{IBM Academic Initiative)}
+    \endentry
+    \entry{IBM_WML}{misc}{}
+      \name{author}{1}{}{%
+        {{hash=cbf44511d041dc6d1dd73cc0c033122c}{%
+           family={IBM},
+           familyi={I\bibinitperiod}}}%
+      }
+      \strng{namehash}{cbf44511d041dc6d1dd73cc0c033122c}
+      \strng{fullhash}{cbf44511d041dc6d1dd73cc0c033122c}
+      \strng{bibnamehash}{cbf44511d041dc6d1dd73cc0c033122c}
+      \strng{authorbibnamehash}{cbf44511d041dc6d1dd73cc0c033122c}
+      \strng{authornamehash}{cbf44511d041dc6d1dd73cc0c033122c}
+      \strng{authorfullhash}{cbf44511d041dc6d1dd73cc0c033122c}
+      \field{extraname}{2}
+      \field{sortinit}{I}
+      \field{sortinithash}{320bc8fe8101b9376f9f21cd507de0e8}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{howpublished}{Available at \url{https://www.ibm.com/cloud/machine-learning} (2020/09/23)}
+      \field{title}{IBM Watson Machine Learning}
     \endentry
     \entry{IBM_ILOG}{software}{}
       \name{author}{1}{}{%

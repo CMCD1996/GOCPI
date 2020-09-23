@@ -523,13 +523,21 @@ The python packages are \textbf{cplex} and \textbf{docplex}. The cplex package c
 The Cplex class is the most important class in this package as provides methods for creating, modifying, querying, or solving optimisation problems.
 Docplex also enables the formulation of new linear programmes where one creates the model, defines the decision variables, sets the constraints and expresses the objective function.
 The user uses docplex to solve the linear programme on a local solver. 
-Alternatively, the model can be solved on a private cloud or the Decision Optimisation on Cloud service through the provision of a service url and personal API key.
+Alternatively, the model can be solved on a private cloud using Decision Optimisation on Cloud service through the provision of a service url and personal API key.
 The CPLEX Python APIs are most attractive as provides the user with a powerful commercial solver in an accessible format.
 
 There is a caveat to the use of the CPLEX solver. The IBM ILOG CPLEX Optimization Studio is commercial by nature and requires a license to use.
 Fortunately IBM have the IBM Academic Initiative \cite{IBM_AI}, granting students access to commercial software for free.
 This commercial nature creates accessibility issues for users who are not enrolled at an academic institution or can afford to pay for the software.
 Accessibility issues caused by the need for commercial solvers must be addressed to enable the distribution of the GOCPI product.
+
+\subsubsection{IBM Watson Machine Learning Service}
+The IBM CPLEX Optimisation Cplex python API is suitable for smaller models that can be solved locally.
+As the model increases in complexity, the docplex Python API did enable the ability to solve larger linear programmes.
+Unfortunately, IBM have phased out the docplex Python API by incorporating Decision Optimisation on Cloud services into the IBM Watson Machine learning cloud services \cite{IBM_WML}.
+This change occurred very recently
+This service uses IBM Cloud to access assets through credentials, create model deployments in IBM's servers and execute jobs to solve models.
+The model deployments must be Python-based models with jobs specifying a payloads containing input data.
 
 \subsubsection{PyPI}
 PyPI\footnote{https://pypi.org/} is the Python Package Index, a repository of software for the python programming language.
@@ -573,9 +581,27 @@ Project meetings took place for half an hour once a week.
 These meetings included discussions on energy markets, modelling methodologies, project progress and key design decisions.
 The minutes from these meetings accompanied project updates in the project logbook nested within the research compendium.
 
-\subsection{Standardised Forecasting Methodology}
 \subsection{Geographical Partitioning}
+The first stage of the GOCPI project was to come up with an exhaustive
+\subsection{TIMES and OseMOSYS Adaptation}
+\subsubsection{TIMES: The Integrated Markel-Eform System}
+\subsubsection{OseMOYSIS}\label{OseMOSYS}
+The combined use of both the OseMOSYS methodology and CPLEX solver required the formulation of an lp-format file by combining user-defined data and model text files.
+These files are written in GNU Mathprog, a language intended for describing linear mathematical programming models \cite{GNU_Mathprog}. 
+The OseMOSYS model file is stored in an excel sheet to make the OseMOSYS methodology transparent for the user. 
+The model structure is converted into the required text file using the CreateModelFile function in the GOCPI package.
+GNU Mathprog is a subset of the Algebraic Mathematical Programming Language (AMPL) \cite{AMPL} and consists of user-defined sets of statements and data blocks.
+The custom anaconda environment (\textbf{osemosys}) was created to facilitate this model formulation. This environment contains the libcxx package which provides a standard library of C++ functionalities.
+The GNU Linear Programming Kit (GLPK) sits within this library. GLPK uses GNU Mathprog to solve large-scale linear programming (LP), mixed integer programming (MIP), and other related problems. 
+GLPK is called using the \textbf{glpsol} command in the osemosys conda environment. \
+\subsection{Standardised Forecasting Methodology: GOCPI Package}
+\subsubsection{Navigation Module}
+\subsubsection{EnergySystems Module}
+\subsubsection{CreateCases Module}
+\subsubsection{Forecasting Module}
+\subsubsection{Optimisation Module}
 \subsection{Forecasting Energy Systems: NZ Example}
+The intention of the project 
 \subsubsection{Energy System Functions}
 Many functions were to enable scalable energy system modelling. 
 The most important functions are highlighted in this section.
@@ -633,21 +659,6 @@ Monthly returns are annualised as follows:
 The cost of ordinary equity is calculated using the Capital Assets Pricing Model (CAPM). 
 Both New Zealand and Australia are assumed to have market risk co-efficients ($\beta$) of zero as their fiscal policy is market independent.
 This methodology is appropriate for both public and private entities.
-\subsection{TIMES/OseMOSYS Adaptation}
-\subsubsection{TIMES}
-\subsubsection{OseMOYSIS}\label{OseMOSYS}
-The combined use of both the OseMOSYS methodology and CPLEX solver required the formulation of an lp-format file by combining user-defined data and model text files.
-These files are written in GNU Mathprog, a language intended for describing linear mathematical programming models \cite{GNU_Mathprog}. 
-The OseMOSYS model file is stored in an excel sheet to make the OseMOSYS methodology transparent for the user. 
-The model structure is converted into the required text file using the CreateModelFile function in the GOCPI package.
-GNU Mathprog is a subset of the Algebraic Mathematical Programming Language (AMPL) \cite{AMPL} and consists of user-defined sets of statements and data blocks.
-The custom anaconda environment (\textbf{osemosys}) was created to facilitate this model formulation. This environment contains the libcxx package which provides a standard library of C++ functionalities.
-The GNU Linear Programming Kit (GLPK) sits within this library. GLPK uses GNU Mathprog to solve large-scale linear programming (LP), mixed integer programming (MIP), and other related problems. 
-GLPK is called using the \textbf{glpsol} command in the osemosys conda environment. \
-
-\subsection{Simulation Processes}
-\subsection{Development of Investment Strategies}
-\subsection{User Interface and User Experience Development}
 \newpage
 \section{Results}
 \newpage
@@ -656,8 +667,16 @@ GLPK is called using the \textbf{glpsol} command in the osemosys conda environme
 \section{Summary and Conclusion}
 \newpage
 \section{Future Work}
+\subsection{Python Development}
+\subsection{NZ Example Completion}
+\subsection{Develop Simulation Processes}
+\subsection{Develop Investment Strategies}
+\subsection{Develop UI and UX}
+\newpage
+\section{Reflection}
 \newpage
 \section{Appendices}
+\subsection{Project Modules}
 \newpage
 \section{References}
 \printbibliography
