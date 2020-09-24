@@ -28,6 +28,35 @@
 \usepackage{cancel}
 \usepackage{color}
 \usepackage{listings}
+
+% Create Listing Colours
+\usepackage{xcolor}
+
+\definecolor{codegreen}{rgb}{0,0.6,0}
+\definecolor{codegray}{rgb}{0.5,0.5,0.5}
+\definecolor{codepurple}{rgb}{0.58,0,0.82}
+\definecolor{backcolour}{rgb}{0.95,0.95,0.92}
+
+\lstdefinestyle{mystyle}{
+    backgroundcolor=\color{backcolour},   
+    commentstyle=\color{codegreen},
+    keywordstyle=\color{magenta},
+    numberstyle=\tiny\color{codegray},
+    stringstyle=\color{codepurple},
+    basicstyle=\ttfamily\footnotesize,
+    breakatwhitespace=false,         
+    breaklines=true,                 
+    captionpos=b,                    
+    keepspaces=true,                 
+    numbers=left,                    
+    numbersep=5pt,                  
+    showspaces=false,                
+    showstringspaces=false,
+    showtabs=false,                  
+    tabsize=2
+}
+\lstset{style=mystyle}
+
 \usepackage{multicol}
 \usepackage{float}
 
@@ -583,9 +612,20 @@ The minutes from these meetings accompanied project updates in the project logbo
 
 \subsection{Geographical Partitioning}
 The first stage of the GOCPI project was to come up with an exhaustive list of geographies. 
-The user has the choice to either model the energy systems of these geographies individually or a network of geographies connection by trade relationships.
+The user has the choice to either model the energy systems of these geographies individually or model a network of geographies connected by trade relationships.
+Geographies are grouped into three distinct sets. There is a continental set with six continents: Africa, North America, South America, Oceania, Asia and Africa.
+Antarctica was excluded from this set.
+The country set includes 194 United Nations member states. The elements in the city set number approximately 13800 unique cities from the 194 member states.
+The \textbf{GOCPI Geographies.gyp} script processes these unique sets to create a csv file detailing an aggregate geography set.
+This file contains ~13800 geography combinations. Each combination includes a city's name, population, country and continent e.g. VANCOUVER,CANADA,2313328.0,NORTH AMERICA.
+A user may use this information to design energy systems for cities with similar populations, countries, continents. 
+Cities may be combined to compare countries with similar populations or of residence within the same continent.
+The user may also build energy systems on a continent level. After the formation of an exhaustive list of geographies, the exploration and adaptation of energy system modelling
+methodologies could begin.
 
 \subsection{TIMES and OseMOSYS Adaptation}
+WEC Smooth Jazz, Hard Rock etc
+
 \subsubsection{TIMES: The Integrated Markel-Eform System}
 \subsubsection{OseMOYSIS}\label{OseMOSYS}
 The combined use of both the OseMOSYS methodology and CPLEX solver required the formulation of an lp-format file by combining user-defined data and model text files.
@@ -595,7 +635,10 @@ The model structure is converted into the required text file using the CreateMod
 GNU Mathprog is a subset of the Algebraic Mathematical Programming Language (AMPL) \cite{AMPL} and consists of user-defined sets of statements and data blocks.
 The custom anaconda environment (\textbf{osemosys}) was created to facilitate this model formulation. This environment contains the libcxx package which provides a standard library of C++ functionalities.
 The GNU Linear Programming Kit (GLPK) sits within this library. GLPK uses GNU Mathprog to solve large-scale linear programming (LP), mixed integer programming (MIP), and other related problems. 
-GLPK is called using the \textbf{glpsol} command in the osemosys conda environment. \
+GLPK is called using the \textbf{glpsol} command in the osemosys conda environment:\
+\begin{align*}	
+	\textbf{glpsol -m model.txt -d data.txt --wlp GOCPI.lp}
+\end{align*}
 \subsection{Standardised Forecasting Methodology: GOCPI Package Development}
 \subsubsection{Navigation Module}
 \subsubsection{EnergySystems Module}
@@ -684,6 +727,7 @@ This methodology is appropriate for both public and private entities.
 \subsection{OseMOSYS Model}
 The Open Source Energy Modelling System is a linear programme with sets, parameters, an objective function and constraints related to energy systems.
 The model is described below. Please refer to GOCPI OseMOSYS Structure.xlsx in the GitHub Repository for full descriptions of the sets, parameters and constraints.
+%\lstinputlisting{"/Users/connor/Google Drive/Documents/University/Courses/2020/ENGSCI 700A&B/GOCPI/data/Inputs/GOCPI OseMOSYS/GOCPI_OseMOSYS_Model.txt"}
 \newpage
 \section{References}
 \printbibliography
