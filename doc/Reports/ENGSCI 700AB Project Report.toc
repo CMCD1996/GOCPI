@@ -45,18 +45,18 @@
 \contentsline {subsubsection}{\numberline {4.5.4}Forecasting Module}{22}{subsubsection.4.5.4}% 
 \contentsline {subsubsection}{\numberline {4.5.5}Optimisation Module}{22}{subsubsection.4.5.5}% 
 \contentsline {subsection}{\numberline {4.6}Forecasting Energy Systems}{22}{subsection.4.6}% 
-\contentsline {subsubsection}{\numberline {4.6.1}NZ Example}{22}{subsubsection.4.6.1}% 
-\contentsline {subsubsection}{\numberline {4.6.2}Utopia Example}{22}{subsubsection.4.6.2}% 
+\contentsline {subsubsection}{\numberline {4.6.1}Utopia Example}{22}{subsubsection.4.6.1}% 
+\contentsline {subsubsection}{\numberline {4.6.2}NZ Example}{22}{subsubsection.4.6.2}% 
 \contentsline {subsubsection}{\numberline {4.6.3}Energy System Functions}{22}{subsubsection.4.6.3}% 
 \contentsline {section}{\numberline {5}Results}{24}{section.5}% 
 \contentsline {section}{\numberline {6}Discussion}{25}{section.6}% 
-\contentsline {section}{\numberline {7}Summary and Conclusion}{26}{section.7}% 
-\contentsline {section}{\numberline {8}Future Work}{27}{section.8}% 
-\contentsline {subsection}{\numberline {8.1}Python Development}{27}{subsection.8.1}% 
-\contentsline {subsection}{\numberline {8.2}NZ Example Completion}{27}{subsection.8.2}% 
-\contentsline {subsection}{\numberline {8.3}Develop Simulation Processes}{27}{subsection.8.3}% 
-\contentsline {subsection}{\numberline {8.4}Develop Investment Strategies}{27}{subsection.8.4}% 
-\contentsline {subsection}{\numberline {8.5}Develop UI and UX}{27}{subsection.8.5}% 
+\contentsline {section}{\numberline {7}Future Work}{26}{section.7}% 
+\contentsline {subsection}{\numberline {7.1}Python Development}{26}{subsection.7.1}% 
+\contentsline {subsection}{\numberline {7.2}NZ Example Completion}{26}{subsection.7.2}% 
+\contentsline {subsection}{\numberline {7.3}Develop Simulation Processes}{26}{subsection.7.3}% 
+\contentsline {subsection}{\numberline {7.4}Develop Investment Strategies}{26}{subsection.7.4}% 
+\contentsline {subsection}{\numberline {7.5}Develop UI and UX}{26}{subsection.7.5}% 
+\contentsline {section}{\numberline {8}Summary and Conclusion}{27}{section.8}% 
 \contentsline {section}{\numberline {9}Reflection}{28}{section.9}% 
 \contentsline {section}{\numberline {10}Appendices}{29}{section.10}% 
 \contentsline {subsection}{\numberline {10.1}Project Modules}{29}{subsection.10.1}% 
