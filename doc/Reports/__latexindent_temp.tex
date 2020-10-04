@@ -654,20 +654,24 @@ The first stage was to adapt the existing Excel files so the user can design the
 Data and assumptions for reference energy systems and scenarios are primarily recorded in several tables across separate excel sheets and files.
 I made copies of these excel files and began writing functions to change the data stored in these sheets and create user defined energy systems.
 
-The second stage was to design energy systems using the VEDA interface. Figures
+The second stage was to design energy systems using the VEDA interface. Figures \ref{fig:BYS} and \ref{fig:TDT} show the VEDA interface.
 
 \begin{figure}[H]
     \centering
     \subfloat[Energy System Base Year]{{\includegraphics[width = 0.5\textwidth]{VEDABASE.png} }}
 	\subfloat[Energy Scenarios]{{\includegraphics[width = 0.5\textwidth]{VEDAScenarios.png} }}
-	\hfill
-    \subfloat[Trade Relationships]{{\includegraphics[width = 0.5\textwidth]{VEDATrade.png} }}%
-	\subfloat[New Resources]{{\includegraphics[width = 0.5\textwidth]{VEDAResources.png} }}%
-	\hfill
-	\subfloat[]{{\includegraphics[width = 0.5\textwidth]{VEDADemand.png} }}
-    \caption{VEDA Interface for building Energy Systems}%
-    \label{fig:MFL}%
+	\caption{VEDA Energy System Base Year and Scenarios}
+	\label{fig:BYS}%
 \end{figure}
+
+\begin{figure}[H]
+    \subfloat[Trade Relationships]{{\includegraphics[width = 0.3\textwidth]{VEDATrade.png} }}%
+	\subfloat[New Resources]{{\includegraphics[width = 0.3\textwidth]{VEDAResources.png} }}%
+	\subfloat[Demand Proliles]{{\includegraphics[width = 0.3\textwidth]{VEDADemand.png} }}
+	\caption{VEDA Technology, Demand and Trade Scenarios}%
+	\label{fig:TDT}
+\end{figure}
+
 
 The implementation of TIMES was difficult given several factors: 
 The operating systems required to run the software. 
