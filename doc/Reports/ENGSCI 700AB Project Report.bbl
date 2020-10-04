@@ -620,6 +620,27 @@
       \field{pages}{125\bibrangedash 136}
       \range{pages}{12}
     \endentry
+    \entry{VEDA}{misc}{}
+      \name{author}{1}{}{%
+        {{hash=103ef5e79902887578837a3eb8ffb22a}{%
+           family={EMR},
+           familyi={E\bibinitperiod},
+           given={Kanors},
+           giveni={K\bibinitperiod}}}%
+      }
+      \strng{namehash}{103ef5e79902887578837a3eb8ffb22a}
+      \strng{fullhash}{103ef5e79902887578837a3eb8ffb22a}
+      \strng{bibnamehash}{103ef5e79902887578837a3eb8ffb22a}
+      \strng{authorbibnamehash}{103ef5e79902887578837a3eb8ffb22a}
+      \strng{authornamehash}{103ef5e79902887578837a3eb8ffb22a}
+      \strng{authorfullhash}{103ef5e79902887578837a3eb8ffb22a}
+      \field{sortinit}{E}
+      \field{sortinithash}{f615fb9c6fba11c6f962fb3fd599810e}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{howpublished}{Available at \url{https://www.kanors-emr.org/} (2020/10/03)}
+      \field{title}{VErsatile Data Analyst}
+    \endentry
     \entry{W:12}{misc}{}
       \name{author}{1}{}{%
         {{hash=87f7bfcf13882f0d774eb7e6c4d9f457}{%

@@ -8,7 +8,8 @@
 %%% PAGE DIMENSIONS
 \usepackage[margin=2.54cm]{geometry}
 \geometry{a4paper} 
-
+% \usepackage{caption}
+% \usepackage{subcaption}
 \usepackage{graphicx} % For better graphics
 \usepackage{pdfpages} % To insert pdfs into the library
 \usepackage{tikz}
@@ -627,9 +628,53 @@ methodologies could begin.
 The World Energy Council devised three energy scenarios to inform energy policy and investment. These are Hard Rock, Unfinished Symphony and Modern Jazz \cite{TR:8}.
 New Zealand devised two energy scenarios to inform national energy policy and investment. These are Tui and Kea \cite{TR:2}. 
 The TIMES Modelling Methodology underpins the construction of these modelling techniques.
-I began exploring the standardisation of this modelling methodology.
+Subsequently, I began the standardisation of a TIMES implementation to create a method to develop scalable energy systems.
 
 \subsubsection{TIMES: The Integrated Markel-Eform System}
+An implementation of TIMES is divisible into a five stage process as displayed in Figure \ref{fig:times}:
+\begin{figure}[H]
+    \centering
+	\includegraphics[width=\textwidth]{TIMES.png}
+	\caption{TIMES Implementation Process}\
+	\label{fig:times}
+\end{figure}
+
+The VErsatile data analyst (VEDA) \cite{VEDA} is a software package required for TIMES modelling. 
+VEDA is an interface to design energy systems from Excel-based inputs and create the TIMES data and model text files for optimisation using GAMS.
+The installation of VEDA FE and VEDA BE required a windows operating system. A virtual private network (VPN)
+and Microsoft Remote Desktop was used to access a windows operating system via a virtual machine. GAMS Studio was installed on both 
+the local Macintosh operating system and remote Windows operating system to perform the optimisation formulated in GAMS.
+VEDA is proprietary and requires a commercial license to use. 
+Fortunately, there is a 60 day trial version available for download and use.
+After installing VEDA, GAMS and Microsoft Excel, I began following a TIMES user manual written by the IEA to build a standardised TIMES model.
+The user manual started with a very basic energy system, incrementing on the energy model with twelve demo models.
+I downloaded these twelve demo models to edit their associated Excel files.
+
+The first stage was to adapt the existing Excel files so the user can design their own reference energy systems and sets of energy scenarios. 
+Data and assumptions for reference energy systems and scenarios are primarily recorded in several tables across separate excel sheets and files.
+I made copies of these excel files and began writing functions to change the data stored in these sheets and create user defined energy systems.
+
+The second stage was to design energy systems using the VEDA interface. Figures
+
+\begin{figure}[H]
+    \centering
+    \subfloat[Energy System Base Year]{{\includegraphics[width = 0.5\textwidth]{VEDABASE.png} }}
+	\subfloat[Energy Scenarios]{{\includegraphics[width = 0.5\textwidth]{VEDAScenarios.png} }}
+	\hfill
+    \subfloat[Trade Relationships]{{\includegraphics[width = 0.5\textwidth]{VEDATrade.png} }}%
+	\subfloat[New Resources]{{\includegraphics[width = 0.5\textwidth]{VEDAResources.png} }}%
+	\hfill
+	\subfloat[]{{\includegraphics[width = 0.5\textwidth]{VEDADemand.png} }}
+    \caption{VEDA Interface for building Energy Systems}%
+    \label{fig:MFL}%
+\end{figure}
+
+The implementation of TIMES was difficult given several factors: 
+The operating systems required to run the software. 
+The integration of several software packages in both local and remote infrastructure.
+The remote nature of online learning creating accessibility issues.
+
+
 
 \subsubsection{OseMOYSIS}\label{OseMOSYS}
 The combined use of both the OseMOSYS methodology and CPLEX solver required the formulation of an lp-format file by combining user-defined data and model text files.
@@ -713,6 +758,7 @@ Monthly returns are annualised as follows:
 The cost of ordinary equity is calculated using the Capital Assets Pricing Model (CAPM). 
 Both New Zealand and Australia are assumed to have market risk co-efficients ($\beta$) of zero as their fiscal policy is market independent.
 This methodology is appropriate for both public and private entities.
+\subsection{User Interface Model Access}
 \newpage
 \section{Results}
 \newpage
@@ -723,7 +769,6 @@ This methodology is appropriate for both public and private entities.
 \subsection{NZ Example Completion}
 \subsection{Develop Simulation Processes}
 \subsection{Develop Investment Strategies}
-\subsection{Develop UI and UX}
 \newpage
 \section{Summary and Conclusion}
 \newpage
