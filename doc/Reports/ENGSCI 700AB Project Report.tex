@@ -654,20 +654,27 @@ The first stage was to adapt the existing Excel files so the user can design the
 Data and assumptions for reference energy systems and scenarios are primarily recorded in several tables across separate excel sheets and files.
 I made copies of these excel files and began writing functions to change the data stored in these sheets and create user defined energy systems.
 
-The second stage was to design energy systems using the VEDA interface. Figures \ref{fig:BYS} and \ref{fig:TDT} show the VEDA interface.
+The second stage was to design energy systems using the VEDA interface. Figures \ref{fig:BYS} and \ref{fig:TDT} show the VEDA interface. 
+I used the VEDA interface to combine the Excel files I adapted from the VEDA demo models.
+Initially, I built the base year scenario as shown in figure \ref{vedabase}. 
+The inclusion of different energy scenarios (figure \ref{vedascene}) led to a more robust energy system.
+Examples include introducing the price elasticity of demand, solar technology subsidies and carbon dioxide taxes.
+New resources, technologies, trade relationships and demand profiles were added as shown in subfigures \ref{vedademand}, \ref{vedaresources} and \ref{vedatrade}.
+VEDA enables 
+
 
 \begin{figure}[H]
     \centering
-    \subfloat[Energy System Base Year]{{\includegraphics[width = 0.5\textwidth]{VEDABASE.png} }}
-	\subfloat[Energy Scenarios]{{\includegraphics[width = 0.5\textwidth]{VEDAScenarios.png} }}
+    \subfloat[Energy System Base Year]{{\includegraphics[width = 0.5\textwidth]{VEDABASE.png}{\label{vedabase}} }}
+	\subfloat[Energy Scenarios]{{\includegraphics[width = 0.5\textwidth]{VEDAScenarios.png}{\label{vedascene}} }}
 	\caption{VEDA Energy System Base Year and Scenarios}
 	\label{fig:BYS}%
 \end{figure}
 
 \begin{figure}[H]
-    \subfloat[Trade Relationships]{{\includegraphics[width = 0.3\textwidth]{VEDATrade.png} }}%
-	\subfloat[New Resources]{{\includegraphics[width = 0.3\textwidth]{VEDAResources.png} }}%
-	\subfloat[Demand Proliles]{{\includegraphics[width = 0.3\textwidth]{VEDADemand.png} }}
+    \subfloat[Trade Relationships]{{\includegraphics[width = 0.3\textwidth]{VEDATrade.png}\label{vedatrade} }}%
+	\subfloat[New Resources]{{\includegraphics[width = 0.3\textwidth]{VEDAResources.png}{\label{vedaresources}} }}%
+	\subfloat[Demand Proliles]{{\includegraphics[width = 0.3\textwidth]{VEDADemand.png}{\label{vedademand}} }}
 	\caption{VEDA Technology, Demand and Trade Scenarios}%
 	\label{fig:TDT}
 \end{figure}
