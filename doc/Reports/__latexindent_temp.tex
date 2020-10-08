@@ -634,7 +634,7 @@ Subsequently, I began the standardisation of a TIMES implementation to create a 
 An implementation of TIMES is divisible into a five stage process as displayed in Figure \ref{fig:times}:
 \begin{figure}[H]
     \centering
-	\includegraphics[width=\textwidth]{TIMES.png}
+	\includegraphics[width=0.8\textwidth]{TIMES.png}
 	\caption{TIMES Implementation Process}\
 	\label{fig:times}
 \end{figure}
@@ -647,12 +647,12 @@ the local Macintosh operating system and remote Windows operating system to perf
 VEDA is proprietary and requires a commercial license to use. 
 Fortunately, there is a 60 day trial version available for download and use.
 After installing VEDA, GAMS and Microsoft Excel, I began following a TIMES user manual written by the IEA to build a standardised TIMES model.
-The user manual started with a very basic energy system, incrementing on the energy model with twelve demo models.
+The user manual started with a very basic energy system, incrementing on the energy model using twelve demo models.
 I downloaded these twelve demo models to edit their associated Excel files.
 
 The first stage was to adapt the existing Excel files so the user can design their own reference energy systems and sets of energy scenarios. 
 Data and assumptions for reference energy systems and scenarios are primarily recorded in several tables across separate excel sheets and files.
-I made copies of these excel files and began writing functions to change the data stored in these sheets and create user defined energy systems.
+I made copies of these excel files and began writing functions to change the data stored in these sheets for a user to create new energy systems.
 
 The second stage was to design energy systems using the VEDA interface. Figures \ref{fig:BYS} and \ref{fig:TDT} show the VEDA interface. 
 I used the VEDA interface to combine the Excel files I adapted from the VEDA demo models.
@@ -660,8 +660,14 @@ Initially, I built the base year scenario as shown in figure \ref{vedabase}.
 The inclusion of different energy scenarios (figure \ref{vedascene}) led to a more robust energy system.
 Examples include introducing the price elasticity of demand, solar technology subsidies and carbon dioxide taxes.
 New resources, technologies, trade relationships and demand profiles were added as shown in subfigures \ref{vedademand}, \ref{vedaresources} and \ref{vedatrade}.
-VEDA enables 
+VEDA informs the user if the energy system is consistent with all data and assumptions correctly defined by a key shown in figure \ref{fig:C}.
 
+\begin{figure}[H]
+    \centering
+    \includegraphics[width = \textwidth]{VEDAConsistent.png}
+	\caption{VEDA Energy System Consistency Key}
+	\label{fig:C}%
+\end{figure}
 
 \begin{figure}[H]
     \centering
@@ -679,16 +685,47 @@ VEDA enables
 	\label{fig:TDT}
 \end{figure}
 
+% \begin{wrapfigure}{l}{0.5\textwidth}
+% 	\begin{center}
+% 		\includegraphics[width=0.48\textwidth]{VEDACaseManager.png}
+% 	\end{center}
+% 	\caption{VEDA Case Manager}
+% 	\label{fig:CM}
+% \end{wrapfigure}
 
-The implementation of TIMES was difficult given several factors: 
-The operating systems required to run the software. 
-The integration of several software packages in both local and remote infrastructure.
-The remote nature of online learning creating accessibility issues.
+After designing the energy system using the VEDA interface, a case manager is used to generate a TIMES text file and 
+run the optimisation. The model file is written in GAMS and integrated into the VEDA interface. 
+The case manager allows you to select different scenarios and produce new model files.
 
+The third stage was to execute the GAMS optimisation and produce outputs to be fed into VEDA BE. 
+The forth stage is for VEDA BE to convert the GAMS output into Excel-based data files. 
+In the fifth stage, data visualisation would enable the user to take the Excel outputs and make informed decisions relating to energy policy and investment.
 
+Unfortunately, I faced serious limitations at stage 3 of the TIMES implementation.
+Several factors made the TIMES implementation difficult:
+\begin{enumerate}
+	\item The remote nature of the project made the integration of software between Flex IT, local and remote difficult.
+	\item VEDA and GAMS Studio's commercial nature creates accessibility and equity issues for those who don't have the resources or connections to access the software. This contradicts the project's purpose.
+	\item The complexity of TIMES inhibits reproducibility and creates barriers to entry for users not too familiar with energy modelling.
+\end{enumerate}
+
+\textbf{These reasons led to the abandonment of the TIMES implementation in favour of an alternative energy modelling methodology}. 
+An alternative methodology would trade the complexity and sophistication of TIMES modelling for usability and accessibility. 
+After consultation with my project supervisor and one of New Zealand Energy Council modelers, the OseMOSYS methodology was recommended.
+Subsequently, I began developing an scalable open source energy system under this OseMOSYS methodology.
 
 \subsubsection{OseMOYSIS}\label{OseMOSYS}
-The combined use of both the OseMOSYS methodology and CPLEX solver required the formulation of an lp-format file by combining user-defined data and model text files.
+The OseMOSYS methodology was the next best alternative to the TIMES for modelling large scale energy systems.
+OseMOSYS proved to be the better of the two methods as more closely aligned with the overall scope and purpose of the project.
+The aforementioned tradeoffs are justified given the usability and availability of OseMOSYS.
+TIMES can model useful complexities such as stochastic processes.
+
+There is an online community who make contributions to the development of OseMOSYS.
+Their mission is to make energy modelling more transparent and accessible.
+This online community are developing three versions of OseMOSYS accompanied with exemplar energy systems.
+
+
+The OseMOSYS implementation and CPLEX solver needed solve the systems the formulation of an lp-format file through the combination of user-defined data and model text files.
 These files are written in GNU Mathprog, a language intended for describing linear mathematical programming models \cite{GNU_Mathprog}. 
 The OseMOSYS model file is stored in an excel sheet to make the OseMOSYS methodology transparent for the user. 
 The model structure is converted into the required text file using the CreateModelFile function in the GOCPI package.
@@ -769,7 +806,7 @@ Monthly returns are annualised as follows:
 The cost of ordinary equity is calculated using the Capital Assets Pricing Model (CAPM). 
 Both New Zealand and Australia are assumed to have market risk co-efficients ($\beta$) of zero as their fiscal policy is market independent.
 This methodology is appropriate for both public and private entities.
-\subsection{User Interface Model Access}
+\subsection{package Interface and Distribution}
 \newpage
 \section{Results}
 \newpage
