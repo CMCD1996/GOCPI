@@ -1306,6 +1306,25 @@
       \field{volume}{q}
       \field{year}{2019}
     \endentry
+    \entry{GHOM}{misc}{}
+      \name{author}{1}{}{%
+        {{hash=f22794f69ce5910cb4be68ff9026570d}{%
+           family={Various},
+           familyi={V\bibinitperiod}}}%
+      }
+      \strng{namehash}{f22794f69ce5910cb4be68ff9026570d}
+      \strng{fullhash}{f22794f69ce5910cb4be68ff9026570d}
+      \strng{bibnamehash}{f22794f69ce5910cb4be68ff9026570d}
+      \strng{authorbibnamehash}{f22794f69ce5910cb4be68ff9026570d}
+      \strng{authornamehash}{f22794f69ce5910cb4be68ff9026570d}
+      \strng{authorfullhash}{f22794f69ce5910cb4be68ff9026570d}
+      \field{sortinit}{V}
+      \field{sortinithash}{75dd7385c90b2252c3ae853a80ca853b}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{howpublished}{Available at \url{https://github.com/OSeMOSYS/OSeMOSYS} (2020/10/10)}
+      \field{title}{OseMOSYS Github Repository.}
+    \endentry
     \entry{J:10}{article}{}
       \name{author}{6}{}{%
         {{hash=fda30198609a1ab29a82b93d4e8f347b}{%

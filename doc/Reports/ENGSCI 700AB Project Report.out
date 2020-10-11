@@ -36,28 +36,31 @@
 \BOOKMARK [2][-]{subsection.4.3}{Geographical Partitioning}{section.4}% 36
 \BOOKMARK [2][-]{subsection.4.4}{Energy Modelling: TIMES and OseMOSYS}{section.4}% 37
 \BOOKMARK [3][-]{subsubsection.4.4.1}{TIMES: The Integrated Markel-Eform System}{subsection.4.4}% 38
-\BOOKMARK [3][-]{subsubsection.4.4.2}{OseMOYSIS}{subsection.4.4}% 39
-\BOOKMARK [2][-]{subsection.4.5}{Standardised Forecasting Methodology: GOCPI Package Development}{section.4}% 40
-\BOOKMARK [3][-]{subsubsection.4.5.1}{Navigation Module}{subsection.4.5}% 41
-\BOOKMARK [3][-]{subsubsection.4.5.2}{EnergySystems Module}{subsection.4.5}% 42
-\BOOKMARK [3][-]{subsubsection.4.5.3}{CreateCases Module}{subsection.4.5}% 43
-\BOOKMARK [3][-]{subsubsection.4.5.4}{Forecasting Module}{subsection.4.5}% 44
-\BOOKMARK [3][-]{subsubsection.4.5.5}{Optimisation Module}{subsection.4.5}% 45
-\BOOKMARK [2][-]{subsection.4.6}{Forecasting Energy Systems}{section.4}% 46
-\BOOKMARK [3][-]{subsubsection.4.6.1}{Utopia Example}{subsection.4.6}% 47
-\BOOKMARK [3][-]{subsubsection.4.6.2}{NZ Example}{subsection.4.6}% 48
-\BOOKMARK [3][-]{subsubsection.4.6.3}{Energy System Functions}{subsection.4.6}% 49
-\BOOKMARK [2][-]{subsection.4.7}{package Interface and Distribution}{section.4}% 50
-\BOOKMARK [1][-]{section.5}{Results}{}% 51
-\BOOKMARK [1][-]{section.6}{Discussion}{}% 52
-\BOOKMARK [1][-]{section.7}{Future Work}{}% 53
-\BOOKMARK [2][-]{subsection.7.1}{Python Development}{section.7}% 54
-\BOOKMARK [2][-]{subsection.7.2}{NZ Example Completion}{section.7}% 55
-\BOOKMARK [2][-]{subsection.7.3}{Develop Simulation Processes}{section.7}% 56
-\BOOKMARK [2][-]{subsection.7.4}{Develop Investment Strategies}{section.7}% 57
-\BOOKMARK [1][-]{section.8}{Summary and Conclusion}{}% 58
-\BOOKMARK [1][-]{section.9}{Reflection}{}% 59
-\BOOKMARK [1][-]{section.10}{Appendices}{}% 60
-\BOOKMARK [2][-]{subsection.10.1}{Project Modules}{section.10}% 61
-\BOOKMARK [2][-]{subsection.10.2}{OseMOSYS Model}{section.10}% 62
-\BOOKMARK [1][-]{section.11}{References}{}% 63
+\BOOKMARK [3][-]{subsubsection.4.4.2}{OseMOYSIS Overview}{subsection.4.4}% 39
+\BOOKMARK [3][-]{subsubsection.4.4.3}{OseMOSYS Implementation}{subsection.4.4}% 40
+\BOOKMARK [3][-]{subsubsection.4.4.4}{OseMOSYS Integration}{subsection.4.4}% 41
+\BOOKMARK [3][-]{subsubsection.4.4.5}{OseMOSYS Model Storage}{subsection.4.4}% 42
+\BOOKMARK [2][-]{subsection.4.5}{Standardised Forecasting Methodology: GOCPI Package Development}{section.4}% 43
+\BOOKMARK [3][-]{subsubsection.4.5.1}{Navigation Module}{subsection.4.5}% 44
+\BOOKMARK [3][-]{subsubsection.4.5.2}{EnergySystems Module}{subsection.4.5}% 45
+\BOOKMARK [3][-]{subsubsection.4.5.3}{CreateCases Module}{subsection.4.5}% 46
+\BOOKMARK [3][-]{subsubsection.4.5.4}{Forecasting Module}{subsection.4.5}% 47
+\BOOKMARK [3][-]{subsubsection.4.5.5}{Optimisation Module}{subsection.4.5}% 48
+\BOOKMARK [2][-]{subsection.4.6}{Forecasting Energy Systems}{section.4}% 49
+\BOOKMARK [3][-]{subsubsection.4.6.1}{Utopia Example}{subsection.4.6}% 50
+\BOOKMARK [3][-]{subsubsection.4.6.2}{NZ Example}{subsection.4.6}% 51
+\BOOKMARK [3][-]{subsubsection.4.6.3}{Energy System Functions}{subsection.4.6}% 52
+\BOOKMARK [2][-]{subsection.4.7}{Interface}{section.4}% 53
+\BOOKMARK [1][-]{section.5}{Results}{}% 54
+\BOOKMARK [1][-]{section.6}{Discussion}{}% 55
+\BOOKMARK [1][-]{section.7}{Future Work}{}% 56
+\BOOKMARK [2][-]{subsection.7.1}{Python Development}{section.7}% 57
+\BOOKMARK [2][-]{subsection.7.2}{NZ Example Completion}{section.7}% 58
+\BOOKMARK [2][-]{subsection.7.3}{Develop Simulation Processes}{section.7}% 59
+\BOOKMARK [2][-]{subsection.7.4}{Develop Investment Strategies}{section.7}% 60
+\BOOKMARK [1][-]{section.8}{Summary and Conclusion}{}% 61
+\BOOKMARK [1][-]{section.9}{Reflection}{}% 62
+\BOOKMARK [1][-]{section.10}{Appendices}{}% 63
+\BOOKMARK [2][-]{subsection.10.1}{Project Modules}{section.10}% 64
+\BOOKMARK [2][-]{subsection.10.2}{OseMOSYS Model}{section.10}% 65
+\BOOKMARK [1][-]{section.11}{References}{}% 66

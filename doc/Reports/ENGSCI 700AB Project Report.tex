@@ -611,7 +611,7 @@ Project meetings took place for half an hour once a week.
 These meetings included discussions on energy markets, modelling methodologies, project progress and key design decisions.
 The minutes from these meetings accompanied project updates in the project logbook nested within the research compendium.
 
-\subsection{Geographical Partitioning}
+\subsection{Geographical Partitioning}\label{geopar}
 The first stage of the GOCPI project was to come up with an exhaustive list of geographies. 
 The user has the choice to either model the energy systems of these geographies individually or model a network of geographies connected by trade relationships.
 Geographies are grouped into three distinct sets. There is a continental set with six continents: Africa, North America, South America, Oceania, Asia and Africa.
@@ -714,31 +714,105 @@ An alternative methodology would trade the complexity and sophistication of TIME
 After consultation with my project supervisor and one of New Zealand Energy Council modelers, the OseMOSYS methodology was recommended.
 Subsequently, I began developing an scalable open source energy system under this OseMOSYS methodology.
 
-\subsubsection{OseMOYSIS}\label{OseMOSYS}
-The OseMOSYS methodology was the next best alternative to the TIMES for modelling large scale energy systems.
-OseMOSYS proved to be the better of the two methods as more closely aligned with the overall scope and purpose of the project.
-The aforementioned tradeoffs are justified given the usability and availability of OseMOSYS.
+\subsubsection{OseMOYSIS Overview}\label{OseMOSYS}
+The OseMOSYS methodology was the next best alternative to TIMES for modelling large scale energy systems.
 TIMES can model useful complexities such as stochastic processes.
+However, OseMOSYS proved to be the better of the two methods as more closely aligned with the overall scope and purpose of the project.
+The aforementioned tradeoffs are justified given the usability and availability of OseMOSYS.
 
 There is an online community who make contributions to the development of OseMOSYS.
 Their mission is to make energy modelling more transparent and accessible.
-This online community are developing three versions of OseMOSYS accompanied with exemplar energy systems.
+This online community is developing three versions of OseMOSYS accompanied with exemplar energy systems.
+The resources created by this online community can be found on Github \cite{GHOM}.
+A version of OseMOSYS was available in GAMS, GNU Mathprog or Python (Pyomo).
+Each version was at different stages of development. 
+The GNU Mathprog version was chosen as was one of the most complete of the three versions including two energy systems examples.
+The model and data files were downloaded as text files and stored in the project's working directory.
 
+\subsubsection{OseMOSYS Implementation}
+It is not practical to explain the entire model given the scale of OseMOSYS. 
+Therefore, the provision of a high level outline follows. Please refer to the research compendium for the complete model and comprehensive description.
+The OseMOSYS model contains 11 sets, 52 parameters, 67 variables, 1 objective function and 94 constraints. 
+A summary of the model's components are as follows:
+\begin{table}[H]
+	\centering
+	\begin{tabular}{||c | c||} 
+	 \hline
+	 Component & Factors \\ [0.5ex] 
+	 \hline\hline
+	 Sets & Year, Technology, Timeslice, Fuel, Emission\\ 
+	 & Mode of Operation, Region, Season, Day Type \\
+	 & Daily Time Bracket, Storage \\
+	 \hline  
+	 Parameters & Trade, Activities, Demand Profiles, Costs \\
+	 & Storage Rates, Conversion Rates, Emission Limits etc \\
+	 \hline
+	 Variables & Demand, Storage Rates, Production \\
+	 & Emissions Penalties, Operating Costs, Technology Use etc\\
+	 \hline
+	 Constraints &  Energy Balances, Production, Charging\\
+	 & Discharging, Storage Costs, Capacities and Investments\\ 
+	 & Renewable Energy Production, Emissions Accounting etc \\[1ex] 
+	 \hline
+	\end{tabular}
+	\caption{OseMOSYS Components}
+	\label{table:1}
+	\end{table}
+The sets are the primary components to the model. Therefore, it is important they are explained to provide greater context.
+\begin{enumerate}
+	\item \textbf{Year}: Represents the timeframe of the model containing all years to be considered.
+	\item \textbf{Technology}: Represent any element in the energy system that changes a commodity from one form to another, uses it or supplies it.
+	The modeller is free to intepret the technology. It may be a single technology e.g. a power plant or an aggregation of many technologies e.g. millions of solar panels.
+	\item \textbf{Timeslice}: Represents the times resolution of the model through time splits.
+	\item \textbf{Fuel}: Represents any energy vector, proxies or energy service flowing through technologies. Depending on the required analysis, fuels may be individual groups, aggregate group or artificially separated.
+	\item \textbf{Emission}: Represents emissions potentially derived from operating technologies.
+	\item \textbf{Mode of Operation}: Represents the number of modes a technology may have. If a technology can have various inputs and output fuels
+	, and can choose any linear combination of inputs and outputs, this may be expressed as a mode of operation. E.g. a CHP plant may produce heat in one mode and electricity in another.
+	\item \textbf{Region}: Represents the regions to modelled as explained in section \ref{geopar}. Supply-demand energy balances for all energy vectors, including trade with other regions, are ensured.
+	\item \textbf{Season}: Represents the number of seasons accounted for e.g. Summer, Autumn , Winter and Spring. These are expressed as successive integers e.g. Summer = 1, Autumn = 2.
+	\item \textbf{Day Type}: Represents the number of days types accounted for e.g. Weekend, Weekday. These are expressed as successive integers e.g. Weekend = 1, Weekday = 2.
+	\item \textbf{Daily Time Bracket}: Represents the number of splits for a day e.g. night, morning, afternoon, evening. These are expressed as successive integers e.g. night = 1, morning = 2, afternoon = 3, evening = 4.
+	\item \textbf{Storage}: Represents storage facilities/capabilities used in the model.
+\end{enumerate}
+\begin{wrapfigure}{l}{0.5\textwidth}
+	\begin{align*}
+		\textbf{Min:} \sum_{r}\sum_{y} \text{TotalDiscountedCost}_{r,y}
+	\end{align*}
+	\caption{OseMOSYS Objective Function}
+	\label{fig:OOF}
+\end{wrapfigure}
 
-The OseMOSYS implementation and CPLEX solver needed solve the systems the formulation of an lp-format file through the combination of user-defined data and model text files.
+Combinations of sets are used to define the parameters and variables.
+These parameters and variables are used to set constraints. 
+The objective function uses the constraints to find the optimal variables.
+The objective function is the minimisation of discounted investment costs in each region across all years specified in the forecast horizon (Figure \ref{fig:OOF}).
+Total discounted cost is the sum of the total discounted costs by technology over all the technologies.
+
+\subsubsection{OseMOSYS Integration}
+
+An lp-format file was required to solve OseMOSYS implementations with a solver.
 These files are written in GNU Mathprog, a language intended for describing linear mathematical programming models \cite{GNU_Mathprog}. 
-The OseMOSYS model file is stored in an excel sheet to make the OseMOSYS methodology transparent for the user. 
-The model structure is converted into the required text file using the CreateModelFile function in the GOCPI package.
 GNU Mathprog is a subset of the Algebraic Mathematical Programming Language (AMPL) \cite{AMPL} and consists of user-defined sets of statements and data blocks.
 The custom anaconda environment (\textbf{osemosys}) was created to facilitate this model formulation. This environment contains the libcxx package which provides a standard library of C++ functionalities.
 The GNU Linear Programming Kit (GLPK) sits within this library. GLPK uses GNU Mathprog to solve large-scale linear programming (LP), mixed integer programming (MIP), and other related problems. 
-GLPK is called using the \textbf{glpsol} command in the osemosys conda environment:\
+GLPK is called using the \textbf{glpsol} command in the osemosys conda environment:
 \begin{align*}	
 	\textbf{glpsol -m model.txt -d data.txt --wlp GOCPI.lp}
 \end{align*}
-The correct installation of the GLPK was tested using the Utopian example data and model files using the aforementioned glpsol function.
-The necessary lp-format file was generated for the CPLEX solver. 
-This was paramount before disembarking on developing a standardised energy systems development method to generate both text and data files from a user-defined energy systems.
+The aforementioned glpsol command converts converts a data and model text file to an lp-file. 
+The command also solves the problem if the energy system is not too complex.
+It is likely glpsol would not be able to solve larger scale energy system therefore a commercial solver would be needed.
+The installation of the GLPK was tested using the Utopian example data and model files using the aforementioned glpsol function.
+The necessary lp-format file was generated for the users chosen solver. 
+This was paramount before disembarking on developing a standardised energy systems development method to generate both text and data files from user-defined energy systems.
+
+\subsubsection{OseMOSYS Model Storage}
+Energy modelling and OseMOSYS can be quite complex. It is important this complexity is conveyed to the user so they understand how to build their own energy systems.
+Subsequently, an Excel-based template was created to describe and store all model components. The \textbf{GOCPI-OseMOSYS-Structure.xlsx} contains
+all the sets, parameters, variables and constraints needed for an OseMOSYS model. The spreadsheet also includes descriptions of all model components
+and the ability to toggle their inclusion in the user defined model.
+
+
 \subsection{Standardised Forecasting Methodology: GOCPI Package Development}
 \subsubsection{Navigation Module}
 \subsubsection{EnergySystems Module}
@@ -751,7 +825,7 @@ This was paramount before disembarking on developing a standardised energy syste
 
 \subsubsection{Energy System Functions}
 Many functions were to enable scalable energy system modelling. 
-The most important functions are highlighted in this section.
+The most important functions are addressed in this section.
 The function \textbf{def set\_discount\_rate} calculates the discount rate for each region.
 This function is most important as the discount rate underpins the total value of discounted cash flows and the objective function.
 The discount rate is calculated using the weighted average cost of capital (WACC) method.
@@ -806,7 +880,7 @@ Monthly returns are annualised as follows:
 The cost of ordinary equity is calculated using the Capital Assets Pricing Model (CAPM). 
 Both New Zealand and Australia are assumed to have market risk co-efficients ($\beta$) of zero as their fiscal policy is market independent.
 This methodology is appropriate for both public and private entities.
-\subsection{package Interface and Distribution}
+\subsection{Interface}
 \newpage
 \section{Results}
 \newpage
