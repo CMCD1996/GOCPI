@@ -142,6 +142,7 @@ This form is to accompany
 \listoffigures
 \newpage
 \listoftables
+\newpage
 \section{Introduction}
 \section{Literature Review}
 \subsection{An Introduction to Energy}
@@ -569,7 +570,7 @@ This change occurred very recently
 This service uses IBM Cloud to access assets through credentials, create model deployments in IBM's servers and execute jobs to solve models.
 The model deployments must be Python-based models with jobs specifying a payloads containing input data.
 
-\subsubsection{PyPI}
+\subsubsection{PyPI}\label{PyPI}
 PyPI\footnote{https://pypi.org/} is the Python Package Index, a repository of software for the python programming language.
 This repository helps you find and install software developed by the Python community who have decided to share their work.
 The GOCPI package is distributed from this platform to enable as many as possible the ability to model their own energy systems to inform and question energy policy and investment.
@@ -624,7 +625,7 @@ Cities may be combined to compare countries with similar populations or of resid
 The user may also build energy systems on a continent level. After the formation of an exhaustive list of geographies, the exploration and adaptation of energy system modelling
 methodologies could begin.
 
-\subsection{Energy Modelling: TIMES and OseMOSYS}
+\subsection{Energy Modelling: TIMES}
 The World Energy Council devised three energy scenarios to inform energy policy and investment. These are Hard Rock, Unfinished Symphony and Modern Jazz \cite{TR:8}.
 New Zealand devised two energy scenarios to inform national energy policy and investment. These are Tui and Kea \cite{TR:2}. 
 The TIMES Modelling Methodology underpins the construction of these modelling techniques.
@@ -635,7 +636,7 @@ An implementation of TIMES is divisible into a five stage process as displayed i
 \begin{figure}[H]
     \centering
 	\includegraphics[width=0.8\textwidth]{TIMES.png}
-	\caption{TIMES Implementation Process}\
+	\caption{TIMES Implementation Process}
 	\label{fig:times}
 \end{figure}
 
@@ -714,7 +715,8 @@ An alternative methodology would trade the complexity and sophistication of TIME
 After consultation with my project supervisor and one of New Zealand Energy Council modelers, the OseMOSYS methodology was recommended.
 Subsequently, I began developing an scalable open source energy system under this OseMOSYS methodology.
 
-\subsubsection{OseMOYSIS Overview}\label{OseMOSYS}
+\subsection{Energy Modelling: OseMOSYS}
+\subsubsection{Overview}\label{OseMOSYS}
 The OseMOSYS methodology was the next best alternative to TIMES for modelling large scale energy systems.
 TIMES can model useful complexities such as stochastic processes.
 However, OseMOSYS proved to be the better of the two methods as more closely aligned with the overall scope and purpose of the project.
@@ -729,7 +731,7 @@ Each version was at different stages of development.
 The GNU Mathprog version was chosen as was one of the most complete of the three versions including two energy systems examples.
 The model and data files were downloaded as text files and stored in the project's working directory.
 
-\subsubsection{OseMOSYS Implementation}
+\subsubsection{Implementation}\label{OIMPLEM}
 It is not practical to explain the entire model given the scale of OseMOSYS. 
 Therefore, the provision of a high level outline follows. Please refer to the research compendium for the complete model and comprehensive description.
 The OseMOSYS model contains 11 sets, 52 parameters, 67 variables, 1 objective function and 94 constraints. 
@@ -788,7 +790,7 @@ The objective function uses the constraints to find the optimal variables.
 The objective function is the minimisation of discounted investment costs in each region across all years specified in the forecast horizon (Figure \ref{fig:OOF}).
 Total discounted cost is the sum of the total discounted costs by technology over all the technologies.
 
-\subsubsection{OseMOSYS Integration}
+\subsubsection{Integration}
 
 An lp-format file was required to solve OseMOSYS implementations with a solver.
 These files are written in GNU Mathprog, a language intended for describing linear mathematical programming models \cite{GNU_Mathprog}. 
@@ -806,23 +808,23 @@ The installation of the GLPK was tested using the Utopian example data and model
 The necessary lp-format file was generated for the users chosen solver. 
 This was paramount before disembarking on developing a standardised energy systems development method to generate both text and data files from user-defined energy systems.
 
-\subsubsection{OseMOSYS Model Storage}
+\subsubsection{Storage}\label{OSTORAGE}
 Energy modelling and OseMOSYS can be quite complex. It is important this complexity is conveyed to the user so they understand how to build their own energy systems.
 Subsequently, an Excel-based template was created to describe and store all model components. The \textbf{GOCPI-OseMOSYS-Structure.xlsx} contains
 all the sets, parameters, variables and constraints needed for an OseMOSYS model. The spreadsheet also includes descriptions of all model components
-and the ability to toggle their inclusion in the user defined model.
+and the ability to toggle their inclusion in the user defined model. 
+The user may customise the structure of their energy model by making adjustments to the model's components in the GOCPI-OseMOSYS-Structure Excel sheet.
+Constraints may be added or removed and the objective function changed to consider other factors e.g. the minimise emissions penalties or maximise the uptake of renewable technologies.
+The base model came from the model text file, written in GNU Mathprog, stored in the OseMOSYS Github Repository.
+The template was adjusted to ensure constraint, variable and parameter indices were consistent with the demo data files.
 
-
-\subsection{Standardised Forecasting Methodology: GOCPI Package Development}
-\subsubsection{Navigation Module}
-\subsubsection{EnergySystems Module}
-\subsubsection{CreateCases Module}
-\subsubsection{Forecasting Module}
-\subsubsection{Optimisation Module}
-\subsection{Forecasting Energy Systems}
+\subsection{Building Energy Systems}\label{BES}
+After the correct installation and initialisation of the OseMOSYS structure, 
+it was appropriate to begin developing a methodology for building energy systems.
+The first step in this process was to understand the components and structure of the Utopia.txt example available for distribution from the OseMOSYS Github repository.
 \subsubsection{Utopia Example}
 \subsubsection{NZ Example}
-
+After understanding the structure of the Utopian example
 \subsubsection{Energy System Functions}
 Many functions were to enable scalable energy system modelling. 
 The most important functions are addressed in this section.
@@ -880,7 +882,130 @@ Monthly returns are annualised as follows:
 The cost of ordinary equity is calculated using the Capital Assets Pricing Model (CAPM). 
 Both New Zealand and Australia are assumed to have market risk co-efficients ($\beta$) of zero as their fiscal policy is market independent.
 This methodology is appropriate for both public and private entities.
+
+\subsection{Standardised Forecasting Methodology: GOCPI Package Development}
+
+\subsubsection{PyPI and Directory Structure}
+The aforementioned distribution method PyPI (section \ref{PyPI}) was most appropriate.
+The GOCPI project is listed as an active project.
+
+\begin{wrapfigure}{r}{0.4\textwidth}
+	\centering
+	\includegraphics[width = 0.25\textwidth]{GOCPI-package-structure}
+	\caption{GOCPI File Structure}
+	\label{fig:GPS}
+\end{wrapfigure}
+
+The package requires a specific directory structure to publish new distributions.
+The \textbf{GOCPI} stores several files required for the package: 
+A sub directory of the same name containing an initialisation file (\textbf{init.py}) and package modules. 
+A distributions sub directory (\textbf{dist}) for new package versions. 
+A python file for setup information (\textbf{setup.py}) and a setup file for package configuration (\textbf{setup.cfg}).
+Lastly, there is a sub directory storing text files related to dependencies, package information and source links.
+
+New distributions are stored in the \textbf{dist} displayed in figure \ref{fig:GPS}.
+\textbf{Twine} is a package to upload new setup descriptions, configurations and code changes via the local terminal.
+PyPI enables the immediate release and availability of the GOCPI package.
+Users can continue to use the product as new versions are released.
+
+The development of the GOCPI package used the following process:
+\begin{enumerate}
+	\item Make additions, deletions or increments to package modules.
+	\item Update the initialisation file to reflect additions, deletions or increments.
+	\item Update package information in the \textbf{setup.py} file and increment package version number.
+	\item Create a new distribution (tar.gz file) using the following command: \textbf{python setup.py sdist}.
+	\item Upload the new distribution using the following command: \textbf{twine upload dist/GOCPI-X.tar.gz'} where X is the version number.
+	\item Download the new distribution using the following command: \textbf{pip install --upgrade GOCPI'}.
+\end{enumerate}
+
+Over 80 distributions were released during this prototype's development. 
+Five models were developed to support the construction, forecasting and optimisation of user defined energy systems.
+These will be addressed in turn as contribute to the key functionalities of the package.
+The docstrings related to all written functions may be found in the appendix.
+
+\subsubsection{Navigation Module}
+The navigation module is a class to help the user navigate their local directory. 
+The most important function in this class is the \textbf{Find\_File} function.
+The purpose of Find\_File() is to enable the user to seek and find designated files in their modelling directory from a user defined directory root.
+This root may be any node in the directory structure. 
+The FindFile function is important for the other functions in this package.
+
+\subsubsection{EnergySystems Module}
+The EnergySystems module is a class to load, create model text files and create data text files from input user defined energy systems. 
+There are three core modules to this class. \textbf{load\_datacase()}, \textbf{create\_model\_file()} and \textbf{create\_data\_file()}.
+The EnergySystems class is initialized by taking the 11 sets, defined as lists, outlined in section \ref{OIMPLEM} as inputs. 
+The lengths of these sets are calculated using python's numpy module and used to initialise all 52 parameters related to an OseMOSYS energy model.
+
+The load\_datacase() function will load a user built energy system as outlined in section \ref{BES}. 
+The function simply replaces the EnergySystems initial sets and parameters with the ones defined by the user.
+The create\_model\_file() reads the GOCPI\_OseMOSYS\_Structure.xlsx explained in section \ref{OSTORAGE} using the pandas module and writes the generated dataframe to a text file in the correct structure.
+
+The create\_data\_file() function is the most extensive of the three functions in this class.
+Simplistically, the function write the python arrays and matrices for each set and parameter to one text file.
+Each set and parameter must have the correct syntax and structure to create a compatible data file written as a text file.
+Effectively, user-defined python-based multi-dimensional lists/arrays had to be converted into GNU Mathprog-structure data blocks.
+This GNU Mathprog conversion had to occur for all 11 sets and 52 parameters.
+Sets and parameters varied in size, ranging from one dimensional arrays/lists to five dimensional matrices.
+The variability of size and need for correct naming conventions created a considerable design challenge.
+This solution had to change based on the users inputs while still generating the correct GNU Mathprog structure.
+The solution was to design a conversion block for each set and parameter. 
+Examples of set and conversion block are shown in listings \ref{lst:ODSPGCB} and \ref{lst:TDCPGCB}.
+
+\begin{lstlisting}[language=Python,label = {lst:ODSPGCB},caption = {One Dimensional Set Python to GNU Mathprog Conversion Block}]
+	# year
+	set_string = ' '.join(self.year)
+	f.write('set YEAR\t:=\t{0};\n'.format(set_string))
+\end{lstlisting}
+
+\begin{lstlisting}[language=Python,label = {lst:TDCPGCB},caption = Two Dimensional Parameter Python to GNU Mathprog Conversion Block]
+
+	# DaySplit = np.zeros((llh,ly))
+	param = 'DaySplit'
+	f.write('#\n')
+	columns = self.year
+	column_string = ' '.join(columns)
+	# Writes index specific parameter values to the text files
+	if toggle_defaults[param] == True:
+		f.write("param\t{0}\tdefault\t{1}:\t{2}:=\n".format(
+			param, defaults_dictionary[param], column_string))
+		# Converts maxtrix rows to list
+		array = np.array(self.dailytimebracket)
+		array = array.T
+		lt = array.tolist()
+		# Creates 2D matrix for this value
+		mat = self.DaySplit[:, :]
+		# Converts combined matrix to list and combines lists
+		matlist = mat.tolist()
+		#Combines the two lists
+		combined_list = list(zip(lt, matlist))
+		# Writes index specific parameter values to the text files
+		f.write("param\t{0}\t:{1}:=\n".format(param, column_string))
+		for line in combined_list:
+			combinedflat = ''.join(str(line))
+			combinedflat = combinedflat.replace('[', '')
+			combinedflat = combinedflat.replace(']', '')
+			combinedflat = combinedflat.replace("'", '')
+			combinedflat = combinedflat.replace(",", '')
+			combinedflat = combinedflat.replace("(", '')
+			combinedflat = combinedflat.replace(")", '')
+			f.write("{0}\n".format(combinedflat))
+	else:
+		f.write("param\t{0}\tdefault\t{1}:=\n".format(
+			param, defaults_dictionary[param]))
+	f.write(';\n')
+\end{lstlisting}
+Refer to the Research Compendium for the complete set of 63 Python to GNU Mathprog Conversion Blocks in the create\_data\_file() function.
+
+\subsubsection{CreateCases Module}
+
+
+\subsubsection{Forecasting Module}
+
+\subsubsection{Optimisation Module}
+
+
 \subsection{Interface}
+Website available here.
 \newpage
 \section{Results}
 \newpage

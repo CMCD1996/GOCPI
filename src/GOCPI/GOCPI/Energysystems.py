@@ -13,10 +13,21 @@ class Energy_Systems:
         """ Function to create complete energy system set to prepare datafile, as per the established model.
 
         Args:
-            Sets:
-                year (list): Set of Years
-                region (region): Set of Regions
-                emission (list): Set of Emissions
+            year (list): [description]
+            region (list): [description]
+            emission (list): [description]
+            technology (list): [description]
+            capacity_technology (list): [description]
+            availability_technology (list): [description]
+            fuel (list): [description]
+            specified_fuel (list): [description]
+            accumulated_fuel (list): [description]
+            timeslice (list): [description]
+            mode_of_operation (list): [description]
+            storage (list): [description]
+            daytype (list): [description]
+            season (list): [description]
+            dailytimebracket (list): [description]
         """
         self.year = year
         self.region = region
