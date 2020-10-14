@@ -791,7 +791,6 @@ The objective function is the minimisation of discounted investment costs in eac
 Total discounted cost is the sum of the total discounted costs by technology over all the technologies.
 
 \subsubsection{Integration}
-
 An lp-format file was required to solve OseMOSYS implementations with a solver.
 These files are written in GNU Mathprog, a language intended for describing linear mathematical programming models \cite{GNU_Mathprog}. 
 GNU Mathprog is a subset of the Algebraic Mathematical Programming Language (AMPL) \cite{AMPL} and consists of user-defined sets of statements and data blocks.
@@ -821,11 +820,22 @@ The template was adjusted to ensure constraint, variable and parameter indices w
 \subsection{Building Energy Systems}\label{BES}
 After the correct installation and initialisation of the OseMOSYS structure, 
 it was appropriate to begin developing a methodology for building energy systems.
+This section will elaborate
 The first step in this process was to understand the components and structure of the Utopia.txt example available for distribution from the OseMOSYS Github repository.
 \subsubsection{Utopia Example}
-\subsubsection{NZ Example}
-After understanding the structure of the Utopian example
-\subsubsection{Energy System Functions}
+\subsubsection{NZ Example} \label{NZES}
+The construction of a NZ energy system was undertaken after understanding the structure of the Utopian example.
+The purpose of the NZ energy system example was to demonstrate the practicality and usability of this model.
+The NZ energy system models the energy systems of New Zealand, Australia and a bi-directional trade relationship between the two nations.
+After disembarking on the development of a user-defined energy system, the limitations inhibiting the formation of a complete system were made apparent.
+These a briefly described as follows:
+\begin{enumerate}
+	\item \textbf{Data Availability}: Publicly available and accurate data is hard to find when devising energy system.
+	This project was able to access publicly available from government agencies and global reporting entities.
+	However, data in different jurisdictions is recorded differently, making a consist
+	\item \textbf{Time Constraints}:
+\end{enumerate}
+\subsubsection{Energy System Concepts}
 Many functions were to enable scalable energy system modelling. 
 The most important functions are addressed in this section.
 The function \textbf{def set\_discount\_rate} calculates the discount rate for each region.
@@ -997,7 +1007,10 @@ Examples of set and conversion block are shown in listings \ref{lst:ODSPGCB} and
 Refer to the Research Compendium for the complete set of 63 Python to GNU Mathprog Conversion Blocks in the create\_data\_file() function.
 
 \subsubsection{CreateCases Module}
-
+The create cases module is the most comprehensive of the GOCPI package.
+This module sets the user-defined sets and parameters to an energy systems class.
+The construction of an energy system occurs in a processing script.
+The development of the NZ energy system was facilitated in the (\textbf{GOCPI\_NZ\_Example.gyp}) script as explained in section \ref{NZES}.
 
 \subsubsection{Forecasting Module}
 
