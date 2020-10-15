@@ -576,7 +576,7 @@ This repository helps you find and install software developed by the Python comm
 The GOCPI package is distributed from this platform to enable as many as possible the ability to model their own energy systems to inform and question energy policy and investment.
 Enter command: \textbf{pip install GOCPI} in the terminal to install the package using pip package management software.
 
-\subsubsection{Code Style}
+\subsubsection{Code Style} \label{CS}
 The GOCPI project is developed as the GOCPI package where all development code is organised.
 The PEP8 style for Python Code is the formatting style for development code \cite{PEP8}. 
 All code is formatted with \textbf{yapf}, a formatter maintained by Google to format created Python files.
@@ -827,18 +827,35 @@ The first step in this process was to understand the components and structure of
 The construction of a NZ energy system was undertaken after understanding the structure of the Utopian example.
 The purpose of the NZ energy system example was to demonstrate the practicality and usability of this model.
 The NZ energy system models the energy systems of New Zealand, Australia and a bi-directional trade relationship between the two nations.
-After disembarking on the development of a user-defined energy system, the limitations inhibiting the formation of a complete system were made apparent.
-These a briefly described as follows:
+After disembarking on the development of a user-defined energy system, the limitations inhibiting the formation of a complete system were apparent.
+These are briefly described as follows:
 \begin{enumerate}
-	\item \textbf{Data Availability}: Publicly available and accurate data is hard to find when devising energy system.
+	\item \textbf{Data Availability}: Publicly available and accurate data is hard to find when creating energy systems.
 	This project was able to access publicly available from government agencies and global reporting entities.
-	However, data in different jurisdictions is recorded differently, making a consist
-	\item \textbf{Time Constraints}:
+	However, data is recorded differently depending on the region.
+	This creates issues with building consistency between modelled regions.
+	Many underlying must be made to build energy systems.
+	These assumptions may change per region.
+	It is recommended there is access to consistent data source for all regions the user intends to model.
+
+	\item \textbf{Time Constraints}: The construction of an energy system is very time consuming.
+	The NZ Energy system between Australia and New Zealand required the collection and scripting of a lot of data.
+	This example was only between two regions.
+	The model can support the maximum number of combination for modelled regions the IBM Watson Machine Learning Decision Optimisation service can solve to find a feasible solution.
+	The construction of a feasible and realistic energy system could be a Part IV project in itself.
 \end{enumerate}
+These limitations led to the abandonment of developing a complete energy system.
+The NZ example is partially complete to show proof of concept.
+Section \ref{FutureWork} explains next steps in finishing this example.
+
 \subsubsection{Energy System Concepts}
-Many functions were to enable scalable energy system modelling. 
-The most important functions are addressed in this section.
+The construction of energy systems requires a firm grasp on several concepts. 
+These concepts are either related to general financial and energy theory or specific to the OseMOSYS methodology.
+The most important concepts are discussed as follows:
+
 The function \textbf{def set\_discount\_rate} calculates the discount rate for each region.
+The \textbf{discount rate} for a region is one of the most important concepts as informs 
+for discounted costs and therefore
 This function is most important as the discount rate underpins the total value of discounted cash flows and the objective function.
 The discount rate is calculated using the weighted average cost of capital (WACC) method.
 The WACC, cost of equity, cost of preference equity and pre-tax cost of debt are calculated as follows:
@@ -1004,7 +1021,8 @@ Examples of set and conversion block are shown in listings \ref{lst:ODSPGCB} and
 			param, defaults_dictionary[param]))
 	f.write(';\n')
 \end{lstlisting}
-Refer to the Research Compendium for the complete set of 63 Python to GNU Mathprog Conversion Blocks in the create\_data\_file() function.
+Please refer to the Research Compendium for the complete set of 63 Python to GNU Mathprog Conversion Blocks in the create\_data\_file() function.
+The create\_data\_file() is approximately 2000 lines including commenting and formatting described in section \ref{CS}.
 
 \subsubsection{CreateCases Module}
 The create cases module is the most comprehensive of the GOCPI package.
@@ -1026,7 +1044,7 @@ Website available here.
 \newpage
 \section{Future Work}
 \subsection{Python Development}
-\subsection{NZ Example Completion}
+\subsection{NZ Example Completion} \label{FutureWork}
 \subsection{Develop Simulation Processes}
 \subsection{Develop Investment Strategies}
 \newpage

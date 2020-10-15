@@ -46,9 +46,9 @@
 \contentsline {subsubsection}{\numberline {4.6.1}Utopia Example}{28}{subsubsection.4.6.1}% 
 \contentsline {subsubsection}{\numberline {4.6.2}NZ Example}{28}{subsubsection.4.6.2}% 
 \contentsline {subsubsection}{\numberline {4.6.3}Energy System Concepts}{28}{subsubsection.4.6.3}% 
-\contentsline {subsection}{\numberline {4.7}Standardised Forecasting Methodology: GOCPI Package Development}{29}{subsection.4.7}% 
-\contentsline {subsubsection}{\numberline {4.7.1}PyPI and Directory Structure}{29}{subsubsection.4.7.1}% 
-\contentsline {subsubsection}{\numberline {4.7.2}Navigation Module}{30}{subsubsection.4.7.2}% 
+\contentsline {subsection}{\numberline {4.7}Standardised Forecasting Methodology: GOCPI Package Development}{30}{subsection.4.7}% 
+\contentsline {subsubsection}{\numberline {4.7.1}PyPI and Directory Structure}{30}{subsubsection.4.7.1}% 
+\contentsline {subsubsection}{\numberline {4.7.2}Navigation Module}{31}{subsubsection.4.7.2}% 
 \contentsline {subsubsection}{\numberline {4.7.3}EnergySystems Module}{31}{subsubsection.4.7.3}% 
 \contentsline {subsubsection}{\numberline {4.7.4}CreateCases Module}{32}{subsubsection.4.7.4}% 
 \contentsline {subsubsection}{\numberline {4.7.5}Forecasting Module}{32}{subsubsection.4.7.5}% 
