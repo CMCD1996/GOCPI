@@ -863,13 +863,12 @@ Each parameter in the model formulation relates to an important financial or ene
 The scope of this report prevents the inclusion of detailed descriptions for all integral components.
 Subsequently, the most important concepts are addressed in this section. 
 
-
 The \textbf{Reference Energy System (RES)} describes the network flows amongst the energy production, conversion and consumption of different fuels from different technologies.
 Essentially, it maps all relevant technologies to be involved in the energy system. Each region in the energy system has it's own energy system.
 
-\begin{wrapfigure}{l}{0.5\textwidth}
+\begin{wrapfigure}{l}{0.7\textwidth}
 	\begin{center}
-		\includegraphics[width=0.48\textwidth]{URES.png}
+		\includegraphics[width=0.68\textwidth]{URES.png}
 	\end{center}
 	\caption{Utopian Reference Energy System}
 	\label{fig:URES}
@@ -878,10 +877,13 @@ The Utopian energy example shown in figure \ref{fig:URES} is the a very simple m
 A realistic example is more complex. The NZ Reference Energy System was designed using energy balance data available from
 the Ministry of Business, Innovation and Employment (\cite{MBIE_ESEM}). 
 Table \ref{table:2} describes the technologies mapped in the New Zealand RES.
+The fuels within the RES are  described in table \ref{table:3}.
 The Australian RES was derived from the Department of Industry, Science, Energy and Resources energy data set (\cite{DOEA_ESEM}).
 The Australian dataset was adapted to match the NZ RES as RES between regions must follow the same format. 
 Simplifying assumptions are required to ensure RES consistency.  
-This creates issues
+Subsequently, these assumptions create limitations in building large energy systems as it may be difficult to create consistent energy systems with the available data.
+Figure \ref{fig:NZRES} shows the RES mapping of the NZ energy system for this project.
+In comparison to the Utopian RES, the mapping of technologies for the NZ RES is more complex.
 
 \begin{table}[H]
 	\centering
@@ -889,26 +891,58 @@ This creates issues
 	 \hline
 	 Categories & Technologies \\ [0.5ex] 
 	 \hline\hline
-	 Production & Year, Technology, Timeslice, Fuel, Emission\\ 
-	 & Mode of Operation, Region, Season, Day Type \\
-	 & Daily Time Bracket, Storage \\
+	 Production & Indigenous Production, Imports, Exports, Stock Change\\
+	 & International Transport\\ 
 	 \hline  
-	 Conversion & Trade, Activities, Demand Profiles, Costs \\
-	 & Storage Rates, Conversion Rates, Emission Limits etc \\
+	 Conversion & Electricity Generation, Cogeneration, Fuel Production \\
+	 & Other Transformation, Losses and Own Use\\
 	 \hline
-	 Consumption& Demand, Storage Rates, Production \\
-	 & Emissions Penalties, Operating Costs, Technology Use etc\\
+	 Non Energy Uses & Non Energy \\
+	 \hline
+	 Consumption& Agriculture, Forestry and Logging, Fishing, Mining \\
+	 &Food Processing, Textiles, Wood Pulp Paper and Printing, Chemicals\\
+	 &Non Metallic Minerals, Basic Metals\\
+	 &Mechanical Electrical Equippment, Building and Construction\\
+	 &Unallocated, Commercial, Transport, Residential\\
 	 \hline
 	\end{tabular}
 	\caption{NZ Reference Energy System Technologies}
 	\label{table:2}
-	\end{table}
-
+\end{table}
+\begin{table}[H]
+	\centering
+	\begin{tabular}{||c | c||} 
+	 \hline
+	 Fuel Type & Fuels \\ [0.5ex] 
+	 \hline\hline
+	 Coal & Bituminous, Sub Bitumious, Lignite\\
+	 \hline
+	 Oil & Crude Feedstocks NGL, LPG, Petrol, Diesel, Fuel Oil\\
+	 & Aviation Fuel and Kerosine, Oil Other\\
+	 \hline
+	 Natural Gas & Natural Gas\\
+	 \hline 
+	 Renewables & Hydro, Geothermal, Solar, Wind, \\
+	 & Liquid Biofuels, Biogas, Wood\\
+	 \hline
+	 Electricity & Electricity\\
+	 \hline
+	 Waste Heat & Waste Heat\\
+	 \hline
+	\end{tabular}
+	\caption{NZ Reference Energy System Fuels}
+	\label{table:3}
+\end{table}
+\begin{figure}[H]
+    \centering
+    \includegraphics[width = \textwidth]{NZRES.png}
+	\caption{NZ Reference Energy System Mapping}
+	\label{fig:NZRES}%
+\end{figure}
 
 The \textbf{Energy Balance} describe the base year energy production, conversion and consumption to be forecast moving forward.
 
-The \textbf{trade elationships} describe the exchange of energy-related resources between modelled regions in the energy system.
-
+The \textbf{trade relationships} describe the exchange of energy-related resources between modelled regions in the energy system.
 
 The \textbf{discount rate} for a region is one of the most important concepts as informs 
 for discounted costs and therefore the objective function.
@@ -958,7 +992,7 @@ Risk free rates ($r_f$) were derived from average 10 Year Government bond yields
 Reserve Bank (Reserve Bank of New Zealand \cite{RBNZ_WIR} and Reserve Bank of Australia \cite{RBA_ZCL}). 
 The monthly market returns for each region are annualised to calculate the market return ($r_m$). 
 Each regions has a market index which serves as a proxy for the market. 
-New Zealand has the NZX 50 and Australia has the ASX 200 \textbf{[Insert NZX50 and ASX200 references later]}.
+New Zealand has the NZX 50 and Australia has the ASX 200. Historical returns related to these proxies were downloaded from yahoo finance \cite{ASX_NZ}.
 Monthly returns are annualised as follows: 
 \begin{align}
 	\text{Annualised Monthly Return} = ((1 + \frac{\text{Index}_{\text{Ending}}-\text{Index}_{\text{Beginning}}}{\text{Index}_{\text{Beginning}}})^{(\frac{12}{\text{Number of Months}})})-1

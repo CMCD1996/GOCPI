@@ -714,6 +714,27 @@
       \field{howpublished}{Available at \url{https://iea-etsap.org/index.php/etsap-tools/model-generators/times} (2020/04/26)}
       \field{title}{Overview of TIMES Modelling Tool}
     \endentry
+    \entry{ASX_NZ}{misc}{}
+      \name{author}{1}{}{%
+        {{hash=f84671263e4caef5426fe17966c5c4c9}{%
+           family={Finance},
+           familyi={F\bibinitperiod},
+           given={Yahoo},
+           giveni={Y\bibinitperiod}}}%
+      }
+      \strng{namehash}{f84671263e4caef5426fe17966c5c4c9}
+      \strng{fullhash}{f84671263e4caef5426fe17966c5c4c9}
+      \strng{bibnamehash}{f84671263e4caef5426fe17966c5c4c9}
+      \strng{authorbibnamehash}{f84671263e4caef5426fe17966c5c4c9}
+      \strng{authornamehash}{f84671263e4caef5426fe17966c5c4c9}
+      \strng{authorfullhash}{f84671263e4caef5426fe17966c5c4c9}
+      \field{sortinit}{F}
+      \field{sortinithash}{669c706c6f1fbf3b5a83d26f1d9e9e72}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{howpublished}{Available at \url{https://nz.finance.yahoo.com/} (2019/10/21)}
+      \field{title}{ASX 200 and NZX 50 Historical Returns}
+    \endentry
     \entry{W:11}{misc}{}
       \name{author}{1}{}{%
         {{hash=3b7b6b8265be5b9ecf6c7a4b376126a3}{%

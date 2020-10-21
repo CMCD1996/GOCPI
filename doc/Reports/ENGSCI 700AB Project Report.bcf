@@ -2053,6 +2053,7 @@
     <bcf:citekey order="56">AG_FR</bcf:citekey>
     <bcf:citekey order="57">RBNZ_WIR</bcf:citekey>
     <bcf:citekey order="58">RBA_ZCL</bcf:citekey>
+    <bcf:citekey order="59">ASX_NZ</bcf:citekey>
   </bcf:section>
   <!-- SORTING TEMPLATES -->
   <bcf:sortingtemplate name="nty">
