@@ -461,6 +461,32 @@
       \verb http://www.sciencedirect.com/science/article/pii/B9780080922256500103
       \endverb
     \endentry
+    \entry{MBIE_ESEM}{misc}{}
+      \name{author}{2}{}{%
+        {{hash=3f8613acff8db9376592df22b6b724fe}{%
+           family={Business\bibnamedelima Innovation},
+           familyi={B\bibinitperiod\bibinitdelim I\bibinitperiod},
+           given={Ministry},
+           giveni={M\bibinitperiod},
+           prefix={of},
+           prefixi={o\bibinitperiod}}}%
+        {{hash=a3a5ef5ccef664818cd6ba9dc23907f6}{%
+           family={Employment},
+           familyi={E\bibinitperiod}}}%
+      }
+      \strng{namehash}{fea8651e23e4bb6f7b62002dc7a344c0}
+      \strng{fullhash}{fea8651e23e4bb6f7b62002dc7a344c0}
+      \strng{bibnamehash}{fea8651e23e4bb6f7b62002dc7a344c0}
+      \strng{authorbibnamehash}{fea8651e23e4bb6f7b62002dc7a344c0}
+      \strng{authornamehash}{fea8651e23e4bb6f7b62002dc7a344c0}
+      \strng{authorfullhash}{fea8651e23e4bb6f7b62002dc7a344c0}
+      \field{sortinit}{B}
+      \field{sortinithash}{276475738cc058478c1677046f857703}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{howpublished}{Available at \url{https://www.mbie.govt.nz/building-and-energy/energy-and-natural-resources/energy-statistics-and-modelling/} (2019/10/21)}
+      \field{title}{Energy Statistics and Modelling}
+    \endentry
     \entry{TR:5}{report}{}
       \name{author}{1}{}{%
         {{hash=0f7fc6af09f9d8ae5aa35805f7e3d438}{%
@@ -588,6 +614,34 @@
       \field{type}{techreport}
       \field{volume}{q}
       \field{year}{2019}
+    \endentry
+    \entry{DOEA_ESEM}{misc}{}
+      \name{author}{2}{}{%
+        {{hash=5c52110b4f1087fa4ee67fc8352cd517}{%
+           family={Department\bibnamedelimb of\bibnamedelima Industry},
+           familyi={D\bibinitperiod\bibinitdelim o\bibinitperiod\bibinitdelim I\bibinitperiod},
+           given={Energy},
+           giveni={E\bibinitperiod},
+           suffix={Science},
+           suffixi={S\bibinitperiod}}}%
+        {{hash=30b2a5b4b93475cfcdee51f9f56ad97c}{%
+           family={Resources},
+           familyi={R\bibinitperiod},
+           given={Australian\bibnamedelima Government},
+           giveni={A\bibinitperiod\bibinitdelim G\bibinitperiod}}}%
+      }
+      \strng{namehash}{6fd9d4e723e660e71589866dc6661dd3}
+      \strng{fullhash}{6fd9d4e723e660e71589866dc6661dd3}
+      \strng{bibnamehash}{6fd9d4e723e660e71589866dc6661dd3}
+      \strng{authorbibnamehash}{6fd9d4e723e660e71589866dc6661dd3}
+      \strng{authornamehash}{6fd9d4e723e660e71589866dc6661dd3}
+      \strng{authorfullhash}{6fd9d4e723e660e71589866dc6661dd3}
+      \field{sortinit}{D}
+      \field{sortinithash}{2ef1bd9a78cc71eb74d7231c635177b8}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{howpublished}{Available at \url{https://www.energy.gov.au/government-priorities/energy-data} (2019/10/21)}
+      \field{title}{Energy Data}
     \endentry
     \entry{J:3}{article}{}
       \name{author}{2}{}{%

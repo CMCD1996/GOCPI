@@ -824,6 +824,12 @@ This section will elaborate
 The first step in this process was to understand the components and structure of the Utopia.txt example available from the OseMOSYS Github repository.
 \subsubsection{Utopia Example}
 The Utopia example models a 'Utopian' energy system.
+The system is developed by the OseMOSYS community to function as a baseline model and inform the construction of user-defined energy systems.
+The deconstruction of this system was paramount to understanding how to produce a standardised approach to building energy systems described in section \ref{ESM}.
+The Utopian example is a self sufficient energy system with no trade relationships. 
+The system models twelve fuels processed in 21 technologies over a 21 year forecast period.
+The model tracks two types of emissions, two modes of operation for some technologies and one storage technology.
+The utopian data file benchmarked the structure needed to generate compatible energy system data files. 
 
 \subsubsection{NZ Example} \label{NZES}
 The construction of a NZ energy system was undertaken after understanding the structure of the Utopian example.
@@ -853,7 +859,55 @@ Section \ref{FutureWork} explains next steps in finishing this example.
 \subsubsection{Energy System Concepts}
 The construction of energy systems requires a firm grasp on several concepts. 
 These concepts are either related to general financial and energy theory or specific to the OseMOSYS methodology.
-The most important concepts are discussed as follows:
+Each parameter in the model formulation relates to an important financial or energy concept in the energy system.
+The scope of this report prevents the inclusion of detailed descriptions for all integral components.
+Subsequently, the most important concepts are addressed in this section. 
+
+
+The \textbf{Reference Energy System (RES)} describes the network flows amongst the energy production, conversion and consumption of different fuels from different technologies.
+Essentially, it maps all relevant technologies to be involved in the energy system. Each region in the energy system has it's own energy system.
+
+\begin{wrapfigure}{l}{0.5\textwidth}
+	\begin{center}
+		\includegraphics[width=0.48\textwidth]{URES.png}
+	\end{center}
+	\caption{Utopian Reference Energy System}
+	\label{fig:URES}
+\end{wrapfigure}
+The Utopian energy example shown in figure \ref{fig:URES} is the a very simple mapping of technologies.
+A realistic example is more complex. The NZ Reference Energy System was designed using energy balance data available from
+the Ministry of Business, Innovation and Employment (\cite{MBIE_ESEM}). 
+Table \ref{table:2} describes the technologies mapped in the New Zealand RES.
+The Australian RES was derived from the Department of Industry, Science, Energy and Resources energy data set (\cite{DOEA_ESEM}).
+The Australian dataset was adapted to match the NZ RES as RES between regions must follow the same format. 
+Simplifying assumptions are required to ensure RES consistency.  
+This creates issues
+
+\begin{table}[H]
+	\centering
+	\begin{tabular}{||c | c||} 
+	 \hline
+	 Categories & Technologies \\ [0.5ex] 
+	 \hline\hline
+	 Production & Year, Technology, Timeslice, Fuel, Emission\\ 
+	 & Mode of Operation, Region, Season, Day Type \\
+	 & Daily Time Bracket, Storage \\
+	 \hline  
+	 Conversion & Trade, Activities, Demand Profiles, Costs \\
+	 & Storage Rates, Conversion Rates, Emission Limits etc \\
+	 \hline
+	 Consumption& Demand, Storage Rates, Production \\
+	 & Emissions Penalties, Operating Costs, Technology Use etc\\
+	 \hline
+	\end{tabular}
+	\caption{NZ Reference Energy System Technologies}
+	\label{table:2}
+	\end{table}
+
+
+The \textbf{Energy Balance} describe the base year energy production, conversion and consumption to be forecast moving forward.
+
+The \textbf{trade elationships} describe the exchange of energy-related resources between modelled regions in the energy system.
 
 
 The \textbf{discount rate} for a region is one of the most important concepts as informs 
@@ -960,7 +1014,7 @@ The purpose of Find\_File() is to enable the user to seek and find designated fi
 This root may be any node in the directory structure. 
 The FindFile function is important for the other functions in this package.
 
-\subsubsection{EnergySystems Module}
+\subsubsection{EnergySystems Module} \label{ESM}
 The EnergySystems module is a class to load, create model text files and create data text files from input user defined energy systems. 
 There are three core modules to this class. \textbf{load\_datacase()}, \textbf{create\_model\_file()} and \textbf{create\_data\_file()}.
 The EnergySystems class is initialized by taking the 11 sets, defined as lists, outlined in section \ref{OIMPLEM} as inputs. 

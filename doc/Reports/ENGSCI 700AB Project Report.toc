@@ -45,25 +45,25 @@
 \contentsline {subsection}{\numberline {4.6}Building Energy Systems}{28}{subsection.4.6}% 
 \contentsline {subsubsection}{\numberline {4.6.1}Utopia Example}{28}{subsubsection.4.6.1}% 
 \contentsline {subsubsection}{\numberline {4.6.2}NZ Example}{28}{subsubsection.4.6.2}% 
-\contentsline {subsubsection}{\numberline {4.6.3}Energy System Concepts}{28}{subsubsection.4.6.3}% 
-\contentsline {subsection}{\numberline {4.7}Standardised Forecasting Methodology: GOCPI Package Development}{30}{subsection.4.7}% 
-\contentsline {subsubsection}{\numberline {4.7.1}PyPI and Directory Structure}{30}{subsubsection.4.7.1}% 
-\contentsline {subsubsection}{\numberline {4.7.2}Navigation Module}{31}{subsubsection.4.7.2}% 
-\contentsline {subsubsection}{\numberline {4.7.3}EnergySystems Module}{31}{subsubsection.4.7.3}% 
-\contentsline {subsubsection}{\numberline {4.7.4}CreateCases Module}{32}{subsubsection.4.7.4}% 
-\contentsline {subsubsection}{\numberline {4.7.5}Forecasting Module}{33}{subsubsection.4.7.5}% 
-\contentsline {subsubsection}{\numberline {4.7.6}Optimisation Module}{33}{subsubsection.4.7.6}% 
-\contentsline {subsection}{\numberline {4.8}Interface}{33}{subsection.4.8}% 
-\contentsline {section}{\numberline {5}Results}{34}{section.5}% 
-\contentsline {section}{\numberline {6}Discussion}{35}{section.6}% 
-\contentsline {section}{\numberline {7}Future Work}{36}{section.7}% 
-\contentsline {subsection}{\numberline {7.1}Python Development}{36}{subsection.7.1}% 
-\contentsline {subsection}{\numberline {7.2}NZ Example Completion}{36}{subsection.7.2}% 
-\contentsline {subsection}{\numberline {7.3}Develop Simulation Processes}{36}{subsection.7.3}% 
-\contentsline {subsection}{\numberline {7.4}Develop Investment Strategies}{36}{subsection.7.4}% 
-\contentsline {section}{\numberline {8}Summary and Conclusion}{37}{section.8}% 
-\contentsline {section}{\numberline {9}Reflection}{38}{section.9}% 
-\contentsline {section}{\numberline {10}Appendices}{39}{section.10}% 
-\contentsline {subsection}{\numberline {10.1}Project Modules}{39}{subsection.10.1}% 
-\contentsline {subsection}{\numberline {10.2}OseMOSYS Model}{39}{subsection.10.2}% 
-\contentsline {section}{\numberline {11}References}{40}{section.11}% 
+\contentsline {subsubsection}{\numberline {4.6.3}Energy System Concepts}{29}{subsubsection.4.6.3}% 
+\contentsline {subsection}{\numberline {4.7}Standardised Forecasting Methodology: GOCPI Package Development}{31}{subsection.4.7}% 
+\contentsline {subsubsection}{\numberline {4.7.1}PyPI and Directory Structure}{31}{subsubsection.4.7.1}% 
+\contentsline {subsubsection}{\numberline {4.7.2}Navigation Module}{32}{subsubsection.4.7.2}% 
+\contentsline {subsubsection}{\numberline {4.7.3}EnergySystems Module}{32}{subsubsection.4.7.3}% 
+\contentsline {subsubsection}{\numberline {4.7.4}CreateCases Module}{33}{subsubsection.4.7.4}% 
+\contentsline {subsubsection}{\numberline {4.7.5}Forecasting Module}{34}{subsubsection.4.7.5}% 
+\contentsline {subsubsection}{\numberline {4.7.6}Optimisation Module}{34}{subsubsection.4.7.6}% 
+\contentsline {subsection}{\numberline {4.8}Interface}{34}{subsection.4.8}% 
+\contentsline {section}{\numberline {5}Results}{35}{section.5}% 
+\contentsline {section}{\numberline {6}Discussion}{36}{section.6}% 
+\contentsline {section}{\numberline {7}Future Work}{37}{section.7}% 
+\contentsline {subsection}{\numberline {7.1}Python Development}{37}{subsection.7.1}% 
+\contentsline {subsection}{\numberline {7.2}NZ Example Completion}{37}{subsection.7.2}% 
+\contentsline {subsection}{\numberline {7.3}Develop Simulation Processes}{37}{subsection.7.3}% 
+\contentsline {subsection}{\numberline {7.4}Develop Investment Strategies}{37}{subsection.7.4}% 
+\contentsline {section}{\numberline {8}Summary and Conclusion}{38}{section.8}% 
+\contentsline {section}{\numberline {9}Reflection}{39}{section.9}% 
+\contentsline {section}{\numberline {10}Appendices}{40}{section.10}% 
+\contentsline {subsection}{\numberline {10.1}Project Modules}{40}{subsection.10.1}% 
+\contentsline {subsection}{\numberline {10.2}OseMOSYS Model}{40}{subsection.10.2}% 
+\contentsline {section}{\numberline {11}References}{41}{section.11}% 
