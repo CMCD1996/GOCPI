@@ -41,6 +41,28 @@
       \field{howpublished}{Available at \url{https://www.iea.org/fuels-and-technologies} (2020/04/21)}
       \field{title}{Fuels and Technologies}
     \endentry
+    \entry{IEA_WEB}{misc}{}
+      \name{author}{1}{}{%
+        {{hash=465b82815b27cd8a52e2be2cc108c330}{%
+           family={Agency},
+           familyi={A\bibinitperiod},
+           given={International\bibnamedelima Energy},
+           giveni={I\bibinitperiod\bibinitdelim E\bibinitperiod}}}%
+      }
+      \strng{namehash}{465b82815b27cd8a52e2be2cc108c330}
+      \strng{fullhash}{465b82815b27cd8a52e2be2cc108c330}
+      \strng{bibnamehash}{465b82815b27cd8a52e2be2cc108c330}
+      \strng{authorbibnamehash}{465b82815b27cd8a52e2be2cc108c330}
+      \strng{authornamehash}{465b82815b27cd8a52e2be2cc108c330}
+      \strng{authorfullhash}{465b82815b27cd8a52e2be2cc108c330}
+      \field{extraname}{2}
+      \field{sortinit}{A}
+      \field{sortinithash}{d77c7cdd82ff690d4c3ef13216f92f0b}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{howpublished}{Available at \url{https://www.iea.org/subscribe-to-data-services/world-energy-balances-and-statistics} (2019/10/21)}
+      \field{title}{World Energy Balances and Statistics}
+    \endentry
     \entry{IEA_WEM}{report}{}
       \name{author}{1}{}{%
         {{hash=465b82815b27cd8a52e2be2cc108c330}{%
@@ -58,7 +80,7 @@
       \strng{authorbibnamehash}{465b82815b27cd8a52e2be2cc108c330}
       \strng{authornamehash}{465b82815b27cd8a52e2be2cc108c330}
       \strng{authorfullhash}{465b82815b27cd8a52e2be2cc108c330}
-      \field{extraname}{2}
+      \field{extraname}{3}
       \field{sortinit}{A}
       \field{sortinithash}{d77c7cdd82ff690d4c3ef13216f92f0b}
       \field{labelnamesource}{author}
@@ -81,7 +103,7 @@
       \strng{authorbibnamehash}{34605fd298257fdf64e8196ec3e114bd}
       \strng{authornamehash}{34605fd298257fdf64e8196ec3e114bd}
       \strng{authorfullhash}{34605fd298257fdf64e8196ec3e114bd}
-      \field{extraname}{3}
+      \field{extraname}{4}
       \field{sortinit}{A}
       \field{sortinithash}{d77c7cdd82ff690d4c3ef13216f92f0b}
       \field{labelnamesource}{author}
@@ -879,6 +901,42 @@
       \field{note}{Python. org, 1565}
       \field{title}{PEP 8: Style Guide for Python Code}
       \field{year}{2001}
+    \endentry
+    \entry{ARIMA}{book}{}
+      \name{author}{2}{}{%
+        {{hash=545fc8489be67de406e55444d3e26ea3}{%
+           family={Hyndman},
+           familyi={H\bibinitperiod},
+           given={{Robin John}},
+           giveni={R\bibinitperiod}}}%
+        {{hash=95cfbf5a8396e08b434cc6f7f5b18dc8}{%
+           family={Athanasopoulos},
+           familyi={A\bibinitperiod},
+           given={George},
+           giveni={G\bibinitperiod}}}%
+      }
+      \list{language}{1}{%
+        {English}%
+      }
+      \list{location}{1}{%
+        {Australia}%
+      }
+      \list{publisher}{1}{%
+        {OTexts}%
+      }
+      \strng{namehash}{8721f21ae791f82f9ddc1c4aeabe655f}
+      \strng{fullhash}{8721f21ae791f82f9ddc1c4aeabe655f}
+      \strng{bibnamehash}{8721f21ae791f82f9ddc1c4aeabe655f}
+      \strng{authorbibnamehash}{8721f21ae791f82f9ddc1c4aeabe655f}
+      \strng{authornamehash}{8721f21ae791f82f9ddc1c4aeabe655f}
+      \strng{authorfullhash}{8721f21ae791f82f9ddc1c4aeabe655f}
+      \field{sortinit}{H}
+      \field{sortinithash}{5f15a7bc777ad49ff15aa4d2831b1681}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{edition}{2nd}
+      \field{title}{Forecasting: Principles and Practice}
+      \field{year}{2018}
     \endentry
     \entry{IBM_AI}{misc}{}
       \name{author}{1}{}{%
