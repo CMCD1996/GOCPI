@@ -57,8 +57,8 @@
 \contentsline {subsubsection}{\numberline {4.9.2}Navigation Module}{34}{subsubsection.4.9.2}% 
 \contentsline {subsubsection}{\numberline {4.9.3}EnergySystems Module}{34}{subsubsection.4.9.3}% 
 \contentsline {subsubsection}{\numberline {4.9.4}CreateCases Module}{35}{subsubsection.4.9.4}% 
-\contentsline {subsubsection}{\numberline {4.9.5}Forecasting Module}{36}{subsubsection.4.9.5}% 
-\contentsline {subsubsection}{\numberline {4.9.6}Optimisation Module}{36}{subsubsection.4.9.6}% 
+\contentsline {subsubsection}{\numberline {4.9.5}Forecasting Class}{36}{subsubsection.4.9.5}% 
+\contentsline {subsubsection}{\numberline {4.9.6}Optimisation Class}{36}{subsubsection.4.9.6}% 
 \contentsline {section}{\numberline {5}Results}{37}{section.5}% 
 \contentsline {section}{\numberline {6}Discussion}{38}{section.6}% 
 \contentsline {section}{\numberline {7}Future Work}{39}{section.7}% 
