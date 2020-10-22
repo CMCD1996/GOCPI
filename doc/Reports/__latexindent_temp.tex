@@ -1042,6 +1042,13 @@ The cost of ordinary equity is calculated using the Capital Assets Pricing Model
 Both New Zealand and Australia are assumed to have market risk co-efficients ($\beta$) of zero as their fiscal policy is market independent.
 This methodology is appropriate for both public and private entities.
 
+The RES, energy balances, trade relationships and discount rate are a small subset of the energy systems concepts required to build a model.
+Please refer to the model sets and parameters in the \textbf{GOCPI\_OseMOSYS\_Structure} for the complete list of required energy system concepts required to build an energy system.
+
+\subsection{Optimisation}
+
+
+\subsection{Interface}
 \subsection{Standardised Forecasting Methodology: GOCPI Package Development}
 
 \subsubsection{PyPI and Directory Structure}
@@ -1159,16 +1166,17 @@ The create\_data\_file() is approximately 2000 lines including commenting and fo
 \subsubsection{CreateCases Module}
 The create cases module is the most comprehensive of the GOCPI package.
 This module sets the user-defined sets and parameters to an energy systems class.
+The class is initialised with an empty set of energy system sets and parameters. 
+Each set and parameter has it's own function to create the necessary function.
 The construction of an energy system occurs in a processing script.
 The development of the NZ energy system was facilitated in the (\textbf{GOCPI\_NZ\_Example.gyp}) script as explained in section \ref{NZES}.
+Please refer to the \textbf{Research Compendium} for a complete set of the functions in \textbf{CreateCases} class and the \textbf{GOCPI\_NZ\_Example.gyp} Processing Script.
 
 \subsubsection{Forecasting Module}
+The forecasting module contains three modules at the moment.
 
 \subsubsection{Optimisation Module}
 
-
-\subsection{Interface}
-Website available here.
 \newpage
 \section{Results}
 \newpage
