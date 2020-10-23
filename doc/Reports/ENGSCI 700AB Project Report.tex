@@ -1046,7 +1046,15 @@ The RES, energy balances, trade relationships and discount rate are a small subs
 Please refer to the model sets and parameters in the \textbf{GOCPI\_OseMOSYS\_Structure} for the complete list of required energy system concepts required to build an energy system.
 
 \subsection{Optimisation}
+OseMOSYS is formulated as a linear programme. The energy system required a commercial solver to solve the problem.
+A few commercial solvers were considered.
 
+\subsubsection{Gurobi}
+
+\begin{itemize}
+	\item \textbf{Gurobi}
+	\item \textbf{CPLEX}
+\end{itemize}
 
 \subsection{Interface}
 \subsection{Standardised Forecasting Methodology: GOCPI Package Development}
@@ -1176,12 +1184,38 @@ Please refer to the \textbf{Research Compendium} for a complete set of the funct
 The forecasting class contains three modules. The \textbf{energy\_balance\_base()}, \textbf{calculate\_constant\_average\_growth\_rate()} and \textbf{calculate\_cagr\_forecast()}.
 A major issue in designing energy systems is the inconsistency of energy data across different regions.
 An energy system requires consistent reference energy systems across regions. The structure is the same with the flows and values different.
-The energy\_balance\_base() module combats this issue.
+
+The energy\_balance\_base() module solves this issue.
 The International Energy Agency publishes a comprehensive dataset for energy balances in OECD countries. 
 A process was developed to extract IEA's Energy balance for a target region.
-The
+The 2017 IEA world energy balances were downloaded and stored in two csv files, approximately \$1.35 million data points.
+The files are processed to extract a unique list of fuels, technologies and regions.
+These lists are stored as data frames. The user is prompted to select a target region to extract energy balances.
+The energy balances for the target region is stored as a pivot table and returns a dictionary with the unique list and pivot table.
+The NZ energy system example uses different data for proof of concept. 
+Further developments should prioritise the International Energy Agency dataset to standardise the structure of energy balances for reference energy systems.
+
+The calculate\_constant\_average\_growth\_rate() is a simple function to calculate the constant average growth rate (CAGR) for a time period.
+The formula is expressed in figure \ref{fig:CAGR}.
+
+The calculate\_cagr\_forecast() uses the calculate\_constant\_average\_growth\_rate() function to forecast energy balances.
+Several dictionaries are passed into the function to forecast the energy balance for each interval in the time horizon.
 
 \subsubsection{Optimisation Class}
+The optimisation class has two core functions. \textbf{run\_cplex\_local()} and \textbf{run\_ibm\_wml\_do()}.
+These two modules run IBM's commercial solvers, either locally or remotely, to minimise the total discounted cost for the energy system.
+
+The run\_cplex\_local() module initialises a model, loads the energy system model file, solves the problem and returns the objective function value.
+
+The run\_ibm\_wml\_do() is more complex.
+Firstly, the function initialises IBM credentials to grant the user remote access to IBM Cloud services.
+After initialising credentials, a deployment space is created on the IBM Cloud service.
+If needed, data assets are created.
+After the creation of a deployment space, a deployment is either created or loaded from an existing set.
+Lastly, a model payload is sent as a new job request to the deployment to solve the problem using the IBM Watson Machine Learning Decision Optimisation service.
+This function is written to accommodate future developments of a Python-based OseMOSYS methodology. The reasons 
+
+The remaining functions remain in development at this stage of the project.
 
 \newpage
 \section{Results}

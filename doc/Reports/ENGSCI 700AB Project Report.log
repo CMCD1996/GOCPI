@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.20 (TeX Live 2019) (preloaded format=pdflatex 2020.3.23)  22 OCT 2020 18:25
+This is pdfTeX, Version 3.14159265-2.6-1.40.20 (TeX Live 2019) (preloaded format=pdflatex 2020.3.23)  23 OCT 2020 08:52
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -1425,23 +1425,23 @@ Overfull \hbox (4.28487pt too wide) in paragraph at lines 289--291
  []
 
 [12] [13] [14] [15] [16] [17] [18] [19] [20] [21]
-<TIMES.png, id=617, 963.6pt x 195.39667pt>
+<TIMES.png, id=622, 963.6pt x 195.39667pt>
 File: TIMES.png Graphic file (type png)
 <use TIMES.png>
 Package pdftex.def Info: TIMES.png  used on input line 638.
 (pdftex.def)             Requested size: 362.37598pt x 73.47928pt.
  [22]
-<VEDAConsistent.png, id=631, 610.28pt x 41.15375pt>
+<VEDAConsistent.png, id=636, 610.28pt x 41.15375pt>
 File: VEDAConsistent.png Graphic file (type png)
 <use VEDAConsistent.png>
 Package pdftex.def Info: VEDAConsistent.png  used on input line 668.
 (pdftex.def)             Requested size: 452.96826pt x 30.54684pt.
-<VEDABASE.png, id=633, 270.00874pt x 260.975pt>
+<VEDABASE.png, id=638, 270.00874pt x 260.975pt>
 File: VEDABASE.png Graphic file (type png)
 <use VEDABASE.png>
 Package pdftex.def Info: VEDABASE.png  used on input line 675.
 (pdftex.def)             Requested size: 226.48413pt x 218.91087pt.
-<VEDAScenarios.png, id=634, 269.005pt x 261.97874pt>
+<VEDAScenarios.png, id=639, 269.005pt x 261.97874pt>
 File: VEDAScenarios.png Graphic file (type png)
 <use VEDAScenarios.png>
 Package pdftex.def Info: VEDAScenarios.png  used on input line 676.
@@ -1452,17 +1452,17 @@ Overfull \hbox (7.83325pt too wide) in paragraph at lines 675--677
  []
 
 [23 <./TIMES.png (PNG copy)> <./VEDAConsistent.png>]
-<VEDATrade.png, id=646, 268.00125pt x 190.7125pt>
+<VEDATrade.png, id=651, 268.00125pt x 190.7125pt>
 File: VEDATrade.png Graphic file (type png)
 <use VEDATrade.png>
 Package pdftex.def Info: VEDATrade.png  used on input line 682.
 (pdftex.def)             Requested size: 135.89185pt x 96.70044pt.
-<VEDAResources.png, id=647, 274.02374pt x 189.70876pt>
+<VEDAResources.png, id=652, 274.02374pt x 189.70876pt>
 File: VEDAResources.png Graphic file (type png)
 <use VEDAResources.png>
 Package pdftex.def Info: VEDAResources.png  used on input line 683.
 (pdftex.def)             Requested size: 135.89185pt x 94.08124pt.
-<VEDADemand.png, id=648, 264.99pt x 185.69376pt>
+<VEDADemand.png, id=653, 264.99pt x 185.69376pt>
 File: VEDADemand.png Graphic file (type png)
 <use VEDADemand.png>
 Package pdftex.def Info: VEDADemand.png  used on input line 684.
@@ -1472,7 +1472,7 @@ Package pdftex.def Info: VEDADemand.png  used on input line 684.
 Package wrapfig Warning: wrapfigure used inside a conflicting environment on input line 779.
 
 [27] [28]
-<URES.png, id=703, 488.82625pt x 387.4475pt>
+<URES.png, id=708, 488.82625pt x 387.4475pt>
 File: URES.png Graphic file (type png)
 <use URES.png>
 Package pdftex.def Info: URES.png  used on input line 872.
@@ -1513,7 +1513,7 @@ Overfull \hbox (24.54659pt too wide) in paragraph at lines 891--910
  []
 
 [29 <./URES.png>]
-<NZRES.png, id=717, 963.6pt x 542.025pt>
+<NZRES.png, id=722, 963.6pt x 542.025pt>
 File: NZRES.png Graphic file (type png)
 <use NZRES.png>
 Package pdftex.def Info: NZRES.png  used on input line 939.
@@ -1524,89 +1524,94 @@ Overfull \hbox (6.89737pt too wide) detected at line 955
  []
 
 [31] [32]
-<GOCPI-package-structure.png, id=755, 169.63374pt x 265.99374pt>
+<GOCPI-package-structure.png, id=760, 169.63374pt x 265.99374pt>
 File: GOCPI-package-structure.png Graphic file (type png)
 <use GOCPI-package-structure.png>
-Package pdftex.def Info: GOCPI-package-structure.png  used on input line 1060.
+Package pdftex.def Info: GOCPI-package-structure.png  used on input line 1068.
 (pdftex.def)             Requested size: 113.24207pt x 177.56548pt.
-
-Overfull \hbox (29.94499pt too wide) in paragraph at lines 1083--1084
+ [33 <./GOCPI-package-structure.png>]
+Overfull \hbox (29.94499pt too wide) in paragraph at lines 1091--1092
 []\OT1/cmr/m/n/12 Upload the new dis-tri-bu-tion us-ing the fol-low-ing com-mand: \OT1/cmr/bx/n/12 twine up-load dist/GOCPI-
  []
 
-[33 <./GOCPI-package-structure.png>]
-Overfull \hbox (3.59627pt too wide) in paragraph at lines 1084--1085
+
+Overfull \hbox (3.59627pt too wide) in paragraph at lines 1092--1093
 []\OT1/cmr/m/n/12 Download the new dis-tri-bu-tion us-ing the fol-low-ing com-mand: \OT1/cmr/bx/n/12 pip in-stall --upgrade
  []
 
-(/usr/local/texlive/2019/texmf-dist/tex/latex/listings/lstlang1.sty
+[34] (/usr/local/texlive/2019/texmf-dist/tex/latex/listings/lstlang1.sty
 File: lstlang1.sty 2019/02/27 1.8b listings language file
-) [34] [35] [36] [37] [38] [39] [40] [41] [42]
+) [35]
+Overfull \hbox (14.56052pt too wide) in paragraph at lines 1205--1207
+\OT1/cmr/m/n/12 The op-ti-mi-sa-tion class has two core func-tions. \OT1/cmr/bx/n/12 run[]cplex[]local() \OT1/cmr/m/n/12 and \OT1/cmr/bx/n/12 run[]ibm[]wml[]do()\OT1/cmr/m/n/12 .
+ []
+
+[36] [37] [38] [39] [40] [41] [42] [43]
 
 Package biblatex Warning: No driver for entry type 'software'.
-(biblatex)                Using fallback driver on input line 1208.
+(biblatex)                Using fallback driver on input line 1243.
 
 
 Package biblatex Warning: No driver for entry type 'software'.
-(biblatex)                Using fallback driver on input line 1208.
+(biblatex)                Using fallback driver on input line 1243.
 
 
-Overfull \hbox (0.30544pt too wide) in paragraph at lines 1209--1209
+Overfull \hbox (0.30544pt too wide) in paragraph at lines 1244--1244
 \OT1/cmr/m/n/12 CO2 Emis-sions and Eco-nomic Growth''. In: \OT1/cmr/m/it/12 The En-ergy Jour-nal \OT1/cmr/m/n/12 33.3 (2012), pp. 23{
  []
 
-[43]
-Overfull \hbox (4.13197pt too wide) in paragraph at lines 1209--1209
+[44]
+Overfull \hbox (4.13197pt too wide) in paragraph at lines 1244--1244
 []\OT1/cmr/m/n/12 GAMS. \OT1/cmr/m/it/12 An In-tro-duc-tion to GAMS\OT1/cmr/m/n/12 . Avail-able at []$\OT1/cmtt/m/n/12 https : / / www . gams . com / products /
  []
 
 
 Package biblatex Warning: No driver for entry type 'software'.
-(biblatex)                Using fallback driver on input line 1208.
+(biblatex)                Using fallback driver on input line 1243.
 
 
-Overfull \hbox (9.57782pt too wide) in paragraph at lines 1209--1209
+Overfull \hbox (9.57782pt too wide) in paragraph at lines 1244--1244
 []\OT1/cmr/m/n/12 The Aus-tralian Gov-ern-ment. \OT1/cmr/m/it/12 Fi-nan-cial State-ments of the Gov-ern-ment of New Zealand
  []
 
 
 Package biblatex Warning: No driver for entry type 'software'.
-(biblatex)                Using fallback driver on input line 1208.
+(biblatex)                Using fallback driver on input line 1243.
 
 
 Package biblatex Warning: No driver for entry type 'software'.
-(biblatex)                Using fallback driver on input line 1208.
+(biblatex)                Using fallback driver on input line 1243.
 
 
-Overfull \hbox (0.91632pt too wide) in paragraph at lines 1209--1209
+Overfull \hbox (0.91632pt too wide) in paragraph at lines 1244--1244
 []\OT1/cmr/m/n/12 Richard Loulou, Gary Gold-stein, and Ken No-ble. ``Doc-u-men-ta-tion for the MARKEL
  []
 
-[44] [45]
-Package atveryend Info: Empty hook `BeforeClearDocument' on input line 1209.
-Package atveryend Info: Empty hook `AfterLastShipout' on input line 1209.
+[45] [46]
+Package atveryend Info: Empty hook `BeforeClearDocument' on input line 1244.
+Package atveryend Info: Empty hook `AfterLastShipout' on input line 1244.
  (./ENGSCI 700AB Project Report.aux)
-Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 1209.
-Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 1209.
+Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 1244.
+Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 1244.
 Package rerunfilecheck Info: File `"ENGSCI 700AB Project Report".out' has not changed.
-(rerunfilecheck)             Checksum: 6420463B7E45D411F30C485415F96691;5388.
+(rerunfilecheck)             Checksum: 8F3D96A01574E095CCE17473BDB13481;5454.
 Package logreq Info: Writing requests to '"ENGSCI 700AB Project Report".run.xml'.
 \openout1 = `"ENGSCI 700AB Project Report.run.xml"'.
 
  ) 
 Here is how much of TeX's memory you used:
- 40709 strings out of 492616
- 778485 string characters out of 6129481
- 1313702 words of memory out of 5000000
- 43830 multiletter control sequences out of 15000+600000
+ 40713 strings out of 492616
+ 778546 string characters out of 6129481
+ 1321645 words of memory out of 5000000
+ 43832 multiletter control sequences out of 15000+600000
  546859 words of font info for 79 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
  55i,17n,63p,934b,1716s stack positions out of 5000i,500n,10000p,200000b,80000s
 {/usr/local/texlive/2019/texmf-dist/fonts/enc/dvips/cm-super/cm-super-ts1.enc}</usr/local/texlive/2019/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx12.pfb></usr/local/texlive/2019/texmf-dist/fonts/type1/public/amsfonts/cm/cmcsc10.pfb></usr/local/texlive/2019/texmf-dist/fonts/type1/public/amsfonts/cm/cmex10.pfb></usr/local/texlive/2019/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi12.pfb></usr/local/texlive/2019/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi8.pfb></usr/local/texlive/2019/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb></usr/local/texlive/2019/texmf-dist/fonts/type1/public/amsfonts/cm/cmr12.pfb></usr/local/texlive/2019/texmf-dist/fonts/type1/public/amsfonts/cm/cmr6.pfb></usr/local/texlive/2019/texmf-dist/fonts/type1/public/amsfonts/cm/cmr7.pfb></usr/local/texlive/2019/texmf-dist/fonts/type1/public/amsfonts/cm/cmr8.pfb></usr/local/texlive/2019/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/local/texlive/2019/texmf-dist/fonts/type1/public/amsfonts/cm/cmti12.pfb></usr/local/texlive/2019/texmf-dist/fonts/type1/public/amsfonts/cm/cmtt10.pfb></usr/local/texlive/2019/texmf-dist/fonts/type1/public/amsfonts/cm/cmtt12.pfb></usr/local/texlive/2019/texmf-dist/fonts/type1/public/cm-super/sfrm1200.pfb>
-Output written on "ENGSCI 700AB Project Report.pdf" (46 pages, 922688 bytes).
+Output written on "ENGSCI 700AB Project Report.pdf" (47 pages, 929851 bytes).
 PDF statistics:
- 1048 PDF objects out of 1200 (max. 8388607)
- 957 compressed objects within 10 object streams
- 278 named destinations out of 1000 (max. 500000)
- 647 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 1058 PDF objects out of 1200 (max. 8388607)
+ 966 compressed objects within 10 object streams
+ 280 named destinations out of 1000 (max. 500000)
+ 655 words of extra memory for PDF output out of 10000 (max. 10000000)
 
