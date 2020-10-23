@@ -128,19 +128,32 @@
 	
 \end{titlepage}
 \newpage
-\section*{Completed Declaration of Contribution Form}
-This form is to accompany
-\newpage
 \section*{Abstract}
 \newpage
 \section*{Acknowledgements}
+\begin{center}
+	\textbf{Rosalind Archer}
+\end{center}
+I am most thankful for Rosalind. She was a guiding light in a most turbulent time.
+2019 and 2020 were incredibly tough years.
+Our meetings were a weekly highlight, giving a sense normalcy during the depths of the COVID-19 Lockdowns.
+Often accompanied by her two corgis, we embarked into the unknown in building a Python-based open source energy modelling tool.
+Surprisingly, energy modelling is quite complex.
+Our discussions encompassed a diverse range of intellectual stimulating topics, 
+from the phenomena of the West Texas Intermediate (WTI) future contracts going negative,
+to speculating on the transformation we will see in the education sector moving forward.
+Thank you for helping foster a growth mindset and build the confidence to not be afraid to fail.
+
+\newpage
+\section*{Declaration of Contribution}
+I proposed this project. I am the sole contributor.
+
 \newpage
 \tableofcontents
 \newpage
 \section*{Notion List}
 \newpage
 \listoffigures
-\newpage
 \listoftables
 \newpage
 \section{Introduction}
@@ -195,7 +208,7 @@ Carbon dioxide emissions from the consumption of oil, gas, and coal for combusti
 This subset of global emissions rose from 30336.7 Mtoe in 2008 to 33890.8 Mtoe in 2018, growing 11.72\% over this period \cite{TR:3}. 
 
 It is hard to argue anthropomorphic contributions to global emissions are not playing a role in climate change. 
-The Intergovernment Panel on Climate Change (IPCC) are an intergovernment body of the United Nations (UN). 
+The Inter-government Panel on Climate Change (IPCC) are an inter-government body of the United Nations (UN). 
 The IPCC inform relevant parties on the scientific basis of risk-induced climate change.
 The IPCC also convey it's natural, economic, and political implications. 
 The IPCC prepared a special report on Global Warming of 1.5 \si{\degree}C, based on an assessment of around 6,000 peer-reviewed publications. 
@@ -1050,13 +1063,15 @@ OseMOSYS is formulated as a linear programme. The energy system required a comme
 A few commercial solvers were considered.
 
 \subsubsection{Gurobi}
+The Gurobi suite of optimisation products
+was considered as the default commercial solver.
 
-\begin{itemize}
-	\item \textbf{Gurobi}
-	\item \textbf{CPLEX}
-\end{itemize}
+\subsubsection{IBM CPLEX}
 
 \subsection{Interface}
+An important component of the project was to make the tool accessible for those proficient in python.
+The model needed to easy to access and distributable.
+
 \subsection{Standardised Forecasting Methodology: GOCPI Package Development}
 
 \subsubsection{PyPI and Directory Structure}
@@ -1215,10 +1230,12 @@ After the creation of a deployment space, a deployment is either created or load
 Lastly, a model payload is sent as a new job request to the deployment to solve the problem using the IBM Watson Machine Learning Decision Optimisation service.
 This function is written to accommodate future developments of a Python-based OseMOSYS methodology. The reasons 
 
-The remaining functions remain in development at this stage of the project.
+The remaining functions are in development at this stage of the project.
 
 \newpage
 \section{Results}
+The intention of this project was to develop a global carbon pricing optimisation model.
+This is not a conventional research project. Therefore, there are bot
 \newpage
 \section{Discussion}
 \newpage

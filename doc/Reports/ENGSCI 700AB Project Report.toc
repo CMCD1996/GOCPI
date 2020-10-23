@@ -1,75 +1,76 @@
 \boolfalse {citerequest}\boolfalse {citetracker}\boolfalse {pagetracker}\boolfalse {backtracker}\relax 
-\contentsline {section}{\numberline {1}Introduction}{9}{section.1}% 
-\contentsline {section}{\numberline {2}Literature Review}{9}{section.2}% 
-\contentsline {subsection}{\numberline {2.1}An Introduction to Energy}{9}{subsection.2.1}% 
-\contentsline {subsection}{\numberline {2.2}Energy, Emissions, and the Economy}{9}{subsection.2.2}% 
-\contentsline {subsubsection}{\numberline {2.2.1}Energy}{9}{subsubsection.2.2.1}% 
-\contentsline {subsubsection}{\numberline {2.2.2}Emissions}{10}{subsubsection.2.2.2}% 
-\contentsline {subsubsection}{\numberline {2.2.3}Economy}{10}{subsubsection.2.2.3}% 
-\contentsline {subsection}{\numberline {2.3}Current Political Action}{11}{subsection.2.3}% 
-\contentsline {subsubsection}{\numberline {2.3.1}Paris Agreement}{11}{subsubsection.2.3.1}% 
-\contentsline {subsubsection}{\numberline {2.3.2}Carbon Pricing Initiatives}{12}{subsubsection.2.3.2}% 
-\contentsline {subsection}{\numberline {2.4}Opportunities and Challenges}{13}{subsection.2.4}% 
-\contentsline {subsubsection}{\numberline {2.4.1}Market-Based Approaches}{13}{subsubsection.2.4.1}% 
-\contentsline {subsubsection}{\numberline {2.4.2}Benefits and Costs to a Carbon Tax}{14}{subsubsection.2.4.2}% 
-\contentsline {subsubsection}{\numberline {2.4.3}Decarbonization, Investment, and Technology}{14}{subsubsection.2.4.3}% 
-\contentsline {subsection}{\numberline {2.5}Energy Modeling}{15}{subsection.2.5}% 
-\contentsline {subsubsection}{\numberline {2.5.1}Global and Domestic Energy Scenarios}{15}{subsubsection.2.5.1}% 
-\contentsline {subsubsection}{\numberline {2.5.2}The Integrated MARKEL-EFORM System (TIMES) Model}{16}{subsubsection.2.5.2}% 
-\contentsline {subsubsection}{\numberline {2.5.3}General Algebraic Modeling System (GAMS)}{16}{subsubsection.2.5.3}% 
-\contentsline {subsubsection}{\numberline {2.5.4}Open Source Energy Modeling System (OseMOSYS)}{16}{subsubsection.2.5.4}% 
-\contentsline {section}{\numberline {3}Project Scope and Research Objectives}{17}{section.3}% 
-\contentsline {section}{\numberline {4}Methodology and Implementation}{18}{section.4}% 
-\contentsline {subsection}{\numberline {4.1}Project organisation}{18}{subsection.4.1}% 
-\contentsline {subsubsection}{\numberline {4.1.1}Version Control}{18}{subsubsection.4.1.1}% 
-\contentsline {subsubsection}{\numberline {4.1.2}Folder Structure}{18}{subsubsection.4.1.2}% 
-\contentsline {subsubsection}{\numberline {4.1.3}Python}{19}{subsubsection.4.1.3}% 
-\contentsline {subsubsection}{\numberline {4.1.4}Package Management}{19}{subsubsection.4.1.4}% 
-\contentsline {subsubsection}{\numberline {4.1.5}Excel}{19}{subsubsection.4.1.5}% 
-\contentsline {subsubsection}{\numberline {4.1.6}IBM ILOG CPLEX Optimization}{20}{subsubsection.4.1.6}% 
-\contentsline {subsubsection}{\numberline {4.1.7}IBM Watson Machine Learning Service}{20}{subsubsection.4.1.7}% 
-\contentsline {subsubsection}{\numberline {4.1.8}PyPI}{21}{subsubsection.4.1.8}% 
-\contentsline {subsubsection}{\numberline {4.1.9}Code Style}{21}{subsubsection.4.1.9}% 
-\contentsline {subsubsection}{\numberline {4.1.10}Infrastructure}{21}{subsubsection.4.1.10}% 
-\contentsline {subsection}{\numberline {4.2}Documentation}{21}{subsection.4.2}% 
-\contentsline {subsubsection}{\numberline {4.2.1}Project updates}{21}{subsubsection.4.2.1}% 
-\contentsline {subsubsection}{\numberline {4.2.2}Meeting minutes}{22}{subsubsection.4.2.2}% 
-\contentsline {subsection}{\numberline {4.3}Geographical Partitioning}{22}{subsection.4.3}% 
-\contentsline {subsection}{\numberline {4.4}Energy Modelling: TIMES}{22}{subsection.4.4}% 
-\contentsline {subsubsection}{\numberline {4.4.1}TIMES: The Integrated Markel-Eform System}{22}{subsubsection.4.4.1}% 
-\contentsline {subsection}{\numberline {4.5}Energy Modelling: OseMOSYS}{25}{subsection.4.5}% 
-\contentsline {subsubsection}{\numberline {4.5.1}Overview}{25}{subsubsection.4.5.1}% 
-\contentsline {subsubsection}{\numberline {4.5.2}Implementation}{25}{subsubsection.4.5.2}% 
-\contentsline {subsubsection}{\numberline {4.5.3}Integration}{27}{subsubsection.4.5.3}% 
-\contentsline {subsubsection}{\numberline {4.5.4}Storage}{27}{subsubsection.4.5.4}% 
-\contentsline {subsection}{\numberline {4.6}Building Energy Systems}{28}{subsection.4.6}% 
-\contentsline {subsubsection}{\numberline {4.6.1}Utopia Example}{28}{subsubsection.4.6.1}% 
-\contentsline {subsubsection}{\numberline {4.6.2}NZ Example}{28}{subsubsection.4.6.2}% 
-\contentsline {subsubsection}{\numberline {4.6.3}Energy System Concepts}{29}{subsubsection.4.6.3}% 
-\contentsline {subsubsection}{\numberline {4.6.4}Reference Energy System}{29}{subsubsection.4.6.4}% 
-\contentsline {subsubsection}{\numberline {4.6.5}Energy Balances}{31}{subsubsection.4.6.5}% 
-\contentsline {subsubsection}{\numberline {4.6.6}Trade Relationships}{31}{subsubsection.4.6.6}% 
-\contentsline {subsubsection}{\numberline {4.6.7}Discount Rate}{31}{subsubsection.4.6.7}% 
-\contentsline {subsection}{\numberline {4.7}Optimisation}{33}{subsection.4.7}% 
-\contentsline {subsubsection}{\numberline {4.7.1}Gurobi}{33}{subsubsection.4.7.1}% 
-\contentsline {subsection}{\numberline {4.8}Interface}{33}{subsection.4.8}% 
-\contentsline {subsection}{\numberline {4.9}Standardised Forecasting Methodology: GOCPI Package Development}{33}{subsection.4.9}% 
-\contentsline {subsubsection}{\numberline {4.9.1}PyPI and Directory Structure}{33}{subsubsection.4.9.1}% 
-\contentsline {subsubsection}{\numberline {4.9.2}Navigation Module}{34}{subsubsection.4.9.2}% 
-\contentsline {subsubsection}{\numberline {4.9.3}EnergySystems Module}{34}{subsubsection.4.9.3}% 
+\contentsline {section}{\numberline {1}Introduction}{8}{section.1}% 
+\contentsline {section}{\numberline {2}Literature Review}{8}{section.2}% 
+\contentsline {subsection}{\numberline {2.1}An Introduction to Energy}{8}{subsection.2.1}% 
+\contentsline {subsection}{\numberline {2.2}Energy, Emissions, and the Economy}{8}{subsection.2.2}% 
+\contentsline {subsubsection}{\numberline {2.2.1}Energy}{8}{subsubsection.2.2.1}% 
+\contentsline {subsubsection}{\numberline {2.2.2}Emissions}{9}{subsubsection.2.2.2}% 
+\contentsline {subsubsection}{\numberline {2.2.3}Economy}{9}{subsubsection.2.2.3}% 
+\contentsline {subsection}{\numberline {2.3}Current Political Action}{10}{subsection.2.3}% 
+\contentsline {subsubsection}{\numberline {2.3.1}Paris Agreement}{10}{subsubsection.2.3.1}% 
+\contentsline {subsubsection}{\numberline {2.3.2}Carbon Pricing Initiatives}{11}{subsubsection.2.3.2}% 
+\contentsline {subsection}{\numberline {2.4}Opportunities and Challenges}{12}{subsection.2.4}% 
+\contentsline {subsubsection}{\numberline {2.4.1}Market-Based Approaches}{12}{subsubsection.2.4.1}% 
+\contentsline {subsubsection}{\numberline {2.4.2}Benefits and Costs to a Carbon Tax}{13}{subsubsection.2.4.2}% 
+\contentsline {subsubsection}{\numberline {2.4.3}Decarbonization, Investment, and Technology}{13}{subsubsection.2.4.3}% 
+\contentsline {subsection}{\numberline {2.5}Energy Modeling}{14}{subsection.2.5}% 
+\contentsline {subsubsection}{\numberline {2.5.1}Global and Domestic Energy Scenarios}{14}{subsubsection.2.5.1}% 
+\contentsline {subsubsection}{\numberline {2.5.2}The Integrated MARKEL-EFORM System (TIMES) Model}{15}{subsubsection.2.5.2}% 
+\contentsline {subsubsection}{\numberline {2.5.3}General Algebraic Modeling System (GAMS)}{15}{subsubsection.2.5.3}% 
+\contentsline {subsubsection}{\numberline {2.5.4}Open Source Energy Modeling System (OseMOSYS)}{15}{subsubsection.2.5.4}% 
+\contentsline {section}{\numberline {3}Project Scope and Research Objectives}{16}{section.3}% 
+\contentsline {section}{\numberline {4}Methodology and Implementation}{17}{section.4}% 
+\contentsline {subsection}{\numberline {4.1}Project organisation}{17}{subsection.4.1}% 
+\contentsline {subsubsection}{\numberline {4.1.1}Version Control}{17}{subsubsection.4.1.1}% 
+\contentsline {subsubsection}{\numberline {4.1.2}Folder Structure}{17}{subsubsection.4.1.2}% 
+\contentsline {subsubsection}{\numberline {4.1.3}Python}{18}{subsubsection.4.1.3}% 
+\contentsline {subsubsection}{\numberline {4.1.4}Package Management}{18}{subsubsection.4.1.4}% 
+\contentsline {subsubsection}{\numberline {4.1.5}Excel}{18}{subsubsection.4.1.5}% 
+\contentsline {subsubsection}{\numberline {4.1.6}IBM ILOG CPLEX Optimization}{19}{subsubsection.4.1.6}% 
+\contentsline {subsubsection}{\numberline {4.1.7}IBM Watson Machine Learning Service}{19}{subsubsection.4.1.7}% 
+\contentsline {subsubsection}{\numberline {4.1.8}PyPI}{20}{subsubsection.4.1.8}% 
+\contentsline {subsubsection}{\numberline {4.1.9}Code Style}{20}{subsubsection.4.1.9}% 
+\contentsline {subsubsection}{\numberline {4.1.10}Infrastructure}{20}{subsubsection.4.1.10}% 
+\contentsline {subsection}{\numberline {4.2}Documentation}{20}{subsection.4.2}% 
+\contentsline {subsubsection}{\numberline {4.2.1}Project updates}{20}{subsubsection.4.2.1}% 
+\contentsline {subsubsection}{\numberline {4.2.2}Meeting minutes}{21}{subsubsection.4.2.2}% 
+\contentsline {subsection}{\numberline {4.3}Geographical Partitioning}{21}{subsection.4.3}% 
+\contentsline {subsection}{\numberline {4.4}Energy Modelling: TIMES}{21}{subsection.4.4}% 
+\contentsline {subsubsection}{\numberline {4.4.1}TIMES: The Integrated Markel-Eform System}{21}{subsubsection.4.4.1}% 
+\contentsline {subsection}{\numberline {4.5}Energy Modelling: OseMOSYS}{24}{subsection.4.5}% 
+\contentsline {subsubsection}{\numberline {4.5.1}Overview}{24}{subsubsection.4.5.1}% 
+\contentsline {subsubsection}{\numberline {4.5.2}Implementation}{24}{subsubsection.4.5.2}% 
+\contentsline {subsubsection}{\numberline {4.5.3}Integration}{26}{subsubsection.4.5.3}% 
+\contentsline {subsubsection}{\numberline {4.5.4}Storage}{26}{subsubsection.4.5.4}% 
+\contentsline {subsection}{\numberline {4.6}Building Energy Systems}{27}{subsection.4.6}% 
+\contentsline {subsubsection}{\numberline {4.6.1}Utopia Example}{27}{subsubsection.4.6.1}% 
+\contentsline {subsubsection}{\numberline {4.6.2}NZ Example}{27}{subsubsection.4.6.2}% 
+\contentsline {subsubsection}{\numberline {4.6.3}Energy System Concepts}{28}{subsubsection.4.6.3}% 
+\contentsline {subsubsection}{\numberline {4.6.4}Reference Energy System}{28}{subsubsection.4.6.4}% 
+\contentsline {subsubsection}{\numberline {4.6.5}Energy Balances}{30}{subsubsection.4.6.5}% 
+\contentsline {subsubsection}{\numberline {4.6.6}Trade Relationships}{30}{subsubsection.4.6.6}% 
+\contentsline {subsubsection}{\numberline {4.6.7}Discount Rate}{30}{subsubsection.4.6.7}% 
+\contentsline {subsection}{\numberline {4.7}Optimisation}{32}{subsection.4.7}% 
+\contentsline {subsubsection}{\numberline {4.7.1}Gurobi}{32}{subsubsection.4.7.1}% 
+\contentsline {subsubsection}{\numberline {4.7.2}IBM CPLEX}{32}{subsubsection.4.7.2}% 
+\contentsline {subsection}{\numberline {4.8}Interface}{32}{subsection.4.8}% 
+\contentsline {subsection}{\numberline {4.9}Standardised Forecasting Methodology: GOCPI Package Development}{32}{subsection.4.9}% 
+\contentsline {subsubsection}{\numberline {4.9.1}PyPI and Directory Structure}{32}{subsubsection.4.9.1}% 
+\contentsline {subsubsection}{\numberline {4.9.2}Navigation Module}{33}{subsubsection.4.9.2}% 
+\contentsline {subsubsection}{\numberline {4.9.3}EnergySystems Module}{33}{subsubsection.4.9.3}% 
 \contentsline {subsubsection}{\numberline {4.9.4}CreateCases Module}{35}{subsubsection.4.9.4}% 
-\contentsline {subsubsection}{\numberline {4.9.5}Forecasting Class}{36}{subsubsection.4.9.5}% 
-\contentsline {subsubsection}{\numberline {4.9.6}Optimisation Class}{36}{subsubsection.4.9.6}% 
-\contentsline {section}{\numberline {5}Results}{38}{section.5}% 
-\contentsline {section}{\numberline {6}Discussion}{39}{section.6}% 
-\contentsline {section}{\numberline {7}Future Work}{40}{section.7}% 
-\contentsline {subsection}{\numberline {7.1}Python Development}{40}{subsection.7.1}% 
-\contentsline {subsection}{\numberline {7.2}NZ Example Completion}{40}{subsection.7.2}% 
-\contentsline {subsection}{\numberline {7.3}Develop Simulation Processes}{40}{subsection.7.3}% 
-\contentsline {subsection}{\numberline {7.4}Develop Investment Strategies}{40}{subsection.7.4}% 
-\contentsline {section}{\numberline {8}Summary and Conclusion}{41}{section.8}% 
-\contentsline {section}{\numberline {9}Reflection}{42}{section.9}% 
-\contentsline {section}{\numberline {10}Appendices}{43}{section.10}% 
-\contentsline {subsection}{\numberline {10.1}Project Modules}{43}{subsection.10.1}% 
-\contentsline {subsection}{\numberline {10.2}OseMOSYS Model}{43}{subsection.10.2}% 
-\contentsline {section}{\numberline {11}References}{44}{section.11}% 
+\contentsline {subsubsection}{\numberline {4.9.5}Forecasting Class}{35}{subsubsection.4.9.5}% 
+\contentsline {subsubsection}{\numberline {4.9.6}Optimisation Class}{35}{subsubsection.4.9.6}% 
+\contentsline {section}{\numberline {5}Results}{37}{section.5}% 
+\contentsline {section}{\numberline {6}Discussion}{38}{section.6}% 
+\contentsline {section}{\numberline {7}Future Work}{39}{section.7}% 
+\contentsline {subsection}{\numberline {7.1}Python Development}{39}{subsection.7.1}% 
+\contentsline {subsection}{\numberline {7.2}NZ Example Completion}{39}{subsection.7.2}% 
+\contentsline {subsection}{\numberline {7.3}Develop Simulation Processes}{39}{subsection.7.3}% 
+\contentsline {subsection}{\numberline {7.4}Develop Investment Strategies}{39}{subsection.7.4}% 
+\contentsline {section}{\numberline {8}Summary and Conclusion}{40}{section.8}% 
+\contentsline {section}{\numberline {9}Reflection}{41}{section.9}% 
+\contentsline {section}{\numberline {10}Appendices}{42}{section.10}% 
+\contentsline {subsection}{\numberline {10.1}Project Modules}{42}{subsection.10.1}% 
+\contentsline {subsection}{\numberline {10.2}OseMOSYS Model}{42}{subsection.10.2}% 
+\contentsline {section}{\numberline {11}References}{43}{section.11}% 
