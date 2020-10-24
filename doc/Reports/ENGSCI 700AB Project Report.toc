@@ -54,24 +54,24 @@
 \contentsline {subsubsection}{\numberline {4.7.1}IBM CPLEX}{32}{subsubsection.4.7.1}% 
 \contentsline {subsubsection}{\numberline {4.7.2}Gurobi}{32}{subsubsection.4.7.2}% 
 \contentsline {subsubsection}{\numberline {4.7.3}Optimisation Implementation}{32}{subsubsection.4.7.3}% 
-\contentsline {subsection}{\numberline {4.8}Interface}{32}{subsection.4.8}% 
-\contentsline {subsection}{\numberline {4.9}Standardised Forecasting Methodology: GOCPI Package Development}{32}{subsection.4.9}% 
-\contentsline {subsubsection}{\numberline {4.9.1}PyPI and Directory Structure}{32}{subsubsection.4.9.1}% 
-\contentsline {subsubsection}{\numberline {4.9.2}Navigation Module}{33}{subsubsection.4.9.2}% 
-\contentsline {subsubsection}{\numberline {4.9.3}EnergySystems Module}{33}{subsubsection.4.9.3}% 
-\contentsline {subsubsection}{\numberline {4.9.4}CreateCases Module}{35}{subsubsection.4.9.4}% 
-\contentsline {subsubsection}{\numberline {4.9.5}Forecasting Class}{35}{subsubsection.4.9.5}% 
-\contentsline {subsubsection}{\numberline {4.9.6}Optimisation Class}{36}{subsubsection.4.9.6}% 
-\contentsline {section}{\numberline {5}Results}{37}{section.5}% 
-\contentsline {section}{\numberline {6}Discussion}{38}{section.6}% 
-\contentsline {section}{\numberline {7}Future Work}{39}{section.7}% 
-\contentsline {subsection}{\numberline {7.1}Python Development}{39}{subsection.7.1}% 
-\contentsline {subsection}{\numberline {7.2}NZ Example Completion}{39}{subsection.7.2}% 
-\contentsline {subsection}{\numberline {7.3}Develop Simulation Processes}{39}{subsection.7.3}% 
-\contentsline {subsection}{\numberline {7.4}Develop Investment Strategies}{39}{subsection.7.4}% 
-\contentsline {section}{\numberline {8}Summary and Conclusion}{40}{section.8}% 
-\contentsline {section}{\numberline {9}Reflection}{41}{section.9}% 
-\contentsline {section}{\numberline {10}Appendices}{42}{section.10}% 
-\contentsline {subsection}{\numberline {10.1}Project Modules}{42}{subsection.10.1}% 
-\contentsline {subsection}{\numberline {10.2}OseMOSYS Model}{42}{subsection.10.2}% 
-\contentsline {section}{\numberline {11}References}{43}{section.11}% 
+\contentsline {subsection}{\numberline {4.8}Interface}{34}{subsection.4.8}% 
+\contentsline {subsection}{\numberline {4.9}Standardised Forecasting Methodology: GOCPI Package Development}{34}{subsection.4.9}% 
+\contentsline {subsubsection}{\numberline {4.9.1}PyPI and Directory Structure}{34}{subsubsection.4.9.1}% 
+\contentsline {subsubsection}{\numberline {4.9.2}Navigation Module}{35}{subsubsection.4.9.2}% 
+\contentsline {subsubsection}{\numberline {4.9.3}EnergySystems Module}{35}{subsubsection.4.9.3}% 
+\contentsline {subsubsection}{\numberline {4.9.4}CreateCases Module}{36}{subsubsection.4.9.4}% 
+\contentsline {subsubsection}{\numberline {4.9.5}Forecasting Class}{37}{subsubsection.4.9.5}% 
+\contentsline {subsubsection}{\numberline {4.9.6}Optimisation Class}{37}{subsubsection.4.9.6}% 
+\contentsline {section}{\numberline {5}Results}{38}{section.5}% 
+\contentsline {section}{\numberline {6}Discussion}{39}{section.6}% 
+\contentsline {section}{\numberline {7}Future Work}{40}{section.7}% 
+\contentsline {subsection}{\numberline {7.1}Python Development}{40}{subsection.7.1}% 
+\contentsline {subsection}{\numberline {7.2}NZ Example Completion}{40}{subsection.7.2}% 
+\contentsline {subsection}{\numberline {7.3}Develop Simulation Processes}{40}{subsection.7.3}% 
+\contentsline {subsection}{\numberline {7.4}Develop Investment Strategies}{40}{subsection.7.4}% 
+\contentsline {section}{\numberline {8}Summary and Conclusion}{41}{section.8}% 
+\contentsline {section}{\numberline {9}Reflection}{42}{section.9}% 
+\contentsline {section}{\numberline {10}Appendices}{43}{section.10}% 
+\contentsline {subsection}{\numberline {10.1}Project Modules}{43}{subsection.10.1}% 
+\contentsline {subsection}{\numberline {10.2}OseMOSYS Model}{43}{subsection.10.2}% 
+\contentsline {section}{\numberline {11}References}{44}{section.11}% 

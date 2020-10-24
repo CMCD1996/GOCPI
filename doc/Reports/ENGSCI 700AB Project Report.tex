@@ -1077,12 +1077,68 @@ by setting up a pipeline to take advantage of IBM Cloud's full range of services
 Firstly, the IBM Academic Initiative grants the user access to a subset of the full sweet of IBM products.
 The user must represent, or be a member of, an academic institution to gain access to the initiative.
 The academic initiative allocates a IBMid linked to an academic email address. 
-This IBMid enables access to IBM's services.
+This IBMid enables access to IBM's services. 
 
-Local optimisation problems are solved using functionalities installed
+\begin{wrapfigure}{r}{0.7\textwidth}
+	\begin{center}
+		\includegraphics[width=0.68\textwidth]{COSIDE.png}
+	\end{center}
+	\caption{CPLEX Optimisation Studio IDE}
+	\label{fig:COSIDE}
+\end{wrapfigure}
 
+The CPLEX Optimisation Studio IDE was installed locally to enable the installation of both cplex and docplex Python APIs using pip via the terminal.
+The cplex API connects with the CPLEX Optimisation Studio IDE (\ref{fig:COSIDE})to solve small scale optimisation problems locally.
+Alternatively, you can build your models in the IDE instead of using the Python API.
+The docplex API uses an api key to connect to a remote server to run the IBM Decision Optimisation service and solve larger optimisation problems in the cloud.
+Unfortunately, the IBM Decisions Optimisation service the docplex API connects to was discontinued in September 2020.
+The IBM Decision Optimisation service was imported into the IBM Watson Machine Learning service in IBM Cloud. 
+Subsequently, the project had to pivot to using the IBM cloud services to solve larger energy systems.
 
+An API key is required to use IBM Cloud services. 
+This key is grants access to your account and use of all services licensed to the user.
+IBM Cloud has approximately 173 services to analyse data and inform decisions. 
+A subset of these services are displayed in figure \ref{fig:IBMCS}. 
 
+\begin{wrapfigure}{l}{0.7\textwidth}
+	\begin{center}
+		\includegraphics[width=0.68\textwidth]{IBM-cloud-services.png}
+	\end{center}
+	\caption{IBM Cloud Services}
+	\label{fig:IBMCS}
+\end{wrapfigure}
+
+Services include AI/Machine Learning, Blockchain, Security, Database and Optimisation services.
+The IBM Decision Optimisation service sits within the IBM Watson Machine Learning Service
+which is apart of IBM Watson Studio resource.
+A service or storage object sits within a resource.
+A new IBM Watson Studio resource was created to access the required services.
+After initialising the resource, the GOCPI project was created.
+This project contains two additional services and one deployment space.
+The services are the IBM Watson Machine Learning service to use the IBM Decision Optimisation service and a Cloud Storage Object (COS).
+The COS stores content related to the project. 
+The deployment space is the location to evaluate, configure, deploy and monitor deployable assets.
+A deployment asset includes the input data and model formulation related to the project.
+Each component of a resource (service, storage object etc.) has a CRN and GUID tag. 
+These identify the services when accessing them remotely using API's.
+Services are executed using
+
+The process to solve energy systems, using the IBM Decision Optimisation service, is as follows:
+\begin{enumerate}
+	\item Create the IBM Watson Machine Learning, COS and Deployment Space on IBM Watson Studio.
+	\item Formulate the OseMOSYS model, in Python, for model deployment.
+	\item Create a model deployment to fill the deployment space (if one does not already exist).
+	\item Design a payload (input data and output structure).
+	\item Create a new job to solve the payload using the model deployment.
+	\item Push the job in the deployment space until the energy system either solved or deemed infeasible.
+\end{enumerate}
+
+The docplex API enabled IBM Decision Optimisation to solve energy systems in a lp format.
+Therefore, the GNU Mathprog OseMOSYS formulation was acceptable using the docplex API. 
+Unfortunately, the IBM Watson Machine Learning Decision Optimisation service required Python-based OseMOSYS model formulations.
+This limitation lead to the inability to solve large scale energy systems.
+A pipeline was created to solve Python-based OseMOSYS formulations for subsequent iterations detailed in section \ref{FW}.
+This pipeline is detailed in section \ref{optimisation}.
 
 \subsection{Interface}
 An important component of the project was to make the tool accessible for those proficient in python.
@@ -1232,7 +1288,7 @@ The formula is expressed in figure \ref{fig:CAGR}.
 The calculate\_cagr\_forecast() uses the calculate\_constant\_average\_growth\_rate() function to forecast energy balances.
 Several dictionaries are passed into the function to forecast the energy balance for each interval in the time horizon.
 
-\subsubsection{Optimisation Class}
+\subsubsection{Optimisation Class}\label{optimisation}
 The optimisation class has two core functions. \textbf{run\_cplex\_local()} and \textbf{run\_ibm\_wml\_do()}.
 These two modules run IBM's commercial solvers, either locally or remotely, to minimise the total discounted cost for the energy system.
 
@@ -1255,7 +1311,7 @@ This is not a conventional research project. Therefore, there are bot
 \newpage
 \section{Discussion}
 \newpage
-\section{Future Work}
+\section{Future Work}\label{FW}
 \subsection{Python Development}
 \subsection{NZ Example Completion} \label{FutureWork}
 \subsection{Develop Simulation Processes}
