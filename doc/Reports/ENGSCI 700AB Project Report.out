@@ -50,26 +50,27 @@
 \BOOKMARK [3][-]{subsubsection.4.6.6}{Trade Relationships}{subsection.4.6}% 50
 \BOOKMARK [3][-]{subsubsection.4.6.7}{Discount Rate}{subsection.4.6}% 51
 \BOOKMARK [2][-]{subsection.4.7}{Optimisation}{section.4}% 52
-\BOOKMARK [3][-]{subsubsection.4.7.1}{Gurobi}{subsection.4.7}% 53
-\BOOKMARK [3][-]{subsubsection.4.7.2}{IBM CPLEX}{subsection.4.7}% 54
-\BOOKMARK [2][-]{subsection.4.8}{Interface}{section.4}% 55
-\BOOKMARK [2][-]{subsection.4.9}{Standardised Forecasting Methodology: GOCPI Package Development}{section.4}% 56
-\BOOKMARK [3][-]{subsubsection.4.9.1}{PyPI and Directory Structure}{subsection.4.9}% 57
-\BOOKMARK [3][-]{subsubsection.4.9.2}{Navigation Module}{subsection.4.9}% 58
-\BOOKMARK [3][-]{subsubsection.4.9.3}{EnergySystems Module}{subsection.4.9}% 59
-\BOOKMARK [3][-]{subsubsection.4.9.4}{CreateCases Module}{subsection.4.9}% 60
-\BOOKMARK [3][-]{subsubsection.4.9.5}{Forecasting Class}{subsection.4.9}% 61
-\BOOKMARK [3][-]{subsubsection.4.9.6}{Optimisation Class}{subsection.4.9}% 62
-\BOOKMARK [1][-]{section.5}{Results}{}% 63
-\BOOKMARK [1][-]{section.6}{Discussion}{}% 64
-\BOOKMARK [1][-]{section.7}{Future Work}{}% 65
-\BOOKMARK [2][-]{subsection.7.1}{Python Development}{section.7}% 66
-\BOOKMARK [2][-]{subsection.7.2}{NZ Example Completion}{section.7}% 67
-\BOOKMARK [2][-]{subsection.7.3}{Develop Simulation Processes}{section.7}% 68
-\BOOKMARK [2][-]{subsection.7.4}{Develop Investment Strategies}{section.7}% 69
-\BOOKMARK [1][-]{section.8}{Summary and Conclusion}{}% 70
-\BOOKMARK [1][-]{section.9}{Reflection}{}% 71
-\BOOKMARK [1][-]{section.10}{Appendices}{}% 72
-\BOOKMARK [2][-]{subsection.10.1}{Project Modules}{section.10}% 73
-\BOOKMARK [2][-]{subsection.10.2}{OseMOSYS Model}{section.10}% 74
-\BOOKMARK [1][-]{section.11}{References}{}% 75
+\BOOKMARK [3][-]{subsubsection.4.7.1}{IBM CPLEX}{subsection.4.7}% 53
+\BOOKMARK [3][-]{subsubsection.4.7.2}{Gurobi}{subsection.4.7}% 54
+\BOOKMARK [3][-]{subsubsection.4.7.3}{Optimisation Implementation}{subsection.4.7}% 55
+\BOOKMARK [2][-]{subsection.4.8}{Interface}{section.4}% 56
+\BOOKMARK [2][-]{subsection.4.9}{Standardised Forecasting Methodology: GOCPI Package Development}{section.4}% 57
+\BOOKMARK [3][-]{subsubsection.4.9.1}{PyPI and Directory Structure}{subsection.4.9}% 58
+\BOOKMARK [3][-]{subsubsection.4.9.2}{Navigation Module}{subsection.4.9}% 59
+\BOOKMARK [3][-]{subsubsection.4.9.3}{EnergySystems Module}{subsection.4.9}% 60
+\BOOKMARK [3][-]{subsubsection.4.9.4}{CreateCases Module}{subsection.4.9}% 61
+\BOOKMARK [3][-]{subsubsection.4.9.5}{Forecasting Class}{subsection.4.9}% 62
+\BOOKMARK [3][-]{subsubsection.4.9.6}{Optimisation Class}{subsection.4.9}% 63
+\BOOKMARK [1][-]{section.5}{Results}{}% 64
+\BOOKMARK [1][-]{section.6}{Discussion}{}% 65
+\BOOKMARK [1][-]{section.7}{Future Work}{}% 66
+\BOOKMARK [2][-]{subsection.7.1}{Python Development}{section.7}% 67
+\BOOKMARK [2][-]{subsection.7.2}{NZ Example Completion}{section.7}% 68
+\BOOKMARK [2][-]{subsection.7.3}{Develop Simulation Processes}{section.7}% 69
+\BOOKMARK [2][-]{subsection.7.4}{Develop Investment Strategies}{section.7}% 70
+\BOOKMARK [1][-]{section.8}{Summary and Conclusion}{}% 71
+\BOOKMARK [1][-]{section.9}{Reflection}{}% 72
+\BOOKMARK [1][-]{section.10}{Appendices}{}% 73
+\BOOKMARK [2][-]{subsection.10.1}{Project Modules}{section.10}% 74
+\BOOKMARK [2][-]{subsection.10.2}{OseMOSYS Model}{section.10}% 75
+\BOOKMARK [1][-]{section.11}{References}{}% 76

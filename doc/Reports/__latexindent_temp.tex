@@ -136,7 +136,7 @@
 \end{center}
 I am most thankful for Rosalind. She was a guiding light in a most turbulent time.
 2019 and 2020 were incredibly tough years.
-Our meetings were a weekly highlight, giving a sense normalcy during the depths of the COVID-19 Lockdowns.
+Our meetings were a weekly highlight, giving a sense of normalcy during the depths of the COVID-19 Lockdowns.
 Often accompanied by her two corgis, we embarked into the unknown in building a Python-based open source energy modelling tool.
 Surprisingly, energy modelling is quite complex.
 Our discussions encompassed a diverse range of intellectual stimulating topics, 
@@ -1059,14 +1059,27 @@ The RES, energy balances, trade relationships and discount rate are a small subs
 Please refer to the model sets and parameters in the \textbf{GOCPI\_OseMOSYS\_Structure} for the complete list of required energy system concepts required to build an energy system.
 
 \subsection{Optimisation}
-OseMOSYS is formulated as a linear programme. The energy system required a commercial solver to solve the problem.
+OseMOSYS is expressed as a linear programme requiring a commercial solver to solve the problem.
 A few commercial solvers were considered.
+
+\subsubsection{IBM CPLEX}
 
 \subsubsection{Gurobi}
 The Gurobi suite of optimisation products
-was considered as the default commercial solver.
+was considered as the default commercial solver. The Gurobi Optimizer can solve linear programmes
+and the capability to use Python APIs to solve energy systems locally. 
+Gurobi also offers the Gurobi Computer Server and Gurobi Cloud, suppported by Microsoft Azure and Amazon Web Services, to solve large optimisation problems remotely.
 
-\subsubsection{IBM CPLEX}
+\subsubsection{Optimisation Implementation}
+IBM's suite of services offered greater opportunities to develop the product further
+by setting up a pipeline to take advantage of IBM Cloud's full range of services.
+
+Firstly, the IBM Academic Initiative grants the user access to a subset of the full sweet of IBM products.
+The user must represent, or be a member of, an academic institution to gain access to the initiative.
+The academic initiative allocates a IBMid linked to an academic email address.
+
+
+
 
 \subsection{Interface}
 An important component of the project was to make the tool accessible for those proficient in python.
