@@ -55,6 +55,8 @@
 \contentsline {subsubsection}{\numberline {4.7.2}Gurobi}{33}{subsubsection.4.7.2}% 
 \contentsline {subsubsection}{\numberline {4.7.3}Optimisation Implementation}{33}{subsubsection.4.7.3}% 
 \contentsline {subsection}{\numberline {4.8}Interface}{35}{subsection.4.8}% 
+\contentsline {subsubsection}{\numberline {4.8.1}Jekyll and GitHub pages}{35}{subsubsection.4.8.1}% 
+\contentsline {subsubsection}{\numberline {4.8.2}Google Domains}{35}{subsubsection.4.8.2}% 
 \contentsline {subsection}{\numberline {4.9}Standardised Forecasting Methodology: GOCPI Package Development}{35}{subsection.4.9}% 
 \contentsline {subsubsection}{\numberline {4.9.1}PyPI and Directory Structure}{35}{subsubsection.4.9.1}% 
 \contentsline {subsubsection}{\numberline {4.9.2}Navigation Module}{36}{subsubsection.4.9.2}% 
@@ -62,16 +64,16 @@
 \contentsline {subsubsection}{\numberline {4.9.4}CreateCases Module}{37}{subsubsection.4.9.4}% 
 \contentsline {subsubsection}{\numberline {4.9.5}Forecasting Class}{38}{subsubsection.4.9.5}% 
 \contentsline {subsubsection}{\numberline {4.9.6}Optimisation Class}{38}{subsubsection.4.9.6}% 
-\contentsline {section}{\numberline {5}Results}{39}{section.5}% 
-\contentsline {section}{\numberline {6}Discussion}{40}{section.6}% 
-\contentsline {section}{\numberline {7}Future Work}{41}{section.7}% 
-\contentsline {subsection}{\numberline {7.1}Python Development}{41}{subsection.7.1}% 
-\contentsline {subsection}{\numberline {7.2}NZ Example Completion}{41}{subsection.7.2}% 
-\contentsline {subsection}{\numberline {7.3}Develop Simulation Processes}{41}{subsection.7.3}% 
-\contentsline {subsection}{\numberline {7.4}Develop Investment Strategies}{41}{subsection.7.4}% 
-\contentsline {section}{\numberline {8}Summary and Conclusion}{42}{section.8}% 
-\contentsline {section}{\numberline {9}Reflection}{43}{section.9}% 
-\contentsline {section}{\numberline {10}Appendices}{44}{section.10}% 
-\contentsline {subsection}{\numberline {10.1}Project Modules}{44}{subsection.10.1}% 
-\contentsline {subsection}{\numberline {10.2}OseMOSYS Model}{44}{subsection.10.2}% 
-\contentsline {section}{\numberline {11}References}{45}{section.11}% 
+\contentsline {section}{\numberline {5}Results}{40}{section.5}% 
+\contentsline {section}{\numberline {6}Discussion}{41}{section.6}% 
+\contentsline {section}{\numberline {7}Future Work}{42}{section.7}% 
+\contentsline {subsection}{\numberline {7.1}Python Development}{42}{subsection.7.1}% 
+\contentsline {subsection}{\numberline {7.2}NZ Example Completion}{42}{subsection.7.2}% 
+\contentsline {subsection}{\numberline {7.3}Develop Simulation Processes}{42}{subsection.7.3}% 
+\contentsline {subsection}{\numberline {7.4}Develop Investment Strategies}{42}{subsection.7.4}% 
+\contentsline {section}{\numberline {8}Summary and Conclusion}{43}{section.8}% 
+\contentsline {section}{\numberline {9}Reflection}{44}{section.9}% 
+\contentsline {section}{\numberline {10}Appendices}{45}{section.10}% 
+\contentsline {subsection}{\numberline {10.1}Project Modules}{45}{subsection.10.1}% 
+\contentsline {subsection}{\numberline {10.2}OseMOSYS Model}{45}{subsection.10.2}% 
+\contentsline {section}{\numberline {11}References}{46}{section.11}% 
