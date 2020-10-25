@@ -139,7 +139,7 @@ I am most thankful for Rosalind. She was a guiding light in a most turbulent tim
 Our meetings were a weekly highlight, giving a sense of normalcy during the depths of the COVID-19 Lockdowns.
 Often accompanied by her two corgis, we embarked into the unknown in building a Python-based open source energy modelling tool.
 Surprisingly, energy modelling is quite complex.
-Our discussions encompassed a diverse range of intellectual stimulating topics, 
+Our discussions encompassed a diverse range of intellectually stimulating topics, 
 from the phenomena of the West Texas Intermediate (WTI) future contracts going negative,
 to speculating on the transformation we will see in the education sector moving forward.
 Thank you for helping foster a growth mindset and build the confidence to not be afraid to fail.
@@ -150,8 +150,6 @@ I proposed this project. I am the sole contributor.
 
 \newpage
 \tableofcontents
-\newpage
-\section*{Notion List}
 \newpage
 \listoffigures
 \listoftables
@@ -1152,7 +1150,7 @@ The deployment space is the location to evaluate, configure, deploy and monitor 
 A deployment asset includes the input data and model formulation related to the project.
 Each component of a resource (service, storage object etc.) has a CRN and GUID tag. 
 These identify the services when accessing them remotely using API's.
-Services are executed using
+Services are executed using the \textbf{ibm\_watson\_machine\_learning} module and IBM Developer Tools VS Code extension.
 
 The process to solve energy systems, using the IBM Decision Optimisation service, is as follows:
 \begin{enumerate}
@@ -1172,17 +1170,46 @@ A pipeline was created to solve Python-based OseMOSYS formulations for subsequen
 This pipeline is detailed in section \ref{optimisation}.
 
 \subsection{Interface}
+\begin{wrapfigure}{L}{0.4\textwidth}
+	\centering
+	\includegraphics[width = 0.25\textwidth]{website-dir.png}
+	\caption{Website Directory}
+	\label{fig:WD}
+\end{wrapfigure}
 It was important to make the tool accessible for those proficient in python.
 The model needed to easy way to access and distribute the GOCPI product.
 A website was the best tool to achieve this desired outcome.
+The website has one page dedicated to the project interface.
+The remaining pages relate to content out of project scope.
 
-\subsubsection{Jekyll and GitHub pages}
-
-
-\subsubsection{Google Domains}
+\subsubsection{Jekyll, GitHub pages and Google Domain}
+Jekyll is a static site generator, simple in nature and written in Ruby.
+GitHub enables the free hosting of websites through GitHub pages.
+GitHub pages is powered by Jekyll, enabling the ability to build websites.
+The directory structure for the project website is shown in figure \ref{fig:WD}.
+Jekyll is unique in terms of site generation. Ruby gems are used for package management. 
+Ruby and bundler was installed on the local device to enable website development.
+Firstly, GitHub pages functionality and a custom domain name were initialised for the GitHub repository.
+In the Gemfile shown in figure \ref{fig:WD}, ruby gem commands were added control the website's theme, markdown parsing and GitHub pages adaptation.
+Content was transcribed in markdown files using text. 
+These markdown files were converted into html scripts stored in the \_site sub directory. 
+An outline of the project was conveyed through an embedded video presentation and a hyperlinked powerpoint.
+Hyperlinked images take the user to this project report and the research compendium.
+At the base of the site, there are hyperlinks to download and install the software required to use the product.
+The images used for hyperlinking were stored in the assets sub directory.
+The hyperlinked reports are stored in the downloads sub directory.
+The structure of the html scripts generated from markdown files were stored in the \_layouts sub directory.
+A custom css file to enable video embedding was added to a video embedding html script in the \_includes folder to enable responsive sizing when switching between mobile and desktop displays.
+The minima theme, github pages and kramdown-parser-gfm gems were added to the Gemfile and implemented using the terminal command \textbf{bundle exec jekyll serve}.
+This command uses the bundler package and Gemfile to generate the html and css files required to build the website.
+The command also creates a local server to display the website.
+Committing and push changes to the GitHub repository generates updates for website content.
+Additionally, a google domain name (https://connormcdowall.com) was purchased for the project. 
+The chosen domain name was purchased as will be used for additional uses outside the scope of the project.
+Custom resource records (IP)were generated to create a new Domain Name System (DNS) record. 
+This record translates the purchased domain to the newly set IP addresses in order to load the website on any internet browser.
 
 \subsection{Standardised Forecasting Methodology: GOCPI Package Development}
-
 \subsubsection{PyPI and Directory Structure}
 The aforementioned distribution method PyPI (section \ref{PyPI}) was most appropriate.
 The GOCPI project is listed as an active project.
@@ -1340,30 +1367,123 @@ Lastly, a model payload is sent as a new job request to the deployment to solve 
 This function is written to accommodate future developments of a Python-based OseMOSYS methodology. The reasons 
 
 The remaining functions are in development at this stage of the project.
-
 \newpage
 \section{Results}
+\subsection{Outline}
 The intention of this project was to develop a global carbon pricing optimisation model.
-This is not a conventional research project. Therefore, there are bot
-\newpage
+The project changed in scope slightly as limitations were discovered, leading to the need to pivot in new directions.
+Carbon taxes are imposed as a constraint in the OseMOSYS methodology.
+This project successfully sets the foundation for building a Python-based open source energy modelling tool.
+The TIMES methodology explored was not suitable for building a scalable solution.
+OseMOSYS was a better alternative as the methodology is more intuitive and captures the complexity required for energy modelling.
+An energy modeller can access the OseMOSYS model in Excel to customise the model formulation to meet their needs.
+Geographies are partitioned to use regions and IEA world energy balances in order to construct reference energy systems.
+The user can devise processing scripts to design and formulate their own energy systems with Python dictionaries and matrices.
+The GOCPI package provides a suite of classes to build, solve and interpret energy systems.
+A user can design energy systems, navigate directories to access files, formulate energy systems, make forecasts and solve energy systems with IBM optimisation technologies using the package.
+The package is distributed using PyPI and can be installed using pip, Python's package management software.
+All project related information is accessible on a website which acts as an interface for the user.
+A pipeline was created to build a Python-based OseMOSYS model, continue to build the user-defined energy systems and use IBM Cloud technologies to inform analysis.
+The project set the foundation to create an accessible, scalable energy modelling tool in order to make informed decisions about energy investment and policy.
+\subsection{Deliverables}
+This project does not have a traditional set of results from experimentation. The project has set of deliverables informing a minimal viable product (MVP) and the process for further development.
+The following list describes the deliverables achieved in this project:
+\begin{enumerate}
+	\item An adaptation of the OseMOSYS Methodology a user can customise to meet modelling needs.
+	\item A method to generate energy balances for regions from IEA world energy balances.
+	\item A processing script to build user defined energy systems.
+	\item A partially complete energy system, with a bi-lateral trade relationship between Australia and New Zealand, to show proof of concept.
+	\item The ability to solve energy system models locally using the IBM ILOG CPLEX Optimisation Studio and associated Python APIs.
+	\item A pipeline to use IBM Cloud services to solve energy system models using the IBM  inform decisions.
+	\item A Python-based open source energy modelling package (GOCPI) distributable using PyPI. Use the following command to access: \textbf{pip install GOCPI}.
+	\begin{enumerate}
+		\item Navigation: Navigate file structures to access key resources and data.
+		\item EnergySystems: Convert energy systems into the necessary formats needed to solve the system.
+		\item CreateCases: Build energy systems from Python arrays and dictionaries.
+		\item Forecasting: Generate energy balances and forecast energy and financial information.
+		\item Optimisation: Utilize IBM technologies to solve energy systems. These models may be solved locally or remotely.
+	\end{enumerate}
+		\item A website to access key project resources and communicate information related to the project.
+		Visit the website \href{https://connormcdowall.com/gocpi.html}{here} to view content.
+\end{enumerate}
 \section{Discussion}
-\newpage
-\section{Future Work}\label{FW}
-\subsection{Python Development}
-\subsection{NZ Example Completion} \label{FutureWork}
-\subsection{Develop Simulation Processes}
-\subsection{Develop Investment Strategies}
-\newpage
+\subsection{Outcome}
+Here, we summarise the key findings from the project. 
+Section \ref{KFT} outlines the inaccessibility of the legacy approach to energy modelling.
+Section \ref{KFO} identifies OseMOSYS is the best alternative to energy modelling.
+Section \ref{KFG} explains the GOCPI package developed as the main project deliverable.
+Section \ref{KFM} identifies the construction of a process to correctly design energy systems.
+Section \ref{FW} outlines the improvements to make to the modelling approach and GOCPI package moving forward.
+\subsubsection{TIMES} \label{KFT}
+TIMES is the legacy energy modelling approach for energy systems. 
+After attempting to set up the structure required to create a scalable energy system, the approach was deemed not fit for purpose considering the scope of the project.
+Ultimately, these reproducibility, integration and complexity issues led to the abandonment of this method.
+\subsubsection{OseMOSYS}\label{KFO}
+The alternative energy modelling methodology OseMOSYS was the replacement to TIMES.
+The OseMOSYS structure is similar to most linear programmes with sets, parameters, an objective function, constraints and variables defining an energy system.
+These models are easy to interpret with constraints and objective function variable to meet modelling needs.
+The GNU Mathprog version of OseMOSYS was adapted to build energy systems from reference energy systems.
+\subsubsection{GOCPI: An open source, scalable energy modelling solution}\label{KFG}
+The main objective of the project was to build a scalable modelling tool.
+This was achieved in the GOCPI python package. The code repository is version controlled and accessible using GitHub.
+The package is distributed on PyPI and downloadable using the pip package management software.
+There are five classes in the package to build and solve energy systems.
+All classes and modules are well documented for interpretability and future developments.
+The package interfaces with IBM Cloud technologies to solve the optimisation facing energy systems.
+\subsubsection{Methodology}\label{KFM}
+The project establishes a structure for generating energy systems in GNU Mathprog from Python dictionaries, matrices and lists.
+Energy system set and parameters must be structured consistently to correctly design a system.
+The process converts one dimensional to five dimensional Python matrices into combinations of text blocks need to create lp formatted text files.
+This structure enables the user to model N combinations of regions in one energy system.
+\subsection{Outlook}\label{FW}
+This section identifies an outlook for building better energy systems.
+\subsubsection{Python Development}
+The OseMOSYS methodology must be adapted to a Python implementation to take advantage of IBM technologies and solve larger energy systems using the IBM Decision Optimisation service.
+There is a Python version available for distribution from the OseMOSYS GitHub repository.
+This version using Pyomo, a Python-based, open-source optimisation modelling language.
+Pyomo was not originally chosen as larger energy systems could not be solved remotely on powerful commercial solvers e.g. IBM Cloud of Gurobi.
+A Python adaptation will be required moving forward.
+\subsubsection{NZ Example Completion} \label{FutureWork}
+The energy system with a bi-lateral relationship between New Zealand and Australia is partially complete.
+Data inconsistency and inaccessibility made it difficult to construct an accurate representation of this energy system example.
+Building this example could be a project in itself.
+It is important for proof of concept an example system is finished.
+\subsubsection{Develop Simulation Processes}
+Energy systems are stochastic in nature with production, conversion and consumption prone to variation e.g. renewable energy production.
+These uncertainties must be addressed by incorporating stochastic processes in energy modelling.
+This could be in the form of Autoregressive Integrated Moving Average models or Stochastic Dual Dynamic Programming (SDDP).
+\subsubsection{Develop Forecasting Methodologies}
+IBM Cloud has a range of forecasting services using machine learning techniques. These may be used to forecast financial and energy-relate information.
+Forecasts are currently estimated using constant average growth rates which are unrealistic.
+There may be unexplained factors to consider in estimating forecasts which more complex methodologies consider.
+\subsubsection{Develop Investment Strategies}
+The energy transition will require different investments depending on different stakeholders.
+A range of investment strategies need to be considered to drive equitable outcomes for the energy transition.
+\subsubsection{Develop Interactive Interface}
+It is important to be able to interpret the outputs from an energy system. The objective function, variables and constraints are to be displayed
+on the web-based user interface.
 \section{Summary and Conclusion}
-\newpage
-\section{Reflection}
+Energy modelling is inherently quite complex under existing methodologies.
+It doesn't have to be. 
+The OseMOSYS methodology is a simpler alternative that still captures many of the complexities underpinning energy modelling.
+The GNU Mathprog version of OseMOSYS was adapted to build a scalable method for building energy systems.
+Reference energy systems for OECD regions are easy to generate.
+A Python-based open-source energy modelling package give the modeller the necessary tools to construct energy systems.
+A pipeline of optimisation and forecasting functionalities is set to further develop the product for functional use.
+The interface with IBM Cloud technologies enables powerful predictive possibilities.
+The energy modelers have access to project resources from the web-based interface.
+This project takes a big leap forward in making energy accessible and removing many of the technical barriers.
+Continuing to adopt the OseMOSYS methodology and develop the GOCPI package will help inform energy investment and policy. 
+Overall, this initiative will drive equitable outcomes for the energy transition.
+
 \newpage
 \section{Appendices}
 \subsection{Project Modules}
+[To be inserted using Sphinx/pydoc Documentation]
 \subsection{OseMOSYS Model}
 The Open Source Energy Modelling System is a linear programme with sets, parameters, an objective function and constraints related to energy systems.
 The model is described below. Please refer to GOCPI OseMOSYS Structure.xlsx in the GitHub Repository for full descriptions of the sets, parameters and constraints.
-%\lstinputlisting{"/Users/connor/Google Drive/Documents/University/Courses/2020/ENGSCI 700A&B/GOCPI/data/Inputs/GOCPI OseMOSYS/GOCPI_OseMOSYS_Model.txt"}
+\lstinputlisting{"/Users/connor/Google Drive/Documents/University/Courses/2020/ENGSCI 700A&B/GOCPI/data/Inputs/GOCPI OseMOSYS/GOCPI_OseMOSYS_Model.txt"}
 \newpage
 \section{References}
 \printbibliography
