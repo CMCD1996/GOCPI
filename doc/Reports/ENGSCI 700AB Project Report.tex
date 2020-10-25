@@ -715,21 +715,19 @@ VEDA informs the user if the energy system is consistent with all data and assum
 	\caption{VEDA Energy System Consistency Key}
 	\label{fig:C}%
 \end{figure}
-
-\begin{figure}[H]
-    \centering
-    \subfloat[Energy System Base Year]{{\includegraphics[width = 0.5\textwidth]{VEDABASE.png}{\label{vedabase}} }}
-	\subfloat[Energy Scenarios]{{\includegraphics[width = 0.5\textwidth]{VEDAScenarios.png}{\label{vedascene}} }}
-	\caption{VEDA Energy System Base Year and Scenarios}
-	\label{fig:BYS}%
-\end{figure}
-
 \begin{figure}[H]
     \subfloat[Trade Relationships]{{\includegraphics[width = 0.3\textwidth]{VEDATrade.png}\label{vedatrade} }}%
 	\subfloat[New Resources]{{\includegraphics[width = 0.3\textwidth]{VEDAResources.png}{\label{vedaresources}} }}%
 	\subfloat[Demand Proliles]{{\includegraphics[width = 0.3\textwidth]{VEDADemand.png}{\label{vedademand}} }}
 	\caption{VEDA Technology, Demand and Trade Scenarios}%
 	\label{fig:TDT}
+\end{figure}
+\begin{figure}[H]
+    \centering
+    \subfloat[Energy System Base Year]{{\includegraphics[width = 0.5\textwidth]{VEDABASE.png}{\label{vedabase}} }}
+	\subfloat[Energy Scenarios]{{\includegraphics[width = 0.5\textwidth]{VEDAScenarios.png}{\label{vedascene}} }}
+	\caption{VEDA Energy System Base Year and Scenarios}
+	\label{fig:BYS}%
 \end{figure}
 
 % \begin{wrapfigure}{l}{0.5\textwidth}
@@ -1187,6 +1185,12 @@ Jekyll is a static site generator, simple in nature and written in Ruby.
 GitHub enables the free hosting of websites through GitHub pages.
 GitHub pages is powered by Jekyll, enabling the ability to build websites.
 The directory structure for the project website is shown in figure \ref{fig:WD}.
+\begin{wrapfigure}{l}{0.4\textwidth}
+	\centering
+	\includegraphics[width = 0.25\textwidth]{website-dir.png}
+	\caption{Website Directory}
+	\label{fig:WD}
+\end{wrapfigure}
 Jekyll is unique in terms of site generation. Ruby gems are used for package management. 
 Ruby and bundler was installed on the local device to enable website development.
 Firstly, the GitHub pages functionality and a custom domain name were initialised for the GitHub repository.
@@ -1195,12 +1199,6 @@ Content was transcribed in markdown files using text.
 These markdown files were converted into html scripts stored in the \_site sub directory. 
 An outline of the project was conveyed through an embedded video presentation and a hyperlinked powerpoint.
 Hyperlinked images take the user to this project report and the research compendium.
-\begin{wrapfigure}{l}{0.4\textwidth}
-	\centering
-	\includegraphics[width = 0.25\textwidth]{website-dir.png}
-	\caption{Website Directory}
-	\label{fig:WD}
-\end{wrapfigure}
 At the base of the site, there are hyperlinks to download and install the software required to use the product.
 The images used for hyperlinking were stored in the assets sub directory.
 The hyperlinked reports are stored in the downloads sub directory.
@@ -1251,7 +1249,7 @@ The development of the GOCPI package used the following process:
 Over 80 distributions were released during this prototype's development. 
 Five classes were developed to support the construction, forecasting and optimisation of user defined energy systems.
 These will be addressed in turn as contribute to the key functionalities of the package.
-The docstrings related to all written functions may be found in the section \ref{docstring}.
+The docstrings related to all written functions may be found in the section \ref{Docstring}.
 
 \subsubsection{Navigation Module}
 The navigation module is a class to help the user navigate their local directory. 
@@ -1415,42 +1413,42 @@ The following list describes the deliverables achieved in this project:
 \subsection{Outcome}
 Here, we summarise the key findings from the project. 
 Section \ref{KFT} outlines the inaccessibility of the legacy approach to energy modelling.
-Section \ref{KFO} identifies OseMOSYS is the best alternative to energy modelling.
+Section \ref{KFO} identifies OseMOSYS is the best alternative to the legacy offering.
 Section \ref{KFG} explains the GOCPI package developed as the main project deliverable.
 Section \ref{KFM} identifies the construction of a process to correctly design energy systems.
-Section \ref{FW} outlines the improvements to make to the modelling approach and GOCPI package moving forward.
+Section \ref{FW} outlines the improvements to make to the modelling approach and GOCPI package.
 \subsubsection{TIMES} \label{KFT}
 TIMES is the legacy energy modelling approach for energy systems. 
 After attempting to set up the structure required to create a scalable energy system, the approach was deemed not fit for purpose considering the scope of the project.
-Ultimately, these reproducibility, integration and complexity issues led to the abandonment of this method.
+Ultimately, reproducibility, integration and complexity issues led to the abandonment of this method.
 \subsubsection{OseMOSYS}\label{KFO}
-The alternative energy modelling methodology OseMOSYS was the replacement to TIMES.
+The alternative energy modelling methodology OseMOSYS replaced TIMES.
 The OseMOSYS structure is similar to most linear programmes with sets, parameters, an objective function, constraints and variables defining an energy system.
-These models are easy to interpret with constraints and objective function variable to meet modelling needs.
+These models are easy to interpret with constraints and objective function customisable to meet modelling needs.
 The GNU Mathprog version of OseMOSYS was adapted to build energy systems from reference energy systems.
 \subsubsection{GOCPI: An open source, scalable energy modelling solution}\label{KFG}
 The main objective of the project was to build a scalable modelling tool.
 This was achieved in the GOCPI python package. The code repository is version controlled and accessible using GitHub.
 The package is distributed on PyPI and downloadable using the pip package management software.
 There are five classes in the package to build and solve energy systems.
-All classes and modules are well documented for interpretability and future developments.
-The package interfaces with IBM Cloud technologies to solve the optimisation facing energy systems.
+All classes and modules are well documented for interpretability and inform future developments.
+The package interfaces with IBM Cloud technologies to solve energy systems.
 \subsubsection{Methodology}\label{KFM}
-The project establishes a structure for generating energy systems in GNU Mathprog from Python dictionaries, matrices and lists.
-Energy system set and parameters must be structured consistently to correctly design a system.
-The process converts one dimensional to five dimensional Python matrices into combinations of text blocks need to create lp formatted text files.
+The project establishes a structure for generating energy systems in GNU Mathprog from Python dictionaries, matrices, Numpy arrays and lists.
+Energy system sets and parameters must be structured consistently to correctly design a system.
+The process converts one to five dimensional Python matrices into combinations of text blocks need to create lp formatted text files.
 This structure enables the user to model N combinations of regions in one energy system.
 \subsection{Outlook}\label{FW}
 This section identifies an outlook for building better energy systems.
 \subsubsection{Python Development}
-The OseMOSYS methodology must be adapted to a Python implementation to take advantage of IBM technologies and solve larger energy systems using the IBM Decision Optimisation service.
+The OseMOSYS methodology must be adapted into a Python implementation to take advantage of IBM technologies and solve larger energy systems using the IBM Decision Optimisation service.
 There is a Python version available for distribution from the OseMOSYS GitHub repository.
-This version using Pyomo, a Python-based, open-source optimisation modelling language.
+This version uses Pyomo, a Python-based, open-source optimisation modelling language.
 Pyomo was not originally chosen as larger energy systems could not be solved remotely on powerful commercial solvers e.g. IBM Cloud of Gurobi.
 A Python adaptation will be required moving forward.
 \subsubsection{NZ Example Completion} \label{FutureWork}
 The energy system with a bi-lateral relationship between New Zealand and Australia is partially complete.
-Data inconsistency and inaccessibility made it difficult to construct an accurate representation of this energy system example.
+Data inconsistency and inaccessibility made it difficult to construct an accurate representation of this energy system.
 Building this example could be a project in itself.
 It is important for proof of concept an example system is finished.
 \subsubsection{Develop Simulation Processes}
@@ -1470,10 +1468,10 @@ on the web-based user interface.
 \section{Summary and Conclusion}
 Energy modelling is inherently quite complex under existing methodologies.
 It doesn't have to be. 
-The OseMOSYS methodology is a simpler alternative that still captures many of the complexities underpinning energy modelling.
+The OseMOSYS methodology is a simple alternative that still captures many of the complexities underpinning energy modelling.
 The GNU Mathprog version of OseMOSYS was adapted to build a scalable method for building energy systems.
 Reference energy systems for OECD regions are easy to generate.
-A Python-based open-source energy modelling package give the modeller the necessary tools to construct energy systems.
+A Python-based open-source energy modelling package gives the modeler the necessary tools to construct energy systems.
 A pipeline of optimisation and forecasting functionalities is set to further develop the product for functional use.
 The interface with IBM Cloud technologies enables powerful predictive possibilities.
 The energy modelers have access to project resources from the web-based interface.

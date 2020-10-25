@@ -40,17 +40,17 @@
 \contentsline {subsection}{\numberline {4.5}Energy Modelling: OseMOSYS}{24}{subsection.4.5}% 
 \contentsline {subsubsection}{\numberline {4.5.1}Overview}{24}{subsubsection.4.5.1}% 
 \contentsline {subsubsection}{\numberline {4.5.2}Implementation}{24}{subsubsection.4.5.2}% 
-\contentsline {subsubsection}{\numberline {4.5.3}Integration}{26}{subsubsection.4.5.3}% 
+\contentsline {subsubsection}{\numberline {4.5.3}Integration}{25}{subsubsection.4.5.3}% 
 \contentsline {subsubsection}{\numberline {4.5.4}Storage}{26}{subsubsection.4.5.4}% 
-\contentsline {subsection}{\numberline {4.6}Building Energy Systems}{27}{subsection.4.6}% 
-\contentsline {subsubsection}{\numberline {4.6.1}Utopia Example}{27}{subsubsection.4.6.1}% 
+\contentsline {subsection}{\numberline {4.6}Building Energy Systems}{26}{subsection.4.6}% 
+\contentsline {subsubsection}{\numberline {4.6.1}Utopia Example}{26}{subsubsection.4.6.1}% 
 \contentsline {subsubsection}{\numberline {4.6.2}NZ Example}{27}{subsubsection.4.6.2}% 
-\contentsline {subsubsection}{\numberline {4.6.3}Energy System Concepts}{28}{subsubsection.4.6.3}% 
-\contentsline {subsubsection}{\numberline {4.6.4}Reference Energy System}{28}{subsubsection.4.6.4}% 
-\contentsline {subsubsection}{\numberline {4.6.5}Energy Balances}{30}{subsubsection.4.6.5}% 
+\contentsline {subsubsection}{\numberline {4.6.3}Energy System Concepts}{27}{subsubsection.4.6.3}% 
+\contentsline {subsubsection}{\numberline {4.6.4}Reference Energy System}{27}{subsubsection.4.6.4}% 
+\contentsline {subsubsection}{\numberline {4.6.5}Energy Balances}{29}{subsubsection.4.6.5}% 
 \contentsline {subsubsection}{\numberline {4.6.6}Trade Relationships}{30}{subsubsection.4.6.6}% 
-\contentsline {subsubsection}{\numberline {4.6.7}Discount Rate}{31}{subsubsection.4.6.7}% 
-\contentsline {subsection}{\numberline {4.7}Optimisation}{32}{subsection.4.7}% 
+\contentsline {subsubsection}{\numberline {4.6.7}Discount Rate}{30}{subsubsection.4.6.7}% 
+\contentsline {subsection}{\numberline {4.7}Optimisation}{31}{subsection.4.7}% 
 \contentsline {subsubsection}{\numberline {4.7.1}IBM CPLEX}{32}{subsubsection.4.7.1}% 
 \contentsline {subsubsection}{\numberline {4.7.2}Gurobi}{32}{subsubsection.4.7.2}% 
 \contentsline {subsubsection}{\numberline {4.7.3}Optimisation Implementation}{32}{subsubsection.4.7.3}% 
@@ -60,27 +60,27 @@
 \contentsline {subsubsection}{\numberline {4.9.1}PyPI and Directory Structure}{35}{subsubsection.4.9.1}% 
 \contentsline {subsubsection}{\numberline {4.9.2}Navigation Module}{36}{subsubsection.4.9.2}% 
 \contentsline {subsubsection}{\numberline {4.9.3}EnergySystems Module}{36}{subsubsection.4.9.3}% 
-\contentsline {subsubsection}{\numberline {4.9.4}CreateCases Module}{38}{subsubsection.4.9.4}% 
-\contentsline {subsubsection}{\numberline {4.9.5}Forecasting Class}{38}{subsubsection.4.9.5}% 
+\contentsline {subsubsection}{\numberline {4.9.4}CreateCases Module}{37}{subsubsection.4.9.4}% 
+\contentsline {subsubsection}{\numberline {4.9.5}Forecasting Class}{37}{subsubsection.4.9.5}% 
 \contentsline {subsubsection}{\numberline {4.9.6}Optimisation Class}{38}{subsubsection.4.9.6}% 
-\contentsline {section}{\numberline {5}Results}{40}{section.5}% 
-\contentsline {subsection}{\numberline {5.1}Outline}{40}{subsection.5.1}% 
-\contentsline {subsection}{\numberline {5.2}Deliverables}{40}{subsection.5.2}% 
-\contentsline {section}{\numberline {6}Discussion}{41}{section.6}% 
-\contentsline {subsection}{\numberline {6.1}Outcome}{41}{subsection.6.1}% 
-\contentsline {subsubsection}{\numberline {6.1.1}TIMES}{41}{subsubsection.6.1.1}% 
-\contentsline {subsubsection}{\numberline {6.1.2}OseMOSYS}{41}{subsubsection.6.1.2}% 
-\contentsline {subsubsection}{\numberline {6.1.3}GOCPI: An open source, scalable energy modelling solution}{41}{subsubsection.6.1.3}% 
-\contentsline {subsubsection}{\numberline {6.1.4}Methodology}{42}{subsubsection.6.1.4}% 
-\contentsline {subsection}{\numberline {6.2}Outlook}{42}{subsection.6.2}% 
-\contentsline {subsubsection}{\numberline {6.2.1}Python Development}{42}{subsubsection.6.2.1}% 
-\contentsline {subsubsection}{\numberline {6.2.2}NZ Example Completion}{42}{subsubsection.6.2.2}% 
-\contentsline {subsubsection}{\numberline {6.2.3}Develop Simulation Processes}{42}{subsubsection.6.2.3}% 
-\contentsline {subsubsection}{\numberline {6.2.4}Develop Forecasting Methodologies}{42}{subsubsection.6.2.4}% 
-\contentsline {subsubsection}{\numberline {6.2.5}Develop Investment Strategies}{42}{subsubsection.6.2.5}% 
-\contentsline {subsubsection}{\numberline {6.2.6}Develop Interactive Interface}{43}{subsubsection.6.2.6}% 
-\contentsline {section}{\numberline {7}Summary and Conclusion}{43}{section.7}% 
-\contentsline {section}{\numberline {8}Appendices}{44}{section.8}% 
-\contentsline {subsection}{\numberline {8.1}Project Modules}{44}{subsection.8.1}% 
-\contentsline {subsection}{\numberline {8.2}OseMOSYS Model}{44}{subsection.8.2}% 
-\contentsline {section}{\numberline {9}References}{54}{section.9}% 
+\contentsline {section}{\numberline {5}Results}{39}{section.5}% 
+\contentsline {subsection}{\numberline {5.1}Outline}{39}{subsection.5.1}% 
+\contentsline {subsection}{\numberline {5.2}Deliverables}{39}{subsection.5.2}% 
+\contentsline {section}{\numberline {6}Discussion}{40}{section.6}% 
+\contentsline {subsection}{\numberline {6.1}Outcome}{40}{subsection.6.1}% 
+\contentsline {subsubsection}{\numberline {6.1.1}TIMES}{40}{subsubsection.6.1.1}% 
+\contentsline {subsubsection}{\numberline {6.1.2}OseMOSYS}{40}{subsubsection.6.1.2}% 
+\contentsline {subsubsection}{\numberline {6.1.3}GOCPI: An open source, scalable energy modelling solution}{40}{subsubsection.6.1.3}% 
+\contentsline {subsubsection}{\numberline {6.1.4}Methodology}{41}{subsubsection.6.1.4}% 
+\contentsline {subsection}{\numberline {6.2}Outlook}{41}{subsection.6.2}% 
+\contentsline {subsubsection}{\numberline {6.2.1}Python Development}{41}{subsubsection.6.2.1}% 
+\contentsline {subsubsection}{\numberline {6.2.2}NZ Example Completion}{41}{subsubsection.6.2.2}% 
+\contentsline {subsubsection}{\numberline {6.2.3}Develop Simulation Processes}{41}{subsubsection.6.2.3}% 
+\contentsline {subsubsection}{\numberline {6.2.4}Develop Forecasting Methodologies}{41}{subsubsection.6.2.4}% 
+\contentsline {subsubsection}{\numberline {6.2.5}Develop Investment Strategies}{41}{subsubsection.6.2.5}% 
+\contentsline {subsubsection}{\numberline {6.2.6}Develop Interactive Interface}{42}{subsubsection.6.2.6}% 
+\contentsline {section}{\numberline {7}Summary and Conclusion}{42}{section.7}% 
+\contentsline {section}{\numberline {8}Appendices}{43}{section.8}% 
+\contentsline {subsection}{\numberline {8.1}Project Modules}{43}{subsection.8.1}% 
+\contentsline {subsection}{\numberline {8.2}OseMOSYS Model}{43}{subsection.8.2}% 
+\contentsline {section}{\numberline {9}References}{53}{section.9}% 
