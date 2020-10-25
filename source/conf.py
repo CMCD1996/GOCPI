@@ -12,7 +12,11 @@
 #
 import os
 import sys
-sys.path.insert(0, os.path.abspath('../src/GOCPI'))
+sys.path.insert(
+    0,
+    os.path.abspath(
+        '/Users/connor/Google Drive/Documents/University/Courses/2020/ENGSCI 700A&B/GOCPI/src/GOCPI/GOCPI'
+    ))
 
 # -- Project information -----------------------------------------------------
 
