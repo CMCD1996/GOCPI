@@ -156,48 +156,52 @@ I proposed this project. I am the sole contributor.
 \newpage
 \section{Introduction}
 The imminence of the energy transition is clear.
-The coronavirus pandemic has accelerated a shift away from fossil fuels and emphasised the need to adopt sustainable technologies to drive an economic recovery.
+The coronavirus pandemic accelerated a shift away from fossil fuels and adoption of Sustainable technologies to drive economic recovery.
 A thorough literature review \ref{LR} informs the need for rapid transformation before irreversible damage is done.
 Economic models predict unfavourable consequences if no swift action is taken.
-Financial concept such as Return on Investment (ROI) and Net Present Value (NPV) analysis drive the decisions to invest sustainably.
-Sustainable technologies have seen significant cost reductions over the last decade leading to positive prospects for investors.
+Financial concepts such as Return on Investment (ROI) and Net Present Value (NPV) analysis drive decisions related to sustainable investment.
+Sustainable technologies have seen significant cost reductions over the last decade creating positive prospects for investors.
 These developments improve the feasibility of the energy transition in a timely manner.
-However, there are educational disparities between policy makers, governments, industry and consumers.
-Major stakeholders know a transition must happen swiftly, but not the implementation timeline or impact on their energy system in a successful transition.
-Stakeholders have different needs and reside within different energy systems. They may address changes in their best interest without considering the other stakeholders equitably.
+However, there are educational disparities between policy makers, governments, industry groups and consumers.
+Major stakeholders know a transition must happen swiftly, but not how a successful transition will impact their energy system or the implementation details.
+Stakeholders have different needs and reside within different energy systems. 
+They may address changes in their best interest without considering the other stakeholders equitably.
 It is important to make the transition as transparent as possible to deliver equitable outcomes for all stakeholders.
 
 The opaque nature of the transition, in terms of the implementation for different regions, is caused by the sophistication and inaccessibility of energy modelling.
-Energy modelling involves huddling several technical barriers.
-Large quantities of energy related data is required to build accurate systems.
+Energy modelling involves overcoming several technical barriers.
+Large volumes of energy-related data is required to build accurate systems.
 Most of the time this data is proprietary and hard to access.
 Energy systems are expressed as mathematical models. 
 They can be linear, non linear, integer or mixed integer programmes. 
-These models can be difficult to formulate and be hard to understand.
-The complexity of energy modelling leads to the need for powerful commercial solvers to solve the energy system models.
+These models can be difficult to formulate and hard to understand.
+The complexity of energy modelling leads to the need for powerful commercial solvers to solve the energy systems.
 Most commercial solvers are expensive and inaccessible to most users.
 The concepts underpinning energy systems are interdisciplinary, often encompassing finance, economics, engineering, statistics and mathematics.
 These issues and complexities make it difficult to equitably evaluate energy policy and investment.
-Most noticeably, It is hard to define an effective transition strategy which aligns with both the United Nations Sustainable Development Goals and Paris Agreement.
+Most noticeably, it is hard to define an effective transition strategy which aligns with both the United Nations Sustainable Development Goals and the Paris Agreement.
 
 My proposed solution is to develop an accessible, scalable energy system modelling tool to address these issues.
 The intention is remove the aforementioned sophistication and enable users to model their own energy systems.
 This will remove educational disparities to bring more stakeholders to the table when discussing how to best implement the energy transition.
 Hopefully, this will lead to more equitable outcomes before it is too late.
-
 \newpage
+
 \section{Literature Review}\label{LR}
 \subsection{An Introduction to Energy}
-	Energy powers the world we live in.
-Industrial sectors use energy to power machining and production processes. Trade uses oil-based products to fuel shipping and logistics networks. 
-The technology sector uses energy to supply power to data centres to facilitate internet services. The manufacturing sector use the chemical properties of oil and natural gas to produce glass, synthetic, and explosive products. 
-In summary, energy has a role in every industry. Energy comes in many forms. 
+Energy built the world we live in.
+Industrial sectors use energy to power machining and production processes. 
+Trade uses oil-based products to fuel shipping and logistics networks. 
+The technology sector uses energy to supply power to data centres to facilitate internet services. 
+The manufacturing sector use the chemical properties of oil and natural gas to produce glass, synthetic, and explosive products. 
+In summary, energy has a role in every industry. 
+Energy comes in many forms. 
 The International Energy Agency (IEA) aggregates energy products into six key fuels: Coal, Gas, Oil, Renewables, Electricity, and Nuclear \cite{W:2}. 
 Coal, Gas, and Oil are non-renewable fossil fuels with high energy intensities and carbon emissions. 
 Nuclear energy is a non-renewable resource as the uranium used in production is finite. 
 Renewables utilise technologies to produce energy from infinitely available wind, solar, geothermal and hydro resources. 
 These technologies emit low to no carbon emissions. 
-Regardless, energy will power our way of life.
+Regardless, energy will continue to drive our way of life.
 
 \subsection{Energy, Emissions, and the Economy}
 Academics spent decades hypothesizing causal relationships between economic growth, energy consumption, and carbon dioxide ($CO_2$) emissions.
@@ -485,12 +489,11 @@ Producers who operate globally may pivot to produce and sell GHG intensive produ
 In this context, geographies are defined as geographical areas where energy consumption and emission production occurs. 
 Earth is the entire set of geographies.
 This set can be partitioned into continental, national, provincial, or regional geographies (subsets).
-
-
 Any carbon pricing initiative must consider the specific combination of energy factors for the associated geography.
 The aggregate outcome from all geographies should meet the objectives set by the Paris Agreement.
 The revenues generated should be distributed back to participants with commercial benefits communicated through key financial metrics relevant to that geography or business.
-
+Carbon pricing initiatives constrain energy systems.
+It is important to consider how carbon pricing initiatives affect the energy system in driving sustainable energy investment and policy.
 The overall research objective is: 
 \begin{center}
 \textbf{Develop a Global Carbon Pricing Optimisation Model}.
@@ -499,13 +502,13 @@ The overall research objective is:
 The model will be developed by the following process:
 
 \begin{enumerate}
-	\item Understand the existing approach to forecasting services demand and develop a standardised forecasting process which aligns with emission targets
-	\item Partition the global set of geographies into subsets with varying levels of granularity e.g. a continental subset with seven geographies (continents), a national subset with 195 geographies (sovereign states according to the United Nations) etc
-	\item Forecast services demand for each geography in each subset
-	\item Adapt an existing TIMES/OseMOSYS model to input standardised energy system parameters 
-	\item Run simulations using the adapted model to form distributions on model outputs. These distributions are to inform the negotiation of carbon pricing initiatives
-	\item Develop and model investment strategies from subsequent key outputs including carbon prices
-	\item Develop a model interface (UI and UX) to communicate optimal global carbon prices, performance metrics, and the carbon tax benefits to support co-ordinated efforts to negotiate and implement carbon pricing initiatives 
+	\item Understand the existing approach to forecasting services demand and develop a standardised forecasting process which aligns with emission targets.
+	\item Partition the global set of geographies into subsets with varying levels of granularity e.g. a continental subset with seven geographies (continents), a national subset with 195 geographies (sovereign states according to the United Nations) etc.
+	\item Forecast services demand for each geography in each subset.
+	\item Adapt an existing TIMES or OseMOSYS model to input standardised energy system parameters.
+	\item Run simulations using the adapted model to form distributions on model outputs. These distributions are to inform the negotiation of carbon pricing initiatives.
+	\item Develop and model investment strategies from subsequent key outputs including carbon prices.
+	\item Develop a model interface (UI and UX) to communicate optimal global carbon prices, performance metrics, and the carbon tax benefits to support co-ordinated efforts to negotiate and implement carbon pricing initiatives.
 \end{enumerate}
 
 In conclusion, this project will attempt to address issues surrounding climate change. 
@@ -516,33 +519,33 @@ The intention is to empower users to influence energy investment and policy deci
 \subsection{Project organisation}
 GOCPI adopted Data Science best practice, as described by Wilson et al \cite{J:10}. Although these practices are
 mostly reserved for data science projects, their principles are suitable for product development and version control. All data and
-results are saved regularly and reproducible. The retention of data in all forms received high levels of attention. Project files were synched
+results were saved regularly and reproducible. The retention of data in all forms received high levels of attention. Project files were synched
 continuously to Google Drive \cite{Google_Drive}. Git \cite{Git} was used to manage version control for GOCPI's source code, data, documentation and results.
 Git stores a complete history of versions using Git hashes. These hashes are strings unique to each state of the
-publicly available GOCPI repository\footnote[1]{https://github.com/CMCD1996/GOCPI}. Git hashes enable the discretisation of GOCPI's development over time,
+publicly available GOCPI repository\footnote[1]{https://github.com/CMCD1996/GOCPI}. Git hashes enabled the discretisation of GOCPI's development over time,
 enabling the accessibility and recollection of all previous states given a unique git hash. This functionality
-enables reproducibility, error correction and the ability to revert to previous models.
+enabled reproducibility, error correction and the ability to revert to previous models.
 
 \subsubsection{Version Control}\label{Version Control}
-Git, hosted by GitHub, provides a comprehensive set of version control technologies. These technologies provide a range of benefits.
+Git, hosted by GitHub, provided a comprehensive set of version control technologies. These technologies provided a range of benefits.
 Firstly, Git is excellent at providing and supporting collaborative functionalities. The master version of a project is accessible for all
-who have access to the repository. Each contributor can create custom copies of branches through pull requests on the master branch. Contributors
-can commit changes to custom branches and push these changes to the master branch through push requests. The product manager can review these push requests,
+who have access to the repository. Each contributor could create custom copies of branches through pull requests on the master branch. Contributors
+could commit changes to custom branches and push these changes to the master branch through push requests. The product manager could review these push requests,
 approving suitable requests to integrate changes to the master branch. Collaborative efforts were possible with
-commit messages describing the contributions from each contributor. This project had one contributor. Git ensures the histories of code, work and authors are stored.
-The descriptive nature of the commit log ensures an accurate journal is kept.
+commit messages describing the contributions from each contributor. This project had one contributor. Git ensured the histories of code, work and authors are stored.
+The descriptive nature of the commit log ensured an accurate journal is kept.
 
 \subsubsection{Folder Structure}
-GOCPI maintained the file folder structure recommended in Wilson et al \cite{J:10}. Project organisation was paramount as the modelling of energy systems involves
-integrating a range of optimisation models, data files and documents. Wilson et al's recommendations were appropriate as data science projects require similar 
-organisational rigor. Subsequently, file management and structure was most efficient and comprehensive. \textbf{GOCPI} is the root directory of this project and contains several
-sub directories: bin, data, doc, src and results.  The \textbf{bin} subdirectory contains external scripts and compiled
-programmes related to the GOCPI project. The \textbf{data} subdirectory contains all raw data associated with the project. 
-This data includes energy statistics, energy balance datasets, partitioned geographies, standardised optimisation models and TIMES modelling frameworks.
-The \textbf{doc} subdirectory stores GOCPI's user guides, academic resources, research reports and project deliverables.
-The \textbf{results} subdirectory contains the output from optimisation simulations and processed data to display on dashboards and websites to inform investment and policy decisions.
-The \textbf{src} subdirectory stores the source code for preparing raw data, partitioning sets of geographies with varying granularities and the
-GOCPI python package available to download using PyPI\footnote[2]{https://pypi.org/} and install using pip\footnote[3]{https://pypi.org/project/pip/}.
+GOCPI maintained the file folder structure recommended in Wilson et al \cite{J:10}. 
+Project organisation was paramount as the modelling of energy systems involves integrating a range of optimisation models, data files and documents. 
+Wilson et al's recommendations were appropriate as data science projects require similar organisational rigor. 
+Subsequently, file management and structure was most efficient and comprehensive. \textbf{GOCPI} is the root directory of this project and contains several sub directories: bin, data, doc, src and results.  
+The \textbf{bin} sub directory contained external scripts and compiled programmes related to the GOCPI project. 
+The \textbf{data} sub directory contained all raw data associated with the project. 
+This data included energy statistics, energy balance datasets, partitioned geographies, standardised optimisation models and TIMES modelling frameworks.
+The \textbf{doc} sub directory stored GOCPI's user guides, academic resources, research reports and project deliverables.
+The \textbf{results} sub directory contained the output from optimisation simulations and processed data to display on dashboards and websites to inform investment and policy decisions.
+The \textbf{src} sub directory stores the source code for preparing raw data, partitioning sets of geographies with varying granularities and the GOCPI python package available to download using PyPI\footnote[2]{https://pypi.org/} and install using pip\footnote[3]{https://pypi.org/project/pip/}.
 All files were continuously backed up using Google Drive.
 
 \subsubsection{Python}\label{python}
@@ -554,20 +557,19 @@ Python is omnipresent, widespread in software development.
 Python's language design makes the language highly productive and simple to use. 
 Python can hand off computationally straining tasks to C/C++ and has first-class integration capabilities with these two languages.
 The language also has a very active and supportive community \cite{Python_Features}.
-In addition, Python is the most popular coding language on the planet defined by the PYPL PopularitY of Programming Language Index. As at August 2020, Python had 31.59\% of all language tutorial search instances on Google \cite{PYPL_Pop}.
+In addition, Python is the most popular coding language on the planet defined by the PYPL PopularitY of Programming Language Index. 
+As at August 2020, Python had 31.59\% of all language tutorial search instances on Google \cite{PYPL_Pop}.
 Python has many useful packages for creating the GOCPI package such as NumPy, Scikit-learn, os, csv and Pandas. 
 Programming is quick due to Python's dynamic nature.
 The language is also open-source with no cost.
-Subsequently, the GOCPI model should be accessible for many users to use and extend.
+Subsequently, Python was the best language to ensure the GOCPI model is accessible for many users to use and extend.
 
 \subsubsection{Package Management}
 The Anaconda package management platform for Python \cite{Anaconda} was the chosen coding environment.
 Anaconda is a well defined, free platform with known versions of python packages such as matplotlib, numpy and pip.
-The use of this environment ensures both reproducibility and consistency across infrastructure.
-These factors enable collaborative efforts. 
-Although this project required no collaboration, the use of Anaconda will inform future developers on how to manage collaborative processes, especially for packages
-which are less well-maintained. Anaconda allows you to create custom environments which was necessary for creating scalable linear optimization problems to express energy systems.
-Pip is Python's default package manager and included within the Anaconda package. 
+The use of this environment ensured both reproducibility and consistency across infrastructure.
+Although this project required no collaboration, the use of Anaconda will inform future developers on how to manage collaborative processes, especially for packages which are less well-maintained. Anaconda allows you to create custom environments which was necessary for creating scalable linear optimization problems to express energy systems.
+Pip is Python's default package manager and is included in the Anaconda package. 
 Pip was used to install and update packages for python not available on Anaconda such as twine and the custom GOCPI package developed for this project.
 
 \subsubsection{Excel}
@@ -576,28 +578,30 @@ Energy modelling can be quite complex. The modelling process must be transparent
 Excel is ubiquitous across academic and professional communities.
 Excel's omnipotence makes the software well-suited for describing the components of the GNU Mathprog energy system model.
 The \textbf{GOCPI OseMOSYS Structure.xlsx} file describes the sets, paramaters, constraints and objective function of a scalable energy system model.
-The User may toggle statements sets, parameters and constraints to change the complexity of the model. 
-The model is imported to a text file using the \textbf{CreateModelFile} module in the \textbf{GOCPI} package.
-However, data related to these energy systems is stored using Python dictionaries, lists and NumPy arrays.
+The User may toggle statement sets, parameters and constraints to adjust the complexity of the model. 
+The model file was imported to a text file.
+However, data related to these energy systems was stored using Python dictionaries, lists and NumPy arrays.
+This Python formulation was later transcribed to a text file.
 Excel is best for two dimensional variables or data stored in Codd-Boyce relational databases \cite{CBNF}.
-Many of the parameters in energy systems modelling contain three or more dimensions. 
-Therefore, Excel is not suitable to store these parameters.
-Python dictionaries, lists and NumPy arrays are preferred alternatives.
+The majority of parameters in energy systems were three or more dimensions. 
+Therefore, Excel was not suitable to store these parameters.
+Python dictionaries, lists and NumPy arrays were preferred alternatives.
 
 \subsubsection{IBM ILOG CPLEX Optimization}
-The OseMOSYS methodology (see \ref{OseMOSYS}) translates energy systems into linear programming problems. A solver is required to optimise these user-defined energy systems.
+The OseMOSYS methodology (see \ref{OseMOSYS}) translates energy systems into linear programming problems. 
+A solver was required to optimise these user-defined energy systems.
 The IBM ILOG Optimization Studio \cite{IBM_ILOG}, more commonly known as CPLEX, was chosen to be this solver.
 CPLEX solves very large linear programming problems using the Barrier Interior-point method \cite{IPM} or primal/dual variants of the Simplex Method \cite{Simplex}.
-GOCPI's user-defined energy systems can be scaled up to model very large systems, creating large linear programming problems.
+GOCPI's user-defined energy systems could be scaled up to model very large systems, creating large linear programming problems.
 
 The IBM ILOG CPLEX Optimization Studio has an interface with the Python language based on a C programming interface.
-Subsequently, Python APIs are available to run the CPLEX solver when installed either locally or on a cloud service.
+Subsequently, Python APIs were available to run the CPLEX solver when installed either locally or on a cloud service.
 The python packages are \textbf{cplex} and \textbf{docplex}. The cplex package contains classes for accessing CPLEX for the Python programming language. 
 The Cplex class is the most important class in this package as provides methods for creating, modifying, querying, or solving optimisation problems.
 Docplex also enables the formulation of new linear programmes where one creates the model, defines the decision variables, sets the constraints and expresses the objective function.
 The user uses docplex to solve the linear programme on a local solver. 
 Alternatively, the model can be solved on a private cloud using Decision Optimisation on Cloud service through the provision of a service url and personal API key.
-The CPLEX Python APIs are most attractive as provides the user with a powerful commercial solver in an accessible format.
+The CPLEX Python APIs were most attractive as provided the user with a powerful commercial solver in an accessible format.
 
 There is a caveat to the use of the CPLEX solver. The IBM ILOG CPLEX Optimization Studio is commercial by nature and requires a license to use.
 Fortunately IBM have the IBM Academic Initiative \cite{IBM_AI}, granting students access to commercial software for free.
@@ -607,10 +611,10 @@ Accessibility issues caused by the need for commercial solvers must be addressed
 \subsubsection{IBM Watson Machine Learning Service}
 The IBM CPLEX Optimisation Cplex python API is suitable for smaller models that can be solved locally.
 As the model increases in complexity, the docplex Python API did enable the ability to solve larger linear programmes.
-Unfortunately, IBM have phased out the docplex Python API by incorporating Decision Optimisation on Cloud services into the IBM Watson Machine learning cloud services \cite{IBM_WML}.
-This change occurred very recently
+Unfortunately, IBM phased out the docplex Python API by incorporating the Decision Optimisation on Cloud services into the IBM Watson Machine Learning cloud services \cite{IBM_WML}.
+This change occurred during September 2020.
 This service uses IBM Cloud to access assets through credentials, create model deployments in IBM's servers and execute jobs to solve models.
-The model deployments must be Python-based models with jobs specifying a payloads containing input data.
+The model deployments must be Python-based models with jobs specifying a payloads containing input data and output formats.
 
 \subsubsection{PyPI}\label{PyPI}
 PyPI\footnote{https://pypi.org/} is the Python Package Index, a repository of software for the python programming language.
@@ -619,19 +623,18 @@ The GOCPI package is distributed from this platform to enable as many as possibl
 Enter command: \textbf{pip install GOCPI} in the terminal to install the package using pip package management software.
 
 \subsubsection{Code Style} \label{CS}
-The GOCPI project is developed as the GOCPI package where all development code is organised.
-The PEP8 style for Python Code is the formatting style for development code \cite{PEP8}. 
-All code is formatted with \textbf{yapf}, a formatter maintained by Google to format created Python files.
+The GOCPI project was developed as the GOCPI package. All development code is organised within this package.
+The PEP8 style for Python Code was the formatting style for development code \cite{PEP8}. 
+All code was formatted with \textbf{yapf}, a formatter maintained by Google to format Python files.
 Standardised formatting is important as makes the code easy to read, helps optimise the code and promotes consistency.
 Docstrings and commenting were most important in documentation. A docstring is a Python inline comment. 
 Each class and function has an unique docstring, a one sentence description of the function, inputs with data types and types of outputs.
 The Google style docstring was most appropriate because of it's readability, ease to write and consistency with the Google Style Guide.
 Additionally, automated documentation generators (\textbf{pdoc3, Sphinx} etc.) can parse this format to create documentation.
-This self-consistent code style facilitated best practise maintenance and enables reproducibility.
-
+This self-consistent code style facilitated best practise maintenance and enabled reproducibility.
 
 \subsubsection{Infrastructure}
-GOCPI creates scalable energy system optimisation models which change in complexity depending on there size.
+GOCPI creates scalable energy system optimisation models with complexity size dependent.
 Computations either took place locally on a 128 GB, four core Apple MacBook Pro or remotely using a cloud service. 
 
 \subsection{Documentation}
@@ -639,7 +642,7 @@ The GOCPI project is well documented to keep an accurate record of key design de
 The commit history described in \ref{Version Control} was the most important form of document.
 Other explicit documentation methods were applied to supplement this commit history. 
 These methods, in addition to in-code documentation, include project updates and meeting minutes
-nested with a project logbook.
+nested within a project logbook.
 
 \subsubsection{Project updates}
 Project updates were recorded as itemized lists.
@@ -652,29 +655,30 @@ Project updates were transcribed to the project logbook held in this project's r
 \subsubsection{Meeting minutes}
 Project meetings took place for half an hour once a week. 
 These meetings included discussions on energy markets, modelling methodologies, project progress and key design decisions.
-The minutes from these meetings accompanied project updates in the project logbook nested within the research compendium.
+The minutes from these meetings accompanies project updates in the project logbook nested within the research compendium.
 
 \subsection{Geographical Partitioning}\label{geopar}
 The first stage of the GOCPI project was to come up with an exhaustive list of geographies. 
 The user has the choice to either model the energy systems of these geographies individually or model a network of geographies connected by trade relationships.
-Geographies are grouped into three distinct sets. There is a continental set with six continents: Africa, North America, South America, Oceania, Asia and Africa.
+Geographies are grouped into three distinct sets. 
+There is a continental set with six continents: Africa, North America, South America, Oceania, Asia and Africa.
 Antarctica was excluded from this set.
 The country set includes 194 United Nations member states. The elements in the city set number approximately 13800 unique cities from the 194 member states.
 The \textbf{GOCPI Geographies.gyp} script processes these unique sets to create a csv file detailing an aggregate geography set.
 This file contains ~13800 geography combinations. Each combination includes a city's name, population, country and continent e.g. VANCOUVER,CANADA,2313328.0,NORTH AMERICA.
-A user may use this information to design energy systems for cities with similar populations, countries, continents. 
-Cities may be combined to compare countries with similar populations or of residence within the same continent.
-The user may also build energy systems on a continent level. After the formation of an exhaustive list of geographies, the exploration and adaptation of energy system modelling
-methodologies could begin.
+A user may use this information to design energy systems for cities with similar populations, countries and/or continents. 
+The user may also create combinations using cities or countries.
+The user may also build energy systems on a continent level. 
+After the formation of an exhaustive list of geographies, the exploration and adaptation of energy system modelling methods began.
 
 \subsection{Energy Modelling: TIMES}
 The World Energy Council devised three energy scenarios to inform energy policy and investment. These are Hard Rock, Unfinished Symphony and Modern Jazz \cite{TR:8}.
 New Zealand devised two energy scenarios to inform national energy policy and investment. These are Tui and Kea \cite{TR:2}. 
-The TIMES Modelling Methodology underpins the construction of these modelling techniques.
-Subsequently, I began the standardisation of a TIMES implementation to create a method to develop scalable energy systems.
+TIMES modelling underpins the construction of these scenarios.
+Subsequently, I began the standardisation of a TIMES implementation to develop a method for building scalable energy systems.
 
 \subsubsection{TIMES: The Integrated Markel-Eform System}
-An implementation of TIMES is divisible into a five stage process as displayed in Figure \ref{fig:times}:
+An implementation of TIMES is divided into a five stages as displayed in Figure \ref{fig:times}:
 \begin{figure}[H]
     \centering
 	\includegraphics[width=0.8\textwidth]{TIMES.png}
@@ -693,7 +697,7 @@ After installing VEDA, GAMS and Microsoft Excel, I began following a TIMES user 
 The user manual started with a very basic energy system, incrementing on the energy model using twelve demo models.
 I downloaded these twelve demo models to edit their associated Excel files.
 
-The first stage was to adapt the existing Excel files so the user can design their own reference energy systems and sets of energy scenarios. 
+The first stage was to adapt the existing Excel files so the user could design their own reference energy systems and sets of energy scenarios. 
 Data and assumptions for reference energy systems and scenarios are primarily recorded in several tables across separate excel sheets and files.
 I made copies of these excel files and began writing functions to change the data stored in these sheets for a user to create new energy systems.
 
@@ -703,7 +707,7 @@ Initially, I built the base year scenario as shown in figure \ref{vedabase}.
 The inclusion of different energy scenarios (figure \ref{vedascene}) led to a more robust energy system.
 Examples include introducing the price elasticity of demand, solar technology subsidies and carbon dioxide taxes.
 New resources, technologies, trade relationships and demand profiles were added as shown in subfigures \ref{vedademand}, \ref{vedaresources} and \ref{vedatrade}.
-VEDA informs the user if the energy system is consistent with all data and assumptions correctly defined by a key shown in figure \ref{fig:C}.
+VEDA informs the user if the energy system is consistent with all data and assumptions correctly defined by the key shown in figure \ref{fig:C}.
 
 \begin{figure}[H]
     \centering
@@ -736,31 +740,31 @@ VEDA informs the user if the energy system is consistent with all data and assum
 % 	\label{fig:CM}
 % \end{wrapfigure}
 
-After designing the energy system using the VEDA interface, a case manager is used to generate a TIMES text file and 
+After designing the energy system using the VEDA interface, a case manager was used to generate a TIMES text file and 
 run the optimisation. The model file is written in GAMS and integrated into the VEDA interface. 
 The case manager allows you to select different scenarios and produce new model files.
 
 The third stage was to execute the GAMS optimisation and produce outputs to be fed into VEDA BE. 
 The forth stage is for VEDA BE to convert the GAMS output into Excel-based data files. 
-In the fifth stage, data visualisation would enable the user to take the Excel outputs and make informed decisions relating to energy policy and investment.
+In the fifth stage, data visualisation would enable the user to take the Excel outputs and make informed decisions related to energy policy and investment.
 
-Unfortunately, I faced serious limitations at stage 3 of the TIMES implementation.
+Unfortunately, I faced severe limitations at stage 3 of the TIMES implementation.
 Several factors made the TIMES implementation difficult:
 \begin{enumerate}
-	\item The remote nature of the project made the integration of software between Flex IT, local and remote difficult.
+	\item The remote nature of the project made software integration between Flex IT, local hardware and remote servers difficult.
 	\item VEDA and GAMS Studio's commercial nature creates accessibility and equity issues for those who don't have the resources or connections to access the software. This contradicts the project's purpose.
-	\item The complexity of TIMES inhibits reproducibility and creates barriers to entry for users not too familiar with energy modelling.
+	\item The complexity of TIMES inhibits reproducibility and creates technical barriers for users not too familiar with energy modelling.
 \end{enumerate}
 
-\textbf{These reasons led to the abandonment of the TIMES implementation in favour of an alternative energy modelling methodology}. 
+\textbf{These reasons led to the abandonment of the TIMES implementation in favour of an alternative method}. 
 An alternative methodology would trade the complexity and sophistication of TIMES modelling for usability and accessibility. 
-After consultation with my project supervisor and one of New Zealand Energy Council modelers, the OseMOSYS methodology was recommended.
-Subsequently, I began developing an scalable open source energy system under this OseMOSYS methodology.
+After consultation with my project supervisor and one of New Zealand's Energy Council modelers, the OseMOSYS methodology was recommended.
+Subsequently, I began developing a scalable open source energy system using the OseMOSYS methodology.
 
 \subsection{Energy Modelling: OseMOSYS}
 \subsubsection{Overview}\label{OseMOSYS}
 The OseMOSYS methodology was the next best alternative to TIMES for modelling large scale energy systems.
-TIMES can model useful complexities such as stochastic processes.
+TIMES can model useful complexities such as stochastic processes where OseMOSYS cannot.
 However, OseMOSYS proved to be the better of the two methods as more closely aligned with the overall scope and purpose of the project.
 The aforementioned tradeoffs are justified given the usability and availability of OseMOSYS.
 
@@ -770,49 +774,49 @@ This online community is developing three versions of OseMOSYS accompanied with 
 The resources created by this online community can be found on Github \cite{GHOM}.
 A version of OseMOSYS was available in GAMS, GNU Mathprog or Python (Pyomo).
 Each version was at different stages of development. 
-The GNU Mathprog version was chosen as was one of the most complete of the three versions including two energy systems examples.
+The GNU Mathprog version was chosen as was most complete of the three versions and included two energy system examples.
 The model and data files were downloaded as text files and stored in the project's working directory.
 
 \subsubsection{Implementation}\label{OIMPLEM}
 It is not practical to explain the entire model given the scale of OseMOSYS. 
-Therefore, the provision of a high level outline follows. Please refer to the research compendium for the complete model and comprehensive description.
+Therefore, the provision of a high level outline follows. Please refer to section \ref{OM} to view the complete model.
 The OseMOSYS model contains 11 sets, 52 parameters, 67 variables, 1 objective function and 94 constraints. 
-A summary of the model's components are as follows:
+A summary of the model's components follow:
 \begin{table}[H]
 	\centering
 	\begin{tabular}{||c | c||} 
 	 \hline
 	 Component & Factors \\ [0.5ex] 
 	 \hline\hline
-	 Sets & Year, Technology, Timeslice, Fuel, Emission\\ 
-	 & Mode of Operation, Region, Season, Day Type \\
+	 Sets & Year, Technology, Timeslice, Fuel, Emission,\\ 
+	 & Mode of Operation, Region, Season, Day Type, \\
 	 & Daily Time Bracket, Storage \\
 	 \hline  
-	 Parameters & Trade, Activities, Demand Profiles, Costs \\
-	 & Storage Rates, Conversion Rates, Emission Limits etc \\
+	 Parameters & Trade, Activities, Demand Profiles, Costs, \\
+	 & Storage Rates, Conversion Rates, Emission Limits etc. \\
 	 \hline
-	 Variables & Demand, Storage Rates, Production \\
-	 & Emissions Penalties, Operating Costs, Technology Use etc\\
+	 Variables & Demand, Storage Rates, Production, \\
+	 & Emission Penalties, Operating Costs, Technology Use etc.\\
 	 \hline
 	 Constraints &  Energy Balances, Production, Charging\\
-	 & Discharging, Storage Costs, Capacities and Investments\\ 
-	 & Renewable Energy Production, Emissions Accounting etc \\[1ex] 
+	 & Discharging, Storage Costs, Capacities, Investments\\ 
+	 & Renewable Energy Requirements, Emissions Accounting etc. \\[1ex] 
 	 \hline
 	\end{tabular}
 	\caption{OseMOSYS Components}
 	\label{table:1}
 	\end{table}
-The sets are the primary components to the model. Therefore, it is important they are explained to provide greater context.
+The sets are the primary components to the model. 
+It is important they are explained to provide greater context.
 \begin{enumerate}
 	\item \textbf{Year}: Represents the timeframe of the model containing all years to be considered.
-	\item \textbf{Technology}: Represent any element in the energy system that changes a commodity from one form to another, uses it or supplies it.
-	The modeller is free to intepret the technology. It may be a single technology e.g. a power plant or an aggregation of many technologies e.g. millions of solar panels.
+	\item \textbf{Technology}: Represents any element in the energy system that changes a commodity from one form to another, uses it or supplies it.
+	The modeler is free to interpret the technology. It may be a single technology e.g. a power plant or an aggregation of many technologies e.g. millions of solar panels.
 	\item \textbf{Timeslice}: Represents the times resolution of the model through time splits.
-	\item \textbf{Fuel}: Represents any energy vector, proxies or energy service flowing through technologies. Depending on the required analysis, fuels may be individual groups, aggregate group or artificially separated.
+	\item \textbf{Fuel}: Represents any energy vector, proxies or energy service flowing through technologies. Depending on the required analysis, fuels may be individual groups, aggregate groups or artificially separated.
 	\item \textbf{Emission}: Represents emissions potentially derived from operating technologies.
-	\item \textbf{Mode of Operation}: Represents the number of modes a technology may have. If a technology can have various inputs and output fuels
-	, and can choose any linear combination of inputs and outputs, this may be expressed as a mode of operation. E.g. a CHP plant may produce heat in one mode and electricity in another.
-	\item \textbf{Region}: Represents the regions to modelled as explained in section \ref{geopar}. Supply-demand energy balances for all energy vectors, including trade with other regions, are ensured.
+	\item \textbf{Mode of Operation}: Represents the number of modes a technology may have. If a technology can have various input and output fuels, and can choose any linear combination of the inputs and outputs, this may be expressed as a mode of operation. E.g. a CHP plant may produce heat in one mode and electricity in another.
+	\item \textbf{Region}: Represents the regions to model as explained in section \ref{geopar}. Supply-demand energy balances for all energy vectors, including trade with other regions, are ensured.
 	\item \textbf{Season}: Represents the number of seasons accounted for e.g. Summer, Autumn , Winter and Spring. These are expressed as successive integers e.g. Summer = 1, Autumn = 2.
 	\item \textbf{Day Type}: Represents the number of days types accounted for e.g. Weekend, Weekday. These are expressed as successive integers e.g. Weekend = 1, Weekday = 2.
 	\item \textbf{Daily Time Bracket}: Represents the number of splits for a day e.g. night, morning, afternoon, evening. These are expressed as successive integers e.g. night = 1, morning = 2, afternoon = 3, evening = 4.
@@ -829,7 +833,7 @@ The sets are the primary components to the model. Therefore, it is important the
 Combinations of sets are used to define the parameters and variables.
 These parameters and variables are used to set constraints. 
 The objective function uses the constraints to find the optimal variables.
-The objective function is the minimisation of discounted investment costs in each region across all years specified in the forecast horizon (Figure \ref{fig:OOF}).
+The objective function is the minimisation of total discounted cost in each region across all years specified in the forecast horizon (Figure \ref{fig:OOF}).
 Total discounted cost is the sum of the total discounted costs by technology over all the technologies.
 
 \subsubsection{Integration}
@@ -837,24 +841,24 @@ An lp-format file was required to solve OseMOSYS implementations with a solver.
 These files are written in GNU Mathprog, a language intended for describing linear mathematical programming models \cite{GNU_Mathprog}. 
 GNU Mathprog is a subset of the Algebraic Mathematical Programming Language (AMPL) \cite{AMPL} and consists of user-defined sets of statements and data blocks.
 The custom anaconda environment (\textbf{osemosys}) was created to facilitate this model formulation. This environment contains the libcxx package which provides a standard library of C++ functionalities.
-The GNU Linear Programming Kit (GLPK) sits within this library. GLPK uses GNU Mathprog to solve large-scale linear programming (LP), mixed integer programming (MIP), and other related problems. 
+The GNU Linear Programming Kit (GLPK) sits within this library. GLPK uses GNU Mathprog to solve large scale linear programming (LP), mixed integer programming (MIP), and other related problems. 
 GLPK is called using the \textbf{glpsol} command in the osemosys conda environment:
 \begin{align*}	
 	\textbf{glpsol -m model.txt -d data.txt --wlp GOCPI.lp}
 \end{align*}
-The aforementioned glpsol command converts converts a data and model text file to an lp-file. 
-The command also solves the problem if the energy system is not too complex.
-It is likely glpsol would not be able to solve larger scale energy system therefore a commercial solver would be needed.
-The installation of the GLPK was tested using the Utopian example data and model files using the aforementioned glpsol function.
+The aforementioned glpsol command converts a data and model text file to an lp-file. 
+The command also solves the problem if the energy system is a reasonable size.
+It is likely glpsol would not be able to solve larger scale energy system. Therefore, a commercial solver would be needed.
+The installation of the GLPK was tested using the Utopian example data and model files with the aforementioned glpsol function.
 The necessary lp-format file was generated for the users chosen solver. 
 This was paramount before disembarking on developing a standardised energy systems development method to generate both text and data files from user-defined energy systems.
 
 \subsubsection{Storage}\label{OSTORAGE}
 Energy modelling and OseMOSYS can be quite complex. It is important this complexity is conveyed to the user so they understand how to build their own energy systems.
-Subsequently, an Excel-based template was created to describe and store all model components. The \textbf{GOCPI-OseMOSYS-Structure.xlsx} contains
+Subsequently, an Excel-based template was created to describe and store all model components. The \textbf{GOCPI\_OseMOSYS\_Structure.xlsx} contains
 all the sets, parameters, variables and constraints needed for an OseMOSYS model. The spreadsheet also includes descriptions of all model components
 and the ability to toggle their inclusion in the user defined model. 
-The user may customise the structure of their energy model by making adjustments to the model's components in the GOCPI-OseMOSYS-Structure Excel sheet.
+The user may customise the structure of their energy model by making adjustments to the model's components in the GOCPI\_OseMOSYS\_Structure Excel sheet.
 Constraints may be added or removed and the objective function changed to consider other factors e.g. the minimise emissions penalties or maximise the uptake of renewable technologies.
 The base model came from the model text file, written in GNU Mathprog, stored in the OseMOSYS Github Repository.
 The template was adjusted to ensure constraint, variable and parameter indices were consistent with the demo data files.
@@ -862,7 +866,6 @@ The template was adjusted to ensure constraint, variable and parameter indices w
 \subsection{Building Energy Systems}\label{BES}
 After the correct installation and initialisation of the OseMOSYS structure, 
 it was appropriate to begin developing a methodology for building energy systems.
-This section will elaborate
 The first step in this process was to understand the components and structure of the Utopia.txt example available from the OseMOSYS Github repository.
 \subsubsection{Utopia Example}
 The Utopia example models a 'Utopian' energy system.
@@ -877,21 +880,21 @@ The utopian data file benchmarked the structure needed to generate compatible en
 The construction of a NZ energy system was undertaken after understanding the structure of the Utopian example.
 The purpose of the NZ energy system example was to demonstrate the practicality and usability of this model.
 The NZ energy system models the energy systems of New Zealand, Australia and a bi-directional trade relationship between the two nations.
-After disembarking on the development of a user-defined energy system, the limitations inhibiting the formation of a complete system were apparent.
+After disembarking on the development of a user-defined energy system, the limitations inhibiting the formation of a complete system were made apparent.
 These are briefly described as follows:
 \begin{enumerate}
 	\item \textbf{Data Availability}: Publicly available and accurate data is hard to find when creating energy systems.
 	This project was able to access publicly available from government agencies and global reporting entities.
 	However, data is recorded differently depending on the region.
-	This creates issues with building consistency between modelled regions.
-	Many underlying must be made to build energy systems.
-	These assumptions may change per region.
+	This creates issues with building consistency between modeled regions.
+	Many underlying assumptions must be made to build energy systems.
+	These assumptions may change depending on the region.
 	It is recommended there is access to consistent data source for all regions the user intends to model.
 
 	\item \textbf{Time Constraints}: The construction of an energy system is very time consuming.
 	The NZ Energy system between Australia and New Zealand required the collection and scripting of a lot of data.
 	This example was only between two regions.
-	The model can support the maximum number of combination for modelled regions the IBM Watson Machine Learning Decision Optimisation service can solve to find a feasible solution.
+	The model can support the maximum number of region combinations the IBM Watson Machine Learning Decision Optimisation service is capable of solving.
 	The construction of a feasible and realistic energy system could be a Part IV project in itself.
 \end{enumerate}
 These limitations led to the abandonment of developing a complete energy system.
@@ -900,14 +903,14 @@ Section \ref{FutureWork} explains next steps in finishing this example.
 
 \subsubsection{Energy System Concepts}
 The construction of energy systems requires a firm grasp on several concepts. 
-These concepts are either related to general financial and energy theory or specific to the OseMOSYS methodology.
+These concepts are either related to general financial and energy theory, or specific to the OseMOSYS methodology.
 Each parameter in the model formulation relates to an important financial or energy concept in the energy system.
 The scope of this report prevents the inclusion of detailed descriptions for all integral components.
 Subsequently, the most important concepts are addressed in this section. 
 
 \subsubsection{Reference Energy System}
 The \textbf{Reference Energy System (RES)} describes the network flows amongst the energy production, conversion and consumption of different fuels from different technologies.
-Essentially, it maps all relevant technologies to be involved in the energy system. Each region in the energy system has it's own energy system.
+Essentially, it maps all relevant technologies to be involved in the energy system. Each region in the aggregate energy system has it's own energy system.
 
 \begin{wrapfigure}{l}{0.7\textwidth}
 	\begin{center}
@@ -920,11 +923,11 @@ The Utopian energy example shown in figure \ref{fig:URES} is the a very simple m
 A realistic example is more complex. The NZ Reference Energy System was designed using energy balance data available from
 the Ministry of Business, Innovation and Employment (MBIE) (\cite{MBIE_ESEM}). 
 Table \ref{table:2} describes the technologies mapped in the New Zealand RES.
-The fuels within the RES are  described in table \ref{table:3}.
+The fuels within the RES are described in table \ref{table:3}.
 The Australian RES was derived from the Department of Industry, Science, Energy and Resources (ISER) energy data set (\cite{DOEA_ESEM}).
 The Australian dataset was adapted to match the NZ RES as RES between regions must follow the same format. 
-Simplifying assumptions are required to ensure RES consistency.  
-Subsequently, these assumptions create limitations in building large energy systems as it may be difficult to create consistent energy systems with the available data.
+Simplifying assumptions were required to ensure RES consistency.  
+Subsequently, these assumptions create limitations in building large energy systems as it may be difficult to create consistent systems with the available data.
 Figure \ref{fig:NZRES} shows the RES mapping of the NZ energy system for this project.
 In comparison to the Utopian RES, the mapping of technologies for the NZ RES is more complex.
 
@@ -934,18 +937,18 @@ In comparison to the Utopian RES, the mapping of technologies for the NZ RES is 
 	 \hline
 	 Categories & Technologies \\ [0.5ex] 
 	 \hline\hline
-	 Production & Indigenous Production, Imports, Exports, Stock Change\\
+	 Production & Indigenous Production, Imports, Exports, Stock Change,\\
 	 & International Transport\\ 
 	 \hline  
-	 Conversion & Electricity Generation, Cogeneration, Fuel Production \\
+	 Conversion & Electricity Generation, Cogeneration, Fuel Production, \\
 	 & Other Transformation, Losses and Own Use\\
 	 \hline
 	 Non Energy Uses & Non Energy \\
 	 \hline
-	 Consumption& Agriculture, Forestry and Logging, Fishing, Mining \\
-	 &Food Processing, Textiles, Wood Pulp Paper and Printing, Chemicals\\
-	 &Non Metallic Minerals, Basic Metals\\
-	 &Mechanical Electrical Equippment, Building and Construction\\
+	 Consumption& Agriculture, Forestry and Logging, Fishing, Mining, \\
+	 &Food Processing, Textiles, Wood Pulp Paper and Printing, Chemicals,\\
+	 &Non Metallic Minerals, Basic Metals,\\
+	 &Mechanical Electrical Equippment, Building and Construction,\\
 	 &Unallocated, Commercial, Transport, Residential\\
 	 \hline
 	\end{tabular}
@@ -958,9 +961,9 @@ In comparison to the Utopian RES, the mapping of technologies for the NZ RES is 
 	 \hline
 	 Fuel Type & Fuels \\ [0.5ex] 
 	 \hline\hline
-	 Coal & Bituminous, Sub Bitumious, Lignite\\
+	 Coal & Bituminous, Sub Bitumious, Lignite,\\
 	 \hline
-	 Oil & Crude Feedstocks NGL, LPG, Petrol, Diesel, Fuel Oil\\
+	 Oil & Crude Feedstocks NGL, LPG, Petrol, Diesel, Fuel Oil,\\
 	 & Aviation Fuel and Kerosine, Oil Other\\
 	 \hline
 	 Natural Gas & Natural Gas\\
@@ -978,7 +981,7 @@ In comparison to the Utopian RES, the mapping of technologies for the NZ RES is 
 \end{table}
 \begin{figure}[H]
     \centering
-    \includegraphics[width = \textwidth]{NZRES.png}
+    \includegraphics[width = 0.7\textwidth]{NZRES.png}
 	\caption{NZ Reference Energy System Mapping}
 	\label{fig:NZRES}%
 \end{figure}
@@ -987,9 +990,9 @@ In comparison to the Utopian RES, the mapping of technologies for the NZ RES is 
 Energy balances are the base year energy production, conversion and consumption for a reference energy system.
 The energy balance is forecast for each interval in the energy system's time horizon.
 The NZ and Australia energy balances for the NZ example RES are derived from MBIE and ISER data respectively.
-Additionally, GOCPI includes a functionality to create energy balances from a large energy balances dataset published by International Energy Agency (IEA) (\cite{IEA_WEB}).
-A constant average growth rate (CAGR) forecasting methodology is the baseline forecasting methodology for this project.
-This is a simple forecasting methodology. The energy balances between 2010 and 2018 were used to derive the CAGR using the formula as shown in figure \ref{fig:CAGR}.
+Additionally, GOCPI includes a functionality to create energy balances from a large dataset published by International Energy Agency (IEA) (\cite{IEA_WEB}).
+A constant average growth rate (CAGR) forecasting methodology was the baseline forecasting methodology for this project.
+This is a simple forecasting method. The energy balances between 2010 and 2018 were used to derive the CAGR using the formula as shown in figure \ref{fig:CAGR}.
 
 \begin{wrapfigure}{l}{0.4\textwidth}
 	\begin{align*}
@@ -998,17 +1001,17 @@ This is a simple forecasting methodology. The energy balances between 2010 and 2
 	\caption{CAGR Formula}
 	\label{fig:CAGR}
 \end{wrapfigure}
-The number of parameters to estimate makes forecasting difficult. The use of CAGR to forecast values is not very realistic as you cannot assume values will grow at a constant rate.
+The number of parameters to estimate made forecasting difficult. The use of CAGR to forecast values is not very realistic as you cannot assume values will grow or fall at a constant rate.
 Stochasticity is a large factor in energy production, conversion and consumption.
 OseMOSYS does not account for stochasticity. Therefore, randomness is not addressed. 
 There are no degrees of freedom for estimated parameters.
 For example, renewable energy production is stochastic. Weather patterns are increasing volatile so energy production will need to address this volatility for accuracy.
 It is recommended future developments include Machine Learning (ML) and Autoregressive Integrated Moving Average Models (ARIMA) forecasting methods. 
 An ARIMA model is a times series forecasting method aiming to describe autocorrelations in the data to account for stochasticity (\cite{ARIMA}). 
-ML methods train models to make energy balance predictions using factors not previously or obviously considered. 
+ML methods train models to make energy balance predictions using factors not obviously considered. 
 
 \subsubsection{Trade Relationships}
-The trade relationships describe the exchange of energy-related resources between the modelled regions in the energy system.
+The trade relationships describe the exchange of energy-related resources between the modeled regions in the energy system.
 
 \begin{wrapfigure}{l}{0.4\textwidth}
 	\begin{align*}
@@ -1020,8 +1023,8 @@ The trade relationships describe the exchange of energy-related resources betwee
 	\caption{NZ/AUS Free Trade Matrix}
 	\label{fig:TR}
 \end{wrapfigure}
-These relationships are modelled using a four dimensional matrix. The matrix is indexed [region, region, fuel, year].
-The first position correspond to the regions where trade originates from. The second position correspond to the regions which receive trade from the index referenced in the first position.
+These relationships are modeled using a four dimensional matrix. The matrix is indexed as follows: [region, region, fuel, year].
+The first position corresponds to the regions where trade originates from. The second position corresponds to the regions which receive trade from the region indexed in the first position.
 The third position is the fuel being traded. The fourth position is the year the trade takes place.
 Values are binary to set trade between two regions for fuels and regions (1 = Trade, 0 = No Trade).
 The NZ energy system example assumes free trade exist between both NZ and Australia for all fuel types every year.
@@ -1074,7 +1077,7 @@ This example assumes New Zealand's market value of equity (E) is zero as not pub
 Risk free rates ($r_f$) were derived from average 10 Year Government bond yields using data from each region's respective 
 Reserve Bank (Reserve Bank of New Zealand \cite{RBNZ_WIR} and Reserve Bank of Australia \cite{RBA_ZCL}). 
 The monthly market returns for each region are annualised to calculate the market return ($r_m$). 
-Each regions has a market index which serves as a proxy for the market. 
+Each region has a market index which serves as a proxy for the market. 
 New Zealand has the NZX 50 and Australia has the ASX 200. Historical returns related to these proxies were downloaded from yahoo finance \cite{ASX_NZ}.
 Monthly returns are annualised as follows: 
 \begin{align}
@@ -1088,15 +1091,18 @@ The RES, energy balances, trade relationships and discount rate are a small subs
 Please refer to the model sets and parameters in the \textbf{GOCPI\_OseMOSYS\_Structure} for the complete list of required energy system concepts required to build an energy system.
 
 \subsection{Optimisation}
-OseMOSYS is expressed as a linear programme requiring a commercial solver to solve the problem.
+OseMOSYS is expressed as a linear programme requiring a commercial solver to solve the system.
 A few commercial solvers were considered.
 
 \subsubsection{IBM CPLEX}
+IBM has a suite of optimisation and analytics services accessible on IBM Cloud.
+There is an Academic Initiative to grant access to the suite of service's for free. 
+The IBM ILOG CPLEX Optimisation Studio allows the user to build and solve problems locally.
+There are a number of Python APIs to access the IBM Cloud or the Optimisation Studio.
 
 \subsubsection{Gurobi}
-The Gurobi suite of optimisation products
-was considered as the default commercial solver. The Gurobi Optimizer can solve linear programmes
-and the capability to use Python APIs to solve energy systems locally. 
+The Gurobi suite of optimisation products was considered as the default commercial solver. 
+The Gurobi Optimizer can solve linear programmes and has the capability to use Python APIs to solve energy systems locally. 
 Gurobi also offers the Gurobi Computer Server and Gurobi Cloud, suppported by Microsoft Azure and Amazon Web Services, to solve large optimisation problems remotely.
 
 \subsubsection{Optimisation Implementation}
@@ -1116,16 +1122,16 @@ This IBMid enables access to IBM's services.
 	\label{fig:COSIDE}
 \end{wrapfigure}
 
-The CPLEX Optimisation Studio IDE was installed locally to enable the installation of both cplex and docplex Python APIs using pip via the terminal.
+The CPLEX Optimisation Studio IDE was installed locally to enable the installation of both cplex and docplex Python APIs.
 The cplex API connects with the CPLEX Optimisation Studio IDE (\ref{fig:COSIDE})to solve small scale optimisation problems locally.
 Alternatively, you can build your models in the IDE instead of using the Python API.
 The docplex API uses an api key to connect to a remote server to run the IBM Decision Optimisation service and solve larger optimisation problems in the cloud.
-Unfortunately, the IBM Decisions Optimisation service the docplex API connects to was discontinued in September 2020.
-The IBM Decision Optimisation service was imported into the IBM Watson Machine Learning service in IBM Cloud. 
-Subsequently, the project had to pivot to using the IBM cloud services to solve larger energy systems.
+Unfortunately, the IBM Decision Optimisation in Cloud service the docplex API connects to was discontinued in September 2020.
+The IBM Decision Optimisation in Cloud service was imported into the IBM Watson Machine Learning service in IBM Cloud. 
+Subsequently, the project had to pivot to using the IBM Cloud services to solve larger energy systems.
 
 An API key is required to use IBM Cloud services. 
-This key is grants access to your account and use of all services licensed to the user.
+This key grants access to your account and use of all licensed services.
 IBM Cloud has approximately 173 services to analyse data and inform decisions. 
 A subset of these services are displayed in figure \ref{fig:IBMCS}. 
 
@@ -1137,7 +1143,7 @@ A subset of these services are displayed in figure \ref{fig:IBMCS}.
 	\label{fig:IBMCS}
 \end{wrapfigure}
 
-Services include AI/Machine Learning, Blockchain, Security, Database and Optimisation services.
+Services include AI/Machine Learning, Blockchain, Security, Database and Optimisation functionalities.
 The IBM Decision Optimisation service sits within the IBM Watson Machine Learning Service
 which is apart of IBM Watson Studio resource.
 A service or storage object sits within a resource.
@@ -1170,12 +1176,6 @@ A pipeline was created to solve Python-based OseMOSYS formulations for subsequen
 This pipeline is detailed in section \ref{optimisation}.
 
 \subsection{Interface}
-\begin{wrapfigure}{L}{0.4\textwidth}
-	\centering
-	\includegraphics[width = 0.25\textwidth]{website-dir.png}
-	\caption{Website Directory}
-	\label{fig:WD}
-\end{wrapfigure}
 It was important to make the tool accessible for those proficient in python.
 The model needed to easy way to access and distribute the GOCPI product.
 A website was the best tool to achieve this desired outcome.
@@ -1189,12 +1189,18 @@ GitHub pages is powered by Jekyll, enabling the ability to build websites.
 The directory structure for the project website is shown in figure \ref{fig:WD}.
 Jekyll is unique in terms of site generation. Ruby gems are used for package management. 
 Ruby and bundler was installed on the local device to enable website development.
-Firstly, GitHub pages functionality and a custom domain name were initialised for the GitHub repository.
-In the Gemfile shown in figure \ref{fig:WD}, ruby gem commands were added control the website's theme, markdown parsing and GitHub pages adaptation.
-Content was transcribed in markdown files using text. 
+Firstly, the GitHub pages functionality and a custom domain name were initialised for the GitHub repository.
+In the Gemfile shown in figure \ref{fig:WD}, ruby gem commands were added to control the website's theme, markdown parsing and GitHub pages adaptation.
+Content was transcribed in markdown files using text.
 These markdown files were converted into html scripts stored in the \_site sub directory. 
 An outline of the project was conveyed through an embedded video presentation and a hyperlinked powerpoint.
 Hyperlinked images take the user to this project report and the research compendium.
+\begin{wrapfigure}{l}{0.4\textwidth}
+	\centering
+	\includegraphics[width = 0.25\textwidth]{website-dir.png}
+	\caption{Website Directory}
+	\label{fig:WD}
+\end{wrapfigure}
 At the base of the site, there are hyperlinks to download and install the software required to use the product.
 The images used for hyperlinking were stored in the assets sub directory.
 The hyperlinked reports are stored in the downloads sub directory.
@@ -1203,16 +1209,27 @@ A custom css file to enable video embedding was added to a video embedding html 
 The minima theme, github pages and kramdown-parser-gfm gems were added to the Gemfile and implemented using the terminal command \textbf{bundle exec jekyll serve}.
 This command uses the bundler package and Gemfile to generate the html and css files required to build the website.
 The command also creates a local server to display the website.
-Committing and push changes to the GitHub repository generates updates for website content.
+Committing and pushing changes to the GitHub repository generates updates for website content.
 Additionally, a google domain name (https://connormcdowall.com) was purchased for the project. 
 The chosen domain name was purchased as will be used for additional uses outside the scope of the project.
-Custom resource records (IP)were generated to create a new Domain Name System (DNS) record. 
+Custom resource records (IP) were generated to create a new Domain Name System (DNS) record. 
 This record translates the purchased domain to the newly set IP addresses in order to load the website on any internet browser.
 
 \subsection{Standardised Forecasting Methodology: GOCPI Package Development}
 \subsubsection{PyPI and Directory Structure}
 The aforementioned distribution method PyPI (section \ref{PyPI}) was most appropriate.
 The GOCPI project is listed as an active project.
+The package required a specific directory structure to publish new distributions.
+The \textbf{GOCPI} stores several files required for the package: 
+A sub directory of the same name containing an initialisation file (\textbf{init.py}) and package modules. 
+A distributions sub directory (\textbf{dist}) for new package versions. 
+A Python file for setup information (\textbf{setup.py}) and a setup file for package configuration (\textbf{setup.cfg}).
+Lastly, there is a sub directory storing text files related to dependencies, package information and source links.
+
+New distributions are stored in the \textbf{dist} displayed in figure \ref{fig:GPS}.
+\textbf{Twine} is a package to upload new setup descriptions, configurations and code changes via the local terminal.
+PyPI enables the immediate release and availability of the GOCPI package.
+Users can continue to use the product as new versions are released.
 
 \begin{wrapfigure}{r}{0.4\textwidth}
 	\centering
@@ -1220,18 +1237,6 @@ The GOCPI project is listed as an active project.
 	\caption{GOCPI File Structure}
 	\label{fig:GPS}
 \end{wrapfigure}
-
-The package requires a specific directory structure to publish new distributions.
-The \textbf{GOCPI} stores several files required for the package: 
-A sub directory of the same name containing an initialisation file (\textbf{init.py}) and package modules. 
-A distributions sub directory (\textbf{dist}) for new package versions. 
-A python file for setup information (\textbf{setup.py}) and a setup file for package configuration (\textbf{setup.cfg}).
-Lastly, there is a sub directory storing text files related to dependencies, package information and source links.
-
-New distributions are stored in the \textbf{dist} displayed in figure \ref{fig:GPS}.
-\textbf{Twine} is a package to upload new setup descriptions, configurations and code changes via the local terminal.
-PyPI enables the immediate release and availability of the GOCPI package.
-Users can continue to use the product as new versions are released.
 
 The development of the GOCPI package used the following process:
 \begin{enumerate}
@@ -1244,14 +1249,14 @@ The development of the GOCPI package used the following process:
 \end{enumerate}
 
 Over 80 distributions were released during this prototype's development. 
-Five models were developed to support the construction, forecasting and optimisation of user defined energy systems.
+Five classes were developed to support the construction, forecasting and optimisation of user defined energy systems.
 These will be addressed in turn as contribute to the key functionalities of the package.
-The docstrings related to all written functions may be found in the appendix.
+The docstrings related to all written functions may be found in the section \ref{docstring}.
 
 \subsubsection{Navigation Module}
 The navigation module is a class to help the user navigate their local directory. 
 The most important function in this class is the \textbf{Find\_File} function.
-The purpose of Find\_File() is to enable the user to seek and find designated files in their modelling directory from a user defined directory root.
+The purpose of Find\_File() is to enable the user to seek and find designated files in their modelling directory from a directory root.
 This root may be any node in the directory structure. 
 The FindFile function is important for the other functions in this package.
 
@@ -1326,7 +1331,7 @@ The create\_data\_file() is approximately 2000 lines including commenting and fo
 The create cases module is the most comprehensive of the GOCPI package.
 This module sets the user-defined sets and parameters to an energy systems class.
 The class is initialised with an empty set of energy system sets and parameters. 
-Each set and parameter has it's own function to create the necessary function.
+Each set and parameter has it's own function to set the correct values.
 The construction of an energy system occurs in a processing script.
 The development of the NZ energy system was facilitated in the (\textbf{GOCPI\_NZ\_Example.gyp}) script as explained in section \ref{NZES}.
 Please refer to the \textbf{Research Compendium} for a complete set of the functions in \textbf{CreateCases} class and the \textbf{GOCPI\_NZ\_Example.gyp} Processing Script.
@@ -1353,7 +1358,7 @@ The calculate\_cagr\_forecast() uses the calculate\_constant\_average\_growth\_r
 Several dictionaries are passed into the function to forecast the energy balance for each interval in the time horizon.
 
 \subsubsection{Optimisation Class}\label{optimisation}
-The optimisation class has two core functions. \textbf{run\_cplex\_local()} and \textbf{run\_ibm\_wml\_do()}.
+The optimisation class has two core functions: \textbf{run\_cplex\_local()} and \textbf{run\_ibm\_wml\_do()}.
 These two modules run IBM's commercial solvers, either locally or remotely, to minimise the total discounted cost for the energy system.
 
 The run\_cplex\_local() module initialises a model, loads the energy system model file, solves the problem and returns the objective function value.
@@ -1364,7 +1369,7 @@ After initialising credentials, a deployment space is created on the IBM Cloud s
 If needed, data assets are created.
 After the creation of a deployment space, a deployment is either created or loaded from an existing set.
 Lastly, a model payload is sent as a new job request to the deployment to solve the problem using the IBM Watson Machine Learning Decision Optimisation service.
-This function is written to accommodate future developments of a Python-based OseMOSYS methodology. The reasons 
+This function is written to accommodate future developments of a Python-based OseMOSYS methodology.
 
 The remaining functions are in development at this stage of the project.
 \newpage
@@ -1372,10 +1377,10 @@ The remaining functions are in development at this stage of the project.
 \subsection{Outline}
 The intention of this project was to develop a global carbon pricing optimisation model.
 The project changed in scope slightly as limitations were discovered, leading to the need to pivot in new directions.
-Carbon taxes are imposed as a constraint in the OseMOSYS methodology.
+Carbon taxes are imposed as constraints in the OseMOSYS methodology.
 This project successfully sets the foundation for building a Python-based open source energy modelling tool.
 The TIMES methodology explored was not suitable for building a scalable solution.
-OseMOSYS was a better alternative as the methodology is more intuitive and captures the complexity required for energy modelling.
+OseMOSYS was a better alternative as the methodology is more intuitive while still capturing the complexity required for energy modelling.
 An energy modeller can access the OseMOSYS model in Excel to customise the model formulation to meet their needs.
 Geographies are partitioned to use regions and IEA world energy balances in order to construct reference energy systems.
 The user can devise processing scripts to design and formulate their own energy systems with Python dictionaries and matrices.
@@ -1394,13 +1399,13 @@ The following list describes the deliverables achieved in this project:
 	\item A processing script to build user defined energy systems.
 	\item A partially complete energy system, with a bi-lateral trade relationship between Australia and New Zealand, to show proof of concept.
 	\item The ability to solve energy system models locally using the IBM ILOG CPLEX Optimisation Studio and associated Python APIs.
-	\item A pipeline to use IBM Cloud services to solve energy system models using the IBM  inform decisions.
+	\item A pipeline to use IBM Cloud services to solve energy system models using the IBM Decision Optimisation service.
 	\item A Python-based open source energy modelling package (GOCPI) distributable using PyPI. Use the following command to access: \textbf{pip install GOCPI}.
 	\begin{enumerate}
-		\item Navigation: Navigate file structures to access key resources and data.
+		\item Navigation: Navigate directory structures to access key resources and data.
 		\item EnergySystems: Convert energy systems into the necessary formats needed to solve the system.
 		\item CreateCases: Build energy systems from Python arrays and dictionaries.
-		\item Forecasting: Generate energy balances and forecast energy and financial information.
+		\item Forecasting: Generate energy balances and forecast energy/financial information.
 		\item Optimisation: Utilize IBM technologies to solve energy systems. These models may be solved locally or remotely.
 	\end{enumerate}
 		\item A website to access key project resources and communicate information related to the project.
@@ -1478,9 +1483,9 @@ Overall, this initiative will drive equitable outcomes for the energy transition
 
 \newpage
 \section{Appendices}
-\subsection{Project Modules}
+\subsection{Project Modules}\label{Docstring}
 [To be inserted using Sphinx/pydoc Documentation]
-\subsection{OseMOSYS Model}
+\subsection{OseMOSYS Model} \label{OM}
 The Open Source Energy Modelling System is a linear programme with sets, parameters, an objective function and constraints related to energy systems.
 The model is described below. Please refer to GOCPI OseMOSYS Structure.xlsx in the GitHub Repository for full descriptions of the sets, parameters and constraints.
 \lstinputlisting{"/Users/connor/Google Drive/Documents/University/Courses/2020/ENGSCI 700A&B/GOCPI/data/Inputs/GOCPI OseMOSYS/GOCPI_OseMOSYS_Model.txt"}
