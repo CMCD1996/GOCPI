@@ -129,6 +129,25 @@
 \end{titlepage}
 \newpage
 \section*{Abstract}
+The energy transition will require transparent energy investment and policy decisions to create equitable outcomes for major stakeholders.
+Energy modelling informs these decisions but existing complexities and technical challenges make the practice inaccessible.
+A thorough literature review informs the energy operating environment, current political action, opportunities, challenges and energy modelling practises.
+This project proposes the development of an accessible, scalable energy system modelling tool to address the aforementioned challenges and education disparities between stakeholders.
+Best practise software development informed product development.
+An exhaustive list of modelling regions was formulated. 
+The legacy TIMES energy modelling method was attempted.
+TIMES was abandoned prematurely in favour of OseMOSYS, an alternatively energy modelling method which better aligned with the project scope.
+The GNU Mathprog version of OseMOSYS was chosen over GAMS and Pyomo versions as was further developed.
+This new methodology was transcribed to a user-friendly interface and deconstructed to build reference energy systems.
+The GOCPI package development started with the Energysystems module in order to load existing energy systems. The module also formulates data and model text files to create Lp format files for optimisation problems. The Navigation module supports file navigation.
+A New Zealand and Australia energy system example was partially developed simultaneously with the CreateCases module to enable the user to build their own energy systems. 
+Core components required to build energy systems were developed further. 
+IBM optimisation technologies were incorporated into the Optimisation module to solve energy systems. 
+Limitations led to the development of a pipeline for remote optimisation using the IBM Watson Machine Learning service. 
+A web-based interface was developed to distribute the product. 
+A minimal viable product was successfully developed to set the foundation for building a scalable, open source energy system modelling tool. 
+This tool will address educational disparities and aid in an equitable energy transition.
+
 \newpage
 \section*{Acknowledgements}
 \begin{center}
@@ -1489,6 +1508,6 @@ The model is described below. Please refer to GOCPI OseMOSYS Structure.xlsx in t
 \subsection{Project Modules}\label{Docstring}
 The classes and modules developed for this project are detailed in the documentation starting on the next page.
 \newpage
-\includepdf[pages=-]{GOCPI-appendix.pdf}
+\includepdf[pages=-,width = \textwidth]{GOCPI-appendix.pdf}
 \newpage
 \end{document}
