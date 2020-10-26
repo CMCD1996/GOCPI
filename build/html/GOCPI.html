@@ -1,0 +1,1325 @@
+
+
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" >
+<head>
+  <meta charset="utf-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>GOCPI package &mdash; GOCPI 3.0.9330 documentation</title>
+  
+
+  
+  <link rel="stylesheet" href="_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+
+  
+  
+  
+  
+
+  
+  <!--[if lt IE 9]>
+    <script src="_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+    
+      <script type="text/javascript" id="documentation_options" data-url_root="./" src="_static/documentation_options.js"></script>
+        <script src="_static/jquery.js"></script>
+        <script src="_static/underscore.js"></script>
+        <script src="_static/doctools.js"></script>
+        <script src="_static/language_data.js"></script>
+    
+    <script type="text/javascript" src="_static/js/theme.js"></script>
+
+    
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" /> 
+</head>
+
+<body class="wy-body-for-nav">
+
+   
+  <div class="wy-grid-for-nav">
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+          
+
+          
+            <a href="index.html" class="icon icon-home" alt="Documentation Home"> GOCPI
+          
+
+          
+          </a>
+
+          
+            
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+              
+            
+            
+              <!-- Local TOC -->
+              <div class="local-toc"><ul>
+<li><a class="reference internal" href="#">GOCPI package</a><ul>
+<li><a class="reference internal" href="#submodules">Submodules</a></li>
+<li><a class="reference internal" href="#module-GOCPI.CreateCases">GOCPI.CreateCases module</a></li>
+<li><a class="reference internal" href="#module-GOCPI.Energysystems">GOCPI.Energysystems module</a></li>
+<li><a class="reference internal" href="#module-GOCPI.Forecasting">GOCPI.Forecasting module</a></li>
+<li><a class="reference internal" href="#module-GOCPI.Navigation">GOCPI.Navigation module</a></li>
+<li><a class="reference internal" href="#module-GOCPI.Optimisation">GOCPI.Optimisation module</a></li>
+<li><a class="reference internal" href="#module-GOCPI">Module contents</a></li>
+</ul>
+</li>
+</ul>
+</div>
+            
+          
+        </div>
+        
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="index.html">GOCPI</a>
+        
+      </nav>
+
+
+      <div class="wy-nav-content">
+        
+        <div class="rst-content">
+        
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+
+  <ul class="wy-breadcrumbs">
+    
+      <li><a href="index.html" class="icon icon-home"></a> &raquo;</li>
+        
+      <li>GOCPI package</li>
+    
+    
+      <li class="wy-breadcrumbs-aside">
+        
+            
+            <a href="_sources/GOCPI.rst.txt" rel="nofollow"> View page source</a>
+          
+        
+      </li>
+    
+  </ul>
+
+  
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <div class="section" id="gocpi-package">
+<h1>GOCPI package<a class="headerlink" href="#gocpi-package" title="Permalink to this headline">¶</a></h1>
+<div class="section" id="submodules">
+<h2>Submodules<a class="headerlink" href="#submodules" title="Permalink to this headline">¶</a></h2>
+</div>
+<div class="section" id="module-GOCPI.CreateCases">
+<span id="gocpi-createcases-module"></span><h2>GOCPI.CreateCases module<a class="headerlink" href="#module-GOCPI.CreateCases" title="Permalink to this headline">¶</a></h2>
+<dl class="py class">
+<dt id="GOCPI.CreateCases.CreateCases">
+<em class="property">class </em><code class="sig-prename descclassname">GOCPI.CreateCases.</code><code class="sig-name descname">CreateCases</code><a class="headerlink" href="#GOCPI.CreateCases.CreateCases" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">object</span></code></p>
+<p>A class of methods to create user-defined data cases</p>
+<dl class="py method">
+<dt id="GOCPI.CreateCases.CreateCases.set_accumulated_annual_demand">
+<code class="sig-name descname">set_accumulated_annual_demand</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">accumulated_forecast</span></em><span class="sig-paren">)</span><a class="headerlink" href="#GOCPI.CreateCases.CreateCases.set_accumulated_annual_demand" title="Permalink to this definition">¶</a></dt>
+<dd><dl class="simple">
+<dt>Sets the accumulated annual demand for fuels per region over the forecast period.</dt><dd><p>This function relies on a similar forecasting methodology as set_specific_demand.
+Fuels set in this function cannot be defined in set_specific_demand.</p>
+</dd>
+</dl>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>accumulated_forecast</strong> (<em>float</em><em>, </em><em>array</em>) – The forecast array of size (len(region),len(fuel),len(year))</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt id="GOCPI.CreateCases.CreateCases.set_accumulated_fuel">
+<code class="sig-name descname">set_accumulated_fuel</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">accumulated_fuel</span></em><span class="sig-paren">)</span><a class="headerlink" href="#GOCPI.CreateCases.CreateCases.set_accumulated_fuel" title="Permalink to this definition">¶</a></dt>
+<dd><p>Sets the case’s accumulated fuel types</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>specified_fuel</strong> (<em>list</em>) – list of specified fuels</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt id="GOCPI.CreateCases.CreateCases.set_annual_emission_limit">
+<code class="sig-name descname">set_annual_emission_limit</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">annual_emission_limits</span></em><span class="sig-paren">)</span><a class="headerlink" href="#GOCPI.CreateCases.CreateCases.set_annual_emission_limit" title="Permalink to this definition">¶</a></dt>
+<dd><p>Sets Annual Emission Limits</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>annual_emission_limits</strong> (<em>float</em><em>, </em><em>array</em>) – Annual Emission Limits</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt id="GOCPI.CreateCases.CreateCases.set_annual_exogenous_emission">
+<code class="sig-name descname">set_annual_exogenous_emission</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">annual_exogenous_emission</span></em><span class="sig-paren">)</span><a class="headerlink" href="#GOCPI.CreateCases.CreateCases.set_annual_exogenous_emission" title="Permalink to this definition">¶</a></dt>
+<dd><p>Sets Annual Exogneous Emissions</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>annual_exogenous_emission</strong> (<em>float</em><em>, </em><em>array</em>) – Annual Exogenous Emissions</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt id="GOCPI.CreateCases.CreateCases.set_availability_factor">
+<code class="sig-name descname">set_availability_factor</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">availablility_matrix</span></em><span class="sig-paren">)</span><a class="headerlink" href="#GOCPI.CreateCases.CreateCases.set_availability_factor" title="Permalink to this definition">¶</a></dt>
+<dd><p>Sets the availability factors</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>availablility_matrix</strong> (<em>float</em><em>, </em><em>array</em>) – Matrix describing availability factors for given technologies</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt id="GOCPI.CreateCases.CreateCases.set_availability_technology">
+<code class="sig-name descname">set_availability_technology</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">availability_technology</span></em><span class="sig-paren">)</span><a class="headerlink" href="#GOCPI.CreateCases.CreateCases.set_availability_technology" title="Permalink to this definition">¶</a></dt>
+<dd><p>Sets the cases availability_technology type</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>availability_technology</strong> (<em>list</em>) – List of technologies</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt id="GOCPI.CreateCases.CreateCases.set_capacity_factor">
+<code class="sig-name descname">set_capacity_factor</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">factor_matrix</span></em><span class="sig-paren">)</span><a class="headerlink" href="#GOCPI.CreateCases.CreateCases.set_capacity_factor" title="Permalink to this definition">¶</a></dt>
+<dd><p>Sets capacity factors for conversion technologies.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>factor_matrix</strong> (<em>float</em><em>, </em><em>array</em>) – </p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt id="GOCPI.CreateCases.CreateCases.set_capacity_of_one_technology_unit">
+<code class="sig-name descname">set_capacity_of_one_technology_unit</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">capacity_of_one_technology_unit</span></em><span class="sig-paren">)</span><a class="headerlink" href="#GOCPI.CreateCases.CreateCases.set_capacity_of_one_technology_unit" title="Permalink to this definition">¶</a></dt>
+<dd><p>Set the capacity of one technology units for all technologies</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>capacity_of_one_technology_unit</strong> (<em>float</em><em>, </em><em>array</em>) – capacities for one technology units</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt id="GOCPI.CreateCases.CreateCases.set_capacity_technology">
+<code class="sig-name descname">set_capacity_technology</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">capacity_technology</span></em><span class="sig-paren">)</span><a class="headerlink" href="#GOCPI.CreateCases.CreateCases.set_capacity_technology" title="Permalink to this definition">¶</a></dt>
+<dd><p>Sets the cases capacity_technology type</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>capacity_technology</strong> (<em>list</em>) – List of technologies</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt id="GOCPI.CreateCases.CreateCases.set_capacity_to_activity_unit">
+<code class="sig-name descname">set_capacity_to_activity_unit</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">region</span></em>, <em class="sig-param"><span class="n">technology</span></em>, <em class="sig-param"><span class="n">capacity_dictionaries</span></em>, <em class="sig-param"><span class="n">override</span></em><span class="sig-paren">)</span><a class="headerlink" href="#GOCPI.CreateCases.CreateCases.set_capacity_to_activity_unit" title="Permalink to this definition">¶</a></dt>
+<dd><p>Sets the capacity to activity parameter</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>region</strong> (<em>list</em>) – List of regions</p></li>
+<li><p><strong>technology</strong> (<em>list</em>) – List of technologies</p></li>
+<li><p><strong>capacity_dictionaries</strong> (<em>list</em>) – List of dictionaries to assign value</p></li>
+<li><p><strong>override</strong> (<em>float</em><em>, </em><em>array</em>) – </p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt id="GOCPI.CreateCases.CreateCases.set_capital_cost">
+<code class="sig-name descname">set_capital_cost</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">capital_costs</span></em><span class="sig-paren">)</span><a class="headerlink" href="#GOCPI.CreateCases.CreateCases.set_capital_cost" title="Permalink to this definition">¶</a></dt>
+<dd><p>Sets capital costs</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>capital_costs</strong> (<em>float</em><em>, </em><em>array</em>) – capital cost paramters</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt id="GOCPI.CreateCases.CreateCases.set_capital_cost_storage">
+<code class="sig-name descname">set_capital_cost_storage</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">capital_cost_storage</span></em><span class="sig-paren">)</span><a class="headerlink" href="#GOCPI.CreateCases.CreateCases.set_capital_cost_storage" title="Permalink to this definition">¶</a></dt>
+<dd><p>Sets the capital costs of using storage technologies</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>capital_cost_storage</strong> (<em>float</em><em>, </em><em>array</em>) – capital cost of storage technologies</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt id="GOCPI.CreateCases.CreateCases.set_conversion_ld">
+<code class="sig-name descname">set_conversion_ld</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">timeslice</span></em>, <em class="sig-param"><span class="n">daytype</span></em>, <em class="sig-param"><span class="n">link</span></em><span class="sig-paren">)</span><a class="headerlink" href="#GOCPI.CreateCases.CreateCases.set_conversion_ld" title="Permalink to this definition">¶</a></dt>
+<dd><p>Sets the Conversionld parameter</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>timeslice</strong> (<em>list</em>) – List of timeslices</p></li>
+<li><p><strong>daytype</strong> (<em>list</em>) – List of daytypes</p></li>
+<li><p><strong>link</strong> (<em>dict</em>) – Dictionary describing the connection between timeslices and daytypes</p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt id="GOCPI.CreateCases.CreateCases.set_conversion_lh">
+<code class="sig-name descname">set_conversion_lh</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">timeslice</span></em>, <em class="sig-param"><span class="n">dailytimebracket</span></em>, <em class="sig-param"><span class="n">link</span></em>, <em class="sig-param"><span class="n">override</span></em><span class="sig-paren">)</span><a class="headerlink" href="#GOCPI.CreateCases.CreateCases.set_conversion_lh" title="Permalink to this definition">¶</a></dt>
+<dd><p>Sets the Conversionlh parameter</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>timeslice</strong> (<em>list</em>) – List of timeslices</p></li>
+<li><p><strong>dailytimebracket</strong> (<em>list</em>) – List of dailytimebracket</p></li>
+<li><p><strong>link</strong> (<em>dict</em>) – Dictionary describing the connection between timeslices and dailytimebrackets</p></li>
+<li><p><strong>override</strong> (<em>int</em><em>, </em><em>array</em>) – Override if want to manually put in the array</p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt id="GOCPI.CreateCases.CreateCases.set_conversion_ls">
+<code class="sig-name descname">set_conversion_ls</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">timeslice</span></em>, <em class="sig-param"><span class="n">season</span></em>, <em class="sig-param"><span class="n">link</span></em><span class="sig-paren">)</span><a class="headerlink" href="#GOCPI.CreateCases.CreateCases.set_conversion_ls" title="Permalink to this definition">¶</a></dt>
+<dd><p>Sets the Conversionls parameter</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>timeslice</strong> (<em>list</em>) – List of timeslices</p></li>
+<li><p><strong>season</strong> (<em>list</em>) – List of seasons</p></li>
+<li><p><strong>link</strong> (<em>dict</em>) – Dictionary describing the connection between timeslices and seasons</p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt id="GOCPI.CreateCases.CreateCases.set_daily_time_bracket">
+<code class="sig-name descname">set_daily_time_bracket</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">num_dailytimebrackets</span></em><span class="sig-paren">)</span><a class="headerlink" href="#GOCPI.CreateCases.CreateCases.set_daily_time_bracket" title="Permalink to this definition">¶</a></dt>
+<dd><p>Creates set of daily time brackets</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>dailytimebracket</strong> (<em>int</em>) – [description]</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt id="GOCPI.CreateCases.CreateCases.set_day_split">
+<code class="sig-name descname">set_day_split</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">daily_time_bracket</span></em>, <em class="sig-param"><span class="n">years</span></em>, <em class="sig-param"><span class="n">hour_split</span></em>, <em class="sig-param"><span class="n">num_days</span></em>, <em class="sig-param"><span class="n">num_hours</span></em><span class="sig-paren">)</span><a class="headerlink" href="#GOCPI.CreateCases.CreateCases.set_day_split" title="Permalink to this definition">¶</a></dt>
+<dd><p>Sets the day split parameter</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>daily_time_bracket</strong> (<em>list</em>) – List of daily time brackets</p></li>
+<li><p><strong>years</strong> (<em>list</em>) – List of year</p></li>
+<li><p><strong>hour_split</strong> (<em>dict</em>) – Dictonary of hours in a daily time bracket</p></li>
+<li><p><strong>num_days</strong> (<em>int</em>) – Number of days in a year</p></li>
+<li><p><strong>num_hours</strong> (<em>int</em>) – Number of hours in a day</p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt id="GOCPI.CreateCases.CreateCases.set_days_in_day_type">
+<code class="sig-name descname">set_days_in_day_type</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">season</span></em>, <em class="sig-param"><span class="n">daytype</span></em>, <em class="sig-param"><span class="n">year</span></em>, <em class="sig-param"><span class="n">link</span></em>, <em class="sig-param"><span class="n">override</span></em><span class="sig-paren">)</span><a class="headerlink" href="#GOCPI.CreateCases.CreateCases.set_days_in_day_type" title="Permalink to this definition">¶</a></dt>
+<dd><p>Sets the DaysInDayType parameter</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>season</strong> (<em>list</em>) – List of seasons</p></li>
+<li><p><strong>daytype</strong> (<em>list</em>) – List of daytypes</p></li>
+<li><p><strong>year</strong> (<em>list</em>) – List of years</p></li>
+<li><p><strong>link</strong> (<em>dict</em>) – Dictionary relating seasons to daytypes</p></li>
+<li><p><strong>override</strong> (<em>int</em><em>, </em><em>array</em>) – Override if want to manually put in the array</p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt id="GOCPI.CreateCases.CreateCases.set_daytype">
+<code class="sig-name descname">set_daytype</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">num_daytypes</span></em><span class="sig-paren">)</span><a class="headerlink" href="#GOCPI.CreateCases.CreateCases.set_daytype" title="Permalink to this definition">¶</a></dt>
+<dd><p>[summary]</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>num_daytypes</strong> (<em>int</em>) – Number of daytypes</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt id="GOCPI.CreateCases.CreateCases.set_depreciation_method">
+<code class="sig-name descname">set_depreciation_method</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">region</span></em>, <em class="sig-param"><span class="n">methods</span></em>, <em class="sig-param"><span class="n">override</span></em><span class="sig-paren">)</span><a class="headerlink" href="#GOCPI.CreateCases.CreateCases.set_depreciation_method" title="Permalink to this definition">¶</a></dt>
+<dd><dl class="simple">
+<dt>Sets DepreciationMethod</dt><dd><p>(1 = Sinking Fund Depreciation, 2 = Straightline Depreciation)</p>
+</dd>
+</dl>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>region</strong> (<em>list</em>) – List of regions</p></li>
+<li><p><strong>override</strong> (<em>int</em><em>, </em><em>array</em>) – Manual array for setting depreciation methods</p></li>
+<li><p><strong>methods</strong> (<em>dict</em>) – Dictionary assigning methods to regions</p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt id="GOCPI.CreateCases.CreateCases.set_discount_rate">
+<code class="sig-name descname">set_discount_rate</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">equity</span></em>, <em class="sig-param"><span class="n">debt</span></em>, <em class="sig-param"><span class="n">market_index</span></em>, <em class="sig-param"><span class="n">cost_of_debt_pre_tax</span></em>, <em class="sig-param"><span class="n">risk_free_rate</span></em>, <em class="sig-param"><span class="n">effective_tax_rate</span></em>, <em class="sig-param"><span class="n">preference_equity</span></em>, <em class="sig-param"><span class="n">market_value_preference_shares</span></em>, <em class="sig-param"><span class="n">preference_dividends</span></em>, <em class="sig-param"><span class="n">market_risk_coefficient</span></em><span class="sig-paren">)</span><a class="headerlink" href="#GOCPI.CreateCases.CreateCases.set_discount_rate" title="Permalink to this definition">¶</a></dt>
+<dd><p>[summary]</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>equity</strong> (<em>dict</em>) – Dictionary of equity totals from treasury balance sheets</p></li>
+<li><p><strong>debt</strong> (<em>dict</em>) – Dictionary of equity totals from treasury balance sheets</p></li>
+<li><p><strong>market_index</strong> (<em>int</em><em>, </em><em>array</em>) – Regional monthly index returns (Arrays)</p></li>
+<li><p><strong>cost_of_debt_pre_tax</strong> (<em>dict</em>) – Dictionary of pre-tax cost of debts calculated from treasury balance sheets</p></li>
+<li><p><strong>risk_free_rate</strong> (<em>dict</em>) – Dictionary of risk free rates from 10 year swap rates for each region</p></li>
+<li><p><strong>effective_tax_rate</strong> (<em>dict</em>) – Dictionary of company tax rates for each region</p></li>
+<li><p><strong>preference_equity</strong> (<em>dict</em>) – Dictionary of preference equity for each region</p></li>
+<li><p><strong>market_value_preference_shares</strong> (<em>dict</em>) – Dictionary of the market value of prefence shares for each region</p></li>
+<li><p><strong>preference_dividends</strong> (<em>dict</em>) – Dictionary of prefence dividends for each region</p></li>
+<li><p><strong>market_risk_coefficient</strong> (<em>dict</em>) – Dictionary of markey risk co-efficients</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>Numpy array of discount rates</p>
+</dd>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p>[int, array]</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt id="GOCPI.CreateCases.CreateCases.set_emission">
+<code class="sig-name descname">set_emission</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">emissions</span></em><span class="sig-paren">)</span><a class="headerlink" href="#GOCPI.CreateCases.CreateCases.set_emission" title="Permalink to this definition">¶</a></dt>
+<dd><p>Sets the cases emission types</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>emissions</strong> (<em>List</em>) – list of emission types</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt id="GOCPI.CreateCases.CreateCases.set_emission_activity_ratio">
+<code class="sig-name descname">set_emission_activity_ratio</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">emission_activity_ratios</span></em><span class="sig-paren">)</span><a class="headerlink" href="#GOCPI.CreateCases.CreateCases.set_emission_activity_ratio" title="Permalink to this definition">¶</a></dt>
+<dd><p>Sets Emission Activity Ratios</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>emission_activity_ratios</strong> (<em>[</em><em>float</em><em>, </em><em>array</em>) – Emission Activity Ratios</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt id="GOCPI.CreateCases.CreateCases.set_emissions_penalty">
+<code class="sig-name descname">set_emissions_penalty</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">emissions_penalties</span></em><span class="sig-paren">)</span><a class="headerlink" href="#GOCPI.CreateCases.CreateCases.set_emissions_penalty" title="Permalink to this definition">¶</a></dt>
+<dd><p>Sets Emissions Penalties</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>emissions_penalties</strong> (<em>float</em><em>, </em><em>penalties</em>) – Emissions Penalties</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt id="GOCPI.CreateCases.CreateCases.set_fixed_cost">
+<code class="sig-name descname">set_fixed_cost</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">fixed_costs</span></em><span class="sig-paren">)</span><a class="headerlink" href="#GOCPI.CreateCases.CreateCases.set_fixed_cost" title="Permalink to this definition">¶</a></dt>
+<dd><p>Set fixed costs</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>fixed_costs</strong> (<em>float</em><em>, </em><em>array</em>) – fixed cost parameters</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt id="GOCPI.CreateCases.CreateCases.set_fuel">
+<code class="sig-name descname">set_fuel</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">fuel</span></em><span class="sig-paren">)</span><a class="headerlink" href="#GOCPI.CreateCases.CreateCases.set_fuel" title="Permalink to this definition">¶</a></dt>
+<dd><p>Sets the case’s fuel types</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>fuel</strong> (<em>list</em>) – list of fuels</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt id="GOCPI.CreateCases.CreateCases.set_input_activity_ratio">
+<code class="sig-name descname">set_input_activity_ratio</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">input_activity_ratios</span></em><span class="sig-paren">)</span><a class="headerlink" href="#GOCPI.CreateCases.CreateCases.set_input_activity_ratio" title="Permalink to this definition">¶</a></dt>
+<dd><p>Sets input activity ratios</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>input_activity_ratios</strong> (<em>float</em><em>, </em><em>array</em>) – Sets the input activity ratio</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt id="GOCPI.CreateCases.CreateCases.set_min_storage_charge">
+<code class="sig-name descname">set_min_storage_charge</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">minimum_storage_charges</span></em><span class="sig-paren">)</span><a class="headerlink" href="#GOCPI.CreateCases.CreateCases.set_min_storage_charge" title="Permalink to this definition">¶</a></dt>
+<dd><p>Sets the minimum storage charges</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>minimum_storage_charges</strong> (<em>float</em><em>, </em><em>array</em>) – minimum storage parameters</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt id="GOCPI.CreateCases.CreateCases.set_mode_of_operation">
+<code class="sig-name descname">set_mode_of_operation</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">num_modes_of_operation</span></em><span class="sig-paren">)</span><a class="headerlink" href="#GOCPI.CreateCases.CreateCases.set_mode_of_operation" title="Permalink to this definition">¶</a></dt>
+<dd><p>Create the number of modes of operation (n = 1,…,num_modes_of_operation)</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>num_modes_of_operation</strong> (<em>int</em>) – </p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt id="GOCPI.CreateCases.CreateCases.set_model_period_emission_limit">
+<code class="sig-name descname">set_model_period_emission_limit</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">model_period_emission_limits</span></em><span class="sig-paren">)</span><a class="headerlink" href="#GOCPI.CreateCases.CreateCases.set_model_period_emission_limit" title="Permalink to this definition">¶</a></dt>
+<dd><p>Sets Model Period Emission Limits</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>model_period_emission_limits</strong> (<em>float</em><em>, </em><em>array</em>) – Model Period Emission Limits</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt id="GOCPI.CreateCases.CreateCases.set_model_period_exogenous_emission">
+<code class="sig-name descname">set_model_period_exogenous_emission</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">model_period_exogenous_emissions</span></em><span class="sig-paren">)</span><a class="headerlink" href="#GOCPI.CreateCases.CreateCases.set_model_period_exogenous_emission" title="Permalink to this definition">¶</a></dt>
+<dd><p>Sets Model Period Exogenous Emissions</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>model_period_exogenous_emissions</strong> (<em>float</em><em>, </em><em>array</em>) – Model Period Exogenous Emissions</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt id="GOCPI.CreateCases.CreateCases.set_operational_life">
+<code class="sig-name descname">set_operational_life</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">operational_lives</span></em><span class="sig-paren">)</span><a class="headerlink" href="#GOCPI.CreateCases.CreateCases.set_operational_life" title="Permalink to this definition">¶</a></dt>
+<dd><p>Sets operational life</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>operational_lives</strong> (<em>list</em>) – </p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt id="GOCPI.CreateCases.CreateCases.set_operational_life_storage">
+<code class="sig-name descname">set_operational_life_storage</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">operational_life_storage</span></em><span class="sig-paren">)</span><a class="headerlink" href="#GOCPI.CreateCases.CreateCases.set_operational_life_storage" title="Permalink to this definition">¶</a></dt>
+<dd><p>Sets the operational life storage</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>operational_life_storage</strong> (<em>float</em><em>, </em><em>array</em>) – operational life storage parameters</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt id="GOCPI.CreateCases.CreateCases.set_output_activity_ratio">
+<code class="sig-name descname">set_output_activity_ratio</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">output_activity_ratios</span></em><span class="sig-paren">)</span><a class="headerlink" href="#GOCPI.CreateCases.CreateCases.set_output_activity_ratio" title="Permalink to this definition">¶</a></dt>
+<dd><p>Sets output activity ratio</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>output_activity_ratios</strong> (<em>float</em><em>, </em><em>array</em>) – output activity ratio parameters</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt id="GOCPI.CreateCases.CreateCases.set_re_min_production_target">
+<code class="sig-name descname">set_re_min_production_target</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">re_min_production_targets</span></em><span class="sig-paren">)</span><a class="headerlink" href="#GOCPI.CreateCases.CreateCases.set_re_min_production_target" title="Permalink to this definition">¶</a></dt>
+<dd><p>Sets Renewable Energy Minimum Production Targets</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>re_min_production_targets</strong> (<em>float</em><em>, </em><em>array</em>) – Renewable Energy Minimum Production Targets</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt id="GOCPI.CreateCases.CreateCases.set_re_tag_fuel">
+<code class="sig-name descname">set_re_tag_fuel</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">re_tag_fuels</span></em><span class="sig-paren">)</span><a class="headerlink" href="#GOCPI.CreateCases.CreateCases.set_re_tag_fuel" title="Permalink to this definition">¶</a></dt>
+<dd><p>Sets RE Tag Fuels</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>re_tag_fuels</strong> (<em>float</em><em>, </em><em>array</em>) – RE Tag Fuels</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt id="GOCPI.CreateCases.CreateCases.set_re_tag_technology">
+<code class="sig-name descname">set_re_tag_technology</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">re_tag_technologies</span></em><span class="sig-paren">)</span><a class="headerlink" href="#GOCPI.CreateCases.CreateCases.set_re_tag_technology" title="Permalink to this definition">¶</a></dt>
+<dd><p>Sets RE Tag Technology</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>re_tag_technologies</strong> (<em>float</em><em>, </em><em>array</em>) – RE Tag Technologies</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt id="GOCPI.CreateCases.CreateCases.set_region">
+<code class="sig-name descname">set_region</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">regions</span></em><span class="sig-paren">)</span><a class="headerlink" href="#GOCPI.CreateCases.CreateCases.set_region" title="Permalink to this definition">¶</a></dt>
+<dd><p>Sets the datacase’s regions analysis</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>regions</strong> (<em>list</em>) – list of regions</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt id="GOCPI.CreateCases.CreateCases.set_reserve_margin">
+<code class="sig-name descname">set_reserve_margin</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">reserve_margins</span></em><span class="sig-paren">)</span><a class="headerlink" href="#GOCPI.CreateCases.CreateCases.set_reserve_margin" title="Permalink to this definition">¶</a></dt>
+<dd><p>Sets reserve margins</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>reserve_margins</strong> (<em>float</em><em>, </em><em>array</em>) – Reserve Margins</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt id="GOCPI.CreateCases.CreateCases.set_reserve_margin_tag_fuel">
+<code class="sig-name descname">set_reserve_margin_tag_fuel</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">reserve_margin_fuel_tags</span></em><span class="sig-paren">)</span><a class="headerlink" href="#GOCPI.CreateCases.CreateCases.set_reserve_margin_tag_fuel" title="Permalink to this definition">¶</a></dt>
+<dd><p>Sets the reserve margin tag fuels</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>reserve_margin_fuel_tags</strong> (<em>float</em><em>, </em><em>array</em>) – Sets the reserve margin tag fuel parameters</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt id="GOCPI.CreateCases.CreateCases.set_reserve_margin_tag_technology">
+<code class="sig-name descname">set_reserve_margin_tag_technology</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">reserve_margin_tag_technologies</span></em><span class="sig-paren">)</span><a class="headerlink" href="#GOCPI.CreateCases.CreateCases.set_reserve_margin_tag_technology" title="Permalink to this definition">¶</a></dt>
+<dd><p>Sets Reserve Margin Tag Technology</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>reserve_margin_tag_technologies</strong> (<em>float</em><em>, </em><em>array</em>) – Reserve Margin Tag Technologies</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt id="GOCPI.CreateCases.CreateCases.set_residual_capacity">
+<code class="sig-name descname">set_residual_capacity</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">residential_capacities</span></em><span class="sig-paren">)</span><a class="headerlink" href="#GOCPI.CreateCases.CreateCases.set_residual_capacity" title="Permalink to this definition">¶</a></dt>
+<dd><p>Set residual capacity</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>residential_capacities</strong> (<em>float</em><em>, </em><em>array</em>) – residual capacities parameter</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt id="GOCPI.CreateCases.CreateCases.set_residual_storage_capacity">
+<code class="sig-name descname">set_residual_storage_capacity</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">residual_storage_capacities</span></em><span class="sig-paren">)</span><a class="headerlink" href="#GOCPI.CreateCases.CreateCases.set_residual_storage_capacity" title="Permalink to this definition">¶</a></dt>
+<dd><p>Sets residual storage capacities</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>residual_storage_capacities</strong> (<em>float</em><em>, </em><em>array</em>) – residual storage capacities</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt id="GOCPI.CreateCases.CreateCases.set_season">
+<code class="sig-name descname">set_season</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">num_seasons</span></em><span class="sig-paren">)</span><a class="headerlink" href="#GOCPI.CreateCases.CreateCases.set_season" title="Permalink to this definition">¶</a></dt>
+<dd><p>Creates set of seasons</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>num_seasons</strong> (<em>int</em>) – Number of seasons</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt id="GOCPI.CreateCases.CreateCases.set_specified_annual_demand">
+<code class="sig-name descname">set_specified_annual_demand</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">specified_forecast</span></em><span class="sig-paren">)</span><a class="headerlink" href="#GOCPI.CreateCases.CreateCases.set_specified_annual_demand" title="Permalink to this definition">¶</a></dt>
+<dd><p>Sets the annual demand for fuels per region over the forecast period (Must be accurate)</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>forecast</strong> (<em>float</em><em>, </em><em>array</em>) – The forecast array of size (len(region),len(fuel),len(year))</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt id="GOCPI.CreateCases.CreateCases.set_specified_demand_profile">
+<code class="sig-name descname">set_specified_demand_profile</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">specified_annual_demand</span></em>, <em class="sig-param"><span class="n">region</span></em>, <em class="sig-param"><span class="n">fuel</span></em>, <em class="sig-param"><span class="n">year</span></em>, <em class="sig-param"><span class="n">timeslice</span></em>, <em class="sig-param"><span class="n">profile</span></em>, <em class="sig-param"><span class="n">override</span></em><span class="sig-paren">)</span><a class="headerlink" href="#GOCPI.CreateCases.CreateCases.set_specified_demand_profile" title="Permalink to this definition">¶</a></dt>
+<dd><p>Sets the specified annual demand profiles using the specified annual demand.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>specified_annual_demand</strong> (<em>float</em><em>, </em><em>array</em>) – Specified annual demand profiles</p></li>
+<li><p><strong>region</strong> (<em>list</em>) – List of regions</p></li>
+<li><p><strong>fuel</strong> (<em>list</em>) – List of fuels</p></li>
+<li><p><strong>year</strong> (<em>list</em>) – List of years</p></li>
+<li><p><strong>timeslice</strong> (<em>list</em>) – List of timeslices</p></li>
+<li><p><strong>profile</strong> (<em>Dict</em>) – Dictionary of fuel allocations to timeslices</p></li>
+<li><p><strong>override</strong> (<em>float</em><em>, </em><em>array</em>) – Manual override for the specified annual demand profiles.</p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt id="GOCPI.CreateCases.CreateCases.set_specified_fuel">
+<code class="sig-name descname">set_specified_fuel</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">specified_fuel</span></em><span class="sig-paren">)</span><a class="headerlink" href="#GOCPI.CreateCases.CreateCases.set_specified_fuel" title="Permalink to this definition">¶</a></dt>
+<dd><p>Sets the case’s specified fuel types</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>specified_fuel</strong> (<em>list</em>) – list of specified fuels</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt id="GOCPI.CreateCases.CreateCases.set_storage">
+<code class="sig-name descname">set_storage</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">storage</span></em><span class="sig-paren">)</span><a class="headerlink" href="#GOCPI.CreateCases.CreateCases.set_storage" title="Permalink to this definition">¶</a></dt>
+<dd><p>Sets storage set of the datacase</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>storage</strong> (<em>list</em>) – list of storage types</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt id="GOCPI.CreateCases.CreateCases.set_storage_level_start">
+<code class="sig-name descname">set_storage_level_start</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">storage_level_start</span></em><span class="sig-paren">)</span><a class="headerlink" href="#GOCPI.CreateCases.CreateCases.set_storage_level_start" title="Permalink to this definition">¶</a></dt>
+<dd><p>Sets the storage level starting point</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>storage_level_start</strong> (<em>float</em><em>, </em><em>array</em>) – storage starting level</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt id="GOCPI.CreateCases.CreateCases.set_storage_max_charge_rate">
+<code class="sig-name descname">set_storage_max_charge_rate</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">storage_max_level_charge_rates</span></em><span class="sig-paren">)</span><a class="headerlink" href="#GOCPI.CreateCases.CreateCases.set_storage_max_charge_rate" title="Permalink to this definition">¶</a></dt>
+<dd><p>Sets the storgae max charge rate</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>storage_max_level_charge_rates</strong> (<em>float</em><em>, </em><em>array</em>) – Storage max level charge rates</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt id="GOCPI.CreateCases.CreateCases.set_storage_max_discharge_rate">
+<code class="sig-name descname">set_storage_max_discharge_rate</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">storage_max_level_discharge_rates</span></em><span class="sig-paren">)</span><a class="headerlink" href="#GOCPI.CreateCases.CreateCases.set_storage_max_discharge_rate" title="Permalink to this definition">¶</a></dt>
+<dd><p>Sets storage technologies maximum discharge rates</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>storage_max_level_discharge_rates</strong> (<em>float</em><em>, </em><em>array</em>) – Discharge rates for storage paramters</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt id="GOCPI.CreateCases.CreateCases.set_technology">
+<code class="sig-name descname">set_technology</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">technology</span></em><span class="sig-paren">)</span><a class="headerlink" href="#GOCPI.CreateCases.CreateCases.set_technology" title="Permalink to this definition">¶</a></dt>
+<dd><p>Sets the cases technology type</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>technology</strong> (<em>list</em>) – List of technologies</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt id="GOCPI.CreateCases.CreateCases.set_technology_from_storage">
+<code class="sig-name descname">set_technology_from_storage</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">technology_from_storage</span></em><span class="sig-paren">)</span><a class="headerlink" href="#GOCPI.CreateCases.CreateCases.set_technology_from_storage" title="Permalink to this definition">¶</a></dt>
+<dd><p>Sets technology from storage binary paramter</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>technology_from_storage</strong> (<em>float</em><em>, </em><em>array</em>) – technology from storage parameter</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt id="GOCPI.CreateCases.CreateCases.set_technology_to_storage">
+<code class="sig-name descname">set_technology_to_storage</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">technology_to_storage</span></em><span class="sig-paren">)</span><a class="headerlink" href="#GOCPI.CreateCases.CreateCases.set_technology_to_storage" title="Permalink to this definition">¶</a></dt>
+<dd><p>Sets the technology to storage parameter</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>technology_to_storage</strong> (<em>float</em><em>, </em><em>array</em>) – technology to storage parameter</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt id="GOCPI.CreateCases.CreateCases.set_timeslice">
+<code class="sig-name descname">set_timeslice</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">timeslice</span></em><span class="sig-paren">)</span><a class="headerlink" href="#GOCPI.CreateCases.CreateCases.set_timeslice" title="Permalink to this definition">¶</a></dt>
+<dd><p>Set of timeslices</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>timeslice</strong> (<em>list</em>) – list of timeslices</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt id="GOCPI.CreateCases.CreateCases.set_total_annual_max_capacity">
+<code class="sig-name descname">set_total_annual_max_capacity</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">total_annual_max_capacities</span></em><span class="sig-paren">)</span><a class="headerlink" href="#GOCPI.CreateCases.CreateCases.set_total_annual_max_capacity" title="Permalink to this definition">¶</a></dt>
+<dd><p>Sets the total annual maximum capacities</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>total_annual_max_capacities</strong> (<em>float</em><em>, </em><em>array</em>) – Total Annual Max Capacities</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt id="GOCPI.CreateCases.CreateCases.set_total_annual_min_capacity">
+<code class="sig-name descname">set_total_annual_min_capacity</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">total_annual_min_capacities</span></em><span class="sig-paren">)</span><a class="headerlink" href="#GOCPI.CreateCases.CreateCases.set_total_annual_min_capacity" title="Permalink to this definition">¶</a></dt>
+<dd><p>Sets the totoal annual minimum capacities</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>total_annual_min_capacities</strong> (<em>float</em><em>, </em><em>array</em>) – Total Annual Min Capacities</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt id="GOCPI.CreateCases.CreateCases.set_total_technology_annual_activity_lower_limit">
+<code class="sig-name descname">set_total_technology_annual_activity_lower_limit</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">total_technology_activity_lower_limits</span></em><span class="sig-paren">)</span><a class="headerlink" href="#GOCPI.CreateCases.CreateCases.set_total_technology_annual_activity_lower_limit" title="Permalink to this definition">¶</a></dt>
+<dd><p>Sets the Total Technology Activity Lower Limits</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>total_technology_activity_lower_limits</strong> (<em>float</em><em>, </em><em>array</em>) – Technology Activity Lower Limits</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt id="GOCPI.CreateCases.CreateCases.set_total_technology_annual_activity_upper_limit">
+<code class="sig-name descname">set_total_technology_annual_activity_upper_limit</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">total_technology_annual_activity_upper_limits</span></em><span class="sig-paren">)</span><a class="headerlink" href="#GOCPI.CreateCases.CreateCases.set_total_technology_annual_activity_upper_limit" title="Permalink to this definition">¶</a></dt>
+<dd><p>Sets the Total Technology Activity Upper Limits</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>total_technology_annual_activity_upper_limits</strong> (<em>float</em><em>, </em><em>array</em>) – Technology Activity Upper Limits</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt id="GOCPI.CreateCases.CreateCases.set_total_technology_period_activity_lower_limit">
+<code class="sig-name descname">set_total_technology_period_activity_lower_limit</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">total_technology_period_activity_lower_limits</span></em><span class="sig-paren">)</span><a class="headerlink" href="#GOCPI.CreateCases.CreateCases.set_total_technology_period_activity_lower_limit" title="Permalink to this definition">¶</a></dt>
+<dd><p>Sets Total Technology Period Activity Lower Limits</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>total_technology_period_activity_lower_limits</strong> (<em>[</em><em>type</em><em>]</em>) – Total Technology Period Activity Lower Limit</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt id="GOCPI.CreateCases.CreateCases.set_total_technology_period_activity_upper_limit">
+<code class="sig-name descname">set_total_technology_period_activity_upper_limit</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">total_technology_period_activity_upper_limits</span></em><span class="sig-paren">)</span><a class="headerlink" href="#GOCPI.CreateCases.CreateCases.set_total_technology_period_activity_upper_limit" title="Permalink to this definition">¶</a></dt>
+<dd><p>Sets Total Technology Period Activity Upper Limits</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>total_technology_period_activity_upper_limits</strong> (<em>float</em><em>, </em><em>array</em>) – Total Technology Period Activity Upper Limit</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt id="GOCPI.CreateCases.CreateCases.set_trade_route">
+<code class="sig-name descname">set_trade_route</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">trade</span></em><span class="sig-paren">)</span><a class="headerlink" href="#GOCPI.CreateCases.CreateCases.set_trade_route" title="Permalink to this definition">¶</a></dt>
+<dd><dl class="simple">
+<dt>Sets the TradeRoute parameter between regions</dt><dd><p>(Assume it is the same across fuels and years)</p>
+</dd>
+</dl>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>trade</strong> (<em>int</em><em> ,</em><em>array</em>) – 4D array representing trade relationships
+between regions, fuels and years. You
+must model this manually.</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt id="GOCPI.CreateCases.CreateCases.set_variable_cost">
+<code class="sig-name descname">set_variable_cost</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">variable_costs</span></em><span class="sig-paren">)</span><a class="headerlink" href="#GOCPI.CreateCases.CreateCases.set_variable_cost" title="Permalink to this definition">¶</a></dt>
+<dd><p>Sets variable costs</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>variable_costs</strong> (<em>float</em><em>, </em><em>array</em>) – variable costs parameters</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt id="GOCPI.CreateCases.CreateCases.set_year">
+<code class="sig-name descname">set_year</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">start_year</span></em>, <em class="sig-param"><span class="n">end_year</span></em>, <em class="sig-param"><span class="n">interval</span></em><span class="sig-paren">)</span><a class="headerlink" href="#GOCPI.CreateCases.CreateCases.set_year" title="Permalink to this definition">¶</a></dt>
+<dd><p>Sets a list of forecast years</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>start_year</strong> (<em>int</em>) – Starting year for forecasting (Less than end_year)</p></li>
+<li><p><strong>end_year</strong> (<em>int</em>) – Ending year for forecasting (Greater than start_year)</p></li>
+<li><p><strong>interval</strong> (<em>int</em>) – Gap for forecasting period</p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt id="GOCPI.CreateCases.CreateCases.set_year_split">
+<code class="sig-name descname">set_year_split</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">timeslices</span></em>, <em class="sig-param"><span class="n">years</span></em>, <em class="sig-param"><span class="n">splits</span></em><span class="sig-paren">)</span><a class="headerlink" href="#GOCPI.CreateCases.CreateCases.set_year_split" title="Permalink to this definition">¶</a></dt>
+<dd><dl class="simple">
+<dt>Creates 2D Numpy Array Parameter Splits.</dt><dd><p>(Note: The index positions of timelices and splits must match)</p>
+</dd>
+</dl>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>timeslices</strong> (<em>list</em>) – List of timeslices</p></li>
+<li><p><strong>years</strong> (<em>list</em>) – List of years</p></li>
+<li><p><strong>splits</strong> (<em>dict</em>) – A dictionary linking yearsplits to timeslices</p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
+</dd></dl>
+
+</div>
+<div class="section" id="module-GOCPI.Energysystems">
+<span id="gocpi-energysystems-module"></span><h2>GOCPI.Energysystems module<a class="headerlink" href="#module-GOCPI.Energysystems" title="Permalink to this headline">¶</a></h2>
+<dl class="py class">
+<dt id="GOCPI.Energysystems.Energy_Systems">
+<em class="property">class </em><code class="sig-prename descclassname">GOCPI.Energysystems.</code><code class="sig-name descname">Energy_Systems</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">year</span></em>, <em class="sig-param"><span class="n">region</span></em>, <em class="sig-param"><span class="n">emission</span></em>, <em class="sig-param"><span class="n">technology</span></em>, <em class="sig-param"><span class="n">capacity_technology</span></em>, <em class="sig-param"><span class="n">availability_technology</span></em>, <em class="sig-param"><span class="n">fuel</span></em>, <em class="sig-param"><span class="n">specified_fuel</span></em>, <em class="sig-param"><span class="n">accumulated_fuel</span></em>, <em class="sig-param"><span class="n">timeslice</span></em>, <em class="sig-param"><span class="n">mode_of_operation</span></em>, <em class="sig-param"><span class="n">storage</span></em>, <em class="sig-param"><span class="n">daytype</span></em>, <em class="sig-param"><span class="n">season</span></em>, <em class="sig-param"><span class="n">dailytimebracket</span></em><span class="sig-paren">)</span><a class="headerlink" href="#GOCPI.Energysystems.Energy_Systems" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">object</span></code></p>
+<p>A class of methods to initialise energy sytems and create the data/model files needed for optimisation.</p>
+<dl class="py method">
+<dt id="GOCPI.Energysystems.Energy_Systems.create_data_file">
+<code class="sig-name descname">create_data_file</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">file_location</span></em>, <em class="sig-param"><span class="n">defaults_dictionary</span></em>, <em class="sig-param"><span class="n">toggle_defaults</span></em><span class="sig-paren">)</span><a class="headerlink" href="#GOCPI.Energysystems.Energy_Systems.create_data_file" title="Permalink to this definition">¶</a></dt>
+<dd><p>Creates the osemosys datafile</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>file_location</strong> (<em>str</em>) – String of directory to save data file</p></li>
+<li><p><strong>defaults_dictionary</strong> (<em>dict</em>) – Dictionary setting the default values for parameters</p></li>
+<li><p><strong>toggle_defaults</strong> (<em>Bool</em>) – Boolean (True/False to only print the default functions</p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt id="GOCPI.Energysystems.Energy_Systems.create_model_file">
+<code class="sig-name descname">create_model_file</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">root</span></em>, <em class="sig-param"><span class="n">file</span></em><span class="sig-paren">)</span><a class="headerlink" href="#GOCPI.Energysystems.Energy_Systems.create_model_file" title="Permalink to this definition">¶</a></dt>
+<dd><p>Creates the model file necessary for the project to run</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>for the basic problem</strong> (<em>Parameters</em>) – </p>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>The loaded in parameters and sets</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt id="GOCPI.Energysystems.Energy_Systems.load_datacase">
+<code class="sig-name descname">load_datacase</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">case</span></em>, <em class="sig-param"><span class="n">system</span></em><span class="sig-paren">)</span><a class="headerlink" href="#GOCPI.Energysystems.Energy_Systems.load_datacase" title="Permalink to this definition">¶</a></dt>
+<dd><dl class="simple">
+<dt>Loads the data case to a correct configured and intialised energy system</dt><dd><p>(The load status dictionary must be compatible with the data_case and system_case)</p>
+</dd>
+</dl>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>case</strong> (<em>object</em>) – Energy system datacase</p></li>
+<li><p><strong>system</strong> (<em>object</em>) – Initialised energy system</p></li>
+<li><p><strong>load_status</strong> (<em>dict</em>) – Dictionary setting the required sets and parameters to load</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>Returns the updated dictionary</p>
+</dd>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p>system_case (dict)</p>
+</dd>
+</dl>
+</dd></dl>
+
+</dd></dl>
+
+</div>
+<div class="section" id="module-GOCPI.Forecasting">
+<span id="gocpi-forecasting-module"></span><h2>GOCPI.Forecasting module<a class="headerlink" href="#module-GOCPI.Forecasting" title="Permalink to this headline">¶</a></h2>
+<dl class="py class">
+<dt id="GOCPI.Forecasting.Forecasting">
+<em class="property">class </em><code class="sig-prename descclassname">GOCPI.Forecasting.</code><code class="sig-name descname">Forecasting</code><a class="headerlink" href="#GOCPI.Forecasting.Forecasting" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">object</span></code></p>
+<dl class="py method">
+<dt id="GOCPI.Forecasting.Forecasting.calculate_cagr_forecasts">
+<code class="sig-name descname">calculate_cagr_forecasts</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">cagr_dictionary</span></em>, <em class="sig-param"><span class="n">base_year_dictionary</span></em>, <em class="sig-param"><span class="n">fuel</span></em>, <em class="sig-param"><span class="n">year</span></em><span class="sig-paren">)</span><a class="headerlink" href="#GOCPI.Forecasting.Forecasting.calculate_cagr_forecasts" title="Permalink to this definition">¶</a></dt>
+<dd><p>Forecasts base year fuels by a constant average growth rate for a forecast period</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>cagr_dictionary</strong> (<em>Dict</em>) – Dictionary of constant average growth rates per fuel</p></li>
+<li><p><strong>base_year_dictionary</strong> (<em>[</em><em>type</em><em>]</em>) – Dictionary of base year fuel consumption in energy types</p></li>
+<li><p><strong>fuel</strong> (<em>list</em>) – List of Fuels</p></li>
+<li><p><strong>year</strong> (<em>list</em>) – List of forecast years</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>2D Array of demand forecasts per fuel</p>
+</dd>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p>[float, array]</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt id="GOCPI.Forecasting.Forecasting.calculate_constant_average_growth_rate">
+<code class="sig-name descname">calculate_constant_average_growth_rate</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">start_year</span></em>, <em class="sig-param"><span class="n">end_year</span></em>, <em class="sig-param"><span class="n">start_value</span></em>, <em class="sig-param"><span class="n">end_value</span></em><span class="sig-paren">)</span><a class="headerlink" href="#GOCPI.Forecasting.Forecasting.calculate_constant_average_growth_rate" title="Permalink to this definition">¶</a></dt>
+<dd><p>Calculates the constant average growth rate (CAGR)</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>start_year</strong> (<em>int</em>) – Starting year</p></li>
+<li><p><strong>end_year</strong> (<em>int</em>) – Ending year</p></li>
+<li><p><strong>start_value</strong> (<em>int</em>) – Initial value</p></li>
+<li><p><strong>end_value</strong> (<em>int</em>) – Final value</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>Constant average growth rate (1+ decimal)</p>
+</dd>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p>cagr</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt id="GOCPI.Forecasting.Forecasting.energy_balance_base">
+<code class="sig-name descname">energy_balance_base</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">root</span></em>, <em class="sig-param"><span class="n">IEA_World_Energy_Balances_1</span></em>, <em class="sig-param"><span class="n">IEA_World_Energy_Balances_2</span></em>, <em class="sig-param"><span class="n">create_excel_spreadsheet</span></em>, <em class="sig-param"><span class="n">output_file</span></em><span class="sig-paren">)</span><a class="headerlink" href="#GOCPI.Forecasting.Forecasting.energy_balance_base" title="Permalink to this definition">¶</a></dt>
+<dd><p>Creates the baseline energy balance for forecasting</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>root</strong> (<em>path</em>) – Path to provide access to all the files</p></li>
+<li><p><strong>IEA_World_Energy_Balances_1</strong> (<em>str</em>) – File name for Energy Balance A to K</p></li>
+<li><p><strong>IEA_World_Energy_Balances_2</strong> (<em>[</em><em>type</em><em>]</em>) – File name for Energy Balance L to Z</p></li>
+<li><p><strong>create_excel_spreadsheet</strong> (<em>boolean</em>) – True/false on whether to create a spreadsheet</p></li>
+<li><p><strong>output_file</strong> (<em>str</em>) – Name of output energy balance spreadsheet</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>Dictionary of energy balances and unique lists (Use these key words to access: Energy Balances, Fuel, Geography, Technology)</p>
+</dd>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p>(dict)</p>
+</dd>
+</dl>
+</dd></dl>
+
+</dd></dl>
+
+</div>
+<div class="section" id="module-GOCPI.Navigation">
+<span id="gocpi-navigation-module"></span><h2>GOCPI.Navigation module<a class="headerlink" href="#module-GOCPI.Navigation" title="Permalink to this headline">¶</a></h2>
+<dl class="py class">
+<dt id="GOCPI.Navigation.Navigation">
+<em class="property">class </em><code class="sig-prename descclassname">GOCPI.Navigation.</code><code class="sig-name descname">Navigation</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">target_root</span></em>, <em class="sig-param"><span class="n">target_file</span></em><span class="sig-paren">)</span><a class="headerlink" href="#GOCPI.Navigation.Navigation" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">object</span></code></p>
+<p>Navigation is a class for navigating, manipulating and editing data in the GOCPI model.</p>
+<dl class="py attribute">
+<dt id="GOCPI.Navigation.Navigation.Find_File">
+<code class="sig-name descname">Find_File</code><a class="headerlink" href="#GOCPI.Navigation.Navigation.Find_File" title="Permalink to this definition">¶</a></dt>
+<dd><dl class="field-list simple">
+<dt class="field-odd">Type</dt>
+<dd class="field-odd"><p>string</p>
+</dd>
+</dl>
+</dd></dl>
+
+<p>TODO: Fill out all functions below</p>
+<dl class="py method">
+<dt id="id0">
+<code class="sig-name descname">Find_File</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#id0" title="Permalink to this definition">¶</a></dt>
+<dd><p>Find_File searches for a target file, from a base directory, to construct
+a target directory.</p>
+<p>Inputs:
+target_root = The base directory to search from (string).
+target_file = The name of the target file (string).</p>
+<p>Outputs:
+f = Combinated target file location (string).</p>
+</dd></dl>
+
+<dl class="py method">
+<dt id="GOCPI.Navigation.Navigation.create_linear_programme_file">
+<code class="sig-name descname">create_linear_programme_file</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">directory</span></em>, <em class="sig-param"><span class="n">data_file</span></em>, <em class="sig-param"><span class="n">model_file</span></em>, <em class="sig-param"><span class="n">output_file</span></em><span class="sig-paren">)</span><a class="headerlink" href="#GOCPI.Navigation.Navigation.create_linear_programme_file" title="Permalink to this definition">¶</a></dt>
+<dd><p>Creates the model file through executing model system commands</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>directory</strong> (<em>str</em>) – Name of directory to put data into</p></li>
+<li><p><strong>data_file</strong> (<em>str</em>) – Name of energy system data file</p></li>
+<li><p><strong>model_file</strong> (<em>str</em>) – Name of energy system model file</p></li>
+<li><p><strong>output_file</strong> (<em>str</em>) – Name of output linear programme</p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
+</dd></dl>
+
+</div>
+<div class="section" id="module-GOCPI.Optimisation">
+<span id="gocpi-optimisation-module"></span><h2>GOCPI.Optimisation module<a class="headerlink" href="#module-GOCPI.Optimisation" title="Permalink to this headline">¶</a></h2>
+<dl class="py class">
+<dt id="GOCPI.Optimisation.Optimisation">
+<em class="property">class </em><code class="sig-prename descclassname">GOCPI.Optimisation.</code><code class="sig-name descname">Optimisation</code><a class="headerlink" href="#GOCPI.Optimisation.Optimisation" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">object</span></code></p>
+<p>Prepare and runs optimisation with IBM ILOG CPLEX Optimisation Studio</p>
+<dl class="py method">
+<dt id="GOCPI.Optimisation.Optimisation.create_linear_programme_file">
+<code class="sig-name descname">create_linear_programme_file</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">directory</span></em>, <em class="sig-param"><span class="n">data_file</span></em>, <em class="sig-param"><span class="n">model_file</span></em>, <em class="sig-param"><span class="n">output_file</span></em><span class="sig-paren">)</span><a class="headerlink" href="#GOCPI.Optimisation.Optimisation.create_linear_programme_file" title="Permalink to this definition">¶</a></dt>
+<dd><p>Creates the model file through executing model system commands</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>directory</strong> (<em>str</em>) – Name of directory to put data into</p></li>
+<li><p><strong>data_file</strong> (<em>str</em>) – Name of energy system data file</p></li>
+<li><p><strong>model_file</strong> (<em>str</em>) – Name of energy system model file</p></li>
+<li><p><strong>output_file</strong> (<em>str</em>) – Name of output linear programme</p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt id="GOCPI.Optimisation.Optimisation.reset">
+<code class="sig-name descname">reset</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">tarinfo</span></em><span class="sig-paren">)</span><a class="headerlink" href="#GOCPI.Optimisation.Optimisation.reset" title="Permalink to this definition">¶</a></dt>
+<dd><dl class="simple">
+<dt>Resets the tarfile information when creating tar files</dt><dd><p>This is to input into the filter when using tar.add()</p>
+</dd>
+</dl>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>tarinfo</strong> (<em>Object</em>) – Tar Object containing an ID of 0 and the root as the name</p>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>Tar Object containing an ID of 0 and the root as the name</p>
+</dd>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p>tarinfo (Object)</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt id="GOCPI.Optimisation.Optimisation.run_cplex_local">
+<code class="sig-name descname">run_cplex_local</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">model_file</span></em><span class="sig-paren">)</span><a class="headerlink" href="#GOCPI.Optimisation.Optimisation.run_cplex_local" title="Permalink to this definition">¶</a></dt>
+<dd><p>This function runs cplex on the local device if the energy system
+is of a small enough complexity</p>
+</dd></dl>
+
+<dl class="py method">
+<dt id="GOCPI.Optimisation.Optimisation.run_ibm_wml_do">
+<code class="sig-name descname">run_ibm_wml_do</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">apikey</span></em>, <em class="sig-param"><span class="n">url</span></em>, <em class="sig-param"><span class="n">deployment_space_name</span></em>, <em class="sig-param"><span class="n">cloud_object_storage_credential</span></em>, <em class="sig-param"><span class="n">service_instance_id</span></em>, <em class="sig-param"><span class="n">deployment_space_exists</span></em>, <em class="sig-param"><span class="n">data_assets_exist</span></em>, <em class="sig-param"><span class="n">data_asset_dictionary</span></em>, <em class="sig-param"><span class="n">model_name</span></em>, <em class="sig-param"><span class="n">model_type</span></em>, <em class="sig-param"><span class="n">model_runtime_uid</span></em>, <em class="sig-param"><span class="n">model_tar_file</span></em>, <em class="sig-param"><span class="n">num_nodes</span></em>, <em class="sig-param"><span class="n">deployment_exists</span></em>, <em class="sig-param"><span class="n">payload_input_data_id</span></em>, <em class="sig-param"><span class="n">payload_input_data_file</span></em>, <em class="sig-param"><span class="n">payload_output_data_id</span></em><span class="sig-paren">)</span><a class="headerlink" href="#GOCPI.Optimisation.Optimisation.run_ibm_wml_do" title="Permalink to this definition">¶</a></dt>
+<dd><dl class="simple">
+<dt>This function enables the user to solve python-based</dt><dd><p>optimisation models. The legacy offering
+to solve optimisation models on IBM cloud was using
+the docplex python api to run Cplex on DOcloud.
+As of September 2020, the DOcloud
+was discontinued with Decision Optimisation
+functionalities imported to IBM’s Watson Machine
+Learning Service. The new process requires the
+energy system model to be written in python. This
+project saw the implementation of the osemosys
+modelling methodology in GNU Mathprog written into
+LP Files. IBM Decision Optimisation in cannot deploy
+models in LP File formats to get jobs. Therefore,
+this function is for future work in converting the
+entire energy system modelling tool to python-based only.
+This is well-documented the report in the Future Work
+Section. Note: You must have access to IBM Watson Studio
+and Cloud Products through the IBM Academic Initiative or
+Similar.</p>
+</dd>
+</dl>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>apikey</strong> (<em>str</em>) – API key from user’s IBM Cloud Account</p></li>
+<li><p><strong>url</strong> (<em>[</em><em>type</em><em>]</em>) – URL for the server the user is using for the IBM services</p></li>
+<li><p><strong>deployment_space_name</strong> (<em>str</em>) – Name of the deployment space</p></li>
+<li><p><strong>cloud_object_storage_credential</strong> (<em>str</em>) – Credential for the cloud object storage asset</p></li>
+<li><p><strong>service_instance_id</strong> (<em>str</em>) – Service instance id for the service being used (IBM WML)</p></li>
+<li><p><strong>deployment_space_exists</strong> (<em>boolean</em>) – True/False if the deployment space already exists</p></li>
+<li><p><strong>data_assets_exist</strong> (<em>boolean</em>) – True/False if the data assets (e.g. input data stored on cloud)</p></li>
+<li><p><strong>data_asset_dictionary</strong> (<em>dict</em>) – A dictionary of data assets to stored on IBM cloud</p></li>
+<li><p><strong>model_name</strong> (<em>str</em>) – Name of the model</p></li>
+<li><p><strong>model_type</strong> (<em>str</em>) – Name of the model</p></li>
+<li><p><strong>model_runtime_uid</strong> (<em>str</em>) – Runtime ID for the model</p></li>
+<li><p><strong>model_tar_file</strong> (<em>tar</em>) – Tar file containing the python model</p></li>
+<li><p><strong>num_nodes</strong> (<em>int</em>) – Number of nodes the model is run off.</p></li>
+<li><p><strong>deployment_exists</strong> (<em>boolean</em>) – True/False if the deployment already exists</p></li>
+<li><p><strong>payload_input_data_id</strong> (<em>str</em>) – Name of input data</p></li>
+<li><p><strong>payload_input_data_file</strong> (<em>dataframe</em>) – Input data file in the form of a dataframe</p></li>
+<li><p><strong>payload_output_data_id</strong> (<em>str</em>) – Name of output data file</p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt id="GOCPI.Optimisation.Optimisation.use_bash_shell">
+<code class="sig-name descname">use_bash_shell</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">command</span></em><span class="sig-paren">)</span><a class="headerlink" href="#GOCPI.Optimisation.Optimisation.use_bash_shell" title="Permalink to this definition">¶</a></dt>
+<dd><p>Execute bash commands in python scripts</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>command</strong> (<em>str</em>) – Command to execute</p>
+</dd>
+</dl>
+</dd></dl>
+
+</dd></dl>
+
+</div>
+<div class="section" id="module-GOCPI">
+<span id="module-contents"></span><h2>Module contents<a class="headerlink" href="#module-GOCPI" title="Permalink to this headline">¶</a></h2>
+</div>
+</div>
+
+
+           </div>
+           
+          </div>
+          <footer>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        
+        &copy; Copyright 2020, Connor Robert McDowall
+
+    </p>
+  </div>
+    
+    
+    
+    Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a
+    
+    <a href="https://github.com/rtfd/sphinx_rtd_theme">theme</a>
+    
+    provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+
+</footer>
+
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script>
+
+  
+  
+    
+   
+
+</body>
+</html>
