@@ -1,0 +1,206 @@
+\begin{sphinxtheindex}
+\let\bigletter\sphinxstyleindexlettergroup
+\let\spxpagem \sphinxstyleindexpagemain
+\let\spxentry \sphinxstyleindexentry
+\let\spxextra \sphinxstyleindexextra
+
+  \bigletter C
+  \item \spxentry{calculate\_cagr\_forecasts()}\spxextra{GOCPI.Forecasting.Forecasting method}, 
+		\hyperpage{10}
+  \item \spxentry{calculate\_constant\_average\_growth\_rate()}\spxextra{GOCPI.Forecasting.Forecasting method}, 
+		\hyperpage{10}
+  \item \spxentry{create\_data\_file()}\spxextra{GOCPI.Energysystems.Energy\_Systems method}, 
+		\hyperpage{9}
+  \item \spxentry{create\_linear\_programme\_file()}\spxextra{GOCPI.Navigation.Navigation method}, 
+		\hyperpage{11}
+  \item \spxentry{create\_linear\_programme\_file()}\spxextra{GOCPI.Optimisation.Optimisation method}, 
+		\hyperpage{11}
+  \item \spxentry{create\_model\_file()}\spxextra{GOCPI.Energysystems.Energy\_Systems method}, 
+		\hyperpage{9}
+  \item \spxentry{CreateCases}\spxextra{class in GOCPI.CreateCases}, \hyperpage{1}
+
+  \indexspace
+  \bigletter E
+  \item \spxentry{energy\_balance\_base()}\spxextra{GOCPI.Forecasting.Forecasting method}, 
+		\hyperpage{10}
+  \item \spxentry{Energy\_Systems}\spxextra{class in GOCPI.Energysystems}, \hyperpage{9}
+
+  \indexspace
+  \bigletter F
+  \item \spxentry{Find\_File}\spxextra{GOCPI.Navigation.Navigation attribute}, \hyperpage{11}
+  \item \spxentry{Find\_File()}\spxextra{GOCPI.Navigation.Navigation method}, \hyperpage{11}
+  \item \spxentry{Forecasting}\spxextra{class in GOCPI.Forecasting}, \hyperpage{10}
+
+  \indexspace
+  \bigletter G
+  \item \spxentry{GOCPI}
+    \subitem \spxentry{module}, \hyperpage{13}
+  \item \spxentry{GOCPI.CreateCases}
+    \subitem \spxentry{module}, \hyperpage{1}
+  \item \spxentry{GOCPI.Energysystems}
+    \subitem \spxentry{module}, \hyperpage{9}
+  \item \spxentry{GOCPI.Forecasting}
+    \subitem \spxentry{module}, \hyperpage{10}
+  \item \spxentry{GOCPI.Navigation}
+    \subitem \spxentry{module}, \hyperpage{11}
+  \item \spxentry{GOCPI.Optimisation}
+    \subitem \spxentry{module}, \hyperpage{11}
+
+  \indexspace
+  \bigletter L
+  \item \spxentry{load\_datacase()}\spxextra{GOCPI.Energysystems.Energy\_Systems method}, 
+		\hyperpage{9}
+
+  \indexspace
+  \bigletter M
+  \item \spxentry{module}
+    \subitem \spxentry{GOCPI}, \hyperpage{13}
+    \subitem \spxentry{GOCPI.CreateCases}, \hyperpage{1}
+    \subitem \spxentry{GOCPI.Energysystems}, \hyperpage{9}
+    \subitem \spxentry{GOCPI.Forecasting}, \hyperpage{10}
+    \subitem \spxentry{GOCPI.Navigation}, \hyperpage{11}
+    \subitem \spxentry{GOCPI.Optimisation}, \hyperpage{11}
+
+  \indexspace
+  \bigletter N
+  \item \spxentry{Navigation}\spxextra{class in GOCPI.Navigation}, \hyperpage{11}
+
+  \indexspace
+  \bigletter O
+  \item \spxentry{Optimisation}\spxextra{class in GOCPI.Optimisation}, \hyperpage{11}
+
+  \indexspace
+  \bigletter R
+  \item \spxentry{reset()}\spxextra{GOCPI.Optimisation.Optimisation method}, \hyperpage{11}
+  \item \spxentry{run\_cplex\_local()}\spxextra{GOCPI.Optimisation.Optimisation method}, 
+		\hyperpage{12}
+  \item \spxentry{run\_ibm\_wml\_do()}\spxextra{GOCPI.Optimisation.Optimisation method}, 
+		\hyperpage{12}
+
+  \indexspace
+  \bigletter S
+  \item \spxentry{set\_accumulated\_annual\_demand()}\spxextra{GOCPI.CreateCases.CreateCases method}, 
+		\hyperpage{1}
+  \item \spxentry{set\_accumulated\_fuel()}\spxextra{GOCPI.CreateCases.CreateCases method}, 
+		\hyperpage{1}
+  \item \spxentry{set\_annual\_emission\_limit()}\spxextra{GOCPI.CreateCases.CreateCases method}, 
+		\hyperpage{1}
+  \item \spxentry{set\_annual\_exogenous\_emission()}\spxextra{GOCPI.CreateCases.CreateCases method}, 
+		\hyperpage{1}
+  \item \spxentry{set\_availability\_factor()}\spxextra{GOCPI.CreateCases.CreateCases method}, 
+		\hyperpage{1}
+  \item \spxentry{set\_availability\_technology()}\spxextra{GOCPI.CreateCases.CreateCases method}, 
+		\hyperpage{1}
+  \item \spxentry{set\_capacity\_factor()}\spxextra{GOCPI.CreateCases.CreateCases method}, 
+		\hyperpage{1}
+  \item \spxentry{set\_capacity\_of\_one\_technology\_unit()}\spxextra{GOCPI.CreateCases.CreateCases method}, 
+		\hyperpage{2}
+  \item \spxentry{set\_capacity\_technology()}\spxextra{GOCPI.CreateCases.CreateCases method}, 
+		\hyperpage{2}
+  \item \spxentry{set\_capacity\_to\_activity\_unit()}\spxextra{GOCPI.CreateCases.CreateCases method}, 
+		\hyperpage{2}
+  \item \spxentry{set\_capital\_cost()}\spxextra{GOCPI.CreateCases.CreateCases method}, 
+		\hyperpage{2}
+  \item \spxentry{set\_capital\_cost\_storage()}\spxextra{GOCPI.CreateCases.CreateCases method}, 
+		\hyperpage{2}
+  \item \spxentry{set\_conversion\_ld()}\spxextra{GOCPI.CreateCases.CreateCases method}, 
+		\hyperpage{2}
+  \item \spxentry{set\_conversion\_lh()}\spxextra{GOCPI.CreateCases.CreateCases method}, 
+		\hyperpage{2}
+  \item \spxentry{set\_conversion\_ls()}\spxextra{GOCPI.CreateCases.CreateCases method}, 
+		\hyperpage{2}
+  \item \spxentry{set\_daily\_time\_bracket()}\spxextra{GOCPI.CreateCases.CreateCases method}, 
+		\hyperpage{3}
+  \item \spxentry{set\_day\_split()}\spxextra{GOCPI.CreateCases.CreateCases method}, \hyperpage{3}
+  \item \spxentry{set\_days\_in\_day\_type()}\spxextra{GOCPI.CreateCases.CreateCases method}, 
+		\hyperpage{3}
+  \item \spxentry{set\_daytype()}\spxextra{GOCPI.CreateCases.CreateCases method}, \hyperpage{3}
+  \item \spxentry{set\_depreciation\_method()}\spxextra{GOCPI.CreateCases.CreateCases method}, 
+		\hyperpage{3}
+  \item \spxentry{set\_discount\_rate()}\spxextra{GOCPI.CreateCases.CreateCases method}, 
+		\hyperpage{3}
+  \item \spxentry{set\_emission()}\spxextra{GOCPI.CreateCases.CreateCases method}, \hyperpage{4}
+  \item \spxentry{set\_emission\_activity\_ratio()}\spxextra{GOCPI.CreateCases.CreateCases method}, 
+		\hyperpage{4}
+  \item \spxentry{set\_emissions\_penalty()}\spxextra{GOCPI.CreateCases.CreateCases method}, 
+		\hyperpage{4}
+  \item \spxentry{set\_fixed\_cost()}\spxextra{GOCPI.CreateCases.CreateCases method}, \hyperpage{4}
+  \item \spxentry{set\_fuel()}\spxextra{GOCPI.CreateCases.CreateCases method}, \hyperpage{4}
+  \item \spxentry{set\_input\_activity\_ratio()}\spxextra{GOCPI.CreateCases.CreateCases method}, 
+		\hyperpage{4}
+  \item \spxentry{set\_min\_storage\_charge()}\spxextra{GOCPI.CreateCases.CreateCases method}, 
+		\hyperpage{4}
+  \item \spxentry{set\_mode\_of\_operation()}\spxextra{GOCPI.CreateCases.CreateCases method}, 
+		\hyperpage{5}
+  \item \spxentry{set\_model\_period\_emission\_limit()}\spxextra{GOCPI.CreateCases.CreateCases method}, 
+		\hyperpage{5}
+  \item \spxentry{set\_model\_period\_exogenous\_emission()}\spxextra{GOCPI.CreateCases.CreateCases method}, 
+		\hyperpage{5}
+  \item \spxentry{set\_operational\_life()}\spxextra{GOCPI.CreateCases.CreateCases method}, 
+		\hyperpage{5}
+  \item \spxentry{set\_operational\_life\_storage()}\spxextra{GOCPI.CreateCases.CreateCases method}, 
+		\hyperpage{5}
+  \item \spxentry{set\_output\_activity\_ratio()}\spxextra{GOCPI.CreateCases.CreateCases method}, 
+		\hyperpage{5}
+  \item \spxentry{set\_re\_min\_production\_target()}\spxextra{GOCPI.CreateCases.CreateCases method}, 
+		\hyperpage{5}
+  \item \spxentry{set\_re\_tag\_fuel()}\spxextra{GOCPI.CreateCases.CreateCases method}, 
+		\hyperpage{5}
+  \item \spxentry{set\_re\_tag\_technology()}\spxextra{GOCPI.CreateCases.CreateCases method}, 
+		\hyperpage{5}
+  \item \spxentry{set\_region()}\spxextra{GOCPI.CreateCases.CreateCases method}, \hyperpage{5}
+  \item \spxentry{set\_reserve\_margin()}\spxextra{GOCPI.CreateCases.CreateCases method}, 
+		\hyperpage{6}
+  \item \spxentry{set\_reserve\_margin\_tag\_fuel()}\spxextra{GOCPI.CreateCases.CreateCases method}, 
+		\hyperpage{6}
+  \item \spxentry{set\_reserve\_margin\_tag\_technology()}\spxextra{GOCPI.CreateCases.CreateCases method}, 
+		\hyperpage{6}
+  \item \spxentry{set\_residual\_capacity()}\spxextra{GOCPI.CreateCases.CreateCases method}, 
+		\hyperpage{6}
+  \item \spxentry{set\_residual\_storage\_capacity()}\spxextra{GOCPI.CreateCases.CreateCases method}, 
+		\hyperpage{6}
+  \item \spxentry{set\_season()}\spxextra{GOCPI.CreateCases.CreateCases method}, \hyperpage{6}
+  \item \spxentry{set\_specified\_annual\_demand()}\spxextra{GOCPI.CreateCases.CreateCases method}, 
+		\hyperpage{6}
+  \item \spxentry{set\_specified\_demand\_profile()}\spxextra{GOCPI.CreateCases.CreateCases method}, 
+		\hyperpage{6}
+  \item \spxentry{set\_specified\_fuel()}\spxextra{GOCPI.CreateCases.CreateCases method}, 
+		\hyperpage{7}
+  \item \spxentry{set\_storage()}\spxextra{GOCPI.CreateCases.CreateCases method}, \hyperpage{7}
+  \item \spxentry{set\_storage\_level\_start()}\spxextra{GOCPI.CreateCases.CreateCases method}, 
+		\hyperpage{7}
+  \item \spxentry{set\_storage\_max\_charge\_rate()}\spxextra{GOCPI.CreateCases.CreateCases method}, 
+		\hyperpage{7}
+  \item \spxentry{set\_storage\_max\_discharge\_rate()}\spxextra{GOCPI.CreateCases.CreateCases method}, 
+		\hyperpage{7}
+  \item \spxentry{set\_technology()}\spxextra{GOCPI.CreateCases.CreateCases method}, \hyperpage{7}
+  \item \spxentry{set\_technology\_from\_storage()}\spxextra{GOCPI.CreateCases.CreateCases method}, 
+		\hyperpage{7}
+  \item \spxentry{set\_technology\_to\_storage()}\spxextra{GOCPI.CreateCases.CreateCases method}, 
+		\hyperpage{7}
+  \item \spxentry{set\_timeslice()}\spxextra{GOCPI.CreateCases.CreateCases method}, \hyperpage{7}
+  \item \spxentry{set\_total\_annual\_max\_capacity()}\spxextra{GOCPI.CreateCases.CreateCases method}, 
+		\hyperpage{7}
+  \item \spxentry{set\_total\_annual\_min\_capacity()}\spxextra{GOCPI.CreateCases.CreateCases method}, 
+		\hyperpage{7}
+  \item \spxentry{set\_total\_technology\_annual\_activity\_lower\_limit()}\spxextra{GOCPI.CreateCases.CreateCases method}, 
+		\hyperpage{8}
+  \item \spxentry{set\_total\_technology\_annual\_activity\_upper\_limit()}\spxextra{GOCPI.CreateCases.CreateCases method}, 
+		\hyperpage{8}
+  \item \spxentry{set\_total\_technology\_period\_activity\_lower\_limit()}\spxextra{GOCPI.CreateCases.CreateCases method}, 
+		\hyperpage{8}
+  \item \spxentry{set\_total\_technology\_period\_activity\_upper\_limit()}\spxextra{GOCPI.CreateCases.CreateCases method}, 
+		\hyperpage{8}
+  \item \spxentry{set\_trade\_route()}\spxextra{GOCPI.CreateCases.CreateCases method}, 
+		\hyperpage{8}
+  \item \spxentry{set\_variable\_cost()}\spxextra{GOCPI.CreateCases.CreateCases method}, 
+		\hyperpage{8}
+  \item \spxentry{set\_year()}\spxextra{GOCPI.CreateCases.CreateCases method}, \hyperpage{8}
+  \item \spxentry{set\_year\_split()}\spxextra{GOCPI.CreateCases.CreateCases method}, \hyperpage{8}
+
+  \indexspace
+  \bigletter U
+  \item \spxentry{use\_bash\_shell()}\spxextra{GOCPI.Optimisation.Optimisation method}, 
+		\hyperpage{13}
+
+\end{sphinxtheindex}

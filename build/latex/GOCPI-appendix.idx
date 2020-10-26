@@ -1,0 +1,96 @@
+\indexentry{module@\spxentry{module}!GOCPI.CreateCases@\spxentry{GOCPI.CreateCases}|hyperpage}{1}
+\indexentry{GOCPI.CreateCases@\spxentry{GOCPI.CreateCases}!module@\spxentry{module}|hyperpage}{1}
+\indexentry{CreateCases (class in GOCPI.CreateCases)@\spxentry{CreateCases}\spxextra{class in GOCPI.CreateCases}|hyperpage}{1}
+\indexentry{set\_accumulated\_annual\_demand() (GOCPI.CreateCases.CreateCases method)@\spxentry{set\_accumulated\_annual\_demand()}\spxextra{GOCPI.CreateCases.CreateCases method}|hyperpage}{1}
+\indexentry{set\_accumulated\_fuel() (GOCPI.CreateCases.CreateCases method)@\spxentry{set\_accumulated\_fuel()}\spxextra{GOCPI.CreateCases.CreateCases method}|hyperpage}{1}
+\indexentry{set\_annual\_emission\_limit() (GOCPI.CreateCases.CreateCases method)@\spxentry{set\_annual\_emission\_limit()}\spxextra{GOCPI.CreateCases.CreateCases method}|hyperpage}{1}
+\indexentry{set\_annual\_exogenous\_emission() (GOCPI.CreateCases.CreateCases method)@\spxentry{set\_annual\_exogenous\_emission()}\spxextra{GOCPI.CreateCases.CreateCases method}|hyperpage}{1}
+\indexentry{set\_availability\_factor() (GOCPI.CreateCases.CreateCases method)@\spxentry{set\_availability\_factor()}\spxextra{GOCPI.CreateCases.CreateCases method}|hyperpage}{1}
+\indexentry{set\_availability\_technology() (GOCPI.CreateCases.CreateCases method)@\spxentry{set\_availability\_technology()}\spxextra{GOCPI.CreateCases.CreateCases method}|hyperpage}{1}
+\indexentry{set\_capacity\_factor() (GOCPI.CreateCases.CreateCases method)@\spxentry{set\_capacity\_factor()}\spxextra{GOCPI.CreateCases.CreateCases method}|hyperpage}{1}
+\indexentry{set\_capacity\_of\_one\_technology\_unit() (GOCPI.CreateCases.CreateCases method)@\spxentry{set\_capacity\_of\_one\_technology\_unit()}\spxextra{GOCPI.CreateCases.CreateCases method}|hyperpage}{2}
+\indexentry{set\_capacity\_technology() (GOCPI.CreateCases.CreateCases method)@\spxentry{set\_capacity\_technology()}\spxextra{GOCPI.CreateCases.CreateCases method}|hyperpage}{2}
+\indexentry{set\_capacity\_to\_activity\_unit() (GOCPI.CreateCases.CreateCases method)@\spxentry{set\_capacity\_to\_activity\_unit()}\spxextra{GOCPI.CreateCases.CreateCases method}|hyperpage}{2}
+\indexentry{set\_capital\_cost() (GOCPI.CreateCases.CreateCases method)@\spxentry{set\_capital\_cost()}\spxextra{GOCPI.CreateCases.CreateCases method}|hyperpage}{2}
+\indexentry{set\_capital\_cost\_storage() (GOCPI.CreateCases.CreateCases method)@\spxentry{set\_capital\_cost\_storage()}\spxextra{GOCPI.CreateCases.CreateCases method}|hyperpage}{2}
+\indexentry{set\_conversion\_ld() (GOCPI.CreateCases.CreateCases method)@\spxentry{set\_conversion\_ld()}\spxextra{GOCPI.CreateCases.CreateCases method}|hyperpage}{2}
+\indexentry{set\_conversion\_lh() (GOCPI.CreateCases.CreateCases method)@\spxentry{set\_conversion\_lh()}\spxextra{GOCPI.CreateCases.CreateCases method}|hyperpage}{2}
+\indexentry{set\_conversion\_ls() (GOCPI.CreateCases.CreateCases method)@\spxentry{set\_conversion\_ls()}\spxextra{GOCPI.CreateCases.CreateCases method}|hyperpage}{2}
+\indexentry{set\_daily\_time\_bracket() (GOCPI.CreateCases.CreateCases method)@\spxentry{set\_daily\_time\_bracket()}\spxextra{GOCPI.CreateCases.CreateCases method}|hyperpage}{3}
+\indexentry{set\_day\_split() (GOCPI.CreateCases.CreateCases method)@\spxentry{set\_day\_split()}\spxextra{GOCPI.CreateCases.CreateCases method}|hyperpage}{3}
+\indexentry{set\_days\_in\_day\_type() (GOCPI.CreateCases.CreateCases method)@\spxentry{set\_days\_in\_day\_type()}\spxextra{GOCPI.CreateCases.CreateCases method}|hyperpage}{3}
+\indexentry{set\_daytype() (GOCPI.CreateCases.CreateCases method)@\spxentry{set\_daytype()}\spxextra{GOCPI.CreateCases.CreateCases method}|hyperpage}{3}
+\indexentry{set\_depreciation\_method() (GOCPI.CreateCases.CreateCases method)@\spxentry{set\_depreciation\_method()}\spxextra{GOCPI.CreateCases.CreateCases method}|hyperpage}{3}
+\indexentry{set\_discount\_rate() (GOCPI.CreateCases.CreateCases method)@\spxentry{set\_discount\_rate()}\spxextra{GOCPI.CreateCases.CreateCases method}|hyperpage}{3}
+\indexentry{set\_emission() (GOCPI.CreateCases.CreateCases method)@\spxentry{set\_emission()}\spxextra{GOCPI.CreateCases.CreateCases method}|hyperpage}{4}
+\indexentry{set\_emission\_activity\_ratio() (GOCPI.CreateCases.CreateCases method)@\spxentry{set\_emission\_activity\_ratio()}\spxextra{GOCPI.CreateCases.CreateCases method}|hyperpage}{4}
+\indexentry{set\_emissions\_penalty() (GOCPI.CreateCases.CreateCases method)@\spxentry{set\_emissions\_penalty()}\spxextra{GOCPI.CreateCases.CreateCases method}|hyperpage}{4}
+\indexentry{set\_fixed\_cost() (GOCPI.CreateCases.CreateCases method)@\spxentry{set\_fixed\_cost()}\spxextra{GOCPI.CreateCases.CreateCases method}|hyperpage}{4}
+\indexentry{set\_fuel() (GOCPI.CreateCases.CreateCases method)@\spxentry{set\_fuel()}\spxextra{GOCPI.CreateCases.CreateCases method}|hyperpage}{4}
+\indexentry{set\_input\_activity\_ratio() (GOCPI.CreateCases.CreateCases method)@\spxentry{set\_input\_activity\_ratio()}\spxextra{GOCPI.CreateCases.CreateCases method}|hyperpage}{4}
+\indexentry{set\_min\_storage\_charge() (GOCPI.CreateCases.CreateCases method)@\spxentry{set\_min\_storage\_charge()}\spxextra{GOCPI.CreateCases.CreateCases method}|hyperpage}{4}
+\indexentry{set\_mode\_of\_operation() (GOCPI.CreateCases.CreateCases method)@\spxentry{set\_mode\_of\_operation()}\spxextra{GOCPI.CreateCases.CreateCases method}|hyperpage}{5}
+\indexentry{set\_model\_period\_emission\_limit() (GOCPI.CreateCases.CreateCases method)@\spxentry{set\_model\_period\_emission\_limit()}\spxextra{GOCPI.CreateCases.CreateCases method}|hyperpage}{5}
+\indexentry{set\_model\_period\_exogenous\_emission() (GOCPI.CreateCases.CreateCases method)@\spxentry{set\_model\_period\_exogenous\_emission()}\spxextra{GOCPI.CreateCases.CreateCases method}|hyperpage}{5}
+\indexentry{set\_operational\_life() (GOCPI.CreateCases.CreateCases method)@\spxentry{set\_operational\_life()}\spxextra{GOCPI.CreateCases.CreateCases method}|hyperpage}{5}
+\indexentry{set\_operational\_life\_storage() (GOCPI.CreateCases.CreateCases method)@\spxentry{set\_operational\_life\_storage()}\spxextra{GOCPI.CreateCases.CreateCases method}|hyperpage}{5}
+\indexentry{set\_output\_activity\_ratio() (GOCPI.CreateCases.CreateCases method)@\spxentry{set\_output\_activity\_ratio()}\spxextra{GOCPI.CreateCases.CreateCases method}|hyperpage}{5}
+\indexentry{set\_re\_min\_production\_target() (GOCPI.CreateCases.CreateCases method)@\spxentry{set\_re\_min\_production\_target()}\spxextra{GOCPI.CreateCases.CreateCases method}|hyperpage}{5}
+\indexentry{set\_re\_tag\_fuel() (GOCPI.CreateCases.CreateCases method)@\spxentry{set\_re\_tag\_fuel()}\spxextra{GOCPI.CreateCases.CreateCases method}|hyperpage}{5}
+\indexentry{set\_re\_tag\_technology() (GOCPI.CreateCases.CreateCases method)@\spxentry{set\_re\_tag\_technology()}\spxextra{GOCPI.CreateCases.CreateCases method}|hyperpage}{5}
+\indexentry{set\_region() (GOCPI.CreateCases.CreateCases method)@\spxentry{set\_region()}\spxextra{GOCPI.CreateCases.CreateCases method}|hyperpage}{5}
+\indexentry{set\_reserve\_margin() (GOCPI.CreateCases.CreateCases method)@\spxentry{set\_reserve\_margin()}\spxextra{GOCPI.CreateCases.CreateCases method}|hyperpage}{6}
+\indexentry{set\_reserve\_margin\_tag\_fuel() (GOCPI.CreateCases.CreateCases method)@\spxentry{set\_reserve\_margin\_tag\_fuel()}\spxextra{GOCPI.CreateCases.CreateCases method}|hyperpage}{6}
+\indexentry{set\_reserve\_margin\_tag\_technology() (GOCPI.CreateCases.CreateCases method)@\spxentry{set\_reserve\_margin\_tag\_technology()}\spxextra{GOCPI.CreateCases.CreateCases method}|hyperpage}{6}
+\indexentry{set\_residual\_capacity() (GOCPI.CreateCases.CreateCases method)@\spxentry{set\_residual\_capacity()}\spxextra{GOCPI.CreateCases.CreateCases method}|hyperpage}{6}
+\indexentry{set\_residual\_storage\_capacity() (GOCPI.CreateCases.CreateCases method)@\spxentry{set\_residual\_storage\_capacity()}\spxextra{GOCPI.CreateCases.CreateCases method}|hyperpage}{6}
+\indexentry{set\_season() (GOCPI.CreateCases.CreateCases method)@\spxentry{set\_season()}\spxextra{GOCPI.CreateCases.CreateCases method}|hyperpage}{6}
+\indexentry{set\_specified\_annual\_demand() (GOCPI.CreateCases.CreateCases method)@\spxentry{set\_specified\_annual\_demand()}\spxextra{GOCPI.CreateCases.CreateCases method}|hyperpage}{6}
+\indexentry{set\_specified\_demand\_profile() (GOCPI.CreateCases.CreateCases method)@\spxentry{set\_specified\_demand\_profile()}\spxextra{GOCPI.CreateCases.CreateCases method}|hyperpage}{6}
+\indexentry{set\_specified\_fuel() (GOCPI.CreateCases.CreateCases method)@\spxentry{set\_specified\_fuel()}\spxextra{GOCPI.CreateCases.CreateCases method}|hyperpage}{7}
+\indexentry{set\_storage() (GOCPI.CreateCases.CreateCases method)@\spxentry{set\_storage()}\spxextra{GOCPI.CreateCases.CreateCases method}|hyperpage}{7}
+\indexentry{set\_storage\_level\_start() (GOCPI.CreateCases.CreateCases method)@\spxentry{set\_storage\_level\_start()}\spxextra{GOCPI.CreateCases.CreateCases method}|hyperpage}{7}
+\indexentry{set\_storage\_max\_charge\_rate() (GOCPI.CreateCases.CreateCases method)@\spxentry{set\_storage\_max\_charge\_rate()}\spxextra{GOCPI.CreateCases.CreateCases method}|hyperpage}{7}
+\indexentry{set\_storage\_max\_discharge\_rate() (GOCPI.CreateCases.CreateCases method)@\spxentry{set\_storage\_max\_discharge\_rate()}\spxextra{GOCPI.CreateCases.CreateCases method}|hyperpage}{7}
+\indexentry{set\_technology() (GOCPI.CreateCases.CreateCases method)@\spxentry{set\_technology()}\spxextra{GOCPI.CreateCases.CreateCases method}|hyperpage}{7}
+\indexentry{set\_technology\_from\_storage() (GOCPI.CreateCases.CreateCases method)@\spxentry{set\_technology\_from\_storage()}\spxextra{GOCPI.CreateCases.CreateCases method}|hyperpage}{7}
+\indexentry{set\_technology\_to\_storage() (GOCPI.CreateCases.CreateCases method)@\spxentry{set\_technology\_to\_storage()}\spxextra{GOCPI.CreateCases.CreateCases method}|hyperpage}{7}
+\indexentry{set\_timeslice() (GOCPI.CreateCases.CreateCases method)@\spxentry{set\_timeslice()}\spxextra{GOCPI.CreateCases.CreateCases method}|hyperpage}{7}
+\indexentry{set\_total\_annual\_max\_capacity() (GOCPI.CreateCases.CreateCases method)@\spxentry{set\_total\_annual\_max\_capacity()}\spxextra{GOCPI.CreateCases.CreateCases method}|hyperpage}{7}
+\indexentry{set\_total\_annual\_min\_capacity() (GOCPI.CreateCases.CreateCases method)@\spxentry{set\_total\_annual\_min\_capacity()}\spxextra{GOCPI.CreateCases.CreateCases method}|hyperpage}{7}
+\indexentry{set\_total\_technology\_annual\_activity\_lower\_limit() (GOCPI.CreateCases.CreateCases method)@\spxentry{set\_total\_technology\_annual\_activity\_lower\_limit()}\spxextra{GOCPI.CreateCases.CreateCases method}|hyperpage}{8}
+\indexentry{set\_total\_technology\_annual\_activity\_upper\_limit() (GOCPI.CreateCases.CreateCases method)@\spxentry{set\_total\_technology\_annual\_activity\_upper\_limit()}\spxextra{GOCPI.CreateCases.CreateCases method}|hyperpage}{8}
+\indexentry{set\_total\_technology\_period\_activity\_lower\_limit() (GOCPI.CreateCases.CreateCases method)@\spxentry{set\_total\_technology\_period\_activity\_lower\_limit()}\spxextra{GOCPI.CreateCases.CreateCases method}|hyperpage}{8}
+\indexentry{set\_total\_technology\_period\_activity\_upper\_limit() (GOCPI.CreateCases.CreateCases method)@\spxentry{set\_total\_technology\_period\_activity\_upper\_limit()}\spxextra{GOCPI.CreateCases.CreateCases method}|hyperpage}{8}
+\indexentry{set\_trade\_route() (GOCPI.CreateCases.CreateCases method)@\spxentry{set\_trade\_route()}\spxextra{GOCPI.CreateCases.CreateCases method}|hyperpage}{8}
+\indexentry{set\_variable\_cost() (GOCPI.CreateCases.CreateCases method)@\spxentry{set\_variable\_cost()}\spxextra{GOCPI.CreateCases.CreateCases method}|hyperpage}{8}
+\indexentry{set\_year() (GOCPI.CreateCases.CreateCases method)@\spxentry{set\_year()}\spxextra{GOCPI.CreateCases.CreateCases method}|hyperpage}{8}
+\indexentry{set\_year\_split() (GOCPI.CreateCases.CreateCases method)@\spxentry{set\_year\_split()}\spxextra{GOCPI.CreateCases.CreateCases method}|hyperpage}{8}
+\indexentry{module@\spxentry{module}!GOCPI.Energysystems@\spxentry{GOCPI.Energysystems}|hyperpage}{9}
+\indexentry{GOCPI.Energysystems@\spxentry{GOCPI.Energysystems}!module@\spxentry{module}|hyperpage}{9}
+\indexentry{Energy\_Systems (class in GOCPI.Energysystems)@\spxentry{Energy\_Systems}\spxextra{class in GOCPI.Energysystems}|hyperpage}{9}
+\indexentry{create\_data\_file() (GOCPI.Energysystems.Energy\_Systems method)@\spxentry{create\_data\_file()}\spxextra{GOCPI.Energysystems.Energy\_Systems method}|hyperpage}{9}
+\indexentry{create\_model\_file() (GOCPI.Energysystems.Energy\_Systems method)@\spxentry{create\_model\_file()}\spxextra{GOCPI.Energysystems.Energy\_Systems method}|hyperpage}{9}
+\indexentry{load\_datacase() (GOCPI.Energysystems.Energy\_Systems method)@\spxentry{load\_datacase()}\spxextra{GOCPI.Energysystems.Energy\_Systems method}|hyperpage}{9}
+\indexentry{module@\spxentry{module}!GOCPI.Forecasting@\spxentry{GOCPI.Forecasting}|hyperpage}{10}
+\indexentry{GOCPI.Forecasting@\spxentry{GOCPI.Forecasting}!module@\spxentry{module}|hyperpage}{10}
+\indexentry{Forecasting (class in GOCPI.Forecasting)@\spxentry{Forecasting}\spxextra{class in GOCPI.Forecasting}|hyperpage}{10}
+\indexentry{calculate\_cagr\_forecasts() (GOCPI.Forecasting.Forecasting method)@\spxentry{calculate\_cagr\_forecasts()}\spxextra{GOCPI.Forecasting.Forecasting method}|hyperpage}{10}
+\indexentry{calculate\_constant\_average\_growth\_rate() (GOCPI.Forecasting.Forecasting method)@\spxentry{calculate\_constant\_average\_growth\_rate()}\spxextra{GOCPI.Forecasting.Forecasting method}|hyperpage}{10}
+\indexentry{energy\_balance\_base() (GOCPI.Forecasting.Forecasting method)@\spxentry{energy\_balance\_base()}\spxextra{GOCPI.Forecasting.Forecasting method}|hyperpage}{10}
+\indexentry{module@\spxentry{module}!GOCPI.Navigation@\spxentry{GOCPI.Navigation}|hyperpage}{11}
+\indexentry{GOCPI.Navigation@\spxentry{GOCPI.Navigation}!module@\spxentry{module}|hyperpage}{11}
+\indexentry{Navigation (class in GOCPI.Navigation)@\spxentry{Navigation}\spxextra{class in GOCPI.Navigation}|hyperpage}{11}
+\indexentry{Find\_File (GOCPI.Navigation.Navigation attribute)@\spxentry{Find\_File}\spxextra{GOCPI.Navigation.Navigation attribute}|hyperpage}{11}
+\indexentry{Find\_File() (GOCPI.Navigation.Navigation method)@\spxentry{Find\_File()}\spxextra{GOCPI.Navigation.Navigation method}|hyperpage}{11}
+\indexentry{create\_linear\_programme\_file() (GOCPI.Navigation.Navigation method)@\spxentry{create\_linear\_programme\_file()}\spxextra{GOCPI.Navigation.Navigation method}|hyperpage}{11}
+\indexentry{module@\spxentry{module}!GOCPI.Optimisation@\spxentry{GOCPI.Optimisation}|hyperpage}{11}
+\indexentry{GOCPI.Optimisation@\spxentry{GOCPI.Optimisation}!module@\spxentry{module}|hyperpage}{11}
+\indexentry{Optimisation (class in GOCPI.Optimisation)@\spxentry{Optimisation}\spxextra{class in GOCPI.Optimisation}|hyperpage}{11}
+\indexentry{create\_linear\_programme\_file() (GOCPI.Optimisation.Optimisation method)@\spxentry{create\_linear\_programme\_file()}\spxextra{GOCPI.Optimisation.Optimisation method}|hyperpage}{11}
+\indexentry{reset() (GOCPI.Optimisation.Optimisation method)@\spxentry{reset()}\spxextra{GOCPI.Optimisation.Optimisation method}|hyperpage}{11}
+\indexentry{run\_cplex\_local() (GOCPI.Optimisation.Optimisation method)@\spxentry{run\_cplex\_local()}\spxextra{GOCPI.Optimisation.Optimisation method}|hyperpage}{12}
+\indexentry{run\_ibm\_wml\_do() (GOCPI.Optimisation.Optimisation method)@\spxentry{run\_ibm\_wml\_do()}\spxextra{GOCPI.Optimisation.Optimisation method}|hyperpage}{12}
+\indexentry{use\_bash\_shell() (GOCPI.Optimisation.Optimisation method)@\spxentry{use\_bash\_shell()}\spxextra{GOCPI.Optimisation.Optimisation method}|hyperpage}{13}
+\indexentry{module@\spxentry{module}!GOCPI@\spxentry{GOCPI}|hyperpage}{13}
+\indexentry{GOCPI@\spxentry{GOCPI}!module@\spxentry{module}|hyperpage}{13}

@@ -24,7 +24,11 @@ sys.path.insert(
 
 # sphinx-apidoc -o <OUTPUT_PATH> <MODULE_PATH>
 # Command to generate files
+
 # sphinx-apidoc -o '/Users/connor/Google Drive/Documents/University/Courses/2020/ENGSCI 700A&B/GOCPI/source' '/Users/connor/Google Drive/Documents/University/Courses/2020/ENGSCI 700A&B/GOCPI/src/GOCPI/GOCPI'
+
+# Build latex command
+# sphinx-build -b latex '/Users/connor/Google Drive/Documents/University/Courses/2020/ENGSCI 700A&B/GOCPI/source' '/Users/connor/Google Drive/Documents/University/Courses/2020/ENGSCI 700A&B/GOCPI/src/GOCPI/GOCPI'
 
 # -- Project information -----------------------------------------------------
 
@@ -173,30 +177,47 @@ latex_elements = {
         \pagenumbering{Roman} %%% to avoid page 1 conflict with actual page 1
 
         \begin{titlepage}
-            \centering
-
-            \vspace*{40mm} %%% * is used to give space from top
-            \textbf{\Huge {Sphinx format for Latex and HTML}}
-
-            \vspace{0mm}
-            \begin{figure}[!h]
-                \centering
-                \includegraphics[scale=0.3]{logo.jpg}
-            \end{figure}
-
-            \vspace{0mm}
-            \Large \textbf{{Meher Krishna Patel}}
-
-            \small Created on : Octorber, 2017
-
-            \vspace*{0mm}
-            \small  Last updated : \MonthYearFormat\today
-
-
-            %% \vfill adds at the bottom
-            \vfill
-            \small \textit{More documents are freely available at }{\href{http://pythondsp.readthedocs.io/en/latest/pythondsp/toc.html}{PythonDSP}}
-        \end{titlepage}
+        \newcommand{\HRule}{\rule{\linewidth}{0.5mm}} % Defines a new command for horizontal lines, change thickness here
+        
+        \center
+        
+        %------------------------------------------------
+        %	Headings
+        %------------------------------------------------
+        
+        \textsc{\LARGE }\\[1.5cm] % Main heading such as the name of your university/college
+        
+        \textsc{\Large University of Auckland\\Department of Engineering Science}\\[0.5cm] % Major heading such as course name
+        
+        %------------------------------------------------
+        %	Title
+        %------------------------------------------------
+        
+        \HRule\\[0.5cm]
+        
+        {\huge\bfseries Global Optimisation Carbon Pricing Initiative (GOCPI) Modules}\\[0.4cm] % Title of your document
+        
+        \HRule\\[0.5cm]
+        
+        %------------------------------------------------
+        %	Author(s)
+        %------------------------------------------------
+        
+        {\large\textit{Author: Connor McDowall \\Supervisor: Rosalind Archer}}\\
+        
+        %------------------------------------------------
+        %	Date
+        %------------------------------------------------
+        
+        \vfill\vfill\vfill % Position the date 3/4 down the remaining page
+        
+        {\large\today} % Date, change the \today to a set date if you want to be precise
+        
+        %----------------------------------------------------------------------------------------
+        
+        \vfill % Push the date up 1/4 of the remaining page
+        
+    \end{titlepage}
 
         \clearpage
         \pagenumbering{roman}
@@ -216,17 +237,17 @@ latex_elements = {
         TitleColor={rgb}{0,0,0}, \
         HeaderFamily=\\rmfamily\\bfseries, \
         InnerLinkColor={rgb}{0,0,1}, \
-        OuterLinkColor={rgb}{0,0,1}'                                                                        ,
+        OuterLinkColor={rgb}{0,0,1}'                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                    ,
 
         'tableofcontents':' ',
 }
 
-# atex_logo = '_static/logo.jpg'
+latex_logo = '_static/logo.jpg'
 
 # Grouping the document tree into LaTeX files. List of tuples
 # (source start file, target name, title,
 #  author, documentclass [howto, manual, or own class]).
 latex_documents = [
     (master_doc, 'GOCPI-appendix.tex', 'GOCPI Sphinx format for Latex ',
-     'Connor Robert McDowall', 'report')
+     'Connor Robert McDowall', 'article')
 ]
