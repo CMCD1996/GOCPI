@@ -13,21 +13,21 @@ class Energy_Systems:
         """ Function to create complete energy system set to prepare datafile, as per the established model.
 
         Args:
-            year (list): [description]
-            region (list): [description]
-            emission (list): [description]
-            technology (list): [description]
-            capacity_technology (list): [description]
-            availability_technology (list): [description]
-            fuel (list): [description]
-            specified_fuel (list): [description]
-            accumulated_fuel (list): [description]
-            timeslice (list): [description]
-            mode_of_operation (list): [description]
-            storage (list): [description]
-            daytype (list): [description]
-            season (list): [description]
-            dailytimebracket (list): [description]
+            year (list): List of years
+            region (list): List of regions
+            emission (list): List of emissions
+            technology (list): List of technologies
+            capacity_technology (list): List of technologies
+            availability_technology (list): List of technologies
+            fuel (list): List of fuels
+            specified_fuel (list): List of fuels
+            accumulated_fuel (list): List of fuels
+            timeslice (list): List of timeslices
+            mode_of_operation (list): List of modes of operation
+            storage (list): List of storage
+            daytype (list): List of daytypes
+            season (list): List of seasons
+            dailytimebracket (list): List of dailytimebrackets
         """
         self.year = year
         self.region = region
@@ -132,12 +132,10 @@ class Energy_Systems:
 
     def load_datacase(self, case, system):
         """ Loads the data case to a correct configured and intialised energy system
-            (The load status dictionary must be compatible with the data_case and system_case)
 
         Args:
             case (object): Energy system datacase
             system (object): Initialised energy system
-            load_status (dict): Dictionary setting the required sets and parameters to load
 
         Returns:
             system_case (dict): Returns the updated dictionary
@@ -213,14 +211,11 @@ class Energy_Systems:
         system.ModelPeriodEmissionLimit = case.ModelPeriodEmissionLimit
 
     def create_model_file(self, root, file):
-        """Creates the model file necessary for the project to run
-        
-        Args: 
-            Parameters for the basic problem
-        
-        Returns: 
-            The loaded in parameters and sets
-    
+        """ Creates the model file necessary for the project to run
+
+        Args:
+            root (str): File path of root to start the search from
+            file ([type]): File path of model file
         """
         # Finds the file
         # data = Find_File(data_file,model_file)

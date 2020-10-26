@@ -1,9 +1,10 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.20 (TeX Live 2019) (preloaded format=pdflatex 2020.3.23)  26 OCT 2020 14:57
+This is pdfTeX, Version 3.14159265-2.6-1.40.20 (TeX Live 2019) (preloaded format=pdflatex 2020.3.23)  26 OCT 2020 17:40
 entering extended mode
  restricted \write18 enabled.
+ file:line:error style messages enabled.
  %&-line parsing enabled.
-**GOCPI-appendix.tex
-(./GOCPI-appendix.tex
+**"/Users/connor/Google Drive/Documents/University/Courses/2020/ENGSCI 700A&B/GOCPI/build/latex/GOCPI-appendix.tex"
+(/Users/connor/Google Drive/Documents/University/Courses/2020/ENGSCI 700A&B/GOCPI/build/latex/GOCPI-appendix.tex
 LaTeX2e <2018-12-01>
 (/usr/local/texlive/2019/texmf-dist/tex/latex/base/article.cls
 Document Class: article 2018/09/03 v1.4i Standard LaTeX document class
@@ -21,8 +22,7 @@ File: size12.clo 2018/09/03 v1.4i Standard LaTeX file (size option)
 \abovecaptionskip=\skip41
 \belowcaptionskip=\skip42
 \bibindent=\dimen102
-)
-(/usr/local/texlive/2019/texmf-dist/tex/latex/base/inputenc.sty
+) (/usr/local/texlive/2019/texmf-dist/tex/latex/base/inputenc.sty
 Package: inputenc 2018/08/11 v1.3c Input encoding file
 \inpenc@prehook=\toks14
 \inpenc@posthook=\toks15
@@ -33,35 +33,28 @@ Package: inputenc 2018/08/11 v1.3c Input encoding file
    defining Unicode char U+2514 (decimal 9492)
    defining Unicode char U+251C (decimal 9500)
    defining Unicode char U+2572 (decimal 9586)
-
-(/usr/local/texlive/2019/texmf-dist/tex/latex/cmap/cmap.sty
+ (/usr/local/texlive/2019/texmf-dist/tex/latex/cmap/cmap.sty
 Package: cmap 2008/03/06 v1.0h CMap support: searchable PDF
-)
-(/usr/local/texlive/2019/texmf-dist/tex/latex/base/fontenc.sty
+) (/usr/local/texlive/2019/texmf-dist/tex/latex/base/fontenc.sty
 Package: fontenc 2018/08/11 v2.0j Standard LaTeX package
-
-(/usr/local/texlive/2019/texmf-dist/tex/latex/base/t1enc.def
+ (/usr/local/texlive/2019/texmf-dist/tex/latex/base/t1enc.def
 File: t1enc.def 2018/08/11 v2.0j Standard LaTeX file
 LaTeX Font Info:    Redeclaring font encoding T1 on input line 48.
-)<<t1.cmap>>)
-(/usr/local/texlive/2019/texmf-dist/tex/latex/amsmath/amsmath.sty
+)<<t1.cmap>>) (/usr/local/texlive/2019/texmf-dist/tex/latex/amsmath/amsmath.sty
 Package: amsmath 2018/12/01 v2.17b AMS math features
 \@mathmargin=\skip43
 
 For additional information on amsmath, use the `?' option.
 (/usr/local/texlive/2019/texmf-dist/tex/latex/amsmath/amstext.sty
 Package: amstext 2000/06/29 v2.01 AMS text
-
-(/usr/local/texlive/2019/texmf-dist/tex/latex/amsmath/amsgen.sty
+ (/usr/local/texlive/2019/texmf-dist/tex/latex/amsmath/amsgen.sty
 File: amsgen.sty 1999/11/30 v2.0 generic functions
 \@emptytoks=\toks16
 \ex@=\dimen103
-))
-(/usr/local/texlive/2019/texmf-dist/tex/latex/amsmath/amsbsy.sty
+)) (/usr/local/texlive/2019/texmf-dist/tex/latex/amsmath/amsbsy.sty
 Package: amsbsy 1999/11/29 v1.2d Bold Symbols
 \pmbraise@=\dimen104
-)
-(/usr/local/texlive/2019/texmf-dist/tex/latex/amsmath/amsopn.sty
+) (/usr/local/texlive/2019/texmf-dist/tex/latex/amsmath/amsopn.sty
 Package: amsopn 2016/03/08 v2.02 operator names
 )
 \inf@bad=\count88
@@ -101,39 +94,31 @@ LaTeX Font Info:    Redeclaring font encoding OMS on input line 730.
 \mathdisplay@stack=\toks20
 LaTeX Info: Redefining \[ on input line 2844.
 LaTeX Info: Redefining \] on input line 2845.
-)
-(/usr/local/texlive/2019/texmf-dist/tex/latex/amsfonts/amssymb.sty
+) (/usr/local/texlive/2019/texmf-dist/tex/latex/amsfonts/amssymb.sty
 Package: amssymb 2013/01/14 v3.01 AMS font symbols
-
-(/usr/local/texlive/2019/texmf-dist/tex/latex/amsfonts/amsfonts.sty
+ (/usr/local/texlive/2019/texmf-dist/tex/latex/amsfonts/amsfonts.sty
 Package: amsfonts 2013/01/14 v3.01 Basic AMSFonts support
 \symAMSa=\mathgroup4
 \symAMSb=\mathgroup5
 LaTeX Font Info:    Overwriting math alphabet `\mathfrak' in version `bold'
 (Font)                  U/euf/m/n --> U/euf/b/n on input line 106.
-))
-(/usr/local/texlive/2019/texmf-dist/tex/generic/babel/babel.sty
+)) (/usr/local/texlive/2019/texmf-dist/tex/generic/babel/babel.sty
 Package: babel 2019/05/04 3.31 The Babel package
-
-(/usr/local/texlive/2019/texmf-dist/tex/generic/babel/switch.def
+ (/usr/local/texlive/2019/texmf-dist/tex/generic/babel/switch.def
 File: switch.def 2019/05/04 3.31 Babel switching mechanism
-)
-(/usr/local/texlive/2019/texmf-dist/tex/generic/babel-english/english.ldf
+) (/usr/local/texlive/2019/texmf-dist/tex/generic/babel-english/english.ldf
 Language: english 2017/06/06 v3.3r English support from the babel system
-
-(/usr/local/texlive/2019/texmf-dist/tex/generic/babel/babel.def
+ (/usr/local/texlive/2019/texmf-dist/tex/generic/babel/babel.def
 File: babel.def 2019/05/04 3.31 Babel common definitions
 \babel@savecnt=\count100
 \U@D=\dimen112
-
-(/usr/local/texlive/2019/texmf-dist/tex/generic/babel/txtbabel.def)
+ (/usr/local/texlive/2019/texmf-dist/tex/generic/babel/txtbabel.def)
 \bbl@dirlevel=\count101
 )
 \l@canadian = a dialect from \language\l@american 
 \l@australian = a dialect from \language\l@british 
 \l@newzealand = a dialect from \language\l@british 
-))
-(/usr/local/texlive/2019/texmf-dist/tex/latex/amscls/amsthm.sty
+)) (/usr/local/texlive/2019/texmf-dist/tex/latex/amscls/amsthm.sty
 Package: amsthm 2017/10/31 v2.20.4
 \thm@style=\toks21
 \thm@bodyfont=\toks22
@@ -144,8 +129,7 @@ Package: amsthm 2017/10/31 v2.20.4
 \thm@postskip=\skip47
 \thm@headsep=\skip48
 \dth@everypar=\toks26
-)
-(/usr/local/texlive/2019/texmf-dist/tex/latex/fncychap/fncychap.sty
+) (/usr/local/texlive/2019/texmf-dist/tex/latex/fncychap/fncychap.sty
 Package: fncychap 2007/07/30 v1.34 LaTeX package (Revised chapters)
 \RW=\skip49
 \mylen=\skip50
@@ -154,40 +138,30 @@ Package: fncychap 2007/07/30 v1.34 LaTeX package (Revised chapters)
 \py=\skip53
 \pyy=\skip54
 \pxx=\skip55
-)
-(./sphinx.sty
+) (/Users/connor/Google Drive/Documents/University/Courses/2020/ENGSCI 700A&B/GOCPI/build/latex/sphinx.sty
 Package: sphinx 2019/09/02 v2.3.0 LaTeX package (Sphinx markup)
-
-(/usr/local/texlive/2019/texmf-dist/tex/generic/oberdiek/ltxcmds.sty
+ (/usr/local/texlive/2019/texmf-dist/tex/generic/oberdiek/ltxcmds.sty
 Package: ltxcmds 2016/05/16 v1.23 LaTeX kernel commands for general use (HO)
-)
-(/usr/local/texlive/2019/texmf-dist/tex/latex/graphics/graphicx.sty
+) (/usr/local/texlive/2019/texmf-dist/tex/latex/graphics/graphicx.sty
 Package: graphicx 2017/06/01 v1.1a Enhanced LaTeX Graphics (DPC,SPQR)
-
-(/usr/local/texlive/2019/texmf-dist/tex/latex/graphics/keyval.sty
+ (/usr/local/texlive/2019/texmf-dist/tex/latex/graphics/keyval.sty
 Package: keyval 2014/10/28 v1.15 key=value parser (DPC)
 \KV@toks@=\toks27
-)
-(/usr/local/texlive/2019/texmf-dist/tex/latex/graphics/graphics.sty
+) (/usr/local/texlive/2019/texmf-dist/tex/latex/graphics/graphics.sty
 Package: graphics 2017/06/25 v1.2c Standard LaTeX Graphics (DPC,SPQR)
-
-(/usr/local/texlive/2019/texmf-dist/tex/latex/graphics/trig.sty
+ (/usr/local/texlive/2019/texmf-dist/tex/latex/graphics/trig.sty
 Package: trig 2016/01/03 v1.10 sin cos tan (DPC)
-)
-(/usr/local/texlive/2019/texmf-dist/tex/latex/graphics-cfg/graphics.cfg
+) (/usr/local/texlive/2019/texmf-dist/tex/latex/graphics-cfg/graphics.cfg
 File: graphics.cfg 2016/06/04 v1.11 sample graphics configuration
 )
 Package graphics Info: Driver file: pdftex.def on input line 99.
-
-(/usr/local/texlive/2019/texmf-dist/tex/latex/graphics-def/pdftex.def
+ (/usr/local/texlive/2019/texmf-dist/tex/latex/graphics-def/pdftex.def
 File: pdftex.def 2018/01/08 v1.0l Graphics/color driver for pdftex
 ))
 \Gin@req@height=\dimen113
 \Gin@req@width=\dimen114
-)
-(/usr/local/texlive/2019/texmf-dist/tex/latex/fancyhdr/fancyhdr.sty
-Package: fancyhdr 2019/01/31 v3.10 Extensive control of page headers and footer
-s
+) (/usr/local/texlive/2019/texmf-dist/tex/latex/fancyhdr/fancyhdr.sty
+Package: fancyhdr 2019/01/31 v3.10 Extensive control of page headers and footers
 \f@nch@headwidth=\skip56
 \f@nch@O@elh=\skip57
 \f@nch@O@erh=\skip58
@@ -197,8 +171,7 @@ s
 \f@nch@O@erf=\skip62
 \f@nch@O@olf=\skip63
 \f@nch@O@orf=\skip64
-)
-(/usr/local/texlive/2019/texmf-dist/tex/latex/base/textcomp.sty
+) (/usr/local/texlive/2019/texmf-dist/tex/latex/base/textcomp.sty
 Package: textcomp 2018/08/11 v2.0j Standard LaTeX package
 Package textcomp Info: Sub-encoding information:
 (textcomp)               5 = only ISO-Adobe without \textcurrency
@@ -212,13 +185,11 @@ Package textcomp Info: Sub-encoding information:
 (textcomp)             Family '?' is the default used for unknown fonts.
 (textcomp)             See the documentation for details.
 Package textcomp Info: Setting ? sub-encoding to TS1/1 on input line 79.
-
-(/usr/local/texlive/2019/texmf-dist/tex/latex/base/ts1enc.def
+ (/usr/local/texlive/2019/texmf-dist/tex/latex/base/ts1enc.def
 File: ts1enc.def 2001/06/05 v3.0e (jk/car/fm) Standard LaTeX file
 Now handling font encoding TS1 ...
 ... processing UTF-8 mapping file for font encoding TS1
-
-(/usr/local/texlive/2019/texmf-dist/tex/latex/base/ts1enc.dfu
+ (/usr/local/texlive/2019/texmf-dist/tex/latex/base/ts1enc.dfu
 File: ts1enc.dfu 2018/10/05 v1.2f UTF-8 support for inputenc
    defining Unicode char U+00A2 (decimal 162)
    defining Unicode char U+00A3 (decimal 163)
@@ -316,7 +287,6 @@ Package textcomp Info: Setting ul9 sub-encoding to TS1/4 on input line 369.
 Package textcomp Info: Setting augie sub-encoding to TS1/5 on input line 370.
 Package textcomp Info: Setting dayrom sub-encoding to TS1/3 on input line 371.
 Package textcomp Info: Setting dayroms sub-encoding to TS1/3 on input line 372.
-
 Package textcomp Info: Setting pxr sub-encoding to TS1/0 on input line 373.
 Package textcomp Info: Setting pxss sub-encoding to TS1/0 on input line 374.
 Package textcomp Info: Setting pxtt sub-encoding to TS1/0 on input line 375.
@@ -354,8 +324,7 @@ Package textcomp Info: Setting pplx sub-encoding to TS1/3 on input line 406.
 Package textcomp Info: Setting pplj sub-encoding to TS1/3 on input line 407.
 Package textcomp Info: Setting ptmx sub-encoding to TS1/4 on input line 408.
 Package textcomp Info: Setting ptmj sub-encoding to TS1/4 on input line 409.
-)
-(/usr/local/texlive/2019/texmf-dist/tex/latex/titlesec/titlesec.sty
+) (/usr/local/texlive/2019/texmf-dist/tex/latex/titlesec/titlesec.sty
 Package: titlesec 2016/03/21 v2.10.2 Sectioning titles
 \ttl@box=\box29
 \beforetitleunit=\skip65
@@ -366,11 +335,9 @@ Package: titlesec 2016/03/21 v2.10.2 Sectioning titles
 \titlewidth=\dimen117
 \titlewidthlast=\dimen118
 \titlewidthfirst=\dimen119
-)
-(/usr/local/texlive/2019/texmf-dist/tex/latex/tabulary/tabulary.sty
+) (/usr/local/texlive/2019/texmf-dist/tex/latex/tabulary/tabulary.sty
 Package: tabulary 2014/06/11 v0.10 tabulary package (DPC)
-
-(/usr/local/texlive/2019/texmf-dist/tex/latex/tools/array.sty
+ (/usr/local/texlive/2019/texmf-dist/tex/latex/tools/array.sty
 Package: array 2018/12/30 v2.4k Tabular extension package (FMi)
 \col@sep=\dimen120
 \ar@mcellbox=\box30
@@ -385,8 +352,7 @@ Package: array 2018/12/30 v2.4k Tabular extension package (FMi)
 \tymin=\dimen123
 \tymax=\dimen124
 \TY@tablewidth=\dimen125
-)
-(/usr/local/texlive/2019/texmf-dist/tex/latex/tools/longtable.sty
+) (/usr/local/texlive/2019/texmf-dist/tex/latex/tools/longtable.sty
 Package: longtable 2014/10/28 v4.11 Multi-page Table package (DPC)+ FMi change
 \LTleft=\skip69
 \LTright=\skip70
@@ -403,34 +369,27 @@ Package: longtable 2014/10/28 v4.11 Multi-page Table package (DPC)+ FMi change
 \c@LT@tables=\count106
 \c@LT@chunks=\count107
 \LT@p@ftn=\toks30
-)
-(/usr/local/texlive/2019/texmf-dist/tex/latex/varwidth/varwidth.sty
+) (/usr/local/texlive/2019/texmf-dist/tex/latex/varwidth/varwidth.sty
 Package: varwidth 2009/03/30 ver 0.92;  Variable-width minipages
 \@vwid@box=\box36
 \sift@deathcycles=\count108
 \@vwid@loff=\dimen127
 \@vwid@roff=\dimen128
-)
-(./sphinxmulticell.sty
-Package: sphinxmulticell 2017/02/23 v1.6 better span rows and columns of a tabl
-e (Sphinx team)
+) (/Users/connor/Google Drive/Documents/University/Courses/2020/ENGSCI 700A&B/GOCPI/build/latex/sphinxmulticell.sty
+Package: sphinxmulticell 2017/02/23 v1.6 better span rows and columns of a table (Sphinx team)
 \sphinx@TY@tablewidth=\dimen129
-)
-(/usr/local/texlive/2019/texmf-dist/tex/latex/base/makeidx.sty
+) (/usr/local/texlive/2019/texmf-dist/tex/latex/base/makeidx.sty
 Package: makeidx 2014/09/29 v1.0m Standard LaTeX package
-)
-(/usr/local/texlive/2019/texmf-dist/tex/latex/framed/framed.sty
+) (/usr/local/texlive/2019/texmf-dist/tex/latex/framed/framed.sty
 Package: framed 2011/10/22 v 0.96: framed or shaded text with page breaks
 \OuterFrameSep=\skip73
 \fb@frw=\dimen130
 \fb@frh=\dimen131
 \FrameRule=\dimen132
 \FrameSep=\dimen133
-)
-(/usr/local/texlive/2019/texmf-dist/tex/latex/xcolor/xcolor.sty
+) (/usr/local/texlive/2019/texmf-dist/tex/latex/xcolor/xcolor.sty
 Package: xcolor 2016/05/11 v2.12 LaTeX color extensions (UK)
-
-(/usr/local/texlive/2019/texmf-dist/tex/latex/graphics-cfg/color.cfg
+ (/usr/local/texlive/2019/texmf-dist/tex/latex/graphics-cfg/color.cfg
 File: color.cfg 2016/01/02 v1.6 sample color configuration
 )
 Package xcolor Info: Driver file: pdftex.def on input line 225.
@@ -443,20 +402,17 @@ Package xcolor Info: Model `tHsb' substituted by `hsb' on input line 1368.
 Package xcolor Info: Model `HSB' substituted by `hsb' on input line 1369.
 Package xcolor Info: Model `Gray' substituted by `gray' on input line 1370.
 Package xcolor Info: Model `wave' substituted by `hsb' on input line 1371.
-)
-(/usr/local/texlive/2019/texmf-dist/tex/latex/fancyvrb/fancyvrb.sty
+) (/usr/local/texlive/2019/texmf-dist/tex/latex/fancyvrb/fancyvrb.sty
 Package: fancyvrb 2019/01/15
-
-Style option: `fancyvrb' v3.2a <2019/01/15> (tvz)
+ Style option: `fancyvrb' v3.2a <2019/01/15> (tvz)
 \FV@CodeLineNo=\count109
 \FV@InFile=\read1
 \FV@TabBox=\box37
 \c@FancyVerbLine=\count110
 \FV@StepNumber=\count111
 \FV@OutFile=\write3
-) (./footnotehyper-sphinx.sty
-Package: footnotehyper-sphinx 2017/10/27 v1.7 hyperref aware footnote.sty for s
-phinx (JFB)
+) (/Users/connor/Google Drive/Documents/University/Courses/2020/ENGSCI 700A&B/GOCPI/build/latex/footnotehyper-sphinx.sty
+Package: footnotehyper-sphinx 2017/10/27 v1.7 hyperref aware footnote.sty for sphinx (JFB)
 \FNH@notes=\box38
 \FNH@width=\dimen134
 ) (/usr/local/texlive/2019/texmf-dist/tex/latex/float/float.sty
@@ -466,33 +422,17 @@ Package: float 2001/11/08 v1.3d Float enhancements (AL)
 \float@box=\box39
 \@float@everytoks=\toks32
 \@floatcapt=\box40
-)
-(/usr/local/texlive/2019/texmf-dist/tex/latex/wrapfig/wrapfig.sty
+) (/usr/local/texlive/2019/texmf-dist/tex/latex/wrapfig/wrapfig.sty
 \wrapoverhang=\dimen135
 \WF@size=\dimen136
 \c@WF@wrappedlines=\count113
 \WF@box=\box41
 \WF@everypar=\toks33
 Package: wrapfig 2003/01/31  v 3.6
-)
-(/usr/local/texlive/2019/texmf-dist/tex/latex/parskip/parskip.sty
+) (/usr/local/texlive/2019/texmf-dist/tex/latex/parskip/parskip.sty
 Rollback for package 'parskip' requested -> version 'v1'.
          This corresponds to the release introduced on 2001-04-09.
-
-(/usr/local/texlive/2019/texmf-dist/tex/latex/parskip/parskip-2001-04-09.sty
-Package: parskip 2001/04/09 non-zero parskip adjustments
-))
-(/usr/local/texlive/2019/texmf-dist/tex/latex/base/alltt.sty
-Package: alltt 1997/06/16 v2.0g defines alltt environment
-)
-(/usr/local/texlive/2019/texmf-dist/tex/latex/upquote/upquote.sty
-Package: upquote 2012/04/19 v1.3 upright-quote and grave-accent glyphs in verba
-tim
-)
-(/usr/local/texlive/2019/texmf-dist/tex/latex/capt-of/capt-of.sty
-Package: capt-of 2009/12/29 v0.2 standard captions outside of floats
-)
-(/usr/local/texlive/2019/texmf-dist/tex/latex/needspace/needspace.sty
+ (/usr/local/texlive/2019/texmf-dist/tex/latex/parskip/parsocal/texlive/2019/texmf-dist/tex/latex/needspace/needspace.sty
 Package: needspace 2010/09/12 v1.3d reserve vertical space
 )
 (./sphinxhighlight.sty
@@ -1083,30 +1023,23 @@ LaTeX Info: Redefining \nameref on input line 140.
 \@outlinefile=\write5
 \openout5 = `GOCPI-appendix.out'.
 
-<logo.jpg, id=53, 811.03pt x 811.03pt>
-File: logo.jpg Graphic file (type jpg)
-<use logo.jpg>
-Package pdftex.def Info: logo.jpg  used on input line 155.
-(pdftex.def)             Requested size: 243.31087pt x 243.31087pt.
- [1
-
-{/usr/local/texlive/2019/texmf-var/fonts/map/pdftex/updmap/pdftex.map} <./logo.
-jpg>] (./GOCPI-appendix.toc<<ot1.cmap>><<oml.cmap>><<oms.cmap>><<omx.cmap>>
-LaTeX Font Info:    Try loading font information for U+msa on input line 6.
-
-(/usr/local/texlive/2019/texmf-dist/tex/latex/amsfonts/umsa.fd
+<<ot1.cmap>><<oml.cmap>><<oms.cmap>><<omx.cmap>>
+LaTeX Font Info:    Try loading font information for U+msa on input line 181.
+ (/usr/local/texlive/2019/texmf-dist/tex/latex/amsfonts/umsa.fd
 File: umsa.fd 2013/01/14 v3.01 AMS symbols A
 )
-LaTeX Font Info:    Try loading font information for U+msb on input line 6.
+LaTeX Font Info:    Try loading font information for U+msb on input line 181.
 
 (/usr/local/texlive/2019/texmf-dist/tex/latex/amsfonts/umsb.fd
 File: umsb.fd 2013/01/14 v3.01 AMS symbols B
-))
+) [1
+
+{/usr/local/texlive/2019/texmf-var/fonts/map/pdftex/updmap/pdftex.map}]
+(./GOCPI-appendix.toc)
 \tf@toc=\write6
 \openout6 = `GOCPI-appendix.toc'.
 
-
-(./GOCPI-appendix.lof)
+ (./GOCPI-appendix.lof)
 \tf@lof=\write7
 \openout7 = `GOCPI-appendix.lof'.
 
@@ -1117,155 +1050,183 @@ File: umsb.fd 2013/01/14 v3.01 AMS symbols B
  [1
 
 ]
-LaTeX Font Info:    Try loading font information for T1+cmtt on input line 201.
+LaTeX Font Info:    Try loading font information for T1+cmtt on input line 218.
 
 
 (/usr/local/texlive/2019/texmf-dist/tex/latex/base/t1cmtt.fd
 File: t1cmtt.fd 2014/09/29 v2.5h Standard LaTeX font definitions
 )
 LaTeX Font Info:    Font shape `T1/cmtt/bx/n' in size <12> not available
-(Font)              Font shape `T1/cmtt/m/n' tried instead on input line 201.
+(Font)              Font shape `T1/cmtt/m/n' tried instead on input line 218.
 
-Overfull \hbox (51.21523pt too wide) in paragraph at lines 209--212
+Overfull \hbox (51.21523pt too wide) in paragraph at lines 226--229
 []
  []
 
 [1
 
 ] [2]
-Underfull \hbox (badness 10000) in paragraph at lines 556--556
+Underfull \hbox (badness 10000) in paragraph at lines 573--573
 []\T1/cmr/m/it/12 equity\T1/cmr/m/n/12 , \T1/cmr/m/it/12 debt\T1/cmr/m/n/12 , \
 T1/cmr/m/it/12 mar-ket_index\T1/cmr/m/n/12 , \T1/cmr/m/it/12 cost_of_debt_pre_t
 ax\T1/cmr/m/n/12 ,
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 556--556
+Underfull \hbox (badness 10000) in paragraph at lines 573--573
 \T1/cmr/m/it/12 ket_value_preference_shares\T1/cmr/m/n/12 , \T1/cmr/m/it/12 pre
 f-er-ence_dividends\T1/cmr/m/n/12 , \T1/cmr/m/it/12 mar-
  []
 
 [3]
-Underfull \hbox (badness 7221) in paragraph at lines 634--636
+Underfull \hbox (badness 7221) in paragraph at lines 651--653
 []\T1/cmtt/m/n/12 emissions_penalties \T1/cmr/m/n/12 (\T1/cmtt/m/it/12 float, p
 enalties\T1/cmr/m/n/12 ) ^^U Emis-sions
  []
 
 [4]
-Underfull \hbox (badness 10000) in paragraph at lines 725--727
+Underfull \hbox (badness 10000) in paragraph at lines 742--744
 []\T1/cmtt/m/n/12 model_period_exogenous_emissions \T1/cmr/m/n/12 (\T1/cmtt/m/i
 t/12 float, array\T1/cmr/m/n/12 ) ^^U
  []
 
 [5] [6]
-Underfull \hbox (badness 10000) in paragraph at lines 1006--1008
+Underfull \hbox (badness 10000) in paragraph at lines 1023--1025
 []\T1/cmtt/m/n/12 storage_max_level_discharge_rates \T1/cmr/m/n/12 (\T1/cmtt/m/
 it/12 float, array\T1/cmr/m/n/12 ) ^^U
  []
 
 [7]
-Overfull \hbox (72.66026pt too wide) in paragraph at lines 1094--1094
+Overfull \hbox (72.66026pt too wide) in paragraph at lines 1111--1111
 []\T1/cmr/m/it/12 total_technology_activity_lower_limits\T1/cmtt/m/n/12 ) 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 1097--1099
+Underfull \hbox (badness 10000) in paragraph at lines 1114--1116
 []\T1/cmtt/m/n/12 total_technology_activity_lower_limits \T1/cmr/m/n/12 (\T1/cm
 tt/m/it/12 float,
  []
 
 
-Overfull \hbox (117.04942pt too wide) in paragraph at lines 1107--1107
+Overfull \hbox (117.04942pt too wide) in paragraph at lines 1124--1124
 []\T1/cmr/m/it/12 total_technology_annual_activity_upper_limits\T1/cmtt/m/n/12 
 ) 
  []
 
 
-Overfull \hbox (112.40056pt too wide) in paragraph at lines 1120--1120
+Overfull \hbox (112.40056pt too wide) in paragraph at lines 1137--1137
 []\T1/cmr/m/it/12 total_technology_period_activity_lower_limits\T1/cmtt/m/n/12 
 ) 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 1123--1125
+Underfull \hbox (badness 10000) in paragraph at lines 1140--1142
 []\T1/cmtt/m/n/12 total_technology_period_activity_lower_limits
  []
 
 
-Overfull \hbox (113.30034pt too wide) in paragraph at lines 1133--1133
+Overfull \hbox (113.30034pt too wide) in paragraph at lines 1150--1150
 []\T1/cmr/m/it/12 total_technology_period_activity_upper_limits\T1/cmtt/m/n/12 
 ) 
  []
 
 [8]
-Underfull \hbox (badness 10000) in paragraph at lines 1230--1230
-\T1/cmr/m/it/12 ity_technology\T1/cmr/m/n/12 , \T1/cmr/m/it/12 avail-abil-ity_t
-echnology\T1/cmr/m/n/12 ,
+Underfu(\T1/cmtt/m/it/12 float, array\T1/cmr/m/n/12 ) ^^U
+ []
+
+[5] [6]
+Underfull \hbox (badness 10000) in paragraph at lines 1023--1025
+[]\T1/cmtt/m/n/12 storage_max_level_discharge_rates \T1/cmr/m/n/12 (\T1/cmtt/m/it/12 float, array\T1/cmr/m/n/12 ) ^^U
+ []
+
+[7]
+Overfull \hbox (72.66026pt too wide) in paragraph at lines 1111--1111
+[]\T1/cmr/m/it/12 total_technology_activity_lower_limits\T1/cmtt/m/n/12 ) 
  []
 
 
-Underfull \hbox (badness 6675) in paragraph at lines 1230--1230
-\T1/cmr/m/it/12 fuel\T1/cmr/m/n/12 , \T1/cmr/m/it/12 spec-i-fied_fuel\T1/cmr/m/
-n/12 , \T1/cmr/m/it/12 ac-cu-mu-lated_fuel\T1/cmr/m/n/12 ,
+Underfull \hbox (badness 10000) in paragraph at lines 1114--1116
+[]\T1/cmtt/m/n/12 total_technology_activity_lower_limits \T1/cmr/m/n/12 (\T1/cmtt/m/it/12 float,
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 1276--1278
+Overfull \hbox (117.04942pt too wide) in paragraph at lines 1124--1124
+[]\T1/cmr/m/it/12 total_technology_annual_activity_upper_limits\T1/cmtt/m/n/12 ) 
+ []
+
+
+Overfull \hbox (112.40056pt too wide) in paragraph at lines 1137--1137
+[]\T1/cmr/m/it/12 total_technology_period_activity_lower_limits\T1/cmtt/m/n/12 ) 
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 1140--1142
+[]\T1/cmtt/m/n/12 total_technology_period_activity_lower_limits
+ []
+
+
+Overfull \hbox (113.30034pt too wide) in paragraph at lines 1150--1150
+[]\T1/cmr/m/it/12 total_technology_period_activity_upper_limits\T1/cmtt/m/n/12 ) 
+ []
+
+[8]
+Underfull \hbox (badness 10000) in paragraph at lines 1247--1247
+\T1/cmr/m/it/12 ity_technology\T1/cmr/m/n/12 , \T1/cmr/m/it/12 avail-abil-ity_technology\T1/cmr/m/n/12 ,
+ []
+
+
+Underfull \hbox (badness 6675) in paragraph at lines 1247--1247
+\T1/cmr/m/it/12 fuel\T1/cmr/m/n/12 , \T1/cmr/m/it/12 spec-i-fied_fuel\T1/cmr/m/n/12 , \T1/cmr/m/it/12 ac-cu-mu-lated_fuel\T1/cmr/m/n/12 ,
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 1293--1295
 []
  []
 
 [9]
-Underfull \hbox (badness 10000) in paragraph at lines 1348--1348
-[]\T1/cmr/m/it/12 start_year\T1/cmr/m/n/12 , \T1/cmr/m/it/12 end_year\T1/cmr/m/
-n/12 , \T1/cmr/m/it/12 start_value\T1/cmr/m/n/12 ,
+Underfull \hbox (badness 10000) in paragraph at lines 1365--1365
+[]\T1/cmr/m/it/12 start_year\T1/cmr/m/n/12 , \T1/cmr/m/it/12 end_year\T1/cmr/m/n/12 , \T1/cmr/m/it/12 start_value\T1/cmr/m/n/12 ,
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 1379--1379
-[]\T1/cmr/m/it/12 root\T1/cmr/m/n/12 , \T1/cmr/m/it/12 IEA_World_Energy_Balance
-s_1\T1/cmr/m/n/12 ,
+Underfull \hbox (badness 10000) in paragraph at lines 1396--1396
+[]\T1/cmr/m/it/12 root\T1/cmr/m/n/12 , \T1/cmr/m/it/12 IEA_World_Energy_Balances_1\T1/cmr/m/n/12 ,
  []
 
 [10] [11]
-Underfull \hbox (badness 10000) in paragraph at lines 1549--1549
-[]\T1/cmr/m/it/12 apikey\T1/cmr/m/n/12 , \T1/cmr/m/it/12 url\T1/cmr/m/n/12 , \T
-1/cmr/m/it/12 de-ploy-ment_space_name\T1/cmr/m/n/12 ,
+Underfull \hbox (badness 10000) in paragraph at lines 1566--1566
+[]\T1/cmr/m/it/12 apikey\T1/cmr/m/n/12 , \T1/cmr/m/it/12 url\T1/cmr/m/n/12 , \T1/cmr/m/it/12 de-ploy-ment_space_name\T1/cmr/m/n/12 ,
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 1549--1549
-\T1/cmr/m/it/12 cloud_object_storage_credential\T1/cmr/m/n/12 , \T1/cmr/m/it/12
- ser-vice_instance_id\T1/cmr/m/n/12 , \T1/cmr/m/it/12 de-ploy-
+Underfull \hbox (badness 10000) in paragraph at lines 1566--1566
+\T1/cmr/m/it/12 cloud_object_storage_credential\T1/cmr/m/n/12 , \T1/cmr/m/it/12 ser-vice_instance_id\T1/cmr/m/n/12 , \T1/cmr/m/it/12 de-ploy-
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 1549--1549
-\T1/cmr/m/it/12 ment_space_exists\T1/cmr/m/n/12 , \T1/cmr/m/it/12 data_assets_e
-xist\T1/cmr/m/n/12 , \T1/cmr/m/it/12 data_asset_dictionary\T1/cmr/m/n/12 ,
+Underfull \hbox (badness 10000) in paragraph at lines 1566--1566
+\T1/cmr/m/it/12 ment_space_exists\T1/cmr/m/n/12 , \T1/cmr/m/it/12 data_assets_exist\T1/cmr/m/n/12 , \T1/cmr/m/it/12 data_asset_dictionary\T1/cmr/m/n/12 ,
  []
 
 
-Underfull \hbox (badness 6236) in paragraph at lines 1549--1549
-\T1/cmr/m/it/12 num_nodes\T1/cmr/m/n/12 , \T1/cmr/m/it/12 de-ploy-ment_exists\T
-1/cmr/m/n/12 , \T1/cmr/m/it/12 pay-load_input_data_id\T1/cmr/m/n/12 , \T1/cmr/m
-/it/12 pay-
+Underfull \hbox (badness 6236) in paragraph at lines 1566--1566
+\T1/cmr/m/it/12 num_nodes\T1/cmr/m/n/12 , \T1/cmr/m/it/12 de-ploy-ment_exists\T1/cmr/m/n/12 , \T1/cmr/m/it/12 pay-load_input_data_id\T1/cmr/m/n/12 , \T1/cmr/m/it/12 pay-
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 1550--1569
+Underfull \hbox (badness 10000) in paragraph at lines 1567--1586
 []\T1/cmr/m/n/12 optimisation mod-els.
  []
 
 [12] [13]
-LaTeX Font Info:    Try loading font information for T1+cmss on input line 1668
-.
+LaTeX Font Info:    Try loading font information for T1+cmss on input line 1685.
  (/usr/local/texlive/2019/texmf-dist/tex/latex/base/t1cmss.fd
 File: t1cmss.fd 2014/09/29 v2.5h Standard LaTeX font definitions
-)
-[14
+) [14
 
 
-] (./GOCPI-appendix.ind
+] (/Users/connor/Google Drive/Documents/University/Courses/2020/ENGSCI 700A&B/GOCPI/build/latex/GOCPI-appendix.ind
 Underfull \hbox (badness 10000) in paragraph at lines 8--10
 []\T1/cmtt/m/n/12 calculate_cagr_forecasts()
  []
@@ -1342,8 +1303,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 26--27
 
 
 Underfull \hbox (badness 10000) in paragraph at lines 31--32
-[]\T1/cmtt/m/n/12 Find_File() \T1/cmr/m/n/12 (\T1/cmr/m/it/12 GOCPI.Navigation.
-Navigation
+[]\T1/cmtt/m/n/12 Find_File() \T1/cmr/m/n/12 (\T1/cmr/m/it/12 GOCPI.Navigation.Navigation
  []
 
 
@@ -1358,8 +1318,7 @@ Overfull \hbox (7.139pt too wide) in paragraph at lines 51--53
 
 
 Underfull \hbox (badness 10000) in paragraph at lines 74--75
-[]\T1/cmtt/m/n/12 reset() \T1/cmr/m/n/12 (\T1/cmr/m/it/12 GOCPI.Optimisation.Op
-timisation
+[]\T1/cmtt/m/n/12 reset() \T1/cmr/m/n/12 (\T1/cmr/m/it/12 GOCPI.Optimisation.Optimisation
  []
 
 
@@ -1466,58 +1425,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 96--98
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 98--100
-[]\T1/cmtt/m/n/12 set_capacity_technology()
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 98--100
-\T1/cmr/m/n/12 (\T1/cmr/m/it/12 GOCPI.CreateCases.CreateCases
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 100--102
-[]\T1/cmtt/m/n/12 set_capacity_to_activity_unit()
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 100--102
-\T1/cmr/m/n/12 (\T1/cmr/m/it/12 GOCPI.CreateCases.CreateCases
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 102--104
-[]\T1/cmtt/m/n/12 set_capital_cost()
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 102--104
-\T1/cmr/m/n/12 (\T1/cmr/m/it/12 GOCPI.CreateCases.CreateCases
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 104--106
-[]\T1/cmtt/m/n/12 set_capital_cost_storage()
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 104--106
-\T1/cmr/m/n/12 (\T1/cmr/m/it/12 GOCPI.CreateCases.CreateCases
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 106--108
-[]\T1/cmtt/m/n/12 set_conversion_ld()
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 106--108
-\T1/cmr/m/n/12 (\T1/cmr/m/it/12 GOCPI.CreateCases.CreateCases
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 108--110
-[]\T1/cmtt/m/n/12 set_conversion_lh()
+Underfull \hbox2 set_conversion_lh()
  []
 
 
@@ -2006,41 +1914,83 @@ Underfull \hbox (badness 10000) in paragraph at lines 203--205
  []
 
 [17])
-Package atveryend Info: Empty hook `BeforeClearDocument' on input line 1679.
-Package atveryend Info: Empty hook `AfterLastShipout' on input line 1679.
+Package atveryend Info: Empty hook `BeforeClearDocument' on input line 1696.
+Package atveryend Info: Empty hook `AfterLastShipout' on input line 1696.
  (./GOCPI-appendix.aux)
-Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 1679.
-Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 1679.
+Package atveryend Infol \hbox (badness 10000) in paragraph at lines 192--194
+\T1/cmr/m/n/12 (\T1/cmr/m/it/12 GOCPI.CreateCases.CreateCases
+ []
 
-Package rerunfilecheck Info: File `GOCPI-appendix.out' has not changed.
-(rerunfilecheck)             Checksum: 047A1F1A24AAF248668C0839376F0426;1866.
-Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 1679.
+
+Underfull \hbox (badness 10000) in paragraph at lines 194--196
+[]\T1/cmtt/m/n/12 set_trade_route()
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 194--196
+\T1/cmr/m/n/12 (\T1/cmr/m/it/12 GOCPI.CreateCases.CreateCases
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 196--198
+[]\T1/cmtt/m/n/12 set_variable_cost()
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 196--198
+\T1/cmr/m/n/12 (\T1/cmr/m/it/12 GOCPI.CreateCases.CreateCases
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 199--200
+[]\T1/cmtt/m/n/12 set_year_split()
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 199--200
+\T1/cmr/m/n/12 (\T1/cmr/m/it/12 GOCPI.CreateCases.CreateCases
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 203--205
+[]\T1/cmtt/m/n/12 use_bash_shell()
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 203--205
+\T1/cmr/m/n/12 (\T1/cmr/m/it/12 GOCPI.Optimisation.Optimisation
+ []
+
+[17])
+Package atveryend Info: Empty hook `BeforeClearDocument' on input line 1696.
+Package atveryend Info: Empty hook `AfterLastShipout' on input line 1696.
+ (/Users/connor/Google Drive/Documents/University/Courses/2020/ENGSCI 700A&B/GOCPI/build/latex/GOCPI-appendix.aux)
+Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 1696.
+Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 1696.
+
+
+Package rerunfilecheck Warning: File `GOCPI-appendix.out' has changed.
+(rerunfilecheck)                Rerun to get outlines right
+(rerunfilecheck)                or use package `bookmark'.
+
+Package rerunfilecheck Info: Checksums for `GOCPI-appendix.out':
+(rerunfilecheck)             Before: D41D8CD98F00B204E9800998ECF8427E;0
+(rerunfilecheck)             After:  047A1F1A24AAF248668C0839376F0426;1866.
+Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 1696.
  ) 
 Here is how much of TeX's memory you used:
- 24939 strings out of 492616
- 413695 string characters out of 6129481
+ 24971 strings out of 492616
+ 417014 string characters out of 6129481
  614053 words of memory out of 5000000
- 28382 multiletter control sequences out of 15000+600000
- 546261 words of font info for 56 fonts, out of 8000000 for 9000
+ 28395 multiletter control sequences out of 15000+600000
+ 551650 words of font info for 71 fonts, out of 8000000 for 9000
  1142 hyphenation exceptions out of 8191
- 40i,11n,63p,996b,763s stack positions out of 5000i,500n,10000p,200000b,80000s
-{/usr/local/texlive/2019/texmf-dist/fonts/enc/dvips/cm-super/cm-super-t1.enc}
-{/usr/local/texlive/2019/texmf-dist/fonts/enc/dvips/cm-super/cm-super-ts1.enc}<
-/usr/local/texlive/2019/texmf-dist/fonts/type1/public/cm-super/sfbx1200.pfb></u
-sr/local/texlive/2019/texmf-dist/fonts/type1/public/cm-super/sfbx1440.pfb></usr
-/local/texlive/2019/texmf-dist/fonts/type1/public/cm-super/sfbx1728.pfb></usr/l
-ocal/texlive/2019/texmf-dist/fonts/type1/public/cm-super/sfbx2488.pfb></usr/loc
-al/texlive/2019/texmf-dist/fonts/type1/public/cm-super/sfit1200.pfb></usr/local
-/texlive/2019/texmf-dist/fonts/type1/public/cm-super/sfrm1095.pfb></usr/local/t
-exlive/2019/texmf-dist/fonts/type1/public/cm-super/sfrm1200.pfb></usr/local/tex
-live/2019/texmf-dist/fonts/type1/public/cm-super/sfss1728.pfb></usr/local/texli
-ve/2019/texmf-dist/fonts/type1/public/cm-super/sfti1095.pfb></usr/local/texlive
-/2019/texmf-dist/fonts/type1/public/cm-super/sfti1200.pfb></usr/local/texlive/2
-019/texmf-dist/fonts/type1/public/cm-super/sftt1200.pfb>
-Output written on GOCPI-appendix.pdf (19 pages, 323146 bytes).
+ 40i,11n,63p,1091b,763s stack positions out of 5000i,500n,10000p,200000b,80000s
+{/usr/local/texlive/2019/texmf-dist/fonts/enc/dvips/cm-super/cm-super-t1.enc}{/usr/local/texlive/2019/texmf-dist/fonts/enc/dvips/cm-super/cm-super-ts1.enc}</usr/local/texlive/2019/texmf-dist/fonts/type1/public/cm-super/sfbx1200.pfb></usr/local/texlive/2019/texmf-dist/fonts/type1/public/cm-super/sfbx1440.pfb></usr/local/texlive/2019/texmf-dist/fonts/type1/public/cm-super/sfbx1728.pfb></usr/local/texlive/2019/texmf-dist/fonts/type1/public/cm-super/sfbx2488.pfb></usr/local/texlive/2019/texmf-dist/fonts/type1/public/cm-super/sfcc1728.pfb></usr/local/texlive/2019/texmf-dist/fonts/type1/public/cm-super/sfit1200.pfb></usr/local/texlive/2019/texmf-dist/fonts/type1/public/cm-super/sfrm1000.pfb></usr/local/texlive/2019/texmf-dist/fonts/type1/public/cm-super/sfrm1200.pfb></usr/local/texlive/2019/texmf-dist/fonts/type1/public/cm-super/sfrm1440.pfb></usr/local/texlive/2019/texmf-dist/fonts/type1/public/cm-super/sfss1728.pfb></usr/local/texlive/2019/texmf-dist/fonts/type1/public/cm-super/sfti1200.pfb></usr/local/texlive/2019/texmf-dist/fonts/type1/public/cm-super/sfti1440.pfb></usr/local/texlive/2019/texmf-dist/fonts/type1/public/cm-super/sftt1200.pfb>
+Output written on "/Users/connor/Google Drive/Documents/University/Courses/2020/ENGSCI 700A&B/GOCPI/build/latex/GOCPI-appendix.pdf" (19 pages, 269105 bytes).
 PDF statistics:
- 418 PDF objects out of 1000 (max. 8388607)
- 376 compressed objects within 4 object streams
+ 424 PDF objects out of 1000 (max. 8388607)
+ 381 compressed objects within 4 object streams
  113 named destinations out of 1000 (max. 500000)
- 130 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 125 words of extra memory for PDF output out of 10000 (max. 10000000)
 

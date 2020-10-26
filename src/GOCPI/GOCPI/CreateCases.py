@@ -4,10 +4,10 @@ import pandas as pd
 
 
 class CreateCases:
-    """ A class of methods to create user-defined data cases
+    """ A class of methods to create user-defined energy system
     """
     def __unit__(self):
-        """ Sets the parameters and sets for the datacase
+        """ Sets the parameters and sets for the energy case
         """
         # Sets (placeholders for setting values)
         self.year = None
@@ -169,7 +169,7 @@ class CreateCases:
         """ Create the number of modes of operation (n = 1,...,num_modes_of_operation)
 
         Args:
-            num_modes_of_operation (int): 
+            num_modes_of_operation (int): Number of modes of operation
         """
         # Create set of mode_of_operation
         mode_of_operation = []
@@ -188,7 +188,7 @@ class CreateCases:
         self.storage = storage
 
     def set_daytype(self, num_daytypes):
-        """[summary]
+        """ Sets the daytypes for the energy case
 
         Args:
             num_daytypes (int): Number of daytypes
@@ -219,7 +219,7 @@ class CreateCases:
         """ Creates set of daily time brackets
 
         Args:
-            dailytimebracket (int): [description]
+            dailytimebracket (int): Number of daily time brackets
         """
         # Create set of dailytimebrackets
         dailytimebracket = []
@@ -316,7 +316,7 @@ class CreateCases:
 
         Args:
             daily_time_bracket (list): List of daily time brackets
-            years (list): List of year
+            years (list): List of years
             hour_split (dict): Dictonary of hours in a daily time bracket 
             num_days (int): Number of days in a year
             num_hours (int): Number of hours in a day
@@ -330,7 +330,7 @@ class CreateCases:
         self.DaySplit = DaySplit
 
     def set_conversion_ls(self, timeslice, season, link):
-        """ Sets the Conversionls parameter
+        """ Sets the conversionls parameter
 
         Args:
             timeslice (list): List of timeslices

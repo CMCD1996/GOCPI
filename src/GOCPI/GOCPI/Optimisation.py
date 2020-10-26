@@ -14,7 +14,7 @@ import time
 
 # Begin class breakdown
 class Optimisation:
-    """ Prepare and runs optimisation with IBM ILOG CPLEX Optimisation Studio
+    """ Prepares and runs optimisation with IBM ILOG CPLEX Optimisation Studio
     """
     def __init__(self):
         """ Initialise the optimisation class
@@ -51,7 +51,13 @@ class Optimisation:
 
     def run_cplex_local(self, model_file):
         """ This function runs cplex on the local device if the energy system
-            is of a small enough complexity
+            is of a small enough scale
+
+        Args:
+            model_file (str): Path of model file
+
+        Returns:
+            [int]: Objective value
         """
         # Creates the model structure
         model = cp.Cplex()

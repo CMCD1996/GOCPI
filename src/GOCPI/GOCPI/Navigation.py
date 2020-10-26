@@ -22,16 +22,11 @@ class Navigation:
         self.target_file = target_file
 
     def Find_File(self):
-        """
-        Find_File searches for a target file, from a base directory, to construct
+        """ Find_File searches for a target file, from a base directory, to construct
         a target directory.
 
-        Inputs: 
-        target_root = The base directory to search from (string).
-        target_file = The name of the target file (string).
-
-        Outputs: 
-        f = Combinated target file location (string).
+        Returns:
+            str: File path for file
         """
 
         for root, dirs, files in os.walk(self.target_root):
@@ -43,6 +38,7 @@ class Navigation:
     def create_linear_programme_file(self, directory, data_file, model_file,
                                      output_file):
         """ Creates the model file through executing model system commands
+            (Work in Progress)
 
         Args:
             directory (str): Name of directory to put data into
