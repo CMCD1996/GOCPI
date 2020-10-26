@@ -1277,51 +1277,7 @@ Sets and parameters varied in size, ranging from one dimensional arrays/lists to
 The variability of size and need for correct naming conventions created a considerable design challenge.
 This solution had to change based on the users inputs while still generating the correct GNU Mathprog structure.
 The solution was to design a conversion block for each set and parameter. 
-Examples of set and conversion block are shown in listings \ref{lst:ODSPGCB} and \ref{lst:TDCPGCB}.
-
-\begin{lstlisting}[language=Python,label = {lst:ODSPGCB},caption = {One Dimensional Set Python to GNU Mathprog Conversion Block}]
-	# year
-	set_string = ' '.join(self.year)
-	f.write('set YEAR\t:=\t{0};\n'.format(set_string))
-\end{lstlisting}
-
-\begin{lstlisting}[language=Python,label = {lst:TDCPGCB},caption = Two Dimensional Parameter Python to GNU Mathprog Conversion Block]
-
-	# DaySplit = np.zeros((llh,ly))
-	param = 'DaySplit'
-	f.write('#\n')
-	columns = self.year
-	column_string = ' '.join(columns)
-	# Writes index specific parameter values to the text files
-	if toggle_defaults[param] == True:
-		f.write("param\t{0}\tdefault\t{1}:\t{2}:=\n".format(
-			param, defaults_dictionary[param], column_string))
-		# Converts maxtrix rows to list
-		array = np.array(self.dailytimebracket)
-		array = array.T
-		lt = array.tolist()
-		# Creates 2D matrix for this value
-		mat = self.DaySplit[:, :]
-		# Converts combined matrix to list and combines lists
-		matlist = mat.tolist()
-		#Combines the two lists
-		combined_list = list(zip(lt, matlist))
-		# Writes index specific parameter values to the text files
-		f.write("param\t{0}\t:{1}:=\n".format(param, column_string))
-		for line in combined_list:
-			combinedflat = ''.join(str(line))
-			combinedflat = combinedflat.replace('[', '')
-			combinedflat = combinedflat.replace(']', '')
-			combinedflat = combinedflat.replace("'", '')
-			combinedflat = combinedflat.replace(",", '')
-			combinedflat = combinedflat.replace("(", '')
-			combinedflat = combinedflat.replace(")", '')
-			f.write("{0}\n".format(combinedflat))
-	else:
-		f.write("param\t{0}\tdefault\t{1}:=\n".format(
-			param, defaults_dictionary[param]))
-	f.write(';\n')
-\end{lstlisting}
+Examples of set and conversion block are shown in listings \ref{lst:ODSPGCB} and \ref{lst:TDCPGCB} in the appendix section \ref{CB}.
 Please refer to the Research Compendium for the complete set of 63 Python to GNU Mathprog Conversion Blocks in the create\_data\_file() function.
 The create\_data\_file() is approximately 2000 lines including commenting and formatting described in section \ref{CS}.
 
@@ -1407,7 +1363,7 @@ The following list describes the deliverables achieved in this project:
 		\item Optimisation: Utilize IBM technologies to solve energy systems. These models may be solved locally or remotely.
 	\end{enumerate}
 		\item A website to access key project resources and communicate information related to the project.
-		Visit the website \href{https://connormcdowall.com/gocpi.html}{here} to view content.
+		\textbf{Visit the website \href{https://connormcdowall.com/gocpi.html}{here} to view content.}
 \end{enumerate}
 \section{Discussion}
 \subsection{Outcome}
@@ -1439,7 +1395,6 @@ Energy system sets and parameters must be structured consistently to correctly d
 The process converts one to five dimensional Python matrices into combinations of text blocks need to create lp formatted text files.
 This structure enables the user to model N combinations of regions in one energy system.
 \subsection{Outlook}\label{FW}
-This section identifies an outlook for building better energy systems.
 \subsubsection{Python Development}
 The OseMOSYS methodology must be adapted into a Python implementation to take advantage of IBM technologies and solve larger energy systems using the IBM Decision Optimisation service.
 There is a Python version available for distribution from the OseMOSYS GitHub repository.
@@ -1478,16 +1433,62 @@ The energy modelers have access to project resources from the web-based interfac
 This project takes a big leap forward in making energy accessible and removing many of the technical barriers.
 Continuing to adopt the OseMOSYS methodology and develop the GOCPI package will help inform energy investment and policy. 
 Overall, this initiative will drive equitable outcomes for the energy transition.
-
+\newpage
+\section{References}
+\printbibliography
 \newpage
 \section{Appendices}
-\subsection{Project Modules}\label{Docstring}
-[To be inserted using Sphinx/pydoc Documentation]
+\subsubsection{Set and Parameter Conversion Blocks}\label{CB}
+\begin{lstlisting}[language=Python,label = {lst:ODSPGCB},caption = {One Dimensional Set Python to GNU Mathprog Conversion Block}]
+	# year
+	set_string = ' '.join(self.year)
+	f.write('set YEAR\t:=\t{0};\n'.format(set_string))
+\end{lstlisting}
+\begin{lstlisting}[language=Python,label = {lst:TDCPGCB},caption = Two Dimensional Parameter Python to GNU Mathprog Conversion Block]
+
+	# DaySplit = np.zeros((llh,ly))
+	param = 'DaySplit'
+	f.write('#\n')
+	columns = self.year
+	column_string = ' '.join(columns)
+	# Writes index specific parameter values to the text files
+	if toggle_defaults[param] == True:
+		f.write("param\t{0}\tdefault\t{1}:\t{2}:=\n".format(
+			param, defaults_dictionary[param], column_string))
+		# Converts maxtrix rows to list
+		array = np.array(self.dailytimebracket)
+		array = array.T
+		lt = array.tolist()
+		# Creates 2D matrix for this value
+		mat = self.DaySplit[:, :]
+		# Converts combined matrix to list and combines lists
+		matlist = mat.tolist()
+		#Combines the two lists
+		combined_list = list(zip(lt, matlist))
+		# Writes index specific parameter values to the text files
+		f.write("param\t{0}\t:{1}:=\n".format(param, column_string))
+		for line in combined_list:
+			combinedflat = ''.join(str(line))
+			combinedflat = combinedflat.replace('[', '')
+			combinedflat = combinedflat.replace(']', '')
+			combinedflat = combinedflat.replace("'", '')
+			combinedflat = combinedflat.replace(",", '')
+			combinedflat = combinedflat.replace("(", '')
+			combinedflat = combinedflat.replace(")", '')
+			f.write("{0}\n".format(combinedflat))
+	else:
+		f.write("param\t{0}\tdefault\t{1}:=\n".format(
+			param, defaults_dictionary[param]))
+	f.write(';\n')
+\end{lstlisting}
+\newpage
 \subsection{OseMOSYS Model} \label{OM}
 The Open Source Energy Modelling System is a linear programme with sets, parameters, an objective function and constraints related to energy systems.
 The model is described below. Please refer to GOCPI OseMOSYS Structure.xlsx in the GitHub Repository for full descriptions of the sets, parameters and constraints.
 \lstinputlisting{"/Users/connor/Google Drive/Documents/University/Courses/2020/ENGSCI 700A&B/GOCPI/data/Inputs/GOCPI OseMOSYS/GOCPI_OseMOSYS_Model.txt"}
+\subsection{Project Modules}\label{Docstring}
+The classes and modules developed for this project are detailed in the documentation starting on the next page.
 \newpage
-\section{References}
-\printbibliography
+\includepdf[pages=-]{GOCPI-appendix.pdf}
+\newpage
 \end{document}
