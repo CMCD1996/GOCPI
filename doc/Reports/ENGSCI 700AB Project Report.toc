@@ -82,6 +82,6 @@
 \contentsline {section}{\numberline {7}Summary and Conclusion}{41}{section.7}% 
 \contentsline {section}{\numberline {8}References}{42}{section.8}% 
 \contentsline {section}{\numberline {9}Appendices}{45}{section.9}% 
-\contentsline {subsubsection}{\numberline {9.0.1}Set and Parameter Conversion Blocks}{45}{subsubsection.9.0.1}% 
-\contentsline {subsection}{\numberline {9.1}OseMOSYS Model}{46}{subsection.9.1}% 
-\contentsline {subsection}{\numberline {9.2}Project Modules}{55}{subsection.9.2}% 
+\contentsline {subsection}{\numberline {9.1}Set and Parameter Conversion Blocks}{45}{subsection.9.1}% 
+\contentsline {subsection}{\numberline {9.2}OseMOSYS Model}{46}{subsection.9.2}% 
+\contentsline {subsection}{\numberline {9.3}Project Modules}{55}{subsection.9.3}% 
