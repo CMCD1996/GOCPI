@@ -8,7 +8,8 @@
 %%% PAGE DIMENSIONS
 \usepackage[margin=2.54cm]{geometry}
 \geometry{a4paper} 
-
+% \usepackage{caption}
+% \usepackage{subcaption}
 \usepackage{graphicx} % For better graphics
 \usepackage{pdfpages} % To insert pdfs into the library
 \usepackage{tikz}
@@ -28,6 +29,38 @@
 \usepackage{cancel}
 \usepackage{color}
 \usepackage{listings}
+% Create Listing Colours
+\usepackage{xcolor}
+
+% \definecolor{codegreen}{RGB}{0,255,0}
+% \definecolor{codegray}{RGB}{105,105,105}
+% \definecolor{codepurple}{RGB}{138,43,226}
+% \definecolor{backcolour}{RGB}{255,255,255}
+\definecolor{codegreen}{rgb}{0,0.6,0}
+\definecolor{codegray}{rgb}{0.5,0.5,0.5}
+\definecolor{codepurple}{rgb}{0.58,0,0.82}
+\definecolor{backcolour}{rgb}{0.95,0.95,0.92}
+
+\lstdefinestyle{mystyle}{
+    backgroundcolor=\color{backcolour},   
+    commentstyle=\color{codegreen},
+    keywordstyle=\color{magenta},
+    numberstyle=\tiny\color{codegray},
+    stringstyle=\color{codepurple},
+    basicstyle=\ttfamily\footnotesize,
+    breakatwhitespace=false,         
+    breaklines=true,                 
+    captionpos=b,                    
+    keepspaces=true,                 
+    numbers=left,                    
+    numbersep=5pt,                  
+    showspaces=false,                
+    showstringspaces=false,
+    showtabs=false,                  
+    tabsize=2
+}
+\lstset{style=mystyle}
+
 \usepackage{multicol}
 \usepackage{float}
 
@@ -40,7 +73,7 @@
 \setlength{\headheight}{15pt}
 \pagestyle{fancy} % options: empty , plain , fancy
 \renewcommand{\headrulewidth}{0pt} % customise the layout...
-\lhead{ENGSCI 700AB}\chead{Global Carbon Pricing}\rhead{cmcd398}
+\lhead{University of Auckland}\chead{GOCPI}\rhead{Connor McDowall}
 \lfoot{}\cfoot{\thepage}\rfoot{}
 
 %%% SECTION TITLE APPEARANCE
@@ -103,16 +136,27 @@
 \newpage
 \section{Programming}
 These section contains all programming scripts for the project.
+\subsection{GOCPI NZ Energy Systems Example}
+The GOCPI NZ Energy Systems Example is the processing script for designing NZ and AUS Energy Systems
+\subsection{GOCPI Module}
+\subsubsection{Navigation}
+\subsubsection{Energysystems}
+\subsubsection{CreateCases}
+\subsubsection{Forecasting}
+\subsubsection{Optimisation}
+\lstinputlisting[language=Python]{"/Users/connor/Google Drive/Documents/University/Courses/2020/ENGSCI 700A&B/GOCPI/src/GOCPI_NZ_Example.gyp"}
+\section{OseMOSYS}
+\lstinputlisting{"/Users/connor/Google Drive/Documents/University/Courses/2020/ENGSCI 700A&B/GOCPI/data/Inputs/GOCPI OseMOSYS/GOCPI_OseMOSYS_Model.txt"}
 \section{Project Log Book}
 Disclaimer: Contributions to the Project Log Book grew inconsistent toward the later stages of the project.
-\subsection{January - February}
+\subsection*{January - February}
 \begin{itemize}
 	\item Began scoping energy related project during experience in the Commercial team at ExxonMobil Australia
 	\item Emailed and Meet with Rosalind
 	\item Decided to look at Carbon Pricing Initiatives to inform reinvestment and carbon pricing initiatives
 	\item Rosalind tasked with with investigating GAMS
 \end{itemize}
-\subsection{March 1st - May 30th}
+\subsection*{March 1st - May 30th}
 \begin{itemize}
 	\item Coronavirus was classified a worldwide pandemic
 	\item New Zealand was sent into lockdown
@@ -129,27 +173,27 @@ Disclaimer: Contributions to the Project Log Book grew inconsistent toward the l
 	\item Installed VMware and GAMS on FlexIT systems
 	\item Faced GAMS Licensing issues on FlexIT
 \end{itemize}
-\subsection{May 31st 2020}
+\subsection*{May 31st 2020}
 \begin{enumerate}
 	\item Installed Microsoft Remote Desktop and FortiClient VPN to access UoA Virtual Machine
 	\item Set up Virtual Machine
 \end{enumerate}
-\subsection{June 1st 2020}
+\subsection*{June 1st 2020}
 \begin{enumerate}
 	\item Installed VEDA FE and VEDA FE on Virtual Machine
 	\item Downloaded 12 Demo Models to build my TIMES Model
 \end{enumerate}
-\subsection{June 3rd}
+\subsection*{June 3rd}
 \begin{enumerate}
 	\item Begun testing the Model the Demo Models
 \end{enumerate}
-\subsection{June 4th - June 10th}
+\subsection*{June 4th - June 10th}
 \begin{enumerate}
 	\item Meeting with Rosalind. Discussed set up and action points moving forward.
 	\item Showed VEDA-FE. Four assessments were discussed.
 	\item Continued researching how to use VEDA
 \end{enumerate}
-\subsection{June 11th - Approximately 4 hours}
+\subsection*{June 11th - Approximately 4 hours}
 \begin{enumerate}
 	\item Meeting with Rosalind at 10:30am via Zoom
 	\item Discussed action points moving forward.
@@ -157,25 +201,25 @@ Disclaimer: Contributions to the Project Log Book grew inconsistent toward the l
 	\item There is still an issue with GAMS Installation (Check with Tony. He knows a guy)
 	\item VEDA FE creates the necessary DD files. Continue to work through the DEMO Models to understand GAMS.
 \end{enumerate}
-\subsection{June 16th - July 1st}
+\subsection*{June 16th - July 1st}
 \begin{itemize}
 	\item No Progress - Study Break and Exams for ACCTG 371, FINANCE 362 and ENGSCI 711
 \end{itemize}
-\subsection{July 2nd}
+\subsection*{July 2nd}
 \begin{itemize}
 	\item Last meeting in Rosalind's corner office. Discussed online exams, Chegg, cheating and project next steps.
 	\item Agreed to adapt spreadsheets for user input and use BP's World Energy Outlook Statistics to determine production, conversion and consumption rates.
 \end{itemize}
-\subsection{July 3rd}
+\subsection*{July 3rd}
 \begin{itemize}
 	\item Began adapting Demo 12 model for custom inputs
 	\item Began using the openpyxl python library to manipulate excel (GOCPI Input.gyp)
 \end{itemize}
-\subsection{July 4rd}
+\subsection*{July 4rd}
 \begin{itemize}
 	\item Continue to work on openpyxl adaptation with xls and xlsx excel sheets
 \end{itemize}
-\subsection{July 6th}
+\subsection*{July 6th}
 \begin{itemize}
 	\item Created a proper file directory for managing the project
 	\item Continued to adapt GOCPI Inputs.gyp to scale across multiple sheets
@@ -183,19 +227,19 @@ Disclaimer: Contributions to the Project Log Book grew inconsistent toward the l
 	\item Nearly had a heart attacked as I was led to believe issues with Github and Git meant I deleted my entire project
 	\item Recovered entire project and reports
 \end{itemize}
-\subsection{July 7th}
+\subsection*{July 7th}
 \begin{itemize}
 	\item Worked on file manipulation in Google Drive via Google Cloud APIs
 	\item Discovered IEA Energy Balances on stats.OECD.org via Uni library databases
 	\item Found 20GB csv on Energy Balances data
 	\item Processed 20GB csv to create two ~80MB csv for 2017 energy balance data using Microsoft Access
 \end{itemize}
-\subsection{July 7th}
+\subsection*{July 7th}
 \begin{itemize}
 	\item Developed and resolved issues relating to git and Github
 	\item Developed processing methods for Energy Balance statistics using pandas pivot table function
 \end{itemize}
-\subsection{July 17th}
+\subsection*{July 17th}
 \begin{itemize}
 	\item Meeting with Kiti (NZ TIMES Energy Modeler)
 	\item Discuss constraints associated TIMES and GAMS modelling
@@ -204,7 +248,7 @@ Disclaimer: Contributions to the Project Log Book grew inconsistent toward the l
 	\item Agreed to explore OseMOSYS and alternative datasources to build an alternative product.
 	\item Agreed to keep Kiti updated on projec process moving forward.
 \end{itemize}
-\subsection{July 18th}
+\subsection*{July 18th}
 \begin{itemize}
 	\item Downloaded MBIE Energy 
 	\item Research OseMOSYS energy modelling Approach
@@ -213,46 +257,46 @@ Disclaimer: Contributions to the Project Log Book grew inconsistent toward the l
 	\item Decision: Move away from TIMES/GAMS modelling to using Osemosys.
 	\item Began Scripting Sheet to generate model input text file
 \end{itemize}
-\subsection{July 19th}
+\subsection*{July 19th}
 \begin{itemize}
 	\item Created excel spreadsheet to store OseMOSYS energy model inputs
 	\item Began adapting sets, parameters, variables, equations and constraints to excel template.
 	\item Researched more about OseMOSYS
 \end{itemize}
-\subsection{July 20th}
+\subsection*{July 20th}
 \begin{itemize}
 	\item Continued to adapt 200+ lines of model code in the excel templates
 \end{itemize}
-\subsection{July 21st}
+\subsection*{July 21st}
 \begin{itemize}
 	\item Learned to create custom python packages.
 	\item Began working on adjustable sets
 \end{itemize}
-\subsection{July 22nd}
+\subsection*{July 22nd}
 \begin{itemize}
 	\item 
 \end{itemize}
-\subsection{July 23rd}
+\subsection*{July 23rd}
 \begin{itemize}
 	\item Productive meeting with Rosalind, showed model output. (Rosalind said progress was really exciting)
 \end{itemize}
-\subsection{July 24th}
+\subsection*{July 24th}
 \begin{itemize}
 	\item Continued creating a custom package for the GCOPI module.
 \end{itemize}
-\subsection{July 25th}
+\subsection*{July 25th}
 \begin{itemize}
 	\item Started GOCPI module to create scalable data files
 \end{itemize}
-\subsection{July 26th}
+\subsection*{July 26th}
 \begin{itemize}
 	\item Continued to adapt GOCPI custom package to create scalable data files (Completed)
 \end{itemize}
-\subsection{July 27th}
+\subsection*{July 27th}
 \begin{itemize}
 	\item Edited report headings and created a structure for the Research Report.
 \end{itemize}
-\subsection{July 28th}
+\subsection*{July 28th}
 \begin{itemize}
 	\item Investigated CPLEX Solvers
 	\item Registered for the IBM Academic Initiative
@@ -260,7 +304,7 @@ Disclaimer: Contributions to the Project Log Book grew inconsistent toward the l
 	\item Installed cplex and docplex Python APIs from the IBM ILOG CPLEX Optimizer Studio
 	\item Added create model file model to GOCPI
 \end{itemize}
-\subsection{July 30th - August 9th}
+\subsection*{July 30th - August 9th}
 \begin{itemize}
 	\item Spent a day fixing git commit and push issues
 	\item Installed GIT LFS and the functionality of .gitignore to prevent the committing .mp4 and .lp files
@@ -269,17 +313,17 @@ Disclaimer: Contributions to the Project Log Book grew inconsistent toward the l
 	\item Submitted the 4-6 page technical report.
 	\item Created presentation structure 
 \end{itemize}
-\subsection{August 10th}
+\subsection*{August 10th}
 \begin{itemize}
 	\item Drafted and submitted four slide summary for presentation.
 	\item Recorded and submitted 5 minute presentation
 \end{itemize}
-\subsection{August 12th}
+\subsection*{August 12th}
 \begin{itemize}
 	\item Lockdown and Became Ill
 	\item Went and got COVID-19 Testing (Stood in Queue for 4.5 hours)
 \end{itemize}
-\subsection{August 13th}
+\subsection*{August 13th}
 \begin{itemize}
 	\item Very productive meeting with Rosalind
 	\item Discussed project process, presentation and mid-year technical report
@@ -288,7 +332,7 @@ Disclaimer: Contributions to the Project Log Book grew inconsistent toward the l
 	\item Abandoned developing the NZ Example as faced severe limitations
 	\item Continued developing the Navigation, Forecasting, Energysystems and CreateCases modules.
 \end{itemize}
-\subsection{September 2nd - September 30th}
+\subsection*{September 2nd - September 30th}
 \begin{itemize}
 	\item IBM Cloud Installation and Application.
 	\item Discussed project process, presentation and mid-year technical report
@@ -297,7 +341,7 @@ Disclaimer: Contributions to the Project Log Book grew inconsistent toward the l
 	\item Began exploring the implementation of the IBM Watson Machine Learning service to engage with this pipeline.
 	\item Developed the optimisation module to use
 \end{itemize}
-\subsection{October 1st - October 29th}
+\subsection*{October 1st - October 29th}
 \begin{itemize}
 	\item Systems week interfered with the construction of the report.
 	\item Wrote the report
@@ -305,7 +349,7 @@ Disclaimer: Contributions to the Project Log Book grew inconsistent toward the l
 	\item Reviewed the report
 	\item Had three productive meetings with my supervisor about the report.
 \end{itemize}
-\subsection{October 30th}
+\subsection*{October 30th}
 \begin{itemize}
 	\item Submitted the final report
 \end{itemize}

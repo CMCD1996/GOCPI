@@ -42,7 +42,8 @@ nz_energy_system.set_emission(EMISSION)
 # Technology
 ###############################################################################
 ###############################################################################
-# Defines the technology set (MBIE Energy Statistics Energy Supply and Demand - Gross PJ (Higher Heating Value))
+# Defines the technology set (MBIE Energy Statistics Energy Supply and Demand -
+# Gross PJ (Higher Heating Value))
 Production = [
     'Indigenous_Production', 'Imports', 'Exports', 'Stock_Change',
     'International_Transport'
