@@ -130,84 +130,84 @@
 	\vfill % Push the date up 1/4 of the remaining page
 	
 \end{titlepage}
+\section*{Declaration of Contribution}
+I proposed this project. I am the sole contributor.
 \tableofcontents
 \listoffigures
-\listoftables
 \newpage
+\section{GitHub Repository}
+All files related to the project are stored within a GitHub Repository.
+This repository is accessible \href{https://github.com/CMCD1996/GOCPI}{here} and summarised as follows:
+\subsection{Data}
+\begin{itemize}
+	\item Energy Balances from the International Energy Agency (IEA).
+	\item Australian and New Zealand Energy Statistics.
+	\item Sets of geographies for partitioning and creating regions to model user defined energy systems.
+	\item Images for website design.
+	\item Input data sources for TIMES and OseMOSYS modelling and developing user defined energy systems.
+	\item GNU Mathprog, GAMS and Pyomo versions of OseMOSYS folked from the \href{https://github.com/OSeMOSYS/OSeMOSYS}{OseMOSYS GitHub Repository}.
+	\item The TIMES model and twelve demo versions of varying complexity.
+\end{itemize}
+\subsection{Documents}
+\begin{itemize}
+	\item Notes related to the project.
+	\item Presentations related to the project.
+	\item Research Compendium, Project Report and all images, figures and sources used in these documents.
+	\item Academic journals, articles and technical reports related to the literature review.
+\end{itemize}
+\subsection{Source Files}
+\begin{itemize}
+	\item GOCPI package for creating, formulating, forecasting and solving user-defined energy systems.
+	\item Processing and development scripts used to design the GOCPI package.
+	\item The prototype webpage adapted from a W3 school template.
+	\item Git, IBM, Microsoft Visual Studio Code configurations/formatting related files.
+\end{itemize}
+\subsection{Additional}
+\begin{itemize}
+	\item Build files for producing GOCPI documentation using sphinx.
+\end{itemize}
+\newpage
+
 \section{Website}
-\subsection{Version Two}
+\subsection{Jekyll, Markdown, Ruby, GitHub Pages}
 The website was improved using Jekyll, Ruby and Markdown technologies.
+The website includes links to documentation required to build systems and software required.
+The repository used to build the website is separate from the GOCPI repository.
 \textbf{You can access the website \href{https://connormcdowall.com/gocpi.html}{here}}
-The following screenshots show the necessary sections of the website.
-\subsection{Version One}
-This html script was adapted from an W3 schools template to include key information about the project.
-\begin{figure}[h]
+\subsection{W3 Schools Adaptation}
+This iteration was adapted from an W3 schools template to create a prototype website for the project.
+This prototype describes key information related the project.
+\begin{figure}[H]
     \centering
-	\includegraphics[width=\textwidth]{W1.png}
-	\includegraphics[width=\textwidth]{W2.png}
-	\includegraphics[width=\textwidth]{W3.png}
-	\includegraphics[width=\textwidth]{W4.png}
-	\includegraphics[width=\textwidth]{W5.png}
-    \caption{GOCPI Website V1}
-    \label{fig:WV1}
+	\includegraphics[width=0.7\textwidth]{W1.png}
+    \caption{GOCPI Website V1 Cover Page}
+    \label{fig:WV1CP}
+\end{figure}
+\begin{figure}[H]
+    \centering
+	\includegraphics[width=0.7\textwidth]{W2.png}
+    \caption{GOCPI Website V1 Project Information}
+    \label{fig:WV1PI}
+\end{figure}
+\begin{figure}[H]
+    \centering
+	\includegraphics[width=0.7\textwidth]{W3.png}
+    \caption{GOCPI Website V1 Project Access}
+    \label{fig:WV1PA}
+\end{figure}
+\begin{figure}[H]
+    \centering
+	\includegraphics[width=0.7\textwidth]{W4.png}
+    \caption{GOCPI Website V1 Project Contributors}
+    \label{fig:WV1PC}
+\end{figure}
+\begin{figure}[H]
+    \centering
+	\includegraphics[width=0.7\textwidth]{W5.png}
+    \caption{GOCPI Website V1 Project Documents}
+    \label{fig:WV1PD}
 \end{figure}
 \newpage
-\section{Programming}
-These section contains all programming scripts for the project.
-\subsection{GOCPI NZ Energy Systems Example}
-\lstinputlisting[language=Python]{"/Users/connor/Google Drive/Documents/University/Courses/2020/ENGSCI 700A&B/GOCPI/src/GOCPI_NZ_Example.gyp"}
-The GOCPI NZ Energy Systems Example is the processing script for designing NZ and AUS Energy Systems
-\subsection{GOCPI Module}
-\subsubsection{Navigation}
-The module to provide navigation functionalities to access files in directories.
-\lstinputlisting[language=Python]{"/Users/connor/Google Drive/Documents/University/Courses/2020/ENGSCI 700A&B/GOCPI/src/GOCPI/GOCPI/Navigation.py"}
-\subsubsection{Energysystems}
-The module to load in existing energy systems to create model and data files.
-\lstinputlisting[language=Python]{"/Users/connor/Google Drive/Documents/University/Courses/2020/ENGSCI 700A&B/GOCPI/src/GOCPI/GOCPI/Energysystems.py"}
-\subsubsection{CreateCases}
-The module to create user-defined energy systems.
-\lstinputlisting[language=Python]{"/Users/connor/Google Drive/Documents/University/Courses/2020/ENGSCI 700A&B/GOCPI/src/GOCPI/GOCPI/CreateCases.py"}
-\subsubsection{Forecasting}
-The module to forecast energy and finance-related values.
-\lstinputlisting[language=Python]{"/Users/connor/Google Drive/Documents/University/Courses/2020/ENGSCI 700A&B/GOCPI/src/GOCPI/GOCPI/Forecasting.py"}
-\subsubsection{Optimisation}
-The module to solve energy systems either locally or remotely using IBM technologies.
-\lstinputlisting[language=Python]{"/Users/connor/Google Drive/Documents/University/Courses/2020/ENGSCI 700A&B/GOCPI/src/GOCPI/GOCPI/Optimisation.py"}
-
-\section{Development Scripting}
-The scripts within this section were used to design the GOCPI modules needed for the project.
-\subsection{GOCPI Data Cases}
-This script helped set the structure to build the model and data files for energy systems.
-\lstinputlisting[language=Python]{"/Users/connor/Google Drive/Documents/University/Courses/2020/ENGSCI 700A&B/GOCPI/src/GOCPI_Data_Cases.gyp"}
-\subsection{GOCPI Energy Balances}
-This script helped extract energy balances from the International Energy Agency's World Energy Balances.
-\lstinputlisting[language=Python]{"/Users/connor/Google Drive/Documents/University/Courses/2020/ENGSCI 700A&B/GOCPI/src/GOCPI_EB.gyp"}
-\subsection{GOCPI Geographies}
-This script helped create the geographical subsets for modelling energy regions.
-\lstinputlisting[language=Python]{"/Users/connor/Google Drive/Documents/University/Courses/2020/ENGSCI 700A&B/GOCPI/src/GOCPI_Geographies.gyp"}
-\subsection{GOCPI Inputs}
-This script helped update values in the Excel spreadsheet when developing a standardised modelling process for the TIMES Methodology.
-\lstinputlisting[language=Python]{"/Users/connor/Google Drive/Documents/University/Courses/2020/ENGSCI 700A&B/GOCPI/src/GOCPI_Inputs.gyp"}
-\subsection{GOCPI Model Import}
-This script helped import OseMOSYS models.
-\lstinputlisting[language=Python]{"/Users/connor/Google Drive/Documents/University/Courses/2020/ENGSCI 700A&B/GOCPI/src/GOCPI_Model_Import.gyp"}
-\subsection{GOCPI Optimisation}
-This script helped incorporate IBM optimisation technologies into the package.
-\lstinputlisting[language=Python]{"/Users/connor/Google Drive/Documents/University/Courses/2020/ENGSCI 700A&B/GOCPI/src/GOCPI_Optimisation.gyp"}
-
-\section{OseMOSYS}
-This section displays the text files formulated to create the lp file.
-These are formulated using Python-based processing scripts and the GOCPI Energysystems module.
-\subsection{Model File}
-\lstinputlisting{"/Users/connor/Google Drive/Documents/University/Courses/2020/ENGSCI 700A&B/GOCPI/data/Inputs/GOCPI OseMOSYS/GOCPI_OseMOSYS_Model.txt"}
-\subsection{Data File}
-This data file is created from a partially complete NZ/AUS Energy system.
-The file shows the complexity of energy modelling and creating user-defined energy systems.
-The parameters to be modelled are mostly denoted by binary values.
-\lstinputlisting{"/Users/connor/Google Drive/Documents/University/Courses/2020/ENGSCI 700A&B/GOCPI/data/Inputs/GOCPI OseMOSYS/GOCPI_OseMOSYS_Data.txt"}
-\subsection{Linear Programme File}
-This file is the lp formulation required to use CPLEX.
-The file is not included in this compendium as the Utopian example is nearly 1.2 million lines of code.
 
 \section{Project Log Book}
 Disclaimer: Contributions to the Project Log Book grew inconsistent toward the later stages of the project.
@@ -415,6 +415,76 @@ Disclaimer: Contributions to the Project Log Book grew inconsistent toward the l
 \begin{itemize}
 	\item Submitted the final report
 \end{itemize}
+\newpage
+
+\section{GOCPI Documentation}\label{Docstring}
+The GOCPI classes and modules are described in the following document.
+This document was generated from docstrings using sphinx.
+\newpage
+\includepdf[pages=-]{GOCPI-appendix.pdf}
+\newpage
+
+\section{Programming}
+These section contains all programming scripts for the project.
+\subsection{GOCPI NZ Energy Systems Example}
+The GOCPI NZ Example file is the Python file
+\lstinputlisting[language=Python]{"/Users/connor/Google Drive/Documents/University/Courses/2020/ENGSCI 700A&B/GOCPI/src/GOCPI_NZ_Example.gyp"}
+The GOCPI NZ Energy Systems Example is the processing script for designing NZ and AUS Energy Systems
+\subsection{GOCPI Module}
+\subsubsection{Navigation}
+The module to provide navigation functionalities to access files in directories.
+\lstinputlisting[language=Python]{"/Users/connor/Google Drive/Documents/University/Courses/2020/ENGSCI 700A&B/GOCPI/src/GOCPI/GOCPI/Navigation.py"}
+\subsubsection{Energysystems}
+The module to load in existing energy systems to create model and data files.
+\lstinputlisting[language=Python]{"/Users/connor/Google Drive/Documents/University/Courses/2020/ENGSCI 700A&B/GOCPI/src/GOCPI/GOCPI/Energysystems.py"}
+\subsubsection{CreateCases}
+The module to create user-defined energy systems.
+\lstinputlisting[language=Python]{"/Users/connor/Google Drive/Documents/University/Courses/2020/ENGSCI 700A&B/GOCPI/src/GOCPI/GOCPI/CreateCases.py"}
+\subsubsection{Forecasting}
+The module to forecast energy and finance-related values.
+\lstinputlisting[language=Python]{"/Users/connor/Google Drive/Documents/University/Courses/2020/ENGSCI 700A&B/GOCPI/src/GOCPI/GOCPI/Forecasting.py"}
+\subsubsection{Optimisation}
+The module to solve energy systems either locally or remotely using IBM technologies.
+\lstinputlisting[language=Python]{"/Users/connor/Google Drive/Documents/University/Courses/2020/ENGSCI 700A&B/GOCPI/src/GOCPI/GOCPI/Optimisation.py"}
+\newpage
+
+\section{Development Scripting}
+The scripts within this section were used to design the GOCPI modules needed for the project.
+\subsection{GOCPI Data Cases}
+This script helped set the structure to build the model and data files for energy systems.
+\lstinputlisting[language=Python]{"/Users/connor/Google Drive/Documents/University/Courses/2020/ENGSCI 700A&B/GOCPI/src/GOCPI_Data_Cases.gyp"}
+\subsection{GOCPI Energy Balances}
+This script helped extract energy balances from the International Energy Agency's World Energy Balances.
+\lstinputlisting[language=Python]{"/Users/connor/Google Drive/Documents/University/Courses/2020/ENGSCI 700A&B/GOCPI/src/GOCPI_EB.gyp"}
+\subsection{GOCPI Geographies}
+This script helped create the geographical subsets for modelling energy regions.
+\lstinputlisting[language=Python]{"/Users/connor/Google Drive/Documents/University/Courses/2020/ENGSCI 700A&B/GOCPI/src/GOCPI_Geographies.gyp"}
+\subsection{GOCPI Inputs}
+This script helped update values in the Excel spreadsheet when developing a standardised modelling process for the TIMES Methodology.
+\lstinputlisting[language=Python]{"/Users/connor/Google Drive/Documents/University/Courses/2020/ENGSCI 700A&B/GOCPI/src/GOCPI_Inputs.gyp"}
+\subsection{GOCPI Model Import}
+This script helped import OseMOSYS models.
+\lstinputlisting[language=Python]{"/Users/connor/Google Drive/Documents/University/Courses/2020/ENGSCI 700A&B/GOCPI/src/GOCPI_Model_Import.gyp"}
+\subsection{GOCPI Optimisation}
+This script helped incorporate IBM optimisation technologies into the package.
+\lstinputlisting[language=Python]{"/Users/connor/Google Drive/Documents/University/Courses/2020/ENGSCI 700A&B/GOCPI/src/GOCPI_Optimisation.gyp"}
+\newpage
+
+\section{OseMOSYS}
+This section displays the text files formulated to create the lp file.
+These are formulated using Python-based processing scripts and the GOCPI Energysystems module.
+\subsection{Model File}
+\lstinputlisting{"/Users/connor/Google Drive/Documents/University/Courses/2020/ENGSCI 700A&B/GOCPI/data/Inputs/GOCPI OseMOSYS/GOCPI_OseMOSYS_Model.txt"}
+\subsection{Data File}
+This data file is created from a partially complete NZ/AUS Energy system.
+The file shows the complexity of energy modelling and creating user-defined energy systems.
+The parameters to be modelled are mostly denoted by binary values.
+\lstinputlisting{"/Users/connor/Google Drive/Documents/University/Courses/2020/ENGSCI 700A&B/GOCPI/data/Inputs/GOCPI OseMOSYS/GOCPI_OseMOSYS_Data.txt"}
+\subsection{Linear Programme File}
+This file is the lp formulation required to use CPLEX.
+The file is not included in this compendium as the Utopian example is nearly 1.2 million lines of code.
+\newpage
+
 \section{Bibliography}
 \printbibliography
 \end{document}
