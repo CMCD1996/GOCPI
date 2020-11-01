@@ -1,12 +1,25 @@
 \boolfalse {citerequest}\boolfalse {citetracker}\boolfalse {pagetracker}\boolfalse {backtracker}\relax 
-\contentsline {section}{\numberline {1}Programming}{2}{section.1}% 
-\contentsline {subsection}{\numberline {1.1}GOCPI NZ Energy Systems Example}{2}{subsection.1.1}% 
-\contentsline {subsection}{\numberline {1.2}GOCPI Module}{2}{subsection.1.2}% 
-\contentsline {subsubsection}{\numberline {1.2.1}Navigation}{2}{subsubsection.1.2.1}% 
-\contentsline {subsubsection}{\numberline {1.2.2}Energysystems}{2}{subsubsection.1.2.2}% 
-\contentsline {subsubsection}{\numberline {1.2.3}CreateCases}{2}{subsubsection.1.2.3}% 
-\contentsline {subsubsection}{\numberline {1.2.4}Forecasting}{2}{subsubsection.1.2.4}% 
-\contentsline {subsubsection}{\numberline {1.2.5}Optimisation}{2}{subsubsection.1.2.5}% 
-\contentsline {section}{\numberline {2}OseMOSYS}{17}{section.2}% 
-\contentsline {section}{\numberline {3}Project Log Book}{27}{section.3}% 
-\contentsline {section}{\numberline {4}Bibliography}{32}{section.4}% 
+\contentsline {section}{\numberline {1}Website}{2}{section.1}% 
+\contentsline {subsection}{\numberline {1.1}Version Two}{2}{subsection.1.1}% 
+\contentsline {subsection}{\numberline {1.2}Version One}{2}{subsection.1.2}% 
+\contentsline {section}{\numberline {2}Programming}{3}{section.2}% 
+\contentsline {subsection}{\numberline {2.1}GOCPI NZ Energy Systems Example}{3}{subsection.2.1}% 
+\contentsline {subsection}{\numberline {2.2}GOCPI Module}{18}{subsection.2.2}% 
+\contentsline {subsubsection}{\numberline {2.2.1}Navigation}{18}{subsubsection.2.2.1}% 
+\contentsline {subsubsection}{\numberline {2.2.2}Energysystems}{19}{subsubsection.2.2.2}% 
+\contentsline {subsubsection}{\numberline {2.2.3}CreateCases}{61}{subsubsection.2.2.3}% 
+\contentsline {subsubsection}{\numberline {2.2.4}Forecasting}{76}{subsubsection.2.2.4}% 
+\contentsline {subsubsection}{\numberline {2.2.5}Optimisation}{79}{subsubsection.2.2.5}% 
+\contentsline {section}{\numberline {3}Development Scripting}{84}{section.3}% 
+\contentsline {subsection}{\numberline {3.1}GOCPI Data Cases}{84}{subsection.3.1}% 
+\contentsline {subsection}{\numberline {3.2}GOCPI Energy Balances}{87}{subsection.3.2}% 
+\contentsline {subsection}{\numberline {3.3}GOCPI Geographies}{94}{subsection.3.3}% 
+\contentsline {subsection}{\numberline {3.4}GOCPI Inputs}{95}{subsection.3.4}% 
+\contentsline {subsection}{\numberline {3.5}GOCPI Model Import}{98}{subsection.3.5}% 
+\contentsline {subsection}{\numberline {3.6}GOCPI Optimisation}{99}{subsection.3.6}% 
+\contentsline {section}{\numberline {4}OseMOSYS}{105}{section.4}% 
+\contentsline {subsection}{\numberline {4.1}Model File}{106}{subsection.4.1}% 
+\contentsline {subsection}{\numberline {4.2}Data File}{115}{subsection.4.2}% 
+\contentsline {subsection}{\numberline {4.3}Linear Programme File}{323}{subsection.4.3}% 
+\contentsline {section}{\numberline {5}Project Log Book}{323}{section.5}% 
+\contentsline {section}{\numberline {6}Bibliography}{329}{section.6}% 
