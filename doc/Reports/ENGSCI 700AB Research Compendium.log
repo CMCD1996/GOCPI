@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.20 (TeX Live 2019) (preloaded format=pdflatex 2020.3.23)  3 NOV 2020 12:17
+This is pdfTeX, Version 3.14159265-2.6-1.40.20 (TeX Live 2019) (preloaded format=pdflatex 2020.3.23)  3 NOV 2020 12:19
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -1397,325 +1397,325 @@ File: umsb.fd 2013/01/14 v3.01 AMS symbols B
 \tf@toc=\write6
 \openout6 = `"ENGSCI 700AB Research Compendium.toc"'.
 
- (./ENGSCI 700AB Research Compendium.lofpdfTeX warning (ext4): destination with the same identifier (name{page.1}) has been already used, duplicate ignored
-<to be read again> 
-                   \relax 
-l.6 ...ect Documents\relax }}{5}{figure.caption.8}
-                                                  % [1])
+ (./ENGSCI 700AB Research Compendium.lof)
 \tf@lof=\write7
 \openout7 = `"ENGSCI 700AB Research Compendium.lof"'.
 
- [2] [3]
-<W1.png, id=196, 1445.4pt x 792.9625pt>
+pdfTeX warning (ext4): destination with the same identifier (name{page.1}) has been already used, duplicate ignored
+<to be read again> 
+                   \relax 
+l.137 \newpage
+               [1] [2]
+<W1.png, id=187, 1445.4pt x 792.9625pt>
 File: W1.png Graphic file (type png)
 <use W1.png>
-Package pdftex.def Info: W1.png  used on input line 182.
+Package pdftex.def Info: W1.png  used on input line 181.
 (pdftex.def)             Requested size: 317.0764pt x 173.94409pt.
-<W2.png, id=198, 1445.4pt x 792.9625pt>
+<W2.png, id=189, 1445.4pt x 792.9625pt>
 File: W2.png Graphic file (type png)
 <use W2.png>
-Package pdftex.def Info: W2.png  used on input line 188.
+Package pdftex.def Info: W2.png  used on input line 187.
 (pdftex.def)             Requested size: 317.0764pt x 173.94409pt.
-<W3.png, id=199, 1445.4pt x 792.9625pt>
+<W3.png, id=190, 1445.4pt x 792.9625pt>
 File: W3.png Graphic file (type png)
 <use W3.png>
-Package pdftex.def Info: W3.png  used on input line 194.
+Package pdftex.def Info: W3.png  used on input line 193.
 (pdftex.def)             Requested size: 317.0764pt x 173.94409pt.
-<W4.png, id=200, 1445.4pt x 727.71875pt>
+<W4.png, id=191, 1445.4pt x 727.71875pt>
 File: W4.png Graphic file (type png)
 <use W4.png>
-Package pdftex.def Info: W4.png  used on input line 200.
+Package pdftex.def Info: W4.png  used on input line 199.
 (pdftex.def)             Requested size: 317.0764pt x 159.63225pt.
- [4 <./W1.png> <./W2.png>]
-<W5.png, id=207, 1445.4pt x 725.71124pt>
+ [3 <./W1.png> <./W2.png>]
+<W5.png, id=198, 1445.4pt x 725.71124pt>
 File: W5.png Graphic file (type png)
 <use W5.png>
-Package pdftex.def Info: W5.png  used on input line 206.
+Package pdftex.def Info: W5.png  used on input line 205.
 (pdftex.def)             Requested size: 317.0764pt x 159.19188pt.
- [5 <./W3.png> <./W4.png> <./W5.png>] [6] [7] [8] [9] [10] [11] [12]
-<GOCPI-appendix.pdf, id=292, 597.50829pt x 845.0471pt>
+ [4 <./W3.png> <./W4.png> <./W5.png>] [5] [6] [7] [8] [9] [10] [11]
+<GOCPI-appendix.pdf, id=281, 597.50829pt x 845.0471pt>
 File: GOCPI-appendix.pdf Graphic file (type pdf)
 <use GOCPI-appendix.pdf>
-Package pdftex.def Info: GOCPI-appendix.pdf  used on input line 424.
+Package pdftex.def Info: GOCPI-appendix.pdf  used on input line 423.
 (pdftex.def)             Requested size: 597.50682pt x 845.04504pt.
 File: GOCPI-appendix.pdf Graphic file (type pdf)
 <use GOCPI-appendix.pdf>
-Package pdftex.def Info: GOCPI-appendix.pdf  used on input line 424.
+Package pdftex.def Info: GOCPI-appendix.pdf  used on input line 423.
 (pdftex.def)             Requested size: 597.50682pt x 845.04504pt.
-<GOCPI-appendix.pdf, id=295, page=1, 597.50829pt x 845.0471pt>
+<GOCPI-appendix.pdf, id=284, page=1, 597.50829pt x 845.0471pt>
 File: GOCPI-appendix.pdf Graphic file (type pdf)
 <use GOCPI-appendix.pdf, page 1>
-Package pdftex.def Info: GOCPI-appendix.pdf , page1 used on input line 424.
+Package pdftex.def Info: GOCPI-appendix.pdf , page1 used on input line 423.
 (pdftex.def)             Requested size: 597.50682pt x 845.04504pt.
 File: GOCPI-appendix.pdf Graphic file (type pdf)
 <use GOCPI-appendix.pdf, page 1>
-Package pdftex.def Info: GOCPI-appendix.pdf , page1 used on input line 424.
+Package pdftex.def Info: GOCPI-appendix.pdf , page1 used on input line 423.
 (pdftex.def)             Requested size: 597.53416pt x 845.08372pt.
 File: GOCPI-appendix.pdf Graphic file (type pdf)
 <use GOCPI-appendix.pdf, page 1>
-Package pdftex.def Info: GOCPI-appendix.pdf , page1 used on input line 424.
+Package pdftex.def Info: GOCPI-appendix.pdf , page1 used on input line 423.
 (pdftex.def)             Requested size: 597.53416pt x 845.08372pt.
 File: GOCPI-appendix.pdf Graphic file (type pdf)
 <use GOCPI-appendix.pdf, page 1>
-Package pdftex.def Info: GOCPI-appendix.pdf , page1 used on input line 424.
+Package pdftex.def Info: GOCPI-appendix.pdf , page1 used on input line 423.
 (pdftex.def)             Requested size: 597.53416pt x 845.08372pt.
 File: GOCPI-appendix.pdf Graphic file (type pdf)
 <use GOCPI-appendix.pdf, page 1>
-Package pdftex.def Info: GOCPI-appendix.pdf , page1 used on input line 424.
+Package pdftex.def Info: GOCPI-appendix.pdf , page1 used on input line 423.
+(pdftex.def)             Requested size: 597.53416pt x 845.08372pt.
+ [12 <./GOCPI-appendix.pdf>]
+<GOCPI-appendix.pdf, id=318, page=2, 597.50829pt x 845.0471pt>
+File: GOCPI-appendix.pdf Graphic file (type pdf)
+<use GOCPI-appendix.pdf, page 2>
+Package pdftex.def Info: GOCPI-appendix.pdf , page2 used on input line 423.
+(pdftex.def)             Requested size: 597.53416pt x 845.08372pt.
+File: GOCPI-appendix.pdf Graphic file (type pdf)
+<use GOCPI-appendix.pdf, page 2>
+Package pdftex.def Info: GOCPI-appendix.pdf , page2 used on input line 423.
+(pdftex.def)             Requested size: 597.53416pt x 845.08372pt.
+File: GOCPI-appendix.pdf Graphic file (type pdf)
+<use GOCPI-appendix.pdf, page 2>
+Package pdftex.def Info: GOCPI-appendix.pdf , page2 used on input line 423.
 (pdftex.def)             Requested size: 597.53416pt x 845.08372pt.
  [13 <./GOCPI-appendix.pdf>]
-<GOCPI-appendix.pdf, id=327, page=2, 597.50829pt x 845.0471pt>
+<GOCPI-appendix.pdf, id=338, page=3, 597.50829pt x 845.0471pt>
 File: GOCPI-appendix.pdf Graphic file (type pdf)
-<use GOCPI-appendix.pdf, page 2>
-Package pdftex.def Info: GOCPI-appendix.pdf , page2 used on input line 424.
+<use GOCPI-appendix.pdf, page 3>
+Package pdftex.def Info: GOCPI-appendix.pdf , page3 used on input line 423.
 (pdftex.def)             Requested size: 597.53416pt x 845.08372pt.
 File: GOCPI-appendix.pdf Graphic file (type pdf)
-<use GOCPI-appendix.pdf, page 2>
-Package pdftex.def Info: GOCPI-appendix.pdf , page2 used on input line 424.
+<use GOCPI-appendix.pdf, page 3>
+Package pdftex.def Info: GOCPI-appendix.pdf , page3 used on input line 423.
 (pdftex.def)             Requested size: 597.53416pt x 845.08372pt.
 File: GOCPI-appendix.pdf Graphic file (type pdf)
-<use GOCPI-appendix.pdf, page 2>
-Package pdftex.def Info: GOCPI-appendix.pdf , page2 used on input line 424.
+<use GOCPI-appendix.pdf, page 3>
+Package pdftex.def Info: GOCPI-appendix.pdf , page3 used on input line 423.
 (pdftex.def)             Requested size: 597.53416pt x 845.08372pt.
  [14 <./GOCPI-appendix.pdf>]
-<GOCPI-appendix.pdf, id=347, page=3, 597.50829pt x 845.0471pt>
+<GOCPI-appendix.pdf, id=363, page=4, 597.50829pt x 845.0471pt>
 File: GOCPI-appendix.pdf Graphic file (type pdf)
-<use GOCPI-appendix.pdf, page 3>
-Package pdftex.def Info: GOCPI-appendix.pdf , page3 used on input line 424.
+<use GOCPI-appendix.pdf, page 4>
+Package pdftex.def Info: GOCPI-appendix.pdf , page4 used on input line 423.
 (pdftex.def)             Requested size: 597.53416pt x 845.08372pt.
 File: GOCPI-appendix.pdf Graphic file (type pdf)
-<use GOCPI-appendix.pdf, page 3>
-Package pdftex.def Info: GOCPI-appendix.pdf , page3 used on input line 424.
+<use GOCPI-appendix.pdf, page 4>
+Package pdftex.def Info: GOCPI-appendix.pdf , page4 used on input line 423.
 (pdftex.def)             Requested size: 597.53416pt x 845.08372pt.
 File: GOCPI-appendix.pdf Graphic file (type pdf)
-<use GOCPI-appendix.pdf, page 3>
-Package pdftex.def Info: GOCPI-appendix.pdf , page3 used on input line 424.
+<use GOCPI-appendix.pdf, page 4>
+Package pdftex.def Info: GOCPI-appendix.pdf , page4 used on input line 423.
 (pdftex.def)             Requested size: 597.53416pt x 845.08372pt.
  [15 <./GOCPI-appendix.pdf>]
-<GOCPI-appendix.pdf, id=372, page=4, 597.50829pt x 845.0471pt>
+<GOCPI-appendix.pdf, id=371, page=5, 597.50829pt x 845.0471pt>
 File: GOCPI-appendix.pdf Graphic file (type pdf)
-<use GOCPI-appendix.pdf, page 4>
-Package pdftex.def Info: GOCPI-appendix.pdf , page4 used on input line 424.
+<use GOCPI-appendix.pdf, page 5>
+Package pdftex.def Info: GOCPI-appendix.pdf , page5 used on input line 423.
 (pdftex.def)             Requested size: 597.53416pt x 845.08372pt.
 File: GOCPI-appendix.pdf Graphic file (type pdf)
-<use GOCPI-appendix.pdf, page 4>
-Package pdftex.def Info: GOCPI-appendix.pdf , page4 used on input line 424.
+<use GOCPI-appendix.pdf, page 5>
+Package pdftex.def Info: GOCPI-appendix.pdf , page5 used on input line 423.
 (pdftex.def)             Requested size: 597.53416pt x 845.08372pt.
 File: GOCPI-appendix.pdf Graphic file (type pdf)
-<use GOCPI-appendix.pdf, page 4>
-Package pdftex.def Info: GOCPI-appendix.pdf , page4 used on input line 424.
+<use GOCPI-appendix.pdf, page 5>
+Package pdftex.def Info: GOCPI-appendix.pdf , page5 used on input line 423.
 (pdftex.def)             Requested size: 597.53416pt x 845.08372pt.
  [16 <./GOCPI-appendix.pdf>]
-<GOCPI-appendix.pdf, id=380, page=5, 597.50829pt x 845.0471pt>
+<GOCPI-appendix.pdf, id=376, page=6, 597.50829pt x 845.0471pt>
 File: GOCPI-appendix.pdf Graphic file (type pdf)
-<use GOCPI-appendix.pdf, page 5>
-Package pdftex.def Info: GOCPI-appendix.pdf , page5 used on input line 424.
+<use GOCPI-appendix.pdf, page 6>
+Package pdftex.def Info: GOCPI-appendix.pdf , page6 used on input line 423.
 (pdftex.def)             Requested size: 597.53416pt x 845.08372pt.
 File: GOCPI-appendix.pdf Graphic file (type pdf)
-<use GOCPI-appendix.pdf, page 5>
-Package pdftex.def Info: GOCPI-appendix.pdf , page5 used on input line 424.
+<use GOCPI-appendix.pdf, page 6>
+Package pdftex.def Info: GOCPI-appendix.pdf , page6 used on input line 423.
 (pdftex.def)             Requested size: 597.53416pt x 845.08372pt.
 File: GOCPI-appendix.pdf Graphic file (type pdf)
-<use GOCPI-appendix.pdf, page 5>
-Package pdftex.def Info: GOCPI-appendix.pdf , page5 used on input line 424.
+<use GOCPI-appendix.pdf, page 6>
+Package pdftex.def Info: GOCPI-appendix.pdf , page6 used on input line 423.
 (pdftex.def)             Requested size: 597.53416pt x 845.08372pt.
  [17 <./GOCPI-appendix.pdf>]
-<GOCPI-appendix.pdf, id=385, page=6, 597.50829pt x 845.0471pt>
+<GOCPI-appendix.pdf, id=381, page=7, 597.50829pt x 845.0471pt>
 File: GOCPI-appendix.pdf Graphic file (type pdf)
-<use GOCPI-appendix.pdf, page 6>
-Package pdftex.def Info: GOCPI-appendix.pdf , page6 used on input line 424.
+<use GOCPI-appendix.pdf, page 7>
+Package pdftex.def Info: GOCPI-appendix.pdf , page7 used on input line 423.
 (pdftex.def)             Requested size: 597.53416pt x 845.08372pt.
 File: GOCPI-appendix.pdf Graphic file (type pdf)
-<use GOCPI-appendix.pdf, page 6>
-Package pdftex.def Info: GOCPI-appendix.pdf , page6 used on input line 424.
+<use GOCPI-appendix.pdf, page 7>
+Package pdftex.def Info: GOCPI-appendix.pdf , page7 used on input line 423.
 (pdftex.def)             Requested size: 597.53416pt x 845.08372pt.
 File: GOCPI-appendix.pdf Graphic file (type pdf)
-<use GOCPI-appendix.pdf, page 6>
-Package pdftex.def Info: GOCPI-appendix.pdf , page6 used on input line 424.
+<use GOCPI-appendix.pdf, page 7>
+Package pdftex.def Info: GOCPI-appendix.pdf , page7 used on input line 423.
 (pdftex.def)             Requested size: 597.53416pt x 845.08372pt.
  [18 <./GOCPI-appendix.pdf>]
-<GOCPI-appendix.pdf, id=391, page=7, 597.50829pt x 845.0471pt>
+<GOCPI-appendix.pdf, id=387, page=8, 597.50829pt x 845.0471pt>
 File: GOCPI-appendix.pdf Graphic file (type pdf)
-<use GOCPI-appendix.pdf, page 7>
-Package pdftex.def Info: GOCPI-appendix.pdf , page7 used on input line 424.
+<use GOCPI-appendix.pdf, page 8>
+Package pdftex.def Info: GOCPI-appendix.pdf , page8 used on input line 423.
 (pdftex.def)             Requested size: 597.53416pt x 845.08372pt.
 File: GOCPI-appendix.pdf Graphic file (type pdf)
-<use GOCPI-appendix.pdf, page 7>
-Package pdftex.def Info: GOCPI-appendix.pdf , page7 used on input line 424.
+<use GOCPI-appendix.pdf, page 8>
+Package pdftex.def Info: GOCPI-appendix.pdf , page8 used on input line 423.
 (pdftex.def)             Requested size: 597.53416pt x 845.08372pt.
 File: GOCPI-appendix.pdf Graphic file (type pdf)
-<use GOCPI-appendix.pdf, page 7>
-Package pdftex.def Info: GOCPI-appendix.pdf , page7 used on input line 424.
+<use GOCPI-appendix.pdf, page 8>
+Package pdftex.def Info: GOCPI-appendix.pdf , page8 used on input line 423.
 (pdftex.def)             Requested size: 597.53416pt x 845.08372pt.
  [19 <./GOCPI-appendix.pdf>]
-<GOCPI-appendix.pdf, id=396, page=8, 597.50829pt x 845.0471pt>
+<GOCPI-appendix.pdf, id=392, page=9, 597.50829pt x 845.0471pt>
 File: GOCPI-appendix.pdf Graphic file (type pdf)
-<use GOCPI-appendix.pdf, page 8>
-Package pdftex.def Info: GOCPI-appendix.pdf , page8 used on input line 424.
+<use GOCPI-appendix.pdf, page 9>
+Package pdftex.def Info: GOCPI-appendix.pdf , page9 used on input line 423.
 (pdftex.def)             Requested size: 597.53416pt x 845.08372pt.
 File: GOCPI-appendix.pdf Graphic file (type pdf)
-<use GOCPI-appendix.pdf, page 8>
-Package pdftex.def Info: GOCPI-appendix.pdf , page8 used on input line 424.
+<use GOCPI-appendix.pdf, page 9>
+Package pdftex.def Info: GOCPI-appendix.pdf , page9 used on input line 423.
 (pdftex.def)             Requested size: 597.53416pt x 845.08372pt.
 File: GOCPI-appendix.pdf Graphic file (type pdf)
-<use GOCPI-appendix.pdf, page 8>
-Package pdftex.def Info: GOCPI-appendix.pdf , page8 used on input line 424.
+<use GOCPI-appendix.pdf, page 9>
+Package pdftex.def Info: GOCPI-appendix.pdf , page9 used on input line 423.
 (pdftex.def)             Requested size: 597.53416pt x 845.08372pt.
  [20 <./GOCPI-appendix.pdf>]
-<GOCPI-appendix.pdf, id=401, page=9, 597.50829pt x 845.0471pt>
+<GOCPI-appendix.pdf, id=397, page=10, 597.50829pt x 845.0471pt>
 File: GOCPI-appendix.pdf Graphic file (type pdf)
-<use GOCPI-appendix.pdf, page 9>
-Package pdftex.def Info: GOCPI-appendix.pdf , page9 used on input line 424.
+<use GOCPI-appendix.pdf, page 10>
+Package pdftex.def Info: GOCPI-appendix.pdf , page10 used on input line 423.
 (pdftex.def)             Requested size: 597.53416pt x 845.08372pt.
 File: GOCPI-appendix.pdf Graphic file (type pdf)
-<use GOCPI-appendix.pdf, page 9>
-Package pdftex.def Info: GOCPI-appendix.pdf , page9 used on input line 424.
+<use GOCPI-appendix.pdf, page 10>
+Package pdftex.def Info: GOCPI-appendix.pdf , page10 used on input line 423.
 (pdftex.def)             Requested size: 597.53416pt x 845.08372pt.
 File: GOCPI-appendix.pdf Graphic file (type pdf)
-<use GOCPI-appendix.pdf, page 9>
-Package pdftex.def Info: GOCPI-appendix.pdf , page9 used on input line 424.
+<use GOCPI-appendix.pdf, page 10>
+Package pdftex.def Info: GOCPI-appendix.pdf , page10 used on input line 423.
 (pdftex.def)             Requested size: 597.53416pt x 845.08372pt.
  [21 <./GOCPI-appendix.pdf>]
-<GOCPI-appendix.pdf, id=406, page=10, 597.50829pt x 845.0471pt>
+<GOCPI-appendix.pdf, id=402, page=11, 597.50829pt x 845.0471pt>
 File: GOCPI-appendix.pdf Graphic file (type pdf)
-<use GOCPI-appendix.pdf, page 10>
-Package pdftex.def Info: GOCPI-appendix.pdf , page10 used on input line 424.
+<use GOCPI-appendix.pdf, page 11>
+Package pdftex.def Info: GOCPI-appendix.pdf , page11 used on input line 423.
 (pdftex.def)             Requested size: 597.53416pt x 845.08372pt.
 File: GOCPI-appendix.pdf Graphic file (type pdf)
-<use GOCPI-appendix.pdf, page 10>
-Package pdftex.def Info: GOCPI-appendix.pdf , page10 used on input line 424.
+<use GOCPI-appendix.pdf, page 11>
+Package pdftex.def Info: GOCPI-appendix.pdf , page11 used on input line 423.
 (pdftex.def)             Requested size: 597.53416pt x 845.08372pt.
 File: GOCPI-appendix.pdf Graphic file (type pdf)
-<use GOCPI-appendix.pdf, page 10>
-Package pdftex.def Info: GOCPI-appendix.pdf , page10 used on input line 424.
+<use GOCPI-appendix.pdf, page 11>
+Package pdftex.def Info: GOCPI-appendix.pdf , page11 used on input line 423.
 (pdftex.def)             Requested size: 597.53416pt x 845.08372pt.
  [22 <./GOCPI-appendix.pdf>]
-<GOCPI-appendix.pdf, id=411, page=11, 597.50829pt x 845.0471pt>
+<GOCPI-appendix.pdf, id=407, page=12, 597.50829pt x 845.0471pt>
 File: GOCPI-appendix.pdf Graphic file (type pdf)
-<use GOCPI-appendix.pdf, page 11>
-Package pdftex.def Info: GOCPI-appendix.pdf , page11 used on input line 424.
+<use GOCPI-appendix.pdf, page 12>
+Package pdftex.def Info: GOCPI-appendix.pdf , page12 used on input line 423.
 (pdftex.def)             Requested size: 597.53416pt x 845.08372pt.
 File: GOCPI-appendix.pdf Graphic file (type pdf)
-<use GOCPI-appendix.pdf, page 11>
-Package pdftex.def Info: GOCPI-appendix.pdf , page11 used on input line 424.
+<use GOCPI-appendix.pdf, page 12>
+Package pdftex.def Info: GOCPI-appendix.pdf , page12 used on input line 423.
 (pdftex.def)             Requested size: 597.53416pt x 845.08372pt.
 File: GOCPI-appendix.pdf Graphic file (type pdf)
-<use GOCPI-appendix.pdf, page 11>
-Package pdftex.def Info: GOCPI-appendix.pdf , page11 used on input line 424.
+<use GOCPI-appendix.pdf, page 12>
+Package pdftex.def Info: GOCPI-appendix.pdf , page12 used on input line 423.
 (pdftex.def)             Requested size: 597.53416pt x 845.08372pt.
  [23 <./GOCPI-appendix.pdf>]
-<GOCPI-appendix.pdf, id=416, page=12, 597.50829pt x 845.0471pt>
+<GOCPI-appendix.pdf, id=412, page=13, 597.50829pt x 845.0471pt>
 File: GOCPI-appendix.pdf Graphic file (type pdf)
-<use GOCPI-appendix.pdf, page 12>
-Package pdftex.def Info: GOCPI-appendix.pdf , page12 used on input line 424.
+<use GOCPI-appendix.pdf, page 13>
+Package pdftex.def Info: GOCPI-appendix.pdf , page13 used on input line 423.
 (pdftex.def)             Requested size: 597.53416pt x 845.08372pt.
 File: GOCPI-appendix.pdf Graphic file (type pdf)
-<use GOCPI-appendix.pdf, page 12>
-Package pdftex.def Info: GOCPI-appendix.pdf , page12 used on input line 424.
+<use GOCPI-appendix.pdf, page 13>
+Package pdftex.def Info: GOCPI-appendix.pdf , page13 used on input line 423.
 (pdftex.def)             Requested size: 597.53416pt x 845.08372pt.
 File: GOCPI-appendix.pdf Graphic file (type pdf)
-<use GOCPI-appendix.pdf, page 12>
-Package pdftex.def Info: GOCPI-appendix.pdf , page12 used on input line 424.
+<use GOCPI-appendix.pdf, page 13>
+Package pdftex.def Info: GOCPI-appendix.pdf , page13 used on input line 423.
 (pdftex.def)             Requested size: 597.53416pt x 845.08372pt.
  [24 <./GOCPI-appendix.pdf>]
-<GOCPI-appendix.pdf, id=422, page=13, 597.50829pt x 845.0471pt>
+<GOCPI-appendix.pdf, id=418, page=14, 597.50829pt x 845.0471pt>
 File: GOCPI-appendix.pdf Graphic file (type pdf)
-<use GOCPI-appendix.pdf, page 13>
-Package pdftex.def Info: GOCPI-appendix.pdf , page13 used on input line 424.
+<use GOCPI-appendix.pdf, page 14>
+Package pdftex.def Info: GOCPI-appendix.pdf , page14 used on input line 423.
 (pdftex.def)             Requested size: 597.53416pt x 845.08372pt.
 File: GOCPI-appendix.pdf Graphic file (type pdf)
-<use GOCPI-appendix.pdf, page 13>
-Package pdftex.def Info: GOCPI-appendix.pdf , page13 used on input line 424.
+<use GOCPI-appendix.pdf, page 14>
+Package pdftex.def Info: GOCPI-appendix.pdf , page14 used on input line 423.
 (pdftex.def)             Requested size: 597.53416pt x 845.08372pt.
 File: GOCPI-appendix.pdf Graphic file (type pdf)
-<use GOCPI-appendix.pdf, page 13>
-Package pdftex.def Info: GOCPI-appendix.pdf , page13 used on input line 424.
+<use GOCPI-appendix.pdf, page 14>
+Package pdftex.def Info: GOCPI-appendix.pdf , page14 used on input line 423.
 (pdftex.def)             Requested size: 597.53416pt x 845.08372pt.
  [25 <./GOCPI-appendix.pdf>]
-<GOCPI-appendix.pdf, id=427, page=14, 597.50829pt x 845.0471pt>
+<GOCPI-appendix.pdf, id=423, page=15, 597.50829pt x 845.0471pt>
 File: GOCPI-appendix.pdf Graphic file (type pdf)
-<use GOCPI-appendix.pdf, page 14>
-Package pdftex.def Info: GOCPI-appendix.pdf , page14 used on input line 424.
+<use GOCPI-appendix.pdf, page 15>
+Package pdftex.def Info: GOCPI-appendix.pdf , page15 used on input line 423.
 (pdftex.def)             Requested size: 597.53416pt x 845.08372pt.
 File: GOCPI-appendix.pdf Graphic file (type pdf)
-<use GOCPI-appendix.pdf, page 14>
-Package pdftex.def Info: GOCPI-appendix.pdf , page14 used on input line 424.
+<use GOCPI-appendix.pdf, page 15>
+Package pdftex.def Info: GOCPI-appendix.pdf , page15 used on input line 423.
 (pdftex.def)             Requested size: 597.53416pt x 845.08372pt.
 File: GOCPI-appendix.pdf Graphic file (type pdf)
-<use GOCPI-appendix.pdf, page 14>
-Package pdftex.def Info: GOCPI-appendix.pdf , page14 used on input line 424.
+<use GOCPI-appendix.pdf, page 15>
+Package pdftex.def Info: GOCPI-appendix.pdf , page15 used on input line 423.
 (pdftex.def)             Requested size: 597.53416pt x 845.08372pt.
  [26 <./GOCPI-appendix.pdf>]
-<GOCPI-appendix.pdf, id=432, page=15, 597.50829pt x 845.0471pt>
+<GOCPI-appendix.pdf, id=428, page=16, 597.50829pt x 845.0471pt>
 File: GOCPI-appendix.pdf Graphic file (type pdf)
-<use GOCPI-appendix.pdf, page 15>
-Package pdftex.def Info: GOCPI-appendix.pdf , page15 used on input line 424.
+<use GOCPI-appendix.pdf, page 16>
+Package pdftex.def Info: GOCPI-appendix.pdf , page16 used on input line 423.
 (pdftex.def)             Requested size: 597.53416pt x 845.08372pt.
 File: GOCPI-appendix.pdf Graphic file (type pdf)
-<use GOCPI-appendix.pdf, page 15>
-Package pdftex.def Info: GOCPI-appendix.pdf , page15 used on input line 424.
+<use GOCPI-appendix.pdf, page 16>
+Package pdftex.def Info: GOCPI-appendix.pdf , page16 used on input line 423.
 (pdftex.def)             Requested size: 597.53416pt x 845.08372pt.
 File: GOCPI-appendix.pdf Graphic file (type pdf)
-<use GOCPI-appendix.pdf, page 15>
-Package pdftex.def Info: GOCPI-appendix.pdf , page15 used on input line 424.
+<use GOCPI-appendix.pdf, page 16>
+Package pdftex.def Info: GOCPI-appendix.pdf , page16 used on input line 423.
 (pdftex.def)             Requested size: 597.53416pt x 845.08372pt.
  [27 <./GOCPI-appendix.pdf>]
-<GOCPI-appendix.pdf, id=437, page=16, 597.50829pt x 845.0471pt>
+<GOCPI-appendix.pdf, id=438, page=17, 597.50829pt x 845.0471pt>
 File: GOCPI-appendix.pdf Graphic file (type pdf)
-<use GOCPI-appendix.pdf, page 16>
-Package pdftex.def Info: GOCPI-appendix.pdf , page16 used on input line 424.
+<use GOCPI-appendix.pdf, page 17>
+Package pdftex.def Info: GOCPI-appendix.pdf , page17 used on input line 423.
 (pdftex.def)             Requested size: 597.53416pt x 845.08372pt.
 File: GOCPI-appendix.pdf Graphic file (type pdf)
-<use GOCPI-appendix.pdf, page 16>
-Package pdftex.def Info: GOCPI-appendix.pdf , page16 used on input line 424.
+<use GOCPI-appendix.pdf, page 17>
+Package pdftex.def Info: GOCPI-appendix.pdf , page17 used on input line 423.
 (pdftex.def)             Requested size: 597.53416pt x 845.08372pt.
 File: GOCPI-appendix.pdf Graphic file (type pdf)
-<use GOCPI-appendix.pdf, page 16>
-Package pdftex.def Info: GOCPI-appendix.pdf , page16 used on input line 424.
+<use GOCPI-appendix.pdf, page 17>
+Package pdftex.def Info: GOCPI-appendix.pdf , page17 used on input line 423.
 (pdftex.def)             Requested size: 597.53416pt x 845.08372pt.
  [28 <./GOCPI-appendix.pdf>]
-<GOCPI-appendix.pdf, id=447, page=17, 597.50829pt x 845.0471pt>
+<GOCPI-appendix.pdf, id=443, page=18, 597.50829pt x 845.0471pt>
 File: GOCPI-appendix.pdf Graphic file (type pdf)
-<use GOCPI-appendix.pdf, page 17>
-Package pdftex.def Info: GOCPI-appendix.pdf , page17 used on input line 424.
+<use GOCPI-appendix.pdf, page 18>
+Package pdftex.def Info: GOCPI-appendix.pdf , page18 used on input line 423.
 (pdftex.def)             Requested size: 597.53416pt x 845.08372pt.
 File: GOCPI-appendix.pdf Graphic file (type pdf)
-<use GOCPI-appendix.pdf, page 17>
-Package pdftex.def Info: GOCPI-appendix.pdf , page17 used on input line 424.
+<use GOCPI-appendix.pdf, page 18>
+Package pdftex.def Info: GOCPI-appendix.pdf , page18 used on input line 423.
 (pdftex.def)             Requested size: 597.53416pt x 845.08372pt.
 File: GOCPI-appendix.pdf Graphic file (type pdf)
-<use GOCPI-appendix.pdf, page 17>
-Package pdftex.def Info: GOCPI-appendix.pdf , page17 used on input line 424.
+<use GOCPI-appendix.pdf, page 18>
+Package pdftex.def Info: GOCPI-appendix.pdf , page18 used on input line 423.
 (pdftex.def)             Requested size: 597.53416pt x 845.08372pt.
  [29 <./GOCPI-appendix.pdf>]
-<GOCPI-appendix.pdf, id=452, page=18, 597.50829pt x 845.0471pt>
-File: GOCPI-appendix.pdf Graphic file (type pdf)
-<use GOCPI-appendix.pdf, page 18>
-Package pdftex.def Info: GOCPI-appendix.pdf , page18 used on input line 424.
-(pdftex.def)             Requested size: 597.53416pt x 845.08372pt.
-File: GOCPI-appendix.pdf Graphic file (type pdf)
-<use GOCPI-appendix.pdf, page 18>
-Package pdftex.def Info: GOCPI-appendix.pdf , page18 used on input line 424.
-(pdftex.def)             Requested size: 597.53416pt x 845.08372pt.
-File: GOCPI-appendix.pdf Graphic file (type pdf)
-<use GOCPI-appendix.pdf, page 18>
-Package pdftex.def Info: GOCPI-appendix.pdf , page18 used on input line 424.
-(pdftex.def)             Requested size: 597.53416pt x 845.08372pt.
- [30 <./GOCPI-appendix.pdf>]
-<GOCPI-appendix.pdf, id=459, page=19, 597.50829pt x 845.0471pt>
+<GOCPI-appendix.pdf, id=448, page=19, 597.50829pt x 845.0471pt>
 File: GOCPI-appendix.pdf Graphic file (type pdf)
 <use GOCPI-appendix.pdf, page 19>
-Package pdftex.def Info: GOCPI-appendix.pdf , page19 used on input line 424.
+Package pdftex.def Info: GOCPI-appendix.pdf , page19 used on input line 423.
 (pdftex.def)             Requested size: 597.53416pt x 845.08372pt.
 File: GOCPI-appendix.pdf Graphic file (type pdf)
 <use GOCPI-appendix.pdf, page 19>
-Package pdftex.def Info: GOCPI-appendix.pdf , page19 used on input line 424.
+Package pdftex.def Info: GOCPI-appendix.pdf , page19 used on input line 423.
 (pdftex.def)             Requested size: 597.53416pt x 845.08372pt.
 File: GOCPI-appendix.pdf Graphic file (type pdf)
 <use GOCPI-appendix.pdf, page 19>
-Package pdftex.def Info: GOCPI-appendix.pdf , page19 used on input line 424.
+Package pdftex.def Info: GOCPI-appendix.pdf , page19 used on input line 423.
 (pdftex.def)             Requested size: 597.53416pt x 845.08372pt.
- [31 <./GOCPI-appendix.pdf>] (/usr/local/texlive/2019/texmf-dist/tex/latex/listings/lstlang1.sty
+ [30 <./GOCPI-appendix.pdf>] (/usr/local/texlive/2019/texmf-dist/tex/latex/listings/lstlang1.sty
 File: lstlang1.sty 2019/02/27 1.8b listings language file
 ) (/Users/connor/Google Drive/Documents/University/Courses/2020/ENGSCI 700A&B/GOCPI/src/GOCPI_NZ_Example.gyp
 Overfull \hbox (58.43079pt too wide) in paragraph at lines 4--5
@@ -1737,7 +1737,7 @@ Overfull \hbox (58.43079pt too wide) in paragraph at lines 29--31
 [][][][] 
  []
 
-[32]
+[31]
 Overfull \hbox (58.43079pt too wide) in paragraph at lines 43--44
 [][][][] 
  []
@@ -1757,7 +1757,7 @@ Overfull \hbox (58.43079pt too wide) in paragraph at lines 84--86
 [][][][] 
  []
 
-[33]
+[32]
 Overfull \hbox (58.43079pt too wide) in paragraph at lines 101--102
 [][][][] 
  []
@@ -1767,7 +1767,7 @@ Overfull \hbox (58.43079pt too wide) in paragraph at lines 103--104
 [][][][] 
  []
 
-[34]
+[33]
 Overfull \hbox (58.43079pt too wide) in paragraph at lines 145--146
 [][][][] 
  []
@@ -1787,31 +1787,31 @@ Overfull \hbox (58.43079pt too wide) in paragraph at lines 176--177
 [][][][] 
  []
 
-[35]
+[34]
 LaTeX Font Info:    Try loading font information for TS1+cmtt on input line 236.
  (/usr/local/texlive/2019/texmf-dist/tex/latex/base/ts1cmtt.fd
 File: ts1cmtt.fd 2014/09/29 v2.5h Standard LaTeX font definitions
-) [36] [37]
+) [35] [36]
 Overfull \hbox (58.43079pt too wide) in paragraph at lines 346--347
 [][][][] 
  []
 
-[38]
+[37]
 Overfull \hbox (58.43079pt too wide) in paragraph at lines 348--349
 [][][][] 
  []
 
-[39] [40] [41] [42] [43] [44] [45] [46]) (/Users/connor/Google Drive/Documents/University/Courses/2020/ENGSCI 700A&B/GOCPI/src/GOCPI/GOCPI/Navigation.py [47]) (/Users/connor/Google Drive/Documents/University/Courses/2020/ENGSCI 700A&B/GOCPI/src/GOCPI/GOCPI/Energysystems.py [48] [49] [50] [51] [52] [53] [54] [55] [56] [57] [58] [59] [60] [61] [62] [63] [64] [65] [66] [67] [68] [69] [70] [71] [72] [73] [74] [75] [76] [77] [78] [79] [80] [81] [82] [83] [84] [85] [86] [87] [88]) [89] (/Users/connor/Google Drive/Documents/University/Courses/2020/ENGSCI 700A&B/GOCPI/src/GOCPI/GOCPI/CreateCases.py [90] [91] [92] [93] [94] [95] [96] [97] [98] [99] [100] [101] [102] [103] [104]) (/Users/connor/Google Drive/Documents/University/Courses/2020/ENGSCI 700A&B/GOCPI/src/GOCPI/GOCPI/Forecasting.py [105] [106] [107]) (/Users/connor/Google Drive/Documents/University/Courses/2020/ENGSCI 700A&B/GOCPI/src/GOCPI/GOCPI/Optimisation.py [108] [109] [110] [111] [112]) [113] (/Users/connor/Google Drive/Documents/University/Courses/2020/ENGSCI 700A&B/GOCPI/src/GOCPI_Data_Cases.gyp [114] [115]) (/Users/connor/Google Drive/Documents/University/Courses/2020/ENGSCI 700A&B/GOCPI/src/GOCPI_EB.gyp [116] [117] [118] [119] [120] [121] [122]) (/Users/connor/Google Drive/Documents/University/Courses/2020/ENGSCI 700A&B/GOCPI/src/GOCPI_Geographies.gyp [123] [124]) (/Users/connor/Google Drive/Documents/University/Courses/2020/ENGSCI 700A&B/GOCPI/src/GOCPI_Inputs.gyp [125] [126]) (/Users/connor/Google Drive/Documents/University/Courses/2020/ENGSCI 700A&B/GOCPI/src/GOCPI_Model_Import.gyp
+[38] [39] [40] [41] [42] [43] [44] [45]) (/Users/connor/Google Drive/Documents/University/Courses/2020/ENGSCI 700A&B/GOCPI/src/GOCPI/GOCPI/Navigation.py [46]) (/Users/connor/Google Drive/Documents/University/Courses/2020/ENGSCI 700A&B/GOCPI/src/GOCPI/GOCPI/Energysystems.py [47] [48] [49] [50] [51] [52] [53] [54] [55] [56] [57] [58] [59] [60] [61] [62] [63] [64] [65] [66] [67] [68] [69] [70] [71] [72] [73] [74] [75] [76] [77] [78] [79] [80] [81] [82] [83] [84] [85] [86] [87]) [88] (/Users/connor/Google Drive/Documents/University/Courses/2020/ENGSCI 700A&B/GOCPI/src/GOCPI/GOCPI/CreateCases.py [89] [90] [91] [92] [93] [94] [95] [96] [97] [98] [99] [100] [101] [102] [103]) (/Users/connor/Google Drive/Documents/University/Courses/2020/ENGSCI 700A&B/GOCPI/src/GOCPI/GOCPI/Forecasting.py [104] [105] [106]) (/Users/connor/Google Drive/Documents/University/Courses/2020/ENGSCI 700A&B/GOCPI/src/GOCPI/GOCPI/Optimisation.py [107] [108] [109] [110] [111]) [112] (/Users/connor/Google Drive/Documents/University/Courses/2020/ENGSCI 700A&B/GOCPI/src/GOCPI_Data_Cases.gyp [113] [114]) (/Users/connor/Google Drive/Documents/University/Courses/2020/ENGSCI 700A&B/GOCPI/src/GOCPI_EB.gyp [115] [116] [117] [118] [119] [120] [121]) (/Users/connor/Google Drive/Documents/University/Courses/2020/ENGSCI 700A&B/GOCPI/src/GOCPI_Geographies.gyp [122] [123]) (/Users/connor/Google Drive/Documents/University/Courses/2020/ENGSCI 700A&B/GOCPI/src/GOCPI_Inputs.gyp [124] [125]) (/Users/connor/Google Drive/Documents/University/Courses/2020/ENGSCI 700A&B/GOCPI/src/GOCPI_Model_Import.gyp
 Overfull \hbox (71.03076pt too wide) in paragraph at lines 3--4
 [][][][] 
  []
 
-[127]
+[126]
 Overfull \hbox (71.03076pt too wide) in paragraph at lines 5--7
 [][][][] 
  []
 
-[128]) (/Users/connor/Google Drive/Documents/University/Courses/2020/ENGSCI 700A&B/GOCPI/src/GOCPI_Optimisation.gyp
+[127]) (/Users/connor/Google Drive/Documents/University/Courses/2020/ENGSCI 700A&B/GOCPI/src/GOCPI_Optimisation.gyp
 Overfull \hbox (58.43079pt too wide) in paragraph at lines 1--2
 [][][][] 
  []
@@ -1831,7 +1831,7 @@ Overfull \hbox (58.43079pt too wide) in paragraph at lines 26--27
 [][][][] 
  []
 
-[129] [130] [131] [132] [133] [134]) [135] (/Users/connor/Google Drive/Documents/University/Courses/2020/ENGSCI 700A&B/GOCPI/data/Inputs/GOCPI OseMOSYS/GOCPI_OseMOSYS_Model.txt [136] [137] [138] [139] [140]
+[128] [129] [130] [131] [132] [133]) [134] (/Users/connor/Google Drive/Documents/University/Courses/2020/ENGSCI 700A&B/GOCPI/data/Inputs/GOCPI OseMOSYS/GOCPI_OseMOSYS_Model.txt [135] [136] [137] [138] [139]
 Overfull \hbox (115.13068pt too wide) in paragraph at lines 167--168
 [][] 
  []
@@ -1851,7 +1851,7 @@ Overfull \hbox (71.03076pt too wide) in paragraph at lines 170--171
 [][] 
  []
 
-[141]
+[140]
 Overfull \hbox (64.73077pt too wide) in paragraph at lines 171--172
 [][] 
  []
@@ -1871,35 +1871,31 @@ Overfull \hbox (108.83069pt too wide) in paragraph at lines 174--175
 [][] 
  []
 
-[142] [143] [144]) (/Users/connor/Google Drive/Documents/University/Courses/2020/ENGSCI 700A&B/GOCPI/data/Inputs/GOCPI OseMOSYS/GOCPI_OseMOSYS_Data.txt [145] [146] [147] [148] [149] [150] [151] [152] [153] [154] [155] [156] [157] [158] [159] [160] [161] [162] [163] [164] [165] [166] [167] [168] [169] [170] [171] [172] [173] [174] [175] [176] [177] [178] [179] [180] [181] [182] [183] [184] [185] [186] [187] [188] [189] [190] [191] [192] [193] [194] [195] [196] [197] [198] [199] [200] [201] [202] [203] [204] [205] [206] [207] [208] [209] [210] [211] [212] [213] [214] [215] [216] [217] [218] [219] [220] [221] [222] [223] [224] [225] [226] [227] [228] [229] [230] [231] [232] [233] [234] [235] [236] [237] [238] [239] [240] [241] [242] [243] [244] [245] [246] [247] [248] [249] [250] [251] [252] [253] [254] [255] [256] [257] [258] [259] [260] [261] [262] [263] [264] [265] [266] [267] [268] [269] [270] [271] [272] [273] [274] [275] [276] [277] [278] [279] [280] [281] [282] [283] [284] [285] [286] [287] [288] [289] [290] [291] [292] [293] [294] [295] [296] [297] [298] [299] [300] [301] [302] [303] [304] [305] [306] [307] [308] [309] [310] [311] [312] [313] [314] [315] [316] [317] [318] [319] [320] [321] [322] [323] [324] [325] [326] [327] [328] [329] [330] [331] [332] [333] [334] [335] [336] [337] [338] [339] [340] [341] [342] [343] [344] [345] [346] [347] [348] [349] [350] [351] [352]) [353]
-
-LaTeX Warning: Empty bibliography on input line 489.
-
-[354]
-Package atveryend Info: Empty hook `BeforeClearDocument' on input line 490.
-Package atveryend Info: Empty hook `AfterLastShipout' on input line 490.
+[141] [142] [143]) (/Users/connor/Google Drive/Documents/University/Courses/2020/ENGSCI 700A&B/GOCPI/data/Inputs/GOCPI OseMOSYS/GOCPI_OseMOSYS_Data.txt [144] [145] [146] [147] [148] [149] [150] [151] [152] [153] [154] [155] [156] [157] [158] [159] [160] [161] [162] [163] [164] [165] [166] [167] [168] [169] [170] [171] [172] [173] [174] [175] [176] [177] [178] [179] [180] [181] [182] [183] [184] [185] [186] [187] [188] [189] [190] [191] [192] [193] [194] [195] [196] [197] [198] [199] [200] [201] [202] [203] [204] [205] [206] [207] [208] [209] [210] [211] [212] [213] [214] [215] [216] [217] [218] [219] [220] [221] [222] [223] [224] [225] [226] [227] [228] [229] [230] [231] [232] [233] [234] [235] [236] [237] [238] [239] [240] [241] [242] [243] [244] [245] [246] [247] [248] [249] [250] [251] [252] [253] [254] [255] [256] [257] [258] [259] [260] [261] [262] [263] [264] [265] [266] [267] [268] [269] [270] [271] [272] [273] [274] [275] [276] [277] [278] [279] [280] [281] [282] [283] [284] [285] [286] [287] [288] [289] [290] [291] [292] [293] [294] [295] [296] [297] [298] [299] [300] [301] [302] [303] [304] [305] [306] [307] [308] [309] [310] [311] [312] [313] [314] [315] [316] [317] [318] [319] [320] [321] [322] [323] [324] [325] [326] [327] [328] [329] [330] [331] [332] [333] [334] [335] [336] [337] [338] [339] [340] [341] [342] [343] [344] [345] [346] [347] [348] [349] [350] [351]) [352]
+Package atveryend Info: Empty hook `BeforeClearDocument' on input line 485.
+Package atveryend Info: Empty hook `AfterLastShipout' on input line 485.
  (./ENGSCI 700AB Research Compendium.aux)
-Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 490.
-Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 490.
+Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 485.
+Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 485.
 Package rerunfilecheck Info: File `"ENGSCI 700AB Research Compendium".out' has not changed.
-(rerunfilecheck)             Checksum: B94197B65C6B3A6A53B6FBA65ED54883;1874.
+(rerunfilecheck)             Checksum: C2EA8519B8A19A49E181ADB43FCDEDC2;1826.
 Package logreq Info: Writing requests to '"ENGSCI 700AB Research Compendium".run.xml'.
 \openout1 = `"ENGSCI 700AB Research Compendium.run.xml"'.
 
  ) 
 Here is how much of TeX's memory you used:
- 53948 strings out of 492616
- 1006590 string characters out of 6129481
+ 53944 strings out of 492616
+ 1006554 string characters out of 6129481
  1591825 words of memory out of 5000000
- 44411 multiletter control sequences out of 15000+600000
+ 44410 multiletter control sequences out of 15000+600000
  542571 words of font info for 62 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
  55i,18n,63p,930b,2476s stack positions out of 5000i,500n,10000p,200000b,80000s
 {/usr/local/texlive/2019/texmf-dist/fonts/enc/dvips/cm-super/cm-super-ts1.enc}</usr/local/texlive/2019/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx12.pfb></usr/local/texlive/2019/texmf-dist/fonts/type1/public/amsfonts/cm/cmcsc10.pfb></usr/local/texlive/2019/texmf-dist/fonts/type1/public/amsfonts/cm/cmr12.pfb></usr/local/texlive/2019/texmf-dist/fonts/type1/public/amsfonts/cm/cmr6.pfb></usr/local/texlive/2019/texmf-dist/fonts/type1/public/amsfonts/cm/cmti12.pfb></usr/local/texlive/2019/texmf-dist/fonts/type1/public/amsfonts/cm/cmtt10.pfb></usr/local/texlive/2019/texmf-dist/fonts/type1/public/cm-super/sfbx1200.pfb></usr/local/texlive/2019/texmf-dist/fonts/type1/public/cm-super/sfbx1440.pfb></usr/local/texlive/2019/texmf-dist/fonts/type1/public/cm-super/sfbx1728.pfb></usr/local/texlive/2019/texmf-dist/fonts/type1/public/cm-super/sfbx2488.pfb></usr/local/texlive/2019/texmf-dist/fonts/type1/public/cm-super/sfcc1728.pfb></usr/local/texlive/2019/texmf-dist/fonts/type1/public/cm-super/sfit1200.pfb></usr/local/texlive/2019/texmf-dist/fonts/type1/public/cm-super/sfrm1000.pfb></usr/local/texlive/2019/texmf-dist/fonts/type1/public/cm-super/sfrm1200.pfb></usr/local/texlive/2019/texmf-dist/fonts/type1/public/cm-super/sfrm1440.pfb></usr/local/texlive/2019/texmf-dist/fonts/type1/public/cm-super/sfss1728.pfb></usr/local/texlive/2019/texmf-dist/fonts/type1/public/cm-super/sfti1200.pfb></usr/local/texlive/2019/texmf-dist/fonts/type1/public/cm-super/sfti1440.pfb></usr/local/texlive/2019/texmf-dist/fonts/type1/public/cm-super/sftt1000.pfb></usr/local/texlive/2019/texmf-dist/fonts/type1/public/cm-super/sftt1200.pfb>
-Output written on "ENGSCI 700AB Research Compendium.pdf" (355 pages, 10546034 bytes).
+Output written on "ENGSCI 700AB Research Compendium.pdf" (353 pages, 10544994 bytes).
 PDF statistics:
- 17068 PDF objects out of 18468 (max. 8388607)
- 16493 compressed objects within 165 object streams
- 12898 named destinations out of 15390 (max. 500000)
- 388 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 17054 PDF objects out of 18468 (max. 8388607)
+ 16481 compressed objects within 165 object streams
+ 12895 named destinations out of 15390 (max. 500000)
+ 380 words of extra memory for PDF output out of 10000 (max. 10000000)
 
