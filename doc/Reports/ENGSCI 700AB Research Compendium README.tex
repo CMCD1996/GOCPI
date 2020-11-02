@@ -141,7 +141,6 @@ The zip file submitted includes the most relevant files for the project.
 All project files are accessible on \href{https://github.com/CMCD1996/GOCPI}{GitHub}.
 \subsection{Data}
 This sub directory includes the data required for the project.
-Disclaimer: Some files were too large to include 
 \begin{itemize}
     \item \textbf{IEAWorldEnergyBalances2017A-K.csv}: IEA energy balances for countries A-K. The file is too large data Energy Balances.
     \item \textbf{IEAWorldEnergyBalances2017L-Z.csv}: IEA energy balances for countries L-Z.
@@ -155,6 +154,7 @@ This sub directory includes the Project Report and GOCPI Package Documentation g
     \item \textbf{ENGSCI 700AB Project Report.pdf}: Report containing Literature Review, Project Scope, Methodology, Implementation, Results, Summary and Conclusion.
     \item \textbf{ENGSCI 700AB Research Compendium.pdf}: Portable Document File (PDF) of most relevant project information.
     \item \textbf{GOCPI Documentation.pdf}: Documentation generated using docstrings and sphinx to describe the GOCPI package.
+    \item \textbf{ENGSCI 700AB Project Logbook.pdf}: Logbook to track project progression.
 \end{itemize}
 \subsection{Source Code}
 This sub directory contains all the source code related to the GOCPI project.
@@ -167,6 +167,8 @@ This sub directory contains all the source code related to the GOCPI project.
 	\item \textbf{Optimisation.py}: Module to solve energy systems either locally or remotely using IBM Technologies.
 \end{itemize}
 \subsubsection{OseMOSYS Model}
+Disclaimer: The LP file used formulated using the model and data file is too large and impractical to include.
+It is formulated using the GNU Linear programming Kit.
 \begin{itemize}
 	\item \textbf{GOCPI\_OseMOSYS\_Data.txt}: The data file created from the processing script.
 	\item \textbf{GOCPI\_OseMOSYS\_Model.txt}: The model file created from the GOCPI\_OseMOSYS\_Structure.xlsx script.
@@ -183,6 +185,4 @@ These scripts helped design and build the GOCPI package and
 	\item \textbf{GOCPI\_Optimisation.gyp}: Script to help solve energy systems using IBM Technologies.
 	\item \textbf{GOCPI\_NZ\_Example.gyp}: Script to build NZ and AUS energy systems with a bi-lateral trade relationship.
 \end{itemize}
-\subsection{Additionally files}
-Some files are too large to include in the zip file.
 \end{document}

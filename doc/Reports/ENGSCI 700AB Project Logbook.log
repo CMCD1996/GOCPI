@@ -1,10 +1,10 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.20 (TeX Live 2019) (preloaded format=pdflatex 2020.3.23)  3 NOV 2020 12:49
+This is pdfTeX, Version 3.14159265-2.6-1.40.20 (TeX Live 2019) (preloaded format=pdflatex 2020.3.23)  3 NOV 2020 12:25
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
  %&-line parsing enabled.
-**"/Users/connor/Google Drive/Documents/University/Courses/2020/ENGSCI 700A&B/GOCPI/doc/Reports/ENGSCI 700AB Research Compendium README"
-(/Users/connor/Google Drive/Documents/University/Courses/2020/ENGSCI 700A&B/GOCPI/doc/Reports/ENGSCI 700AB Research Compendium README.tex
+**"/Users/connor/Google Drive/Documents/University/Courses/2020/ENGSCI 700A&B/GOCPI/doc/Reports/ENGSCI 700AB Project Logbook"
+(/Users/connor/Google Drive/Documents/University/Courses/2020/ENGSCI 700A&B/GOCPI/doc/Reports/ENGSCI 700AB Project Logbook.tex
 LaTeX2e <2018-12-01>
 (/usr/local/texlive/2019/texmf-dist/tex/latex/base/article.cls
 Document Class: article 2018/09/03 v1.4i Standard LaTeX document class
@@ -1257,8 +1257,8 @@ File: english.lbx 2018/11/02 v3.12 biblatex localization (PK/MW)
 )
 \@quotelevel=\count470
 \@quotereset=\count471
- (./ENGSCI 700AB Research Compendium README.aux)
-\openout1 = `"ENGSCI 700AB Research Compendium README.aux"'.
+ (./ENGSCI 700AB Project Logbook.aux)
+\openout1 = `"ENGSCI 700AB Project Logbook.aux"'.
 
 LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 90.
 LaTeX Font Info:    ... okay on input line 90.
@@ -1362,11 +1362,11 @@ Package caption Info: End \AtBeginDocument code.
 Package biblatex Info: Input encoding 'utf8' detected.
 Package biblatex Info: Automatic encoding selection.
 (biblatex)             Assuming data encoding 'utf8'.
-\openout4 = `"ENGSCI 700AB Research Compendium README.bcf"'.
+\openout4 = `"ENGSCI 700AB Project Logbook.bcf"'.
 
 Package biblatex Info: Trying to load bibliographic data...
-Package biblatex Info: ... file '"ENGSCI 700AB Research Compendium README".bbl' found.
- (./ENGSCI 700AB Research Compendium README.bbl)
+Package biblatex Info: ... file '"ENGSCI 700AB Project Logbook".bbl' found.
+ (./ENGSCI 700AB Project Logbook.bbl)
 Package biblatex Info: Reference section=0 on input line 90.
 Package biblatex Info: Reference segment=0 on input line 90.
 Package hyperref Info: Link coloring OFF on input line 90.
@@ -1380,9 +1380,9 @@ Package: gettitlestring 2016/05/16 v1.5 Cleanup title references (HO)
 LaTeX Info: Redefining \ref on input line 90.
 LaTeX Info: Redefining \pageref on input line 90.
 LaTeX Info: Redefining \nameref on input line 90.
- (./ENGSCI 700AB Research Compendium README.out) (./ENGSCI 700AB Research Compendium README.out)
+ (./ENGSCI 700AB Project Logbook.out) (./ENGSCI 700AB Project Logbook.out)
 \@outlinefile=\write5
-\openout5 = `"ENGSCI 700AB Research Compendium README.out"'.
+\openout5 = `"ENGSCI 700AB Project Logbook.out"'.
 
 LaTeX Font Info:    Try loading font information for U+msa on input line 90.
  (/usr/local/texlive/2019/texmf-dist/tex/latex/amsfonts/umsa.fd
@@ -1393,53 +1393,35 @@ LaTeX Font Info:    Try loading font information for U+msb on input line 90.
 File: umsb.fd 2013/01/14 v3.01 AMS symbols B
 ) [1
 
-{/usr/local/texlive/2019/texmf-var/fonts/map/pdftex/updmap/pdftex.map}] (./ENGSCI 700AB Research Compendium README.toc)
-\tf@toc=\write6
-\openout6 = `"ENGSCI 700AB Research Compendium README.toc"'.
-
- (./ENGSCI 700AB Research Compendium README.lof)
-\tf@lof=\write7
-\openout7 = `"ENGSCI 700AB Research Compendium README.lof"'.
-
-pdfTeX warning (ext4): destination with the same identifier (name{page.1}) has been already used, duplicate ignored
+{/usr/local/texlive/2019/texmf-var/fonts/map/pdftex/updmap/pdftex.map}]pdfTeX warning (ext4): destination with the same identifier (name{page.1}) has been already used, duplicate ignored
 <to be read again> 
                    \relax 
-l.138 \newpage
-               [1] [2]
-Overfull \hbox (106.63559pt too wide) in paragraph at lines 174--175
-[]\OT1/cmr/bx/n/12 GOCPI[]OseMOSYS[]Model.txt\OT1/cmr/m/n/12 : The model file cre-ated from the GOCPI[]OseMOSYS[]Structure.xlsx
- []
-
-
-Overfull \hbox (11.99513pt too wide) in paragraph at lines 183--184
-[]\OT1/cmr/bx/n/12 GOCPI[]Inputs.gyp\OT1/cmr/m/n/12 : Script to help cre-ate a stan-dard-ised TIMES mod-elling method. 
- []
-
-[3]
-Package atveryend Info: Empty hook `BeforeClearDocument' on input line 188.
-Package atveryend Info: Empty hook `AfterLastShipout' on input line 188.
- (./ENGSCI 700AB Research Compendium README.aux)
-Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 188.
-Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 188.
-Package rerunfilecheck Info: File `"ENGSCI 700AB Research Compendium README".out' has not changed.
-(rerunfilecheck)             Checksum: C4B67C2D27B348291D06465CC2A74DAF;456.
-Package logreq Info: Writing requests to '"ENGSCI 700AB Research Compendium README".run.xml'.
-\openout1 = `"ENGSCI 700AB Research Compendium README.run.xml"'.
+l.164 	\item S
+              et up Virtual Machine [1] [2] [3] [4] [5] [6]
+Package atveryend Info: Empty hook `BeforeClearDocument' on input line 342.
+Package atveryend Info: Empty hook `AfterLastShipout' on input line 342.
+ (./ENGSCI 700AB Project Logbook.aux)
+Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 342.
+Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 342.
+Package rerunfilecheck Info: File `"ENGSCI 700AB Project Logbook".out' has not changed.
+(rerunfilecheck)             Checksum: C460A4CCC770E06A95C55240DC2835F3;51.
+Package logreq Info: Writing requests to '"ENGSCI 700AB Project Logbook".run.xml'.
+\openout1 = `"ENGSCI 700AB Project Logbook.run.xml"'.
 
  ) 
 Here is how much of TeX's memory you used:
- 39487 strings out of 492616
- 760179 string characters out of 6129481
- 1144490 words of memory out of 5000000
- 42898 multiletter control sequences out of 15000+600000
- 542106 words of font info for 60 fonts, out of 8000000 for 9000
+ 39512 strings out of 492616
+ 759988 string characters out of 6129481
+ 1145446 words of memory out of 5000000
+ 42888 multiletter control sequences out of 15000+600000
+ 541799 words of font info for 59 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 55i,11n,63p,937b,809s stack positions out of 5000i,500n,10000p,200000b,80000s
+ 55i,11n,63p,926b,825s stack positions out of 5000i,500n,10000p,200000b,80000s
 {/usr/local/texlive/2019/texmf-dist/fonts/enc/dvips/cm-super/cm-super-ts1.enc}</usr/local/texlive/2019/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx12.pfb></usr/local/texlive/2019/texmf-dist/fonts/type1/public/amsfonts/cm/cmcsc10.pfb></usr/local/texlive/2019/texmf-dist/fonts/type1/public/amsfonts/cm/cmr12.pfb></usr/local/texlive/2019/texmf-dist/fonts/type1/public/amsfonts/cm/cmti12.pfb></usr/local/texlive/2019/texmf-dist/fonts/type1/public/cm-super/sfrm1200.pfb>
-Output written on "ENGSCI 700AB Research Compendium README.pdf" (4 pages, 67925 bytes).
+Output written on "ENGSCI 700AB Project Logbook.pdf" (7 pages, 73409 bytes).
 PDF statistics:
- 91 PDF objects out of 1000 (max. 8388607)
- 79 compressed objects within 1 object stream
- 14 named destinations out of 1000 (max. 500000)
- 69 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 127 PDF objects out of 1000 (max. 8388607)
+ 111 compressed objects within 2 object streams
+ 55 named destinations out of 1000 (max. 500000)
+ 21 words of extra memory for PDF output out of 10000 (max. 10000000)
 

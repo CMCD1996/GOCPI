@@ -107,7 +107,7 @@
 	
 	\HRule\\[0.5cm]
 	
-	{\huge\bfseries Research Compendium}\\[0.4cm] % Title of your document
+	{\huge\bfseries Research Compendium README}\\[0.4cm] % Title of your document
 	
 	\HRule\\[0.5cm]
 	
@@ -132,354 +132,57 @@
 \end{titlepage}
 \section*{Declaration of Contribution}
 I proposed this project. I am the sole contributor.
+
 \tableofcontents
 \listoffigures
 \newpage
-\section{GitHub Repository}
-All files related to the project are stored within a GitHub Repository.
-This repository is accessible \href{https://github.com/CMCD1996/GOCPI}{here} and summarised as follows:
+\section{Research Compendium Submission}
+The zip file submitted includes the most relevant files for the project.
+All project files are accessible on \href{https://github.com/CMCD1996/GOCPI}{GitHub}.
 \subsection{Data}
+This sub directory includes the data required for the project.
 \begin{itemize}
-	\item Energy Balances from the International Energy Agency (IEA) csv files to create energy balances for user defined energy systems. Source: International Energy Agency
-	\item Australian and New Zealand Energy Statistics to build a New Zealand and Australian reference energy systems. Source: MBIE and The Australian Government.
-	\item Sets of geographies for partitioning and creating regions to model user defined energy systems.
-	\item Images for website design.
-	\item Input data sources for TIMES and OseMOSYS modelling and developing user defined energy systems.
-	\item GNU Mathprog, GAMS and Pyomo versions of OseMOSYS folked from the \href{https://github.com/OSeMOSYS/OSeMOSYS}{OseMOSYS GitHub Repository}.
-	\item The TIMES model and twelve demo versions of varying complexity.
+    \item \textbf{IEAWorldEnergyBalances2017A-K.csv}: IEA energy balances for countries A-K. The file is too large data Energy Balances.
+    \item \textbf{IEAWorldEnergyBalances2017L-Z.csv}: IEA energy balances for countries L-Z.
+    \item \textbf{Geo\_EB.xlsx}: Energy balances (Reference energy system) for user defined region.
+    \item \textbf{NZ MBIE Energy Balances.xlsx}: Energy statistics to design NZ reference energy system.
+    \item \textbf{AUS GOV Energy Balances.xlsx}: Energy statistics to design AUS reference energy system.
 \end{itemize}
-\subsection{Documents}
+\subsection{Reports}
+This sub directory includes the Project Report and GOCPI Package Documentation generated using docstrings and sphinx.
 \begin{itemize}
-	\item Notes related to the project.
-	\item Presentations related to the project.
-	\item Research Compendium, Project Report and all images, figures and sources used in these documents.
-	\item Academic journals, articles and technical reports related to the literature review.
+    \item \textbf{ENGSCI 700AB Project Report.pdf}: Report containing Literature Review, Project Scope, Methodology, Implementation, Results, Summary and Conclusion.
+    \item \textbf{ENGSCI 700AB Research Compendium.pdf}: Portable Document File (PDF) of most relevant project information.
+    \item \textbf{GOCPI Documentation.pdf}: Documentation generated using docstrings and sphinx to describe the GOCPI package.
+    \item \textbf{ENGSCI 700AB Project Logbook.pdf}: Logbook to track project progression.
 \end{itemize}
-\subsection{Source Files}
+\subsection{Source Code}
+This sub directory contains all the source code related to the GOCPI project.
+\subsubsection{GOCPI Package}
 \begin{itemize}
-	\item GOCPI package for creating, formulating, forecasting and solving user-defined energy systems.
-	\item Processing and development scripts used to design the GOCPI package.
-	\item The prototype webpage adapted from a W3 school template.
-	\item Git, IBM, Microsoft Visual Studio Code configurations/formatting related files.
+	\item \textbf{CreateCases.py}: Module to create user-designed energy systems.
+	\item \textbf{Energysystems.py}: Module to create the model and data files needed for solving energy systems.
+	\item \textbf{Forecasting.py}: Module to forecast energy and finance-related data.
+	\item \textbf{Navigation.py}: Module to navigate directories.
+	\item \textbf{Optimisation.py}: Module to solve energy systems either locally or remotely using IBM Technologies.
 \end{itemize}
-\subsection{Additional}
+\subsubsection{OseMOSYS Model}
+Disclaimer: The LP file used formulated using the model and data file is too large and impractical to include.
+It is formulated using the GNU Linear programming Kit.
 \begin{itemize}
-	\item Build files for producing GOCPI documentation using sphinx.
+	\item \textbf{GOCPI\_OseMOSYS\_Data.txt}: The data file created from the processing script.
+	\item \textbf{GOCPI\_OseMOSYS\_Model.txt}: The model file created from the GOCPI\_OseMOSYS\_Structure.xlsx script.
+	\item \textbf{GOCPI\_OseMOSYS\_Structure.xlsx}: The spreadsheet storing the OseMOSYS Model.
 \end{itemize}
-\newpage
-\section{Website}
-\subsection{Jekyll, Markdown, Ruby, GitHub Pages}
-The website was improved using Jekyll, Ruby and Markdown technologies.
-The website includes links to documentation required to build systems and software required.
-The repository used to build the website is separate from the GOCPI repository.
-\textbf{You can access the website \href{https://connormcdowall.com/gocpi.html}{here}}
-\subsection{W3 Schools Adaptation}
-This iteration was adapted from an W3 schools template to create a prototype website for the project.
-This prototype describes key information related the project.
-\begin{figure}[H]
-    \centering
-	\includegraphics[width=0.7\textwidth]{W1.png}
-    \caption{GOCPI Website V1 Cover Page}
-    \label{fig:WV1CP}
-\end{figure}
-\begin{figure}[H]
-    \centering
-	\includegraphics[width=0.7\textwidth]{W2.png}
-    \caption{GOCPI Website V1 Project Information}
-    \label{fig:WV1PI}
-\end{figure}
-\begin{figure}[H]
-    \centering
-	\includegraphics[width=0.7\textwidth]{W3.png}
-    \caption{GOCPI Website V1 Project Access}
-    \label{fig:WV1PA}
-\end{figure}
-\begin{figure}[H]
-    \centering
-	\includegraphics[width=0.7\textwidth]{W4.png}
-    \caption{GOCPI Website V1 Project Contributors}
-    \label{fig:WV1PC}
-\end{figure}
-\begin{figure}[H]
-    \centering
-	\includegraphics[width=0.7\textwidth]{W5.png}
-    \caption{GOCPI Website V1 Project Documents}
-    \label{fig:WV1PD}
-\end{figure}
-\newpage
-
-\section{Project Log Book}
-Disclaimer: Contributions to the Project Log Book grew inconsistent toward the later stages of the project.
-\subsection*{January - February}
+\subsubsection{Processing Scripts}
+These scripts helped design and build the GOCPI package and 
 \begin{itemize}
-	\item Began scoping energy related project during experience in the Commercial team at ExxonMobil Australia
-	\item Emailed and Meet with Rosalind
-	\item Decided to look at Carbon Pricing Initiatives to inform reinvestment and carbon pricing initiatives
-	\item Rosalind tasked with with investigating GAMS
+	\item \textbf{GOCPI\_Data\_Cases.gyp}: Script to help design CreateCases module.
+	\item \textbf{GOCPI\_EB.gyp}: Script to help formulate reference energy systems from IEA Data.
+	\item \textbf{GOCPI\_Geographies.gyp}: Script to help create user defined regions.
+	\item \textbf{GOCPI\_Inputs.gyp}: Script to help create a standardised TIMES modelling method.
+	\item \textbf{GOCPI\_Model\_Import.gyp}: Script to import the OseMOSYS model from Excel.
+	\item \textbf{GOCPI\_Optimisation.gyp}: Script to help solve energy systems using IBM Technologies.
+	\item \textbf{GOCPI\_NZ\_Example.gyp}: Script to build NZ and AUS energy systems with a bi-lateral trade relationship.
 \end{itemize}
-\subsection*{March 1st - May 30th}
-\begin{itemize}
-	\item Coronavirus was classified a worldwide pandemic
-	\item New Zealand was sent into lockdown
-	\item Researched 30+ Academic reports, articles, websites for Literature Review
-	\item Wrote 10 page Literature Review
-	\item Scoped the project
-	\item Submitted Mid-Semester Literature Review on May 5th
-	\item Installed GAMS on my local device
-	\item Began researching the construction of an energy system with Excel, VEDA FE, GAMS, VEDA BE, Python
-	\item Created GOCPI Geographies.gyp script to combined cities, countries and continents while providing granularity to the modelling process
-	\item Created GOCPI.html as a project display for selling the project
-	\item Ran into a series of installation and usage issues with VEDA and GAMS
-	\item Requested VM to work from home
-	\item Installed VMware and GAMS on FlexIT systems
-	\item Faced GAMS Licensing issues on FlexIT
-\end{itemize}
-\subsection*{May 31st 2020}
-\begin{enumerate}
-	\item Installed Microsoft Remote Desktop and FortiClient VPN to access UoA Virtual Machine
-	\item Set up Virtual Machine
-\end{enumerate}
-\subsection*{June 1st 2020}
-\begin{enumerate}
-	\item Installed VEDA FE and VEDA FE on Virtual Machine
-	\item Downloaded 12 Demo Models to build my TIMES Model
-\end{enumerate}
-\subsection*{June 3rd}
-\begin{enumerate}
-	\item Begun testing the Model the Demo Models
-\end{enumerate}
-\subsection*{June 4th - June 10th}
-\begin{enumerate}
-	\item Meeting with Rosalind. Discussed set up and action points moving forward.
-	\item Showed VEDA-FE. Four assessments were discussed.
-	\item Continued researching how to use VEDA
-\end{enumerate}
-\subsection*{June 11th - Approximately 4 hours}
-\begin{enumerate}
-	\item Meeting with Rosalind at 10:30am via Zoom
-	\item Discussed action points moving forward.
-	\item Continued to adapt excel spreadsheets for Excel Data.
-	\item There is still an issue with GAMS Installation (Check with Tony. He knows a guy)
-	\item VEDA FE creates the necessary DD files. Continue to work through the DEMO Models to understand GAMS.
-\end{enumerate}
-\subsection*{June 16th - July 1st}
-\begin{itemize}
-	\item No Progress - Study Break and Exams for ACCTG 371, FINANCE 362 and ENGSCI 711
-\end{itemize}
-\subsection*{July 2nd}
-\begin{itemize}
-	\item Last meeting in Rosalind's corner office. Discussed online exams, Chegg, cheating and project next steps.
-	\item Agreed to adapt spreadsheets for user input and use BP's World Energy Outlook Statistics to determine production, conversion and consumption rates.
-\end{itemize}
-\subsection*{July 3rd}
-\begin{itemize}
-	\item Began adapting Demo 12 model for custom inputs
-	\item Began using the openpyxl python library to manipulate excel (GOCPI Input.gyp)
-\end{itemize}
-\subsection*{July 4rd}
-\begin{itemize}
-	\item Continue to work on openpyxl adaptation with xls and xlsx excel sheets
-\end{itemize}
-\subsection*{July 6th}
-\begin{itemize}
-	\item Created a proper file directory for managing the project
-	\item Continued to adapt GOCPI Inputs.gyp to scale across multiple sheets
-	\item Adapted GOCPI.html, GOCPI Inputs.gyp and GOCPI Geographies to work after rearranging the geographies
-	\item Nearly had a heart attacked as I was led to believe issues with Github and Git meant I deleted my entire project
-	\item Recovered entire project and reports
-\end{itemize}
-\subsection*{July 7th}
-\begin{itemize}
-	\item Worked on file manipulation in Google Drive via Google Cloud APIs
-	\item Discovered IEA Energy Balances on stats.OECD.org via Uni library databases
-	\item Found 20GB csv on Energy Balances data
-	\item Processed 20GB csv to create two ~80MB csv for 2017 energy balance data using Microsoft Access
-\end{itemize}
-\subsection*{July 7th}
-\begin{itemize}
-	\item Developed and resolved issues relating to git and Github
-	\item Developed processing methods for Energy Balance statistics using pandas pivot table function
-\end{itemize}
-\subsection*{July 17th}
-\begin{itemize}
-	\item Meeting with Kiti (NZ TIMES Energy Modeler)
-	\item Discuss constraints associated TIMES and GAMS modelling
-	\item Introduced to OseMOSYS (Open Source, Energy Modelling Tool)
-	\item Introduced to MBIE,EECA (https://www.eeca.govt.nz/)
-	\item Agreed to explore OseMOSYS and alternative datasources to build an alternative product.
-	\item Agreed to keep Kiti updated on projec process moving forward.
-\end{itemize}
-\subsection*{July 18th}
-\begin{itemize}
-	\item Downloaded MBIE Energy 
-	\item Research OseMOSYS energy modelling Approach
-	\item Downloaded OseMOSYS energy modelling tools
-	\item Tested Pyomo, GNU and GAMS approaches. GNU optimised using glpsol in conda environment. Progress works well.
-	\item Decision: Move away from TIMES/GAMS modelling to using Osemosys.
-	\item Began Scripting Sheet to generate model input text file
-\end{itemize}
-\subsection*{July 19th}
-\begin{itemize}
-	\item Created excel spreadsheet to store OseMOSYS energy model inputs
-	\item Began adapting sets, parameters, variables, equations and constraints to excel template.
-	\item Researched more about OseMOSYS
-\end{itemize}
-\subsection*{July 20th}
-\begin{itemize}
-	\item Continued to adapt 200+ lines of model code in the excel templates
-\end{itemize}
-\subsection*{July 21st}
-\begin{itemize}
-	\item Learned to create custom python packages.
-	\item Began working on adjustable sets
-\end{itemize}
-\subsection*{July 22nd}
-\begin{itemize}
-	\item 
-\end{itemize}
-\subsection*{July 23rd}
-\begin{itemize}
-	\item Productive meeting with Rosalind, showed model output. (Rosalind said progress was really exciting)
-\end{itemize}
-\subsection*{July 24th}
-\begin{itemize}
-	\item Continued creating a custom package for the GCOPI module.
-\end{itemize}
-\subsection*{July 25th}
-\begin{itemize}
-	\item Started GOCPI module to create scalable data files
-\end{itemize}
-\subsection*{July 26th}
-\begin{itemize}
-	\item Continued to adapt GOCPI custom package to create scalable data files (Completed)
-\end{itemize}
-\subsection*{July 27th}
-\begin{itemize}
-	\item Edited report headings and created a structure for the Research Report.
-\end{itemize}
-\subsection*{July 28th}
-\begin{itemize}
-	\item Investigated CPLEX Solvers
-	\item Registered for the IBM Academic Initiative
-	\item Downloaded and Installed IBM ILOG CPLEX Optimizer Studio
-	\item Installed cplex and docplex Python APIs from the IBM ILOG CPLEX Optimizer Studio
-	\item Added create model file model to GOCPI
-\end{itemize}
-\subsection*{July 30th - August 9th}
-\begin{itemize}
-	\item Spent a day fixing git commit and push issues
-	\item Installed GIT LFS and the functionality of .gitignore to prevent the committing .mp4 and .lp files
-	\item Installed yapf in Microsoft Visual Studio Code to enable PEP-8 Autoformatting
-	\item Wrote 4.5 pages for the technical, mainly focusing on the setup of Python, Anaconda, CPLEX, Git, GitHub, folder structure suggested by Wilson et al and the OseMOSYS methodology.
-	\item Submitted the 4-6 page technical report.
-	\item Created presentation structure 
-\end{itemize}
-\subsection*{August 10th}
-\begin{itemize}
-	\item Drafted and submitted four slide summary for presentation.
-	\item Recorded and submitted 5 minute presentation
-\end{itemize}
-\subsection*{August 12th}
-\begin{itemize}
-	\item Lockdown and Became Ill
-	\item Went and got COVID-19 Testing (Stood in Queue for 4.5 hours)
-\end{itemize}
-\subsection*{August 13th}
-\begin{itemize}
-	\item Very productive meeting with Rosalind
-	\item Discussed project process, presentation and mid-year technical report
-	\item Continuing doing what I am doing.
-	\item Continued developing NZ Example
-	\item Abandoned developing the NZ Example as faced severe limitations
-	\item Continued developing the Navigation, Forecasting, Energysystems and CreateCases modules.
-\end{itemize}
-\subsection*{September 2nd - September 30th}
-\begin{itemize}
-	\item IBM Cloud Installation and Application.
-	\item Discussed project process, presentation and mid-year technical report
-	\item Investigated adopting DOCPLEX optimisation technologies.
-	\item Discovered limitations in the IBM Decision Optimisation service. This was no longer viable as imported to IBM Watson Machine Learning service.
-	\item Began exploring the implementation of the IBM Watson Machine Learning service to engage with this pipeline.
-	\item Developed the optimisation module to use
-\end{itemize}
-\subsection*{October 1st - October 29th}
-\begin{itemize}
-	\item Systems week interfered with the construction of the report.
-	\item Wrote the report
-	\item Edited the report
-	\item Reviewed the report
-	\item Had three productive meetings with my supervisor about the report.
-\end{itemize}
-\subsection*{October 30th}
-\begin{itemize}
-	\item Submitted the final report
-\end{itemize}
-\newpage
-
-\section{GOCPI Documentation}\label{Docstring}
-The GOCPI classes and modules are described in the following document.
-This document was generated from docstrings using sphinx.
-\newpage
-\includepdf[pages=-]{GOCPI-appendix.pdf}
-\newpage
-
-\section{Programming}
-These section contains all programming scripts for the project.
-\subsection{GOCPI NZ Energy Systems Example}
-The GOCPI NZ Example file is the Python file
-\lstinputlisting[language=Python]{"/Users/connor/Google Drive/Documents/University/Courses/2020/ENGSCI 700A&B/GOCPI/src/GOCPI_NZ_Example.gyp"}
-The GOCPI NZ Energy Systems Example is the processing script for designing NZ and AUS Energy Systems
-\subsection{GOCPI Module}
-\subsubsection{Navigation}
-The module to provide navigation functionalities to access files in directories.
-\lstinputlisting[language=Python]{"/Users/connor/Google Drive/Documents/University/Courses/2020/ENGSCI 700A&B/GOCPI/src/GOCPI/GOCPI/Navigation.py"}
-\subsubsection{Energysystems}
-The module to load in existing energy systems to create model and data files.
-\lstinputlisting[language=Python]{"/Users/connor/Google Drive/Documents/University/Courses/2020/ENGSCI 700A&B/GOCPI/src/GOCPI/GOCPI/Energysystems.py"}
-\subsubsection{CreateCases}
-The module to create user-defined energy systems.
-\lstinputlisting[language=Python]{"/Users/connor/Google Drive/Documents/University/Courses/2020/ENGSCI 700A&B/GOCPI/src/GOCPI/GOCPI/CreateCases.py"}
-\subsubsection{Forecasting}
-The module to forecast energy and finance-related values.
-\lstinputlisting[language=Python]{"/Users/connor/Google Drive/Documents/University/Courses/2020/ENGSCI 700A&B/GOCPI/src/GOCPI/GOCPI/Forecasting.py"}
-\subsubsection{Optimisation}
-The module to solve energy systems either locally or remotely using IBM technologies.
-\lstinputlisting[language=Python]{"/Users/connor/Google Drive/Documents/University/Courses/2020/ENGSCI 700A&B/GOCPI/src/GOCPI/GOCPI/Optimisation.py"}
-\newpage
-
-\section{Development Scripting}
-The scripts within this section were used to design the GOCPI modules needed for the project.
-\subsection{GOCPI Data Cases}
-This script helped set the structure to build the model and data files for energy systems.
-\lstinputlisting[language=Python]{"/Users/connor/Google Drive/Documents/University/Courses/2020/ENGSCI 700A&B/GOCPI/src/GOCPI_Data_Cases.gyp"}
-\subsection{GOCPI Energy Balances}
-This script helped extract energy balances from the International Energy Agency's World Energy Balances.
-\lstinputlisting[language=Python]{"/Users/connor/Google Drive/Documents/University/Courses/2020/ENGSCI 700A&B/GOCPI/src/GOCPI_EB.gyp"}
-\subsection{GOCPI Geographies}
-This script helped create the geographical subsets for modelling energy regions.
-\lstinputlisting[language=Python]{"/Users/connor/Google Drive/Documents/University/Courses/2020/ENGSCI 700A&B/GOCPI/src/GOCPI_Geographies.gyp"}
-\subsection{GOCPI Inputs}
-This script helped update values in the Excel spreadsheet when developing a standardised modelling process for the TIMES Methodology.
-\lstinputlisting[language=Python]{"/Users/connor/Google Drive/Documents/University/Courses/2020/ENGSCI 700A&B/GOCPI/src/GOCPI_Inputs.gyp"}
-\subsection{GOCPI Model Import}
-This script helped import OseMOSYS models.
-\lstinputlisting[language=Python]{"/Users/connor/Google Drive/Documents/University/Courses/2020/ENGSCI 700A&B/GOCPI/src/GOCPI_Model_Import.gyp"}
-\subsection{GOCPI Optimisation}
-This script helped incorporate IBM optimisation technologies into the package.
-\lstinputlisting[language=Python]{"/Users/connor/Google Drive/Documents/University/Courses/2020/ENGSCI 700A&B/GOCPI/src/GOCPI_Optimisation.gyp"}
-\newpage
-
-\section{OseMOSYS}
-This section displays the text files formulated to create the lp file.
-These are formulated using Python-based processing scripts and the GOCPI Energysystems module.
-\subsection{Model File}
-\lstinputlisting{"/Users/connor/Google Drive/Documents/University/Courses/2020/ENGSCI 700A&B/GOCPI/data/Inputs/GOCPI OseMOSYS/GOCPI_OseMOSYS_Model.txt"}
-\subsection{Data File}
-This data file is created from a partially complete NZ/AUS Energy system.
-The file shows the complexity of energy modelling and creating user-defined energy systems.
-The parameters to be modelled are mostly denoted by binary values.
-\lstinputlisting{"/Users/connor/Google Drive/Documents/University/Courses/2020/ENGSCI 700A&B/GOCPI/data/Inputs/GOCPI OseMOSYS/GOCPI_OseMOSYS_Data.txt"}
-\subsection{Linear Programme File}
-This file is the lp formulation required to use CPLEX.
-The file is not included in this compendium as the Utopian example is nearly 1.2 million lines of code.
 \end{document}
